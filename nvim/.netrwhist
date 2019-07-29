@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home'
+let g:netrw_dirhist_7='/home/master'
+let g:netrw_dirhist_6='/home/master/dev/resource/img'
+let g:netrw_dirhist_5='/home/master'
+let g:netrw_dirhist_4='/home'
+let g:netrw_dirhist_3='/home/master'
+let g:netrw_dirhist_2='/home/master/git/dotfiles/.git'
+let g:netrw_dirhist_1='/home/master'
+let g:netrw_dirhist_0='/etc/ImageMagick-6'
+let g:netrw_dirhist_9='/etc'

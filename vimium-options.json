@@ -1,0 +1,70 @@
+{
+  "settingsVersion": "1.66",
+  "exclusionRules": [
+    {
+      "pattern": "https?://drive.google.com/*",
+      "passKeys": "n"
+    },
+    {
+      "pattern": "https?://drive.google.com/*",
+      "passKeys": "z"
+    },
+    {
+      "pattern": "https?://drive.google.com/*",
+      "passKeys": "/"
+    },
+    {
+      "pattern": "https?://photos.google.com/*",
+      "passKeys": "/"
+    },
+    {
+      "pattern": "https?://tasks.google.com/*",
+      "passKeys": "4"
+    },
+    {
+      "pattern": "https?://calendar.google.com/*",
+      "passKeys": "4"
+    },
+    {
+      "pattern": "https?://calendar.google.com/*",
+      "passKeys": "w"
+    },
+    {
+      "pattern": "https?://calendar.google.com/*",
+      "passKeys": "d"
+    },
+    {
+      "pattern": "https?://calendar.google.com/*",
+      "passKeys": "e"
+    },
+    {
+      "pattern": "https?://todoist.com/*",
+      "passKeys": "h"
+    },
+    {
+      "pattern": "https?://todoist.com/*",
+      "passKeys": "/"
+    },
+    {
+      "pattern": "https?://vim-adventures.com/*",
+      "passKeys": ""
+    }
+  ],
+  "filterLinkHints": false,
+  "waitForEnterForFilteredHints": true,
+  "hideHud": false,
+  "keyMappings": "",
+  "linkHintCharacters": "sadfjklewcmpgh",
+  "linkHintNumbers": "0123456789",
+  "newTabUrl": "about:newtab",
+  "nextPatterns": "next,more,newer,>,›,→,»,≫,>>",
+  "previousPatterns": "prev,previous,back,older,<,‹,←,«,≪,<<",
+  "regexFindMode": false,
+  "ignoreKeyboardLayout": false,
+  "scrollStepSize": 60,
+  "smoothScroll": true,
+  "grabBackFocus": false,
+  "searchEngines": "g: https://www.google.com/search?q=%s Google\ngi: https://www.google.com/search?tbm=isch&q=%s Google Images\ngm: https://www.google.com/maps?q=%s Google Maps\n# Find your way from your home to places using Google Maps\ngo: https://www.google.com/maps/dir/home/%s Want to go?\nrecent: https://www.google.com/search?hl=en&tbo=1&tbs=qdr:y&q=%s Google (last year only)\nt: https://translate.google.com/?source=osdd#auto|auto|%s Google Translator\nw: https://en.wikipedia.org/wiki/Special:Search?search=%s Wikipedia\nd: https://duckduckgo.com/?q=%s DuckDuckGo\ngh: https://github.com/search?q=%s GitHub\ny: https://www.youtube.com/results?search_query=%s YouTube\nf: https://www.facebook.com/search?q=%s Facebook",
+  "searchUrl": "https://duckduckgo.com/?q=%s",
+  "userDefinedLinkHintCss": "div.vimiumHUD span#hud-find-input,\ndiv.vimiumHUD span#hud-match-count {\n  color: #f8efe4;\n}\ndiv.vimiumHUD .hud-find {\n  background: #3f3f3f;\n  border: 1px solid #3f3f3f;\n}\n#vomnibar input {\n  color: #f8efe4;\n  background-color: #3f3f3f;\n  border-color: #3f3f3f;\n}\ndiv.vimiumHUD {\n  width: auto;\n  left: 207px;\n}\ndiv.vimiumHUD .vimiumHUDSearchArea {\n  background-color: #3f3f3f;\n}\ndiv.vimiumHUD .vimiumHUDSearchAreaInner {\n  color: #f8efe4;\n}\n\ndiv > .vimiumHintMarker {\n  /* linkhint boxes */\n  background: -webkit-gradient(\n    linear,\n    left top,\n    left bottom,\n    color-stop(0%, #fff785),\n    color-stop(100%, #ffc542)\n  );\n  border: 1px solid #e3be23;\n}\n\ndiv > .vimiumHintMarker span {\n  /* linkhint text */\n  color: black;\n  font-weight: bold;\n  font-size: 12px;\n}\n\ninput#vomnibarInput.vimiumReset {\n  color: #fff !important;\n  background-color: #111 !important;\n}\n\n#vomnibar {\n  border-color: black;\n  background-color: black;\n}\n\n#vomnibar .vomnibarSearchArea {\n  background-color: #222;\n  border-bottom: #3f3f3f;\n}\n\n#vomnibar ul {\n  background-color: #222;\n}\n\n#vomnibar li {\n  border-bottom: #3f3f3f;\n}\n\n#vomnibar li .vomnibarUrl {\n  color: #eaea99;\n}\n\n#vomnibar li .vomnibarMatch {\n  color: white;\n}\n\n#vomnibar li.vomnibarSelected {\n  background-color: #000000;\n}\n\n#vomnibar li em .vomnibarMatch,\n#vomnibar li .vomnibarTitle .vomnibarMatch {\n  color: white;\n}\n\n#vomnibar li em,\n#vomnibar li .vomnibarTitle {\n  color: #ddd;\n}"
+}

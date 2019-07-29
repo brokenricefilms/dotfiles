@@ -1,0 +1,244 @@
+# Mod1 === alt | Mod4 === Windows key
+set $mod Mod1
+
+# script
+exec --no-startup-id ./scripts/alternating_layouts.py
+
+
+# get auth work with polkit-gnome
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font pango:Cascadia Code Regular 8
+
+for_window [class="^.*"] border pixel 0
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+focus_follows_mouse yes
+
+# start a terminal
+# bindsym $mod+Return exec kitty
+bindsym ctrl+space exec kitty
+
+# kill focused window
+bindsym $mod+q kill
+
+# start dmenu (a program launcher)
+# bindsym $mod+d exec dmenu_run
+# There also is the (new) i3-dmenu-desktop which only displays applications
+# shipping a .desktop file. It is a wrapper around dmenu, so you need that
+# installed.
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+Shift+D exec --no-startup-id dmenu_run
+
+bindsym $mod+Tab exec --no-startup-id  i3-msg border pixel 5; focus right
+bindsym --release $mod+Tab exec i3-msg border pixel 0
+bindsym $mod+Shift+Tab exec --no-startup-id  i3-msg border pixel 5; focus right
+bindsym --release $mod+Shift+Tab exec i3-msg border pixel 0
+
+
+# change focus
+# bindsym $mod+h focus left
+bindsym $mod+h exec --no-startup-id i3-msg border pixel 5; focus left
+bindsym --release $mod+h exec i3-msg border pixel 0
+# bindsym $mod+j focus down
+bindsym $mod+j exec --no-startup-id i3-msg border pixel 5; focus down
+bindsym --release $mod+j exec i3-msg border pixel 0
+# bindsym $mod+k focus up
+bindsym $mod+k exec --no-startup-id i3-msg border pixel 5; focus up
+bindsym --release $mod+k exec i3-msg border pixel 0
+# bindsym $mod+l focus right
+bindsym $mod+l exec --no-startup-id i3-msg border pixel 5; focus right
+bindsym --release $mod+l exec i3-msg border pixel 0
+
+# move focused window
+# bindsym $mod+Shift+h move left
+bindsym $mod+Shift+h exec --no-startup-id i3-msg border pixel 5; move left
+bindsym --release $mod+Shift+h exec i3-msg border pixel 0
+# bindsym $mod+Shift+j move down
+bindsym $mod+Shift+j exec --no-startup-id i3-msg border pixel 5; move down
+bindsym --release $mod+Shift+j exec i3-msg border pixel 0
+# bindsym $mod+Shift+k move up
+bindsym $mod+Shift+k exec --no-startup-id i3-msg border pixel 5; move up
+bindsym --release $mod+Shift+k exec i3-msg border pixel 0
+# bindsym $mod+Shift+l move right
+bindsym $mod+Shift+l exec --no-startup-id i3-msg border pixel 5; move right
+bindsym --release $mod+Shift+l exec i3-msg border pixel 0
+
+# split in horizontal orientation
+bindsym $mod+o split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+z fullscreen toggle
+
+bindsym $mod+s layout stacking
+bindsym $mod+t layout tabbed
+bindsym $mod+e layout toggle split
+
+#bindsym $mod+d focus child
+
+# Autostart apps
+exec --no-startup-id picom -cC
+exec --no-startup-id connman-gtk
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id ibus-daemon -drx
+
+#backup packages lists:
+#exec pacman -Qqen > packages-repository.txt && pacman -Qqem > packages-AUR.txt
+#set powersavings for display:
+exec --no-startup-id xset s 480 dpms 600 600 600
+exec --no-startup-id xset r rate 150 50
+# Desktop notifications
+exec --no-startup-id /usr/bin/dunst
+
+# set floating for apps needing it
+for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
+# welcome and others
+for_window [class="Yad" instance="yad"] floating enable
+for_window [class="Galculator" instance="galculator"] floating enable
+for_window [class="Xsane" instance="xsane"] floating enable
+for_window [class="qt5ct" instance="qt5ct"] floating enable
+for_window [class="calamares"] floating enable
+for_window [class="connman-gtk"] floating enable
+for_window [class="flameshot"] floating enable
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+
+# reload the configuration file
+bindsym $mod+Shift+q reload
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+R restart
+
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+E exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+title_align center
+
+set $bg-color               #eeeeee
+set $inactive-bg-color      #bcbcbc
+set $text-color             #444444
+set $border-color           #333333
+set $inactive-border-color  #eeeeee
+set $inactive-text-color    #eeeeee
+set $urgent-bg-color        #af0000
+set $indicator-color        #444444
+
+# set window colors
+#                       border                 background         text                 indicator
+client.focused          $border-color          $bg-color          $text-color          $indicator-color
+client.unfocused        $inactive-border-color $inactive-bg-color $inactive-text-color $indicator-color
+client.focused_inactive $border-color          $inactive-bg-color $inactive-text-color $indicator-color
+client.urgent           $urgent-bg-color       $urgent-bg-color   $text-color          $indicator-color
+
+focus_follows_mouse no
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    tray_output primary
+    position top
+    tray_padding 0
+	strip_workspace_numbers yes
+
+    colors {
+        separator          #666666
+        background         $bg-color
+        statusline         #dddddd
+#                          border   background          text
+        focused_workspace  #444444  #5faf5f             #444444
+        active_workspace   #444444  #eeeeee             #444444
+        inactive_workspace #444444  #eeeeee             #444444
+        urgent_workspace   #444444  $urgent-bg-color     #eeeeee
+    }
+}
+
+
+# Multimedia Keys
+
+# volume
+# bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+ && pkill -RTMIN+1 i3blocks
+# bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%- && pkill -RTMIN+1 i3blocks
+
+# mute
+bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
+
+bindsym XF86AudioPlay exec mocp --toggle-pause
+bindsym XF86AudioPause exec mocp --toggle-pause
+bindsym XF86AudioStop exec mocp --togle-pause
+bindsym XF86AudioNext exec mocp --next
+bindsym XF86AudioPrev exec mocp --previous
+
+bindsym $mod+F5 exec mocp --toggle-pause
+bindsym $mod+F6 exec mocp --stop
+bindsym $mod+F7 exec mocp --previous
+bindsym $mod+F8 exec mocp --next
+
+# App shortcuts
+bindsym $mod+w exec "/usr/bin/firefox"
+bindsym Mod4+Shift+S exec "flameshot gui"
+
+# rofi bindings fancy menu
+bindsym F9 exec rofi -modi drun -show drun -line-padding 4 \
+                -columns 2 -padding 50 -hide-scrollbar \
+                -show-icons -drun-icon-theme "Arc-X-D" -font "Cascadia Code Regular 10"
+
+bindsym F10 exec rofi -show window -line-padding 4 \
+                -lines 6 -padding 50 -hide-scrollbar \
+                -show-icons -drun-icon-theme "Arc-X-D" -font "Cascadia Code Regular 10"
+
+bindsym $mod+Escape exec --no-startup-id i3lock -i ~/wallpaper/rem.png
