@@ -7,4 +7,4 @@ alias h='history'
 alias ins='sudo apt-get install -y'
 alias uins='sudo apt-get remove -y'
 alias e='exit'
-
+alias v='vim'
