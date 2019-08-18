@@ -10,3 +10,6 @@ alias e='exit'
 alias v='vim'
 alias ...='cd .. && cd .. && cd ..'
 alias ....='cd .. && cd .. && cd .. && cd ..'
+
+#vi mode
+fish_vi_key_bindings
