@@ -13,3 +13,7 @@ alias ....='cd .. && cd .. && cd .. && cd ..'
 
 #vi mode
 fish_vi_key_bindings
+
+#git
+alias yo='git add -A && git commit -m "$(curl -s whatthecommit.com/index.txt)"'
+alias push="git push"
