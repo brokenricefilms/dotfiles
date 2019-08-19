@@ -19,9 +19,10 @@ fish_vi_key_bindings
 #git
 alias yo='git add -A && git commit -m "TODO: Fix later"'
 alias push="git push"
-
+alias pull="git pull"
 #git push all repositories
-alias gpa='cd ~/git/dotfiles/fish && cp ~/.config/fish/config.fish . && echo "fish done" && cd ~/git/dotfiles/vim && cp ~/.vimrc . && echo "vim done" && cd ~/git/dotfiles && yo && push && echo "done"'
-
+alias gpha='cd ~/git/dotfiles/fish && cp ~/.config/fish/config.fish . && echo "fish done" && cd ~/git/dotfiles/vim && cp ~/.vimrc . && echo "vim done" && cd ~/git/dotfiles && yo && push && echo "done"'
+#git pull all repositories
+alias gpla='cd ~/git/dotfiles && pull && .. && cd study && pull && .. && cd firstwebsite && pull && cd'
 #start a day
-alias hi='rem && gpa && c && echo "I love you so much!"'
+alias hi='rem && gpla && gpha && c && echo "I love you so much!"'
