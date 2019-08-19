@@ -1,4 +1,6 @@
 set -g -x fish_greeting 'Hi, Master'
+
+#alias
 alias rem='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y && sudo apt autoclean'
 alias bye='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y && sudo apt autoclean && sudo shutdown now'
 alias sylater='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y && sudo apt autoclean && sudo reboot now'
