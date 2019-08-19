@@ -19,3 +19,6 @@ fish_vi_key_bindings
 #git
 alias yo='git add -A && git commit -m "TODO: Fix later"'
 alias push="git push"
+
+#git push all repositories
+alias gitpushall='cd ~/git/dotfiles/fish && cp ~/.config/fish/config.fish . && yo && push && echo "fish done"'
