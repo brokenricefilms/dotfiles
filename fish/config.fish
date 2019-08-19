@@ -21,6 +21,6 @@ alias yo='git add -A && git commit -m "TODO: Fix later"'
 alias push="git push"
 
 #git push all repositories
-alias gitpushall='cd ~/git/dotfiles/fish && cp ~/.config/fish/config.fish . && echo "fish done" && cd ~/git/dotfiles/vim && cp ~/.vimrc . && echo "vim done" && cd ~/git/dotfiles && yo && push && echo "done"'
+alias gpa='cd ~/git/dotfiles/fish && cp ~/.config/fish/config.fish . && echo "fish done" && cd ~/git/dotfiles/vim && cp ~/.vimrc . && echo "vim done" && cd ~/git/dotfiles && yo && push && echo "done"'
 
-#test:)))
+#test
