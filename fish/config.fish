@@ -22,3 +22,5 @@ alias push="git push"
 
 #git push all repositories
 alias gitpushall='cd ~/git/dotfiles/fish && cp ~/.config/fish/config.fish . && echo "fish done" && cd ~/git/dotfiles/vim && cp ~/.vimrc . && echo "vim done" && cd ~/git/dotfiles && yo && push && echo "done"'
+
+#test:)))
