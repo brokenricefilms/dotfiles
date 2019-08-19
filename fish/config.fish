@@ -25,4 +25,4 @@ alias gpha='cd ~/git/dotfiles/fish && cp ~/.config/fish/config.fish . && echo "f
 #git pull all repositories
 alias gpla='cd ~/git/dotfiles && pull && .. && cd study && pull && .. && cd firstwebsite && pull && cd'
 #start a day
-alias hi='rem && gpla && gpha && c && echo "I love you so much!"'
+alias hi='rem && gpla && gpha && c && cd && echo "I love you so much!"'
