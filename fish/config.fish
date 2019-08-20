@@ -1,3 +1,4 @@
+#!/usr/bin/fish
 set -g -x fish_greeting 'Hi, Master'
 
 #alias
@@ -17,12 +18,17 @@ alias ....='cd .. && cd .. && cd .. && cd ..'
 fish_vi_key_bindings
 
 #git
-alias yo='git add -A && git commit -m "TODO: Fix later"'
+alias yo='git add -A && git commit -m whatthecommit'
 alias push="git push"
 alias pull="git pull"
+
 #git push all repositories
 alias gpha='cd ~/git/dotfiles/fish && cp ~/.config/fish/config.fish . && echo "fish done" && cd ~/git/dotfiles/vim && cp ~/.vimrc . && echo "vim done" && cd ~/git/dotfiles && yo && push && echo "done"'
+function whatthecommit
+	command "(curl -s whatthecommit.com/index.txt)"
+end
 #git pull all repositories
 alias gpla='cd ~/git/dotfiles && pull && .. && cd study && pull && .. && cd firstwebsite && pull && cd'
+
 #start a day
 alias hi='rem && gpla && gpha && c && cd && echo "I love you so much!"'
