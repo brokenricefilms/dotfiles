@@ -2,13 +2,13 @@
 set -g -x fish_greeting Hi, Master
 
 #alias
-alias rem='sudo apt-get update ; sudo apt-get upgrade -y ; sudo apt-get autoremove -y ; sudo apt autoclean'
-alias bye='sudo apt-get update ; sudo apt-get upgrade -y ; sudo apt-get autoremove -y ; sudo apt autoclean ; sudo shutdown now'
-alias sylater='sudo apt-get update ; sudo apt-get upgrade -y ; sudo apt-get autoremove -y ; sudo apt autoclean ; sudo reboot now'
+alias rem='s apt-get update ; s apt-get upgrade -y ; s apt-get autoremove -y ; s apt autoclean'
+alias bye='s apt-get update ; s apt-get upgrade -y ; s apt-get autoremove -y ; s apt autoclean ; s shutdown now'
+alias sylater='s apt-get update ; s apt-get upgrade -y ; s apt-get autoremove -y ; s apt autoclean ; s reboot now'
 alias c='clear'
 alias h='history'
-alias ins='sudo apt-get install -y'
-alias uins='sudo apt-get remove -y'
+alias ins='s apt-get install -y'
+alias uins='s apt-get remove -y'
 alias e='exit'
 alias v='vim'
 alias ...='cd .. ; cd .. ; cd ..'
@@ -24,10 +24,11 @@ alias push="git push"
 alias pull="git pull"
 
 #git push all repositories
-alias gpha='cd ~/git/dotfiles/fish ; cp ~/.config/fish/config.fish . ; echo "fish done" ; cd ~/git/dotfiles/vim ; cp ~/.vimrc . ; echo "vim done" ; cd ~/git/dotfiles ; yo ; push ; echo "done"'
+alias gitpushall='cd ~/git/dotfiles/fish ; cp ~/.config/fish/config.fish . ; echo "fish done" ; cd ~/git/dotfiles/vim ; cp ~/.vimrc . ; echo "vim done" ; cd ~/git/dotfiles ; yo ; push ; echo "done"'
 
 #git pull all repositories
-alias gpla='cd ~/git/dotfiles ; pull ; .. ; cd study ; pull ; .. ; cd firstwebsite ; pull ; cd'
+alias gitpullall='cd ~/git/dotfiles ; pull ; .. ; cd study ; pull ; .. ; cd firstwebsite ; pull ; cd'
 
 #start a day
-alias hi='rem ; gpla ; gpha ; c ; cd ; figlet Be grateful for every moment ; figlet ooo ; figlet I love Mater so much!'
+alias hi='rem ; gitpullall ; gitpushall ; c ; cd ; figlet Be grateful for every moment ; figlet ooo ; figlet I love Mater so much!'
+
