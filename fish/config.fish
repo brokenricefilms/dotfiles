@@ -24,9 +24,7 @@ alias pull="git pull"
 
 #git push all repositories
 alias gpha='cd ~/git/dotfiles/fish && cp ~/.config/fish/config.fish . && echo "fish done" && cd ~/git/dotfiles/vim && cp ~/.vimrc . && echo "vim done" && cd ~/git/dotfiles && yo && push && echo "done"'
-function whatthecommit
-	command "(curl -s whatthecommit.com/index.txt)"
-end
+
 #git pull all repositories
 alias gpla='cd ~/git/dotfiles && pull && .. && cd study && pull && .. && cd firstwebsite && pull && cd'
 
