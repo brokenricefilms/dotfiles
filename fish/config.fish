@@ -2,6 +2,9 @@
 set -g -x fish_greeting Hi, Master
 
 #alias
+alias s='sudo'
+alias ...='cd .. ; cd .. ; cd ..'
+alias ....='cd .. ; cd .. ; cd .. ; cd ..'
 alias rem='s apt-get update ; s apt-get upgrade -y ; s apt-get autoremove -y ; s apt autoclean'
 alias bye='s apt-get update ; s apt-get upgrade -y ; s apt-get autoremove -y ; s apt autoclean ; s shutdown now'
 alias sylater='s apt-get update ; s apt-get upgrade -y ; s apt-get autoremove -y ; s apt autoclean ; s reboot now'
@@ -11,9 +14,6 @@ alias ins='s apt-get install -y'
 alias uins='s apt-get remove -y'
 alias e='exit'
 alias v='vim'
-alias ...='cd .. ; cd .. ; cd ..'
-alias ....='cd .. ; cd .. ; cd .. ; cd ..'
-alias s='sudo'
 
 #vi mode
 fish_vi_key_bindings
