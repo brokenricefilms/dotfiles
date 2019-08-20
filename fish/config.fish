@@ -1,5 +1,5 @@
 #!/usr/bin/fish
-set -g -x fish_greeting 'Hi, Master'
+set -g -x fish_greeting Hi, Master
 
 #alias
 alias rem='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y && sudo apt autoclean'
@@ -29,4 +29,4 @@ alias gpha='cd ~/git/dotfiles/fish && cp ~/.config/fish/config.fish . && echo "f
 alias gpla='cd ~/git/dotfiles && pull && .. && cd study && pull && .. && cd firstwebsite && pull && cd'
 
 #start a day
-alias hi='rem && gpla && gpha && c && cd && figlet I love you so much!'
+alias hi='rem && gpla && gpha && c && cd && figlet -f script I love you so much!'
