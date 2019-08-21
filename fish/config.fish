@@ -24,7 +24,11 @@ alias push="git push"
 alias pull="git pull"
 
 #git push all repositories
-alias gitpushall='cd ~/git/dotfiles/fish ; cp ~/.config/fish/config.fish . ; echo "fish done" ; cd ~/git/dotfiles/vim ; cp ~/.vimrc . ; echo "vim done" ; cd ~/git/dotfiles ; yo ; push ; echo "done"'
+alias gitpushdotfile='cd ~/git/dotfiles/fish ; cp ~/.config/fish/config.fish . ; echo "fish done" ; cd ~/git/dotfiles/vim ; cp ~/.vimrc . ; echo "vim done" ; cd ~/git/dotfiles ; yo ; push ; echo "dotfile push done"'
+alias gitpushstudy='mv ~/Downloads/*.json ~/git/study/html/freecodecamp/website/Basic-HTML-and-HTML5/ ; cd ~/git/study ; yo ; push'
+
+alias gitpushall='gitpushdotfile ; gitpushstudy'
+
 
 #git pull all repositories
 alias gitpullall='cd ~/git/dotfiles ; pull ; .. ; cd study ; pull ; .. ; cd firstwebsite ; pull ; cd'
