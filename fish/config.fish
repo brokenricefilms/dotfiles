@@ -27,7 +27,7 @@ alias pull="git pull"
 
 alias gitpushdotfile='cd ~/git/dotfiles/fish ; cp ~/.config/fish/config.fish . ; echo "fish done" ; cd ~/git/dotfiles/vim ; cp ~/.vimrc . ; echo "vim done" ; cd ~/git/dotfiles ; yo ; push ; figlet dotfiles done'
 
-###bug"green": mv error -> fix:ideas "if" bug"yellow":maybe *.json not freecodecamp
+###bug"green": mv error -> fix:ideas "if" ###bug"yellow":maybe *.json not freecodecamp
 alias gitpushstudy='mv ~/Downloads/*.json ~/git/study/html/freecodecamp/website/Basic-HTML-and-HTML5/ ; cd ~/git/study ; yo ; push ; figlet study done'
 
 alias gitpushall='gitpushdotfile ; gitpushstudy ; figlet all-done ; cd'
