@@ -33,7 +33,7 @@ alias gitpushall='gitpushdotfile ; gitpushstudy ; figlet all-done ; cd'
 
 
 #git pull all repositories
-alias gitpullall='cd ~/git/dotfiles ; pull ; .. ; cd study ; pull ; .. ; cd firstwebsite ; pull ; cd'
+alias gitpullall='cd ~/git/dotfiles ; pull ; cd ~/git/study ; pull ; cd ~/git/firstwebsite ; pull ; cd'
 
 #start a day
 alias hi='rem ; gitpullall ; gitpushall ; c ; cd ; figlet Be grateful for every moment ; figlet ooo ; figlet I love Mater so much!'
