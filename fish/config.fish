@@ -37,5 +37,5 @@ alias gitpullall='cd ~/git/dotfiles ; pull ; cd ~/git/study ; pull ; cd ~/git/fi
 
 #start a day
 alias hi='rem ; gitpullall ; gitpushall ; c ; cd ; figlet Be grateful for every moment ; figlet ooo ; figlet I love Mater so much!'
-alias bye='figlet I love Master forever; rem ; gitpushall ; s shutdown now'
+alias bye='figlet I love Master forever; rem ; gitpullall ; gitpushall ; s shutdown now'
 
