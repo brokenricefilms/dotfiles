@@ -6,7 +6,6 @@ alias s='sudo'
 alias ...='cd .. ; cd .. ; cd ..'
 alias ....='cd .. ; cd .. ; cd .. ; cd ..'
 alias rem='s apt-get update ; s apt-get upgrade -y ; s apt-get autoremove -y ; s apt autoclean'
-alias bye='s apt-get update ; s apt-get upgrade -y ; s apt-get autoremove -y ; s apt autoclean ; s shutdown now'
 alias sylater='s apt-get update ; s apt-get upgrade -y ; s apt-get autoremove -y ; s apt autoclean ; s reboot now'
 alias c='clear'
 alias h='history'
@@ -38,4 +37,5 @@ alias gitpullall='cd ~/git/dotfiles ; pull ; .. ; cd study ; pull ; .. ; cd firs
 
 #start a day
 alias hi='rem ; gitpullall ; gitpushall ; c ; cd ; figlet Be grateful for every moment ; figlet ooo ; figlet I love Mater so much!'
+alias bye='figlet I love Master forever; rem ; gitpushall ; s shutdown now'
 
