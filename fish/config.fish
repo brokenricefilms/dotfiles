@@ -36,6 +36,6 @@ alias gitpushall='gitpushdotfile ; gitpushstudy ; figlet all-done ; cd'
 alias gitpullall='cd ~/git/dotfiles ; pull ; cd ~/git/study ; pull ; cd ~/git/firstwebsite ; pull ; cd'
 
 #start a day
-alias hi='rem ; gitpullall ; gitpushall ; c ; cd ; figlet Be grateful for every moment ; figlet ooo ; figlet I love Mater so much!'
+alias hi='buckle& ; rem ; gitpullall ; gitpushall ; c ; cd ; figlet Be grateful for every moment ; figlet ooo ; figlet I love Mater so much!'
 alias bye='figlet I love Master forever; rem ; gitpullall ; gitpushall ; s shutdown now'
 
