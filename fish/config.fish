@@ -38,14 +38,14 @@ alias push="git push"
 alias pull="git pull"
 
 #git push dotfiles
-alias ghdotfiles='cd ~/git/dotfiles/fish ; cp ~/.config/fish/config.fish . ; echo "fish done" ; cd ~/git/dotfiles/vim ; cp ~/.vimrc . ; echo "vim done" ; cd ~/git/dotfiles ; yo ; push ; figlet dotfiles done'
+alias ghdotfiles='cd ~/git/dotfiles/fish ; cp ~/.config/fish/config.fish . ; cowsay "fish done" ; cd ~/git/dotfiles/vim ; cp ~/.vimrc . ; cowsay "vim done" ; cd ~/git/dotfiles ; yo ; push ; cowsay dotfiles done'
 
 ###bug"green": mv error -> fix:ideas "if" ###bug"yellow":maybe *.json not freecodecamp
-alias ghstudy='mv ~/Downloads/*.json ~/git/study/html/freecodecamp/website/Basic-HTML-and-HTML5/ ; cd ~/git/study ; yo ; push ; figlet study done'
+alias ghstudy='mv ~/Downloads/*.json ~/git/study/html/freecodecamp/website/Basic-HTML-and-HTML5/ ; cd ~/git/study ; yo ; push ; cowsay git push study done'
 
 #git push all
-alias gha='ghdotfiles ; ghstudy ; figlet all-done ; cd'
+alias gha='ghdotfiles ; ghstudy ; cowsay git push all done ; cd'
 
 #git pull all 
-alias gla='cd ~/git/dotfiles ; pull ; cd ~/git/study ; pull ; cd ~/git/firstwebsite ; pull ; cd'
+alias gla='cd ~/git/dotfiles ; pull ; cd ~/git/study ; pull ; cd ~/git/firstwebsite ; pull ; cd ; cowsay git pull all done'
 
