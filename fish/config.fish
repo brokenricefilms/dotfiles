@@ -25,7 +25,7 @@ alias ....='cd .. ; cd .. ; cd .. ; cd ..'
 alias c='clear'
 alias h='history'
 alias ins='s apt-get install -y'
-alias uins='s apt-get ove -y'
+alias uins='s apt-get remove -y'
 alias e='exit'
 alias v='vim'
 
