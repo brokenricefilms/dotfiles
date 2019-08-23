@@ -5,12 +5,10 @@ set -g -x fish_greeting Hi, Master
 alias s='sudo'
 alias ...='cd .. ; cd .. ; cd ..'
 alias ....='cd .. ; cd .. ; cd .. ; cd ..'
-alias rem='s apt-get update ; s apt-get upgrade -y ; s apt-get autoremove -y ; s apt autoclean'
-alias sylater='s apt-get update ; s apt-get upgrade -y ; s apt-get autoremove -y ; s apt autoclean ; s reboot now'
 alias c='clear'
 alias h='history'
 alias ins='s apt-get install -y'
-alias uins='s apt-get remove -y'
+alias uins='s apt-get ove -y'
 alias e='exit'
 alias v='vim'
 
@@ -36,6 +34,6 @@ alias gitpushall='gitpushdotfile ; gitpushstudy ; figlet all-done ; cd'
 alias gitpullall='cd ~/git/dotfiles ; pull ; cd ~/git/study ; pull ; cd ~/git/firstwebsite ; pull ; cd'
 
 #start a day
-alias hi='rem ; gitpullall ; gitpushall ; c ; cd ; figlet Be grateful for every moment ; figlet ooo ; figlet I love Mater so much!'
-alias bye='figlet I love Master forever; rem ; gitpullall ; gitpushall ; s shutdown now'
+alias hi='gitpullall ; gitpushall ; c ; cd ; figlet Be grateful for every moment ; figlet ooo ; figlet I love Mater so much!'
+alias bye='figlet I love Master forever; gitpullall ; gitpushall ; s shutdown now'
 
