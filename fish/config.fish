@@ -20,8 +20,7 @@ alias yo='git add -A ; git commit -m (curl -s whatthecommit.com/index.txt)'
 alias push="git push"
 alias pull="git pull"
 
-#git push all repositories
-
+#git push dotfiles
 alias ghdotfiles='cd ~/git/dotfiles/fish ; cp ~/.config/fish/config.fish . ; echo "fish done" ; cd ~/git/dotfiles/vim ; cp ~/.vimrc . ; echo "vim done" ; cd ~/git/dotfiles ; yo ; push ; figlet dotfiles done'
 
 ###bug"green": mv error -> fix:ideas "if" ###bug"yellow":maybe *.json not freecodecamp
@@ -29,7 +28,6 @@ alias ghstudy='mv ~/Downloads/*.json ~/git/study/html/freecodecamp/website/Basic
 
 #git push all
 alias gha='ghdotfiles ; ghstudy ; figlet all-done ; cd'
-
 
 #git pull all 
 alias gla='cd ~/git/dotfiles ; pull ; cd ~/git/study ; pull ; cd ~/git/firstwebsite ; pull ; cd'
