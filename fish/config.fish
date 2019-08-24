@@ -27,7 +27,7 @@ alias h='history'
 alias ins='s apt-get install -y'
 alias uins='s apt-get remove -y'
 alias e='exit'
-alias v='vim'
+alias v='nvim'
 alias rem='s apt-get update ; s apt-get upgrade -y ; s apt-get autoremove -y; s apt-get autoclean'
 
 #vi mode
@@ -39,7 +39,7 @@ alias push="git push"
 alias pull="git pull"
 
 #git push dotfiles
-alias ghdotfiles='cd ~/git/dotfiles/fish ; cp ~/.config/fish/config.fish . ; cd ~/git/dotfiles/vim ; cp ~/.vimrc . ; cd ~/git/dotfiles ; yo ; push'
+alias ghdotfiles='cd ~/git/dotfiles/fish ; cp ~/.config/fish/config.fish . ; cd ~/git/dotfiles/vim ; cp ~/.vimrc . ; cp .config/nvim/init.vim git/dotfiles/nvim/ ; cd ~/git/dotfiles ; yo ; push'
 
 ###bug"green": mv error -> fix:ideas "if" ###bug"yellow":maybe *.json not freecodecamp
 alias ghstudy='mv ~/Downloads/*.json ~/git/study/html/freecodecamp/website/Basic-HTML-and-HTML5/ ; cd ~/git/study ; yo ; push'
