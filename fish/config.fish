@@ -28,6 +28,7 @@ alias ins='s apt-get install -y'
 alias uins='s apt-get remove -y'
 alias e='exit'
 alias v='vim'
+alias rem='s apt-get update ; s apt-get upgrade -y ; s apt-get autoremove -y; s apt-get autoclean'
 
 #vi mode
 fish_vi_key_bindings
