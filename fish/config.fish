@@ -1,5 +1,8 @@
 #!/usr/bin/fish
 set -g -x fish_greeting Hi, Master
+#vi mode
+fish_vi_key_bindings
+
 
 
 
@@ -19,19 +22,15 @@ end
 
 ##############################
 #alias
-alias s='sudo'
 alias ...='cd .. ; cd .. ; cd ..'
 alias ....='cd .. ; cd .. ; cd .. ; cd ..'
 alias c='clear'
 alias h='history'
-alias ins='s apt-get install -y'
-alias uins='s apt-get remove -y'
+alias ins='apt-get install -y'
+alias uins='apt-get remove -y'
 alias e='exit'
 alias v='nvim'
-alias rem='s apt-get update ; s apt-get upgrade -y ; s apt-get autoremove -y; s apt-get autoclean'
-
-#vi mode
-fish_vi_key_bindings
+alias rem='apt-get update ; apt-get upgrade -y ; apt-get autoremove -y; apt-get autoclean'
 
 #git
 alias yo='git add -A ; git commit -m (curl -s whatthecommit.com/index.txt)'
@@ -39,7 +38,7 @@ alias push="git push"
 alias pull="git pull"
 
 #git push dotfiles
-alias ghdotfiles='cp ~/.config/fish/config.fish ~/git/dotfiles/fish ; cp ~/.vimrc ~/git/dotfiles/vim ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cd ~/git/dotfiles ; yo ; push'
+alias ghdotfiles='cp ~/.config/fish/config.fish ~/git/dotfiles/fish ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cd ~/git/dotfiles ; yo ; push'
 
 ###bug"green": mv error -> fix:ideas "if" ###bug"yellow":maybe *.json not freecodecamp
 alias ghstudy='mv ~/Downloads/*.json ~/git/study/html/freecodecamp/website/Basic-HTML-and-HTML5/ ; cd ~/git/study ; yo ; push'
