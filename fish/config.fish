@@ -22,15 +22,16 @@ end
 
 ##############################
 #alias
+alias s='sudo'
 alias ...='cd .. ; cd .. ; cd ..'
 alias ....='cd .. ; cd .. ; cd .. ; cd ..'
 alias c='clear'
 alias h='history'
-alias ins='apt-get install -y'
-alias uins='apt-get remove -y'
+alias ins='s apt-get install -y'
+alias uins='s apt-get remove -y'
 alias e='exit'
 alias v='nvim'
-alias rem='apt-get update ; apt-get upgrade -y ; apt-get autoremove -y; apt-get autoclean'
+alias rem='s apt-get update ;s apt-get upgrade -y ;s apt-get autoremove -y;s apt-get autoclean'
 
 #git
 alias yo='git add -A ; git commit -m (curl -s whatthecommit.com/index.txt)'
