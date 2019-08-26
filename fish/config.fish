@@ -40,7 +40,7 @@ alias push="git push"
 alias pull="git pull"
 
 #git push dotfiles
-alias ghdotfiles='cp ~/.config/fish/config.fish ~/git/dotfiles/fish ; cp ~/.vimrc ~/git/dotfiles/vim ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cd ~/git/dotfiles ; yo ; push'
+alias ghdotfiles='cp ~/.config/fish/config.fish ~/git/dotfiles/fish ; cp ~/.vimrc ~/git/dotfiles/vim ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.bashrc ~/git/dotfiles/bash ; cd ~/git/dotfiles ; yo ; push'
 
 #git push firstwebsite
 alias ghfirstwebsite='cd ~/git/firstwebsite/ ; yo ; push'
