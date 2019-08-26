@@ -32,6 +32,7 @@ alias uins='s apt-get remove -y'
 alias e='exit'
 alias v='nvim'
 alias rem='s apt-get update ;s apt-get upgrade -y ;s apt-get autoremove -y;s apt-get autoclean'
+alias chrome='google-chrome'
 
 #git
 alias yo='git add -A ; git commit -m (curl -s whatthecommit.com/index.txt)'
