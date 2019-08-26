@@ -1,5 +1,5 @@
 #!/usr/bin/fish
-set -g -x fish_greeting Hi, Master
+set -g -x fish_greeting Hi, Nicholas 
 #vi mode
 fish_vi_key_bindings
 
