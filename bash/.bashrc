@@ -127,10 +127,11 @@ alias uins='s apt-get remove -y'
 alias e='exit'
 alias v='nvim'
 alias rem='s apt-get update ;s apt-get upgrade -y ;s apt-get autoremove -y;s apt-get autoclean'
-alias chrome='google-chrome'
+###################git
+alias yo='git add -A ; git commit -m "$(curl -s whatthecommit.com/index.txt)"'
 alias push="git push"
 alias pull="git pull"
-alias ghdotfiles='cp ~/.config/fish/config.fish ~/git/dotfiles/fish ; cp ~/.vimrc ~/git/dotfiles/vim ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.bashrc ~/git/dotfiles/bash ; cd ~/git/dotfiles ; yo ; push'
+alias ghdotfiles='cp ~/.vimrc ~/git/dotfiles/vim ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.bashrc ~/git/dotfiles/bash ; cd ~/git/dotfiles ; yo ; push'
 alias ghfirstwebsite='cd ~/git/firstwebsite/ ; yo ; push'
 ###bug"green": mv error -> fix:ideas "if" ###bug"yellow":maybe *.json not freecodecamp
 alias ghstudy='mv ~/Downloads/*.json ~/git/study/html/freecodecamp/website/Basic-HTML-and-HTML5/ ; cd ~/git/study ; yo ; push'
