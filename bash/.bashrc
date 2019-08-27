@@ -135,5 +135,5 @@ alias ghdotfiles='cp ~/.vimrc ~/git/dotfiles/vim ; cp ~/.config/nvim/init.vim ~/
 alias ghfirstwebsite='cd ~/git/firstwebsite/ ; yo ; push'
 ###bug"green": mv error -> fix:ideas "if" ###bug"yellow":maybe *.json not freecodecamp
 alias ghstudy='mv ~/Downloads/*.json ~/git/study/html/freecodecamp/website/Basic-HTML-and-HTML5/ ; cd ~/git/study ; yo ; push'
-alias gha='ghdotfiles ; ghstudy ; ghfirstwebsite ; cowsay git push all done ; cd'
+alias gha='ghdotfiles ; ghstudy ; ghfirstwebsite ; fortune | cowsay; cd'
 alias gla='cd ~/git/dotfiles ; pull ; cd ~/git/study ; pull ; cd ~/git/firstwebsite ; pull ; cd ; cowsay git pull all done'
