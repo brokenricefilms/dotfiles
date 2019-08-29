@@ -115,6 +115,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+############################
+set -o vi
 
 ###########################Lazy coding 
 alias s='sudo'
@@ -136,6 +138,8 @@ alias uins='s apt-get remove -y'
 alias e='exit'
 
 alias v='nvim'
+
+alias t='tmux'
 
 alias rem='s apt-get update ;s apt-get upgrade -y ;s apt-get autoremove -y;s apt-get autoclean'
 
