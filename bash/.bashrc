@@ -143,7 +143,7 @@ alias t='tmux'
 
 alias p='python3'
 
-alias rem='s apt-get update ;s apt-get upgrade -y ;s apt-get autoremove -y;s apt-get autoclean'
+alias rem='s apt-get update ;s apt-get upgrade -y ;s apt-get autoremove -y;s apt-get autoclean ; fortune | cowsay'
 
 #commit so hard, so auto write commit cool 
 alias yo='git add -A ; git commit -m "$(curl -s whatthecommit.com/index.txt)"'
