@@ -141,6 +141,8 @@ alias v='nvim'
 
 alias t='tmux'
 
+alias p='python3'
+
 alias rem='s apt-get update ;s apt-get upgrade -y ;s apt-get autoremove -y;s apt-get autoclean'
 
 #commit so hard, so auto write commit cool 
