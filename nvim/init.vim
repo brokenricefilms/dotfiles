@@ -3,9 +3,10 @@ set clipboard=unnamedplus
 syntax on
 syntax enable
 set mouse=a
+
 set autoread
 set autowrite
-set nobackup
+
 set nowb
 set noswapfile
 set backupdir=~/tmp,/tmp
