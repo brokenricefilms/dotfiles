@@ -161,7 +161,8 @@ alias ghdotfiles='cat ~/.config/nvim/init.vim > ~/.vimrc ; cp ~/.vimrc ~/git/dot
 alias ghfirstwebsite='cd ~/git/firstwebsite/ ; yo ; push'
 
 #learning from freecodecamp, when done task, archive file .json , download it
-alias ghstudy='mv ~/Downloads/*.json ~/git/study/html/freecodecamp/website/Basic-HTML-and-HTML5/ ; cd ~/git/study ; yo ; push'
+#alias ghstudy='mv ~/Downloads/*.json ~/git/study/html/freecodecamp/website/Basic-HTML-and-HTML5/ ; cd ~/git/study ; yo ; push'
+alias ghstudy='cd ~/git/study ; yo ; push'
 
 #cowsay make fun
 alias gha='ghdotfiles ; ghstudy ; ghfirstwebsite ; fortune | cowsay; cd'
