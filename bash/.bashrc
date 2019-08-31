@@ -141,6 +141,8 @@ alias v='nvim'
 
 alias t='tmux'
 
+alias l='ls -latr'
+
 alias p='python3'
 
 alias rem='s apt-get update ;s apt-get upgrade -y ;s apt-get autoremove -y;s apt-get autoclean ; fortune | cowsay'
@@ -153,7 +155,7 @@ alias push="git push"
 alias pull="git pull"
 
 #location file saved on pc, code push on github saved at other folder, that's it 
-alias ghdotfiles='cp ~/.vimrc ~/git/dotfiles/vim ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.bashrc ~/git/dotfiles/bash ; cd ~/git/dotfiles ; yo ; push'
+alias ghdotfiles='cat ~/.config/nvim/init.vim > ~/.vimrc ; cp ~/.vimrc ~/git/dotfiles/vim ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.bashrc ~/git/dotfiles/bash ; cd ~/git/dotfiles ; yo ; push'
 
 #auto lazy coding 
 alias ghfirstwebsite='cd ~/git/firstwebsite/ ; yo ; push'
