@@ -145,6 +145,8 @@ alias l='ls -latr'
 
 alias p='python3'
 
+alias dl='cd ~/Downloads'
+
 alias rem='s apt-get update ;s apt-get upgrade -y ;s apt-get autoremove -y;s apt-get autoclean ; fortune | cowsay'
 
 #commit so hard, so auto write commit cool 
