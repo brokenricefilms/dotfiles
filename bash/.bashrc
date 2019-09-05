@@ -131,9 +131,9 @@ alias c='clear'
 
 alias h='history'
 
-alias ins='s apt-get install -y'
+alias ins='sudo apt-get install -y'
 
-alias uins='s apt-get remove -y'
+alias uins='sudo apt-get remove -y'
 
 alias e='exit'
 
@@ -145,7 +145,7 @@ alias p='python3'
 
 alias dl='cd ~/Downloads'
 
-alias rem='s apt-get update ;s apt-get upgrade -y ;s apt-get autoremove -y;s apt-get autoclean ; fortune | cowsay'
+alias rem='sudo apt-get update ;sudo apt-get upgrade -y ;sudo apt-get autoremove -y;sudo apt-get autoclean ; fortune | cowsay'
 
 #commit so hard, so auto write commit cool 
 alias yo='git add -A ; git commit -m "$(curl -s whatthecommit.com/index.txt)"'
