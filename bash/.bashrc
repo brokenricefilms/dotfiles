@@ -148,6 +148,7 @@ alias ghfirstwebsite='cd ~/git/firstwebsite/ ; yo ; push'
 #learning from freecodecamp, when done task, archive file .json , download it
 #alias ghstudy='mv ~/Downloads/*.json ~/git/study/html/freecodecamp/website/Basic-HTML-and-HTML5/ ; cd ~/git/study ; yo ; push'
 alias ghstudy='cd ~/git/study ; yo ; push'
+
 #cowsay make fun
 alias gha='ghdotfiles ; ghstudy ; ghfirstwebsite ; fortune | cowsay; cd'
 alias gla='cd ~/git/dotfiles ; pull ; cd ~/git/study ; pull ; cd ~/git/firstwebsite ; pull ; cd ; cowsay git pull all done'
