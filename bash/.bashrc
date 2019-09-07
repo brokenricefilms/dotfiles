@@ -133,6 +133,7 @@ alias l='ls -latr'
 alias p='python3'
 alias dl='cd ~/Downloads'
 alias rem='sudo apt-get update ;sudo apt-get upgrade -y ;sudo apt-get autoremove -y;sudo apt-get autoclean ; fortune | cowsay'
+alias j7='ssh u0_a190@192.168.1.2 -p 8022'
 
 #commit so hard, so auto write commit cool 
 alias yo='git add -A ; git commit -m "$(curl -s whatthecommit.com/index.txt)"'
