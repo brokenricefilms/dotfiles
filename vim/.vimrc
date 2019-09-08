@@ -10,8 +10,6 @@ set mouse=a
 
 set autoread
 
-set autowrite
-
 set ts=4 sw=4
 
 call plug#begin('~/.config/nvim/plugged')
