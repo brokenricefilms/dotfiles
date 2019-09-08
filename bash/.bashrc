@@ -136,20 +136,20 @@ alias rem='sudo apt-get update ;sudo apt-get upgrade -y ;sudo apt-get autoremove
 alias j7='ssh u0_a190@192.168.1.2 -p 8022'
 
 #commit so hard, so auto write commit cool 
-alias yo='git add -A ; git commit -m "$(curl -s whatthecommit.com/index.txt)"'
+alias commit='git add -A ; git commit -m "$(curl -s whatthecommit.com/index.txt)"'
 alias push="git push"
 alias pull="git pull"
 
 #location file saved on pc, code push on github saved at other folder, that's it 
-alias ghdotfiles='cat ~/.config/nvim/init.vim > ~/.vimrc ; cp ~/.vimrc ~/git/dotfiles/vim ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.bashrc ~/git/dotfiles/bash ; cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ ; cd ~/git/dotfiles ; yo ; push'
-
-#auto lazy coding 
-alias ghfirstwebsite='cd ~/git/firstwebsite/ ; yo ; push'
+alias ghdotfiles='cat ~/.config/nvim/init.vim > ~/.vimrc ; cp ~/.vimrc ~/git/dotfiles/vim ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.bashrc ~/git/dotfiles/bash ; cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ ; cd ~/git/dotfiles ; commit ; push'
+alias ghfirstwebsite='cd ~/git/firstwebsite/ ; commit ; push'
 
 #learning from freecodecamp, when done task, archive file .json , download it
 #alias ghstudy='mv ~/Downloads/*.json ~/git/study/html/freecodecamp/website/Basic-HTML-and-HTML5/ ; cd ~/git/study ; yo ; push'
-alias ghstudy='cd ~/git/study ; yo ; push'
+alias ghstudy='cd ~/git/study ; commit ; push'
 
 #cowsay make fun
 alias gha='ghdotfiles ; ghstudy ; ghfirstwebsite ; fortune | cowsay; cd'
 alias gla='cd ~/git/dotfiles ; pull ; cd ~/git/study ; pull ; cd ~/git/firstwebsite ; pull ; cd ; cowsay git pull all done'
+
+alias hi='cowsay Hi ; gla ; gha ; rem ; c'
