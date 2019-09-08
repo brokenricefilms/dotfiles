@@ -152,4 +152,4 @@ alias ghstudy='cd ~/git/study ; commit ; push'
 alias gha='ghdotfiles ; ghstudy ; ghfirstwebsite ; fortune | cowsay; cd'
 alias gla='cd ~/git/dotfiles ; pull ; cd ~/git/study ; pull ; cd ~/git/firstwebsite ; pull ; cd ; cowsay git pull all done'
 
-alias hi='cowsay Hi ; gla ; gha ; rem ; c'
+alias hi='cowsay Hi ; gla ; gha ; rem'
