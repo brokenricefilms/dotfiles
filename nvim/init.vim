@@ -1,4 +1,4 @@
-set nu relativenumber 
+set nu
 
 set clipboard=unnamedplus
 
