@@ -46,7 +46,7 @@ alias gha='ghdotfiles ; ghstudy ; ghfirstwebsite ; ghpomodoro ; fortune | cowsay
 alias gldotfiles='cd ~/git/dotfiles ; pull'
 alias glstudy='cd ~/git/study ; pull'
 alias glfirstwebsite='cd ~/git/firstwebsite ; pull'
-alias glpomodoro='cd ~/git/glpomodoro ; pull'
+alias glpomodoro='cd ~/git/pomodoro ; pull'
 alias gla='gldotfiles ; glstudy ; glfirstwebsite ; glpomodoro ; cd ; cowsay git pull all done'
 ###git###
 
