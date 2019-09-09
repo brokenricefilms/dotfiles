@@ -53,4 +53,8 @@ alias gla='gldotfiles ; glstudy ; glfirstwebsite ; glpomodoro ; cd ; cowsay git 
 ###mode###
 alias work='cowsay . ; firefox -new-tab https://youtu.be/hHW1oY26kxQ "https://youtu.be/1znjHDiqBk8?t=1" ; gla ; gha'
 
-alias hola='cowsay hola hola ; firefox -new-tab "https://www9.gogoanime.io/" ; firefox -new-tab "https://www.dramacool9.co/category/drama/?country=korean" ; firefox -new-tab "https://ww1.fmovies.to/country/korea" ; firefox -new-tab "https://www.youtube.com/feed/subscriptions" '
+alias tab_anime='firefox -new-tab "https://www9.gogoanime.io/"'
+alias tab_kdrama='firefox -new-tab "https://www.dramacool9.co/category/drama/?country=korean"'
+alias tab_kmovie='firefox -new-tab "https://ww1.fmovies.to/country/korea"'
+alias tab_youtube_subsriptions='firefox -new-tab "https://www.youtube.com/feed/subscriptions"'
+alias hola='cowsay hola hola ; tab_anime ; tab_kdrama ; tab_kmovie ; tab_youtube_subsriptions'
