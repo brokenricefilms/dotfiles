@@ -11,7 +11,7 @@ function sudo --description "Replacement for Bash 'sudo !!' command to run last 
 	end
 end
 
-###########################Lazy coding 
+###Lazy code### 
 alias s='sudo'
 alias ..='cd ..'
 alias ...='cd .. ; cd .. ; cd ..'
@@ -26,6 +26,8 @@ alias l='ls -latr'
 alias p='python3'
 alias rem='sudo apt-get update ;sudo apt-get upgrade -y ;sudo apt-get autoremove -y;sudo apt-get autoclean ; sudo apt-get clean'
 alias j7='ssh u0_a190@192.168.1.2 -p 8022'
+alias ft='firefox -new-tab'
+###lazy code###
 
 ###git###
 #commit so hard, so auto write commit cool 
@@ -50,12 +52,19 @@ alias glpomodoro='cd ~/git/pomodoro ; pull'
 alias gla='gldotfiles ; glstudy ; glfirstwebsite ; glpomodoro ; cd ; cowsay git pull all done'
 ###git###
 
-###mode###
-alias work='cowsay . ; firefox -new-tab https://youtu.be/hHW1oY26kxQ "https://youtu.be/1znjHDiqBk8?t=1" ; gla ; gha'
+###firefox tab###
+alias tab_anime='ft "https://www9.gogoanime.io/"'
+alias tab_kdrama='ft "https://www.dramacool9.co/category/drama/?country=korean"'
+alias tab_kmovie='ft "https://ww1.fmovies.to/country/korea"'
+alias tab_youtube_subsriptions='ft "https://www.youtube.com/feed/subscriptions"'
+alias tab_music_happy='ft "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
+alias tab_toidicodedao='ft "https://toidicodedao.com/"'
+alias tab_thefullsnack='ft "https://thefullsnack.com/"'
+alias tab_codeaholicguy='ft "https://codeaholicguy.com/"'
+alias tab_blogs='tab_toidicodedao ; tab_thefullsnack ; tab_codeaholicguy'
 
-alias tab_anime='firefox -new-tab "https://www9.gogoanime.io/"'
-alias tab_kdrama='firefox -new-tab "https://www.dramacool9.co/category/drama/?country=korean"'
-alias tab_kmovie='firefox -new-tab "https://ww1.fmovies.to/country/korea"'
-alias tab_youtube_subsriptions='firefox -new-tab "https://www.youtube.com/feed/subscriptions"'
-alias tab_music_happy='firefox -new-tab "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
-alias hola='cowsay hola hola ; tab_music_happy ; tab_anime ; tab_kdrama ; tab_kmovie ; tab_youtube_subsriptions'
+###mode###
+alias work='cowsay . ; ft https://youtu.be/hHW1oY26kxQ "https://youtu.be/1znjHDiqBk8?t=1" ; gla ; gha'
+
+alias hola='cowsay hola hola ; tab_music_happy ; tab_anime ; tab_kdrama ; tab_kmovie ; tab_youtube_subsriptions ; tab_blogs'
+###mode###
