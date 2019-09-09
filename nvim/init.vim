@@ -2,7 +2,8 @@ set nu
 
 set clipboard=unnamedplus
 
-syntax off
+syntax on
+syntax enable
 
 set mouse=a
 
