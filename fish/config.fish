@@ -26,6 +26,7 @@ alias l='ls -latr'
 alias p='python3'
 alias rem='sudo apt-get update ;sudo apt-get upgrade -y ;sudo apt-get autoremove -y;sudo apt-get autoclean ; sudo apt-get clean'
 alias j7='ssh u0_a190@192.168.1.2 -p 8022'
+alias hi='cowsay Hi ; gla ; gha ; rem'
 
 ###git###
 #commit so hard, so auto write commit cool 
@@ -50,4 +51,9 @@ alias glpomodoro='cd ~/git/pomodoro ; pull'
 alias gla='gldotfiles ; glstudy ; glfirstwebsite ; glpomodoro ; cd ; cowsay git pull all done'
 ###git###
 
-alias hi='cowsay Hi ; gla ; gha ; rem'
+###mode###
+alias work='cowsay . ; firefox -new-tab https://youtu.be/hHW1oY26kxQ ; firefox -new-tab "https://youtu.be/1znjHDiqBk8?t=1" ; gla ; gha'
+
+
+
+
