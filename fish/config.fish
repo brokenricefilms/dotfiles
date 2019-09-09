@@ -48,7 +48,7 @@ alias gldotfiles='cd ~/git/dotfiles ; pull'
 alias glstudy='cd ~/git/study ; pull'
 alias glfirstwebsite='cd ~/git/firstwebsite ; pull'
 alias glpomodoro='cd ~/git/pomodoro ; pull'
-alias gla='gldotfiles ; glstudy ; glfirstwebsite ; glpomodoro ; cd ; cowsay git pull all done'
+alias gla='gldotfiles ; glstudy ; glfirstwebsite ; glpomodoro ; cd ; cowthink -s "git pull all done"'
 ###git###
 
 ###firefox tab###
@@ -70,7 +70,7 @@ alias tab_blogs='tab_toidicodedao ; tab_thefullsnack ; tab_codeaholicguy'
 ###fire tab###
 
 ###mode###
-alias work='cowsay . ; ft https://youtu.be/hHW1oY26kxQ "https://youtu.be/1znjHDiqBk8?t=1" ; gla ; gha'
+alias work='cowthink -s "." ; ft https://youtu.be/hHW1oY26kxQ "https://youtu.be/1znjHDiqBk8?t=1" ; gla ; gha'
 
-alias hola='cowsay hola hola ; tab_music_happy ; tab_fun ; tab_youtube_subsriptions ; tab_blogs ; tab_pocket'
+alias hola='cowsay -f dragon "hola hola" ; tab_music_happy ; tab_fun ; tab_youtube_subsriptions ; tab_blogs ; tab_pocket'
 ###mode###
