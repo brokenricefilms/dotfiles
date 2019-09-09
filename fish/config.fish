@@ -26,7 +26,6 @@ alias l='ls -latr'
 alias p='python3'
 alias rem='sudo apt-get update ;sudo apt-get upgrade -y ;sudo apt-get autoremove -y;sudo apt-get autoclean ; sudo apt-get clean'
 alias j7='ssh u0_a190@192.168.1.2 -p 8022'
-alias ft='firefox -new-tab'
 ###lazy code###
 
 ###git###
@@ -53,7 +52,9 @@ alias gla='gldotfiles ; glstudy ; glfirstwebsite ; glpomodoro ; cd ; cowsay git 
 ###git###
 
 ###firefox tab###
+alias ft='firefox -new-tab'
 alias tab_youtube_subsriptions='ft "https://www.youtube.com/feed/subscriptions"'
+alias tab_pocket='ft "https://app.getpocket.com/"'
 
 alias tab_anime='ft "https://www9.gogoanime.io/"'
 alias tab_kdrama='ft "https://www.dramacool9.co/category/drama/?country=korean"'
@@ -66,8 +67,10 @@ alias tab_toidicodedao='ft "https://toidicodedao.com/"'
 alias tab_thefullsnack='ft "https://thefullsnack.com/"'
 alias tab_codeaholicguy='ft "https://codeaholicguy.com/"'
 alias tab_blogs='tab_toidicodedao ; tab_thefullsnack ; tab_codeaholicguy'
+###fire tab###
+
 ###mode###
 alias work='cowsay . ; ft https://youtu.be/hHW1oY26kxQ "https://youtu.be/1znjHDiqBk8?t=1" ; gla ; gha'
 
-alias hola='cowsay hola hola ; tab_music_happy ; tab_fun ; tab_youtube_subsriptions ; tab_blogs'
+alias hola='cowsay hola hola ; tab_music_happy ; tab_fun ; tab_youtube_subsriptions ; tab_blogs ; tab_pocket'
 ###mode###
