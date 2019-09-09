@@ -24,7 +24,6 @@ alias e='exit'
 alias v='nvim'
 alias l='ls -latr'
 alias p='python3'
-alias dl='cd ~/Downloads'
 alias rem='sudo apt-get update ;sudo apt-get upgrade -y ;sudo apt-get autoremove -y;sudo apt-get autoclean ; sudo apt-get clean'
 alias j7='ssh u0_a190@192.168.1.2 -p 8022'
 
