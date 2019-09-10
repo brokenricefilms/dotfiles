@@ -3,11 +3,14 @@ set nu
 set clipboard=unnamedplus
 
 syntax on
-syntax enable
 
 set mouse=a
 
 set autoread
+
+set nobackup
+set nowb
+set noswapfile
 
 set ts=4 sw=4
 
