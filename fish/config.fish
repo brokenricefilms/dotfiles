@@ -55,13 +55,12 @@ alias gla='gldotfiles ; glstudy ; glfirstwebsite ; glpomodoro ; cd ; cowthink -s
 alias ft='firefox -new-tab'
 alias tab_youtube_subsriptions='ft "https://www.youtube.com/feed/subscriptions"'
 alias tab_pocket='ft "https://app.getpocket.com/"'
+alias tab_music_happy='ft "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
 
 alias tab_anime='ft "https://www9.gogoanime.io/"'
 alias tab_kdrama='ft "https://www.dramacool9.co/category/drama/?country=korean"'
 alias tab_kmovie='ft "https://ww1.fmovies.to/country/korea"'
 alias tab_fun='tab_anime ; tab_kdrama ; tab_kmovie'
-
-alias tab_music_happy='ft "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
 
 alias tab_toidicodedao='ft "https://toidicodedao.com/"'
 alias tab_thefullsnack='ft "https://thefullsnack.com/"'
@@ -72,5 +71,5 @@ alias tab_blogs='tab_toidicodedao ; tab_thefullsnack ; tab_codeaholicguy'
 ###mode###
 alias work='cowthink -s "." ; ft https://youtu.be/hHW1oY26kxQ "https://youtu.be/1znjHDiqBk8?t=1" ; gla ; gha'
 
-alias hola='cowsay -f dragon "hola hola" ; tab_music_happy ; tab_fun ; tab_youtube_subsriptions ; tab_blogs ; tab_pocket'
+alias hola='cowthink -s "hola hola" ; tab_music_happy ; tab_fun ; tab_youtube_subsriptions ; tab_blogs ; tab_pocket'
 ###mode###
