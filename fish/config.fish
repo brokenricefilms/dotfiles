@@ -22,6 +22,7 @@ alias ins='sudo apt-get install -y'
 alias uins='sudo apt-get remove -y'
 alias e='exit'
 alias v='nvim'
+alias t='touch'
 alias l='ls -latr'
 alias p='python3'
 alias rem='sudo apt-get update ;sudo apt-get upgrade -y ;sudo apt-get autoremove -y;sudo apt-get autoclean ; sudo apt-get clean'
@@ -52,6 +53,7 @@ alias gla='gldotfiles ; glstudy ; glfirstwebsite ; glpomodoro ; cd ; cowthink -s
 ###git###
 
 ###firefox tab###
+alias f='firefox'
 alias ft='firefox -new-tab'
 alias tab_youtube_subsriptions='ft "https://www.youtube.com/feed/subscriptions"'
 alias tab_pocket='ft "https://app.getpocket.com/"'
