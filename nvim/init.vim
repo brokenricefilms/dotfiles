@@ -25,4 +25,6 @@ let g:user_emmet_leader_key=','
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
 
+let python_highlight_all=1
+
 :imap jj <Esc>
