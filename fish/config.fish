@@ -75,6 +75,5 @@ alias tab_blogs='tab_toidicodedao ; tab_thefullsnack ; tab_codeaholicguy'
 
 ###mode###
 alias work='cowthink -s "." ; tab_music_chill ; tab_pomodoro ; gla ; gha'
-alias hi='cowthink -s "hi" ; rem ; gla ; gha'
 alias hola='cowthink -s "hola hola" ; tab_music_happy ; tab_fun ; tab_youtube_subsriptions ; tab_blogs ; tab_pocket'
 ###mode###
