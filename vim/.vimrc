@@ -2,8 +2,8 @@ set nu
 
 set clipboard=unnamedplus
 
-syntax off 
-set nohlsearch
+syntax enable
+syntax on
 
 set mouse=a
 
