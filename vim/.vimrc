@@ -23,7 +23,6 @@ let g:airline_solarized_bg='dark'
 
 :imap jj <Esc>
 
-
 set nocompatible              
 filetype off                  
 
@@ -36,5 +35,6 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'mattn/emmet-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'kien/ctrlp.vim'
 call vundle#end()            
 filetype plugin indent on    
