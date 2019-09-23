@@ -12,7 +12,6 @@ function sudo --description "Replacement for Bash 'sudo !!' command to run last 
 end
 
 ###Lazy code### 
-alias s='sudo'
 alias ..='cd ..'
 alias ...='cd .. ; cd .. ; cd ..'
 alias ....='cd .. ; cd .. ; cd .. ; cd ..'
@@ -22,15 +21,19 @@ alias ins='sudo apt-get install -y'
 alias uins='sudo apt-get remove -y'
 alias e='exit'
 alias v='nvim'
+alias sv='sudo nvim'
 alias t='touch'
 alias l='ls -latr'
 alias p='python3'
 alias rem='sudo apt-get update ;sudo apt-get upgrade -y ;sudo apt-get autoremove -y;sudo apt-get autoclean ; sudo apt-get clean'
 alias j7='ssh u0_a190@192.168.1.2 -p 8022'
+alias rbn='sudo reboot now'
+alias sdn='sudo shutdown now'
 ###lazy code###
 
 ###git###
 #commit so hard, so auto write commit cool 
+alias clone='git clone'
 alias yo='git add -A ; git commit -m (curl -s whatthecommit.com/index.txt)'
 alias push="git push"
 alias pull="git pull"
@@ -75,5 +78,5 @@ alias tab_blogs='tab_toidicodedao ; tab_thefullsnack ; tab_codeaholicguy'
 
 ###mode###
 alias work='cowthink -s "." ; tab_music_chill ; tab_pomodoro ; gla ; gha'
-alias hola='cowthink -s "hola hola" ; tab_music_happy ; tab_fun ; tab_youtube_subsriptions ; tab_blogs ; tab_pocket'
+alias hola='cowthink -s "hola hola" ; rem ; tab_music_happy ; tab_fun ; tab_youtube_subsriptions ; tab_blogs ; tab_pocket'
 ###mode###
