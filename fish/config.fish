@@ -43,8 +43,6 @@ alias ghdotfiles='cp ~/.tmux.conf ~/git/dotfiles/tmux ; cat ~/.config/nvim/init.
 alias ghfirstwebsite='cd ~/git/firstwebsite/ ; yo ; push'
 alias ghpomodoro='cd ~/git/pomodoro/ ; yo ; push'
 
-#learning from freecodecamp, when done task, archive file .json , download it
-#alias ghstudy='mv ~/Downloads/*.json ~/git/study/html/freecodecamp/website/Basic-HTML-and-HTML5/ ; cd ~/git/study ; yo ; push'
 alias ghstudy='cd ~/git/study ; yo ; push'
 alias gha='ghdotfiles ; ghstudy ; ghfirstwebsite ; ghpomodoro ; fortune | cowsay; cd'
 
@@ -63,6 +61,7 @@ alias tab_pocket='ft "https://app.getpocket.com/"'
 alias tab_pomodoro='ft "https://youtu.be/1znjHDiqBk8?t=1"'
 
 alias tab_music_happy='ft "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
+alias tab_music_anime='ft "https://www.youtube.com/watch?v=CaksNlNniis&list=PL8lZieNFgOdmrNGTqwjqYJpJ_2nw_O_M2"'
 alias tab_music_chill='ft https://youtu.be/hHW1oY26kxQ'
 
 alias tab_anime='ft "https://www9.gogoanime.io/"'
@@ -78,5 +77,5 @@ alias tab_blogs='tab_toidicodedao ; tab_thefullsnack ; tab_codeaholicguy'
 
 ###mode###
 alias work='cowthink -s "." ; tab_music_chill ; tab_pomodoro ; gla ; gha'
-alias hola='cowthink -s "hola hola" ; rem ; tab_music_happy ; tab_fun ; tab_youtube_subsriptions ; tab_blogs ; tab_pocket'
+alias hola='cowthink -s "hola hola" ; tab_music_anime ; tab_fun ; tab_youtube_subsriptions ; tab_blogs ; tab_pocket ; rem'
 ###mode###
