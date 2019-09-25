@@ -59,6 +59,7 @@ alias ft='firefox -new-tab'
 alias tab_youtube_subsriptions='ft "https://www.youtube.com/feed/subscriptions"'
 alias tab_pocket='ft "https://app.getpocket.com/"'
 alias tab_pomodoro='ft "https://youtu.be/1znjHDiqBk8?t=1"'
+alias tab_github='ft https://github.com/nicholaspham2311'
 
 alias tab_music_happy='ft "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
 alias tab_music_anime='ft "https://www.youtube.com/watch?v=CaksNlNniis&list=PL8lZieNFgOdmrNGTqwjqYJpJ_2nw_O_M2"'
