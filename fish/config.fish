@@ -73,7 +73,8 @@ alias tab_fun='tab_anime ; tab_kdrama ; tab_kmovie'
 alias tab_toidicodedao='ft "https://toidicodedao.com/"'
 alias tab_thefullsnack='ft "https://thefullsnack.com/"'
 alias tab_codeaholicguy='ft "https://codeaholicguy.com/"'
-alias tab_blogs='tab_toidicodedao ; tab_thefullsnack ; tab_codeaholicguy'
+alias tab_thai='ft "https://vnhacker.blogspot.com/"'
+alias tab_blogs='tab_toidicodedao ; tab_thefullsnack ; tab_codeaholicguy ; tab_thai'
 ###fire tab###
 
 ###mode###
