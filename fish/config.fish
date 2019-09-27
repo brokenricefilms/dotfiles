@@ -64,6 +64,7 @@ alias tab_github='ft https://github.com/nicholaspham2311'
 alias tab_music_happy='ft "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
 alias tab_music_anime='ft "https://www.youtube.com/watch?v=CaksNlNniis&list=PL8lZieNFgOdmrNGTqwjqYJpJ_2nw_O_M2"'
 alias tab_music_chill='ft https://youtu.be/hHW1oY26kxQ'
+alias tab_music_rapvn='ft "https://www.youtube.com/watch?v=r4Dypit7UCI&list=RDr4Dypit7UCI&start_radio=1"'
 
 alias tab_anime='ft "https://www9.gogoanime.io/"'
 alias tab_kdrama='ft "https://www.dramacool9.co/category/drama/?country=korean"'
@@ -79,5 +80,5 @@ alias tab_blogs='tab_toidicodedao ; tab_thefullsnack ; tab_codeaholicguy ; tab_t
 
 ###mode###
 alias work='cowthink -s "." ; tab_music_chill ; tab_pomodoro ; gla ; gha'
-alias hola='cowthink -s "hola hola" ; tab_fun ; tab_youtube_subsriptions ; tab_blogs ; tab_pocket ; tab_music_anime ; rem ; gla ; gha'
+alias hola='cowthink -s "hola hola" ; tab_fun ; tab_youtube_subsriptions ; tab_blogs ; tab_pocket ; tab_music_rapvn ; rem ; gla ; gha'
 ###mode###
