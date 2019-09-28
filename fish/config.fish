@@ -67,8 +67,7 @@ alias tab_music_rapvn='ft "https://www.youtube.com/watch?v=r4Dypit7UCI&list=RDr4
 
 alias tab_anime='ft "https://www9.gogoanime.io/"'
 alias tab_kdrama='ft "https://www.dramacool9.co/category/drama/?country=korean"'
-alias tab_kmovie='ft "https://ww1.fmovies.to/country/korea"'
-alias tab_fun='tab_anime ; tab_kdrama ; tab_kmovie'
+alias tab_fun='tab_anime ; tab_kdrama'
 
 alias tab_toidicodedao='ft "https://toidicodedao.com/"'
 alias tab_thefullsnack='ft "https://thefullsnack.com/"'
