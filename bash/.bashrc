@@ -119,10 +119,7 @@ fi
 set -o vi
 
 ###Lazy code### 
-alias ..='cd ..' \
-		...='cd .. ; cd .. ; cd ..' \
-		....='cd .. ; cd .. ; cd .. ; cd ..' \
-		c='clear' \
+alias c='clear' \
 		h='history' \
 		ins='sudo apt-get install -y' \
 		uins='sudo apt-get remove -y' \
@@ -135,6 +132,13 @@ alias ..='cd ..' \
 		rem='sudo apt-get update ;sudo apt-get upgrade -y ;sudo apt-get autoremove -y;sudo apt-get autoclean ; sudo apt-get clean' \
 		rbn='sudo reboot now' \
 		sdn='sudo shutdown now'
+
+alias ..='cd ..' \
+		...='cd .. ; cd .. ; cd ..' \
+		....='cd .. ; cd .. ; cd .. ; cd ..' \
+		dl='cd ~/Downloads' \
+		vd='cd ~/Videos' \
+		pt='cd ~/Pictures'	
 ###lazy code###
 
 ###git###
@@ -142,13 +146,15 @@ alias ..='cd ..' \
 alias clone='git clone' \
 		yo='git add -A ; git commit -m "$(curl -s whatthecommit.com/index.txt)"' \
 		push="git push" \
-		pull="git pull" \
-		ghdotfiles='cp ~/.tmux.conf ~/git/dotfiles/tmux ; cat ~/.config/nvim/init.vim > ~/.vimrc ; cp ~/.vimrc ~/git/dotfiles/vim ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.bashrc ~/git/dotfiles/bash ; cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ ; cd ~/git/dotfiles ; yo ; push' \
+		pull="git pull" 
+
+alias ghdotfiles='cp ~/.tmux.conf ~/git/dotfiles/tmux ; cat ~/.config/nvim/init.vim > ~/.vimrc ; cp ~/.vimrc ~/git/dotfiles/vim ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.bashrc ~/git/dotfiles/bash ; cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ ; cd ~/git/dotfiles ; yo ; push' \
 		ghfirstwebsite='cd ~/git/firstwebsite/ ; yo ; push' \
 		ghpomodoro='cd ~/git/pomodoro/ ; yo ; push' \
 		ghstudy='cd ~/git/study ; yo ; push' \
-		gha='ghdotfiles ; ghstudy ; ghfirstwebsite ; ghpomodoro ; fortune | cowsay; cd' \
-		gldotfiles='cd ~/git/dotfiles ; pull' \
+		gha='ghdotfiles ; ghstudy ; ghfirstwebsite ; ghpomodoro ; fortune | cowsay; cd'
+
+alias gldotfiles='cd ~/git/dotfiles ; pull' \
 		glstudy='cd ~/git/study ; pull' \
 		glfirstwebsite='cd ~/git/firstwebsite ; pull' \
 		glpomodoro='cd ~/git/pomodoro ; pull' \
@@ -183,3 +189,4 @@ alias tab_toidicodedao='ft "https://toidicodedao.com/"' \
 alias work='cowthink -s "." ; tab_music_chill ; tab_pomodoro ; gla ; gha' \
 		hola='cowthink -s "hola hola" ; tab_fun ; tab_youtube_subsriptions ; tab_blogs ; tab_pocket ; tab_music_rapvn ; rem ; gla ; gha'
 ###mode###
+
