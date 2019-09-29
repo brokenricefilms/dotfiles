@@ -131,6 +131,7 @@ alias c='clear' \
 		p='python3' \
 		rem='sudo apt-get update ;sudo apt-get upgrade -y ;sudo apt-get autoremove -y;sudo apt-get autoclean ; sudo apt-get clean' \
 		rbn='sudo reboot now' \
+		k='killall'
 		sdn='sudo shutdown now'
 
 alias ..='cd ..' \
