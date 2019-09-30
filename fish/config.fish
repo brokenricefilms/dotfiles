@@ -51,31 +51,54 @@ alias glpomodoro='cd ~/git/pomodoro ; pull'
 alias gla='gldotfiles ; glstudy ; glfirstwebsite ; glpomodoro ; cd ; cowthink -s "git pull all done"'
 ###git###
 
-###firefox tab###
+###firefox###
 alias f='firefox'
-alias ft='firefox -new-tab'
-alias tab_youtube_subsriptions='ft "https://www.youtube.com/feed/subscriptions"'
-alias tab_pocket='ft "https://app.getpocket.com/"'
-alias tab_pomodoro='ft "https://youtu.be/1znjHDiqBk8?t=1"'
-alias tab_github='ft https://github.com/nicholaspham2311' 
+alias ft='firefox -new-ft'
+alias ft_youtube_subsriptions='ft "https://www.youtube.com/feed/subscriptions"'
+alias ft_pocket='ft "https://app.getpocket.com/"'
+alias ft_pomodoro='ft "https://youtu.be/1znjHDiqBk8?t=1"'
+alias ft_github='ft https://github.com/nicholaspham2311' 
 
-alias tab_music_happy='ft "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
-alias tab_music_anime='ft "https://www.youtube.com/watch?v=CaksNlNniis&list=PL8lZieNFgOdmrNGTqwjqYJpJ_2nw_O_M2"'
-alias tab_music_chill='ft https://youtu.be/hHW1oY26kxQ'
-alias tab_music_rapvn='ft "https://www.youtube.com/watch?v=r4Dypit7UCI&list=RDr4Dypit7UCI&start_radio=1"'
+alias ft_music_happy='ft "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
+alias ft_music_anime='ft "https://www.youtube.com/watch?v=CaksNlNniis&list=PL8lZieNFgOdmrNGTqwjqYJpJ_2nw_O_M2"'
+alias ft_music_chill='ft https://youtu.be/hHW1oY26kxQ'
+alias ft_music_rapvn='ft "https://www.youtube.com/watch?v=r4Dypit7UCI&list=RDr4Dypit7UCI&start_radio=1"'
 
-alias tab_anime='ft "https://www9.gogoanime.io/"' 
-alias tab_kdrama='ft "https://www.dramacool9.co/category/drama/?country=korean"'
-alias tab_fun='tab_anime ; tab_kdrama'
+alias ft_anime='ft "https://www9.gogoanime.io/"' 
+alias ft_kdrama='ft "https://www.dramacool9.co/category/drama/?country=korean"'
+alias ft_fun='ft_anime ; ft_kdrama'
 
-alias tab_toidicodedao='ft "https://toidicodedao.com/"'
-alias tab_thefullsnack='ft "https://thefullsnack.com/"'
-alias tab_codeaholicguy='ft "https://codeaholicguy.com/"'
-alias tab_thai='ft "https://vnhacker.blogspot.com/"'
-alias tab_blogs='tab_toidicodedao ; tab_thefullsnack ; tab_codeaholicguy ; tab_thai'
-###fire tab###
+alias ft_toidicodedao='ft "https://toidicodedao.com/"'
+alias ft_thefullsnack='ft "https://thefullsnack.com/"'
+alias ft_codeaholicguy='ft "https://codeaholicguy.com/"'
+alias ft_thai='ft "https://vnhacker.blogspot.com/"'
+alias ft_blogs='ft_toidicodedao ; ft_thefullsnack ; ft_codeaholicguy ; ft_thai'
+###firefox###
+
+###chrome###
+alias ch='google-chrome'
+alias ch_youtube_subsriptions='ch "https://www.youtube.com/feed/subscriptions"'
+alias ch_pocket='ch "https://app.getpocket.com/"'
+alias ch_pomodoro='ch "https://youtu.be/1znjHDiqBk8?t=1"'
+alias ch_github='ch https://github.com/nicholaspham2311' 
+
+alias ch_music_happy='ch "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
+alias ch_music_anime='ch "https://www.youtube.com/watch?v=CaksNlNniis&list=PL8lZieNFgOdmrNGTqwjqYJpJ_2nw_O_M2"'
+alias ch_music_chill='ch https://youtu.be/hHW1oY26kxQ'
+alias ch_music_rapvn='ch "https://www.youtube.com/watch?v=r4Dypit7UCI&list=RDr4Dypit7UCI&start_radio=1"'
+
+alias ch_anime='ch "https://www9.gogoanime.io/"' 
+alias ch_kdrama='ch "https://www.dramacool9.co/category/drama/?country=korean"'
+alias ch_fun='ch_anime ; ch_kdrama'
+
+alias ch_toidicodedao='ch "https://toidicodedao.com/"'
+alias ch_thefullsnack='ch "https://thefullsnack.com/"'
+alias ch_codeaholicguy='ch "https://codeaholicguy.com/"'
+alias ch_thai='ch "https://vnhacker.blogspot.com/"'
+alias ch_blogs='ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai'
+###chrome###
 
 ###mode###
-alias work='cowthink -s "." ; tab_music_chill ; tab_pomodoro ; gla ; gha'
-alias hola='cowthink -s "hola hola" ; tab_fun ; tab_youtube_subsriptions ; tab_blogs ; tab_pocket ; tab_music_rapvn ; rem ; gla ; gha'
+alias work='cowthink -s "." ; ch_music_chill ; ch_pomodoro ; gla ; gha'
+alias hola='cowthink -s "hola hola" ; ch_fun ; ch_youtube_subsriptions ; ch_blogs ; ch_pocket ; ch_music_rapvn ; rem ; gla ; gha'
 ###mode###
