@@ -27,9 +27,6 @@ alias l='ls -latr'
 alias p='python3'
 alias rem='sudo apt-get update ;sudo apt-get upgrade -y ;sudo apt-get autoremove -y;sudo apt-get autoclean ; sudo apt-get clean'
 alias rbn='sudo reboot now'
-alias k='killall'
-alias yt="youtube-dl --add-metadata -i -o '%(upload_date)s-%(title)s.%(ext)s'"
-alias yta="yt -x -f bestaudio/best"
 alias sdn='sudo shutdown now'
 ###lazy code###
 
