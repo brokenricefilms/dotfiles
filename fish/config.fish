@@ -3,6 +3,7 @@ set -g -x fish_greeting Hi, Nicholas
 
 fish_vi_key_bindings
 
+###able sudo!! for fish
 function sudo --description "Replacement for Bash 'sudo !!' command to run last command using sudo."
 	if test "$argv" = !!
 		eval command sudo $history[1]
@@ -57,6 +58,7 @@ alias ft_youtube_subsriptions='ft "https://www.youtube.com/feed/subscriptions"'
 alias ft_pocket='ft "https://app.getpocket.com/"'
 alias ft_pomodoro='ft "https://youtu.be/1znjHDiqBk8?t=1"'
 alias ft_github='ft https://github.com/nicholaspham2311' 
+alias ft_fb='ft https://facebook.com'
 
 alias ft_music_happy='ft "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
 alias ft_music_anime='ft "https://www.youtube.com/watch?v=CaksNlNniis&list=PL8lZieNFgOdmrNGTqwjqYJpJ_2nw_O_M2"'
@@ -80,6 +82,7 @@ alias ch_youtube_subsriptions='ch "https://www.youtube.com/feed/subscriptions"'
 alias ch_pocket='ch "https://app.getpocket.com/"'
 alias ch_pomodoro='ch "https://youtu.be/1znjHDiqBk8?t=1"'
 alias ch_github='ch https://github.com/nicholaspham2311' 
+alias ch_fb='ch https://facebook.com'
 
 alias ch_music_happy='ch "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
 alias ch_music_anime='ch "https://www.youtube.com/watch?v=CaksNlNniis&list=PL8lZieNFgOdmrNGTqwjqYJpJ_2nw_O_M2"'
@@ -99,5 +102,5 @@ alias ch_blogs='ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai'
 
 ###mode###
 alias work='cowthink -s "." ; ch_music_chill ; ch_pomodoro ; gla ; gha'
-alias hola='cowthink -s "hola hola" ; ch_fun ; ch_youtube_subsriptions ; ch_blogs ; ch_music_rapvn ; rem ; gla ; gha'
+alias hola='cowthink -s "hola hola" ; ch_fun ; ch_youtube_subsriptions ; ch_blogs ; ch_fb ; ch_music_rapvn ; rem ; gla ; gha'
 ###mode###
