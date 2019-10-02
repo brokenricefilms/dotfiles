@@ -30,7 +30,6 @@ alias rem='sudo apt-get update ;sudo apt-get upgrade -y ;sudo apt-get autoremove
 alias rbn='sudo reboot now'
 alias sdn='sudo shutdown now'
 ###lazy code###
-
 ###git###
 #commit so hard, so auto write commit cool 
 alias clone='git clone'
@@ -50,7 +49,6 @@ alias glfirstwebsite='cd ~/git/firstwebsite ; pull'
 alias glpomodoro='cd ~/git/pomodoro ; pull'
 alias gla='gldotfiles ; glstudy ; glfirstwebsite ; glpomodoro ; cd ; cowthink -s "git pull all done"'
 ###git###
-
 ###firefox###
 alias f='firefox'
 alias ft='firefox -new-ft'
@@ -75,7 +73,6 @@ alias ft_codeaholicguy='ft "https://codeaholicguy.com/"'
 alias ft_thai='ft "https://vnhacker.blogspot.com/"'
 alias ft_blogs='ft_toidicodedao ; ft_thefullsnack ; ft_codeaholicguy ; ft_thai'
 ###firefox###
-
 ###chrome###
 alias ch='google-chrome'
 alias ch_youtube_subsriptions='ch "https://www.youtube.com/feed/subscriptions"'
@@ -99,7 +96,6 @@ alias ch_codeaholicguy='ch "https://codeaholicguy.com/"'
 alias ch_thai='ch "https://vnhacker.blogspot.com/"'
 alias ch_blogs='ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai'
 ###chrome###
-
 ###mode###
 alias work='cowthink -s "." ; ch_music_chill ; ch_pomodoro ; gla ; gha'
 alias hola='cowthink -s "hola hola" ; ch_fun ; ch_youtube_subsriptions ; ch_blogs ; ch_fb ; ch_music_rapvn ; rem ; gla ; gha'
