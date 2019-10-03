@@ -15,8 +15,7 @@ set nu
 
 set clipboard=unnamedplus
 
-syntax enable
-syntax on
+syntax off 
 
 set mouse=a
 
@@ -31,8 +30,7 @@ set ts=4 sw=4
 
 let g:user_emmet_leader_key=','
 
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
+let g:airline_theme='minimalist'
 
 :imap jj <Esc>
 
