@@ -17,6 +17,8 @@ set clipboard=unnamedplus
 
 syntax off 
 
+set nohlsearch 
+
 set mouse=a
 
 set autoread

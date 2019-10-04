@@ -3,7 +3,7 @@ set -g -x fish_greeting Hi, Nicholas
 
 fish_vi_key_bindings
 
-###able sudo!! for fish
+#able sudo!! for fish
 function sudo --description "Replacement for Bash 'sudo !!' command to run last command using sudo."
 	if test "$argv" = !!
 		eval command sudo $history[1]
@@ -73,7 +73,8 @@ alias ft_toidicodedao='ft "https://toidicodedao.com/"'
 alias ft_thefullsnack='ft "https://thefullsnack.com/"'
 alias ft_codeaholicguy='ft "https://codeaholicguy.com/"'
 alias ft_thai='ft "https://vnhacker.blogspot.com/"'
-alias ft_blogs='ft_toidicodedao ; ft_thefullsnack ; ft_codeaholicguy ; ft_thai'
+alias ft_ml='ft "https://l4w.io/"'
+alias ft_blogs='ft_toidicodedao ; ft_thefullsnack ; ft_codeaholicguy ; ft_thai ; ft_ml'
 ###firefox###
 
 ###chrome###
@@ -97,7 +98,8 @@ alias ch_toidicodedao='ch "https://toidicodedao.com/"'
 alias ch_thefullsnack='ch "https://thefullsnack.com/"'
 alias ch_codeaholicguy='ch "https://codeaholicguy.com/"'
 alias ch_thai='ch "https://vnhacker.blogspot.com/"'
-alias ch_blogs='ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai'
+alias ch_ml='ch "https://l4w.io/"'
+alias ch_blogs='ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai ; ch_ml'
 ###chrome###
 
 ###mode###
