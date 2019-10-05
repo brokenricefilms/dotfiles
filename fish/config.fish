@@ -103,6 +103,6 @@ alias ch_blogs='ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai ;
 ###chrome###
 
 ###mode###
-alias work='cowthink -s "." ; ch_music_chill ; ch_pomodoro ; gla ; gha'
-alias hola='cowthink -s "hola hola" ; ch_fun ; ch_youtube_subsriptions ; ch_blogs ; ch_fb ; ch_music_rapvn ; rem ; gla ; gha'
+alias work='fortune | cowsay ; ch_music_chill ; ch_pomodoro ; gla ; gha'
+alias hola='fortune | cowsay ; ch_fun ; ch_youtube_subsriptions ; ch_blogs ; ch_fb ; ch_music_rapvn ; rem ; gla ; gha'
 ###mode###
