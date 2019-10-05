@@ -65,8 +65,8 @@ alias ft_music_anime='ft "https://www.youtube.com/watch?v=CaksNlNniis&list=PL8lZ
 alias ft_music_chill='ft https://youtu.be/hHW1oY26kxQ'
 alias ft_music_rapvn='ft "https://www.youtube.com/watch?v=r4Dypit7UCI&list=RDr4Dypit7UCI&start_radio=1"'
 
-alias ft_anime='ft "https://www9.gogoanime.io/"' 
-alias ft_kdrama='ft "https://www.dramacool9.co/category/drama/?country=korean"'
+alias ft_anime='ft "https://www9.gogoanime.io"' 
+alias ft_kdrama='ft "https://www.dramacool9.co"'
 alias ft_fun='ft_anime ; ft_kdrama'
 
 alias ft_toidicodedao='ft "https://toidicodedao.com/"'
