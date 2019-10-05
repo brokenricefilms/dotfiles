@@ -90,8 +90,8 @@ alias ch_music_anime='ch "https://www.youtube.com/watch?v=CaksNlNniis&list=PL8lZ
 alias ch_music_chill='ch https://youtu.be/hHW1oY26kxQ'
 alias ch_music_rapvn='ch "https://www.youtube.com/watch?v=r4Dypit7UCI&list=RDr4Dypit7UCI&start_radio=1"'
 
-alias ch_anime='ch "https://www9.gogoanime.io/"' 
-alias ch_kdrama='ch "https://www.dramacool9.co/category/drama/?country=korean"'
+alias ch_anime='ch "https://www9.gogoanime.io"' 
+alias ch_kdrama='ch "https://www.dramacool9.co"'
 alias ch_fun='ch_anime ; ch_kdrama'
 
 alias ch_toidicodedao='ch "https://toidicodedao.com/"'
