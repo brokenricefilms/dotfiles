@@ -16,6 +16,10 @@ end
 alias ..='cd ..'
 alias ...='cd .. ; cd .. ; cd ..'
 alias ....='cd .. ; cd .. ; cd .. ; cd ..'
+
+alias cdtrash='cd /home/master/.local/share/Trash/files'
+alias ltrash='l /home/master/.local/share/Trash/files'
+
 alias c='clear'
 alias h='history'
 alias ins='sudo apt-get install -y'
