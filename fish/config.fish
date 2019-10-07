@@ -85,6 +85,7 @@ alias ch_fb='ch https://facebook.com'
 alias ch_music_happy='ch "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
 alias ch_music_anime='ch "https://www.youtube.com/watch?v=CaksNlNniis&list=PL8lZieNFgOdmrNGTqwjqYJpJ_2nw_O_M2"'
 alias ch_music_chill='ch https://youtu.be/hHW1oY26kxQ'
+alias ch_music_chill_japan='ch "https://www.youtube.com/watch?v=9NaCaPuyyYY&list=PLvG4xTFF2NwlILSITQ5PcpZoKiMkcZdJ1"'
 alias ch_music_rapvn='ch "https://www.youtube.com/watch?v=r4Dypit7UCI&list=RDr4Dypit7UCI&start_radio=1"'
 
 alias ch_anime='ch "https://www9.gogoanime.io"' 
@@ -100,6 +101,6 @@ alias ch_blogs='ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai ;
 ###chrome###
 
 ###mode###
-alias work='fortune | cowsay ; ch_pomodoro ; ch_music_chill ; gla ; gha'
+alias work='fortune | cowsay ; ch_pomodoro ; ch_music_chill_japan ; gla ; gha'
 alias hola='fortune | cowsay ; ch_fun ; ch_youtube_subsriptions ; ch_blogs ; ch_fb ; ch_music_rapvn ; rem ; gla ; gha'
 ###mode###
