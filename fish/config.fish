@@ -16,17 +16,12 @@ end
 alias ..='cd ..'
 alias ...='cd .. ; cd .. ; cd ..'
 alias ....='cd .. ; cd .. ; cd .. ; cd ..'
-
-alias cdtrash='cd /home/master/.local/share/Trash/files'
-alias ltrash='l /home/master/.local/share/Trash/files'
-
 alias c='clear'
 alias h='history'
 alias ins='sudo apt-get install -y'
 alias uins='sudo apt-get remove -y'
 alias e='exit'
 alias v='nvim'
-alias sv='sudo nvim'
 alias t='touch'
 alias l='ls -latr'
 alias p='python3'
