@@ -51,27 +51,27 @@ alias gla='gldotfiles ; glstudy ; glfirstwebsite ; glpomodoro ; cd ; cowthink -s
 ###git###
 
 ###firefox###
-alias ff='firefox -new-firefox'
-alias ff_youtube_subsriptions='firefox "https://www.youtube.com/feed/subscriptions"'
-alias ff_pocket='firefox "https://app.getpocket.com/"'
-alias ff_pomodoro='firefox "https://youtu.be/1znjHDiqBk8?t=1"'
-alias ff_github='firefox https://github.com/nicholaspham2311' 
-alias ff_fb='firefox https://facebook.com' 
-alias ff_music_happy='firefox "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
-alias ff_music_anime='firefox "https://www.youtube.com/watch?v=CaksNlNniis&list=PL8lZieNFgOdmrNGTqwjqYJpJ_2nw_O_M2"'
-alias ff_music_chill='firefox https://youtu.be/hHW1oY26kxQ'
-alias ff_music_rapvn='firefox "https://www.youtube.com/watch?v=r4Dypit7UCI&list=RDr4Dypit7UCI&start_radio=1"'
+alias fi='firefox -new-firefox'
+alias fi_youtube_subsriptions='firefox "https://www.youtube.com/feed/subscriptions"'
+alias fi_pocket='firefox "https://app.getpocket.com/"'
+alias fi_pomodoro='firefox "https://youtu.be/1znjHDiqBk8?t=1"'
+alias fi_github='firefox https://github.com/nicholaspham2311' 
+alias fi_fb='firefox https://facebook.com' 
+alias fi_music_happy='firefox "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
+alias fi_music_anime='firefox "https://www.youtube.com/watch?v=CaksNlNniis&list=PL8lZieNFgOdmrNGTqwjqYJpJ_2nw_O_M2"'
+alias fi_music_chill='firefox https://youtu.be/hHW1oY26kxQ'
+alias fi_music_rapvn='firefox "https://www.youtube.com/watch?v=r4Dypit7UCI&list=RDr4Dypit7UCI&start_radio=1"'
 
-alias ff_anime='firefox "https://www9.gogoanime.io"' 
-alias ff_kdrama='firefox "https://www.dramacool9.co"'
-alias ff_fun='firefox_anime ; firefox_kdrama'
+alias fi_anime='firefox "https://www9.gogoanime.io"' 
+alias fi_kdrama='firefox "https://www.dramacool9.co"'
+alias fi_fun='firefox_anime ; firefox_kdrama'
 
-alias ff_toidicodedao='firefox "https://toidicodedao.com/"'
-alias ff_thefullsnack='firefox "https://thefullsnack.com/"'
-alias ff_codeaholicguy='firefox "https://codeaholicguy.com/"'
-alias ff_thai='firefox "https://vnhacker.blogspot.com/"'
-alias ff_ml='firefox "https://l4w.io/"'
-alias ff_blogs='firefox_toidicodedao ; firefox_thefullsnack ; firefox_codeaholicguy ; firefox_thai ; firefox_ml'
+alias fi_toidicodedao='firefox "https://toidicodedao.com/"'
+alias fi_thefullsnack='firefox "https://thefullsnack.com/"'
+alias fi_codeaholicguy='firefox "https://codeaholicguy.com/"'
+alias fi_thai='firefox "https://vnhacker.blogspot.com/"'
+alias fi_ml='firefox "https://l4w.io/"'
+alias fi_blogs='firefox_toidicodedao ; firefox_thefullsnack ; firefox_codeaholicguy ; firefox_thai ; firefox_ml'
 ###firefox###
 
 ###chrome###
