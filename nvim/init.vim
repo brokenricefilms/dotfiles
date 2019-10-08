@@ -11,7 +11,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()            
 
-set number relativenumber
+set number
 
 set clipboard=unnamedplus
 
@@ -21,8 +21,8 @@ set nohlsearch
 
 set mouse=a
 
-set autoread autowrite
-
+set autowrite
+set autoread
 set nobackup
 set nowb
 set noswapfile
