@@ -97,5 +97,5 @@ alias ch_ml='ch "https://l4w.io/"'
 alias ch_blogs='ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai ; ch_ml'
 
 ###mode###
-alias work='fortune | cowsay ; ch_pomodoro ; ch_music_chill_japan ; gla ; gha'
+alias work='fortune | cowsay ; ch_music_chill_japan ; gla ; gha'
 alias hola='fortune | cowsay ; ch_fun ; ch_youtube_subsriptions ; ch_blogs ; ch_fb ; ch_music_rapvn ; rem ; gla ; gha'
