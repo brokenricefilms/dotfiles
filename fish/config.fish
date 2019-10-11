@@ -72,7 +72,8 @@ alias fi_ml='firefox "https://l4w.io/"'
 alias fi_blogs='firefox_toidicodedao ; firefox_thefullsnack ; firefox_codeaholicguy ; firefox_thai ; firefox_ml'
 
 ###chrome###
-alias ch='google-chrome'
+#alias ch='google-chrome'
+alias ch='chromium-browser'
 alias ch_youtube_subsriptions='ch "https://www.youtube.com/feed/subscriptions"'
 alias ch_pocket='ch "https://app.getpocket.com/"'
 alias ch_pomodoro='ch "https://youtu.be/1znjHDiqBk8?t=1"'
