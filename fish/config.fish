@@ -28,6 +28,7 @@ alias p='python3'
 alias rem='sudo apt-get update ;sudo apt-get upgrade -y ;sudo apt-get autoremove -y;sudo apt-get autoclean ; sudo apt-get clean'
 alias rbn='sudo reboot now'
 alias sdn='sudo shutdown now'
+###Lazy code### 
 
 ###git###
 #commit so hard, so auto write commit cool 
@@ -47,6 +48,7 @@ alias glstudy='cd ~/git/study ; pull'
 alias glfirstwebsite='cd ~/git/firstwebsite ; pull'
 alias glpomodoro='cd ~/git/pomodoro ; pull'
 alias gla='gldotfiles ; glstudy ; glfirstwebsite ; glpomodoro ; cd ; cowthink -s "git pull all done"'
+###git###
 
 ###firefox###
 alias fi='firefox -new-firefox'
@@ -70,6 +72,7 @@ alias fi_codeaholicguy='firefox "https://codeaholicguy.com/"'
 alias fi_thai='firefox "https://vnhacker.blogspot.com/"'
 alias fi_ml='firefox "https://l4w.io/"'
 alias fi_blogs='firefox_toidicodedao ; firefox_thefullsnack ; firefox_codeaholicguy ; firefox_thai ; firefox_ml'
+###firefox###
 
 ###chrome###
 alias ch='google-chrome'
@@ -95,7 +98,9 @@ alias ch_codeaholicguy='ch "https://codeaholicguy.com/"'
 alias ch_thai='ch "https://vnhacker.blogspot.com/"'
 alias ch_ml='ch "https://l4w.io/"'
 alias ch_blogs='ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai ; ch_ml'
+###chrome###
 
 ###mode###
 alias work='fortune | cowsay ; ch_music_chill_japan ; gla ; gha'
 alias hola='fortune | cowsay ; ch_fun ; ch_youtube_subsriptions ; ch_blogs ; ch_fb ; ch_music_rapvn ; rem ; gla ; gha'
+###mode###
