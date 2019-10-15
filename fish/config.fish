@@ -113,3 +113,8 @@ alias ch_blogs='ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai ;
 alias work='fortune | cowsay ; ch_music_chill_japan ; ch_pomodoro ; gla ; gha'
 alias hola='fortune | cowsay ; ch_youtube_subsriptions ; ch_blogs ; ch_fb ; rem ; gla ; gha'
 ###mode###
+
+###hacking###
+alias sherlock='python3 ~/tool/hacking/sherlock/sherlock.py' 
+alias sherlockauto='echo "who?" ; cd ~/Documents/data/sherlock ; sherlock (read $name) ; cat *.txt > *.txt > openlink.txt ; xargs -a openlink.txt google-chrome ; trash ~/Documents/data/sherlock/*.txt ; cd -'
+###hacking###
