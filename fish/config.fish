@@ -116,5 +116,5 @@ alias hola='fortune | cowsay ; ch_youtube_subsriptions ; ch_blogs ; ch_fb ; rem 
 
 ###hacking###
 alias sherlock='python3 ~/tool/hacking/sherlock/sherlock.py' 
-alias sherlockauto='echo "who?" ; cd ~/Documents/data/sherlock ; sherlock (read $name) ; cat *.txt > *.txt > openlink.txt ; xargs -a openlink.txt google-chrome ; trash ~/Documents/data/sherlock/*.txt ; cd -'
+alias sherlockauto='echo "who?" ; cd ~/Documents/data/sherlock ; sherlock (read $name) ; cat *.txt > openlink.txt ; xargs -a openlink.txt google-chrome ; trash ~/Documents/data/sherlock/*.txt ; cd -'
 ###hacking###
