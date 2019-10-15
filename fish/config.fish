@@ -57,6 +57,9 @@ alias fi_pocket='firefox "https://app.getpocket.com/"'
 alias fi_pomodoro='firefox "https://youtu.be/1znjHDiqBk8?t=1"'
 alias fi_github='firefox https://github.com/nicholaspham2311' 
 alias fi_fb='firefox https://facebook.com' 
+alias fi_cal='ch "https://calendar.google.com/calendar/r"'
+alias fi_trello='ch "https://trello.com/b/nGRAb2ii/nicholas"'
+
 alias fi_music_happy='firefox "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
 alias fi_music_anime='firefox "https://www.youtube.com/watch?v=CaksNlNniis&list=PL8lZieNFgOdmrNGTqwjqYJpJ_2nw_O_M2"'
 alias fi_music_chill='firefox https://youtu.be/hHW1oY26kxQ'
@@ -65,6 +68,8 @@ alias fi_music_rapvn='firefox "https://www.youtube.com/watch?v=r4Dypit7UCI&list=
 alias fi_anime='firefox "https://www9.gogoanime.io"' 
 alias fi_kdrama='firefox "https://www.dramacool9.co"'
 alias fi_fun='firefox_anime ; firefox_kdrama'
+
+alias ch_layout1='ch_cal ; ch_trello'
 
 alias fi_toidicodedao='firefox "https://toidicodedao.com/"'
 alias fi_thefullsnack='firefox "https://thefullsnack.com/"'
@@ -81,6 +86,8 @@ alias ch_pocket='ch "https://app.getpocket.com/"'
 alias ch_pomodoro='ch "https://youtu.be/1znjHDiqBk8?t=1"'
 alias ch_github='ch https://github.com/nicholaspham2311' 
 alias ch_fb='ch https://facebook.com'
+alias ch_cal='ch "https://calendar.google.com/calendar/r"'
+alias ch_trello='ch "https://trello.com/b/nGRAb2ii/nicholas"'
 
 alias ch_music_happy='ch "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
 alias ch_music_anime='ch "https://www.youtube.com/watch?v=CaksNlNniis&list=PL8lZieNFgOdmrNGTqwjqYJpJ_2nw_O_M2"'
@@ -91,6 +98,8 @@ alias ch_music_rapvn='ch "https://www.youtube.com/watch?v=r4Dypit7UCI&list=RDr4D
 alias ch_anime='ch "https://www9.gogoanime.io"' 
 alias ch_kdrama='ch "https://www.dramacool9.co"'
 alias ch_fun='ch_anime ; ch_kdrama'
+
+alias ch_layout1='ch_cal ; ch_trello'
 
 alias ch_toidicodedao='ch "https://toidicodedao.com/"'
 alias ch_thefullsnack='ch "https://thefullsnack.com/"'
