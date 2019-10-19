@@ -7,7 +7,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()            
 
-set number
+set number relativenumber
 set clipboard=unnamedplus
 syntax off 
 set nohlsearch 
