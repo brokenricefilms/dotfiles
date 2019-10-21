@@ -69,7 +69,7 @@ alias fi_music_rapvn='firefox "https://www.youtube.com/watch?v=r4Dypit7UCI&list=
 
 alias fi_anime='firefox "https://www9.gogoanime.io"' 
 alias fi_kdrama='firefox "https://www.dramacool9.co"'
-alias fi_movie='firefox "http://www.phimmoi.net/"'
+alias fi_movie='firefox "http://www.phimmoi.net/phim-le/"'
 alias fi_fun='fi_anime ; fi_kdrama ; fi_movie'
 
 alias ch_layout1='ch_cal ; ch_trello'
@@ -100,7 +100,7 @@ alias ch_music_rapvn='ch "https://www.youtube.com/watch?v=r4Dypit7UCI&list=RDr4D
 
 alias ch_anime='ch "https://www9.gogoanime.io"' 
 alias ch_kdrama='ch "https://www.dramacool9.co"'
-alias ch_movie='ch "http://www.phimmoi.net/"'
+alias ch_movie='ch "http://www.phimmoi.net/phim-le/"'
 alias ch_fun='ch_anime ; ch_kdrama ; ch_movie'
 
 alias ch_layout1='ch_cal ; ch_trello'
@@ -112,6 +112,10 @@ alias ch_thai='ch "https://vnhacker.blogspot.com/"'
 alias ch_ml='ch "https://l4w.io/"'
 alias ch_blogs='ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai ; ch_ml'
 ###chrome###
+
+###youtube-dl###
+alias dlmusic='youtube-dl -x --audio-format mp3 (read $link)'
+###youtube-dl###
 
 ###mode###
 alias work='fortune | cowsay ; ch_music_chill_japan ; ch_pomodoro ; gla ; gha'
