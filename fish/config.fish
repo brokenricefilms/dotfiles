@@ -69,7 +69,8 @@ alias fi_music_rapvn='firefox "https://www.youtube.com/watch?v=r4Dypit7UCI&list=
 
 alias fi_anime='firefox "https://www9.gogoanime.io"' 
 alias fi_kdrama='firefox "https://www.dramacool9.co"'
-alias fi_fun='firefox_anime ; firefox_kdrama'
+alias fi_movie='firefox "http://www.phimmoi.net/"'
+alias fi_fun='fi_anime ; fi_kdrama ; fi_movie'
 
 alias ch_layout1='ch_cal ; ch_trello'
 
@@ -118,6 +119,6 @@ alias hola='fortune | cowsay ; ch_fun ; ch_youtube_subsriptions ; ch_fb ; rem ; 
 ###mode###
 
 ###hacking###
-alias sherlock='python3 ~/tool/hacking/sherlock/sherlock.py' 
+alias sherlock='python3 ~/tools/hacking/sherlock/sherlock.py' 
 alias sherlockauto='echo "who?" ; cd ~/Documents/data/sherlock ; sherlock (read $name) ; cat *.txt > openlink.txt ; xargs -a openlink.txt google-chrome ; trash ~/Documents/data/sherlock/*.txt ; cd -'
 ###hacking###
