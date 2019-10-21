@@ -99,7 +99,8 @@ alias ch_music_rapvn='ch "https://www.youtube.com/watch?v=r4Dypit7UCI&list=RDr4D
 
 alias ch_anime='ch "https://www9.gogoanime.io"' 
 alias ch_kdrama='ch "https://www.dramacool9.co"'
-alias ch_fun='ch_anime ; ch_kdrama'
+alias ch_movie='ch "http://www.phimmoi.net/"'
+alias ch_fun='ch_anime ; ch_kdrama ; ch_movie'
 
 alias ch_layout1='ch_cal ; ch_trello'
 
@@ -113,7 +114,7 @@ alias ch_blogs='ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai ;
 
 ###mode###
 alias work='fortune | cowsay ; ch_music_chill_japan ; ch_pomodoro ; gla ; gha'
-alias hola='fortune | cowsay ; ch_fun ; ch_youtube_subsriptions ; ch_blogs ; ch_fb ; rem ; gla ; gha'
+alias hola='fortune | cowsay ; ch_fun ; ch_youtube_subsriptions ; ch_fb ; rem ; gla ; gha'
 ###mode###
 
 ###hacking###
