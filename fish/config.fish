@@ -28,6 +28,7 @@ alias p='python3'
 alias rem='sudo apt-get update ;sudo apt-get upgrade -y ;sudo apt-get autoremove -y;sudo apt-get autoclean ; sudo apt-get clean'
 alias rbn='sudo reboot now'
 alias sdn='sudo shutdown now'
+alias dlmusic='youtube-dl -x --audio-format mp3 (read $link)'
 ###Lazy code### 
 
 ###git###
@@ -112,10 +113,6 @@ alias ch_thai='ch "https://vnhacker.blogspot.com/"'
 alias ch_ml='ch "https://l4w.io/"'
 alias ch_blogs='ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai ; ch_ml'
 ###chrome###
-
-###youtube-dl###
-alias dlmusic='youtube-dl -x --audio-format mp3 (read $link)'
-###youtube-dl###
 
 ###mode###
 alias work='fortune | cowsay ; ch_music_chill_japan ; ch_pomodoro ; gla ; gha'
