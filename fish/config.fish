@@ -73,7 +73,7 @@ alias fi_kdrama='firefox "https://www.dramacool9.co"'
 alias fi_movie='firefox "http://www.phimmoi.net/phim-le/"'
 alias fi_fun='fi_anime ; fi_kdrama ; fi_movie'
 
-alias ch_layout1='ch_cal ; ch_trello'
+alias ch_layout1='ch_cal ; ch_keep'
 
 alias fi_toidicodedao='firefox "https://toidicodedao.com/"'
 alias fi_thefullsnack='firefox "https://thefullsnack.com/"'
@@ -92,6 +92,7 @@ alias ch_github='ch https://github.com/nicholaspham2311'
 alias ch_fb='ch https://facebook.com'
 alias ch_cal='ch "https://calendar.google.com/calendar/r"'
 alias ch_trello='ch "https://trello.com/b/nGRAb2ii/nicholas"'
+alias ch_keep='ch "https://keep.google.com/"'
 
 alias ch_music_happy='ch "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
 alias ch_music_anime='ch "https://www.youtube.com/watch?v=CaksNlNniis&list=PL8lZieNFgOdmrNGTqwjqYJpJ_2nw_O_M2"'
@@ -104,7 +105,7 @@ alias ch_kdrama='ch "https://www.dramacool9.co"'
 alias ch_movie='ch "http://www.phimmoi.net/phim-le/"'
 alias ch_fun='ch_anime ; ch_kdrama ; ch_movie'
 
-alias ch_layout1='ch_cal ; ch_trello'
+alias ch_layout1='ch_cal ; ch_keep'
 
 alias ch_toidicodedao='ch "https://toidicodedao.com/"'
 alias ch_thefullsnack='ch "https://thefullsnack.com/"'
