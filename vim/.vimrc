@@ -7,12 +7,11 @@ Plug 'easymotion/vim-easymotion'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()            
 
-set number relativenumber
-set clipboard=unnamedplus
 set ts=4 sw=4
+set number relativenumber
 
+set clipboard=unnamedplus
 set mouse=a
-
 set autowrite
 set autoread
 set nobackup
