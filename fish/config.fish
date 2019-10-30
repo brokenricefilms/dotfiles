@@ -114,7 +114,7 @@ alias ch_layout1='ch_cal ; ch_keep'
 ###chrome###
 
 ###mode###
-alias work='fortune | cowsay ; ch_music_chill_japan ; ch_pomodoro ; gla ; gha'
+alias work='fortune | cowsay ; ch_music_chill ; ch_pomodoro ; gla ; gha'
 alias hola='fortune | cowsay ; ch_fun ; ch_youtube_subsriptions ; ch_fb ; rem ; gla ; gha'
 ###mode###
 
