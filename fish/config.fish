@@ -70,17 +70,16 @@ alias fi_music_rapvn='firefox "https://www.youtube.com/watch?v=r4Dypit7UCI&list=
 
 alias fi_anime='firefox "https://www9.gogoanime.io"' 
 alias fi_kdrama='firefox "https://www.dramacool9.co"'
-alias fi_movie='firefox "http://www.phimmoi.net/phim-le/"'
 alias fi_fun='fi_anime ; fi_kdrama ; fi_movie'
 
 alias ch_layout1='ch_cal ; ch_keep'
 
-alias fi_toidicodedao='firefox "https://toidicodedao.com/"'
-alias fi_thefullsnack='firefox "https://thefullsnack.com/"'
-alias fi_codeaholicguy='firefox "https://codeaholicguy.com/"'
-alias fi_thai='firefox "https://vnhacker.blogspot.com/"'
-alias fi_ml='firefox "https://l4w.io/"'
-alias fi_blogs='firefox_toidicodedao ; firefox_thefullsnack ; firefox_codeaholicguy ; firefox_thai ; firefox_ml'
+#alias fi_toidicodedao='firefox "https://toidicodedao.com/"'
+#alias fi_thefullsnack='firefox "https://thefullsnack.com/"'
+#alias fi_codeaholicguy='firefox "https://codeaholicguy.com/"'
+#alias fi_thai='firefox "https://vnhacker.blogspot.com/"'
+#alias fi_ml='firefox "https://l4w.io/"'
+#alias fi_blogs='firefox_toidicodedao ; firefox_thefullsnack ; firefox_codeaholicguy ; firefox_thai ; firefox_ml'
 ###firefox###
 
 ###chrome###
@@ -102,22 +101,21 @@ alias ch_music_rapvn='ch "https://www.youtube.com/watch?v=r4Dypit7UCI&list=RDr4D
 
 alias ch_anime='ch "https://www9.gogoanime.io"' 
 alias ch_kdrama='ch "https://www.dramacool9.co"'
-alias ch_movie='ch "http://www.phimmoi.net/phim-le/"'
 alias ch_fun='ch_anime ; ch_kdrama ; ch_movie'
 
 alias ch_layout1='ch_cal ; ch_keep'
 
-alias ch_toidicodedao='ch "https://toidicodedao.com/"'
-alias ch_thefullsnack='ch "https://thefullsnack.com/"'
-alias ch_codeaholicguy='ch "https://codeaholicguy.com/"'
-alias ch_thai='ch "https://vnhacker.blogspot.com/"'
-alias ch_ml='ch "https://l4w.io/"'
-alias ch_blogs='ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai ; ch_ml'
+#alias ch_toidicodedao='ch "https://toidicodedao.com/"'
+#alias ch_thefullsnack='ch "https://thefullsnack.com/"'
+#alias ch_codeaholicguy='ch "https://codeaholicguy.com/"'
+#alias ch_thai='ch "https://vnhacker.blogspot.com/"'
+#alias ch_ml='ch "https://l4w.io/"'
+#alias ch_blogs='ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai ; ch_ml'
 ###chrome###
 
 ###mode###
 alias work='fortune | cowsay ; ch_music_chill_japan ; ch_pomodoro ; gla ; gha'
-alias hola='fortune | cowsay ; ch_blogs ; ch_fun ; ch_youtube_subsriptions ; ch_fb ; rem ; gla ; gha'
+alias hola='fortune | cowsay ; ch_fun ; ch_youtube_subsriptions ; ch_fb ; rem ; gla ; gha'
 ###mode###
 
 ###hacking###
