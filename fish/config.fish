@@ -105,17 +105,17 @@ alias ch_fun='ch_anime ; ch_kdrama ; ch_movie'
 
 alias ch_layout1='ch_cal ; ch_keep'
 
-#alias ch_toidicodedao='ch "https://toidicodedao.com/"'
-#alias ch_thefullsnack='ch "https://thefullsnack.com/"'
-#alias ch_codeaholicguy='ch "https://codeaholicguy.com/"'
-#alias ch_thai='ch "https://vnhacker.blogspot.com/"'
-#alias ch_ml='ch "https://l4w.io/"'
-#alias ch_blogs='ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai ; ch_ml'
+alias ch_toidicodedao='ch "https://toidicodedao.com/"'
+alias ch_thefullsnack='ch "https://thefullsnack.com/"'
+alias ch_codeaholicguy='ch "https://codeaholicguy.com/"'
+alias ch_thai='ch "https://vnhacker.blogspot.com/"'
+alias ch_ml='ch "https://l4w.io/"'
+alias ch_blogs='ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai ; ch_ml'
 ###chrome###
 
 ###mode###
 alias work='fortune | cowsay ; ch_music_chill ; ch_pomodoro ; gla ; gha'
-alias hola='fortune | cowsay ; ch_fun ; ch_youtube_subsriptions ; ch_fb ; rem ; gla ; gha'
+alias hola='fortune | cowsay ; ch_blogs ; ch_fun ; ch_youtube_subsriptions ; ch_fb ; rem ; gla ; gha'
 ###mode###
 
 ###hacking###

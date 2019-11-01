@@ -9,6 +9,7 @@ call plug#end()
 
 set ts=4 sw=4
 set number relativenumber
+set background=dark
 
 set clipboard=unnamedplus
 set mouse=a
@@ -19,7 +20,7 @@ set nowb
 set noswapfile
 
 let g:user_emmet_leader_key=','
-let g:airline_theme='solarized'
+let g:airline_theme='minimalist'
 
 :imap jj <Esc>
 nmap <silent> f <Plug>(easymotion-overwin-f)
