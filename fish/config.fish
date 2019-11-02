@@ -29,6 +29,7 @@ alias rem='sudo apt-get update ;sudo apt-get upgrade -y ;sudo apt-get autoremove
 alias rbn='sudo reboot now'
 alias sdn='sudo shutdown now'
 alias dlmusic='youtube-dl -x --audio-format mp3 (read $link)'
+alias j7='ssh -p 8022 iu0_a182@192.168.1.4'
 ###Lazy code### 
 
 ###git###
@@ -41,16 +42,18 @@ alias g='git'
 alias cm='git commit -m'
 
 alias ghdotfiles='cp ~/.tmux.conf ~/git/dotfiles/tmux ; cat ~/.config/nvim/init.vim > ~/.vimrc ; cp ~/.vimrc ~/git/dotfiles/vim ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.bashrc ~/git/dotfiles/bash ; cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ ; cp ~/.config/vifm/vifmrc ~/git/dotfiles/vifm/ ; cp ~/.config/vifm/colors/Default.vifm ~/git/dotfiles/vifm/colors/ ; cd ~/git/dotfiles ; yo ; push'
+alias ghdotfiles-termux='cd ~/git/dotfiles-termux ; yo ; push'
 alias ghfirstwebsite='cd ~/git/firstwebsite/ ; yo ; push'
 alias ghpomodoro='cd ~/git/pomodoro/ ; yo ; push'
 alias ghstudy='cd ~/git/study ; yo ; push'
-alias gha='ghdotfiles ; ghstudy ; ghfirstwebsite ; ghpomodoro ; fortune | cowsay; cd'
+alias gha='ghdotfiles ; ghdotfiles-termux ; ghstudy ; ghfirstwebsite ; ghpomodoro ; fortune | cowsay; cd'
 
 alias gldotfiles='cd ~/git/dotfiles ; pull'
+alias gldotfiles-termux='cd ~/git/dotfiles-termux ; pull'
 alias glstudy='cd ~/git/study ; pull'
 alias glfirstwebsite='cd ~/git/firstwebsite ; pull'
 alias glpomodoro='cd ~/git/pomodoro ; pull'
-alias gla='gldotfiles ; glstudy ; glfirstwebsite ; glpomodoro ; cd ; cowthink -s "git pull all done"'
+alias gla='gldotfiles ; gldotfiles-termux ; glstudy ; glfirstwebsite ; glpomodoro ; cd ; cowthink -s "git pull all done"'
 ###git###
 
 ###firefox###
