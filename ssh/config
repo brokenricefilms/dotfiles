@@ -1,0 +1,4 @@
+Host samsung
+	HostName 192.168.1.4
+	User iu0_a182
+	port 8022

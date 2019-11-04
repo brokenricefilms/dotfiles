@@ -29,7 +29,6 @@ alias rem='sudo apt-get update ;sudo apt-get upgrade -y ;sudo apt-get autoremove
 alias rbn='sudo reboot now'
 alias sdn='sudo shutdown now'
 alias dlmusic='youtube-dl -x --audio-format mp3 (read $link)'
-alias j7='ssh -p 8022 iu0_a182@192.168.1.4'
 ###Lazy code### 
 
 ###git###
@@ -41,7 +40,7 @@ alias pull="git pull"
 alias g='git'
 alias cm='git commit -m'
 
-alias ghdotfiles='cp ~/.tmux.conf ~/git/dotfiles/tmux ; cat ~/.config/nvim/init.vim > ~/.vimrc ; cp ~/.vimrc ~/git/dotfiles/vim ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.bashrc ~/git/dotfiles/bash ; cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ ; cp ~/.config/vifm/vifmrc ~/git/dotfiles/vifm/ ; cp ~/.config/vifm/colors/Default.vifm ~/git/dotfiles/vifm/colors/ ; cd ~/git/dotfiles ; yo ; push'
+alias ghdotfiles='cp ~/.tmux.conf ~/git/dotfiles/tmux ; cat ~/.config/nvim/init.vim > ~/.vimrc ; cp ~/.vimrc ~/git/dotfiles/vim ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.bashrc ~/git/dotfiles/bash ; cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ ; cp ~/.config/vifm/vifmrc ~/git/dotfiles/vifm/ ; cp ~/.config/vifm/colors/Default.vifm ~/git/dotfiles/vifm/colors/ ; cp ~/.ssh/config ~/git/dotfiles/ssh/ ; cd ~/git/dotfiles ; yo ; push'
 alias ghdotfiles-termux='cd ~/git/dotfiles-termux ; yo ; push'
 alias ghfirstwebsite='cd ~/git/firstwebsite/ ; yo ; push'
 alias ghpomodoro='cd ~/git/pomodoro/ ; yo ; push'
