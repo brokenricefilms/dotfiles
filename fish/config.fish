@@ -117,7 +117,7 @@ alias ch_layout1='ch_cal ; ch_keep'
 
 ###mode###
 alias work='fortune | cowsay ; ch_music_chill ; ch_pomodoro ; gla ; gha'
-alias hola='fortune | cowsay ; ch_fun ; ch_youtube_subsriptions ; ch_fb ; rem ; gla ; gha'
+alias hola='fortune | cowsay ; ch_youtube_subsriptions ; ch_fb ; rem ; gla ; gha'
 ###mode###
 
 ###hacking###
