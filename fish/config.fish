@@ -72,7 +72,7 @@ alias fi_music_rapvn='firefox "https://www.youtube.com/watch?v=r4Dypit7UCI&list=
 
 alias fi_anime='firefox "https://www9.gogoanime.io"' 
 alias fi_kdrama='firefox "https://www.dramacool9.co"'
-alias fi_fun='fi_anime ; fi_kdrama ; fi_movie'
+alias fi_fun='fi_anime ; fi_kdrama'
 
 alias ch_layout1='ch_cal ; ch_keep'
 
