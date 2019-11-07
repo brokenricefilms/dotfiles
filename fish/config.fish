@@ -76,12 +76,12 @@ alias fi_fun='fi_anime ; fi_kdrama'
 
 alias ch_layout1='ch_cal ; ch_keep'
 
-#alias fi_toidicodedao='firefox "https://toidicodedao.com/"'
-#alias fi_thefullsnack='firefox "https://thefullsnack.com/"'
-#alias fi_codeaholicguy='firefox "https://codeaholicguy.com/"'
-#alias fi_thai='firefox "https://vnhacker.blogspot.com/"'
-#alias fi_ml='firefox "https://l4w.io/"'
-#alias fi_blogs='firefox_toidicodedao ; firefox_thefullsnack ; firefox_codeaholicguy ; firefox_thai ; firefox_ml'
+alias fi_toidicodedao='firefox "https://toidicodedao.com/"'
+alias fi_thefullsnack='firefox "https://thefullsnack.com/"'
+alias fi_codeaholicguy='firefox "https://codeaholicguy.com/"'
+alias fi_thai='firefox "https://vnhacker.blogspot.com/"'
+alias fi_ml='firefox "https://l4w.io/"'
+alias fi_blogs='firefox_toidicodedao ; firefox_thefullsnack ; firefox_codeaholicguy ; firefox_thai ; firefox_ml'
 ###firefox###
 
 ###chrome###
@@ -107,12 +107,12 @@ alias ch_fun='ch_anime ; ch_kdrama ; ch_movie'
 
 alias ch_layout1='ch_cal ; ch_keep'
 
-#alias ch_toidicodedao='ch "https://toidicodedao.com/"'
-#alias ch_thefullsnack='ch "https://thefullsnack.com/"'
-#alias ch_codeaholicguy='ch "https://codeaholicguy.com/"'
-#alias ch_thai='ch "https://vnhacker.blogspot.com/"'
-#alias ch_ml='ch "https://l4w.io/"'
-#alias ch_blogs='ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai ; ch_ml'
+alias ch_toidicodedao='ch "https://toidicodedao.com/"'
+alias ch_thefullsnack='ch "https://thefullsnack.com/"'
+alias ch_codeaholicguy='ch "https://codeaholicguy.com/"'
+alias ch_thai='ch "https://vnhacker.blogspot.com/"'
+alias ch_ml='ch "https://l4w.io/"'
+alias ch_blogs='ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai ; ch_ml'
 ###chrome###
 
 ###mode###
