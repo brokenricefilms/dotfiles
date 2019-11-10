@@ -12,7 +12,7 @@ function sudo --description "Replacement for Bash 'sudo !!' command to run last 
 	end
 end
 
-###Lazy code### 
+###lazy code### 
 alias ..='cd ..'
 alias ...='cd .. ; cd .. ; cd ..'
 alias ....='cd .. ; cd .. ; cd .. ; cd ..'
@@ -29,7 +29,7 @@ alias rem='sudo apt-get update ;sudo apt-get upgrade -y ;sudo apt-get autoremove
 alias rbn='sudo reboot now'
 alias sdn='sudo shutdown now'
 alias dlmusic='youtube-dl -x --audio-format mp3 (read $link)'
-###Lazy code### 
+###lazy code### 
 
 ###git###
 #commit so hard, so auto write commit cool 

@@ -117,7 +117,7 @@ fi
 ############################
 set -o vi
 
-###Lazy code### 
+###lazy code### 
 alias ..='cd ..'
 alias ...='cd .. ; cd .. ; cd ..'
 alias ....='cd .. ; cd .. ; cd .. ; cd ..'
@@ -133,7 +133,8 @@ alias p='python3'
 alias rem='sudo apt-get update ;sudo apt-get upgrade -y ;sudo apt-get autoremove -y;sudo apt-get autoclean ; sudo apt-get clean'
 alias rbn='sudo reboot now'
 alias sdn='sudo shutdown now'
-###Lazy code### 
+alias dlmusic='youtube-dl -x --audio-format mp3 (read $link)'
+###lazy code### 
 
 ###git###
 #commit so hard, so auto write commit cool 
@@ -144,17 +145,19 @@ alias pull="git pull"
 alias g='git'
 alias cm='git commit -m'
 
-alias ghdotfiles='cp ~/.tmux.conf ~/git/dotfiles/tmux ; cat ~/.config/nvim/init.vim > ~/.vimrc ; cp ~/.vimrc ~/git/dotfiles/vim ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.bashrc ~/git/dotfiles/bash ; cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ ; cd ~/git/dotfiles ; yo ; push'
+alias ghdotfiles='cp ~/.tmux.conf ~/git/dotfiles/tmux ; cat ~/.config/nvim/init.vim > ~/.vimrc ; cp ~/.vimrc ~/git/dotfiles/vim ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.bashrc ~/git/dotfiles/bash ; cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ ; cp ~/.config/vifm/vifmrc ~/git/dotfiles/vifm/ ; cp ~/.config/vifm/colors/Default.vifm ~/git/dotfiles/vifm/colors/ ; cp ~/.ssh/config ~/git/dotfiles/ssh/ ; cd ~/git/dotfiles ; yo ; push'
+alias ghdotfiles-termux='cd ~/git/dotfiles-termux ; yo ; push'
 alias ghfirstwebsite='cd ~/git/firstwebsite/ ; yo ; push'
 alias ghpomodoro='cd ~/git/pomodoro/ ; yo ; push'
 alias ghstudy='cd ~/git/study ; yo ; push'
-alias gha='ghdotfiles ; ghstudy ; ghfirstwebsite ; ghpomodoro ; fortune | cowsay; cd'
+alias gha='ghdotfiles ; ghdotfiles-termux ; ghstudy ; ghfirstwebsite ; ghpomodoro ; fortune | cowsay; cd'
 
 alias gldotfiles='cd ~/git/dotfiles ; pull'
+alias gldotfiles-termux='cd ~/git/dotfiles-termux ; pull'
 alias glstudy='cd ~/git/study ; pull'
 alias glfirstwebsite='cd ~/git/firstwebsite ; pull'
 alias glpomodoro='cd ~/git/pomodoro ; pull'
-alias gla='gldotfiles ; glstudy ; glfirstwebsite ; glpomodoro ; cd ; cowthink -s "git pull all done"'
+alias gla='gldotfiles ; gldotfiles-termux ; glstudy ; glfirstwebsite ; glpomodoro ; cd ; cowthink -s "git pull all done"'
 ###git###
 
 ###firefox###
@@ -174,9 +177,9 @@ alias fi_music_rapvn='firefox "https://www.youtube.com/watch?v=r4Dypit7UCI&list=
 
 alias fi_anime='firefox "https://www9.gogoanime.io"' 
 alias fi_kdrama='firefox "https://www.dramacool9.co"'
-alias fi_fun='firefox_anime ; firefox_kdrama'
+alias fi_fun='fi_anime ; fi_kdrama'
 
-alias ch_layout1='ch_cal ; ch_trello'
+alias ch_layout1='ch_cal ; ch_keep'
 
 alias fi_toidicodedao='firefox "https://toidicodedao.com/"'
 alias fi_thefullsnack='firefox "https://thefullsnack.com/"'
@@ -195,6 +198,7 @@ alias ch_github='ch https://github.com/nicholaspham2311'
 alias ch_fb='ch https://facebook.com'
 alias ch_cal='ch "https://calendar.google.com/calendar/r"'
 alias ch_trello='ch "https://trello.com/b/nGRAb2ii/nicholas"'
+alias ch_keep='ch "https://keep.google.com/"'
 
 alias ch_music_happy='ch "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
 alias ch_music_anime='ch "https://www.youtube.com/watch?v=CaksNlNniis&list=PL8lZieNFgOdmrNGTqwjqYJpJ_2nw_O_M2"'
@@ -206,7 +210,7 @@ alias ch_anime='ch "https://www9.gogoanime.io"'
 alias ch_kdrama='ch "https://www.dramacool9.co"'
 alias ch_fun='ch_anime ; ch_kdrama'
 
-alias ch_layout1='ch_cal ; ch_trello'
+alias ch_layout1='ch_cal ; ch_keep'
 
 alias ch_toidicodedao='ch "https://toidicodedao.com/"'
 alias ch_thefullsnack='ch "https://thefullsnack.com/"'
@@ -217,11 +221,11 @@ alias ch_blogs='ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai ;
 ###chrome###
 
 ###mode###
-alias work='fortune | cowsay ; ch_music_chill_japan ; ch_pomodoro ; gla ; gha'
-alias hola='fortune | cowsay ; ch_fun ; ch_youtube_subsriptions ; ch_blogs ; ch_fb ; rem ; gla ; gha'
+alias work='fortune | cowsay ; ch_music_chill ; ch_pomodoro ; gla ; gha'
+alias hola='fortune | cowsay ; ch_youtube_subsriptions ; ch_fb ; rem ; gla ; gha'
 ###mode###
 
 ###hacking###
-alias sherlock='python3 ~/tool/hacking/sherlock/sherlock.py' 
-alias sherlockauto='echo "who?" ; cd ~/Documents/data/sherlock ; sherlock (read $name) ; cat *.txt > openlink.txt ; xargs -a openlink.txt google-chrome ; trash ~/Documents/data/sherlock/*.txt ; cd -'
+alias sherlock='python3 ~/tools/hacking/sherlock/sherlock.py' 
+alias autosherlock='echo "who?" ; cd ~/Documents/data/sherlock ; sherlock (read $name) ; cat *.txt > openlink.txt ; xargs -a openlink.txt google-chrome ; trash ~/Documents/data/sherlock/*.txt ; cd -'
 ###hacking###
