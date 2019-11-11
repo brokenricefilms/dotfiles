@@ -45,6 +45,7 @@ alias ghdotfiles-termux='cd ~/git/dotfiles-termux ; yo ; push'
 alias ghfirstwebsite='cd ~/git/firstwebsite/ ; yo ; push'
 alias ghpomodoro='cd ~/git/pomodoro/ ; yo ; push'
 alias ghstudy='cd ~/git/study ; yo ; push'
+alias ghlazyscript='cd ~/git/lazyscript ; yo ; push'
 alias gha='ghdotfiles ; ghdotfiles-termux ; ghstudy ; ghfirstwebsite ; ghpomodoro ; fortune | cowsay; cd'
 
 alias gldotfiles='cd ~/git/dotfiles ; pull'
@@ -52,7 +53,8 @@ alias gldotfiles-termux='cd ~/git/dotfiles-termux ; pull'
 alias glstudy='cd ~/git/study ; pull'
 alias glfirstwebsite='cd ~/git/firstwebsite ; pull'
 alias glpomodoro='cd ~/git/pomodoro ; pull'
-alias gla='gldotfiles ; gldotfiles-termux ; glstudy ; glfirstwebsite ; glpomodoro ; cd ; cowthink -s "git pull all done"'
+alias gllazyscript='cd ~/git/lazyscript ; pull'
+alias gla='gldotfiles ; gldotfiles-termux ; glstudy ; glfirstwebsite ; glpomodoro ; gllazyscript ; cd ; cowthink -s "git pull all done"'
 ###git###
 
 ###firefox###

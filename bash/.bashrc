@@ -229,3 +229,5 @@ alias hola='fortune | cowsay ; ch_youtube_subsriptions ; ch_fb ; rem ; gla ; gha
 alias sherlock='python3 ~/tools/hacking/sherlock/sherlock.py' 
 alias autosherlock='echo "who?" ; cd ~/Documents/data/sherlock ; sherlock (read $name) ; cat *.txt > openlink.txt ; xargs -a openlink.txt google-chrome ; trash ~/Documents/data/sherlock/*.txt ; cd -'
 ###hacking###
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
