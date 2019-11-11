@@ -46,7 +46,7 @@ alias ghfirstwebsite='cd ~/git/firstwebsite/ ; yo ; push'
 alias ghpomodoro='cd ~/git/pomodoro/ ; yo ; push'
 alias ghstudy='cd ~/git/study ; yo ; push'
 alias ghlazyscript='cd ~/git/lazyscript ; yo ; push'
-alias gha='ghdotfiles ; ghdotfiles-termux ; ghstudy ; ghfirstwebsite ; ghpomodoro ; fortune | cowsay; cd'
+alias gha='ghlazyscript ; ghdotfiles ; ghdotfiles-termux ; ghstudy ; ghfirstwebsite ; ghpomodoro ; fortune | cowsay; cd'
 
 alias gldotfiles='cd ~/git/dotfiles ; pull'
 alias gldotfiles-termux='cd ~/git/dotfiles-termux ; pull'
