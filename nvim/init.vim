@@ -21,9 +21,11 @@ set nobackup
 set nowritebackup
 
 let g:user_emmet_leader_key=','
-let g:airline_theme='minimalist'
+"let g:airline_theme='minimalist'
+let g:airline_theme='solarized'
 
 :imap jj <Esc>
 nmap <silent> f <Plug>(easymotion-overwin-f)
 nmap <silent> F <Plug>(easymotion-overwin-line)
 nnoremap <C-o> :CocList outline<CR>
+map <C-n> :NERDTreeToggle<CR>
