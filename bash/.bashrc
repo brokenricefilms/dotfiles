@@ -145,19 +145,21 @@ alias pull="git pull"
 alias g='git'
 alias cm='git commit -m'
 
-alias ghdotfiles='cp ~/.tmux.conf ~/git/dotfiles/tmux ; cat ~/.config/nvim/init.vim > ~/.vimrc ; cp ~/.vimrc ~/git/dotfiles/vim ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.bashrc ~/git/dotfiles/bash ; cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ ; cp ~/.config/vifm/vifmrc ~/git/dotfiles/vifm/ ; cp ~/.config/vifm/colors/Default.vifm ~/git/dotfiles/vifm/colors/ ; cp ~/.ssh/config ~/git/dotfiles/ssh/ ; cd ~/git/dotfiles ; yo ; push'
+alias ghdotfiles='cp ~/.gitconfig  ~/git/dotfiles/git/ ; cp ~/.tmux.conf ~/git/dotfiles/tmux ; cat ~/.config/nvim/init.vim > ~/.vimrc ; cp ~/.vimrc ~/git/dotfiles/vim ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.bashrc ~/git/dotfiles/bash ; cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ ; cp ~/.config/vifm/vifmrc ~/git/dotfiles/vifm/ ; cp ~/.config/vifm/colors/Default.vifm ~/git/dotfiles/vifm/colors/ ; cp ~/.ssh/config ~/git/dotfiles/ssh/ ; cd ~/git/dotfiles ; yo ; push'
 alias ghdotfiles-termux='cd ~/git/dotfiles-termux ; yo ; push'
-alias ghfirstwebsite='cd ~/git/firstwebsite/ ; yo ; push'
+alias ghmywebsite='cd ~/git/mywebsite/ ; yo ; push'
 alias ghpomodoro='cd ~/git/pomodoro/ ; yo ; push'
 alias ghstudy='cd ~/git/study ; yo ; push'
-alias gha='ghdotfiles ; ghdotfiles-termux ; ghstudy ; ghfirstwebsite ; ghpomodoro ; fortune | cowsay; cd'
+alias ghlazyscript='cd ~/git/lazyscript ; yo ; push'
+alias gha='ghlazyscript ; ghdotfiles ; ghdotfiles-termux ; ghstudy ; ghmywebsite ; ghpomodoro ; fortune | cowsay; cd'
 
 alias gldotfiles='cd ~/git/dotfiles ; pull'
 alias gldotfiles-termux='cd ~/git/dotfiles-termux ; pull'
 alias glstudy='cd ~/git/study ; pull'
-alias glfirstwebsite='cd ~/git/firstwebsite ; pull'
+alias glmywebsite='cd ~/git/mywebsite ; pull'
 alias glpomodoro='cd ~/git/pomodoro ; pull'
-alias gla='gldotfiles ; gldotfiles-termux ; glstudy ; glfirstwebsite ; glpomodoro ; cd ; cowthink -s "git pull all done"'
+alias gllazyscript='cd ~/git/lazyscript ; pull'
+alias gla='gldotfiles ; gldotfiles-termux ; glstudy ; glmywebsite ; glpomodoro ; gllazyscript ; cd ; cowthink -s "git pull all done"'
 ###git###
 
 ###firefox###
