@@ -42,7 +42,7 @@
 " xterm-256color) from /usr/lib/terminfo/; you can check current number
 " of colors in your terminal with tput colors command)
 
-highlight group cterm=attrs ctermfg=foreground_color ctermbg=background_color
+" highlight group cterm=attrs ctermfg=foreground_color ctermbg=background_color
 
 highlight clear
 
@@ -79,7 +79,3 @@ highlight User7 cterm=bold,underline,reverse,standout,italic ctermfg=default cte
 highlight User8 cterm=bold,underline,reverse,standout,italic ctermfg=default ctermbg=default
 highlight User9 cterm=bold,underline,reverse,standout,italic ctermfg=default ctermbg=default
 highlight OtherWin cterm=bold,underline,reverse,standout,italic ctermfg=default ctermbg=default
-
-highlight /^.*\.(mp3|ogg|oga|flac|m4a)$/ ctermfg=magenta
-highlight /^.*\.(jpg|jpeg|png|gif|tiff|webp|bmp|svg|svgz)$/ ctermfg=yellow
-highlight /^.*\.(zip|gz|bz2|xz|tar|tgz|tbz2|7z|rar|iso|rpm|deb)$/ ctermfg=red
