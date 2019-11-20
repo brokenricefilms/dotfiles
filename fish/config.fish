@@ -119,7 +119,7 @@ alias ch-blog='ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai ; 
 
 ###mode###
 alias work='fortune | cowsay ; ch_music_chill ; ch_pomodoro ; gla ; gha'
-alias hola='fortune | cowsay ; ch_fun ; ch_blogs ; ch_fun ; ch_youtube_subsriptions ; ch_fb ; rem ; gla ; gha'
+alias hola='fortune | cowsay ; ch_blogs ; ch_fun ; ch_youtube_subsriptions ; ch_fb ; rem ; gla ; gha'
 ###mode###
 
 ###hacking###
