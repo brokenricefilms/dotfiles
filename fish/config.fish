@@ -29,6 +29,7 @@ alias rem='sudo snap refresh ; sudo apt-get update ; sudo apt-get upgrade -y ;su
 alias rbn='sudo reboot now'
 alias sdn='sudo shutdown now'
 alias dlmusic='youtube-dl -x --audio-format mp3 (read $link)'
+alias trashdl='cd ~/Downloads ; trash * ; cd -'
 ###lazy code### 
 
 ###git###
