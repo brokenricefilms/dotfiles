@@ -21,8 +21,8 @@ set nobackup
 set nowritebackup
 
 let g:user_emmet_leader_key=','
-"let g:airline_theme='minimalist'
-let g:airline_theme='solarized'
+let g:airline_theme='minimalist'
+"let g:airline_theme='solarized'
 
 :imap jj <Esc>
 nmap <silent> f <Plug>(easymotion-overwin-f)

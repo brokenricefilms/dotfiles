@@ -58,36 +58,6 @@ alias gllazyscript='cd ~/git/lazyscript ; pull'
 alias gla='gldotfiles ; gldotfiles-termux ; glstudy ; glmywebsite ; glpomodoro ; gllazyscript ; cd ; cowthink -s "git pull all done"'
 ###git###
 
-###firefox###
-alias fi='firefox -new-firefox'
-alias fi_youtube_subsriptions='firefox "https://www.youtube.com/feed/subscriptions"'
-alias fi_pocket='firefox "https://app.getpocket.com/"'
-alias fi_pomodoro='firefox "https://youtu.be/1znjHDiqBk8?t=1"'
-alias fi_github='firefox https://github.com/nicholaspham2311' 
-alias fi_fb='firefox https://facebook.com' 
-alias fi_cal='firefox "https://calendar.google.com/calendar/r"'
-alias fi_trello='firefox "https://trello.com/b/nGRAb2ii/nicholas"'
-
-alias fi_music_happy='firefox "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
-alias fi_music_anime='firefox "https://www.youtube.com/watch?v=CaksNlNniis&list=PL8lZieNFgOdmrNGTqwjqYJpJ_2nw_O_M2"'
-alias fi_music_chill='firefox https://youtu.be/hHW1oY26kxQ'
-alias fi_music_rapvn='firefox "https://www.youtube.com/watch?v=r4Dypit7UCI&list=RDr4Dypit7UCI&start_radio=1"'
-
-alias fi_anime='firefox "https://www9.gogoanime.io"' 
-alias fi_kdrama='firefox "https://www.dramacool9.co"'
-alias fi_fun='fi_anime ; fi_kdrama'
-
-alias fi_layout1='ch_cal ; ch_keep'
-
-alias fi_toidicodedao='firefox "https://toidicodedao.com/"'
-alias fi_thefullsnack='firefox "https://thefullsnack.com/"'
-alias fi_codeaholicguy='firefox "https://codeaholicguy.com/"'
-alias fi_thai='firefox "https://vnhacker.blogspot.com/"'
-alias fi_ml='firefox "https://l4w.io/"'
-alias fi_ali='firefox "https://aliabdaal.com/"'
-alias fi_blog='fi_ali ; fi_toidicodedao ; fi_thefullsnack ; fi_codeaholicguy ; fi_thai ; fi_ml'
-###firefox###
-
 ###chrome###
 alias ch='google-chrome'
 alias ch_youtube_subsriptions='ch "https://www.youtube.com/feed/subscriptions"'
@@ -120,9 +90,39 @@ alias ch_ali='ch "https://aliabdaal.com/"'
 alias ch_blog='ch_ali ; ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai ; ch_ml'
 ###chrome###
 
+###firefox###
+alias fi='firefox -new-firefox'
+alias fi_youtube_subsriptions='firefox "https://www.youtube.com/feed/subscriptions"'
+alias fi_pocket='firefox "https://app.getpocket.com/"'
+alias fi_pomodoro='firefox "https://youtu.be/1znjHDiqBk8?t=1"'
+alias fi_github='firefox https://github.com/nicholaspham2311' 
+alias fi_fb='firefox https://facebook.com' 
+alias fi_cal='firefox "https://calendar.google.com/calendar/r"'
+alias fi_trello='firefox "https://trello.com/b/nGRAb2ii/nicholas"'
+
+alias fi_music_happy='firefox "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
+alias fi_music_anime='firefox "https://www.youtube.com/watch?v=CaksNlNniis&list=PL8lZieNFgOdmrNGTqwjqYJpJ_2nw_O_M2"'
+alias fi_music_chill='firefox "https://youtu.be/hHW1oY26kxQ"'
+alias fi_music_rapvn='firefox "https://www.youtube.com/watch?v=r4Dypit7UCI&list=RDr4Dypit7UCI&start_radio=1"'
+
+alias fi_anime='firefox "https://www9.gogoanime.io"' 
+alias fi_kdrama='firefox "https://www.dramacool9.co"'
+alias fi_fun='fi_anime ; fi_kdrama'
+
+alias fi_layout1='ch_cal ; ch_keep'
+
+alias fi_toidicodedao='firefox "https://toidicodedao.com/"'
+alias fi_thefullsnack='firefox "https://thefullsnack.com/"'
+alias fi_codeaholicguy='firefox "https://codeaholicguy.com/"'
+alias fi_thai='firefox "https://vnhacker.blogspot.com/"'
+alias fi_ml='firefox "https://l4w.io/"'
+alias fi_ali='firefox "https://aliabdaal.com/"'
+alias fi_blog='fi_ali ; fi_toidicodedao ; fi_thefullsnack ; fi_codeaholicguy ; fi_thai ; fi_ml'
+###firefox###
+
 ###mode###
-alias work='fortune | cowsay ; ch_music_chill ; ch_pomodoro ; gla ; gha'
-alias hola='fortune | cowsay ; ch_blog ; ch_fun ; ch_youtube_subsriptions ; ch_fb ; rem ; gla ; gha'
+alias work='fortune | cowsay ; fi_music_chill ; fi_pomodoro ; gla ; gha'
+alias hola='fortune | cowsay ; fi_blog ; fi_fun ; fi_youtube_subsriptions ; fi_fb ; rem ; gla ; gha'
 ###mode###
 
 ###hacking###
