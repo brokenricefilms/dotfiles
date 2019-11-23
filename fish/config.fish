@@ -121,8 +121,8 @@ alias fi_blog='fi_ali ; fi_toidicodedao ; fi_thefullsnack ; fi_codeaholicguy ; f
 ###firefox###
 
 ###mode###
-alias work='fortune | cowsay ; fi_music_chill ; fi_pomodoro ; gla ; gha'
-alias hola='fortune | cowsay ; fi_blog ; fi_fun ; fi_youtube_subsriptions ; fi_fb ; rem ; gla ; gha'
+alias work='fortune | cowsay ; ch_music_chill ; ch_pomodoro ; gla ; gha'
+alias hola='fortune | cowsay ; ch_blog ; fi_fun ; ch_youtube_subsriptions ; ch_fb ; rem ; gla ; gha'
 ###mode###
 
 ###hacking###
