@@ -122,7 +122,7 @@ alias fi_blog='fi_ali ; fi_toidicodedao ; fi_thefullsnack ; fi_codeaholicguy ; f
 
 ###mode###
 alias work='fortune | cowsay ; ch_music_chill ; ch_pomodoro ; gla ; gha'
-alias hola='fortune | cowsay ; ch_blog ; fi_fun ; ch_youtube_subsriptions ; ch_fb ; rem ; gla ; gha'
+alias hola='fortune | cowsay ; ch_blog ; ch_fun ; ch_youtube_subsriptions ; ch_fb ; rem ; gla ; gha'
 ###mode###
 
 ###hacking###
