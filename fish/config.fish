@@ -22,14 +22,14 @@ alias ins='sudo apt-get install -y'
 alias uins='sudo apt-get remove -y'
 alias e='exit'
 alias v='nvim'
-alias t='touch'
 alias l='ls -latr'
 alias p='python3'
 alias rem='sudo snap refresh ; sudo apt-get update ; sudo apt-get upgrade -y ;sudo apt-get autoremove -y;sudo apt-get autoclean ; sudo apt-get clean'
 alias rbn='sudo reboot now'
 alias sdn='sudo shutdown now'
 alias dlmusic='youtube-dl -x --audio-format mp3 (read $link)'
-alias trashdl='cd ~/Downloads ; trash * ; cd -'
+alias t='trash'
+alias tdl='cd ~/Downloads ; trash * ; cd -'
 ###lazy code### 
 
 ###git###
