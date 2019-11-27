@@ -49,13 +49,14 @@ alias ghstudy='cd ~/git/study ; yo ; push'
 alias ghlazyscript='cd ~/git/lazyscript ; yo ; push'
 alias gha='ghlazyscript ; ghdotfiles ; ghdotfiles-termux ; ghstudy ; ghmywebsite ; ghpomodoro ; fortune | cowsay; cd'
 
+alias glsherlock='cd ~/tools/hacking/sherlock/ ; pull'
 alias gldotfiles='cd ~/git/dotfiles ; pull'
 alias gldotfiles-termux='cd ~/git/dotfiles-termux ; pull'
 alias glstudy='cd ~/git/study ; pull'
 alias glmywebsite='cd ~/git/mywebsite ; pull'
 alias glpomodoro='cd ~/git/pomodoro ; pull'
 alias gllazyscript='cd ~/git/lazyscript ; pull'
-alias gla='gldotfiles ; gldotfiles-termux ; glstudy ; glmywebsite ; glpomodoro ; gllazyscript ; cd ; cowthink -s "git pull all done"'
+alias gla='glsherlock ; gldotfiles ; gldotfiles-termux ; glstudy ; glmywebsite ; glpomodoro ; gllazyscript ; cd ; cowthink -s "git pull all done"'
 ###git###
 
 ###chrome###
