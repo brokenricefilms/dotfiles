@@ -16,6 +16,7 @@ end
 alias ..='cd ..'
 alias ...='cd .. ; cd .. ; cd ..'
 alias ....='cd .. ; cd .. ; cd .. ; cd ..'
+alias dl='cd ~/Downloads'
 alias c='clear'
 alias h='history'
 alias ins='sudo apt-get install -y'
