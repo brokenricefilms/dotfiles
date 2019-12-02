@@ -1,5 +1,4 @@
 #!/usr/bin/fish
-
 set -g -x fish_greeting Hi, Nicholas 
 fish_vi_key_bindings
 
