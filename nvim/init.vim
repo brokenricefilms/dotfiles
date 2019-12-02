@@ -9,7 +9,6 @@ call plug#end()
 set ts=4 sw=4
 set number
 set background=dark
-
 set clipboard=unnamedplus
 set mouse=a
 set autowrite
@@ -18,10 +17,15 @@ set noswapfile
 set nobackup
 set nowritebackup
 
-let g:user_emmet_leader_key=','
-let g:airline_theme='minimalist'
-"let g:airline_theme='solarized'
-
 :imap jj <Esc>
+
+" easymotion
 nmap <silent> f <Plug>(easymotion-overwin-f)
 nmap <silent> F <Plug>(easymotion-overwin-line)
+
+" emmet
+let g:user_emmet_leader_key=','
+
+" airline
+let g:airline_theme='minimalist'
+"let g:airline_theme='solarized'
