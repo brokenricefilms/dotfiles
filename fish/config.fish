@@ -12,11 +12,7 @@ function sudo --description "Replacement for Bash 'sudo !!' command to run last 
 	end
 end
 
-###lazy code### 
-alias ..='cd ..'
-alias ...='cd .. ; cd .. ; cd ..'
-alias ....='cd .. ; cd .. ; cd .. ; cd ..'
-alias dl='cd ~/Downloads'
+###lazy code 
 alias c='clear'
 alias h='history'
 alias ins='sudo apt-get install -y'
@@ -28,12 +24,28 @@ alias p='python3'
 alias rem='sudo snap refresh ; sudo apt-get update ; sudo apt-get upgrade -y ;sudo apt-get autoremove -y;sudo apt-get autoclean ; sudo apt-get clean'
 alias rbn='sudo reboot now'
 alias sdn='sudo shutdown now'
-alias dlmusic='youtube-dl -x --audio-format mp3 (read $link)'
+alias mkd='mkdir -pv'
+alias ka='killall'
+###
+
+###cd
+alias ..='cd ..'
+alias ...='cd .. ; cd .. ; cd ..'
+alias ....='cd .. ; cd .. ; cd .. ; cd ..'
+alias dl='cd ~/Downloads'
+###
+
+###youtube-dl
+alias yt='youtube-dl --add-metadata -i'
+alias yta='yt -x --audio-format mp3 (read $link)'
+###
+
+###trash-cli
 alias t='trash'
 alias tdl='cd ~/Downloads ; trash * ; cd -'
-###lazy code### 
+###
 
-###git###
+###git
 #commit so hard, so auto write commit cool 
 alias clone='git clone'
 alias yo='git add -A ; git commit -m (curl -s whatthecommit.com/index.txt)'
@@ -58,9 +70,9 @@ alias glmywebsite='cd ~/git/mywebsite ; pull'
 alias glpomodoro='cd ~/git/pomodoro ; pull'
 alias gllazyscript='cd ~/git/lazyscript ; pull'
 alias gla='glsherlock ; gldotfiles ; gldotfiles-termux ; glstudy ; glmywebsite ; glpomodoro ; gllazyscript ; cd ; cowthink -s "git pull all done"'
-###git###
+###
 
-###chrome###
+###chrome
 alias ch='google-chrome'
 alias ch_youtube_subsriptions='ch "https://www.youtube.com/feed/subscriptions"'
 alias ch_pocket='ch "https://app.getpocket.com/"'
@@ -90,9 +102,9 @@ alias ch_thai='ch "https://vnhacker.blogspot.com/"'
 alias ch_ml='ch "https://l4w.io/"'
 alias ch_ali='ch "https://aliabdaal.com/"'
 alias ch_blog='ch_ali ; ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai ; ch_ml'
-###chrome###
+###
 
-###firefox###
+###firefox
 alias fi='firefox -new-firefox'
 alias fi_youtube_subsriptions='firefox "https://www.youtube.com/feed/subscriptions"'
 alias fi_pocket='firefox "https://app.getpocket.com/"'
@@ -120,14 +132,14 @@ alias fi_thai='firefox "https://vnhacker.blogspot.com/"'
 alias fi_ml='firefox "https://l4w.io/"'
 alias fi_ali='firefox "https://aliabdaal.com/"'
 alias fi_blog='fi_ali ; fi_toidicodedao ; fi_thefullsnack ; fi_codeaholicguy ; fi_thai ; fi_ml'
-###firefox###
+###
 
-###mode###
+###mode
 alias work='fortune | cowsay ; ch_music_chill ; ch_pomodoro ; gla ; gha'
 alias hola='fortune | cowsay ; ch_youtube_subsriptions ; ch_fb ; rem ; gla ; gha'
-###mode###
+###
 
 ###hacking###
 alias sherlock='python3 ~/tools/hacking/sherlock/sherlock.py' 
 alias autosherlock='echo "who?" ; cd ~/Documents/data/sherlock ; sherlock (read $name) ; cat *.txt > openlink.txt ; xargs -a openlink.txt google-chrome ; trash ~/Documents/data/sherlock/*.txt ; cd -'
-###hacking###
+###
