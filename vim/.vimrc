@@ -7,7 +7,7 @@ Plug 'easymotion/vim-easymotion'
 call plug#end()            
 
 set ts=4 sw=4
-set number
+set number relativenumber
 set background=dark
 set clipboard=unnamedplus
 set mouse=a
