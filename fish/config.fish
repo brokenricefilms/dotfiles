@@ -93,7 +93,8 @@ alias ch_music_rapvn='ch "https://www.youtube.com/watch?v=r4Dypit7UCI&list=RDr4D
 
 alias ch_anime='ch "https://www9.gogoanime.io"' 
 alias ch_kdrama='ch "https://www.dramacool9.co"'
-alias ch_fun='ch_anime ; ch_kdrama'
+alias ch_movie='ch "https://fmovies.to/home"'
+alias ch_fun='ch_anime ; ch_kdrama ; ch_movie'
 
 alias ch_layout1='ch_cal ; ch_keep'
 
