@@ -28,4 +28,3 @@ let g:user_emmet_leader_key=','
 
 " airline
 let g:airline_theme='minimalist'
-"let g:airline_theme='solarized'
