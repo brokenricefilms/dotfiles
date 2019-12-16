@@ -56,12 +56,12 @@ alias gh='yo ; push'
 
 alias ghdotfiles='cp ~/.gitconfig  ~/git/dotfiles/git/ ; cp ~/.tmux.conf ~/git/dotfiles/tmux ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ ; cp ~/.config/vifm/vifmrc ~/git/dotfiles/vifm/ ; cp ~/.config/vifm/colors/Default.vifm ~/git/dotfiles/vifm/colors/ ; cp ~/.ssh/config ~/git/dotfiles/ssh/ ; cd ~/git/dotfiles ; yo ; push'
 alias ghlazyscript='cd ~/git/lazyscript ; yo ; push'
-alias gha='ghlazyscript ; ghdotfiles ; ghdotfiles-termux ; ghmywebsite ; ghpomodoro ; cd'
+alias gha='ghlazyscript ; ghdotfiles ; cd'
 
 alias glsherlock='cd ~/tools/hacking/sherlock/ ; pull'
 alias gldotfiles='cd ~/git/dotfiles ; pull'
 alias gllazyscript='cd ~/git/lazyscript ; pull'
-alias gla='glsherlock ; gldotfiles ; gldotfiles-termux ; glmywebsite ; glpomodoro ; gllazyscript ; cd'
+alias gla='glsherlock ; gldotfiles ; gllazyscript ; cd'
 ###
 
 ###browser
