@@ -5,22 +5,16 @@
 * I'm noob, just that
 
 ## What does it include?
-* [bash shell](#bash-shell)
 * [fish shell](#fish-shell)
 * [github](#github)
-* [i3 wm](#i3-wm)
 * [neovim](#neovim)
 * [ssh](#ssh)
 * [tmux](#tmux)
 * [vifm](#vifm)
 
-# bash shell
-* I'm using for my script
 # fish shell
-* this is, my default
 # github
 * config for my github, user name, email,...  
-# i3 wm
 # neovim
 * my default editor
 # ssh
