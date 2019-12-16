@@ -27,6 +27,10 @@ alias mkd='mkdir -pv'
 alias ka='killall'
 ###
 
+###C language
+alias catc='./a.out ; t a.out'
+###
+
 ###cd
 alias ..='cd ..'
 alias ...='cd .. ; cd .. ; cd ..'
@@ -52,7 +56,7 @@ alias push="git push"
 alias pull="git pull" 
 alias g='git'
 alias cm='git commit -m'
-alias gh='yo ; push'
+alias ok='yo ; push'
 
 alias ghdotfiles='cp ~/.gitconfig  ~/git/dotfiles/git/ ; cp ~/.tmux.conf ~/git/dotfiles/tmux ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ ; cp ~/.config/vifm/vifmrc ~/git/dotfiles/vifm/ ; cp ~/.config/vifm/colors/Default.vifm ~/git/dotfiles/vifm/colors/ ; cp ~/.ssh/config ~/git/dotfiles/ssh/ ; cd ~/git/dotfiles ; yo ; push'
 alias ghdotfiles-termux='cd ~/git/dotfiles-termux ; yo ; push'
