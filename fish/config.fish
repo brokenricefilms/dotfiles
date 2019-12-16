@@ -55,13 +55,21 @@ alias cm='git commit -m'
 alias gh='yo ; push'
 
 alias ghdotfiles='cp ~/.gitconfig  ~/git/dotfiles/git/ ; cp ~/.tmux.conf ~/git/dotfiles/tmux ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ ; cp ~/.config/vifm/vifmrc ~/git/dotfiles/vifm/ ; cp ~/.config/vifm/colors/Default.vifm ~/git/dotfiles/vifm/colors/ ; cp ~/.ssh/config ~/git/dotfiles/ssh/ ; cd ~/git/dotfiles ; yo ; push'
+alias ghdotfiles-termux='cd ~/git/dotfiles-termux ; yo ; push'
 alias ghlazyscript='cd ~/git/lazyscript ; yo ; push'
-alias gha='ghlazyscript ; ghdotfiles ; cd'
+alias ghstudy='cd ~/git/study ; yo ; push'
+alias ghmywebsite='cd ~/git/mywebsite ; yo ; push'
+alias ghpomodoro='cd ~/git/pomodoro ; yo ; push'
+alias gha='ghdotfiles-termux ; ghstudy ; ghmywebsite ; ghpomodoro ; ghlazyscript ; ghdotfiles ; cd'
 
 alias glsherlock='cd ~/tools/hacking/sherlock/ ; pull'
 alias gldotfiles='cd ~/git/dotfiles ; pull'
 alias gllazyscript='cd ~/git/lazyscript ; pull'
-alias gla='glsherlock ; gldotfiles ; gllazyscript ; cd'
+alias gldotfiles-termux='cd ~/git/dotfiles-termux ; pull'
+alias glstudy='cd ~/git/study ; pull'
+alias glmywebsite='cd ~/git/mywebsite ; pull'
+alias glpomodoro='cd ~/git/pomodoro ; pull'
+alias gla='gldotfiles-termux ; glstudy ; glmywebsite ; glpomodoro; glsherlock ; gldotfiles ; gllazyscript ; cd'
 ###
 
 ###browser
