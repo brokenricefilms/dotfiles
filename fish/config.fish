@@ -54,20 +54,14 @@ alias g='git'
 alias cm='git commit -m'
 alias gh='yo ; push'
 
-alias ghdotfiles='cp ~/.gitconfig  ~/git/dotfiles/git/ ; cp ~/.tmux.conf ~/git/dotfiles/tmux ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.bashrc ~/git/dotfiles/bash ; cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ ; cp ~/.config/vifm/vifmrc ~/git/dotfiles/vifm/ ; cp ~/.config/vifm/colors/Default.vifm ~/git/dotfiles/vifm/colors/ ; cp ~/.ssh/config ~/git/dotfiles/ssh/ ; cd ~/git/dotfiles ; yo ; push'
-alias ghdotfiles-termux='cd ~/git/dotfiles-termux ; yo ; push'
-alias ghmywebsite='cd ~/git/mywebsite/ ; yo ; push'
-alias ghpomodoro='cd ~/git/pomodoro/ ; yo ; push'
+alias ghdotfiles='cp ~/.gitconfig  ~/git/dotfiles/git/ ; cp ~/.tmux.conf ~/git/dotfiles/tmux ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ ; cp ~/.config/vifm/vifmrc ~/git/dotfiles/vifm/ ; cp ~/.config/vifm/colors/Default.vifm ~/git/dotfiles/vifm/colors/ ; cp ~/.ssh/config ~/git/dotfiles/ssh/ ; cd ~/git/dotfiles ; yo ; push'
 alias ghlazyscript='cd ~/git/lazyscript ; yo ; push'
-alias gha='ghlazyscript ; ghdotfiles ; ghdotfiles-termux ; ghmywebsite ; ghpomodoro ; fortune | cowsay; cd'
+alias gha='ghlazyscript ; ghdotfiles ; ghdotfiles-termux ; ghmywebsite ; ghpomodoro ; cd'
 
 alias glsherlock='cd ~/tools/hacking/sherlock/ ; pull'
 alias gldotfiles='cd ~/git/dotfiles ; pull'
-alias gldotfiles-termux='cd ~/git/dotfiles-termux ; pull'
-alias glmywebsite='cd ~/git/mywebsite ; pull'
-alias glpomodoro='cd ~/git/pomodoro ; pull'
 alias gllazyscript='cd ~/git/lazyscript ; pull'
-alias gla='glsherlock ; gldotfiles ; gldotfiles-termux ; glmywebsite ; glpomodoro ; gllazyscript ; cd ; cowthink -s "git pull all done"'
+alias gla='glsherlock ; gldotfiles ; gldotfiles-termux ; glmywebsite ; glpomodoro ; gllazyscript ; cd'
 ###
 
 ###browser
@@ -75,25 +69,15 @@ alias ch='google-chrome'
 alias fi='firefox -new-firefox'
 
 alias ch_youtube_subsriptions='ch "https://www.youtube.com/feed/subscriptions"'
-alias ch_pocket='ch "https://app.getpocket.com/"'
-alias ch_pomodoro='ch "https://youtu.be/1znjHDiqBk8?t=1"'
 alias ch_github='ch https://github.com/nicholaspham2311' 
 alias ch_fb='ch https://facebook.com'
-alias ch_cal='ch "https://calendar.google.com/calendar/r"'
-alias ch_trello='ch "https://trello.com/b/nGRAb2ii/nicholas"'
-alias ch_keep='ch "https://keep.google.com/"'
 
-alias ch_music_happy='ch "https://www.youtube.com/watch?v=ru0K8uYEZWw&list=RDQMDUPdPTv_LL4&start_radio=1"'
-alias ch_music_anime='ch "https://www.youtube.com/watch?v=CaksNlNniis&list=PL8lZieNFgOdmrNGTqwjqYJpJ_2nw_O_M2"'
-alias ch_music_chill='ch "https://www.youtube.com/watch?v=vw3iCuCRm0Q&list=PLt7bG0K25iXjvB28Upp4YU_LvLS2MFbLr&index=1"'
-alias ch_music_rapvn='ch "https://www.youtube.com/watch?v=r4Dypit7UCI&list=RDr4Dypit7UCI&start_radio=1"'
+alias ch_chill='ch "https://www.youtube.com/watch?v=vw3iCuCRm0Q&list=PLt7bG0K25iXjvB28Upp4YU_LvLS2MFbLr&index=1"'
 
 alias ch_anime='ch "https://www9.gogoanime.io"' 
 alias ch_kdrama='ch "https://www.dramacool9.co"'
 alias ch_movie='ch "https://fmovies.to/home"'
 alias ch_fun='ch_anime ; ch_kdrama ; ch_movie'
-
-alias ch_layout1='ch_cal ; ch_keep'
 
 alias ch_toidicodedao='ch "https://toidicodedao.com/"'
 alias ch_thefullsnack='ch "https://thefullsnack.com/"'
@@ -105,8 +89,7 @@ alias ch_blog='ch_ali ; ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; c
 ###
 
 ###mode
-alias work='fortune | cowsay ; ch_music_chill ; ch_pomodoro ; gla ; gha'
-alias hola='fortune | cowsay ; ch_youtube_subsriptions ; ch_fb ; rem ; gla ; gha'
+alias hola='rem ; gla ; gha'
 ###
 
 ###hacking###
