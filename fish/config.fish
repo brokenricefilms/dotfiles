@@ -103,7 +103,7 @@ alias ch_blog='ch_ali ; ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; c
 ###
 
 ###mode
-alias hola='ch_mail ; ch_stu ; ch_fb ; ch_youtube_subsriptions ; ch_fun ; ch_blog ; rem ; gla ; gha'
+alias hola='ch_mail ; ch_stu ; ch_fb ; ch_youtube_subsriptions ; ch_blog ; rem ; gla ; gha'
 ###
 
 ###hacking###
