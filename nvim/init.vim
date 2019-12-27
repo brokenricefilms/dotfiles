@@ -19,7 +19,6 @@ set autoread
 set noswapfile
 set nobackup
 set nowritebackup
-set nohlsearch
 
 :imap jj <Esc>
 
