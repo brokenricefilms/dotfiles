@@ -24,6 +24,7 @@ alias rbn='sudo reboot now'
 alias sdn='sudo shutdown now'
 alias mkd='mkdir -pv'
 alias ka='killall'
+alias r='ranger'
 ###
 
 ###C language
