@@ -89,11 +89,6 @@ alias ch_stu='ch "http://stu.edu.vn/"'
 
 alias ch_chill='ch "https://www.youtube.com/watch?v=vw3iCuCRm0Q&list=PLt7bG0K25iXjvB28Upp4YU_LvLS2MFbLr&index=1"'
 
-alias ch_anime='ch "https://www9.gogoanime.io"' 
-alias ch_kdrama='ch "https://www.dramacool9.co"'
-alias ch_movie='ch "https://fmovies.to/home"'
-alias ch_fun='ch_anime ; ch_kdrama ; ch_movie'
-
 alias ch_toidicodedao='ch "https://toidicodedao.com/"'
 alias ch_thefullsnack='ch "https://thefullsnack.com/"'
 alias ch_codeaholicguy='ch "https://codeaholicguy.com/"'
