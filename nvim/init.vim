@@ -7,7 +7,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
-Plug 'vim-syntastic/syntastic'
 Plug 'mattn/emmet-vim'
 call plug#end()            
 
@@ -24,6 +23,17 @@ set nowritebackup
 
 :imap jj <Esc>
 
+" Split window
+nmap ss :split<Return><C-w>w
+nmap sv :vsplit<Return><C-w>w
+
+" Move window
+nmap <Space> <C-w>w
+map sh <C-w>h
+map sk <C-w>k
+map sj <C-w>j
+map sl <C-w>l
+
 " easymotion
 nmap <silent> ;; <Plug>(easymotion-overwin-f)
 nmap <silent> ;l <Plug>(easymotion-overwin-line)
@@ -34,15 +44,6 @@ let g:airline_theme='minimalist'
 " nerdcommenter
 let g:NERDSpaceDelims = 1
 map mm <Plug>NERDCommenterToggle
-
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 " emmet
 let g:user_emmet_leader_key=','

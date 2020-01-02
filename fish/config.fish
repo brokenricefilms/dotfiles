@@ -13,7 +13,7 @@ end
 
 ###lazy code 
 alias c='clear'
-alias h='history'
+alias h='htop'
 alias ins='sudo apt-get install -y'
 alias uins='sudo apt-get remove -y'
 alias e='exit'
@@ -25,6 +25,10 @@ alias sdn='sudo shutdown now'
 alias mkd='mkdir -pv'
 alias ka='killall'
 alias r='ranger'
+###
+
+###tmux
+alias ide='tmux split-window -h -p 30 ; tmux split-window -v -p 70'
 ###
 
 ###C language
