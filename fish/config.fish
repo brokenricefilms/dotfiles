@@ -13,6 +13,7 @@ end
 
 ###lazy code 
 alias c='clear'
+alias g='grep'
 alias h='htop'
 alias ins='sudo apt-get install -y'
 alias uins='sudo apt-get remove -y'
@@ -60,7 +61,6 @@ alias clone='git clone'
 alias yo='git add -A ; git commit -m (curl -s whatthecommit.com/index.txt)'
 alias push="git push"
 alias pull="git pull" 
-alias g='git'
 alias cm='git commit -m'
 alias ok='yo ; push'
 

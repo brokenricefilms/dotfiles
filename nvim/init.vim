@@ -8,6 +8,7 @@ Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'mattn/emmet-vim'
+Plug 'preservim/nerdtree'
 call plug#end()            
 
 set ts=4 sw=4
@@ -47,3 +48,6 @@ map mm <Plug>NERDCommenterToggle
 
 " emmet
 let g:user_emmet_leader_key=','
+
+" nerdtree
+map <C-n> :NERDTreeToggle<CR>
