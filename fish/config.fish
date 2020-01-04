@@ -11,7 +11,7 @@ function sudo --description "Replacement for Bash 'sudo !!' command to run last 
 	end
 end
 
-###lazy code 
+#lazy code 
 alias c='clear'
 alias g='grep'
 alias h='htop'
@@ -26,37 +26,30 @@ alias sdn='sudo shutdown now'
 alias mkd='mkdir -pv'
 alias ka='killall'
 alias r='ranger'
-###
 
-###tmux
+#tmux
 alias ide='tmux split-window -h -p 30 ; tmux split-window -v -p 70'
-###
 
-###C language
+#C language
 alias catc='./a.out ; t a.out'
-###
 
-###cd
+#cd
 alias ..='cd ..'
 alias ...='cd .. ; cd .. ; cd ..'
 alias ....='cd .. ; cd .. ; cd .. ; cd ..'
 alias dl='cd ~/Downloads'
 alias doc='cd ~/Documents'
 alias vid='cd ~/Videos'
-###
 
-###youtube-dl
+#youtube-dl
 alias yt='youtube-dl --add-metadata -i'
 alias yta='yt -x --audio-format mp3 (read $link)'
-###
 
-###trash-cli
+#trash-cli
 alias t='trash'
 alias tdl='cd ~/Downloads ; trash * ; cd -'
-###
 
-###git
-#commit so hard, so auto write commit cool 
+#git
 alias clone='git clone'
 alias yo='git add -A ; git commit -m (curl -s whatthecommit.com/index.txt)'
 alias push="git push"
@@ -80,9 +73,8 @@ alias glstudy='cd ~/git/study ; pull ; cd -'
 alias glmywebsite='cd ~/git/mywebsite ; pull ; cd -'
 alias glpomodoro='cd ~/git/pomodoro ; pull ; cd -'
 alias gla='gldotfiles-termux ; glstudy ; glmywebsite ; glpomodoro; glsherlock ; gldotfiles ; gllazyscript'
-###
 
-###browser
+#browser
 alias ch='google-chrome'
 alias fi='firefox -new-firefox'
 
@@ -100,13 +92,10 @@ alias ch_thai='ch "https://vnhacker.blogspot.com/"'
 alias ch_ml='ch "https://l4w.io/"'
 alias ch_ali='ch "https://aliabdaal.com/"'
 alias ch_blog='ch_ali ; ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai ; ch_ml'
-###
 
-###mode
+#mode
 alias hola='ch_stu ; ch_fb ; ch_youtube_subsriptions ; gla ; gha'
-###
 
-###hacking###
+#hacking#
 alias sherlock='python3 ~/tools/hacking/sherlock/sherlock.py' 
 alias autosherlock='echo "who?" ; cd ~/Documents/data/sherlock ; sherlock (read $name) ; cat *.txt > openlink.txt ; xargs -a openlink.txt google-chrome ; trash ~/Documents/data/sherlock/openlink.txt ; cd -'
-###
