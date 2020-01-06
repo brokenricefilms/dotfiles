@@ -27,6 +27,9 @@ alias mkd='mkdir -pv'
 alias ka='killall'
 alias r='ranger'
 
+#mpv
+alias music='mpv ~/Music'
+
 #tmux
 alias ide='tmux split-window -h -p 30 ; tmux split-window -v -p 70'
 
@@ -79,22 +82,14 @@ alias ch='google-chrome'
 alias fi='firefox -new-firefox'
 
 alias ch_youtube_subsriptions='ch "https://www.youtube.com/feed/subscriptions"'
-alias ch_github='ch https://github.com/nicholaspham2311' 
 alias ch_fb='ch https://facebook.com'
 alias ch_stu='ch "http://stu.edu.vn/"'
 
 alias ch_chill='ch "https://www.youtube.com/watch?v=vw3iCuCRm0Q&list=PLt7bG0K25iXjvB28Upp4YU_LvLS2MFbLr&index=1"'
-
-alias ch_toidicodedao='ch "https://toidicodedao.com/"'
-alias ch_thefullsnack='ch "https://thefullsnack.com/"'
-alias ch_codeaholicguy='ch "https://codeaholicguy.com/"'
-alias ch_thai='ch "https://vnhacker.blogspot.com/"'
-alias ch_ml='ch "https://l4w.io/"'
-alias ch_ali='ch "https://aliabdaal.com/"'
-alias ch_blog='ch_ali ; ch_toidicodedao ; ch_thefullsnack ; ch_codeaholicguy ; ch_thai ; ch_ml'
+alias ch_mail='ch "https://mail.google.com/mail/u/0/#inbox"'
 
 #mode
-alias hola='ch_stu ; ch_fb ; ch_youtube_subsriptions ; gla ; gha'
+alias hola='ch_mail ; ch_stu ; ch_fb ; ch_youtube_subsriptions ; gla ; gha'
 
 #hacking#
 alias sherlock='python3 ~/tools/hacking/sherlock/sherlock.py' 
