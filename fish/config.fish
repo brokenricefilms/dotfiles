@@ -28,7 +28,7 @@ alias ka='killall'
 alias r='ranger'
 
 #mpv
-alias music='mpv ~/Music'
+alias m='mpv ~/Music'
 
 #tmux
 alias ide='tmux split-window -h -p 30 ; tmux split-window -v -p 70'
