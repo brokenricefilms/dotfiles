@@ -89,7 +89,7 @@ alias ch_chill='ch "https://www.youtube.com/watch?v=vw3iCuCRm0Q&list=PLt7bG0K25i
 alias ch_mail='ch "https://mail.google.com/mail/u/0/#inbox"'
 
 #mode
-alias hola='ch_mail ; ch_stu ; ch_fb ; ch_youtube_subsriptions ; gla ; gha'
+alias hola='ch_mail ; ch_stu ; ch_fb ; ch_youtube_subsriptions ; gla ; gha ; nvim -c "PlugUpdate | qa"'
 
 #hacking#
 alias sherlock='python3 ~/tools/hacking/sherlock/sherlock.py' 
