@@ -31,7 +31,7 @@ alias r='ranger'
 alias m='mpv ~/Music'
 
 #tmux
-alias ide='tmux split-window -h -p 30 ; tmux split-window -v -p 70'
+alias ide='tmux split-window -h -p 30'
 
 #C language
 alias catc='./a.out ; t a.out'
