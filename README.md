@@ -10,7 +10,9 @@
 	6. wget
 
 * Ok! Run code below in command line
-" wget https://raw.githubusercontent.com/nicholaspham2311/dotfiles/master/install.bash ; bash install.bash ; rm install.bash
+'''bash
+wget https://raw.githubusercontent.com/nicholaspham2311/dotfiles/master/install.bash ; bash install.bash ; rm install.bash
+'''
 
 # Q & A
 ## Who you are?
