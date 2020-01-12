@@ -1,4 +1,16 @@
 # My dotfiles
+#Install
+* just for NEOVIM TMUX FISH RANGER
+* **requite**
+	1. neovim
+	2. tmux
+	3. fish
+	4. ranger
+	5. git
+	6. wget
+
+* Ok! Run code below in command line
+" wget 
 
 # Q & A
 ## Who you are?
