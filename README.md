@@ -1,7 +1,7 @@
 # My dotfiles
-#Install
+# Install
 * just for NEOVIM TMUX FISH RANGER
-* **requite**
+* **REQUITE**
 	1. neovim
 	2. tmux
 	3. fish
@@ -10,9 +10,10 @@
 	6. wget
 
 * Ok! Run code below in command line
-'''bash
+
+```bash
 wget https://raw.githubusercontent.com/nicholaspham2311/dotfiles/master/install.bash ; bash install.bash ; rm install.bash
-'''
+```
 
 # Q & A
 ## Who you are?
