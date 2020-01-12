@@ -2,12 +2,12 @@
 # Install
 * just for NEOVIM TMUX FISH RANGER
 * **REQUITE**
-	neovim
-	tmux
-	fish
-	ranger
-	git
-	wget
+	* neovim
+	* tmux
+	* fish
+	* ranger
+	* git
+	* wget
 
 * Ok! Run code below in command line
 
