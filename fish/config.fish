@@ -2,7 +2,6 @@
 set -g -x fish_greeting Hi, Nicholas 
 fish_vi_key_bindings
 
-#enable sudo!! for fish
 function sudo --description "Replacement for Bash 'sudo !!' command to run last command using sudo."
 	if test "$argv" = !!
 		eval command sudo $history[1]
@@ -10,6 +9,13 @@ function sudo --description "Replacement for Bash 'sudo !!' command to run last 
 		command sudo $argv
 	end
 end
+
+function dl --description "download file like bitTorrent,..."
+	cd ~/Downloads
+	aria2c $argv
+	cd -
+end
+
 
 #lazy code 
 alias c='clear'
@@ -26,6 +32,7 @@ alias sdn='sudo shutdown now'
 alias mkd='mkdir -pv'
 alias ka='killall'
 alias r='ranger'
+alias fd='fdfind'
 
 #mpv
 alias m='mpv ~/Music'
@@ -40,7 +47,6 @@ alias catc='./a.out ; t a.out'
 alias ..='cd ..'
 alias ...='cd .. ; cd .. ; cd ..'
 alias ....='cd .. ; cd .. ; cd .. ; cd ..'
-alias dl='cd ~/Downloads'
 alias doc='cd ~/Documents'
 alias vid='cd ~/Videos'
 
@@ -50,7 +56,6 @@ alias yta='yt -x --audio-format mp3 (read $link)'
 
 #trash-cli
 alias t='trash'
-alias tdl='cd ~/Downloads ; trash * ; cd -'
 
 #git
 alias clone='git clone'
@@ -93,6 +98,15 @@ alias ch_mail='ch "https://mail.google.com/mail/u/0/#inbox"'
 #mode
 alias hola='ch_mail ; ch_stu ; ch_fb ; ch_youtube_subsriptions ; gla ; gha ; nvim -c "PlugUpdate | qa"'
 
-#hacking#
+#hacking
 alias sherlock='python3 ~/tools/hacking/sherlock/sherlock.py' 
-alias autosherlock='echo "who?" ; cd ~/Documents/data/sherlock ; sherlock (read $name) ; cat *.txt > openlink.txt ; xargs -a openlink.txt google-chrome ; trash ~/Documents/data/sherlock/openlink.txt ; cd -'
+function sherlockauto --description "open all link"
+	cd ~/Documents/data/sherlock
+	sherlock $argv
+	cat *.txt > openlink.txt
+	while read link
+		google-chrome $link
+	end < openlink.txt
+	trash ~/Documents/data/sherlock/*
+	cd -
+end
