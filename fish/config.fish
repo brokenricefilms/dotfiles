@@ -16,7 +16,6 @@ function dl --description "download file like bitTorrent,..."
 	cd -
 end
 
-
 #lazy code 
 alias c='clear'
 alias g='grep'
@@ -33,6 +32,7 @@ alias mkd='mkdir -pv'
 alias ka='killall'
 alias r='ranger'
 alias fd='fdfind'
+alias o='open'
 
 #mpv
 alias m='mpv ~/Music'
@@ -96,7 +96,7 @@ alias ch_chill='ch "https://www.youtube.com/watch?v=vw3iCuCRm0Q&list=PLt7bG0K25i
 alias ch_mail='ch "https://mail.google.com/mail/u/0/#inbox"'
 
 #mode
-alias hola='ch_mail ; ch_stu ; ch_fb ; ch_youtube_subsriptions ; gla ; gha ; nvim -c "PlugUpdate | qa"'
+alias hola='ch_mail ; ch_stu ; ch_fb ; ch_youtube_subsriptions ; gla ; gha ; nvim -c "PlugUpdate | qa" ; tldr --update'
 
 #hacking
 alias sherlock='python3 ~/tools/hacking/sherlock/sherlock.py' 
