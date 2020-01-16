@@ -41,7 +41,12 @@ alias m='mpv ~/Music'
 alias ide='tmux split-window -h -p 30'
 
 #C language
-alias catc='./a.out ; t a.out'
+# alias catc='./a.out ; t a.out'
+function catc --description "test C program"
+	gcc $argv
+	./a.out
+	trash a.out
+end
 
 #cd
 alias ..='cd ..'
