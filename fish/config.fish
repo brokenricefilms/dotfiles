@@ -16,6 +16,12 @@ function dl --description "download file like bitTorrent,..."
 	cd -
 end
 
+function catc --description "test C program"
+	gcc $argv
+	./a.out
+	trash a.out
+end
+
 #lazy code 
 alias c='clear'
 alias g='grep'
@@ -39,14 +45,6 @@ alias m='mpv ~/Music'
 
 #tmux
 alias ide='tmux split-window -h -p 30'
-
-#C language
-# alias catc='./a.out ; t a.out'
-function catc --description "test C program"
-	gcc $argv
-	./a.out
-	trash a.out
-end
 
 #cd
 alias ..='cd ..'
