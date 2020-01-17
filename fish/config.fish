@@ -94,7 +94,7 @@ alias fi='firefox -new-firefox'
 alias ch_youtube_subsriptions='ch "https://www.youtube.com/feed/subscriptions"'
 alias ch_fb='ch https://facebook.com'
 alias ch_stu='ch "http://stu.edu.vn/"'
-alias ch_stu2='http://www.stu.edu.vn/vi/265/khoa-cong-nghe-thong-tin.html'
+alias ch_stu2='ch http://www.stu.edu.vn/vi/265/khoa-cong-nghe-thong-tin.html'
 
 alias ch_chill='ch "https://www.youtube.com/watch?v=vw3iCuCRm0Q&list=PLt7bG0K25iXjvB28Upp4YU_LvLS2MFbLr&index=1"'
 alias ch_mail='ch "https://mail.google.com/mail/u/0/#inbox"'
