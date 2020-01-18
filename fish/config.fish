@@ -16,7 +16,7 @@ function dl --description "download file like bitTorrent,..."
 	cd -
 end
 
-function catc --description "test C program"
+function C --description "test C program"
 	gcc $argv
 	./a.out
 	trash a.out
