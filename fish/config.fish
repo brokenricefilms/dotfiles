@@ -1,5 +1,5 @@
 #!/usr/bin/fish
-set -g -x fish_greeting Hi, Nicholas 
+set -g -x fish_greeting Hi, Master 
 fish_vi_key_bindings
 
 function sudo --description "Replacement for Bash 'sudo !!' command to run last command using sudo."

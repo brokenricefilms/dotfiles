@@ -6,7 +6,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
-Plug 'scrooloose/nerdcommenter'
 call plug#end()            
 
 set ts=4 sw=4
@@ -22,12 +21,15 @@ set nowritebackup
 
 :imap jj <Esc>
 
+" tab
+nmap tt :tabnew<Return>
+nmap <Space> :tabprevious<Return>
+
 " Split window
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
 
 " Move window
-nmap <Space> <C-w>w
 map sh <C-w>h
 map sk <C-w>k
 map sj <C-w>j
@@ -39,7 +41,3 @@ nmap <silent> ;l <Plug>(easymotion-overwin-line)
 
 " airline
 let g:airline_theme='minimalist'
-
-" nerdcommenter
-let g:NERDSpaceDelims = 1
-map mm <Plug>NERDCommenterToggle
