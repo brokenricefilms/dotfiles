@@ -61,7 +61,6 @@ alias yta='yt -x --audio-format mp3 (read $link)'
 alias t='trash'
 
 #git
-alias clone='git clone'
 alias yo='git add -A ; git commit -m (curl -s whatthecommit.com/index.txt)'
 alias push="git push"
 alias pull="git pull" 
