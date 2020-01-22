@@ -85,11 +85,8 @@ alias ch_fb='ch https://facebook.com'
 alias ch_stu='ch "http://stu.edu.vn/"'
 alias ch_stu2='ch http://www.stu.edu.vn/vi/265/khoa-cong-nghe-thong-tin.html'
 
-alias ch_chill='ch "https://www.youtube.com/watch?v=vw3iCuCRm0Q&list=PLt7bG0K25iXjvB28Upp4YU_LvLS2MFbLr&index=1"'
-alias ch_mail='ch "https://mail.google.com/mail/u/0/#inbox"'
-
 #mode
-alias hola='ch_mail ; ch_stu ; ch_stu2 ; ch_fb ; ch_youtube_subsriptions ; gla ; gha ; nvim -c "PlugUpdate | qa" ; tldr --update'
+alias hola='ch_stu ; ch_stu2 ; ch_fb ; ch_youtube_subsriptions ; gla ; gha ; nvim -c "PlugUpdate | qa" ; tldr --update'
 
 #hacking
 alias sherlock='python3 ~/tools/hacking/sherlock/sherlock.py' 
