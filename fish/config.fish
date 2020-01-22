@@ -69,12 +69,14 @@ alias ok='yo ; push'
 
 alias ghdotfiles='cp ~/.selected_editor ~/git/dotfiles ; cp ~/.gitconfig  ~/git/dotfiles/git/ ; cp ~/.tmux.conf ~/git/dotfiles/tmux ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ ; cp ~/.config/fish/functions/fish_prompt.fish ~/git/dotfiles/fish/ ; cp ~/.ssh/config ~/git/dotfiles/ssh/ ; cp ~/.config/ranger/* ~/git/dotfiles/ranger ; cd ~/git/dotfiles ; yo ; push ; cd -'
 alias ghlazyscript='cd ~/git/lazyscript ; yo ; push ; cd -'
-alias gha='ghlazyscript ; ghdotfiles'
+alias ghmy_girlfriend='cd ~/git/my_girlfriend ; yo ; push ; cd -'
+alias gha='ghmy_girlfriend ; ghlazyscript ; ghdotfiles'
 
 alias glsherlock='cd ~/tools/hacking/sherlock/ ; pull ; cd -'
 alias gldotfiles='cd ~/git/dotfiles ; pull ; cd -'
 alias gllazyscript='cd ~/git/lazyscript ; pull ; cd -'
-alias gla='glsherlock ; gldotfiles ; gllazyscript'
+alias glmy_girlfriend='cd ~/git/my_girlfriend ; pull ; cd -'
+alias gla='glmy_girlfriend ; glsherlock ; gldotfiles ; gllazyscript'
 
 #browser
 alias ch='google-chrome'
