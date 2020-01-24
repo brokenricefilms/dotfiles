@@ -2,3 +2,8 @@
 	# HostName 192.168.1.2
 	# User iu0_a182
 	# port 8022
+#ubuntu server host
+Host ram
+HostName 127.0.0.1
+User root
+port 2222
