@@ -91,7 +91,7 @@ alias ch_mail1='ch "https://mail.google.com/mail/u/1/#all"'
 alias ch_mail2='ch "https://mail.google.com/mail/u/2/#all"'
 
 #mode
-alias hi='ch_mail0 ; ch_mail1 ; ch_mail2 ; ch_stu ; ch_stu2 ; ch_fb ; gla ; gha ; nvim -c "PlugUpdate | qa" ; tldr --update'
+alias hi='ch_mail0 ; ch_mail1 ; ch_mail2 ; ch_stu ; ch_stu2 ; ch_youtube_subsriptions ; ch_fb ; gla ; gha ; nvim -c "PlugUpdate | qa" ; tldr --update'
 
 #hacking
 alias sherlock='python3 ~/tools/hacking/sherlock/sherlock.py' 
