@@ -59,6 +59,7 @@ alias yta='yt -x --audio-format mp3 (read $link)'
 
 #trash-cli
 alias t='trash'
+alias tdl='trash ~/Downloads/*'
 
 #git
 alias yo='git add -A ; git commit -m (curl -s whatthecommit.com/index.txt)'
