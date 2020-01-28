@@ -79,8 +79,8 @@ alias glrem='cd ~/git/rem ; pull ; cd -'
 alias gla='glrem ; glsherlock ; gldotfiles ; gllazyscript'
 
 #browser
-alias ch='google-chrome'
-alias fi='firefox -new-firefox'
+#alias ch='google-chrome'
+alias ch='firefox'
 
 alias ch_youtube_subsriptions='ch "https://www.youtube.com/feed/subscriptions"'
 alias ch_fb='ch https://facebook.com'
