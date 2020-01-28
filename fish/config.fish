@@ -39,6 +39,7 @@ alias ka='killall'
 alias r='ranger'
 alias fd='fdfind'
 alias o='open'
+alias rem='sudo apt-get autoremove -y ; sudo apt-get autoclean ; sudo apt-get clean'
 
 #mpv
 alias m='mpv ~/Music'
@@ -80,8 +81,8 @@ alias glrem='cd ~/git/rem ; pull ; cd -'
 alias gla='glrem ; glsherlock ; gldotfiles ; gllazyscript'
 
 #browser
-#alias ch='google-chrome'
-alias ch='firefox'
+alias ch='google-chrome'
+#alias ch='firefox'
 
 alias ch_youtube_subsriptions='ch "https://www.youtube.com/feed/subscriptions"'
 alias ch_fb='ch https://facebook.com'
@@ -93,7 +94,7 @@ alias ch_mail2='ch "https://mail.google.com/mail/u/2/#all"'
 alias ch_tiki='ch "https://tiki.vn/sales/order/history?src=header_orders"'
 
 #mode
-alias hi='ch_tiki ; ch_mail0 ; ch_mail1 ; ch_mail2 ; ch_stu ; ch_stu2 ; ch_youtube_subsriptions ; ch_fb ; gla ; gha ; nvim -c "PlugUpdate | qa" ; tldr --update'
+alias hi='ch_tiki ; ch_mail0 ; ch_mail1 ; ch_mail2 ; ch_stu ; ch_stu2 ; ch_youtube_subsriptions ; ch_fb ; gla ; gha ; rem ; nvim -c "PlugUpdate | qa" ; tldr --update'
 
 #hacking
 alias sherlock='python3 ~/tools/hacking/sherlock/sherlock.py' 
