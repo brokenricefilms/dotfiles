@@ -6,7 +6,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
-call plug#end()            
+call plug#end()
 
 set ts=4 sw=4
 set number relativenumber
