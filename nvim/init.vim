@@ -6,6 +6,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
+Plug 'preservim/nerdcommenter'
 call plug#end()
 
 set ts=4 sw=4
@@ -41,3 +42,8 @@ nmap <silent> ;l <Plug>(easymotion-overwin-line)
 
 " airline
 let g:airline_theme='minimalist'
+
+" nerdcommenter
+filetype plugin on
+let g:NERDSpaceDelims = 1
+map mm <Plug>NERDCommenterToggle
