@@ -81,8 +81,7 @@ function ghdotfiles
 	cp ~/.ssh/config ~/git/dotfiles/ssh/ 
 	cp ~/.config/ranger/* ~/git/dotfiles/ranger 
 	cd ~/git/dotfiles 
-	ok 
-	cd -
+	ok ; cd -
 end
 
 alias ghlazyscript='cd ~/git/lazyscript ; ok ; cd -'
