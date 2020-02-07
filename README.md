@@ -3,8 +3,7 @@
 * just for NEOVIM TMUX FISH RANGER
 * **REQUITE**
 	* neovim
-	* tmux
-	* fish
+	* tmux fish
 	* ranger
 	* git
 	* wget
@@ -35,5 +34,4 @@ wget https://raw.githubusercontent.com/nicholaspham2311/dotfiles/master/install.
 # ssh
 * in my phone I use termux, so using ssh connect to my phone, good for typing, my eye,...
 # tmux
-# vifm
-* I used it just because colorfull or something like that
+# ranger
