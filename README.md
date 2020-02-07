@@ -15,22 +15,14 @@ Install
 * Ok! Run code below in command line
 
 ```bash
-wget https://raw.githubusercontent.com/nicholaspham2311/dotfiles/master/install.bash ; bash install.bash ; rm install.bash
+wget https://raw.githubusercontent.com/nicholaspham2311/dotfiles/master/install.bash \ bash install.bash ; rm install.bash
 ```
 
  Q & A
- ------
+------
 
 **Who you are?**
 * I'm noob, just that
-
-**What does it include?**
-* [fish shell](#fish-shell)
-* [github](#github)
-* [neovim](#neovim)
-* [ssh](#ssh)
-* [tmux](#tmux)
-* [vifm](#vifm)
 
 fish shell
 ------
@@ -44,6 +36,7 @@ neovim
 ------
 
 * my default editor
+
 ssh
 ------
 
