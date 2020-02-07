@@ -1,5 +1,9 @@
-# My dotfiles
-# Install
+My dotfiles
+------
+
+Install
+------
+
 * just for NEOVIM TMUX FISH RANGER
 * **REQUITE**
 	* neovim
@@ -14,11 +18,13 @@
 wget https://raw.githubusercontent.com/nicholaspham2311/dotfiles/master/install.bash ; bash install.bash ; rm install.bash
 ```
 
-# Q & A
-## Who you are?
+ Q & A
+ ------
+
+**Who you are?**
 * I'm noob, just that
 
-## What does it include?
+**What does it include?**
 * [fish shell](#fish-shell)
 * [github](#github)
 * [neovim](#neovim)
@@ -26,12 +32,30 @@ wget https://raw.githubusercontent.com/nicholaspham2311/dotfiles/master/install.
 * [tmux](#tmux)
 * [vifm](#vifm)
 
-# fish shell
-# github
+fish shell
+------
+
+github
+------
+
 * config for my github, user name, email,...  
-# neovim
+
+neovim
+------
+
 * my default editor
-# ssh
+ssh
+------
+
 * in my phone I use termux, so using ssh connect to my phone, good for typing, my eye,...
-# tmux
-# ranger
+
+tmux
+------
+
+ranger
+------
+
+Licensing
+------
+
+<img src="https://cdn-images-1.medium.com/max/1600/1*C87EjxGeMPrkTuVRVWVg4w.png" width="225"></img>
