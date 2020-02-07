@@ -70,7 +70,21 @@ alias pull="git pull"
 alias cm='git commit -m'
 alias ok='yo ; push'
 
-alias ghdotfiles='cp ~/.selected_editor ~/git/dotfiles ; cp ~/.gitconfig  ~/git/dotfiles/git/ ; cp ~/.tmux.conf ~/git/dotfiles/tmux ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ ; cp ~/.config/fish/functions/fish_prompt.fish ~/git/dotfiles/fish/ ; cp ~/.ssh/config ~/git/dotfiles/ssh/ ; cp ~/.config/ranger/* ~/git/dotfiles/ranger ; cd ~/git/dotfiles ; ok ; cd -'
+# alias ghdotfiles='cp ~/.selected_editor ~/git/dotfiles ; cp ~/.gitconfig  ~/git/dotfiles/git/ ; cp ~/.tmux.conf ~/git/dotfiles/tmux ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ ; cp ~/.config/fish/functions/fish_prompt.fish ~/git/dotfiles/fish/ ; cp ~/.ssh/config ~/git/dotfiles/ssh/ ; cp ~/.config/ranger/* ~/git/dotfiles/ranger ; cd ~/git/dotfiles ; ok ; cd -'
+function ghdotfiles
+	cp ~/.selected_editor ~/git/dotfiles 
+	cp ~/.gitconfig  ~/git/dotfiles/git/ 
+	cp ~/.tmux.conf ~/git/dotfiles/tmux 
+	cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim 
+	cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ 
+	cp ~/.config/fish/functions/fish_prompt.fish ~/git/dotfiles/fish/ 
+	cp ~/.ssh/config ~/git/dotfiles/ssh/ 
+	cp ~/.config/ranger/* ~/git/dotfiles/ranger 
+	cd ~/git/dotfiles 
+	ok 
+	cd -
+end
+
 alias ghlazyscript='cd ~/git/lazyscript ; ok ; cd -'
 alias ghrem='cd ~/git/rem ; ok ; cd -'
 alias gha='ghrem ; ghlazyscript ; ghdotfiles'
