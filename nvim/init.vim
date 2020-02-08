@@ -22,6 +22,11 @@ set nowritebackup
 
 :imap jj <Esc>
 
+" highligt cursorline
+set cursorline
+hi CursorLine term=none cterm=none
+highlight CursorLine guibg=#303000 ctermbg=234
+
 " tab
 nmap tt :tabnew<Return>
 nmap <Space> :tabprevious<Return>
@@ -47,3 +52,4 @@ let g:airline_theme='minimalist'
 filetype plugin on
 let g:NERDSpaceDelims = 1
 map mm <Plug>NERDCommenterToggle
+

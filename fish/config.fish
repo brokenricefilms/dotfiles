@@ -86,8 +86,7 @@ end
 
 alias ghlazyscript='cd ~/git/lazyscript ; ok ; cd -'
 alias ghrem='cd ~/git/rem ; ok ; cd -'
-alias ghblog='cd ~/git/nicholaspham2311.github.io ; ok ; cd -'
-alias gha='ghblog ; ghrem ; ghlazyscript ; ghdotfiles'
+alias gha='ghrem ; ghlazyscript ; ghdotfiles'
 
 alias glsherlock='cd ~/tools/hacking/sherlock/ ; pull ; cd -'
 alias gldotfiles='cd ~/git/dotfiles ; pull ; cd -'
