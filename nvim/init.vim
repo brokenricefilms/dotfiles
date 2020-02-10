@@ -52,4 +52,3 @@ let g:airline_theme='minimalist'
 filetype plugin on
 let g:NERDSpaceDelims = 1
 map mm <Plug>NERDCommenterToggle
-
