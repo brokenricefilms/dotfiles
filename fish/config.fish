@@ -56,7 +56,7 @@ alias dow='cd ~/Downloads'
 alias vid='cd ~/Videos'
 
 #youtube-dl
-alias yt='youtube-dl --add-metadata -i'
+alias yt='youtube-dl --add-metadata -i (read $link)'
 alias yta='yt -x --audio-format mp3 (read $link)'
 
 #trash-cli
