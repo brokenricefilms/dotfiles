@@ -11,6 +11,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
 call plug#end()
 
+" 2 space when edit html file
+autocmd BufRead,BufNewFile *.htm,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
 set ts=4 sw=4
 set number relativenumber
 set background=dark
