@@ -80,7 +80,6 @@ function ghdotfiles
 	cp ~/.config/fish/functions/fish_prompt.fish ~/git/dotfiles/fish/ 
 	cp ~/.ssh/config ~/git/dotfiles/ssh/ 
 	cp ~/.config/ranger/* ~/git/dotfiles/ranger 
-	cp ~/.config/alacritty/alacritty.yml ~/git/dotfiles/alacritty/
 	cd ~/git/dotfiles 
 	ok ; cd -
 end
