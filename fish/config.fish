@@ -53,7 +53,6 @@ alias ...='cd .. ; cd .. ; cd ..'
 alias ....='cd .. ; cd .. ; cd .. ; cd ..'
 alias doc='cd ~/Documents'
 alias dow='cd ~/Downloads'
-alias vid='cd ~/Videos'
 
 #youtube-dl
 alias yt='youtube-dl --add-metadata -i (read $link)'
