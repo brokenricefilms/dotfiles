@@ -85,13 +85,15 @@ end
 
 alias ghlazyscript='cd ~/git/lazyscript ; ok ; cd -'
 alias ghlinux_setup='cd ~/git/linux_setup ; ok ; cd -'
-alias gha='ghlazyscript ; ghdotfiles ; ghlinux_setup'
+alias ghvimium_theme='cd ~/git/vimium_theme ; ok ; cd -'
+alias gha='ghlazyscript ; ghdotfiles ; ghlinux_setup ; ghvimium_theme'
 
 alias glsherlock='cd ~/tools/hacking/sherlock/ ; pull ; cd -'
 alias gldotfiles='cd ~/git/dotfiles ; pull ; cd -'
 alias gllazyscript='cd ~/git/lazyscript ; pull ; cd -'
 alias gllinux_setup='cd ~/git/linux_setup ; pull ; cd -'
-alias gla='glsherlock ; gldotfiles ; gllazyscript ; gllinux_setup'
+alias glvimium_theme='cd ~/git/vimium_theme ; pull ; cd -'
+alias gla='glsherlock ; gldotfiles ; gllazyscript ; gllinux_setup ; glvimium_theme'
 
 #browser
 alias ch='google-chrome'
