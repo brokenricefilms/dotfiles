@@ -1,5 +1,5 @@
 #!/usr/bin/fish
-set -g -x fish_greeting Hi, Master 
+set -g -x fish_greeting Yo! Master
 fish_vi_key_bindings
 
 function sudo --description "Replacement for Bash 'sudo !!' command to run last command using sudo."
@@ -102,14 +102,14 @@ alias ch='google-chrome'
 alias ch_youtube_subsriptions='ch "https://www.youtube.com/feed/subscriptions"'
 alias ch_fb='ch https://facebook.com'
 alias ch_stu='ch "http://stu.edu.vn/"'
-alias ch_stu2='ch http://www.stu.edu.vn/vi/265/khoa-cong-nghe-thong-tin.html'
+alias ch_stu2='ch "http://www.stu.edu.vn/vi/265/khoa-cong-nghe-thong-tin.html"'
 alias ch_mail0='ch "https://mail.google.com/mail/u/0/#all"'
 alias ch_mail1='ch "https://mail.google.com/mail/u/1/#all"'
 alias ch_mail2='ch "https://mail.google.com/mail/u/2/#all"'
 alias ch_mail='ch_mail0 ; ch_mail1 ; ch_mail2'
 
 #mode
-alias hi='ch_mail ; ch_stu ; ch_stu2 ; ch_youtube_subsriptions ; ch_fb ; gla ; gha ; rem ; nvim -c "PlugUpdate | qa" ; tldr --update'
+alias hi='ch_mail ; ch_stu ; ch_youtube_subsriptions ; ch_fb ; gla ; gha ; rem ; nvim -c "PlugUpdate | qa" ; tldr --update'
 
 #hacking
 alias sherlock='python3 ~/tools/hacking/sherlock/sherlock.py' 
