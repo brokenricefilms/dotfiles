@@ -29,7 +29,7 @@ set nowritebackup
 " highligt cursorline
 set cursorline
 hi CursorLine term=none cterm=bold
-" highlight CursorLine guibg=#303000 ctermbg=234
+highlight CursorLine guibg=#303000 ctermbg=234
 
 " tab
 nmap tt :tabnew<Return>
