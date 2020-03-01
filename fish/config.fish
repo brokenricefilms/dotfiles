@@ -1,6 +1,7 @@
 #!/usr/bin/fish
 set -g -x fish_greeting Yo! Master
 fish_vi_key_bindings
+set -U EDITOR nvim
 
 function fco -d "Fuzzy-find and checkout a branch"
   git branch --all | grep -v HEAD | string trim | fzf | read -l result; and git checkout "$result"
@@ -24,10 +25,21 @@ function dl --description "download file like bitTorrent,..."
 	cd -
 end
 
-function C --description "test C program"
-	gcc $argv
-	./a.out
-	trash a.out
+function run
+	if ls $argv | grep ".c"
+		gcc $argv
+		./a.out
+		trash a.out
+	else if ls $argv | grep ".py"
+		python3 $argv
+	end
+end
+
+function repeat
+	while true
+		$argv
+		sleep 1
+	end
 end
 
 #lazy code 
@@ -49,11 +61,11 @@ alias fd='fdfind'
 alias o='open'
 alias rem='sudo apt-get update ; sudo apt-get upgrade -y ; sudo apt-get autoremove -y ; sudo apt-get autoclean ; sudo apt-get clean'
 
-#mpv
-alias m='mpv ~/Music'
-
 #tmux
-alias ide='tmux split-window -h -p 30'
+alias ide='tmux split-window -h -p 20'
+
+# music
+alias m='mpv ~/Music/*'
 
 #cd
 alias ..='cd ..'
