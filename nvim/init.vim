@@ -41,7 +41,9 @@ highlight CursorLine guibg=#303000 ctermbg=234
 
 " tab
 nmap tt :tabnew<Return>
-nmap <Space> :tabprevious<Return>
+
+" Switch tab
+nmap <S-Tab> :tabprev<Return>
 
 " Split window
 nmap ss :split<Return><C-w>w
@@ -59,6 +61,7 @@ nmap <silent> ;l <Plug>(easymotion-overwin-line)
 
 " nerd tree
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
 " emmet
 let g:user_emmet_leader_key=','
