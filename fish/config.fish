@@ -2,6 +2,14 @@
 set -g -x fish_greeting Yo! Master
 fish_vi_key_bindings
 
+function fco -d "Fuzzy-find and checkout a branch"
+  git branch --all | grep -v HEAD | string trim | fzf | read -l result; and git checkout "$result"
+end
+
+function fcoc -d "Fuzzy-find and checkout a commit"
+  git log --pretty=oneline --abbrev-commit --reverse | fzf --tac +s -e | awk '{print $1;}' | read -l result; and git checkout "$result"
+end
+
 function sudo --description "Replacement for Bash 'sudo !!' command to run last command using sudo."
 	if test "$argv" = !!
 		eval command sudo $history[1]

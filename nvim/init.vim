@@ -9,6 +9,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
+Plug 'preservim/nerdtree'
+Plug 'morhetz/gruvbox'
+Plug 'ap/vim-css-color'
 call plug#end()
 
 " 2 space when edit html file
@@ -16,6 +19,7 @@ autocmd BufRead,BufNewFile *.htm,*.html,*.css setlocal tabstop=2 shiftwidth=2 so
 set ts=4 sw=4
 set number relativenumber
 set background=dark
+syntax enable
 set clipboard=unnamedplus
 set mouse=a
 set autowrite
@@ -26,9 +30,13 @@ set nowritebackup
 
 :imap jj <Esc>
 
+" gruvbox
+colorscheme gruvbox
+highlight Normal ctermbg=None
+
 " highligt cursorline
 set cursorline
-hi CursorLine term=none cterm=bold
+highlight CursorLine term=none cterm=bold
 highlight CursorLine guibg=#303000 ctermbg=234
 
 " tab
@@ -49,6 +57,9 @@ map sl <C-w>l
 nmap <silent> ;; <Plug>(easymotion-overwin-f)
 nmap <silent> ;l <Plug>(easymotion-overwin-line)
 
+" nerd tree
+map <C-n> :NERDTreeToggle<CR>
+
 " emmet
 let g:user_emmet_leader_key=','
 
@@ -63,6 +74,7 @@ map mm <Plug>NERDCommenterToggle
 " coc vim
 let g:coc_global_extensions = ["coc-css",
             \ "coc-html",
+			\ "coc-snippets",
             \ "coc-json",
             \ "coc-python",
             \ "coc-tsserver",]
