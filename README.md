@@ -38,7 +38,3 @@ wget https://raw.githubusercontent.com/nicholaspham2311/dotfiles/master/install.
 ## tmux
 
 ## ranger
-
-## Licensing
-
-<img src="https://cdn-images-1.medium.com/max/1600/1*C87EjxGeMPrkTuVRVWVg4w.png" width="225"></img>
