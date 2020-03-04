@@ -64,9 +64,6 @@ alias rem='sudo apt-get update ; sudo apt-get upgrade -y ; sudo apt-get autoremo
 #tmux
 alias ide='tmux split-window -h -p 20'
 
-# music
-alias m='mpv ~/Music/*'
-
 #cd
 alias ..='cd ..'
 alias ...='cd .. ; cd .. ; cd ..'
