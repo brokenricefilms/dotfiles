@@ -1,6 +1,4 @@
 call plug#begin()
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
@@ -10,6 +8,9 @@ Plug 'preservim/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
 Plug 'preservim/nerdtree'
+" pretty
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'ap/vim-css-color'
 Plug 'prettier/vim-prettier', {
@@ -44,6 +45,7 @@ highlight CursorLine guibg=#303000 ctermbg=234
 
 " tab
 nmap tt :tabnew<Return>
+nmap <space>t :tabnext<Return>
 
 " Switch tab
 nmap <S-Tab> :tabprev<Return>
