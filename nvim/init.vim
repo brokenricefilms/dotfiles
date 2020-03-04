@@ -247,7 +247,7 @@ let g:prettier#config#html_whitespace_sensitivity = 'css'
 " false|true
 " default: 'false'
 let g:prettier#config#require_pragma = 'false'
-nmap <silent> <space>pr <Plug>(Prettier)
+nmap <silent> <space>py <Plug>(Prettier)
 " augroup fmt
   " autocmd!
   " autocmd BufWritePre * undojoin | Prettier
