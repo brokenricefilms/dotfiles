@@ -42,6 +42,15 @@ function repeat
 	end
 end
 
+# live server, go to folder project, have index.html
+function SERVER_IP
+	hostname -I
+end
+
+function serve
+	browser-sync start --server --files . --no-notify --host $SERVER_IP --port 9000
+end
+
 #lazy code 
 alias c='clear'
 alias g='grep'
