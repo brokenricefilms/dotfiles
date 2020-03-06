@@ -90,6 +90,7 @@ alias rain='mpv ~/Music/rain.mp3 --volume=80'
 #trash-cli
 alias t='trash'
 alias tdl='trash ~/Downloads/*'
+alias tvid='trash ~/Videos/*'
 
 #git
 alias yo='git add -A ; git commit -m (curl -s whatthecommit.com/index.txt)'
