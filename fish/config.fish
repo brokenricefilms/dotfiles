@@ -84,6 +84,9 @@ alias dow='cd ~/Downloads'
 alias yt='youtube-dl --add-metadata -i (read $link)'
 alias yta='yt -x --audio-format mp3 (read $link)'
 
+# mpv
+alias m='mpv ~/Music/*'
+
 #trash-cli
 alias t='trash'
 alias tdl='trash ~/Downloads/*'
