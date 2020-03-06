@@ -85,7 +85,7 @@ alias yt='youtube-dl --add-metadata -i (read $link)'
 alias yta='yt -x --audio-format mp3 (read $link)'
 
 # mpv
-alias rain='mpv ~/Music/🎧 EPIC Tokyo City Rain Sounds  _ Ambient Noise for Studying and Sleeping, @Ultizzz day#19-8Ad-YfhbIvY.mp3 --volume=60'
+alias rain='mpv ~/Music/rain.mp3 --volume=60'
 
 #trash-cli
 alias t='trash'
