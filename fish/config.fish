@@ -1,5 +1,5 @@
 #!/usr/bin/fish
-set -g -x fish_greeting Yo! Master
+set -g -x fish_greeting Yo!
 fish_vi_key_bindings
 set -U EDITOR nvim
 
