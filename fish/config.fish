@@ -48,7 +48,7 @@ function SERVER_IP
 end
 
 function serve
-	browser-sync start --server --files . --no-notify --host $SERVER_IP --port 9000
+	browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000
 end
 
 #lazy code 
