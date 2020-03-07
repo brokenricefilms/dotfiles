@@ -68,7 +68,7 @@ alias ka='killall'
 alias r='ranger'
 alias fd='fdfind'
 alias o='open'
-alias rem='sudo apt-get update ; sudo apt-get upgrade -y ; sudo apt-get autoremove -y ; sudo apt-get autoclean ; sudo apt-get clean'
+alias rem='sudo apt-get update ; sudo apt-get upgrade -y ; sudo apt-get autoremove -y ; sudo apt-get autoclean ; sudo apt-get clean ; sudo npm install npm -g'
 
 #tmux
 alias ide='tmux split-window -h -p 20'
@@ -96,6 +96,7 @@ alias tvid='trash ~/Videos/*'
 alias yo='git add -A ; git commit -m (curl -s whatthecommit.com/index.txt)'
 alias push="git push"
 alias pull="git pull" 
+alias clone='git clone'
 alias cm='git commit -m'
 alias ok='yo ; push'
 
