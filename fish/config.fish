@@ -1,11 +1,11 @@
 #!/usr/bin/fish
 
 # some fish function
-function fco -description "Fuzzy-find and checkout a branch"
+function fco --description "Fuzzy-find and checkout a branch"
   git branch --all | grep -v HEAD | string trim | fzf | read -l result; and git checkout "$result"
 end
 
-function fcoc -description "Fuzzy-find and checkout a commit"
+function fcoc --description "Fuzzy-find and checkout a commit"
   git log --pretty=oneline --abbrev-commit --reverse | fzf --tac +s -e | awk '{print $1;}' | read -l result; and git checkout "$result"
 end
 
