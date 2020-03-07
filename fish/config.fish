@@ -75,7 +75,8 @@ alias o='open'
 alias rem='sudo apt-get update ; sudo apt-get upgrade -y ; sudo apt-get autoremove -y ; sudo apt-get autoclean ; sudo apt-get clean ; sudo npm install npm -g'
 
 # tmux
-alias ide='tmux split-window -h -p 20'
+alias ide='tmux split-window -v -p 30 ; tmux split-window -h -p 66 ; tmux split-window -h -p 50'
+alias qa='tmux kill-session -a ; tmux ls'
 
 # cd
 alias ..='cd ..'
