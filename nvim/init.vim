@@ -248,6 +248,7 @@ let g:prettier#config#html_whitespace_sensitivity = 'css'
 " default: 'false'
 let g:prettier#config#require_pragma = 'false'
 nmap <silent> <space>py <Plug>(Prettier)
+" auto prettier when saved, but it slow me down
 " augroup fmt
   " autocmd!
   " autocmd BufWritePre * undojoin | Prettier

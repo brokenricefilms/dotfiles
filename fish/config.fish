@@ -1,13 +1,11 @@
 #!/usr/bin/fish
-set -g -x fish_greeting Yo!
-fish_vi_key_bindings
-set -U EDITOR nvim
 
-function fco -d "Fuzzy-find and checkout a branch"
+# some fish function
+function fco -description "Fuzzy-find and checkout a branch"
   git branch --all | grep -v HEAD | string trim | fzf | read -l result; and git checkout "$result"
 end
 
-function fcoc -d "Fuzzy-find and checkout a commit"
+function fcoc -description "Fuzzy-find and checkout a commit"
   git log --pretty=oneline --abbrev-commit --reverse | fzf --tac +s -e | awk '{print $1;}' | read -l result; and git checkout "$result"
 end
 
@@ -25,7 +23,7 @@ function dl --description "download file like bitTorrent,..."
 	cd -
 end
 
-function run
+function run --description "run test for C, Python"
 	if ls $argv | grep ".c"
 		gcc $argv
 		./a.out
@@ -42,8 +40,7 @@ function repeat
 	end
 end
 
-# live server, go to folder project, have index.html
-function SERVER_IP
+function SERVER_IP --description "live server, go to folder project, have index.html"
 	hostname -I
 end
 
@@ -51,7 +48,14 @@ function serve
 	browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000
 end
 
-#lazy code 
+########################################################################
+########################################################################
+
+set -g -x fish_greeting Yo!
+fish_vi_key_bindings
+set -U EDITOR nvim
+
+# lazy code 
 alias c='clear'
 alias g='grep'
 alias h='htop'
@@ -70,29 +74,29 @@ alias fd='fdfind'
 alias o='open'
 alias rem='sudo apt-get update ; sudo apt-get upgrade -y ; sudo apt-get autoremove -y ; sudo apt-get autoclean ; sudo apt-get clean ; sudo npm install npm -g'
 
-#tmux
+# tmux
 alias ide='tmux split-window -h -p 20'
 
-#cd
+# cd
 alias ..='cd ..'
 alias ...='cd .. ; cd .. ; cd ..'
 alias ....='cd .. ; cd .. ; cd .. ; cd ..'
 alias doc='cd ~/Documents'
 alias dow='cd ~/Downloads'
 
-#youtube-dl
+# youtube-dl
 alias yt='youtube-dl --add-metadata -i (read $link)'
 alias yta='yt -x --audio-format mp3 (read $link)'
 
 # mpv
 alias rain='mpv ~/Music/rain.mp3 --volume=80'
 
-#trash-cli
+# trash-cli
 alias t='trash'
 alias tdl='trash ~/Downloads/*'
 alias tvid='trash ~/Videos/*'
 
-#git
+# git
 alias yo='git add -A ; git commit -m (curl -s whatthecommit.com/index.txt)'
 alias push="git push"
 alias pull="git pull" 
@@ -100,7 +104,6 @@ alias clone='git clone'
 alias cm='git commit -m'
 alias ok='yo ; push'
 
-# alias ghdotfiles='cp ~/.selected_editor ~/git/dotfiles ; cp ~/.gitconfig  ~/git/dotfiles/git/ ; cp ~/.tmux.conf ~/git/dotfiles/tmux ; cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim ; cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ ; cp ~/.config/fish/functions/fish_prompt.fish ~/git/dotfiles/fish/ ; cp ~/.ssh/config ~/git/dotfiles/ssh/ ; cp ~/.config/ranger/* ~/git/dotfiles/ranger ; cd ~/git/dotfiles ; ok ; cd -'
 function ghdotfiles
 	cp ~/.selected_editor ~/git/dotfiles 
 	cp ~/.gitconfig  ~/git/dotfiles/git/ 
@@ -126,9 +129,9 @@ alias gllinux_setup='cd ~/git/linux_setup ; pull ; cd -'
 alias glvimium_theme='cd ~/git/vimium_theme ; pull ; cd -'
 alias gla='glsherlock ; gldotfiles ; gllazyscript ; gllinux_setup ; glvimium_theme'
 
-#browser
+# browser
 alias ch='google-chrome'
-#alias ch='firefox'
+# alias ch='firefox'
 
 alias ch_youtube_subsriptions='ch "https://www.youtube.com/feed/subscriptions"'
 alias ch_fb='ch https://facebook.com'
@@ -140,10 +143,10 @@ alias ch_mail2='ch "https://mail.google.com/mail/u/2/#all"'
 alias ch_mail='ch_mail0 ; ch_mail1 ; ch_mail2'
 alias ch_linkedin='ch "https://www.linkedin.com/feed/"'
 
-#mode
+# mode
 alias hi='ch_linkedin ; ch_mail ; ch_stu ; ch_youtube_subsriptions ; ch_fb ; gla ; gha ; rem ; nvim -c "PlugUpdate | qa" ; tldr --update'
 
-#hacking
+# hacking
 alias sherlock='python3 ~/tools/hacking/sherlock/sherlock.py' 
 function sherlockauto --description "open all link"
 	cd ~/Documents/data/sherlock
