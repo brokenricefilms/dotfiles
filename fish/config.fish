@@ -72,7 +72,6 @@ alias ka='killall'
 alias r='ranger'
 alias fd='fdfind'
 alias o='open'
-alias tou='touch'
 alias rem='sudo apt-get update ; sudo apt-get upgrade -y ; sudo apt-get autoremove -y ; sudo apt-get autoclean ; sudo apt-get clean ; sudo npm install npm -g'
 
 # tmux
