@@ -145,7 +145,7 @@ alias ch_mail='ch_mail0 ; ch_mail1 ; ch_mail2'
 alias ch_linkedin='ch "https://www.linkedin.com/feed/"'
 
 # mode
-alias hi='ch_linkedin ; ch_mail ; ch_stu ; ch_youtube_subsriptions ; ch_fb ; gla ; gha ; rem ; nvim -c "PlugUpdate | qa" ; tldr --update'
+alias hi='ch_linkedin ; ch_mail0 ; ch_stu ; ch_youtube_subsriptions ; ch_fb ; gla ; gha ; rem ; nvim -c "PlugUpdate | qa" ; tldr --update'
 
 # hacking
 alias sherlock='python3 ~/tools/hacking/sherlock/sherlock.py' 
