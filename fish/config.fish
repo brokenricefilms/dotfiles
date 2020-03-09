@@ -133,22 +133,20 @@ alias glFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; pull ; cd -'
 alias gla='glFreeCodeCampProject ; glsherlock ; gldotfiles ; gllazyscript ; gllinux_setup ; glvimium_theme'
 
 # browser
-# alias brower='google-chrome'
-# alias brower='firefox'
-alias brower='brave-browser'
+alias browser='brave-browser'
 
-alias brower_youtube_subsriptions='brower "https://www.youtube.com/feed/subscriptions"'
-alias brower_fb='brower https://facebook.com'
-alias brower_stu='brower "http://stu.edu.vn/"'
-alias brower_stu2='brower "http://www.stu.edu.vn/vi/265/khoa-cong-nghe-thong-tin.html"'
-alias brower_mail0='brower "https://mail.google.com/mail/u/0/#all"'
-alias brower_mail1='brower "https://mail.google.com/mail/u/1/#all"'
-alias brower_mail2='brower "https://mail.google.com/mail/u/2/#all"'
-alias brower_mail='brower_mail0 ; brower_mail1 ; brower_mail2'
-alias brower_linkedin='brower "https://www.linkedin.com/feed/"'
+alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
+alias browser_fb='browser https://facebook.com'
+alias browser_stu='browser "http://stu.edu.vn/"'
+alias browser_stu2='browser "http://www.stu.edu.vn/vi/265/khoa-cong-nghe-thong-tin.html"'
+alias browser_mail0='browser "https://mail.google.com/mail/u/0/#all"'
+alias browser_mail1='browser "https://mail.google.com/mail/u/1/#all"'
+alias browser_mail2='browser "https://mail.google.com/mail/u/2/#all"'
+alias browser_mail='browser_mail0 ; browser_mail1 ; browser_mail2'
+alias browser_linkedin='browser "https://www.linkedin.com/feed/"'
 
 # mode
-alias hi='brower_linkedin ; brower_mail0 ; brower_stu ; brower_youtube_subsriptions ; brower_fb ; gla ; gha ; rem ; nvim -c "PlugUpdate | qa" ; tldr --update'
+alias hi='browser_linkedin ; browser_mail0 ; browser_stu ; browser_youtube_subsriptions ; browser_fb ; gla ; gha ; rem ; nvim -c "PlugUpdate | qa" ; tldr --update'
 
 # hacking
 alias sherlock='python3 ~/tools/hacking/sherlock/sherlock.py' 
@@ -157,7 +155,7 @@ function sherlockauto --description "open all link"
 	sherlock $argv
 	cat *.txt > openlink.txt
 	while read link
-		brave-brower $link
+		brave-browser $link
 	end < openlink.txt
 	trash ~/Documents/data/sherlock/*
 	cd -
