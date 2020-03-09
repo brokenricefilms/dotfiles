@@ -133,8 +133,9 @@ alias glFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; pull ; cd -'
 alias gla='glFreeCodeCampProject ; glsherlock ; gldotfiles ; gllazyscript ; gllinux_setup ; glvimium_theme'
 
 # browser
-alias ch='google-chrome'
+# alias ch='google-chrome'
 # alias ch='firefox'
+alias ch='brave-browser'
 
 alias ch_youtube_subsriptions='ch "https://www.youtube.com/feed/subscriptions"'
 alias ch_fb='ch https://facebook.com'
