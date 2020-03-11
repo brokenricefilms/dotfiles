@@ -20,6 +20,7 @@ end
 function dl --description "download file like bitTorrent,..."
 	cd ~/Downloads
 	aria2c $argv
+	ls -lah ~/Downloads
 	cd -
 end
 
