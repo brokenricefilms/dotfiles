@@ -193,7 +193,7 @@ alias browser_linkedin='browser "https://www.linkedin.com/feed/"'
 alias browser_daily='browser_linkedin ; browser_mail0 ; browser_stu ; browser_youtube_subsriptions ; browser_fb'
 
 # mode
-alias hi='cowthink -s "Okay" ; browser_daily ; gla ; gha ; rem'
+alias hi='browser_daily ; gla ; gha ; rem'
 
 # hacking
 alias sherlock='python3 ~/tools/hacking/sherlock/sherlock.py' 
