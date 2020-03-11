@@ -130,10 +130,10 @@ alias ghFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; ok ; cd -'
 alias ghok='cd ~/git/ok ; ok ; cd -'
 
 function gha --description "git push all project"
-	cowsay "git push lazyscript" 
+	cowsay "git push lazyscript" | cowsay
 	ghlazyscript 
 
-	cowsay "git push dotfiles" 
+	cowsay "git push dotfiles"  | cowsay
 	ghdotfiles 
 
 	cowsay "git push linux_setup" 
