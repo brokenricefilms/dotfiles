@@ -128,7 +128,7 @@ alias ghlinux_setup='cd ~/git/linux_setup ; ok ; cd -'
 alias ghvimium_theme='cd ~/git/vimium_theme ; ok ; cd -'
 alias ghFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; ok ; cd -'
 alias ghok='cd ~/git/ok ; ok ; cd -'
-# alias gha='cowsay "git push lazyscript" ; ghlazyscript ; cowsay "git push dotfiles" ; ghdotfiles ; cowsay "git push linux_setup" ; ghlinux_setup ; cowsay "git push vimium_theme" ; ghvimium_theme ; cowsay "git push FreeCodeCampProject" ; ghFreeCodeCampProject ; cowsay "git push ok" ; ghok'
+
 function gha --description "git push all project"
 	cowsay "git push lazyscript" 
 	ghlazyscript 
@@ -156,7 +156,26 @@ alias gllinux_setup='cd ~/git/linux_setup ; pull ; cd -'
 alias glvimium_theme='cd ~/git/vimium_theme ; pull ; cd -'
 alias glFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; pull ; cd -'
 alias glok='cd ~/git/ok ; pull ; cd -'
-alias gla='glFreeCodeCampProject ; glsherlock ; gldotfiles ; gllazyscript ; gllinux_setup ; glvimium_theme ; glok'
+
+function gla --description "git pull all project"
+	cowsay "git pull lazyscript" 
+	gllazyscript 
+
+	cowsay "git pull dotfiles" 
+	gldotfiles 
+
+	cowsay "git pull linux_setup" 
+	gllinux_setup 
+
+	cowsay "git pull vimium_theme" 
+	glvimium_theme 
+
+	cowsay "git pull FreeCodeCampProject" 
+	glFreeCodeCampProject 
+
+	cowsay "git pull ok" 
+	glok
+end
 
 # browser
 alias browser='brave-browser'
