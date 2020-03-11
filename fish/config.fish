@@ -45,7 +45,7 @@ function SERVER_IP --description "live server, go to folder project, have index.
 	hostname -I
 end
 
-function serve
+function se
 	browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000
 end
 
@@ -79,7 +79,7 @@ alias rem='sudo apt-get update ; sudo apt-get upgrade -y ; sudo apt-get autoremo
 
 # tmux
 # alias ide='tmux split-window -v -p 30 ; tmux split-window -h -p 66 ; tmux split-window -h -p 50'
-alias ide='tmux split-window -v -p 30 ; tmux split-window -h -p 80'
+alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 75'
 alias qa='tmux kill-session -a ; tmux ls'
 
 # cd
