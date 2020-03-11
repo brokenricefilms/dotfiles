@@ -74,7 +74,8 @@ alias r='ranger'
 alias fd='fdfind'
 alias o='open'
 alias 777='chmod -R 777'
-alias rem='sudo apt-get update ; sudo apt-get upgrade -y ; sudo apt-get autoremove -y ; sudo apt-get autoclean ; sudo apt-get clean ; sudo npm install npm -g'
+# update all
+alias rem='sudo apt-get update ; sudo apt-get upgrade -y ; sudo apt-get autoremove -y ; sudo apt-get autoclean ; sudo apt-get clean ; sudo npm install npm -g ; nvim -c "PlugUpdate | qa" ; tldr --update'
 
 # tmux
 # alias ide='tmux split-window -v -p 30 ; tmux split-window -h -p 66 ; tmux split-window -h -p 50'
@@ -130,10 +131,10 @@ alias ghFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; ok ; cd -'
 alias ghok='cd ~/git/ok ; ok ; cd -'
 
 function gha --description "git push all project"
-	cowsay "git push lazyscript" | cowsay
+	cowsay "git push lazyscript"
 	ghlazyscript 
 
-	cowsay "git push dotfiles"  | cowsay
+	cowsay "git push dotfiles"
 	ghdotfiles 
 
 	cowsay "git push linux_setup" 
@@ -189,13 +190,15 @@ alias browser_mail1='browser "https://mail.google.com/mail/u/1/#all"'
 alias browser_mail2='browser "https://mail.google.com/mail/u/2/#all"'
 alias browser_mail='browser_mail0 ; browser_mail1 ; browser_mail2'
 alias browser_linkedin='browser "https://www.linkedin.com/feed/"'
+alias browser_daily='browser_linkedin ; browser_mail0 ; browser_stu ; browser_youtube_subsriptions ; browser_fb'
 
 # mode
-alias hi='browser_linkedin ; browser_mail0 ; browser_stu ; browser_youtube_subsriptions ; browser_fb ; gla ; gha ; rem ; nvim -c "PlugUpdate | qa" ; tldr --update'
+alias hi='cowsay "Okay" ; browser_daily ; gla ; gha ; rem'
 
 # hacking
 alias sherlock='python3 ~/tools/hacking/sherlock/sherlock.py' 
 function sherlockauto --description "open all link"
+	mkdir -p ~/Documents/data/sherlock
 	cd ~/Documents/data/sherlock
 	sherlock $argv
 	cat *.txt > openlink.txt
