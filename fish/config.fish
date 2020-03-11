@@ -128,7 +128,7 @@ alias ghlinux_setup='cd ~/git/linux_setup ; ok ; cd -'
 alias ghvimium_theme='cd ~/git/vimium_theme ; ok ; cd -'
 alias ghFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; ok ; cd -'
 alias ghok='cd ~/git/ok ; ok ; cd -'
-alias gha='ghlazyscript ; ghdotfiles ; ghlinux_setup ; ghvimium_theme ; ghFreeCodeCampProject ; ghok'
+alias gha='cowsay "git push lazyscript" ; ghlazyscript ; cowsay "git push dotfiles" ; ghdotfiles ; cowsay "git push linux_setup" ; ghlinux_setup ; cowsay "git push vimium_theme" ; ghvimium_theme ; cowsay "git push FreeCodeCampProject" ; ghFreeCodeCampProject ; cowsay "git push ok" ; ghok'
 
 alias glsherlock='cd ~/tools/hacking/sherlock/ ; pull ; cd -'
 alias gldotfiles='cd ~/git/dotfiles ; pull ; cd -'
