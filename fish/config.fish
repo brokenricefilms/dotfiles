@@ -189,7 +189,7 @@ alias browser_mail0='browser "https://mail.google.com/mail/u/0/#all"'
 alias browser_mail1='browser "https://mail.google.com/mail/u/1/#all"'
 alias browser_mail2='browser "https://mail.google.com/mail/u/2/#all"'
 alias browser_mail='browser_mail0 ; browser_mail1 ; browser_mail2'
-alias browser_linkedin='browser "https://www.linkedin.com/notifications/"'
+alias browser_linkedin='browser "https://www.linkedin.com/mynetwork/"'
 alias browser_daily='browser_linkedin ; browser_mail0 ; browser_stu ; browser_youtube_subsriptions ; browser_fb'
 
 # mode
