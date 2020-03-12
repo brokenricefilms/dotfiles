@@ -96,7 +96,8 @@ alias yt='youtube-dl --add-metadata -i (read $link)'
 alias yta='yt -x --audio-format mp3 (read $link)'
 
 # mpv
-alias m='mpv ~/Music/rain.mp3 --volume=80'
+alias rain='mpv ~/Music/rain.mp3 --volume=80'
+alias fire='mpv ~/Music/fire.mp3'
 
 # trash-cli
 alias t='trash'
@@ -159,6 +160,9 @@ alias glFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; pull ; cd -'
 alias glok='cd ~/git/ok ; pull ; cd -'
 
 function gla --description "git pull all project"
+	cowsay "git pull sherlock"
+	glsherlock
+
 	cowsay "git pull lazyscript" 
 	gllazyscript 
 
