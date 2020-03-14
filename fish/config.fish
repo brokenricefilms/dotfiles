@@ -102,7 +102,6 @@ alias fire='mpv ~/Music/fire.mp3'
 # trash-cli
 alias t='trash'
 alias tdl='trash ~/Downloads/*'
-alias tvid='trash ~/Videos/*'
 
 # git
 alias yo='git add -A ; git commit -m (curl -s whatthecommit.com/index.txt)'
