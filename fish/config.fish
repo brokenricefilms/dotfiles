@@ -57,7 +57,6 @@ fish_vi_key_bindings
 set -U EDITOR nvim
 
 # lazy code 
-alias c='clear'
 alias g='grep'
 alias h='htop'
 alias ins='sudo apt-get install -y'
@@ -83,13 +82,18 @@ alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 75'
 alias qa='tmux kill-session -a ; tmux ls'
 
 # cd
-alias ..='cd ..'
-alias ...='cd .. ; cd .. ; cd ..'
-alias ....='cd .. ; cd .. ; cd .. ; cd ..'
-alias doc='cd ~/Documents'
-alias dow='cd ~/Downloads'
-alias vid='cd ~/videos'
-alias pic='cd ~/Pictures'
+alias ..='cd .. ; l'
+alias ...='cd .. ; cd .. ; cd .. ; l'
+alias ....='cd .. ; cd .. ; cd .. ; cd .. ; l'
+alias doc='cd ~/Documents ; l'
+alias dow='cd ~/Downloads ; l'
+alias vi='cd ~/Videos ; l'
+alias pi='cd ~/Pictures ; l'
+
+function c
+	cd $argv
+	ls -lah
+end
 
 # youtube-dl
 alias yt='youtube-dl --add-metadata -i (read $link)'
