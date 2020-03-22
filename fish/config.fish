@@ -34,7 +34,7 @@ function run --description "run test for C, Python"
 	end
 end
 
-function repeat
+function repeat --description "repeat some command"
 	while true
 		$argv
 		sleep 1
