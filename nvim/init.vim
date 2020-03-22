@@ -32,7 +32,7 @@ set noswapfile
 set nobackup
 set nowritebackup
 
-:imap ii <Esc>
+:imap jj <Esc>
 
 " gruvbox
 colorscheme gruvbox
