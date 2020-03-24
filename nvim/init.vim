@@ -6,16 +6,10 @@ Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'mattn/emmet-vim'
-Plug 'preservim/nerdtree'
 " pretty
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
-Plug 'ap/vim-css-color'
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 call plug#end()
 
 " 2 space when edit html file
@@ -64,13 +58,6 @@ map sl <C-w>l
 nmap <silent> ;; <Plug>(easymotion-overwin-f)
 nmap <silent> ;l <Plug>(easymotion-overwin-line)
 
-" nerd tree
-map <C-n> :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
-
-" emmet
-let g:user_emmet_leader_key=','
-
 " airline
 let g:airline_theme='minimalist'
 
@@ -80,7 +67,8 @@ let g:NERDSpaceDelims = 1
 map mm <Plug>NERDCommenterToggle
 
 " coc vim
-let g:coc_global_extensions = ["coc-css",
+let g:coc_global_extensions = [
+			\ "coc-css",
             \ "coc-html",
 			\ "coc-snippets",
             \ "coc-json",
@@ -211,43 +199,3 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
-
-" prettier
-" Max line length that prettier will wrap on: a number or 'auto' (use
-" textwidth).
-" default: 'auto'
-let g:prettier#config#print_width = 'auto'
-
-" number of spaces per indentation level: a number or 'auto' (use
-" softtabstop)
-" default: 'auto'
-let g:prettier#config#tab_width = 'auto'
-
-" use tabs instead of spaces: true, false, or auto (use the expandtab setting).
-" default: 'auto'
-let g:prettier#config#use_tabs = 'auto'
-
-" flow|babylon|typescript|css|less|scss|json|graphql|markdown or empty string
-" (let prettier choose).
-" default: ''
-let g:prettier#config#parser = ''
-
-" cli-override|file-override|prefer-file
-" default: 'file-override'
-let g:prettier#config#config_precedence = 'file-override'
-
-" always|never|preserve
-" default: 'preserve'
-let g:prettier#config#prose_wrap = 'preserve'
-
-" css|strict|ignore
-" default: 'css'
-let g:prettier#config#html_whitespace_sensitivity = 'css'
-
-" false|true
-" default: 'false'
-let g:prettier#config#require_pragma = 'false'
-nmap <silent> <space>py <Plug>(Prettier)
-" auto prettier when saved
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.html,*.json,*.css,*.scss,*.less,*.graphql Prettier
