@@ -9,12 +9,12 @@
     _ ranger
     _ git
     _ wget
-    _ vimium
+    _ vimium extension
 
 -   Ok! Run code below in command line
 
 ```bash
-wget https://raw.githubusercontent.com/nicholaspham2311/dotfiles/master/install.bash \ bash install.bash ; rm install.bash
+wget https://raw.githubusercontent.com/nicholaspham2311/dotfiles/master/install ; bash install ; rm install
 ```
 
 -   vimium option > Restore > choose file > vimium-option.json
