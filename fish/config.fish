@@ -75,7 +75,8 @@ alias fd='fdfind'
 alias o='open'
 alias 777='chmod -R 777'
 # update all
-alias rem='sudo apt-get update ; sudo apt-get upgrade -y ; sudo apt-get autoremove -y ; sudo apt-get autoclean ; sudo apt-get clean ; sudo snap refresh ; sudo npm install npm -g ; nvim -c "PlugUpdate | qa" ; tldr --update'
+alias rem='sudo apt-get update ; sudo apt-get upgrade -y ; sudo apt-get autoremove -y ; sudo apt-get autoclean ; sudo snap refresh ; sudo npm install npm -g ; nvim -c "PlugUpdate | qa" ; tldr --update'
+alias cleanning='sudo apt-get autoremove -y ; sudo apt-get autoclean ; sudo apt-get clean ; t ~/.cache/thumbnails/* ; trash-empty'
 
 # tmux
 # alias ide='tmux split-window -v -p 30 ; tmux split-window -h -p 66 ; tmux split-window -h -p 50'
@@ -93,7 +94,7 @@ alias pi='cd ~/Pictures ; l'
 
 function c
 	cd $argv
-	ls -lah
+	ls -ltrh
 end
 
 # youtube-dl
