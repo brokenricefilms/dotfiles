@@ -4,12 +4,13 @@
 
 -   just for NEOVIM(or vim maybe) TMUX FISH RANGER VIMIUM
 -   **REQUITE**
-    _ neovim
-    _ tmux fish
-    _ ranger
-    _ git
-    _ wget
-    _ vimium extension
+
+    -   neovim
+    -   tmux fish
+    -   ranger
+    -   git
+    -   wget
+    -   vimium extension
 
 -   Ok! Run code below in command line
 
