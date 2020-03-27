@@ -79,8 +79,8 @@ alias rem='sudo apt-get update ; sudo apt-get upgrade -y ; sudo apt-get autoremo
 alias cleanning='sudo apt-get autoremove -y ; sudo apt-get autoclean ; sudo apt-get clean ; t ~/.cache/thumbnails/* ; trash-empty'
 
 # tmux
-# alias ide='tmux split-window -v -p 30 ; tmux split-window -h -p 66 ; tmux split-window -h -p 50'
-alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 75'
+alias ide='tmux split-window -v -p 30 ; tmux split-window -h -p 66 ; tmux split-window -h -p 50'
+# alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 75'
 alias qa='tmux kill-session -a ; tmux ls'
 
 # cd
