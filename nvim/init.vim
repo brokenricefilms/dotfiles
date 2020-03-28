@@ -8,10 +8,11 @@ Plug 'preservim/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'	
 Plug 'preservim/nerdtree'
-" pretty
+" fancy
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
+Plug 'robertmeta/nofrils'
 Plug 'ap/vim-css-color'	
 Plug 'prettier/vim-prettier', {	
   \ 'do': 'yarn install',	
@@ -35,8 +36,17 @@ set nowritebackup
 :imap jj <Esc>
 
 " gruvbox
-colorscheme gruvbox
-highlight Normal ctermbg=None
+" colorscheme gruvbox
+" highlight Normal ctermbg=None
+
+" nofrils
+colorscheme nofrils-dark
+" colo nofrils-light
+" colo nofrils-sepia
+" colo nofrils-acme
+let g:nofrils_strbackgrounds=1
+let g:nofrils_heavycomments=1
+" let g:nofrils_heavylinenumbers=1
 
 " highligt cursorline
 set cursorline
@@ -75,7 +85,7 @@ let g:user_emmet_leader_key=','
 let g:airline_theme='minimalist'
 
 " nerdcommenter
-filetype plugin on
+filetype plugin indent on
 let g:NERDSpaceDelims = 1
 map mm <Plug>NERDCommenterToggle
 
