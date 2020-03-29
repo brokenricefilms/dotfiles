@@ -16,3 +16,4 @@ cp ~/dotfiles/tmux/.tmux.conf ~/
 cp ~/dotfiles/fish/config.fish ~/.config/fish/
 cp ~/dotfiles/fish/fish_prompt.fish ~/.config/fish/functions
 cp ~/dotfiles/vifm/vifmrc ~/.config/vifm/
+cp ~/dotfiles/vifm/colors/* ~/.config/vifm/colors/

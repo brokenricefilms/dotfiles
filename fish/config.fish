@@ -125,7 +125,7 @@ function ghdotfiles
 	cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ 
 	cp ~/.config/fish/functions/fish_prompt.fish ~/git/dotfiles/fish/ 
 	cp ~/.config/vifm/vifmrc ~/git/dotfiles/vifm
-	cp ~/.config/vifm/colors ~/git/dotfiles/vifm
+	cp ~/.config/vifm/colors/* ~/git/dotfiles/vifm/colors
 	cp ~/.ssh/config ~/git/dotfiles/ssh/ 
 	cd ~/git/dotfiles 
 	ok ; cd -
