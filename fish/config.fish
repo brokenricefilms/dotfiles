@@ -70,8 +70,8 @@ alias rbn='sudo reboot now'
 alias sdn='sudo shutdown now'
 alias mkd='mkdir -pv'
 alias ka='killall'
-alias r='ranger'
 alias fd='fdfind'
+alias f='vifm'
 alias o='open'
 alias 777='chmod -R 777'
 # update all
@@ -124,8 +124,9 @@ function ghdotfiles
 	cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim 
 	cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ 
 	cp ~/.config/fish/functions/fish_prompt.fish ~/git/dotfiles/fish/ 
+	cp ~/.config/vifm/vifmrc ~/git/dotfiles/vifm
+	cp ~/.config/vifm/colors ~/git/dotfiles/vifm
 	cp ~/.ssh/config ~/git/dotfiles/ssh/ 
-	cp ~/.config/ranger/* ~/git/dotfiles/ranger 
 	cd ~/git/dotfiles 
 	ok ; cd -
 end

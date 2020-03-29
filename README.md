@@ -7,7 +7,7 @@
 
     -   neovim
     -   tmux fish
-    -   ranger
+    -   vifm
     -   git
     -   wget
     -   vimium extension

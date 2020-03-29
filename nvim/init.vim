@@ -11,7 +11,7 @@ Plug 'preservim/nerdtree'
 " fancy
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 Plug 'robertmeta/nofrils'
 Plug 'ap/vim-css-color'	
 Plug 'prettier/vim-prettier', {	
