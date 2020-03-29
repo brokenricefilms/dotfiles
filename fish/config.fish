@@ -189,6 +189,7 @@ end
 
 # browser
 alias browser='brave-browser'
+alias github='browser "https://github.com/nicholaspham2311"'
 
 alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
 alias browser_fb='browser https://facebook.com'
