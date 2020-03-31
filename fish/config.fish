@@ -42,10 +42,6 @@ function se
 	browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000
 end
 
-function tran
-	brave-browser --new-window "https://translate.google.com/?source=osdd#view=home&op=translate&sl=auto&tl=vi&text=$argv"
-end
-
 ########################################################################
 ########################################################################
 
@@ -160,22 +156,22 @@ alias ghok='cd ~/git/ok ; ok ; cd -'
 
 function gha --description "git push all project"
 	cowsay "git push lazyscript"
-	ghlazyscript | cowsay -n
+	ghlazyscript
 
 	cowsay "git push dotfiles"
-	ghdotfiles | cowsay -n
+	ghdotfiles
 
 	cowsay "git push linux_setup" 
-	ghlinux_setup | cowsay -n
+	ghlinux_setup
 
 	cowsay "git push vimium_theme" 
-	ghvimium_theme | cowsay -n
+	ghvimium_theme
 
 	cowsay "git push FreeCodeCampProject" 
-	ghFreeCodeCampProject | cowsay -n
+	ghFreeCodeCampProject
 
 	cowsay "git push ok" 
-	ghok | cowsay -n
+	ghok
 
 	cowsay "D O N E"
 end
@@ -224,7 +220,51 @@ alias browser_mail1='browser "https://mail.google.com/mail/u/1/#all"'
 alias browser_mail2='browser "https://mail.google.com/mail/u/2/#all"'
 alias browser_mail='browser_mail0 ; browser_mail1 ; browser_mail2'
 alias browser_linkedin='browser "https://www.linkedin.com/feed/"'
-alias browser_daily='browser_linkedin ; browser_mail0 ; browser_stu ; browser_youtube_subsriptions ; browser_fb'
+function browser_daily
+	browser_linkedin
+	browser_mail0
+	browser_stu
+	browser_youtube_subsriptions
+	browser_fb
+end
+
+## search
+function !t
+	brave-browser --new-window "https://translate.google.com/?source=osdd#auto|auto|$argv"
+end
+
+function !y
+	brave-browser --new-window "https://www.youtube.com/results?search_query=$argv"
+end
+
+function !gm
+	brave-browser --new-window "https://www.google.com/maps?q=$argv"
+end
+
+function !g
+	brave-browser --new-window "https://www.google.com/search?q=$argv"
+end
+
+function !gi
+	brave-browser --new-window "https://www.google.com/search?tbm=isch&q=$argv"
+end
+
+function !w
+	brave-browser --new-window "https://en.wikipedia.org/wiki/Special:Search?search=$argv"
+end
+
+function !gh
+	brave-browser --new-window "https://github.com/search?q=$argv"
+end
+
+function !fa
+	brave-browser --new-window "https://www.facebook.com/search?q=$argv"
+end
+
+function !m
+	brave-browser --new-window "https://medium.com/search?q=$argv"
+end
+
 
 # mode
 alias hi='browser_daily ; gla ; gha ; rem'
