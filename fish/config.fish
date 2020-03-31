@@ -163,23 +163,21 @@ function gha --description "git push all project"
 	ghlazyscript | cowsay -n
 
 	cowsay "git push dotfiles"
-	ghdotfiles 
-	cowsay -n
+	ghdotfiles | cowsay -n
 
 	cowsay "git push linux_setup" 
-	ghlinux_setup 
-	cowsay -n
+	ghlinux_setup | cowsay -n
 
 	cowsay "git push vimium_theme" 
-	ghvimium_theme 
-	cowsay -n
+	ghvimium_theme | cowsay -n
 
 	cowsay "git push FreeCodeCampProject" 
-	ghFreeCodeCampProject 
-	cowsay -n
+	ghFreeCodeCampProject | cowsay -n
 
 	cowsay "git push ok" 
-	ghok
+	ghok | cowsay -n
+
+	cowsay "D O N E"
 end
 
 alias glsherlock='cd ~/tools/hacking/sherlock/ ; pull ; cd -'
