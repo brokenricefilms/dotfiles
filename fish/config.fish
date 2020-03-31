@@ -42,6 +42,10 @@ function se
 	browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000
 end
 
+function tran
+	brave-browser --new-window "https://translate.google.com/?source=osdd#view=home&op=translate&sl=auto&tl=vi&text=$argv"
+end
+
 ########################################################################
 ########################################################################
 
@@ -49,7 +53,8 @@ set -g -x fish_greeting Yo!
 fish_vi_key_bindings
 set -U EDITOR nvim
 
-# lazy code 
+# lazy code
+alias fishr='source ~/.config/fish/config.fish'
 alias g='grep'
 alias h='htop'
 alias ins='sudo apt-get install -y'
@@ -80,10 +85,11 @@ alias qa='tmux kill-session -a ; tmux ls'
 alias ..='cd .. ; l'
 alias ...='cd .. ; cd .. ; cd .. ; l'
 alias ....='cd .. ; cd .. ; cd .. ; cd .. ; l'
-alias doc='c ~/Documents ; l'
-alias dow='c ~/Downloads ; l'
-alias vi='c ~/Videos ; l'
-alias pi='c ~/Pictures ; l'
+alias doc='c ~/Documents'
+alias dow='c ~/Downloads'
+alias vi='c ~/Videos'
+alias pi='c ~/Pictures'
+alias fgit='vifm ~/git'
 alias fdoc='vifm ~/Documents'
 alias fdow='vifm ~/Downloads'
 alias fvi='vifm ~/Videos'
