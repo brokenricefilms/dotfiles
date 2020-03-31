@@ -160,8 +160,7 @@ alias ghok='cd ~/git/ok ; ok ; cd -'
 
 function gha --description "git push all project"
 	cowsay "git push lazyscript"
-	ghlazyscript 
-	cowsay -n
+	ghlazyscript | cowsay -n
 
 	cowsay "git push dotfiles"
 	ghdotfiles 
