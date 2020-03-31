@@ -8,6 +8,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'	
 Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 " fancy
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -23,6 +24,7 @@ call plug#end()
 autocmd BufRead,BufNewFile *.htm,*.html,*.css setlocal tabstop=2 shiftwidth=2 softtabstop=2
 set ts=4 sw=4
 set number relativenumber
+set encoding=UTF-8
 set background=dark
 syntax enable
 set clipboard=unnamedplus

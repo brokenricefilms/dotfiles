@@ -91,6 +91,7 @@ alias fpi='vifm ~/Pictures'
 
 function c
 	cd $argv
+	clear
 	ls -ltrh
 end
 
