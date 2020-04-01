@@ -8,7 +8,6 @@ Plug 'preservim/nerdcommenter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'	
 Plug 'preservim/nerdtree'
-Plug 'ryanoasis/vim-devicons'
 " fancy
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -82,6 +81,8 @@ let NERDTreeShowHidden=1
 
 " emmet	
 let g:user_emmet_leader_key=','
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 
 " airline
 let g:airline_theme='minimalist'
