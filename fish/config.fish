@@ -18,10 +18,13 @@ function dl --description "download file like bitTorrent,..."
 end
 
 function run --description "run test for C, Python"
-	if ls $argv | grep ".c"
-		gcc $argv
+	if ls $argv | grep ".cpp"
+		g++ $argv
 		./a.out
 		trash a.out
+	else if ls $argv | grep ".c"
+		gcc $argv
+		./a.out
 	else if ls $argv | grep ".py"
 		python3 $argv
 	end
@@ -224,7 +227,6 @@ function browser_daily
 	browser_linkedin
 	browser_mail0
 	browser_stu
-	browser_youtube_subsriptions
 	browser_fb
 end
 
