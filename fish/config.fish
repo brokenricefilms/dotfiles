@@ -98,9 +98,9 @@ alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 75'
 alias qa='tmux kill-session -a ; tmux ls'
 
 # cd
-alias ..='cd .. ; l'
-alias ...='cd .. ; cd .. ; cd .. ; l'
-alias ....='cd .. ; cd .. ; cd .. ; cd .. ; l'
+alias ..='cd .. ; clear ; l'
+alias ...='cd .. ; cd .. ; cd .. ; clear ; l'
+alias ....='cd .. ; cd .. ; cd .. ; cd .. ; clear ; l'
 alias doc='c ~/Documents'
 alias dow='c ~/Downloads'
 alias vi='c ~/Videos'
@@ -223,6 +223,7 @@ alias browser_mail1='browser "https://mail.google.com/mail/u/1/#all"'
 alias browser_mail2='browser "https://mail.google.com/mail/u/2/#all"'
 alias browser_mail='browser_mail0 ; browser_mail1 ; browser_mail2'
 alias browser_linkedin='browser "https://www.linkedin.com/feed/"'
+
 function browser_daily
 	browser_linkedin
 	browser_mail0
@@ -283,4 +284,25 @@ function sherlockauto --description "open all link"
 	end < openlink.txt
 	trash ~/Documents/data/sherlock/*
 	cd -
+end
+
+function blocksite
+	sudo echo "
+	127.0.0.1	localhost
+	127.0.1.1	rem
+
+	# The following lines are desirable for IPv6 capable hosts
+	::1     ip6-localhost ip6-loopback
+	fe00::0 ip6-localnet
+	ff00::0 ip6-mcastprefix
+	ff02::1 ip6-allnodes
+	ff02::2 ip6-allrouters
+
+	0.0.0.0 anime47.com
+	0.0.0.0 www.facebook.com
+	0.0.0.0 www.youtube.com
+	0.0.0.0 www.linkedin.com
+	0.0.0.0 www.phimmoi.net
+	0.0.0.0 www.phimhan.net
+	" > /etc/hosts
 end

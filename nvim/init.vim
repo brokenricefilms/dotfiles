@@ -12,7 +12,6 @@ Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
-Plug 'robertmeta/nofrils'
 Plug 'ap/vim-css-color'	
 Plug 'prettier/vim-prettier', {	
   \ 'do': 'yarn install',	
@@ -37,17 +36,8 @@ set nowritebackup
 :imap jj <Esc>
 
 " gruvbox
-" colorscheme gruvbox
-" highlight Normal ctermbg=None
-
-" nofrils
-colorscheme nofrils-dark
-" colo nofrils-light
-" colo nofrils-sepia
-" colo nofrils-acme
-let g:nofrils_strbackgrounds=1
-let g:nofrils_heavycomments=1
-" let g:nofrils_heavylinenumbers=1
+colorscheme gruvbox
+highlight Normal ctermbg=None
 
 " highligt cursorline
 set cursorline
