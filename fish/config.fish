@@ -156,6 +156,7 @@ alias ghlinux_setup='cd ~/git/linux_setup ; ok ; cd -'
 alias ghvimium_theme='cd ~/git/vimium_theme ; ok ; cd -'
 alias ghFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; ok ; cd -'
 alias ghok='cd ~/git/ok ; ok ; cd -'
+alias ghcppPrimer='cd ~/git/cppPrimer ; ok ; cd -'
 
 function gha --description "git push all project"
 	cowsay "git push lazyscript"
@@ -176,6 +177,9 @@ function gha --description "git push all project"
 	cowsay "git push ok" 
 	ghok
 
+	cowsay "git push cppPrimer"
+	ghcppPrimer
+
 	cowsay "D O N E"
 end
 
@@ -186,6 +190,8 @@ alias gllinux_setup='cd ~/git/linux_setup ; pull ; cd -'
 alias glvimium_theme='cd ~/git/vimium_theme ; pull ; cd -'
 alias glFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; pull ; cd -'
 alias glok='cd ~/git/ok ; pull ; cd -'
+alias glcppPrimer='cd ~/git/cppPrimer ; pull ; cd -'
+
 
 function gla --description "git pull all project"
 	cowsay "git pull sherlock"
@@ -205,6 +211,9 @@ function gla --description "git pull all project"
 
 	cowsay "git pull FreeCodeCampProject" 
 	glFreeCodeCampProject 
+
+	cowsay "git pull cppPrimer"
+	glcppPrimer
 
 	cowsay "git pull ok" 
 	glok
@@ -284,25 +293,4 @@ function sherlockauto --description "open all link"
 	end < openlink.txt
 	trash ~/Documents/data/sherlock/*
 	cd -
-end
-
-function blocksite
-	sudo echo "
-	127.0.0.1	localhost
-	127.0.1.1	rem
-
-	# The following lines are desirable for IPv6 capable hosts
-	::1     ip6-localhost ip6-loopback
-	fe00::0 ip6-localnet
-	ff00::0 ip6-mcastprefix
-	ff02::1 ip6-allnodes
-	ff02::2 ip6-allrouters
-
-	0.0.0.0 anime47.com
-	0.0.0.0 www.facebook.com
-	0.0.0.0 www.youtube.com
-	0.0.0.0 www.linkedin.com
-	0.0.0.0 www.phimmoi.net
-	0.0.0.0 www.phimhan.net
-	" > /etc/hosts
 end
