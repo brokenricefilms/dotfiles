@@ -83,15 +83,6 @@ function rem
 	tldr --update
 end
 
-function cleanning
-	sudo apt-get autoremove -y
-	sudo apt-get autoclean
-	sudo apt-get clean
-	t ~/.cache/thumbnails/*
-	cowsay "trash empty"
-	trash-empty
-end
-
 # tmux
 # alias ide='tmux split-window -v -p 30 ; tmux split-window -h -p 66 ; tmux split-window -h -p 50'
 alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 75'
