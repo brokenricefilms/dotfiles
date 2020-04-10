@@ -50,7 +50,7 @@ end
 
 set -g -x fish_greeting Yo!
 fish_vi_key_bindings
-set -U EDITOR nvim
+set -U EDITOR "nvim"
 
 # lazy code
 alias fishr='source ~/.config/fish/config.fish'
