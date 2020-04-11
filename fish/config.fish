@@ -147,7 +147,7 @@ end
 
 alias ghlazyscript='cd ~/git/lazyscript ; ok ; cd -'
 alias ghlinux_setup='cd ~/git/linux_setup ; ok ; cd -'
-alias ghvimium_theme='cd ~/git/vimium_theme ; ok ; cd -'
+alias ghvimium_theme='cd ~/git/vimium-dark-theme ; ok ; cd -'
 alias ghFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; ok ; cd -'
 alias ghok='cd ~/git/ok ; ok ; cd -'
 alias ghcppPrimer='cd ~/git/cppPrimer ; ok ; cd -'
@@ -162,8 +162,8 @@ function gha --description "git push all project"
 	cowsay "git push linux_setup" 
 	ghlinux_setup
 
-	cowsay "git push vimium_theme" 
-	ghvimium_theme
+	cowsay "git push vimium-dark-theme" 
+	ghvimium-dark-theme
 
 	cowsay "git push FreeCodeCampProject" 
 	ghFreeCodeCampProject
@@ -181,7 +181,7 @@ alias glsherlock='cd ~/tools/hacking/sherlock/ ; pull ; cd -'
 alias gldotfiles='cd ~/git/dotfiles ; pull ; cd -'
 alias gllazyscript='cd ~/git/lazyscript ; pull ; cd -'
 alias gllinux_setup='cd ~/git/linux_setup ; pull ; cd -'
-alias glvimium_theme='cd ~/git/vimium_theme ; pull ; cd -'
+alias glvimium-dark-theme='cd ~/git/vimium-dark-theme ; pull ; cd -'
 alias glFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; pull ; cd -'
 alias glok='cd ~/git/ok ; pull ; cd -'
 alias glcppPrimer='cd ~/git/cppPrimer ; pull ; cd -'
@@ -200,8 +200,8 @@ function gla --description "git pull all project"
 	cowsay "git pull linux_setup" 
 	gllinux_setup 
 
-	cowsay "git pull vimium_theme" 
-	glvimium_theme 
+	cowsay "git pull vimium-dark-theme" 
+	glvimium-dark-theme
 
 	cowsay "git pull FreeCodeCampProject" 
 	glFreeCodeCampProject 
