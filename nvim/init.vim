@@ -12,6 +12,7 @@ Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'ap/vim-css-color'	
 Plug 'prettier/vim-prettier', {	
   \ 'do': 'yarn install',	
@@ -23,7 +24,6 @@ autocmd BufRead,BufNewFile *.htm,*.html,*.css setlocal tabstop=2 shiftwidth=2 so
 set ts=4 sw=4
 set number relativenumber
 set encoding=UTF-8
-set background=dark
 syntax enable
 set clipboard=unnamedplus
 set mouse=a
@@ -36,13 +36,19 @@ set nowritebackup
 :imap jj <Esc>
 
 " gruvbox
-colorscheme gruvbox
-highlight Normal ctermbg=None
+" colorscheme gruvbox
+" highlight Normal ctermbg=None
+" set background=light
+
+" papercolor-theme
+set background=light
+colorscheme PaperColor
+set t_Co=256
 
 " highligt cursorline
 set cursorline
 highlight CursorLine term=none cterm=bold
-highlight CursorLine guibg=#303000 ctermbg=234
+highlight CursorLine guibg=253 ctermbg=253
 
 " tab
 nmap tt :tabnew<Return>
