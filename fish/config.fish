@@ -51,10 +51,7 @@ end
 set -g -x fish_greeting Yo!
 fish_vi_key_bindings
 set -U EDITOR nvim
-set -x VISUAL nvim
-set -x PAGER less
-set -x LESS -R
-            
+
 # lazy code
 alias fishr='source ~/.config/fish/config.fish'
 alias g='grep'
@@ -74,8 +71,8 @@ alias fd='fdfind'
 alias f='vifm'
 alias o='open'
 alias 777='chmod -R 777'
-# update all
-function rem
+
+function rem --description "update"
 	sudo apt-get update
 	sudo apt-get upgrade -y
 	sudo apt-get autoremove -y

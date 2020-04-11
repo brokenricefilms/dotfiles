@@ -13,7 +13,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'ap/vim-css-color'	
+Plug 'ap/vim-css-color'
 Plug 'prettier/vim-prettier', {	
   \ 'do': 'yarn install',	
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
@@ -32,6 +32,21 @@ set autoread
 set noswapfile
 set nobackup
 set nowritebackup
+set smartindent
+
+" Display different types of white spaces.
+set list
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
+
+" Map the <Space> key to toggle a selected fold opened/closed.
+nnoremap <silent> <Space><Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
+
+" augroup remember_folds
+  " autocmd!
+  " au BufWinLeave ?* mkview 1
+  " au BufWinEnter ?* silent! loadview 1
+" augroup END
 
 :imap jj <Esc>
 
@@ -52,9 +67,6 @@ highlight CursorLine guibg=253 ctermbg=253
 
 " tab
 nmap tt :tabnew<Return>
-nmap <space>t :tabnext<Return>
-
-" Switch tab
 nmap <S-Tab> :tabprev<Return>
 
 " Split window
