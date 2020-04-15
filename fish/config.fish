@@ -20,7 +20,7 @@ function dl --description "download file like bitTorrent,..."
 	cd -
 end
 
-function run --description "run test for C, Python"
+function run --description "run test for c/cpp, Python"
 	if ls $argv | grep ".cpp"
 		g++ $argv
 		./a.out
