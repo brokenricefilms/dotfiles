@@ -150,7 +150,6 @@ alias ghlinux_setup='cd ~/git/linux_setup ; ok ; cd -'
 alias ghvimium_dark_theme='cd ~/git/vimium_dark_theme ; ok ; cd -'
 alias ghFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; ok ; cd -'
 alias ghok='cd ~/git/ok ; ok ; cd -'
-alias ghcppPrimer='cd ~/git/cppPrimer ; ok ; cd -'
 
 function gha --description "git push all project"
 	cowsay "git push lazyscript"
@@ -171,9 +170,6 @@ function gha --description "git push all project"
 	cowsay "git push ok" 
 	ghok
 
-	cowsay "git push cppPrimer"
-	ghcppPrimer
-
 	cowsay "D O N E"
 end
 
@@ -184,8 +180,6 @@ alias gllinux_setup='cd ~/git/linux_setup ; pull ; cd -'
 alias glvimium_dark_theme='cd ~/git/vimium_dark_theme ; pull ; cd -'
 alias glFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; pull ; cd -'
 alias glok='cd ~/git/ok ; pull ; cd -'
-alias glcppPrimer='cd ~/git/cppPrimer ; pull ; cd -'
-
 
 function gla --description "git pull all project"
 	cowsay "git pull sherlock"
@@ -205,9 +199,6 @@ function gla --description "git pull all project"
 
 	cowsay "git pull FreeCodeCampProject" 
 	glFreeCodeCampProject 
-
-	cowsay "git pull cppPrimer"
-	glcppPrimer
 
 	cowsay "git pull ok" 
 	glok
