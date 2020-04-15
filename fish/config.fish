@@ -1,6 +1,9 @@
 #!/usr/bin/fish
 
 # some fish function
+function 256color
+	bash ~/.config/fish/functions/print256colours.sh
+end
 
 function sudo --description "Replacement for Bash 'sudo !!' command to run last command using sudo."
 	if test "$argv" = !!
@@ -134,7 +137,7 @@ function ghdotfiles
 	cp ~/.tmux.conf ~/git/dotfiles/tmux 
 	cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim 
 	cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ 
-	cp ~/.config/fish/functions/fish_prompt.fish ~/git/dotfiles/fish/ 
+	cp ~/.config/fish/functions/* ~/git/dotfiles/fish/ 
 	cp ~/.config/vifm/vifmrc ~/git/dotfiles/vifm
 	cp ~/.config/vifm/colors/* ~/git/dotfiles/vifm/colors
 	cp ~/.ssh/config ~/git/dotfiles/ssh/ 
