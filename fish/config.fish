@@ -264,20 +264,5 @@ function !m
 	brave-browser --new-window "https://medium.com/search?q=$argv"
 end
 
-
 # mode
 alias hi='browser_daily ; gla ; gha ; rem'
-
-# hacking
-alias sherlock='python3 ~/tools/hacking/sherlock/sherlock.py' 
-function sherlockauto --description "open all link"
-	mkdir -p ~/Documents/data/sherlock
-	cd ~/Documents/data/sherlock
-	sherlock $argv
-	cat *.txt > openlink.txt
-	while read link
-		brave-browser $link
-	end < openlink.txt
-	trash ~/Documents/data/sherlock/*
-	cd -
-end
