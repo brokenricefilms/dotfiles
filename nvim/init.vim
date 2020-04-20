@@ -36,6 +36,8 @@ set nowritebackup
 set autoindent
 set smartindent
 
+nmap bn :bNext<Return>
+
 " Display different types of white spaces.
 set list
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
