@@ -11,9 +11,9 @@ Plug 'preservim/nerdtree'
 " fancy
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
+" Plug 'ap/vim-css-color'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'ap/vim-css-color'
 Plug 'prettier/vim-prettier', {	
   \ 'do': 'yarn install',	
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
