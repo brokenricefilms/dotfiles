@@ -20,8 +20,9 @@ Plug 'prettier/vim-prettier', {
 call plug#end()
 
 " 2 space when edit html file
-autocmd BufRead,BufNewFile *.htm,*.html,*.css setlocal tabstop=2 shiftwidth=2 softtabstop=2
-set ts=4 sw=4
+" autocmd BufRead,BufNewFile *.htm,*.html,*.css setlocal tabstop=2 shiftwidth=2 softtabstop=2
+" set ts=4 sw=4
+set ts=2 sw=2
 set number relativenumber
 set encoding=UTF-8
 syntax enable
@@ -32,6 +33,7 @@ set autoread
 set noswapfile
 set nobackup
 set nowritebackup
+set autoindent
 set smartindent
 
 " Display different types of white spaces.
