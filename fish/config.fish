@@ -65,7 +65,6 @@ alias uins='sudo apt-get remove -y'
 alias cl='clear'
 alias e='exit'
 alias :q='exit'
-alias v='nvim'
 alias l='clear ; ls -lah'
 alias p='ipython3'
 alias rbn='sudo reboot now'
@@ -73,9 +72,11 @@ alias sdn='sudo shutdown now'
 alias mkd='mkdir -pv'
 alias ka='killall'
 alias fd='fdfind'
-alias f='vifm'
+alias fi='vifm'
+alias v='nvim'
 alias o='open'
 alias 777='chmod -R 777'
+alias cf='cd ~/.config/ ; nvim -o (fzf)'
 
 function rem --description "update"
 	sudo apt-get update
@@ -133,6 +134,14 @@ alias pull="git pull"
 alias clone='git clone'
 alias cm='git commit -m'
 alias ok='yo ; push'
+
+function fco -d "Fuzzy-find and checkout a branch"
+  git branch --all | grep -v HEAD | string trim | fzf | read -l result; and git checkout "$result"
+end
+
+function fcoc -d "Fuzzy-find and checkout a commit"
+  git log --pretty=oneline --abbrev-commit --reverse | fzf --tac +s -e | awk '{print $1;}' | read -l result; and git checkout "$result"
+end
 
 function ghdotfiles
 	cp ~/.selected_editor ~/git/dotfiles 
