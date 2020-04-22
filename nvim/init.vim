@@ -1,14 +1,25 @@
 call plug#begin()
+Plug 'kien/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
-Plug 'NLKNguyen/papercolor-theme'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'mattn/emmet-vim'	
+Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+" fancy
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'prettier/vim-prettier', {	
+  \ 'do': 'yarn install',	
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 call plug#end()
 
+" 2 space when edit html file
+" autocmd BufRead,BufNewFile *.htm,*.html,*.css setlocal tabstop=2 shiftwidth=2 softtabstop=2
+" set ts=4 sw=4
 set ts=2 sw=2
 set number relativenumber
 set encoding=UTF-8
@@ -27,6 +38,7 @@ set smartindent
 set list
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
+" reMap Esc
 :imap jj <Esc>
 
 " papercolor-theme
@@ -43,15 +55,18 @@ highlight CursorLine guibg=253 ctermbg=253
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
 
-" Move window
-map sh <C-w>h
-map sk <C-w>k
-map sj <C-w>j
-map sl <C-w>l
-
 " easymotion
 nmap <silent> ;; <Plug>(easymotion-overwin-f)
 nmap <silent> ;l <Plug>(easymotion-overwin-line)
+
+" nerd tree	
+map <C-n> :NERDTreeToggle<CR>	
+let NERDTreeShowHidden=1	
+
+" emmet	
+let g:user_emmet_leader_key=','
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 
 " nerdcommenter
 filetype plugin indent on
@@ -78,3 +93,38 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
+
+" coc vim
+let g:coc_global_extensions = [
+			\ "coc-css",
+            \ "coc-html",
+			\ "coc-snippets",
+            \ "coc-json",
+            \ "coc-python",
+            \ "coc-tsserver",]
+
+" if hidden is not set, TextEdit might fail.
+set hidden
+
+" You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
+
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+
+" always show signcolumns
+set signcolumn=yes
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" prettier
+nmap <silent> <space>py <Plug>(Prettier)	
+" auto prettier when saved	
+let g:prettier#autoformat = 0	
+autocmd BufWritePre *.md,*.js,*.html,*.json,*.css,*.scss,*.less,*.graphql Prettier
