@@ -12,6 +12,7 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 " fancy
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'itchyny/lightline.vim'
 Plug 'prettier/vim-prettier', {	
   \ 'do': 'yarn install',	
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
@@ -34,12 +35,20 @@ set nowritebackup
 set autoindent
 set smartindent
 
-" Display different types of white spaces.
-set list
-set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
-
 " reMap Esc
 :imap jj <Esc>
+
+" lightline
+let g:lightline = {
+      \ 'colorscheme': 'PaperColor',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
 
 " papercolor-theme
 set background=light
