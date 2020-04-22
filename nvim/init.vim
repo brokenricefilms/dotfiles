@@ -4,59 +4,37 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'mattn/emmet-vim'	
-Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 " fancy
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'itchyny/lightline.vim'
-Plug 'prettier/vim-prettier', {	
-  \ 'do': 'yarn install',	
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 call plug#end()
 
-" 2 space when edit html file
-" autocmd BufRead,BufNewFile *.htm,*.html,*.css setlocal tabstop=2 shiftwidth=2 softtabstop=2
-" set ts=4 sw=4
-set ts=2 sw=2
-set number relativenumber
 set encoding=UTF-8
-syntax enable
-set clipboard=unnamedplus
+set ts=2 sw=2
 set mouse=a
+set clipboard=unnamedplus
+
+set number relativenumber
+syntax enable
+set statusline=%F%m%r%h%w
+
 set autowrite
 set autoread
 set noswapfile
 set nobackup
 set nowritebackup
+
 set autoindent
 set smartindent
+
+" reMap Esc
+:imap jj <Esc>
 
 " Display different types of white spaces.	
 set list	
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.	
 
-" reMap Esc
-:imap jj <Esc>
-
-" lightline
-let g:lightline = {
-      \ 'colorscheme': 'PaperColor',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
-      \ }
-
-" papercolor-theme
-set background=light
-colorscheme PaperColor
-set t_Co=256
 
 " highligt cursorline
 set cursorline
@@ -67,18 +45,14 @@ highlight CursorLine guibg=253 ctermbg=253
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
 
+" papercolor-theme
+set background=light
+colorscheme PaperColor
+set t_Co=256
+
 " easymotion
 nmap <silent> ;; <Plug>(easymotion-overwin-f)
 nmap <silent> ;l <Plug>(easymotion-overwin-line)
-
-" nerd tree	
-map <C-n> :NERDTreeToggle<CR>	
-let NERDTreeShowHidden=1	
-
-" emmet	
-let g:user_emmet_leader_key=','
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
 
 " nerdcommenter
 filetype plugin indent on
@@ -89,8 +63,6 @@ map mm <Plug>NERDCommenterToggle
 noremap t :Files<CR>
 noremap b :Buffers<CR>
 
-" fzf.vim
-" Customize fzf colors to match your color scheme
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
@@ -105,30 +77,3 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
-
-" coc vim
-let g:coc_global_extensions = [
-			\ "coc-css",
-            \ "coc-html",
-			\ "coc-snippets",
-            \ "coc-json",
-            \ "coc-python",
-            \ "coc-tsserver",]
-
-" if hidden is not set, TextEdit might fail.
-set hidden
-
-" You will have bad experience for diagnostic messages when it's default 4000.
-set updatetime=300
-
-" don't give |ins-completion-menu| messages.
-set shortmess+=c
-
-" always show signcolumns
-set signcolumn=yes
-
-" prettier
-nmap <silent> <space>py <Plug>(Prettier)	
-" auto prettier when saved	
-let g:prettier#autoformat = 0	
-autocmd BufWritePre *.md,*.js,*.html,*.json,*.css,*.scss,*.less,*.graphql Prettier
