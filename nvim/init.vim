@@ -1,5 +1,4 @@
 call plug#begin()
-Plug 'kien/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
@@ -34,6 +33,10 @@ set nobackup
 set nowritebackup
 set autoindent
 set smartindent
+
+" Display different types of white spaces.	
+set list	
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:.	
 
 " reMap Esc
 :imap jj <Esc>
@@ -123,14 +126,6 @@ set shortmess+=c
 
 " always show signcolumns
 set signcolumn=yes
-
-" Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " prettier
 nmap <silent> <space>py <Plug>(Prettier)	
