@@ -60,8 +60,8 @@ source "$HOME/anaconda3/etc/fish/conf.d/conda.fish"
 alias fishr='source ~/.config/fish/config.fish'
 alias g='grep'
 alias h='htop'
-alias ins='sudo apt-get install -y'
-alias uins='sudo apt-get remove -y'
+alias ins='sudo apt install -y'
+alias uins='sudo apt remove -y'
 alias cl='clear'
 alias e='exit'
 alias :q='exit'
@@ -79,10 +79,10 @@ alias 777='chmod -R 777'
 alias cf='cd ~/.config/ ; nvim -o (fzf)'
 
 function rem --description "update"
-	sudo apt-get update
-	sudo apt-get upgrade -y
-	sudo apt-get autoremove -y
-	sudo apt-get autoclean
+	sudo apt update
+	sudo apt upgrade -y
+	sudo apt autoremove -y
+	sudo apt autoclean
 	sudo snap refresh
 	sudo npm install npm -g
 	nvim -c "PlugUpdate | qa"
