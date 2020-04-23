@@ -87,7 +87,6 @@ function rem --description "update"
 	sudo npm install npm -g
 	nvim -c "PlugUpdate | qa"
 	tldr --update
-	conda update -n base -c defaults conda
 end
 
 # tmux
