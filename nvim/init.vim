@@ -10,6 +10,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
+filetype plugin indent on
 set encoding=UTF-8
 set ts=2 sw=2
 set mouse=a
@@ -17,7 +18,8 @@ set clipboard=unnamedplus
 
 set number relativenumber
 syntax enable
-set statusline=%F%m%r%h%w
+" set statusline=%F%m%r%h%w
+set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
 
 set autowrite
 set autoread
@@ -28,7 +30,7 @@ set nowritebackup
 set autoindent
 set smartindent
 
-" reMap Esc
+" remap Esc
 :imap jj <Esc>
 
 " Display different types of white spaces.	
@@ -36,7 +38,7 @@ set list
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.	
 
 
-" highligt cursorline
+" highlight cursorline
 set cursorline
 highlight CursorLine term=none cterm=bold
 highlight CursorLine guibg=253 ctermbg=253
@@ -55,7 +57,6 @@ nmap <silent> ;; <Plug>(easymotion-overwin-f)
 nmap <silent> ;l <Plug>(easymotion-overwin-line)
 
 " nerdcommenter
-filetype plugin indent on
 let g:NERDSpaceDelims = 1
 map mm <Plug>NERDCommenterToggle
 
