@@ -54,7 +54,7 @@ end
 set -g -x fish_greeting Yo!
 fish_vi_key_bindings
 set -U EDITOR nvim
-source "$HOME/anaconda3/etc/fish/conf.d/conda.fish"
+# source "$HOME/anaconda3/etc/fish/conf.d/conda.fish"
 
 # lazy code
 alias fishr='source ~/.config/fish/config.fish'

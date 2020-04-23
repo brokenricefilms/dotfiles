@@ -10,6 +10,7 @@ echo "
                 ||     ||
 "
 
+cd
 git clone https://github.com/nicholaspham2311/dotfiles.git
 cp ~/dotfiles/nvim/init.vim ~/.config/nvim/
 cp ~/dotfiles/tmux/.tmux.conf ~/
