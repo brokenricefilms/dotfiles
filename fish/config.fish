@@ -312,6 +312,5 @@ alias hi='browser_daily ; gla ; gha ; rem'
 function dataLab --description "setup for data research"
 	cd ~/git/dataLab/
 	tmux split-window -h -p 50
-	conda activate myenv
-	jupyter notebook
+	jupyter-notebook
 end

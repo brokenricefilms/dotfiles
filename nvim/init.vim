@@ -12,9 +12,12 @@ call plug#end()
 
 filetype plugin indent on
 set encoding=UTF-8
-set ts=2 sw=2
 set mouse=a
 set clipboard=unnamedplus
+
+set softtabstop=2 " Indent by 2 spaces when hitting tab
+set shiftwidth=4 " Indent by 4 spaces when auto-indenting
+set tabstop=4
 
 set number relativenumber
 syntax enable
@@ -93,10 +96,9 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
-
 """ snippets
-inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
-noremap <Space><Tab> /<++><Enter>"_c4l
+inoremap <C-Space> <Esc>/<++><Enter>"_c4l
+noremap <C-Space> /<++><Enter>"_c4l
 
 autocmd FileType c,cpp imap ,i /**<Enter><Space><Space><Space><Space>Author:<Space>Nicholas<Space>Pham<Enter>Created:<Space><C-R>=strftime("%c")<CR><Enter><Esc>xxi**/<Enter>
 autocmd FileType python,sh imap ,i #<Enter>#<Space><Space><Space><Space>Author:<Space>Nicholas<Space>Pham<Enter>#<Space><Space><Space><Space>Created:<Space><C-R>=strftime("%c")<CR><Enter>#<Enter>
@@ -104,10 +106,10 @@ autocmd FileType python,sh imap ,i #<Enter>#<Space><Space><Space><Space>Author:<
 " python
 autocmd FileType python imap ,! !/usr/bin/env<Space>python3<Enter>
 autocmd FileType python imap ,!! !/usr/bin/env<Space>python3<Enter><Enter>import<Space>pandas<Space>as<Space>pd<Enter>from<Space>matplotlib<Space>import<Space>pyplot<Space>as<Space>plt<Enter><Enter>
-autocmd FileType python imap ,c <++><Space>=<Space>pd.read_csv("<++>")<Space><Tab>
+autocmd FileType python imap ,c <++><Space>=<Space>pd.read_csv("<++>")<C-Space>
 
 " cpp
-autocmd FileType cpp imap ,# #include<Space><iostream><Enter>using<Space>namespace<Space>std;<Enter><Enter>#define<Space>ll<Space>long<Space>long<Enter>#define<Space>ar<Space>array<Enter><Enter>int<Space>main()<Space>{<Enter>return<Space>0;<Esc>O
+autocmd FileType cpp imap ,# #include<Space><iostream><Enter>using<Space>namespace<Space>std;<Enter><Enter>int<Space>main()<Space>{<Enter>return<Space>0;<Esc>O
 
 " bash
 autocmd FileType sh imap ,! !/usr/bin/env<Space>bash<Enter>
