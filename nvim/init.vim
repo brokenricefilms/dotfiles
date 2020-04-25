@@ -104,15 +104,40 @@ autocmd FileType c,cpp imap ,i /**<Enter><Space><Space><Space><Space>Author:<Spa
 autocmd FileType python,sh imap ,i #<Enter>#<Space><Space><Space><Space>Author:<Space>Nicholas<Space>Pham<Enter>#<Space><Space><Space><Space>Created:<Space><C-R>=strftime("%c")<CR><Enter>#<Enter>
 
 " python
-autocmd FileType python imap ,! #!/usr/bin/env<Space>python3<Enter>
-autocmd FileType python imap ,!! #!/usr/bin/env<Space>python3<Enter><Enter>import<Space>pandas<Space>as<Space>pd<Enter>from<Space>matplotlib<Space>import<Space>pyplot<Space>as<Space>plt<Enter><Enter>
+autocmd FileType python imap ,! import<Space>pandas<Space>as<Space>pd<Enter>from<Space>matplotlib<Space>import<Space>pyplot<Space>as<Space>plt<Enter><Enter>
 autocmd FileType python imap ,c <++><Space>=<Space>pd.read_csv("<++>")<C-Space>
 
-" cpp
-autocmd FileType cpp imap ,# #include<Space><iostream><Enter>using<Space>namespace<Space>std;<Enter><Enter>int<Space>main()<Space>{<Enter>return<Space>0;<Esc>O
+" vim
+autocmd FileType vim imap ,f function! ()<Enter>endfunction<Esc>ki
+autocmd FileType vim imap ,s autocmd FileType  imap ,<Esc>6hi
 
-" bash
-autocmd FileType sh imap ,! #!/usr/bin/env<Space>bash<Enter>
+" auto insert when open file
+autocmd BufNewFile *.sh  :call CheckShFile()
+autocmd BufNewFile *.fish  :call CheckFishFile()
+autocmd BufNewFile *.py :call CheckPyFile()
+autocmd BufNewFile *.cpp :call CheckCppFile()
 
-" fish
-autocmd FileType sh imap ,! #!/usr/bin/env<Space>fish<Enter>
+function! CheckShFile()
+	normal!i#!/usr/bin/env bash
+	normal!o
+endfunction
+
+function! CheckPyFile()
+	normal!i#!/usr/bin/env python3
+	normal!o
+endfunction
+
+function! CheckCppFile()
+	normal!i#include <iostream>
+	normal!ousing namespace std;
+	normal!o
+	normal!oint main() {
+	normal!o<++>;
+	normal!oreturn 0;
+	normal!o}
+endfunction
+
+function! CheckFishFile()
+	normal!i#!/usr/bin/env fish
+	normal!o
+endfunction
