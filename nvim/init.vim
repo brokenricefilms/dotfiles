@@ -6,6 +6,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'mattn/emmet-vim'		
+Plug 'preservim/nerdtree'
 " fancy
 Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
@@ -15,9 +18,8 @@ set encoding=UTF-8
 set mouse=a
 set clipboard=unnamedplus
 
-set softtabstop=2 " Indent by 2 spaces when hitting tab
-set shiftwidth=4 " Indent by 4 spaces when auto-indenting
-set tabstop=4
+set tabstop=2
+set shiftwidth=2
 
 set number relativenumber
 syntax enable
@@ -39,7 +41,6 @@ set smartindent
 " Display different types of white spaces.	
 set list	
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.	
-
 
 " highlight cursorline
 set cursorline
@@ -73,10 +74,7 @@ nmap <leader><tab> <plug>(fzf-maps-n)
 " omap <leader><tab> <plug>(fzf-maps-o)
 
 " Insert mode completion
-imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-f> <plug>(fzf-complete-path)
-imap <c-x><c-j> <plug>(fzf-complete-file-ag)
-imap <c-x><c-l> <plug>(fzf-complete-line)
 
 " Advanced customization using Vim function
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
@@ -96,20 +94,35 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
-""" snippets
-inoremap <C-Space> <Esc>/<++><Enter>"_c4l
-noremap <C-Space> /<++><Enter>"_c4l
+" nerd tree		
+map <C-n> :NERDTreeToggle<CR>		
+let NERDTreeShowHidden=1		
 
-autocmd FileType c,cpp imap ,i /**<Enter><Space><Space><Space><Space>Author:<Space>Nicholas<Space>Pham<Enter>Created:<Space><C-R>=strftime("%c")<CR><Enter><Esc>xxi**/<Enter>
-autocmd FileType python,sh imap ,i #<Enter>#<Space><Space><Space><Space>Author:<Space>Nicholas<Space>Pham<Enter>#<Space><Space><Space><Space>Created:<Space><C-R>=strftime("%c")<CR><Enter>#<Enter>
+" emmet		
+let g:user_emmet_leader_key=','	
+let g:user_emmet_install_global = 0	
+autocmd FileType html,css EmmetInstall
 
-" python
-autocmd FileType python imap ,! import<Space>pandas<Space>as<Space>pd<Enter>from<Space>matplotlib<Space>import<Space>pyplot<Space>as<Space>plt<Enter><Enter>
-autocmd FileType python imap ,c <++><Space>=<Space>pd.read_csv("<++>")<C-Space>
+" coc vim	
+let g:coc_global_extensions = [	
+						\ "coc-css",	
+						\ "coc-html",	
+						\ "coc-snippets",	
+						\ "coc-json",	
+						\ "coc-python",	
+						\ "coc-tsserver",]	
 
-" vim
-autocmd FileType vim imap ,f function! ()<Enter>endfunction<Esc>ki
-autocmd FileType vim imap ,s autocmd FileType  imap ,<Esc>6hi
+" if hidden is not set, TextEdit might fail.	
+set hidden	
+
+" You will have bad experience for diagnostic messages when it's default 4000.	
+set updatetime=300	
+
+" don't give |ins-completion-menu| messages.	
+set shortmess+=c	
+
+" always show signcolumns	
+set signcolumn=yes	
 
 " auto insert when open file
 autocmd BufNewFile *.sh  :call CheckShFile()
@@ -132,7 +145,6 @@ function! CheckCppFile()
 	normal!ousing namespace std;
 	normal!o
 	normal!oint main() {
-	normal!o<++>;
 	normal!oreturn 0;
 	normal!o}
 endfunction
