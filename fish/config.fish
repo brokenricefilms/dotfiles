@@ -83,7 +83,7 @@ function rem --description "update"
 	sudo apt upgrade -y
 	sudo apt autoremove -y
 	sudo apt autoclean
-	sudo snap refresh
+	# sudo snap refresh
 	sudo npm install npm -g
 	nvim -c "PlugUpdate | qa"
 	tldr --update
