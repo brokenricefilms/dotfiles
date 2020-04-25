@@ -104,12 +104,15 @@ autocmd FileType c,cpp imap ,i /**<Enter><Space><Space><Space><Space>Author:<Spa
 autocmd FileType python,sh imap ,i #<Enter>#<Space><Space><Space><Space>Author:<Space>Nicholas<Space>Pham<Enter>#<Space><Space><Space><Space>Created:<Space><C-R>=strftime("%c")<CR><Enter>#<Enter>
 
 " python
-autocmd FileType python imap ,! !/usr/bin/env<Space>python3<Enter>
-autocmd FileType python imap ,!! !/usr/bin/env<Space>python3<Enter><Enter>import<Space>pandas<Space>as<Space>pd<Enter>from<Space>matplotlib<Space>import<Space>pyplot<Space>as<Space>plt<Enter><Enter>
+autocmd FileType python imap ,! #!/usr/bin/env<Space>python3<Enter>
+autocmd FileType python imap ,!! #!/usr/bin/env<Space>python3<Enter><Enter>import<Space>pandas<Space>as<Space>pd<Enter>from<Space>matplotlib<Space>import<Space>pyplot<Space>as<Space>plt<Enter><Enter>
 autocmd FileType python imap ,c <++><Space>=<Space>pd.read_csv("<++>")<C-Space>
 
 " cpp
 autocmd FileType cpp imap ,# #include<Space><iostream><Enter>using<Space>namespace<Space>std;<Enter><Enter>int<Space>main()<Space>{<Enter>return<Space>0;<Esc>O
 
 " bash
-autocmd FileType sh imap ,! !/usr/bin/env<Space>bash<Enter>
+autocmd FileType sh imap ,! #!/usr/bin/env<Space>bash<Enter>
+
+" fish
+autocmd FileType sh imap ,! #!/usr/bin/env<Space>fish<Enter>
