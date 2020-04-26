@@ -126,14 +126,7 @@ alias fire='mpv ~/Music/fire.mp3'
 alias t='trash'
 alias tdl='trash ~/Downloads/*'
 
-# git
-alias yo='git add -A ; git commit -m (curl -s whatthecommit.com/index.txt)'
-alias push="git push"
-alias pull="git pull" 
-alias clone='git clone'
-alias cm='git commit -m'
-alias ok='yo ; push'
-
+# fzf
 function fc -d "Fuzzy change directory"
 	if set -q argv[1]
 	set searchdir $argv[1]
@@ -163,6 +156,15 @@ end
 function fcoc -d "Fuzzy-find and checkout a commit"
   git log --pretty=oneline --abbrev-commit --reverse | fzf --tac +s -e | awk '{print $1;}' | read -l result; and git checkout "$result"
 end
+
+# git
+alias yo='git add -A ; git commit -m (curl -s whatthecommit.com/index.txt)'
+alias push="git push"
+alias pull="git pull" 
+alias clone='git clone'
+alias cm='git commit -m'
+alias prettier='prettier --write .'
+alias ok='prettier ; yo ; push '
 
 function ghdotfiles
 	cp ~/.selected_editor ~/git/dotfiles 

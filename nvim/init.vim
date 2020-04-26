@@ -124,6 +124,19 @@ set shortmess+=c
 " always show signcolumns	
 set signcolumn=yes	
 
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<tab>'
+
 " auto insert when open file
 autocmd BufNewFile *.sh  :call CheckShFile()
 autocmd BufNewFile *.fish  :call CheckFishFile()
