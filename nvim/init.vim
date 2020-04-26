@@ -166,3 +166,4 @@ function! CheckFishFile()
 	normal!i#!/usr/bin/env fish
 	normal!o
 endfunction
+
