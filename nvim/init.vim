@@ -9,7 +9,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'		
 Plug 'preservim/nerdtree'
-Plug 'junegunn/goyo.vim'
 " fancy
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'ap/vim-css-color'
