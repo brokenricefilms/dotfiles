@@ -9,8 +9,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'		
 Plug 'preservim/nerdtree'
+Plug 'junegunn/goyo.vim'
 " fancy
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'ap/vim-css-color'
 call plug#end()
 
 filetype plugin indent on
@@ -23,6 +25,7 @@ set shiftwidth=2
 
 set number relativenumber
 syntax enable
+
 " set statusline=%F%m%r%h%w
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
 
