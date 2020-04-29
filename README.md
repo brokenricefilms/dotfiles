@@ -2,7 +2,7 @@
 
 ## Install
 
-just for NEOVIM(or vim maybe) TMUX FISH RANGER VIMIUM
+just for NEOVIM(or vim maybe) TMUX FISH VIFM VIMIUM
 **REQUITE**
 
 - neovim
