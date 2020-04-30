@@ -266,7 +266,6 @@ function browser_daily
 	browser_linkedin
 	browser_mail0
 	browser_mail1
-	browser_youtube_subsriptions
 	browser_stu
 	browser_fb
 end
