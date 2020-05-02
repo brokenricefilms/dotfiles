@@ -216,7 +216,6 @@ function gha --description "git push all project"
 	cowsay "D O N E"
 end
 
-alias glsherlock='cd ~/tools/hacking/sherlock/ ; pull ; cd -'
 alias gldotfiles='cd ~/git/dotfiles ; pull ; cd -'
 alias gllazyscript='cd ~/git/lazyscript ; pull ; cd -'
 alias gllinux_setup='cd ~/git/linux_setup ; pull ; cd -'
@@ -227,9 +226,6 @@ alias gldataLab='cd ~/git/dataLab ; pull ; cd -'
 alias glEcommerceWebsite='cd ~/git/EcommerceWebsite ; pull ; cd -'
 
 function gla --description "git pull all project"
-	cowsay "git pull sherlock"
-	glsherlock
-
 	cowsay "git pull lazyscript" 
 	gllazyscript 
 
