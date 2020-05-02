@@ -186,6 +186,7 @@ alias ghvimium_dark_theme='cd ~/git/vimium_dark_theme ; ok ; cd -'
 alias ghFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; ok ; cd -'
 alias ghok='cd ~/git/ok ; ok ; cd -'
 alias ghdataLab='cd ~/git/dataLab ; ok ; cd -'
+alias ghEcommerceWebsite='cd ~/git/EcommerceWebsite ; ok ; cd -'
 
 function gha --description "git push all project"
 	cowsay "git push lazyscript"
@@ -209,6 +210,9 @@ function gha --description "git push all project"
 	cowsay "git push dataLab" 
 	ghdataLab
 
+	cowsay "git push EcommerceWebsite"
+	ghEcommerceWebsite
+
 	cowsay "D O N E"
 end
 
@@ -220,6 +224,7 @@ alias glvimium_dark_theme='cd ~/git/vimium_dark_theme ; pull ; cd -'
 alias glFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; pull ; cd -'
 alias glok='cd ~/git/ok ; pull ; cd -'
 alias gldataLab='cd ~/git/dataLab ; pull ; cd -'
+alias glEcommerceWebsite='cd ~/git/EcommerceWebsite ; pull ; cd -'
 
 function gla --description "git pull all project"
 	cowsay "git pull sherlock"
@@ -246,6 +251,8 @@ function gla --description "git pull all project"
 	cowsay "git pull dataLab" 
 	gldataLab
 
+	cowsay "git pull EcommerceWebsite"
+	glEcommerceWebsite
 end
 
 # browser
