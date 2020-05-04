@@ -11,6 +11,7 @@ Plug 'mattn/emmet-vim'
 Plug 'preservim/nerdtree'
 " fancy
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'morhetz/gruvbox'
 Plug 'ap/vim-css-color'
 call plug#end()
 
@@ -53,10 +54,17 @@ highlight CursorLine guibg=253 ctermbg=253
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
 
+" theme
 " papercolor-theme
-set background=light
-colorscheme PaperColor
-set t_Co=256
+" set background=light
+" set background=dark
+" colorscheme PaperColor
+
+" gruvbox
+" set background=light
+set background=dark
+colorscheme gruvbox
+set termguicolors
 
 " easymotion
 nmap <silent> ;; <Plug>(easymotion-overwin-f)
