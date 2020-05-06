@@ -52,9 +52,14 @@ end
 ########################################################################
 
 set -g -x fish_greeting Yo!
+
+# autorun when open new fish shell
+# begin; fzf_key_bindings ; end
+# short version
+fzf_key_bindings
+
 fish_vi_key_bindings
 set -U EDITOR nvim
-# source "$HOME/anaconda3/etc/fish/conf.d/conda.fish"
 
 # lazy code
 alias fishr='source ~/.config/fish/config.fish'
@@ -70,10 +75,10 @@ alias rbn='sudo reboot now'
 alias sdn='sudo shutdown now'
 alias mkd='mkdir -pv'
 alias ka='killall'
-alias fd='fdfind'
 alias fi='vifm'
 alias v='nvim'
 alias o='open'
+alias fd='fdfind'
 alias 777='chmod -R 777'
 alias cf='cd ~/.config/ ; nvim -o (fzf)'
 
@@ -126,12 +131,15 @@ alias t='trash'
 alias tdl='trash ~/Downloads/*'
 
 # fzf
+export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 function fc -d "Fuzzy change directory"
 	if set -q argv[1]
 	set searchdir $argv[1]
 	else
 	set searchdir $HOME
-	end
+end
 
 # https://github.com/fish-shell/fish-shell/issues/1362
 	set -l tmpfile (mktemp)
