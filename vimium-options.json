@@ -4,6 +4,14 @@
     {
       "pattern": "https?://drive.google.com/*",
       "passKeys": "n"
+    },
+    {
+      "pattern": "https?://drive.google.com/*",
+      "passKeys": "z"
+    },
+    {
+      "pattern": "https?://drive.google.com/*",
+      "passKeys": "/"
     }
   ],
   "filterLinkHints": false,
