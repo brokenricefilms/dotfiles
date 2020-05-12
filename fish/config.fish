@@ -102,15 +102,7 @@ alias qa='tmux kill-session -a ; tmux ls'
 alias ..='cd .. ; clear ; l'
 alias ...='cd .. ; cd .. ; cd .. ; clear ; l'
 alias ....='cd .. ; cd .. ; cd .. ; cd .. ; clear ; l'
-alias doc='c ~/Documents'
 alias dow='c ~/Downloads'
-alias vi='c ~/Videos'
-alias pi='c ~/Pictures'
-alias fgit='vifm ~/git'
-alias fdoc='vifm ~/Documents'
-alias fdow='vifm ~/Downloads'
-alias fvi='vifm ~/Videos'
-alias fpi='vifm ~/Pictures'
 
 function c
 	cd $argv
