@@ -19,8 +19,9 @@ set encoding=UTF-8
 set mouse=a
 set clipboard=unnamedplus
 
-set tabstop=2
-set shiftwidth=2
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+autocmd BufRead,BufNewFile *.css,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 set number relativenumber
 syntax enable
