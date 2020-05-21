@@ -7,7 +7,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'mattn/emmet-vim'		
+Plug 'mattn/emmet-vim'
 Plug 'preservim/nerdtree'
 " fancy
 Plug 'NLKNguyen/papercolor-theme'
@@ -21,7 +21,10 @@ set clipboard=unnamedplus
 
 set tabstop=4 softtabstop=4
 set shiftwidth=4
+" 4 space in html, css look non-fancy, 2 space is better
 autocmd BufRead,BufNewFile *.css,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
+" convert tab to space, some isue when I see file at github,...
+set expandtab
 
 set number relativenumber
 syntax enable
@@ -41,9 +44,9 @@ set smartindent
 " remap Esc
 :imap jj <Esc>
 
-" Display different types of white spaces.	
-set list	
-set listchars=tab:›\ ,trail:•,extends:#,nbsp:.	
+" Display different types of white spaces
+set list
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
 " highlight cursorline
 set cursorline
@@ -97,35 +100,35 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
-" nerd tree		
-map <C-n> :NERDTreeToggle<CR>		
-let NERDTreeShowHidden=1		
+" nerd tree
+map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
-" emmet		
-let g:user_emmet_leader_key=','	
-let g:user_emmet_install_global = 0	
+" emmet
+let g:user_emmet_leader_key=','
+let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
-" coc vim	
-let g:coc_global_extensions = [	
-						\ "coc-css",	
-						\ "coc-html",	
-						\ "coc-snippets",	
-						\ "coc-json",	
-						\ "coc-python",	
-						\ "coc-tsserver",]	
+" coc vim
+let g:coc_global_extensions = [
+                        \ "coc-css",
+                        \ "coc-html",
+                        \ "coc-snippets",
+                        \ "coc-json",
+                        \ "coc-python",
+                        \ "coc-tsserver",]
 
-" if hidden is not set, TextEdit might fail.	
-set hidden	
+" if hidden is not set, TextEdit might fail.
+set hidden
 
-" You will have bad experience for diagnostic messages when it's default 4000.	
-set updatetime=300	
+" You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
 
-" don't give |ins-completion-menu| messages.	
-set shortmess+=c	
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
 
-" always show signcolumns	
-set signcolumn=yes	
+" always show signcolumns
+set signcolumn=yes
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
@@ -147,25 +150,25 @@ autocmd BufNewFile *.py :call CheckPyFile()
 autocmd BufNewFile *.cpp :call CheckCppFile()
 
 function! CheckShFile()
-	normal!i#!/usr/bin/env bash
-	normal!o
+    normal!i#!/usr/bin/env bash
+    normal!o
 endfunction
 
 function! CheckPyFile()
-	normal!i#!/usr/bin/env python3
-	normal!o
+    normal!i#!/usr/bin/env python3
+    normal!o
 endfunction
 
 function! CheckCppFile()
-	normal!i#include <iostream>
-	normal!ousing namespace std;
-	normal!o
-	normal!oint main() {
-	normal!oreturn 0;
-	normal!o}
+    normal!i#include <iostream>
+    normal!ousing namespace std;
+    normal!o
+    normal!oint main() {
+    normal!oreturn 0;
+    normal!o}
 endfunction
 
 function! CheckFishFile()
-	normal!i#!/usr/bin/env fish
-	normal!o
+    normal!i#!/usr/bin/env fish
+    normal!o
 endfunction
