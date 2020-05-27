@@ -18,6 +18,7 @@ filetype plugin indent on
 set encoding=UTF-8
 set mouse=a
 set clipboard=unnamedplus
+set nohlsearch
 
 set tabstop=4 softtabstop=4
 set shiftwidth=4
