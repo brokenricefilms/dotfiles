@@ -162,16 +162,16 @@ alias prettier='prettier --write .'
 alias ok='prettier ; yo ; push '
 
 function ghdotfiles
-	cp ~/.selected_editor ~/git/dotfiles 
-	cp ~/.gitconfig  ~/git/dotfiles/git/ 
-	cp ~/.tmux.conf ~/git/dotfiles/tmux 
-	cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim 
-	cp ~/.config/fish/config.fish ~/git/dotfiles/fish/ 
-	cp ~/.config/fish/functions/* ~/git/dotfiles/fish/ 
-	cp ~/.config/vifm/vifmrc ~/git/dotfiles/vifm
-	cp ~/.config/vifm/colors/* ~/git/dotfiles/vifm/colors
-	cp ~/.ssh/config ~/git/dotfiles/ssh/ 
-	cd ~/git/dotfiles 
+	cp ~/.selected_editor ~/git/dotfiles
+	cp ~/.gitconfig  ~/git/dotfiles/git/
+	cp ~/.tmux.conf ~/git/dotfiles/tmux/
+	cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim
+	cp ~/.config/fish/config.fish ~/git/dotfiles/fish/
+	cp ~/.config/fish/functions/* ~/git/dotfiles/fish/
+	cp ~/.config/vifm/vifmrc ~/git/dotfiles/vifm/
+	cp ~/.config/vifm/colors/* ~/git/dotfiles/vifm/colors/
+	cp ~/.ssh/config ~/git/dotfiles/ssh/
+	cd ~/git/dotfiles/
 	ok ; cd -
 end
 
