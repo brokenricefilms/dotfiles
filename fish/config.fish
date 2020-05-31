@@ -114,10 +114,6 @@ end
 alias yt='youtube-dl --add-metadata -i (read $link)'
 alias yta='yt -x --audio-format mp3 (read $link)'
 
-# mpv
-alias rain='mpv ~/Music/rain.mp3 --volume=80'
-alias fire='mpv ~/Music/fire.mp3'
-
 # trash-cli
 alias t='trash'
 alias tdl='trash ~/Downloads/*'
