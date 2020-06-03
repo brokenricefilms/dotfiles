@@ -12,6 +12,10 @@
     {
       "pattern": "https?://drive.google.com/*",
       "passKeys": "/"
+    },
+    {
+      "pattern": "https?://photos.google.com/*",
+      "passKeys": "/"
     }
   ],
   "filterLinkHints": false,
