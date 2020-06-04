@@ -262,7 +262,7 @@ alias browser_mail='browser_mail0 ; browser_mail1 ; browser_mail2'
 alias browser_linkedin='browser "https://www.linkedin.com/feed/"'
 
 function browser_daily
-    # browser_youtube_subsriptions
+    browser_youtube_subsriptions
 	browser_linkedin
 	browser_mail0
 	browser_mail1
