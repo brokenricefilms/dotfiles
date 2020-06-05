@@ -28,6 +28,7 @@ function run --description "run test for c/cpp, Python"
 	else if ls $argv | grep ".c"
 		gcc $argv
 		./a.out
+        trash a.out
 	else if ls $argv | grep ".py"
 		python3 $argv
 	end
@@ -53,11 +54,8 @@ end
 
 set -g -x fish_greeting Yo!
 
-# autorun when open new fish shell
-# begin; fzf_key_bindings ; end
-# short version
+set -g fish_term24bit 1
 fzf_key_bindings
-
 fish_vi_key_bindings
 set -U EDITOR nvim
 
