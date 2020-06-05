@@ -53,7 +53,7 @@ set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
 " highlight cursorline
 set cursorline
-highlight CursorLine term=none cterm=bold
+highlight CursorLine term=bold cterm=bold
 highlight CursorLine guibg=253 ctermbg=253
 
 " Split window
@@ -61,6 +61,7 @@ nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
 
 " theme
+set termguicolors
 " papercolor-theme
 " set background=light
 " colorscheme PaperColor
