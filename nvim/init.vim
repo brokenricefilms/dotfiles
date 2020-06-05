@@ -79,7 +79,7 @@ map mm <Plug>NERDCommenterToggle
 
 " fzf
 noremap t :Files<CR>
-noremap b :Buffers<CR>
+noremap <C-b> :Buffers<CR>
 
 " Mapping selecting mappings
 nmap <leader><tab> <plug>(fzf-maps-n)
