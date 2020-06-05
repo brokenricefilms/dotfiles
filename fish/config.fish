@@ -168,7 +168,7 @@ function ghdotfiles
 	cp ~/.gitconfig  ~/git/dotfiles/git/
 	cp ~/.tmux.conf ~/git/dotfiles/tmux/
 	cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim
-	cp ~/.config/fish/* ~/git/dotfiles/fish/
+	cp -r ~/.config/fish/* ~/git/dotfiles/fish/
 	cp ~/.config/vifm/vifmrc ~/git/dotfiles/vifm/
 	cp ~/.config/vifm/colors/* ~/git/dotfiles/vifm/colors/
 	cp ~/.ssh/config ~/git/dotfiles/ssh/
