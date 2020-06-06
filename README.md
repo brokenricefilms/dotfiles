@@ -14,8 +14,12 @@ just for NEOVIM(or vim maybe) TMUX FISH VIFM VIMIUM
 
 * Ok! Run code below in command line
 
-```bash
-cd ~/Dowloads ; wget https://raw.githubusercontent.com/nicholaspham2311/dotfiles/master/install ; chmod +x install ; ./install ; rm install
+```sh
+cd ~/Dowloads
+wget https://raw.githubusercontent.com/nicholaspham2311/dotfiles/master/install
+chmod +x install
+./install
+rm install
 ```
 
 - vimium option > Restore > choose file > vimium-option.json
