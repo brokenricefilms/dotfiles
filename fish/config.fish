@@ -1,6 +1,5 @@
 #!/usr/bin/fish
 
-# some fish function
 function 256color
 	bash ~/.config/fish/functions/print256colours.sh
 end
@@ -82,6 +81,7 @@ alias v='nvim'
 alias o='open'
 alias fd='fdfind'
 alias 777='chmod -R 777'
+alias x='chmod +x'
 alias cf='cd ~/.config/ ; nvim -o (fzf)'
 
 function rem --description "update"
