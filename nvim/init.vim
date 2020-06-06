@@ -46,6 +46,8 @@ set smartindent
 
 " remap Esc
 :imap jj <Esc>
+"" Map leader to space
+let mapleader=' '
 
 " Display different types of white spaces
 set list
@@ -79,7 +81,7 @@ map mm <Plug>NERDCommenterToggle
 
 " fzf
 noremap t :Files<CR>
-noremap <C-b> :Buffers<CR>
+noremap <leader>b :Buffers<CR>
 
 " Mapping selecting mappings
 nmap <leader><tab> <plug>(fzf-maps-n)
