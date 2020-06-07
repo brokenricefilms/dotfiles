@@ -80,7 +80,7 @@ let g:NERDSpaceDelims = 1
 map mm <Plug>NERDCommenterToggle
 
 " fzf
-noremap t :Files<CR>
+noremap <leader>t :Files<CR>
 noremap <leader>b :Buffers<CR>
 
 " Mapping selecting mappings

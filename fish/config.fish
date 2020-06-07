@@ -1,5 +1,6 @@
 #!/usr/bin/fish
 
+# funtions stuff
 function 256color
 	bash ~/.config/fish/functions/print256colours.sh
 end
@@ -52,7 +53,6 @@ function se
 	browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000
 end
 
-########################################################################
 ########################################################################
 
 set -g -x fish_greeting Yo!
