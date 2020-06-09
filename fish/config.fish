@@ -156,6 +156,7 @@ end
 
 # git
 alias yo='git add -A ; git commit -m (curl -s whatthecommit.com/index.txt)'
+alias sta='git status'
 alias push="git push"
 alias pull="git pull" 
 alias clone='git clone'
