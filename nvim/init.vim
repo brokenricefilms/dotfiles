@@ -161,7 +161,7 @@ autocmd BufNewFile *.py :call CheckPyFile()
 autocmd BufNewFile *.cpp :call CheckCppFile()
 
 function! CheckShFile()
-    normal!i#!/usr/bin/env bash
+    normal!i#!/usr/bin/env sh
     normal!o
 endfunction
 
