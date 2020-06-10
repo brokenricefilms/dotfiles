@@ -8,13 +8,21 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
-Plug 'preservim/nerdtree'
+Plug 'mbbill/undotree'
 " fancy
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'morhetz/gruvbox'
-Plug 'dracula/vim'
 Plug 'ap/vim-css-color'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'lifepillar/vim-gruvbox8'
+Plug 'luochen1990/rainbow'
 call plug#end()
+
+nnoremap <leader>u :UndotreeShow<CR>
+nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+
+" English spell check
+" set spell
+" set spelllang=en
 
 filetype plugin indent on
 set encoding=UTF-8
@@ -26,7 +34,7 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 " 4 space in html, css look non-fancy, 2 space is better
 autocmd BufRead,BufNewFile *.css,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
-" convert tab to space, some isue when I see file at github,...
+" convert tab to space, some issue when I see file at github,...
 set expandtab
 
 set number relativenumber
@@ -40,14 +48,16 @@ set autoread
 set noswapfile
 set nobackup
 set nowritebackup
+set undodir=~/.config/nvim/undodir
+set undofile
 
 set autoindent
 set smartindent
 
 " remap Esc
 :imap jj <Esc>
-"" Map leader to space
-let mapleader=' '
+" Map leader to space
+map <space> <leader>
 
 " Display different types of white spaces
 set list
@@ -69,7 +79,10 @@ set termguicolors
 " colorscheme PaperColor
 
 set background=dark
-colorscheme gruvbox
+colorscheme gruvbox8
+
+" rainbow
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
 " easymotion
 nmap <silent> ;; <Plug>(easymotion-overwin-f)
@@ -109,10 +122,6 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
-" nerd tree
-map <C-n> :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
-
 " emmet
 let g:user_emmet_leader_key=','
 let g:user_emmet_install_global = 0
@@ -126,6 +135,7 @@ let g:coc_global_extensions = [
                         \ "coc-json",
                         \ "coc-python",
                         \ "coc-clangd",
+                        \ "coc-import-cost",
                         \ "coc-sh",
                         \ "coc-tsserver",]
 
@@ -153,6 +163,10 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
+
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " auto insert when open file
 autocmd BufNewFile *.sh  :call CheckShFile()
