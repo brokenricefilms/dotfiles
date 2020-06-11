@@ -135,7 +135,6 @@ let g:coc_global_extensions = [
                         \ "coc-json",
                         \ "coc-python",
                         \ "coc-clangd",
-                        \ "coc-import-cost",
                         \ "coc-sh",
                         \ "coc-tsserver",]
 
