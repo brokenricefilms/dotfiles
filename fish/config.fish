@@ -28,11 +28,11 @@ function run --description "run test for c/cpp, Python"
 	if ls $argv | grep ".cpp"
 		g++ $argv
 		./a.out
-		trash a.out
+		rm a.out
 	else if ls $argv | grep ".c"
 		gcc $argv
 		./a.out
-        trash a.out
+        rm a.out
 	else if ls $argv | grep ".py"
 		python3 $argv
 	end
