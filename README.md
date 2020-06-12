@@ -1,5 +1,11 @@
 # My dot files
 
+## Demo
+
+![](./img/dotfile.png)
+
+---
+
 ## Install
 
 just for NEOVIM(or vim maybe) TMUX FISH VIFM VIMIUM
