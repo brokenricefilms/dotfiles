@@ -160,7 +160,7 @@ alias sta='git status'
 alias push="git push"
 alias pull="git pull" 
 alias clone='git clone'
-alias cm='git commit -m'
+alias commit='git commit -m'
 alias prettier='prettier --write .'
 alias ok='prettier ; yo ; push '
 
