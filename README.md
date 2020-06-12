@@ -8,7 +8,7 @@
 
 ## Install
 
-just for NEOVIM(or vim maybe) TMUX FISH VIFM VIMIUM
+Just for NEOVIM(or vim maybe) TMUX FISH VIFM VIMIUM
 **REQUITE**
 
 - neovim
@@ -18,9 +18,9 @@ just for NEOVIM(or vim maybe) TMUX FISH VIFM VIMIUM
 - wget
 - vimium extension
 
-* Ok! Run code below in command line
+Ok! Run code below in command line
 
-```sh
+```bash
 cd ~/Dowloads
 wget https://raw.githubusercontent.com/nicholaspham2311/dotfiles/master/install
 chmod +x install

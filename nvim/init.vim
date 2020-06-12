@@ -9,6 +9,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 " fancy
 Plug 'ap/vim-css-color'
 Plug 'NLKNguyen/papercolor-theme'
@@ -80,6 +81,13 @@ set termguicolors
 
 set background=dark
 colorscheme gruvbox8
+
+" markdown review
+" tldr command :MarkdownPreview
+" auto open windown when edit file .md | 1 is able mode
+let g:mkdp_auto_start = 0
+let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
+let g:mkdp_browser = 'brave-browser'
 
 " rainbow
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
