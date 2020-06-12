@@ -183,6 +183,7 @@ alias ghFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; ok ; cd -'
 alias ghok='cd ~/git/ok ; ok ; cd -'
 alias ghdataLab='cd ~/git/dataLab ; ok ; cd -'
 alias ghwindowsSetup='cd ~/git/windowsSetup ;  ok ; cd -'
+alias ghtermuxSetup='cd ~/git/termuxSetup ;  ok ; cd -'
 
 function gha --description "git push all project"
 	cowsay "git push lazyscript"
@@ -208,6 +209,9 @@ function gha --description "git push all project"
 
 	cowsay "git push windowsSetup" 
     ghwindowsSetup
+
+	cowsay "git push termuxSetup" 
+    ghtermuxSetup
 	cowsay "D O N E"
 end
 
@@ -219,6 +223,7 @@ alias glFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; pull ; cd -'
 alias glok='cd ~/git/ok ; pull ; cd -'
 alias gldataLab='cd ~/git/dataLab ; pull ; cd -'
 alias glwindowsSetup='cd ~/git/windowsSetup ;  pull ; cd -'
+alias gltermuxSetup='cd ~/git/termuxSetup ;  pull ; cd -'
 
 function gla --description "git pull all project"
 	cowsay "git pull lazyscript" 
@@ -244,6 +249,9 @@ function gla --description "git pull all project"
 
 	cowsay "git pull windowsSetup" 
     glwindowsSetup
+
+	cowsay "git pull termuxSetup" 
+    gltermuxSetup
 end
 
 # browser
