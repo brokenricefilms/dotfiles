@@ -176,6 +176,7 @@ function ghdotfiles
 	cp -r ~/.config/fish/* ~/git/dotfiles/fish/
 	cp -r ~/.config/vifm/* ~/git/dotfiles/vifm/
 	cp ~/.ssh/config ~/git/dotfiles/ssh/
+    cp ~/.config/alacritty/alacritty.yml ~/git/dotfiles/alacritty/
 	cd ~/git/dotfiles/
 	ok ; cd -
 end
