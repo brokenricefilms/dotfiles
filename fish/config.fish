@@ -64,7 +64,6 @@ set -U EDITOR nvim
 
 # lazy code
 alias fishr='source ~/.config/fish/config.fish'
-alias bat='batcat -n'
 alias g='grep'
 alias h='htop'
 alias ins='sudo apt install -y'
