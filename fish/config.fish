@@ -26,7 +26,7 @@ end
 
 function run --description "run test for c/cpp, Python"
 	if ls $argv | grep ".cpp"
-		g++ $argv
+        g++ $argv
 		./a.out
 		rm a.out
 	else if ls $argv | grep ".c"
@@ -38,6 +38,11 @@ function run --description "run test for c/cpp, Python"
 	end
 end
 
+function runcpp
+    g++ *.cpp
+    ./a.out
+    rm a.out
+end
 function repeat
 	while true
 		$argv
@@ -321,6 +326,7 @@ end
 
 # mode
 alias hi='browser_daily ; gla ; gha ; rem'
+alias procpp='cp -r ~/.config/nvim/stuff/cpppro/* . ; v *'
 
 function dataLab --description "setup for data research"
 	cd ~/git/dataLab/
