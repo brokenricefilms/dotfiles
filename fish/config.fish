@@ -259,7 +259,7 @@ function gla --description "git pull all project"
 end
 
 # browser
-alias browser='brave-browser'
+alias browser='google-chrome'
 # alias browser='firefox'
 alias github='browser "https://github.com/thuanpham2311"'
 
