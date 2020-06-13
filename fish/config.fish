@@ -172,7 +172,6 @@ function ghdotfiles
 	cp ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
 	cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim/
 	cp -r ~/.config/nvim/stuff ~/git/dotfiles/nvim/
-	cp -r ~/.config/nvim/undodir ~/git/dotfiles/nvim/
 	cp -r ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
 	cp -r ~/.config/fish/* ~/git/dotfiles/fish/
 	cp -r ~/.config/vifm/* ~/git/dotfiles/vifm/
