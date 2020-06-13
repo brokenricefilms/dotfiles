@@ -76,11 +76,11 @@ nmap sv :vsplit<Return><C-w>w
 " theme
 set termguicolors
 " papercolor-theme
-" set background=light
-" colorscheme PaperColor
+set background=light
+colorscheme PaperColor
 
-set background=dark
-colorscheme gruvbox8
+" set background=dark
+" colorscheme gruvbox8
 
 " markdown review
 " tldr command :MarkdownPreview
