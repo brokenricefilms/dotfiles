@@ -5,8 +5,8 @@ function 256color
 	bash ~/.config/fish/functions/print256colours.sh
 end
 
-function showTrueColor
-	bash ~/.config/fish/functions/showTrueColor.sh
+function 24bitColor
+	bash ~/.config/fish/functions/24-bit-color.sh
 end
 
 function sudo --description "Replacement for Bash 'sudo !!' command to run last command using sudo."

@@ -28,3 +28,5 @@ cp ~/git/dotfiles/fish/config.fish ~/.config/fish/
 cp ~/git/dotfiles/fish/fish_prompt.fish ~/.config/fish/functions/
 cp ~/git/dotfiles/git/.gitconfig ~/ 
 cp ~/git/dotfiles/.selected_editor ~/
+mkdir ~/.config/alacritty/
+cp ~/git/dotfiles/alacritty/alacritty.yml ~/.config/alacritty/

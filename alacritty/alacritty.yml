@@ -1,6 +1,6 @@
+env:
+  TERM: xterm-256color
 # PaperColor Light 256 - alacritty color config
-# https://github.com/NLKNguyen/papercolor-theme
-# https://www.reddit.com/r/vim/comments/36xzbs/vim_paper_color_theme_inspired_by_googles/crqbfpa/
 colors:
   # Default colors
   primary:
@@ -33,19 +33,6 @@ colors:
     magenta: "0x8959a8"
     cyan: "0x3e999f"
     white: "0xf5f5f5"
-
-# Font Customization
-# font:
-# normal:
-# family: Hack
-# style: Regular
-# bold:
-# family: Hack
-# style: Bold
-# italic:
-# family: Hack
-# style: Italic
-# size: 11
 
 font:
   normal:
