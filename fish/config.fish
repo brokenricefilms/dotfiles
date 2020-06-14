@@ -170,6 +170,7 @@ alias prettier='prettier --write .'
 alias ok='prettier ; yo ; push '
 
 function ghdotfiles
+    cp -r ~/.fonts ~/git/dotfiles
 	cp ~/.selected_editor ~/git/dotfiles
 	cp ~/.gitconfig  ~/git/dotfiles/git/
 	cp ~/.tmux.conf ~/git/dotfiles/tmux/

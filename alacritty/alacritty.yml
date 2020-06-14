@@ -35,14 +35,26 @@ colors:
     white: "0xf5f5f5"
 
 # Font Customization
+# font:
+# normal:
+# family: Hack
+# style: Regular
+# bold:
+# family: Hack
+# style: Bold
+# italic:
+# family: Hack
+# style: Italic
+# size: 11
+
 font:
   normal:
-    family: Hack
+    family: Source Code Pro
     style: Regular
   bold:
-    family: Hack
+    family: Source Code Pro
     style: Bold
   italic:
-    family: Fira Code
-    style: Hack
-  size: 11
+    family: Source Code Pro
+    style: Italic
+  size: 10
