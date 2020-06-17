@@ -1,119 +1,24 @@
 call plug#begin()
 Plug 'easymotion/vim-easymotion'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'tpope/vim-surround'
-Plug 'jiangmiao/auto-pairs'
-Plug 'preservim/nerdcommenter'
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'mattn/emmet-vim'
-Plug 'mbbill/undotree'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-" fancy
-Plug 'ap/vim-css-color'
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'lifepillar/vim-gruvbox8'
-Plug 'luochen1990/rainbow'
-call plug#end()
-
-nnoremap <leader>u :UndotreeShow<CR>
-nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
-nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
-
-" English spell check
-" set spell
-" set spelllang=en
-
-filetype plugin indent on
-set encoding=UTF-8
-set mouse=a
-set clipboard=unnamedplus
-set nohlsearch
-
-set tabstop=4 softtabstop=4
-set shiftwidth=4
-" 4 space in html, css look non-fancy, 2 space is better
-autocmd BufRead,BufNewFile *.css,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
-" convert tab to space, some issue when I see file at github,...
-set expandtab
-
-set number relativenumber
-syntax enable
-
-" set statusline=%F%m%r%h%w
-set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
-
-set autowrite
-set autoread
-set noswapfile
-set nobackup
-set nowritebackup
-set undodir=~/.config/nvim/undodir
-set undofile
-
-set autoindent
-set smartindent
-
-" remap Esc
-:imap jj <Esc>
-" Map leader to space
-map <space> <leader>
-
-" Display different types of white spaces
-set list
-set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
-
-" highlight cursorline
-set cursorline
-highlight CursorLine term=bold cterm=bold
-highlight CursorLine guibg=253 ctermbg=253
-
-" Split window
-nmap ss :split<Return><C-w>w
-nmap sv :vsplit<Return><C-w>w
-
-" theme
-set termguicolors
-" papercolor-theme
-set background=light
-colorscheme PaperColor
-
-" set background=dark
-" colorscheme gruvbox8
-
-" markdown review
-" tldr command :MarkdownPreview
-" auto open windown when edit file .md | 1 is able mode
-let g:mkdp_auto_start = 0
-let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
-
-" rainbow
-let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
-
 " easymotion
 nmap <silent> ;; <Plug>(easymotion-overwin-f)
 nmap <silent> ;l <Plug>(easymotion-overwin-line)
 
-" nerdcommenter
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
+
+Plug 'preservim/nerdcommenter'
 let g:NERDSpaceDelims = 1
 map mm <Plug>NERDCommenterToggle
 
-" fzf
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 noremap <leader>t :Files<CR>
 noremap <leader>b :Buffers<CR>
-
-" Mapping selecting mappings
 nmap <leader><tab> <plug>(fzf-maps-n)
-" xmap <leader><tab> <plug>(fzf-maps-x)
-" omap <leader><tab> <plug>(fzf-maps-o)
-
-" Insert mode completion
-imap <c-x><c-f> <plug>(fzf-complete-path)
-
 " Advanced customization using Vim function
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
-
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
@@ -129,12 +34,11 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
-" emmet
-let g:user_emmet_leader_key=','
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
-
-" coc vim
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+set hidden
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes
 let g:coc_global_extensions = [
                         \ "coc-css",
                         \ "coc-html",
@@ -144,19 +48,6 @@ let g:coc_global_extensions = [
                         \ "coc-clangd",
                         \ "coc-sh",
                         \ "coc-tsserver",]
-
-" if hidden is not set, TextEdit might fail.
-set hidden
-
-" You will have bad experience for diagnostic messages when it's default 4000.
-set updatetime=300
-
-" don't give |ins-completion-menu| messages.
-set shortmess+=c
-
-" always show signcolumns
-set signcolumn=yes
-
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
@@ -174,11 +65,98 @@ let g:coc_snippet_next = '<tab>'
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
-" auto insert when open file
-autocmd BufNewFile *.sh  :call CheckShFile()
-autocmd BufNewFile *.fish  :call CheckFishFile()
-autocmd BufNewFile *.py :call CheckPyFile()
-autocmd BufNewFile *.cpp :call CheckCppFile()
+Plug 'mattn/emmet-vim'
+let g:user_emmet_leader_key=','
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+Plug 'mbbill/undotree'
+set undodir=~/.config/nvim/undodir
+set undofile
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+" tldr command :MarkdownPreview
+" auto open windown when edit file .md | 1 is able mode
+let g:mkdp_auto_start = 0
+let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
+
+" fancy
+Plug 'ap/vim-css-color'
+Plug 'luochen1990/rainbow'
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'lifepillar/vim-gruvbox8'
+call plug#end()
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" theme
+set termguicolors
+set background=light
+colorscheme PaperColor
+" set background=dark
+" colorscheme gruvbox8
+
+nnoremap <leader>u :UndotreeShow<CR>
+nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+
+filetype plugin indent on
+set encoding=UTF-8
+set mouse=a
+set clipboard=unnamedplus
+set nohlsearch
+
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+" 4 space in html, css look non-fancy, 2 space is better
+autocmd BufRead,BufNewFile *.scss,*.css,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
+" convert tab to space, some issue when I see file at github,...
+set expandtab
+
+set number relativenumber
+syntax enable
+
+" set statusline=%F%m%r%h%w
+set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
+
+set autowrite
+set autoread
+set noswapfile
+set nobackup
+set nowritebackup
+set autoindent
+set smartindent
+
+" remap Esc
+:imap jj <Esc>
+" Map leader to space
+map <space> <leader>
+
+" Display different types of white spaces
+set list
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
+
+" highlight cursorline
+set cursorline
+highlight CursorLine term=bold cterm=bold
+" highlight CursorLine guibg=bold gui=bold
+
+" Split window
+nmap ss :split<Return><C-w>w
+nmap sv :vsplit<Return><C-w>w
+
+augroup General
+    au!
+    autocmd FileType markdown,text setlocal spell spelllang=en
+    " auto insert when open file
+    autocmd BufNewFile *.sh  :call CheckShFile()
+    autocmd BufNewFile *.fish  :call CheckFishFile()
+    autocmd BufNewFile *.py :call CheckPyFile()
+    autocmd BufNewFile *.cpp :call CheckCppFile()
+augroup END
+
 
 function! CheckShFile()
     normal!i#!/usr/bin/env sh

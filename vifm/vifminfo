@@ -52,6 +52,27 @@ d/home/master
 d/home/master/Pictures
 	ketQuaChayChuongTrinh.png
 1
+d/home/master
+	.vscode
+14
+d/home/master/.vscode
+	extensions
+1
+d/home/master
+	.config
+2
+d/home/master/.config
+	google-chrome
+17
+d/home/master/.config/google-chrome
+	Crash Reports
+3
+d/home/master/.config
+	google-chrome
+17
+d/home/master
+	.config
+2
 d
 
 # Right window history (oldest to newest):
@@ -71,10 +92,13 @@ D
 # Local filter history (oldest to newest):
 
 # Registers:
+""/home/master/.local/share/vifm/Trash/000_.vscode
 
 # Directory stack (oldest to newest):
 
 # Trash content:
+t/home/master/.local/share/vifm/Trash/000_.vscode
+	/home/master/.vscode
 
 # State:
 f

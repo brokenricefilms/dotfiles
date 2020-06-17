@@ -18,7 +18,7 @@ Just for NEOVIM(or vim maybe) TMUX FISH VIFM VIMIUM
 - wget
 - vimium extension
 
-Ok! Run code below in command line
+Okay! Run code below in command line
 
 ```bash
 cd ~/Dowloads
