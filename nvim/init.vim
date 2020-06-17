@@ -43,6 +43,7 @@ let g:coc_global_extensions = [
                         \ "coc-css",
                         \ "coc-html",
                         \ "coc-snippets",
+                        \ "coc-highlight",
                         \ "coc-json",
                         \ "coc-python",
                         \ "coc-clangd",
@@ -81,7 +82,7 @@ let g:mkdp_auto_start = 0
 let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 
 " fancy
-Plug 'ap/vim-css-color'
+" Plug 'ap/vim-css-color'
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 Plug 'NLKNguyen/papercolor-theme'

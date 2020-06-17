@@ -71,8 +71,8 @@ set -U EDITOR nvim
 alias fishr='source ~/.config/fish/config.fish'
 alias g='grep'
 alias h='htop'
-alias ins='sudo pacman -S -yy'
-alias uins='sudo pacman -R -yy'
+alias ins='sudo pacman -S'
+alias uins='sudo pacman -R'
 alias e='exit'
 alias :q='exit'
 alias l='clear ; ls -lah'
@@ -81,7 +81,6 @@ alias rbn='sudo reboot now'
 alias sdn='sudo shutdown now'
 alias mkd='mkdir -pv'
 alias ka='killall'
-alias fi='vifm'
 alias v='nvim'
 alias o='open'
 alias 777='chmod -R 777'
@@ -174,7 +173,6 @@ function ghdotfiles
 	cp -r ~/.config/nvim/stuff ~/git/dotfiles/nvim/
 	cp -r ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
 	cp -r ~/.config/fish/* ~/git/dotfiles/fish/
-	cp -r ~/.config/vifm/* ~/git/dotfiles/vifm/
 	cp ~/.ssh/config ~/git/dotfiles/ssh/
     cp ~/.config/alacritty/alacritty.yml ~/git/dotfiles/alacritty/
 	cd ~/git/dotfiles/
