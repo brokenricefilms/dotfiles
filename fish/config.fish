@@ -71,8 +71,8 @@ set -U EDITOR nvim
 alias fishr='source ~/.config/fish/config.fish'
 alias g='grep'
 alias h='htop'
-alias ins='sudo apt install -y'
-alias uins='sudo apt remove -y'
+alias ins='sudo pacman -S -yy'
+alias uins='sudo pacman -R -yy'
 alias e='exit'
 alias :q='exit'
 alias l='clear ; ls -lah'
@@ -84,17 +84,12 @@ alias ka='killall'
 alias fi='vifm'
 alias v='nvim'
 alias o='open'
-alias fd='fdfind'
 alias 777='chmod -R 777'
 alias x='chmod +x'
 alias cf='cd ~/.config/ ; nvim -o (fzf)'
 
 function rem --description "update"
-	sudo apt update
-	sudo apt upgrade -y
-	sudo apt autoremove -y
-	sudo apt autoclean
-	# sudo snap refresh
+    sudo pacman -U
 	sudo npm install npm -g
 	nvim -c "PlugUpdate | qa"
 	tldr --update
@@ -265,7 +260,7 @@ function gla --description "git pull all project"
 end
 
 # browser
-alias browser='brave-browser'
+alias browser='brave'
 # alias browser='firefox'
 alias github='browser "https://github.com/thuanpham2311"'
 
