@@ -74,6 +74,7 @@ export QT_IM_MODULE=xim
 
 # lazy code
 alias fishr='source ~/.config/fish/config.fish'
+alias fd='fdfind'
 alias g='grep'
 alias h='htop'
 alias ins='sudo apt install -y'
@@ -163,6 +164,7 @@ alias ok='prettier ; yo ; push '
 
 function ghdotfiles
     cp -r ~/.fonts ~/git/dotfiles
+    cp -r ~/.config/vifm/* ~/git/dotfiles/vifm
 	cp ~/.selected_editor ~/git/dotfiles
 	cp ~/.gitconfig  ~/git/dotfiles/git/
 	cp ~/.tmux.conf ~/git/dotfiles/tmux/
@@ -256,7 +258,7 @@ function gla --description "git pull all project"
 end
 
 # browser
-alias browser='brave'
+alias browser='brave-browser'
 # alias browser='firefox'
 alias github='browser "https://github.com/thuanpham2311"'
 
