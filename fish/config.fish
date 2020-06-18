@@ -76,8 +76,8 @@ export QT_IM_MODULE=xim
 alias fishr='source ~/.config/fish/config.fish'
 alias g='grep'
 alias h='htop'
-alias ins='sudo pacman -S'
-alias uins='sudo pacman -R'
+alias ins='sudo apt install -y'
+alias uins='sudo apt uninstall -y'
 alias e='exit'
 alias :q='exit'
 alias l='clear ; ls -lah'
@@ -91,13 +91,6 @@ alias o='open'
 alias 777='chmod -R 777'
 alias x='chmod +x'
 alias cf='cd ~/.config/ ; nvim -o (fzf)'
-
-function rem --description "update"
-    sudo pacman -U
-	sudo npm install npm -g
-	nvim -c "PlugUpdate | qa"
-	tldr --update
-end
 
 # tmux
 # alias ide='tmux split-window -v -p 30 ; tmux split-window -h -p 66 ; tmux split-window -h -p 50'
@@ -324,7 +317,7 @@ function !m
 end
 
 # mode
-alias hi='browser_daily ; gla ; gha ; rem'
+alias hi='browser_daily ; gla ; gha'
 alias procpp='cp -r ~/.config/nvim/stuff/cpppro/* . ; v *'
 
 function dataLab --description "setup for data research"
