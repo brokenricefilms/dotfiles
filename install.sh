@@ -19,14 +19,17 @@ echo "
                 ||     ||
 "
 
-cp ~/git/dotfiles/git/vifm/* ~/.config/vifm/
-cp ~/git/dotfiles/git/vifm/colors/* ~/.config/vifm/colors/
-cp ~/git/dotfiles/nvim/init.vim ~/.config/nvim/
-cp ~/git/dotfiles/ssh/config ~/.ssh/
+mkdir ~/.config/nvim/
+mkdir ~/.config/fish/
+mkdir ~/.config/fish/functions/
+mkdir ~/.config/vifm/
+mkdir ~/.config/alacritty
+
+cp -r ~/git/dotfiles/vifm/* ~/.config/vifm/
+cp -r ~/git/dotfiles/nvim/* ~/.config/nvim/
+cp -r ~/git/dotfiles/ssh/* ~/.ssh/
 cp ~/git/dotfiles/tmux/.tmux.conf ~/
-cp ~/git/dotfiles/fish/config.fish ~/.config/fish/
-cp ~/git/dotfiles/fish/fish_prompt.fish ~/.config/fish/functions/
+cp -r ~/git/dotfiles/fish/* ~/.config/fish/
 cp ~/git/dotfiles/git/.gitconfig ~/ 
 cp ~/git/dotfiles/.selected_editor ~/
-mkdir ~/.config/alacritty/
-cp ~/git/dotfiles/alacritty/alacritty.yml ~/.config/alacritty/
+cp ~/git/dotfiles/alacritty/* ~/.config/alacritty/
