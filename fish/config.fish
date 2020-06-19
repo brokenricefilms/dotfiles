@@ -107,6 +107,7 @@ alias ..='cd .. ; clear ; l'
 alias ...='cd .. ; cd .. ; cd .. ; clear ; l'
 alias ....='cd .. ; cd .. ; cd .. ; cd .. ; clear ; l'
 alias dow='c ~/Downloads'
+alias doc='c ~/Documents'
 
 function c
 	cd $argv
