@@ -6,6 +6,10 @@ function 256color
 	bash ~/.config/fish/functions/print256colours.sh
 end
 
+function switchTv
+	sh ~/.config/fish/functions/switchTv.sh
+end
+
 function 24bitColor
 	bash ~/.config/fish/functions/24-bit-color.sh
 end
