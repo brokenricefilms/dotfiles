@@ -71,10 +71,6 @@ set -g fish_term24bit 1
 fzf_key_bindings
 fish_vi_key_bindings
 set -U EDITOR nvim
-ibus-daemon -dx
-export GTK_IM_MODULE=xim
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=xim
 
 # lazy code
 alias fishr='source ~/.config/fish/config.fish'
