@@ -259,8 +259,8 @@ function gla --description "git pull all project"
 end
 
 # browser
-alias browser='brave-browser'
-# alias browser='firefox'
+# alias browser='brave-browser'
+alias browser='firefox'
 alias github='browser "https://github.com/thuanpham2311"'
 
 alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
@@ -284,39 +284,39 @@ end
 
 ## search
 function !t
-	brave-browser --new-window "https://translate.google.com/?source=osdd#auto|auto|$argv"
+	browser --new-window "https://translate.google.com/?source=osdd#auto|auto|$argv"
 end
 
 function !y
-	brave-browser --new-window "https://www.youtube.com/results?search_query=$argv"
+	browser --new-window "https://www.youtube.com/results?search_query=$argv"
 end
 
 function !gm
-	brave-browser --new-window "https://www.google.com/maps?q=$argv"
+	browser --new-window "https://www.google.com/maps?q=$argv"
 end
 
 function !g
-	brave-browser --new-window "https://www.google.com/search?q=$argv"
+	browser --new-window "https://www.google.com/search?q=$argv"
 end
 
 function !gi
-	brave-browser --new-window "https://www.google.com/search?tbm=isch&q=$argv"
+	browser --new-window "https://www.google.com/search?tbm=isch&q=$argv"
 end
 
 function !w
-	brave-browser --new-window "https://en.wikipedia.org/wiki/Special:Search?search=$argv"
+	browser --new-window "https://en.wikipedia.org/wiki/Special:Search?search=$argv"
 end
 
 function !gh
-	brave-browser --new-window "https://github.com/search?q=$argv"
+	browser --new-window "https://github.com/search?q=$argv"
 end
 
 function !fa
-	brave-browser --new-window "https://www.facebook.com/search?q=$argv"
+	browser --new-window "https://www.facebook.com/search?q=$argv"
 end
 
 function !m
-	brave-browser --new-window "https://medium.com/search?q=$argv"
+	browser --new-window "https://medium.com/search?q=$argv"
 end
 
 # mode
