@@ -1,9 +1,0 @@
-Host ram
-    HostName 192.168.1.3
-    User u0_a220
-    port 8022
-# ubuntu server host
-# Host ram
-# HostName 127.0.0.1
-# User root
-# port 2222

@@ -259,8 +259,8 @@ function gla --description "git pull all project"
 end
 
 # browser
-# alias browser='brave-browser'
-alias browser='firefox'
+alias browser='brave-browser'
+# alias browser='firefox'
 alias github='browser "https://github.com/thuanpham2311"'
 
 alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
@@ -321,6 +321,7 @@ end
 
 # mode
 alias hi='browser_daily ; gla ; gha'
+alias rem='sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y; sudo apt autoclean -y'
 alias procpp='cp -r ~/.config/nvim/stuff/cpppro/* . ; v *'
 
 function dataLab --description "setup for data research"
