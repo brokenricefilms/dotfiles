@@ -175,7 +175,6 @@ function ghdotfiles
 	cp -r ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
 	cp -r ~/.config/fish/* ~/git/dotfiles/fish/
 	cp ~/.ssh/config ~/git/ok/ssh/
-    cp ~/.config/alacritty/alacritty.yml ~/git/dotfiles/alacritty/
 	cd ~/git/dotfiles/
 	ok ; cd -
 end
