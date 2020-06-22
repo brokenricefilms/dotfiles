@@ -16,6 +16,22 @@
     {
       "pattern": "https?://photos.google.com/*",
       "passKeys": "/"
+    },
+    {
+      "pattern": "https?://calendar.google.com/*",
+      "passKeys": "e"
+    },
+    {
+      "pattern": "https?://calendar.google.com/*",
+      "passKeys": "d"
+    },
+    {
+      "pattern": "https?://calendar.google.com/*",
+      "passKeys": "j"
+    },
+    {
+      "pattern": "https?://calendar.google.com/*",
+      "passKeys": "k"
     }
   ],
   "filterLinkHints": false,
