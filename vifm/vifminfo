@@ -122,8 +122,53 @@ d/
 	lib32
 6
 d/lib32
-	libSegFault.so
-6
+	libutil.so.1
+43
+d/home/master/git/note/notion/Note 350b3ad012f742599101d07f89655884
+	4HabitsThatWillTrainYourBraintoStopWorryidaf580af97fa437ab8f5353fdcec0aa8
+1
+d/home/master/git/note/notion/Note 350b3ad012f742599101d07f89655884/4HabitsThatWillTrainYourBraintoStopWorryidaf580af97fa437ab8f5353fdcec0aa8
+	..
+0
+d/home/master/git/note/notion/Note 350b3ad012f742599101d07f89655884
+	the7habitsofhighlyeffectiveteen26bfcc4665bc4c6babed100ff4d4ce1d
+45
+d/home/master/git/note/notion/img
+	Anhbnthn02363f8783e040f7be63d2a227ec0b57
+1
+d/home/master/git/note/notion/img/Anhbnthn02363f8783e040f7be63d2a227ec0b57
+	..
+0
+d/home/master/git/note/notion/img
+	Anhbnthn02363f8783e040f7be63d2a227ec0b57
+1
+d/home/master/git/note/notion/img/Anhbnthn02363f8783e040f7be63d2a227ec0b57
+	..
+0
+d/home/master/git/note/notion/img
+	0KeB7YLD8wlQwQSGL
+30
+d/home/master/git/note/notion
+	tu i tr b n ng gi bao nhi u 662d0b0bfe664057b405a4dcb52e6487.md
+42
+d/home/master/.local/share/vifm/Trash
+	000_note dfff81d1d26145ffafb706981f930dfb.csv
+2
+d/home/master/.local/share/vifm
+	Trash
+1
+d/home/master/.local/share/vifm/Trash
+	..
+0
+d/home/master/.local/share/vifm
+	Trash
+1
+d/home/master/.local/share
+	vifm
+21
+d/home/master/git/note/notion
+	M t Ng i Tr ng Th nh H c Nh Th N o 119885b2c24b491488bc9f0025b843c1.md
+47
 d
 
 # Right window history (oldest to newest):
@@ -133,6 +178,7 @@ D/home/master
 D
 
 # Command line history (oldest to newest):
+:trashes
 :q
 
 # Search history (oldest to newest):
@@ -144,13 +190,21 @@ D
 # Local filter history (oldest to newest):
 
 # Registers:
-""/home/master/.local/share/vifm/Trash/000_.vscode
+""/home/master/.local/share/vifm/Trash/000_skating.gif
 
 # Directory stack (oldest to newest):
 
 # Trash content:
 t/home/master/.local/share/vifm/Trash/000_.vscode
 	/home/master/.vscode
+t/home/master/.local/share/vifm/Trash/000_ok.sh
+	/home/master/git/note/notion/Note 350b3ad012f742599101d07f89655884/ok.sh
+t/home/master/.local/share/vifm/Trash/000_Files 99d0a3100bc3486eaaa1e4a3c29dd1de.csv
+	/home/master/git/note/notion/img/Files 99d0a3100bc3486eaaa1e4a3c29dd1de.csv
+t/home/master/.local/share/vifm/Trash/000_note dfff81d1d26145ffafb706981f930dfb.csv
+	/home/master/git/note/notion/img/note dfff81d1d26145ffafb706981f930dfb.csv
+t/home/master/.local/share/vifm/Trash/000_skating.gif
+	/home/master/git/note/notion/img/skating.gif
 
 # State:
 f
