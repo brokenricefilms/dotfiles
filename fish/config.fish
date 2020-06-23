@@ -351,7 +351,7 @@ function !m
 end
 
 # mode
-alias hi='browser_daily ; gla ; gha'
+alias hi='browser_daily'
 alias rem='sudo apt update; sudo apt upgrade -y; sudo npm i -g npm; sudo apt autoremove -y; sudo apt autoclean -y'
 alias procpp='cp -r ~/.config/nvim/stuff/cpppro/* . ; v *'
 
