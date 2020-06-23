@@ -188,8 +188,12 @@ alias ghok='cd ~/git/ok ; ok ; cd -'
 alias ghdataLab='cd ~/git/dataLab ; ok ; cd -'
 alias ghwindowsSetup='cd ~/git/windowsSetup ;  ok ; cd -'
 alias ghtermuxSetup='cd ~/git/termuxSetup ;  ok ; cd -'
+alias ghnote='cd ~/git/note ;  ok ; cd -'
 
 function gha --description "git push all project"
+	cowsay "git push note"
+	ghnote
+
 	cowsay "git push lazyscript"
 	ghlazyscript
 
@@ -228,8 +232,12 @@ alias glok='cd ~/git/ok ; pull ; cd -'
 alias gldataLab='cd ~/git/dataLab ; pull ; cd -'
 alias glwindowsSetup='cd ~/git/windowsSetup ;  pull ; cd -'
 alias gltermuxSetup='cd ~/git/termuxSetup ;  pull ; cd -'
+alias glnote='cd ~/git/note ;  pull ; cd -'
 
 function gla --description "git pull all project"
+	cowsay "git pull note" 
+	glnote
+
 	cowsay "git pull lazyscript" 
 	gllazyscript 
 
