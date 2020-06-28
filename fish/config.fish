@@ -76,7 +76,6 @@ set -U EDITOR nvim
 # lazy code
 alias n='obsidian &'
 alias fishr='source ~/.config/fish/config.fish'
-alias fd='fdfind'
 alias g='grep'
 alias h='htop'
 alias ins='sudo apt install -y'
@@ -260,8 +259,8 @@ function gla --description "git pull all project"
 end
 
 # browser
-alias browser='brave-browser'
-# alias browser='firefox'
+# alias browser='brave-browser'
+alias browser='firefox'
 alias github='browser "https://github.com/thuanpham2311"'
 
 alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
