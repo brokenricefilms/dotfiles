@@ -324,7 +324,7 @@ function !m
 end
 
 # mode
-alias hi='browser_daily'
+alias hi='browser_daily ; gla ; gha'
 alias rem='sudo pacman -Syu'
 alias procpp='cp -r ~/.config/nvim/stuff/cpppro/* . ; v *'
 
