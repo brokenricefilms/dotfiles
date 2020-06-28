@@ -71,6 +71,8 @@ set -g fish_term24bit 1
 fzf_key_bindings
 fish_vi_key_bindings
 set -U EDITOR nvim
+export EDITOR='nvim'
+export VISUAL='nvim'
 
 # lazy code
 alias cpf='xclip -sel clip'
