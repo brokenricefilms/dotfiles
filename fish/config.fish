@@ -1,6 +1,5 @@
 #!/usr/bin/fish
 
-
 # funtions stuff
 function 256color
 	bash ~/.config/fish/functions/print256colours.sh
@@ -74,12 +73,12 @@ fish_vi_key_bindings
 set -U EDITOR nvim
 
 # lazy code
-alias n='obsidian &'
+alias cpf='xclip -sel clip'
 alias fishr='source ~/.config/fish/config.fish'
 alias g='grep'
 alias h='htop'
-alias ins='sudo apt install -y'
-alias uins='sudo apt remove -y'
+alias ins='sudo pacman -S'
+alias uins='sudo pacman -R'
 alias e='exit'
 alias :q='exit'
 alias l='clear ; ls -lah'
@@ -124,6 +123,11 @@ alias tdl='trash ~/Downloads/*'
 export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+export FZF_DEFAULT_OPTS='
+  --color fg:#ebdbb2,bg:#282828,hl:#fabd2f,fg+:#ebdbb2,bg+:#3c3836,hl+:#fabd2f
+  --color info:#83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#83a598,marker:#fe8019,header:#665c54
+'
+
 function fc -d "Fuzzy change directory"
 	if set -q argv[1]
 	set searchdir $argv[1]
@@ -165,7 +169,6 @@ alias prettier='prettier --write .'
 alias ok='prettier ; yo ; push '
 
 function ghdotfiles
-    cp -r ~/.fonts ~/git/dotfiles
     cp -r ~/.config/vifm/* ~/git/dotfiles/vifm
 	cp ~/.selected_editor ~/git/dotfiles
 	cp ~/.gitconfig  ~/git/dotfiles/git/
@@ -175,7 +178,6 @@ function ghdotfiles
 	cp -r ~/.config/nvim/stuff ~/git/dotfiles/nvim/
 	cp -r ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
 	cp -r ~/.config/fish/* ~/git/dotfiles/fish/
-	cp ~/.ssh/config ~/git/ok/ssh/
 	cd ~/git/dotfiles/
 	ok ; cd -
 end
@@ -260,7 +262,7 @@ end
 
 # browser
 # alias browser='brave-browser'
-alias browser='firefox'
+alias browser='firefox-developer-edition'
 alias github='browser "https://github.com/thuanpham2311"'
 
 alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
@@ -321,7 +323,7 @@ end
 
 # mode
 alias hi='browser_daily'
-alias rem='sudo apt update; sudo apt upgrade -y; sudo npm i -g npm; sudo apt autoremove -y; sudo apt autoclean -y'
+alias rem='sudo pacman -Syu'
 alias procpp='cp -r ~/.config/nvim/stuff/cpppro/* . ; v *'
 
 function dataLab --description "setup for data research"
