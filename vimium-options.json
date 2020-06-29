@@ -18,20 +18,24 @@
       "passKeys": "/"
     },
     {
+      "pattern": "https?://tasks.google.com/*",
+      "passKeys": "4"
+    },
+    {
+      "pattern": "https?://tasks.google.com/*",
+      "passKeys": ""
+    },
+    {
       "pattern": "https?://calendar.google.com/*",
-      "passKeys": "e"
+      "passKeys": "4"
+    },
+    {
+      "pattern": "https?://calendar.google.com/*",
+      "passKeys": "w"
     },
     {
       "pattern": "https?://calendar.google.com/*",
       "passKeys": "d"
-    },
-    {
-      "pattern": "https?://calendar.google.com/*",
-      "passKeys": "j"
-    },
-    {
-      "pattern": "https?://calendar.google.com/*",
-      "passKeys": "k"
     }
   ],
   "filterLinkHints": false,
@@ -49,6 +53,6 @@
   "smoothScroll": true,
   "grabBackFocus": false,
   "searchEngines": "g: https://www.google.com/search?q=%s Google\ngi: https://www.google.com/search?tbm=isch&q=%s Google Images\ngm: https://www.google.com/maps?q=%s Google Maps\nrecent: https://www.google.com/search?hl=en&tbo=1&tbs=qdr:y&q=%s Google (last year only)\nt: https://translate.google.com/?source=osdd#auto|auto|%s Google Translator\nw: https://en.wikipedia.org/wiki/Special:Search?search=%s Wikipedia\nd: https://duckduckgo.com/?q=%s DuckDuckGo\ndi: https://duckduckgo.com/?q=%s&iax=images&ia=images DuckDuckGoImage\ngh: https://github.com/search?q=%s GitHub\nso: https://stackoverflow.com/search?q=%s StackOverflow\nu: https://www.urbandictionary.com/define.php?term=%s UrbanDictionary\ny: https://www.youtube.com/results?search_query=%s YouTube\nf: https://www.facebook.com/search?q=%s Facebook\nm: https://medium.com/search?q=%s Medium\n# Find your way from your home to places using Google Maps\nhome: https://www.google.com/maps/dir/home/%s Want to go?",
-  "searchUrl": "https://www.google.com/search?q=",
-  "userDefinedLinkHintCss": "div.vimiumHUD {\n\twidth: auto;\n\tleft: 207px;\n}\n\ndiv > .vimiumHintMarker {\n/* linkhint boxes */\nbackground: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF785),\n  color-stop(100%,#FFC542));\nborder: 1px solid #E3BE23;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\ncolor: black;\nfont-weight: bold;\nfont-size: 12px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n}"
+  "searchUrl": "https://duckduckgo.com/?q=%s",
+  "userDefinedLinkHintCss": "div.vimiumHUD span#hud-find-input,\ndiv.vimiumHUD span#hud-match-count {\n  color: #3f3f3f;\n}\ndiv.vimiumHUD .hud-find {\n  background: #f8efe4;\n  border: 1px solid #f8efe4;\n}\n#vomnibar input {\n  color: #f8efe4;\n  background-color: #3f3f3f;\n  border-color: #3f3f3f;\n}\ndiv.vimiumHUD {\n  width: auto;\n  left: 207px;\n}\ndiv.vimiumHUD .vimiumHUDSearchArea {\n  background-color: #3f3f3f;\n}\ndiv.vimiumHUD .vimiumHUDSearchAreaInner {\n  color: #f8efe4;\n}\n\ndiv > .vimiumHintMarker {\n  /* linkhint boxes */\n  background: -webkit-gradient(\n    linear,\n    left top,\n    left bottom,\n    color-stop(0%, #fff785),\n    color-stop(100%, #ffc542)\n  );\n  border: 1px solid #e3be23;\n}\n\ndiv > .vimiumHintMarker span {\n  /* linkhint text */\n  color: black;\n  font-weight: bold;\n  font-size: 12px;\n}\n\ninput#vomnibarInput.vimiumReset {\n  color: #fff !important;\n  background-color: #111 !important;\n}\n\n#vomnibar {\n  border-color: black;\n  background-color: black;\n}\n\n#vomnibar .vomnibarSearchArea {\n  background-color: #222;\n  border-bottom: #3f3f3f;\n}\n\n#vomnibar ul {\n  background-color: #222;\n}\n\n#vomnibar li {\n  border-bottom: #3f3f3f;\n}\n\n#vomnibar li .vomnibarUrl {\n  color: #eaea99;\n}\n\n#vomnibar li .vomnibarMatch {\n  color: white;\n}\n\n#vomnibar li.vomnibarSelected {\n  background-color: #000000;\n}\n\n#vomnibar li em .vomnibarMatch,\n#vomnibar li .vomnibarTitle .vomnibarMatch {\n  color: white;\n}\n\n#vomnibar li em,\n#vomnibar li .vomnibarTitle {\n  color: #ddd;\n}"
 }
