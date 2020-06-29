@@ -282,8 +282,8 @@ function browser_daily
     cowsay "GET.SHIT.DONE"
     browser_youtube_subsriptions
 	browser_linkedin
-	browser_mail0
-	browser_mail1
+    # browser_mail0
+    # browser_mail1
 	browser_stu
 	browser_fb
 end
