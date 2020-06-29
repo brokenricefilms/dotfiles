@@ -94,6 +94,7 @@ alias o='open'
 alias 777='chmod -R 777'
 alias x='chmod +x'
 alias cf='cd ~/.config/ ; nvim -o (fzf)'
+alias f='fd . -H | grep'
 
 # tmux
 # alias ide='tmux split-window -v -p 30 ; tmux split-window -h -p 66 ; tmux split-window -h -p 50'
@@ -263,8 +264,8 @@ function gla --description "git pull all project"
 end
 
 # browser
-# alias browser='brave'
-alias browser='firefox-developer-edition'
+alias browser='brave'
+# alias browser='firefox-developer-edition'
 alias github='browser "https://github.com/thuanpham2311"'
 
 alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
