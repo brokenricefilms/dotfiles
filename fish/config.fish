@@ -75,12 +75,13 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 
 # lazy code
+alias fd='fdfind'
 alias cpf='xclip -sel clip'
 alias fishr='source ~/.config/fish/config.fish'
 alias g='grep'
 alias h='htop'
-alias ins='sudo pacman -S'
-alias uins='sudo pacman -R'
+alias ins='sudo apt install -y'
+alias uins='sudo apt remove -y'
 alias e='exit'
 alias :q='exit'
 alias l='clear ; ls -lah'
@@ -279,7 +280,7 @@ function gla --description "git pull all project"
 end
 
 # browser
-alias browser='brave'
+alias browser='brave-browser'
 # alias browser='firefox-developer-edition'
 alias github='browser "https://github.com/thuanpham2311"'
 
@@ -342,7 +343,7 @@ end
 
 # mode
 alias hi='browser_daily ; gla ; gha'
-alias rem='sudo pacman -Syu ; gla ; gha'
+alias rem='sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y; sudo apt autoclean -y; gla ; gha'
 alias procpp='cp -r ~/.config/nvim/stuff/cpppro/* . ; v *'
 
 function dataLab --description "setup for data research"
