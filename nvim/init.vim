@@ -19,20 +19,6 @@ noremap <leader>b :Buffers<CR>
 nmap <leader><tab> <plug>(fzf-maps-n)
 " Advanced customization using Vim function
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
-" let g:fzf_colors =
-" \ { 'fg':      ['fg', 'Normal'],
-  " \ 'bg':      ['bg', 'Normal'],
-  " \ 'hl':      ['fg', 'Comment'],
-  " \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  " \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  " \ 'hl+':     ['fg', 'Statement'],
-  " \ 'info':    ['fg', 'PreProc'],
-  " \ 'border':  ['fg', 'Ignore'],
-  " \ 'prompt':  ['fg', 'Conditional'],
-  " \ 'pointer': ['fg', 'Exception'],
-  " \ 'marker':  ['fg', 'Keyword'],
-  " \ 'spinner': ['fg', 'Label'],
-  " \ 'header':  ['fg', 'Comment'] }
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
@@ -109,10 +95,10 @@ call plug#end()
 
 " theme
 set termguicolors
-" set background=light
-" colorscheme PaperColor
-set background=dark
-colorscheme gruvbox8
+set background=light
+colorscheme PaperColor
+" set background=dark
+" colorscheme gruvbox8
 
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>

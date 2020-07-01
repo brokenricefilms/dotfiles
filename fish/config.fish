@@ -126,10 +126,17 @@ alias tdl='trash ~/Downloads/*'
 export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-export FZF_DEFAULT_OPTS='
-  --color fg:#ebdbb2,bg:#282828,hl:#fabd2f,fg+:#ebdbb2,bg+:#3c3836,hl+:#fabd2f
-  --color info:#83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#83a598,marker:#fe8019,header:#665c54
-'
+# gruvbox
+# export FZF_DEFAULT_OPTS='
+  # --color fg:#ebdbb2,bg:#282828,hl:#fabd2f,fg+:#ebdbb2,bg+:#3c3836,hl+:#fabd2f
+  # --color info:#83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#83a598,marker:#fe8019,header:#665c54
+# '
+# paper color
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+    --color=fg:#4d4d4c,bg:#eeeeee,hl:#d7005f
+    --color=fg+:#4d4d4c,bg+:#e8e8e8,hl+:#d7005f
+    --color=info:#4271ae,prompt:#8959a8,pointer:#d7005f
+    --color=marker:#4271ae,spinner:#4271ae,header:#4271ae'
 
 function fc -d "Fuzzy change directory"
 	if set -q argv[1]
@@ -191,8 +198,9 @@ alias ghvimium_dark_theme='cd ~/git/vimium_dark_theme ; ok ; cd -'
 alias ghFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; ok ; cd -'
 alias ghok='cd ~/git/ok ; ok ; cd -'
 alias ghdataLab='cd ~/git/dataLab ; ok ; cd -'
-alias ghwindowsSetup='cd ~/git/windowsSetup ;  ok ; cd -'
-alias ghtermuxSetup='cd ~/git/termuxSetup ;  ok ; cd -'
+alias ghwindowsSetup='cd ~/git/windowsSetup ; ok ; cd -'
+alias ghtermuxSetup='cd ~/git/termuxSetup ; ok ; cd -'
+alias ghimg='cd ~/git/img ; ok ; cd -'
 
 function gha --description "git push all project"
 	cowsay "git push lazyscript"
@@ -221,6 +229,9 @@ function gha --description "git push all project"
 
 	cowsay "git push termuxSetup" 
     ghtermuxSetup
+
+	cowsay "git push img" 
+    ghimg
 	cowsay "D O N E"
 end
 
@@ -233,6 +244,7 @@ alias glok='cd ~/git/ok ; pull ; cd -'
 alias gldataLab='cd ~/git/dataLab ; pull ; cd -'
 alias glwindowsSetup='cd ~/git/windowsSetup ;  pull ; cd -'
 alias gltermuxSetup='cd ~/git/termuxSetup ;  pull ; cd -'
+alias glimg='cd ~/git/img ; pull ; cd -'
 
 function gla --description "git pull all project"
 	cowsay "git pull lazyscript" 
@@ -261,6 +273,9 @@ function gla --description "git pull all project"
 
 	cowsay "git pull termuxSetup" 
     gltermuxSetup
+
+	cowsay "git pull img" 
+    glimg
 end
 
 # browser
