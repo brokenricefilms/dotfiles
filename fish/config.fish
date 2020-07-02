@@ -281,7 +281,6 @@ end
 
 # browser
 alias browser='brave-browser'
-# alias browser='firefox-developer-edition'
 alias github='browser "https://github.com/thuanpham2311"'
 
 alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
@@ -298,8 +297,8 @@ function browser_daily
     cowsay "GET.SHIT.DONE"
     browser_youtube_subsriptions
 	browser_linkedin
-    # browser_mail0
-    # browser_mail1
+    browser_mail0
+    browser_mail1
 	browser_stu
 	browser_fb
 end
