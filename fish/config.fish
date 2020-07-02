@@ -178,6 +178,7 @@ alias clone='git clone'
 alias commit='git commit -m'
 alias prettier='prettier --write .'
 alias ok='prettier ; yo ; push '
+alias okk='yo ; push'
 
 function ghdotfiles
     cp -r ~/.config/vifm/* ~/git/dotfiles/vifm
@@ -202,6 +203,7 @@ alias ghdataLab='cd ~/git/dataLab ; ok ; cd -'
 alias ghwindowsSetup='cd ~/git/windowsSetup ; ok ; cd -'
 alias ghtermuxSetup='cd ~/git/termuxSetup ; ok ; cd -'
 alias ghimg='cd ~/git/img ; ok ; cd -'
+alias ghnote='cd ~/git/note ; okk ; cd -'
 
 function gha --description "git push all project"
 	cowsay "git push lazyscript"
@@ -233,6 +235,9 @@ function gha --description "git push all project"
 
 	cowsay "git push img" 
     ghimg
+
+	cowsay "git push note" 
+    ghnote
 	cowsay "D O N E"
 end
 
@@ -246,6 +251,7 @@ alias gldataLab='cd ~/git/dataLab ; pull ; cd -'
 alias glwindowsSetup='cd ~/git/windowsSetup ;  pull ; cd -'
 alias gltermuxSetup='cd ~/git/termuxSetup ;  pull ; cd -'
 alias glimg='cd ~/git/img ; pull ; cd -'
+alias glnote='cd ~/git/note ; pull ; cd -'
 
 function gla --description "git pull all project"
 	cowsay "git pull lazyscript" 
@@ -277,6 +283,9 @@ function gla --description "git pull all project"
 
 	cowsay "git pull img" 
     glimg
+
+	cowsay "git pull note" 
+    glnote
 end
 
 # browser
