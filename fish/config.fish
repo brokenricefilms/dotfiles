@@ -293,7 +293,7 @@ alias browser='brave-browser'
 alias github='browser "https://github.com/thuanpham2311"'
 
 alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
-alias browser_fb='browser https://facebookp.com'
+alias browser_fb='browser https://facebook.com'
 alias browser_stu='browser "http://stu.edu.vn/"'
 alias browser_stu2='browser "http://www.stu.edu.vn/vi/265/khoa-cong-nghe-thong-tin.html"'
 alias browser_mail0='browser "https://mail.google.com/mail/u/0/#inbox"'
