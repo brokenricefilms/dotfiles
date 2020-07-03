@@ -177,8 +177,8 @@ alias pull="git pull"
 alias clone='git clone'
 alias commit='git commit -m'
 alias prettier='prettier --write .'
-alias ok='prettier ; yo ; push '
-alias okk='yo ; push'
+alias okp='prettier ; yo ; push '
+alias ok='yo ; push'
 
 function ghdotfiles
     cp -r ~/.config/vifm/* ~/git/dotfiles/vifm
@@ -191,19 +191,19 @@ function ghdotfiles
 	cp -r ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
 	cp -r ~/.config/fish/* ~/git/dotfiles/fish/
 	cd ~/git/dotfiles/
-	ok ; cd -
+	okp ; cd -
 end
 
-alias ghlazyscript='cd ~/git/lazyscript ; ok ; cd -'
-alias ghlinux_setup='cd ~/git/linux_setup ; ok ; cd -'
-alias ghvimium_dark_theme='cd ~/git/vimium_dark_theme ; ok ; cd -'
-alias ghFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; ok ; cd -'
-alias ghok='cd ~/git/ok ; ok ; cd -'
-alias ghdataLab='cd ~/git/dataLab ; ok ; cd -'
-alias ghwindowsSetup='cd ~/git/windowsSetup ; ok ; cd -'
-alias ghtermuxSetup='cd ~/git/termuxSetup ; ok ; cd -'
-alias ghimg='cd ~/git/img ; ok ; cd -'
-alias ghnote='cd ~/git/note ; okk ; cd -'
+alias ghlazyscript='cd ~/git/lazyscript ; okp ; cd -'
+alias ghlinux_setup='cd ~/git/linux_setup ; okp ; cd -'
+alias ghvimium_dark_theme='cd ~/git/vimium_dark_theme ; okp ; cd -'
+alias ghFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; okp ; cd -'
+alias ghok='cd ~/git/okp ; ok ; cd -'
+alias ghdataLab='cd ~/git/dataLab ; okp ; cd -'
+alias ghwindowsSetup='cd ~/git/windowsSetup ; okp ; cd -'
+alias ghtermuxSetup='cd ~/git/termuxSetup ; okp ; cd -'
+alias ghimg='cd ~/git/img ; okp ; cd -'
+alias ghnote='cd ~/git/note ; ok ; cd -'
 
 function gha --description "git push all project"
 	cowsay "git push lazyscript"
@@ -221,7 +221,7 @@ function gha --description "git push all project"
 	cowsay "git push FreeCodeCampProject" 
 	ghFreeCodeCampProject
 
-	cowsay "git push ok" 
+	cowsay "git push okp" 
 	ghok
 
 	cowsay "git push dataLab" 
@@ -269,7 +269,7 @@ function gla --description "git pull all project"
 	cowsay "git pull FreeCodeCampProject" 
 	glFreeCodeCampProject 
 
-	cowsay "git pull ok" 
+	cowsay "git pull okp" 
 	glok
 
 	cowsay "git pull dataLab" 
@@ -293,7 +293,7 @@ alias browser='brave-browser'
 alias github='browser "https://github.com/thuanpham2311"'
 
 alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
-alias browser_fb='browser https://facebook.com'
+alias browser_fb='browser https://facebookp.com'
 alias browser_stu='browser "http://stu.edu.vn/"'
 alias browser_stu2='browser "http://www.stu.edu.vn/vi/265/khoa-cong-nghe-thong-tin.html"'
 alias browser_mail0='browser "https://mail.google.com/mail/u/0/#inbox"'
@@ -342,7 +342,7 @@ function !gh
 end
 
 function !fa
-	browser --new-window "https://www.facebook.com/search?q=$argv"
+	browser --new-window "https://www.facebookp.com/search?q=$argv"
 end
 
 function !m
@@ -357,5 +357,5 @@ alias procpp='cp -r ~/.config/nvim/stuff/cpppro/* . ; v *'
 function dataLab --description "setup for data research"
 	cd ~/git/dataLab/
 	tmux split-window -h -p 50
-	jupyter-notebook
+	jupyter-notebookp
 end
