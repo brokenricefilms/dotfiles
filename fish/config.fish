@@ -304,7 +304,7 @@ alias browser_linkedin='browser "https://www.linkedin.com/feed/"'
 
 function browser_daily
     cowsay "GET.SHIT.DONE"
-    browser_youtube_subsriptions
+    # browser_youtube_subsriptions
 	browser_linkedin
     browser_mail0
     browser_mail1
