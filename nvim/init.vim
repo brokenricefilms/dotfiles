@@ -1,4 +1,7 @@
 call plug#begin()
+Plug 'preservim/nerdtree'
+map <C-n> :NERDTreeToggle<CR>
+
 Plug 'easymotion/vim-easymotion'
 " easymotion
 nmap <silent> ;; <Plug>(easymotion-overwin-f)
@@ -16,9 +19,6 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 noremap <leader>t :Files<CR>
 noremap <leader>b :Buffers<CR>
-nmap <leader><tab> <plug>(fzf-maps-n)
-" Advanced customization using Vim function
-inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
@@ -102,7 +102,6 @@ colorscheme PaperColor
 
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
-nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 
 filetype plugin indent on
 set encoding=UTF-8
