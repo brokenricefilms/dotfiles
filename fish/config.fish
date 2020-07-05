@@ -228,7 +228,7 @@ function gha --description "git push all project"
 	cowsay "git push FreeCodeCampProject" 
 	ghFreeCodeCampProject
 
-	cowsay "git push okp" 
+	cowsay "git push ok" 
 	ghok
 
 	cowsay "git push dataLab" 
@@ -276,7 +276,7 @@ function gla --description "git pull all project"
 	cowsay "git pull FreeCodeCampProject" 
 	glFreeCodeCampProject 
 
-	cowsay "git pull okp" 
+	cowsay "git pull ok" 
 	glok
 
 	cowsay "git pull dataLab" 
@@ -349,7 +349,7 @@ function !gh
 end
 
 function !fa
-	browser --new-window "https://www.facebookp.com/search?q=$argv"
+	browser --new-window "https://www.facebook.com/search?q=$argv"
 end
 
 function !m
@@ -363,5 +363,5 @@ alias rem='sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y; sudo ap
 function dataLab --description "setup for data research"
 	cd ~/git/dataLab/
 	tmux split-window -h -p 50
-	jupyter-notebookp
+	jupyter-notebook
 end
