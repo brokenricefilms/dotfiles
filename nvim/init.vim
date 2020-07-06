@@ -101,7 +101,7 @@ set background=dark
 colorscheme gruvbox8
 
 nnoremap <leader>u :UndotreeShow<CR>
-nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
+nnoremap <Leader><CR> :source ~/.config/nvim/init.vim<CR>
 
 filetype plugin indent on
 set encoding=UTF-8
