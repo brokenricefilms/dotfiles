@@ -198,6 +198,7 @@ function ghdotfiles
 	cp -r ~/.config/nvim/stuff ~/git/dotfiles/nvim/
 	cp -r ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
 	cp -r ~/.config/fish/* ~/git/dotfiles/fish/
+    crontab -l > ~/git/dotfiles/crontab/crontabConfig
 	cd ~/git/dotfiles/
 	okp ; cd -
 end

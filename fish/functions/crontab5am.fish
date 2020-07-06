@@ -1,3 +1,3 @@
 #!/usr/bin/env fish
 
-hi
+browser_daily
