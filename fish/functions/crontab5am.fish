@@ -1,3 +1,4 @@
 #!/usr/bin/env fish
 
-browser_daily
+export DISPLAY=:0
+hi
