@@ -357,8 +357,8 @@ end
 alias hi='browser_daily'
 alias rem='sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y; sudo apt autoclean -y; gla ; gha'
 
-function dataLab --description "setup for data research"
+function data --description "setup for data research"
 	cd ~/git/dataLab/
 	tmux split-window -h -p 50
-	jupyter-notebook
+	jupyter lab
 end
