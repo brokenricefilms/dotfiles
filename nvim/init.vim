@@ -48,6 +48,7 @@ let g:coc_global_extensions = [
                         \ "coc-python",
                         \ "coc-clangd",
                         \ "coc-sh",
+                        \ "coc-sql",
                         \ "coc-tsserver",]
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
@@ -93,10 +94,10 @@ call plug#end()
 
 " theme
 set termguicolors
-" set background=light
-" colorscheme PaperColor
-set background=dark
-colorscheme gruvbox8
+set background=light
+colorscheme PaperColor
+" set background=black
+" colorscheme gruvbox8
 
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <Leader><CR> :source ~/.config/nvim/init.vim<CR>
