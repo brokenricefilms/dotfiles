@@ -159,12 +159,12 @@ augroup END
 
 
 function! CheckShFile()
-    normal!i#!/usr/bin/env sh
+    normal!i#! /usr/bin/env sh
     normal!o
 endfunction
 
 function! CheckPyFile()
-    normal!i#!/usr/bin/env python3
+    normal!i#! /usr/bin/env python3
     normal!o
 endfunction
 
@@ -178,6 +178,6 @@ function! CheckCppFile()
 endfunction
 
 function! CheckFishFile()
-    normal!i#!/usr/bin/env fish
+    normal!i#! /usr/bin/env fish
     normal!o
 endfunction
