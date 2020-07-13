@@ -387,7 +387,7 @@ function !m
 end
 
 # mode
-alias hi='browser_daily'
+alias hi='tv; browser_daily'
 alias rem='sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y; sudo apt autoclean -y'
 
 function data --description "setup for data research"
