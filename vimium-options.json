@@ -50,10 +50,6 @@
       "passKeys": "/"
     },
     {
-      "pattern": "https?://github.com/*",
-      "passKeys": "t"
-    },
-    {
       "pattern": "https?://127.0.0.1:8888/*",
       "passKeys": ""
     },
