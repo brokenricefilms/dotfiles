@@ -233,6 +233,7 @@ function ghdotfiles
 	cp -r ~/.config/fish/* ~/git/dotfiles/fish/
     crontab -l > ~/git/dotfiles/crontab/crontabConfig
     cp ~/.config/fish/functions/crontab* ~/git/dotfiles/crontab/
+    dconf dump /org/gnome/desktop/wm/keybindings/ > ~/git/dotfiles/keybindings.dconf
 	cd ~/git/dotfiles/
 	okp ; cd -
 end

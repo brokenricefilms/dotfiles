@@ -18,6 +18,7 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 noremap <leader>t :Files<CR>
 noremap <leader>b :Buffers<CR>
+noremap <c-p> :GFiles<CR>
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
