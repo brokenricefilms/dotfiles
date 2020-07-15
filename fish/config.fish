@@ -104,6 +104,7 @@ alias 777='chmod -R 777'
 alias x='chmod +x'
 alias cf='cd ~/.config/ ; nvim -o (fzf)'
 alias f='fd . -H | grep'
+alias cat='batcat'
 
 # tmux
 # alias ide='tmux split-window -v -p 30 ; tmux split-window -h -p 66 ; tmux split-window -h -p 50'
