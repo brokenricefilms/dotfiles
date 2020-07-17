@@ -191,8 +191,44 @@ d/usr/share/icons/Yaru
 	256x256@2x
 15
 d/usr/share/icons/Yaru/256x256@2x
-	..
-0
+	devices
+4
+d/usr/share/icons/Yaru/256x256@2x/devices
+	input-mouse.png
+19
+d/usr/share/icons/Yaru/256x256@2x
+	devices
+4
+d/usr/share/icons/Yaru/256x256@2x/devices
+	gtk-cdrom.png
+16
+d/usr/share/icons/Yaru/256x256@2x
+	devices
+4
+d/usr/share/icons/Yaru
+	256x256@2x
+15
+d/usr/share/icons
+	Yaru
+8
+d/usr/share
+	icons
+54
+d/usr
+	share
+11
+d/
+	sys
+20
+d/home/master
+	Pictures
+22
+d/home/master/Pictures
+	light_get-shit-done-wallpaper-part-2-1920x1080.jpg
+1
+d/home/master
+	Pictures
+22
 d
 
 # Right window history (oldest to newest):
@@ -214,7 +250,11 @@ D
 # Local filter history (oldest to newest):
 
 # Registers:
-""/home/master/.local/share/vifm/Trash/000_skating.gif
+""/home/master/.local/share/vifm/Trash/000_Screenshot from 2020-07-08 07-34-27.png
+""/home/master/.local/share/vifm/Trash/000_Screenshot from 2020-07-08 07-34-39.png
+""/home/master/.local/share/vifm/Trash/000_Screenshot from 2020-07-08 07-34-54.png
+""/home/master/.local/share/vifm/Trash/000_Screenshot from 2020-07-08 07-35-01.png
+""/home/master/.local/share/vifm/Trash/000_Screenshot from 2020-07-08 07-35-04.png
 
 # Directory stack (oldest to newest):
 
@@ -229,6 +269,16 @@ t/home/master/.local/share/vifm/Trash/000_note dfff81d1d26145ffafb706981f930dfb.
 	/home/master/git/note/notion/img/note dfff81d1d26145ffafb706981f930dfb.csv
 t/home/master/.local/share/vifm/Trash/000_skating.gif
 	/home/master/git/note/notion/img/skating.gif
+t/home/master/.local/share/vifm/Trash/000_Screenshot from 2020-07-08 07-34-27.png
+	/home/master/Pictures/Screenshot from 2020-07-08 07-34-27.png
+t/home/master/.local/share/vifm/Trash/000_Screenshot from 2020-07-08 07-34-39.png
+	/home/master/Pictures/Screenshot from 2020-07-08 07-34-39.png
+t/home/master/.local/share/vifm/Trash/000_Screenshot from 2020-07-08 07-34-54.png
+	/home/master/Pictures/Screenshot from 2020-07-08 07-34-54.png
+t/home/master/.local/share/vifm/Trash/000_Screenshot from 2020-07-08 07-35-01.png
+	/home/master/Pictures/Screenshot from 2020-07-08 07-35-01.png
+t/home/master/.local/share/vifm/Trash/000_Screenshot from 2020-07-08 07-35-04.png
+	/home/master/Pictures/Screenshot from 2020-07-08 07-35-04.png
 
 # State:
 f
