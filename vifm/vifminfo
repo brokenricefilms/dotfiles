@@ -22,6 +22,12 @@ l2
 r2
 
 # Left window history (oldest to newest):
+d/usr/share/icons/Yaru/48x48
+	emblems
+5
+d/usr/share/icons/Yaru/48x48/emblems
+	emblem-personal.png
+17
 d/home/master
 	Downloads
 11
@@ -179,8 +185,14 @@ d/home/master/git/lazyscript/nhapMonLapTrinh
 	phamTanThuanDH51902283_nhapMonLapTrinh_week5.cpp
 5
 d/usr/share/icons
-	ePapirus
-12
+	Yaru
+8
+d/usr/share/icons/Yaru
+	256x256@2x
+15
+d/usr/share/icons/Yaru/256x256@2x
+	..
+0
 d
 
 # Right window history (oldest to newest):
