@@ -77,19 +77,24 @@ set -g -x fish_greeting GET.SHIT.DONE.
 set -g fish_term24bit 1
 fzf_key_bindings
 fish_vi_key_bindings
+
 set -U EDITOR nvim
 export EDITOR='nvim'
 export VISUAL='nvim'
 
 # lazy code
 alias tv='switchTv'
-alias fd='fdfind'
+# alias fd='fdfind'
 alias cpf='xclip -sel clip'
 alias fishr='source ~/.config/fish/config.fish'
 alias g='grep'
 alias h='htop'
-alias ins='sudo apt install -y'
-alias uins='sudo apt remove -y'
+# ubuntu apt
+# alias ins='sudo apt install -y'
+# alias uins='sudo apt remove -y'
+# fedora dnf
+alias ins='sudo dnf install -y'
+alias uins='sudo dnf remove -y'
 alias e='exit'
 alias :q='exit'
 alias l='clear ; ls -lah'
@@ -135,11 +140,6 @@ alias tdl='trash ~/Downloads/*'
 export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-# gruvbox
-# export FZF_DEFAULT_OPTS='
-  # --color fg:ebdbb2,bg:#282828,hl:#fabd2f,fg+:#ebdbb2,bg+:#3c3836,hl+:#fabd2f
-  # --color info:83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#83a598,marker:#fe8019,header:#665c54
-# '
 # paper color
 # export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
     # --color=fg:#4d4d4c,bg:#eeeeee,hl:#d7005f
@@ -147,17 +147,17 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
     # --color=info:#4271ae,prompt:#8959a8,pointer:#d7005f
     # --color=marker:#4271ae,spinner:#4271ae,header:#4271ae'
 
-# Base16 Default Light
+# Base16 Default Dark
 # Author: Chris Kempson (http://chriskempson.com)
 
-set -l color00 '#f8f8f8'
-set -l color01 '#e8e8e8'
-set -l color02 '#d8d8d8'
-set -l color03 '#b8b8b8'
-set -l color04 '#585858'
-set -l color05 '#383838'
-set -l color06 '#282828'
-set -l color07 '#181818'
+set -l color00 '#181818'
+set -l color01 '#282828'
+set -l color02 '#383838'
+set -l color03 '#585858'
+set -l color04 '#b8b8b8'
+set -l color05 '#d8d8d8'
+set -l color06 '#e8e8e8'
+set -l color07 '#f8f8f8'
 set -l color08 '#ab4642'
 set -l color09 '#dc9656'
 set -l color0A '#f7ca88'
@@ -389,7 +389,7 @@ end
 
 # mode
 alias hi='tv; browser_daily'
-alias rem='sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y; sudo apt autoclean -y'
+alias rem='sudo dnf update -y ; sudo dnf autoremove'
 
 function data --description "setup for data research"
 	cd ~/git/dataLab/
