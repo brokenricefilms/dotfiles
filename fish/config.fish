@@ -129,8 +129,8 @@ function c
 end
 
 # youtube-dl
-alias yt='youtube-dl --add-metadata -i (read $link)'
-alias yta='yt -x --audio-format mp3 (read $link)'
+alias yt='youtube-dl --add-metadata -i'
+alias yta='yt -x --audio-format mp3'
 
 # trash-cli
 alias t='trash'
