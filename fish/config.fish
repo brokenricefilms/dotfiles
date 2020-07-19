@@ -84,17 +84,17 @@ export VISUAL='nvim'
 
 # lazy code
 alias tv='switchTv'
-# alias fd='fdfind'
+alias fd='fdfind'
 alias cpf='xclip -sel clip'
 alias fishr='source ~/.config/fish/config.fish'
 alias g='grep'
 alias h='htop'
 # ubuntu apt
-# alias ins='sudo apt install -y'
-# alias uins='sudo apt remove -y'
+alias ins='sudo apt install -y'
+alias uins='sudo apt remove -y'
 # fedora dnf
-alias ins='sudo dnf install -y'
-alias uins='sudo dnf remove -y'
+# alias ins='sudo dnf install -y'
+# alias uins='sudo dnf remove -y'
 alias e='exit'
 alias :q='exit'
 alias l='clear ; ls -lah'
@@ -328,7 +328,8 @@ function gla --description "git pull all project"
 end
 
 # browser
-alias browser='brave-browser'
+# alias browser='brave-browser'
+alias browser='firefox'
 alias github='browser "https://github.com/thuanpham2311"'
 
 alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
@@ -390,7 +391,8 @@ end
 
 # mode
 alias hi='tv; browser_daily'
-alias rem='sudo dnf update -y ; sudo dnf autoremove'
+# alias rem='sudo dnf update -y ; sudo dnf autoremove'
+alias rem='sudo apt update ; sudo apt upgrade -y ; sudo apt autoremove -y ; sudo apt autoclean'
 
 function data --description "setup for data research"
 	cd ~/git/dataLab/
