@@ -348,8 +348,8 @@ function browser_daily
 	browser_linkedin
     browser_mail0
     browser_mail1
-	browser_stu
 	browser_fb
+	browser_stu
 end
 
 ## search
