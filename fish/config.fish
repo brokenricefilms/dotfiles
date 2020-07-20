@@ -391,7 +391,7 @@ end
 
 # mode
 alias hi='tv; browser_daily'
-alias rem='sudo dnf update -y ; sudo dnf autoremove'
+alias rem='sudo dnf update -y ; sudo dnf autoremove -y'
 # alias rem='sudo apt update ; sudo apt upgrade -y ; sudo apt autoremove -y ; sudo apt autoclean'
 
 function data --description "setup for data research"
