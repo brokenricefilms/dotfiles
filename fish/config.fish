@@ -84,17 +84,17 @@ export VISUAL='nvim'
 
 # lazy code
 alias tv='switchTv'
-# alias fd='fdfind'
+alias fd='fdfind'
 alias cpf='xclip -sel clip'
 alias fishr='source ~/.config/fish/config.fish'
 alias g='grep'
 alias h='htop'
 # ubuntu apt
-# alias ins='sudo apt install -y'
-# alias uins='sudo apt remove -y'
+alias ins='sudo apt install -y'
+alias uins='sudo apt remove -y'
 # fedora dnf
-alias ins='sudo dnf install -y'
-alias uins='sudo dnf remove -y'
+# alias ins='sudo dnf install -y'
+# alias uins='sudo dnf remove -y'
 alias e='exit'
 alias :q='exit'
 alias l='clear ; ls -lah'
@@ -118,15 +118,24 @@ alias qa='tmux ls; tmux kill-session -a'
 # cd
 alias ..='cd .. ; clear ; l'
 alias ...='cd .. ; cd .. ; cd .. ; clear ; l'
-alias ....='cd .. ; cd .. ; cd .. ; cd .. ; clear ; l'
-alias dow='c ~/Downloads'
-alias doc='c ~/Documents'
 
 # function c
 	# cd $argv
 	# clear
 	# ls -ltrh
 # end
+
+function dow
+    cd ~/Downloads
+    clear
+    ls -ltrh
+end
+
+function doc
+    cd ~/Documents
+    clear
+    ls -ltrh
+end
 
 # youtube-dl
 alias yt='youtube-dl --add-metadata -i'
@@ -141,44 +150,44 @@ export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # paper color
-# export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-    # --color=fg:#4d4d4c,bg:#eeeeee,hl:#d7005f
-    # --color=fg+:#4d4d4c,bg+:#e8e8e8,hl+:#d7005f
-    # --color=info:#4271ae,prompt:#8959a8,pointer:#d7005f
-    # --color=marker:#4271ae,spinner:#4271ae,header:#4271ae'
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+    --color=fg:#4d4d4c,bg:#eeeeee,hl:#d7005f
+    --color=fg+:#4d4d4c,bg+:#e8e8e8,hl+:#d7005f
+    --color=info:#4271ae,prompt:#8959a8,pointer:#d7005f
+    --color=marker:#4271ae,spinner:#4271ae,header:#4271ae'
 
 # Base16 Default Dark
 # Author: Chris Kempson (http://chriskempson.com)
 
-set -l color00 '#181818'
-set -l color01 '#282828'
-set -l color02 '#383838'
-set -l color03 '#585858'
-set -l color04 '#b8b8b8'
-set -l color05 '#d8d8d8'
-set -l color06 '#e8e8e8'
-set -l color07 '#f8f8f8'
-set -l color08 '#ab4642'
-set -l color09 '#dc9656'
-set -l color0A '#f7ca88'
-set -l color0B '#a1b56c'
-set -l color0C '#86c1b9'
-set -l color0D '#7cafc2'
-set -l color0E '#ba8baf'
-set -l color0F '#a16946'
+# set -l color00 '#181818'
+# set -l color01 '#282828'
+# set -l color02 '#383838'
+# set -l color03 '#585858'
+# set -l color04 '#b8b8b8'
+# set -l color05 '#d8d8d8'
+# set -l color06 '#e8e8e8'
+# set -l color07 '#f8f8f8'
+# set -l color08 '#ab4642'
+# set -l color09 '#dc9656'
+# set -l color0A '#f7ca88'
+# set -l color0B '#a1b56c'
+# set -l color0C '#86c1b9'
+# set -l color0D '#7cafc2'
+# set -l color0E '#ba8baf'
+# set -l color0F '#a16946'
 
-set -l FZF_NON_COLOR_OPTS
+# set -l FZF_NON_COLOR_OPTS
 
-for arg in (echo $FZF_DEFAULT_OPTS | tr " " "\n")
-    if not string match -q -- "--color*" $arg
-        set -a FZF_NON_COLOR_OPTS $arg
-    end
-end
+# for arg in (echo $FZF_DEFAULT_OPTS | tr " " "\n")
+    # if not string match -q -- "--color*" $arg
+        # set -a FZF_NON_COLOR_OPTS $arg
+    # end
+# end
 
-set -U FZF_DEFAULT_OPTS "$FZF_NON_COLOR_OPTS"\
-" --color=bg+:$color01,bg:$color00,spinner:$color0C,hl:$color0D"\
-" --color=fg:$color04,header:$color0D,info:$color0A,pointer:$color0C"\
-" --color=marker:$color0C,fg+:$color06,prompt:$color0A,hl+:$color0D"
+# set -U FZF_DEFAULT_OPTS "$FZF_NON_COLOR_OPTS"\
+# " --color=bg+:$color01,bg:$color00,spinner:$color0C,hl:$color0D"\
+# " --color=fg:$color04,header:$color0D,info:$color0A,pointer:$color0C"\
+# " --color=marker:$color0C,fg+:$color06,prompt:$color0A,hl+:$color0D"
 
 function c -d "Fuzzy change directory"
 	if set -q argv[1]
@@ -328,8 +337,9 @@ function gla --description "git pull all project"
 end
 
 # browser
-alias browser='brave-browser'
+# alias browser='brave-browser'
 # alias browser='google-chrome'
+alias browser='firefox'
 alias github='browser "https://github.com/thuanpham2311"'
 
 alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
@@ -391,8 +401,8 @@ end
 
 # mode
 alias hi='tv; browser_daily'
-alias rem='sudo dnf update -y ; sudo dnf autoremove -y ; flatpak update -y'
-# alias rem='sudo apt update ; sudo apt upgrade -y ; sudo apt autoremove -y ; sudo apt autoclean'
+# alias rem='sudo dnf update -y ; sudo dnf autoremove -y ; flatpak update -y'
+alias rem='sudo apt update ; sudo apt upgrade -y ; sudo apt autoremove -y ; sudo apt autoclean ; tldr --update'
 
 function data --description "setup for data research"
 	cd ~/git/dataLab/
