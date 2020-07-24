@@ -23,4 +23,4 @@
 # m h  dom mon dow   command		
 
 0 * * * * fish /home/master/.config/fish/functions/crontabhourly.fish		
-* 5 * * * fish /home/master/.config/fish/functions/crontab5am.fish	
+# * 5 * * * fish /home/master/.config/fish/functions/crontab5am.fish	
