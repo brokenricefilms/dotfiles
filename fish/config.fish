@@ -82,6 +82,7 @@ set -U EDITOR nvim
 export EDITOR='nvim'
 export VISUAL='nvim'
 
+
 # lazy code
 alias tv='switchTv'
 alias fd='fdfind'
