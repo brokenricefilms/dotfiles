@@ -88,6 +88,7 @@ Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'lifepillar/vim-gruvbox8'
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -97,8 +98,10 @@ call plug#end()
 set termguicolors
 " set background=light
 " colorscheme PaperColor
+" set background=dark
+" colorscheme gruvbox8
 set background=dark
-colorscheme gruvbox8
+colorscheme dracula
 
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <Leader><CR> :source ~/.config/nvim/init.vim<CR>
