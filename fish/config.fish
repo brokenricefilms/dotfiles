@@ -150,11 +150,11 @@ export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # paper color
-# export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-    # --color=fg:#4d4d4c,bg:#eeeeee,hl:#d7005f
-    # --color=fg+:#4d4d4c,bg+:#e8e8e8,hl+:#d7005f
-    # --color=info:#4271ae,prompt:#8959a8,pointer:#d7005f
-    # --color=marker:#4271ae,spinner:#4271ae,header:#4271ae'
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+    --color=fg:#4d4d4c,bg:#eeeeee,hl:#d7005f
+    --color=fg+:#4d4d4c,bg+:#e8e8e8,hl+:#d7005f
+    --color=info:#4271ae,prompt:#8959a8,pointer:#d7005f
+    --color=marker:#4271ae,spinner:#4271ae,header:#4271ae'
 
 # Base16 Default Dark
 # Author: Chris Kempson (http://chriskempson.com)
@@ -190,11 +190,11 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # " --color=marker:$color0C,fg+:$color06,prompt:$color0A,hl+:$color0D"
 
 # Dracula
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
- --color=fg:#cbccc6,bg:#1f2430,hl:#707a8c
- --color=fg+:#707a8c,bg+:#191e2a,hl+:#ffcc66
- --color=info:#73d0ff,prompt:#707a8c,pointer:#cbccc6
- --color=marker:#73d0ff,spinner:#73d0ff,header:#d4bfff'
+# export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+ # --color=fg:#cbccc6,bg:#1f2430,hl:#707a8c
+ # --color=fg+:#707a8c,bg+:#191e2a,hl+:#ffcc66
+ # --color=info:#73d0ff,prompt:#707a8c,pointer:#cbccc6
+ # --color=marker:#73d0ff,spinner:#73d0ff,header:#d4bfff'
 
 function c -d "Fuzzy change directory"
 	if set -q argv[1]

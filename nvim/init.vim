@@ -76,6 +76,8 @@ autocmd FileType html,css EmmetInstall
 Plug 'mbbill/undotree'
 set undodir=~/.config/nvim/undodir
 set undofile
+nnoremap <leader>u :UndotreeShow<CR>
+nnoremap <Leader><CR> :source ~/.config/nvim/init.vim<CR>
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 " tldr command :MarkdownPreview
@@ -96,15 +98,16 @@ call plug#end()
 
 " theme
 set termguicolors
-" set background=light
-" colorscheme PaperColor
+
+set background=light
+colorscheme PaperColor
+
 " set background=dark
 " colorscheme gruvbox8
-set background=dark
-colorscheme dracula
 
-nnoremap <leader>u :UndotreeShow<CR>
-nnoremap <Leader><CR> :source ~/.config/nvim/init.vim<CR>
+" set background=dark
+" colorscheme dracula
+
 
 filetype plugin indent on
 set encoding=UTF-8
