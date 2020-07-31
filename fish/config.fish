@@ -409,7 +409,7 @@ end
 # mode
 alias hi='browser_daily ; sleep 80 ; rem'
 # alias rem='sudo dnf update -y ; sudo dnf autoremove -y ; flatpak update -y'
-alias rem='sudo apt update ; sudo apt upgrade -y ; sudo apt autoremove -y ; sudo apt autoclean ; tldr --update'
+alias rem='sudo snap refresh ; sudo apt update ; sudo apt upgrade -y ; sudo apt autoremove -y ; sudo apt autoclean ; tldr --update'
 
 function data --description "setup for data research"
 	cd ~/git/dataLab/
