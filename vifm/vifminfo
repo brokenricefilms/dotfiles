@@ -227,8 +227,11 @@ d/home/master/Pictures
 	light_get-shit-done-wallpaper-part-2-1920x1080.jpg
 1
 d/home/master
-	.bash_logout
-23
+	Documents
+5
+d/home/master/Documents
+	Disk Image of sda1 (2020-08-03 1603).img
+2
 d
 
 # Right window history (oldest to newest):
@@ -244,6 +247,7 @@ D
 # Search history (oldest to newest):
 /dow
 /pic
+/doc
 
 # Prompt history (oldest to newest):
 
