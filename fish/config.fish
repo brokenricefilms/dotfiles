@@ -1,18 +1,6 @@
 #!/usr/bin/fish
 
 # funtions stuff
-function 256color
-	bash ~/.config/fish/functions/print256colours.sh
-end
-
-function switchTv
-	sh ~/.config/fish/functions/switchTv.sh
-end
-
-function 24bitColor
-	bash ~/.config/fish/functions/24-bit-color.sh
-end
-
 function sudo --description "Replacement for Bash 'sudo !!' command to run last command using sudo."
 	if test "$argv" = !!
 		eval command sudo $history[1]
@@ -89,15 +77,7 @@ alias cpf='xclip -sel clip'
 alias fishr='source ~/.config/fish/config.fish'
 alias g='grep'
 alias h='htop'
-# ubuntu apt
-alias ins='sudo apt install -y'
-alias uins='sudo apt remove -y'
-# fedora dnf
-# alias ins='sudo dnf install -y'
-# alias uins='sudo dnf remove -y'
 alias e='exit'
-alias :q='exit'
-alias l='clear ; ls -lah'
 alias p='ipython3'
 alias rbn='sudo reboot now'
 alias sdn='sudo shutdown now'
@@ -107,8 +87,15 @@ alias v='nvim'
 alias o='open'
 alias 777='chmod -R 777'
 alias x='chmod +x'
-alias cf='cd ~/.config/ ; nvim -o (fzf)'
 alias f='fd . -H | grep'
+
+# ubuntu apt
+alias ins='sudo apt install -y'
+alias uins='sudo apt remove -y'
+
+# fedora dnf
+# alias ins='sudo dnf install -y'
+# alias uins='sudo dnf remove -y'
 
 # tmux
 # alias ide='tmux split-window -v -p 30 ; tmux split-window -h -p 66 ; tmux split-window -h -p 50'
@@ -118,12 +105,6 @@ alias qa='tmux ls; tmux kill-session -a'
 # cd
 alias ..='cd .. ; clear ; l'
 alias ...='cd .. ; cd .. ; cd .. ; clear ; l'
-
-# function c
-	# cd $argv
-	# clear
-	# ls -ltrh
-# end
 
 function dow
     cd ~/Downloads
@@ -146,6 +127,7 @@ alias t='trash'
 alias tdl='trash ~/Downloads/*'
 
 # fzf
+alias cf='cd ~/.config/ ; nvim -o (fzf)'
 export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
