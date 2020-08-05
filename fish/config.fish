@@ -71,6 +71,7 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 
 # lazy code
+alias l='clear ; ls -lah'
 alias tv='switchTv'
 alias fd='fdfind'
 alias cpf='xclip -sel clip'
@@ -239,6 +240,7 @@ alias ghdataLab='cd ~/git/dataLab ; okp ; cd -'
 alias ghwindowsSetup='cd ~/git/windowsSetup ; okp ; cd -'
 alias ghtermuxSetup='cd ~/git/termuxSetup ; okp ; cd -'
 alias ghimg='cd ~/git/img ; okp ; cd -'
+alias ghthuanpham2311='cd ~/git/thuanpham2311 ; okp ; cd -'
 
 function gha --description "git push all project"
 	cowsay "git push lazyscript"
@@ -271,6 +273,9 @@ function gha --description "git push all project"
 	cowsay "git push img" 
     ghimg
 
+	cowsay "git push thuanpham2311" 
+    ghthuanpham2311
+
 	cowsay "D O N E"
 end
 
@@ -284,6 +289,7 @@ alias gldataLab='cd ~/git/dataLab ; pull ; cd -'
 alias glwindowsSetup='cd ~/git/windowsSetup ;  pull ; cd -'
 alias gltermuxSetup='cd ~/git/termuxSetup ;  pull ; cd -'
 alias glimg='cd ~/git/img ; pull ; cd -'
+alias glthuanpham2311='cd ~/git/thuanpham2311 ; pull ; cd -'
 
 function gla --description "git pull all project"
 	cowsay "git pull lazyscript" 
@@ -316,6 +322,10 @@ function gla --description "git pull all project"
 	cowsay "git pull img" 
     glimg
 
+	cowsay "git pull thuanpham2311" 
+    glthuanpham2311
+
+	cowsay "D O N E"
 end
 
 # browser
