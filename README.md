@@ -8,13 +8,15 @@
 
 ## Install
 
-Just for NEOVIM(or vim maybe) TMUX FISH VIFM VIMIUM
+Just for NEOVIM (or vim maybe)
+My OS: Ubuntu (linux)
 **REQUITE**
 
-- neovim
-- tmux fish
-- vifm
 - git
+- neovim
+- tmux
+- fish shell
+- vifm
 - wget
 - vimium extension
 
