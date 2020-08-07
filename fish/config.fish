@@ -1,6 +1,18 @@
 #!/usr/bin/fish
 
 # funtions stuff
+function 24-bit-color
+    sh ~/.config/fish/functions/24-bit-color.sh
+end
+
+function print256colours
+    sh ~/.config/fish/functions/print256colours.sh
+end
+
+function showTrueColor
+    sh ~/.config/fish/functions/showTrueColor.sh
+end
+
 function sudo --description "Replacement for Bash 'sudo !!' command to run last command using sudo."
 	if test "$argv" = !!
 		eval command sudo $history[1]
@@ -72,7 +84,6 @@ export VISUAL='nvim'
 
 # lazy code
 alias l='clear ; ls -lah'
-alias tv='switchTv'
 alias fd='fdfind'
 alias cpf='xclip -sel clip'
 alias fishr='source ~/.config/fish/config.fish'
