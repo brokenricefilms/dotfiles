@@ -76,7 +76,7 @@ end
 
 ########################################################################
 
-set -g -x fish_greeting GET.SHIT.DONE.
+set -g -x fish_greeting yo!
 
 set -g fish_term24bit 1
 fzf_key_bindings
