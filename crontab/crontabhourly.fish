@@ -1,4 +1,3 @@
-#!/usr/bin/env fish
-
+#!bin/fish
 gla
 gha

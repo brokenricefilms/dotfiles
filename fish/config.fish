@@ -1,16 +1,20 @@
 #!/usr/bin/fish
 
 # funtions stuff
+function tv
+    bash ~/.config/fish/functions/tv.sh
+end
+
 function 24-bit-color
-    sh ~/.config/fish/functions/24-bit-color.sh
+    bash ~/.config/fish/functions/24-bit-color.sh
 end
 
 function print256colours
-    sh ~/.config/fish/functions/print256colours.sh
+    bash ~/.config/fish/functions/print256colours.sh
 end
 
 function showTrueColor
-    sh ~/.config/fish/functions/showTrueColor.sh
+    bash ~/.config/fish/functions/showTrueColor.sh
 end
 
 function sudo --description "Replacement for Bash 'sudo !!' command to run last command using sudo."
@@ -343,7 +347,7 @@ end
 # alias browser='brave-browser'
 alias browser='google-chrome'
 # alias browser='firefox'
-alias github='browser "https://github.com/thuanpham2311"'
+alias github='browser --new-window "https://github.com/thuanpham2311"'
 
 alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
 alias browser_fb='browser https://facebook.com'
