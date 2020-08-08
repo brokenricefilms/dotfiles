@@ -107,7 +107,7 @@ alias f='fd . -H | grep'
 
 # imagemagick
 # eg. convert -delay 100 -loop 0 *.jpeg animatedGIF.gif
-alias gif='convert -delay 50 -loop 0 '
+alias gif='convert -delay 20 -loop 0 '
 
 # ubuntu apt
 alias ins='sudo apt install -y'

@@ -2,7 +2,7 @@
 
 ## Demo
 
-![](./img/dotfile.png)
+![](./img/dotfile.gif)
 
 ---
 
