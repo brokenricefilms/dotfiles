@@ -2,7 +2,7 @@
 
 ## Demo
 
-![](.img/dotfiles.gif)
+<img src="./img/dotfiles.gif"
 
 ---
 
