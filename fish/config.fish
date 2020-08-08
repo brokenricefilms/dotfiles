@@ -105,6 +105,10 @@ alias 777='chmod -R 777'
 alias x='chmod +x'
 alias f='fd . -H | grep'
 
+# imagemagick
+# eg. convert -delay 100 -loop 0 *.jpeg animatedGIF.gif
+alias gif='convert -delay 50 -loop 0 '
+
 # ubuntu apt
 alias ins='sudo apt install -y'
 alias uins='sudo apt remove -y'
@@ -409,7 +413,7 @@ end
 # mode
 alias hi='browser_daily ; sleep 80 ; rem'
 # alias rem='sudo dnf update -y ; sudo dnf autoremove -y ; flatpak update -y'
-alias rem='sudo snap refresh ; sudo apt update ; sudo apt upgrade -y ; sudo apt autoremove -y ; sudo apt autoclean ; tldr --update'
+alias rem='sudo snap refresh ; sudo apt update ; sudo apt upgrade -y ; sudo apt autoremove -y ; sudo apt autoclean ; tldr --update ; sudo npm install -g npm'
 
 function data --description "setup for data research"
 	cd ~/git/dataLab/

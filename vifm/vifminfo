@@ -230,8 +230,14 @@ d/home/master
 	Documents
 5
 d/home/master/Documents
-	Disk Image of sda1 (2020-08-03 1603).img
-2
+	..
+0
+d/home/master
+	Pictures
+8
+d/home/master/Pictures
+	Screenshot from 2020-08-08 08-44-07.png
+1
 d
 
 # Right window history (oldest to newest):
@@ -248,6 +254,7 @@ D
 /dow
 /pic
 /doc
+/pi
 
 # Prompt history (oldest to newest):
 
