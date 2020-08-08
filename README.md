@@ -2,7 +2,9 @@
 
 ## Demo
 
-<img src="./img/dotfiles.gif"
+<a href="https://raw.githubusercontent.com/thuanpham2311/dotfiles/master/img/dotfiles.gif">
+<img src="./img/dotfiles.gif">
+</a>
 
 ---
 
