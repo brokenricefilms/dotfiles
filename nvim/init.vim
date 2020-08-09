@@ -1,6 +1,6 @@
 call plug#begin()
-Plug 'preservim/nerdtree'
-map <C-n> :NERDTreeToggle<CR>
+" Plug 'preservim/nerdtree'
+" map <C-n> :NERDTreeToggle<CR>
 
 Plug 'easymotion/vim-easymotion'
 nmap <leader>f <Plug>(easymotion-overwin-f)
