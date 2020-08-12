@@ -98,7 +98,7 @@ call plug#end()
 
 " theme
 set termguicolors
-set background=dark
+set background=light
 colorscheme PaperColor
 
 filetype plugin indent on
