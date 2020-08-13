@@ -87,8 +87,8 @@ let g:mkdp_auto_start = 0
 let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 
 " fancy
-" Plug 'luochen1990/rainbow'
-" let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+Plug 'luochen1990/rainbow'
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 " Plug 'lifepillar/vim-gruvbox8'
 Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
