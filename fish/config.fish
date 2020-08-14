@@ -87,7 +87,7 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 
 # lazy code
-alias l='clear ; ls -lah'
+alias l='clear ; ls -lahv'
 alias fd='fdfind'
 alias cpf='xclip -sel clip'
 alias fishr='source ~/.config/fish/config.fish'
@@ -130,13 +130,13 @@ alias ...='cd .. ; cd .. ; cd .. ; clear ; l'
 function dow
     cd ~/Downloads
     clear
-    ls -ltrh
+    l
 end
 
 function doc
     cd ~/Documents
     clear
-    ls -ltrh
+    l
 end
 
 # youtube-dl
@@ -422,7 +422,17 @@ end
 # mode
 alias hi='browser_daily ; sleep 80 ; rem'
 # alias rem='sudo dnf update -y ; sudo dnf autoremove -y ; flatpak update -y'
-alias rem='sudo snap refresh ; sudo apt update ; sudo apt upgrade -y ; sudo apt autoremove -y ; sudo apt autoclean ; tldr --update ; sudo npm install -g npm'
+function rem
+    nvim -c "PlugUpdate | qa"
+    echo "Snap update"
+    sudo snap refresh
+    sudo apt update
+    sudo apt upgrade -y
+    sudo apt autoremove -y
+    sudo apt autoclean
+    tldr --update
+    sudo npm install -g npm
+end
 
 function data --description "setup for data research"
 	cd ~/git/dataLab/
