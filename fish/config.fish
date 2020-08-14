@@ -261,6 +261,7 @@ alias ghwindowsSetup='cd ~/git/windowsSetup ; okp ; cd -'
 alias ghtermuxSetup='cd ~/git/termuxSetup ; okp ; cd -'
 alias ghimg='cd ~/git/img ; okp ; cd -'
 alias ghthuanpham2311='cd ~/git/thuanpham2311 ; okp ; cd -'
+alias ghtheNewsTimes='cd ~/git/theNewsTimes ; okp ; cd -'
 
 function gha --description "git push all project"
 	cowsay "git push lazyscript"
@@ -296,6 +297,9 @@ function gha --description "git push all project"
 	cowsay "git push thuanpham2311" 
     ghthuanpham2311
 
+	cowsay "git push theNewsTimes" 
+    ghtheNewsTimes
+
 	cowsay "D O N E"
 end
 
@@ -310,6 +314,7 @@ alias glwindowsSetup='cd ~/git/windowsSetup ;  pull ; cd -'
 alias gltermuxSetup='cd ~/git/termuxSetup ;  pull ; cd -'
 alias glimg='cd ~/git/img ; pull ; cd -'
 alias glthuanpham2311='cd ~/git/thuanpham2311 ; pull ; cd -'
+alias gltheNewsTimes='cd ~/git/theNewsTimes ; pull ; cd -'
 
 function gla --description "git pull all project"
 	cowsay "git pull lazyscript" 
@@ -344,6 +349,9 @@ function gla --description "git pull all project"
 
 	cowsay "git pull thuanpham2311" 
     glthuanpham2311
+
+	cowsay "git pull theNewsTimes" 
+    gltheNewsTimes
 
 	cowsay "D O N E"
 end
