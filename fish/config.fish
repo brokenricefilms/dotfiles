@@ -424,8 +424,8 @@ alias hi='browser_daily ; sleep 80 ; rem'
 # alias rem='sudo dnf update -y ; sudo dnf autoremove -y ; flatpak update -y'
 function rem
     nvim -c "PlugUpdate | qa"
-    echo "Snap update"
-    sudo snap refresh
+    # echo "Snap update"
+    # sudo snap refresh
     sudo apt update
     sudo apt upgrade -y
     sudo apt autoremove -y
