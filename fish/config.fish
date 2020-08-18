@@ -88,7 +88,7 @@ export VISUAL='nvim'
 
 # lazy code
 alias l='clear ; ls -lahv'
-alias fd='fdfind'
+# alias fd='fdfind'
 alias cpf='xclip -sel clip'
 alias fishr='source ~/.config/fish/config.fish'
 alias tmuxr='tmux source ~/.tmux.conf'
@@ -111,12 +111,16 @@ alias f='fd . -H | grep'
 alias gif='convert -delay 20 -loop 0 '
 
 # ubuntu apt
-alias ins='sudo apt install -y'
-alias uins='sudo apt remove -y'
+# alias ins='sudo apt install -y'
+# alias uins='sudo apt remove -y'
 
 # fedora dnf
 # alias ins='sudo dnf install -y'
 # alias uins='sudo dnf remove -y'
+
+# arch
+alias ins='sudo pacman -S'
+alias uins='sudo pacman -Rs'
 
 # tmux
 # alias ide='tmux split-window -v -p 30 ; tmux split-window -h -p 66 ; tmux split-window -h -p 50'
@@ -365,7 +369,7 @@ function gla --description "git pull all project"
 end
 
 # browser
-alias browser='brave-browser'
+alias browser='brave'
 # alias browser='google-chrome'
 # alias browser='firefox'
 alias github='browser --new-window "https://github.com/thuanpham2311"'
@@ -430,14 +434,21 @@ end
 # mode
 alias hi='browser_daily ; sleep 80 ; rem'
 # alias rem='sudo dnf update -y ; sudo dnf autoremove -y ; flatpak update -y'
+# function rem
+    # nvim -c "PlugUpdate | qa"
+    # # echo "Snap update"
+    # # sudo snap refresh
+    # sudo apt update
+    # sudo apt upgrade -y
+    # sudo apt autoremove -y
+    # sudo apt autoclean
+    # tldr --update
+    # sudo npm install -g npm
+# end
+
 function rem
     nvim -c "PlugUpdate | qa"
-    # echo "Snap update"
-    # sudo snap refresh
-    sudo apt update
-    sudo apt upgrade -y
-    sudo apt autoremove -y
-    sudo apt autoclean
+    sudo pacman -Syu
     tldr --update
     sudo npm install -g npm
 end
