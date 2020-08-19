@@ -87,7 +87,12 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 
 # lazy code
-alias l='clear ; ls -lahv'
+alias l='clear ; exa -al --color=always --group-directories-first'
+alias ls='exa -al --color=always --group-directories-first' # my preferred listing
+alias la='exa -a --color=always --group-directories-first'  # all files and dirs
+alias ll='exa -l --color=always --group-directories-first'  # long format
+alias lt='exa -aT --color=always --group-directories-first' # tree listing
+alias l.='exa -a | egrep "^\."'
 # alias fd='fdfind'
 alias cpf='xclip -sel clip'
 alias fishr='source ~/.config/fish/config.fish'
@@ -119,8 +124,8 @@ alias gif='convert -delay 20 -loop 0 '
 # alias uins='sudo dnf remove -y'
 
 # arch
-alias ins='sudo pacman -S'
-alias uins='sudo pacman -Rs'
+alias ins='sudo pacman -S --noconfirm'
+alias uins='sudo pacman -Rs --noconfirm'
 
 # tmux
 # alias ide='tmux split-window -v -p 30 ; tmux split-window -h -p 66 ; tmux split-window -h -p 50'
@@ -203,7 +208,7 @@ function c -d "Fuzzy change directory"
         set searchdir $HOME
     end
 
-# https://github.com/fish-shell/fish-shell/issues/1362
+    # https://github.com/fish-shell/fish-shell/issues/1362
 	set -l tmpfile (mktemp)
 	find $searchdir \( ! -regex '.*/\..*' \) ! -name __pycache__ -type d | fzf > $tmpfile
 	set -l destdir (cat $tmpfile)
@@ -214,8 +219,7 @@ function c -d "Fuzzy change directory"
 	end
 
 	cd $destdir
-	clear
-	ls -ltrh
+    l
 end
 
 function fco -d "Fuzzy-find and checkout a branch"
@@ -432,7 +436,7 @@ function !m
 end
 
 # mode
-alias hi='browser_daily ; sleep 80 ; rem'
+alias hi='browser_daily'
 # alias rem='sudo dnf update -y ; sudo dnf autoremove -y ; flatpak update -y'
 # function rem
     # nvim -c "PlugUpdate | qa"
@@ -448,7 +452,7 @@ alias hi='browser_daily ; sleep 80 ; rem'
 
 function rem
     nvim -c "PlugUpdate | qa"
-    sudo pacman -Syu
+    sudo pacman -Syyu --noconfirm
     tldr --update
     sudo npm install -g npm
 end
