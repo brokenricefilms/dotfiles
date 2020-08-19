@@ -431,7 +431,7 @@ function !m
 end
 
 # mode
-alias hi='browser_daily ; gla ; gha'
+alias hi='browser_daily ; rem'
 # alias rem='sudo dnf update -y ; sudo dnf autoremove -y ; flatpak update -y'
 function rem
     nvim -c "PlugUpdate | qa"
