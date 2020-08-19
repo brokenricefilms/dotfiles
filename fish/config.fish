@@ -436,7 +436,7 @@ function !m
 end
 
 # mode
-alias hi='browser_daily'
+alias hi='browser_daily ; gla ; gha'
 # alias rem='sudo dnf update -y ; sudo dnf autoremove -y ; flatpak update -y'
 # function rem
     # nvim -c "PlugUpdate | qa"
@@ -451,10 +451,10 @@ alias hi='browser_daily'
 # end
 
 function rem
-    nvim -c "PlugUpdate | qa"
     sudo pacman -Syyu --noconfirm
-    tldr --update
     sudo npm install -g npm
+    nvim -c "PlugUpdate | qa"
+    tldr --update
 end
 
 function data --description "setup for data research"
