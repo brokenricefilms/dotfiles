@@ -443,6 +443,7 @@ function rem
     sudo apt autoclean
     tldr --update
     sudo npm install -g npm
+    clear
 end
 
 # function rem
