@@ -41,8 +41,6 @@ function run --description "run test for c/cpp, Python"
 		gcc $argv
 		./a.out
         rm a.out
-	else if ls $argv | grep ".py"
-		python3 $argv
 	end
 end
 
