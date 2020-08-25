@@ -89,8 +89,8 @@ let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 " fancy
 " Plug 'luochen1990/rainbow'
 " let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
-" Plug 'lifepillar/vim-gruvbox8'
-Plug 'NLKNguyen/papercolor-theme'
+Plug 'lifepillar/vim-gruvbox8'
+" Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -98,8 +98,9 @@ call plug#end()
 
 " theme
 set termguicolors
-set background=light
-colorscheme PaperColor
+set background=dark
+" colorscheme PaperColor
+colorscheme gruvbox8
 
 filetype plugin indent on
 set encoding=UTF-8
