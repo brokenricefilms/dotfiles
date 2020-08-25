@@ -269,6 +269,7 @@ alias ghimg='cd ~/git/img ; okp ; cd -'
 alias ghthuanpham2311='cd ~/git/thuanpham2311 ; okp ; cd -'
 alias ghtheNewsTimes='cd ~/git/theNewsTimes ; okp ; cd -'
 alias ghfour-card-feature-section='cd ~/git/four-card-feature-section ; okp ; cd -'
+alias ghcalculatorOnIOS='cd ~/git/calculatorOnIOS ; okp ; cd -'
 
 function gha --description "git push all project"
 	cowsay "git push lazyscript"
@@ -310,6 +311,9 @@ function gha --description "git push all project"
 	cowsay "git push four-card-feature-section" 
     ghfour-card-feature-section
 
+	cowsay "git push calculatorOnIOS" 
+    ghcalculatorOnIOS
+
 	cowsay "D O N E"
 end
 
@@ -326,6 +330,7 @@ alias glimg='cd ~/git/img ; pull ; cd -'
 alias glthuanpham2311='cd ~/git/thuanpham2311 ; pull ; cd -'
 alias gltheNewsTimes='cd ~/git/theNewsTimes ; pull ; cd -'
 alias glfour-card-feature-section='cd ~/git/four-card-feature-section ; pull ; cd -'
+alias glcalculatorOnIOS='cd ~/git/calculatorOnIOS ; pull ; cd -'
 
 function gla --description "git pull all project"
 	cowsay "git pull lazyscript" 
@@ -366,6 +371,9 @@ function gla --description "git pull all project"
 
 	cowsay "git pull four-card-feature-section"
     glfour-card-feature-section
+
+	cowsay "git pull calculatorOnIOS"
+    glcalculatorOnIOS
 
 	cowsay "D O N E"
 end
