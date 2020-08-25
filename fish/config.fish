@@ -454,6 +454,7 @@ function rem
     sudo apt autoclean
     tldr --update
     sudo npm install -g npm
+    nvim -c "PlugUpdate | qa"
     clear
 end
 
