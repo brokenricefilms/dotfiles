@@ -245,10 +245,15 @@ function ghdotfiles
 	cp ~/.selected_editor ~/git/dotfiles
 	cp ~/.gitconfig  ~/git/dotfiles/git/
 	cp ~/.tmux.conf ~/git/dotfiles/tmux/
+
+    # nvim
 	cp ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
-	cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim/
-	cp -r ~/.config/nvim/stuff ~/git/dotfiles/nvim/
-	cp -r ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
+    cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim/
+    cp -r ~/.config/nvim/stuff ~/git/dotfiles/nvim/
+    cp -r ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
+    # I don't want you see my undoir, hack me if you can.
+    cp -r ~/.config/nvim/undodir ~/git/ok/
+
 	cp -r ~/.config/fish/* ~/git/dotfiles/fish/
     crontab -l > ~/git/dotfiles/crontab/crontabConfig
     cp ~/.config/fish/functions/crontab* ~/git/dotfiles/crontab/

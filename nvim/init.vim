@@ -129,6 +129,10 @@ set nowritebackup
 set autoindent
 set smartindent
 
+" fix indenting visual block
+vmap < <gv
+vmap > >gv
+
 " remap Esc
 :imap jj <Esc>
 " Map leader to space
