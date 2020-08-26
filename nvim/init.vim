@@ -1,9 +1,14 @@
 call plug#begin()
+Plug 'alvan/vim-closetag'
+
+Plug 'airblade/vim-gitgutter'
+
 " Plug 'preservim/nerdtree'
 " map <C-n> :NERDTreeToggle<CR>
 
 Plug 'easymotion/vim-easymotion'
-nmap <leader>f <Plug>(easymotion-overwin-f)
+" nmap <leader>f <Plug>(easymotion-overwin-f)
+nmap ;; <Plug>(easymotion-overwin-f)
 " nmap <silent> ;l <Plug>(easymotion-overwin-line)
 
 Plug 'christoomey/vim-tmux-navigator'
@@ -17,8 +22,8 @@ map mm <Plug>NERDCommenterToggle
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 noremap <leader>t :Files<CR>
-noremap <leader>r :Rg<CR>
-noremap <leader>b :Buffers<CR>
+" noremap <leader>r :Rg<CR>
+" noremap <leader>b :Buffers<CR>
 noremap <c-p> :GFiles<CR>
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
@@ -87,8 +92,11 @@ let g:mkdp_auto_start = 0
 let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 
 " fancy
-" Plug 'luochen1990/rainbow'
-" let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme='minimalist'
+Plug 'luochen1990/rainbow'
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 " Plug 'lifepillar/vim-gruvbox8'
 Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
