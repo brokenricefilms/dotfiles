@@ -85,13 +85,14 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 
 # lazy code
-alias l='clear ; exa -al --color=always --group-directories-first'
-alias ls='exa -al --color=always --group-directories-first' # my preferred listing
-alias la='exa -a --color=always --group-directories-first'  # all files and dirs
-alias ll='exa -l --color=always --group-directories-first'  # long format
+alias l='ls -lha'
+# alias l='clear ; exa -al --color=always --group-directories-first'
+# alias ls='exa -al --color=always --group-directories-first' # my preferred listing
+# alias la='exa -a --color=always --group-directories-first'  # all files and dirs
+# alias ll='exa -l --color=always --group-directories-first'  # long format
 # tree add more color
-alias lt='exa -aT --color=always --group-directories-first' # tree listing
-alias l.='exa -a | egrep "^\."'
+# alias lt='exa -aT --color=always --group-directories-first' # tree listing
+# alias l.='exa -a | egrep "^\."'
 alias fd='fdfind'
 alias cpf='xclip -sel clip'
 alias fishr='source ~/.config/fish/config.fish'

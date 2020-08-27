@@ -1,8 +1,6 @@
 call plug#begin()
 Plug 'alvan/vim-closetag'
 
-Plug 'airblade/vim-gitgutter'
-
 " Plug 'preservim/nerdtree'
 " map <C-n> :NERDTreeToggle<CR>
 
@@ -92,13 +90,12 @@ let g:mkdp_auto_start = 0
 let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 
 " fancy
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme='minimalist'
-Plug 'luochen1990/rainbow'
-let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+" Plug 'luochen1990/rainbow'
+" let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+" theme
 " Plug 'lifepillar/vim-gruvbox8'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'andreypopp/vim-colors-plain'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -107,14 +104,15 @@ call plug#end()
 " theme
 set termguicolors
 set background=light
-colorscheme PaperColor
 " colorscheme gruvbox8
+" colorscheme PaperColor
+colorscheme plain
 
 filetype plugin indent on
 set encoding=UTF-8
 set mouse=a
 set clipboard=unnamedplus
-set nohlsearch
+" set nohlsearch
 
 set tabstop=4 softtabstop=4
 set shiftwidth=4
