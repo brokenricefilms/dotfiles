@@ -1,9 +1,9 @@
 call plug#begin()
-Plug 'tpope/vim-fugitive'
-nmap <leader>gj :diffget //3<CR>
-nmap <leader>gk :diffget //2<CR>
-nmap <leader>gs :G<CR>
-nmap <leader>gc :GCheckout<CR>
+" Plug 'tpope/vim-fugitive'
+" nmap <leader>gj :diffget //3<CR>
+" nmap <leader>gk :diffget //2<CR>
+" nmap <leader>gs :G<CR>
+" nmap <leader>gc :GCheckout<CR>
 " syxtax stuff
 Plug 'sheerun/vim-polyglot'
 
@@ -24,10 +24,10 @@ map mm <Plug>NERDCommenterToggle
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'stsewd/fzf-checkout.vim'
-noremap <leader>t :Files<CR>
+noremap <leader>f :GFiles<CR>
 " noremap <leader>r :Rg<CR>
 " noremap <leader>b :Buffers<CR>
-noremap <c-p> :GFiles<CR>
+noremap <c-p> :Files<CR>
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
 let g:fzf_checkout_track_key = 'ctrl-t'
@@ -150,7 +150,7 @@ vmap > >gv
 :imap jj <Esc>
 " Map leader to space
 map <space> <leader>
-noremap <c-w> :q<CR>
+" noremap <c-w> :q<CR>
 
 " Display different types of white spaces
 set list
