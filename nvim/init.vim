@@ -150,7 +150,7 @@ vmap > >gv
 :imap jj <Esc>
 " Map leader to space
 map <space> <leader>
-" noremap <c-w> :q<CR>
+noremap <c-w> :q<CR>
 
 " Display different types of white spaces
 set list
