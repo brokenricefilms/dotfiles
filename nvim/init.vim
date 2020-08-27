@@ -1,9 +1,11 @@
 call plug#begin()
+Plug 'tpope/vim-fugitive'
+nmap <leader>gj :diffget //3<CR>
+nmap <leader>gk :diffget //2<CR>
+nmap <leader>gs :G<CR>
+nmap <leader>gc :GCheckout<CR>
+" syxtax stuff
 Plug 'sheerun/vim-polyglot'
-Plug 'alvan/vim-closetag'
-
-" Plug 'preservim/nerdtree'
-" map <C-n> :NERDTreeToggle<CR>
 
 Plug 'easymotion/vim-easymotion'
 " nmap <leader>f <Plug>(easymotion-overwin-f)
@@ -13,6 +15,7 @@ nmap ;; <Plug>(easymotion-overwin-f)
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
+Plug 'alvan/vim-closetag'
 
 Plug 'preservim/nerdcommenter'
 let g:NERDSpaceDelims = 1
@@ -20,10 +23,14 @@ map mm <Plug>NERDCommenterToggle
 
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'stsewd/fzf-checkout.vim'
 noremap <leader>t :Files<CR>
 " noremap <leader>r :Rg<CR>
 " noremap <leader>b :Buffers<CR>
 noremap <c-p> :GFiles<CR>
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let $FZF_DEFAULT_OPTS='--reverse'
+let g:fzf_checkout_track_key = 'ctrl-t'
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
@@ -91,15 +98,11 @@ let g:mkdp_auto_start = 0
 let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 
 " fancy
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme='minimalist'
 " Plug 'luochen1990/rainbow'
 " let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
-" theme
+
 " Plug 'lifepillar/vim-gruvbox8'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'andreypopp/vim-colors-plain'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -109,8 +112,7 @@ call plug#end()
 set termguicolors
 set background=light
 " colorscheme gruvbox8
-" colorscheme PaperColor
-colorscheme plain
+colorscheme PaperColor
 
 filetype plugin indent on
 set encoding=UTF-8
@@ -138,6 +140,7 @@ set nobackup
 set nowritebackup
 set autoindent
 set smartindent
+set scrolloff=8
 
 " fix indenting visual block
 vmap < <gv
@@ -147,11 +150,13 @@ vmap > >gv
 :imap jj <Esc>
 " Map leader to space
 map <space> <leader>
+noremap <c-w> :q<CR>
 
 " Display different types of white spaces
 set list
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
+" set colorcolumn=80
 " highlight cursorline
 set cursorline
 highlight CursorLine term=bold cterm=bold
