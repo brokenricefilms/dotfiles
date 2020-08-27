@@ -4,8 +4,6 @@ call plug#begin()
 " nmap <leader>gk :diffget //2<CR>
 " nmap <leader>gs :G<CR>
 " nmap <leader>gc :GCheckout<CR>
-" syxtax stuff
-Plug 'sheerun/vim-polyglot'
 
 Plug 'easymotion/vim-easymotion'
 " nmap <leader>f <Plug>(easymotion-overwin-f)
