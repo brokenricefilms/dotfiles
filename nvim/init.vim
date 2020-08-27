@@ -1,4 +1,5 @@
 call plug#begin()
+Plug 'sheerun/vim-polyglot'
 Plug 'alvan/vim-closetag'
 
 " Plug 'preservim/nerdtree'
@@ -90,6 +91,9 @@ let g:mkdp_auto_start = 0
 let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 
 " fancy
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme='minimalist'
 " Plug 'luochen1990/rainbow'
 " let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 " theme
