@@ -1,10 +1,4 @@
 call plug#begin()
-" Plug 'tpope/vim-fugitive'
-" nmap <leader>gj :diffget //3<CR>
-" nmap <leader>gk :diffget //2<CR>
-" nmap <leader>gs :G<CR>
-" nmap <leader>gc :GCheckout<CR>
-
 Plug 'easymotion/vim-easymotion'
 " nmap <leader>f <Plug>(easymotion-overwin-f)
 nmap ;; <Plug>(easymotion-overwin-f)
@@ -19,14 +13,16 @@ Plug 'preservim/nerdcommenter'
 let g:NERDSpaceDelims = 1
 map mm <Plug>NERDCommenterToggle
 
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'stsewd/fzf-checkout.vim'
-noremap <leader>f :GFiles<CR>
-noremap <Leader><CR> :Commands<CR>
-" noremap <leader>r :Rg<CR>
-" noremap <leader>b :Buffers<CR>
-noremap <c-p> :Files<CR>
+noremap <leader>g :GFiles<CR>
+noremap <leader>f :Files<CR>
+noremap <leader>t :FZF ~<CR>
+noremap <leader>r :Rg<CR>
+noremap <leader>b :Buffers<CR>
+noremap <c-p> :Commands<CR>
+noremap // :BLines<CR>
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
 let g:fzf_checkout_track_key = 'ctrl-t'
@@ -98,6 +94,9 @@ let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 " fancy
 " Plug 'luochen1990/rainbow'
 " let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+Plug 'Yggdroot/indentLine'
+" syntax stuff
+Plug 'sheerun/vim-polyglot'
 
 " Plug 'lifepillar/vim-gruvbox8'
 Plug 'NLKNguyen/papercolor-theme'
@@ -148,7 +147,6 @@ vmap > >gv
 :imap jj <Esc>
 " Map leader to space
 map <space> <leader>
-noremap <c-w> :q<CR>
 
 " Display different types of white spaces
 set list
