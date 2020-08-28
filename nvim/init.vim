@@ -23,6 +23,7 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'stsewd/fzf-checkout.vim'
 noremap <leader>f :GFiles<CR>
+noremap <Leader><CR> :Commands<CR>
 " noremap <leader>r :Rg<CR>
 " noremap <leader>b :Buffers<CR>
 noremap <c-p> :Files<CR>
@@ -87,7 +88,6 @@ Plug 'mbbill/undotree'
 set undodir=~/.config/nvim/undodir
 set undofile
 nnoremap <leader>u :UndotreeShow<CR>
-nnoremap <Leader><CR> :source ~/.config/nvim/init.vim<CR>
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 " tldr command :MarkdownPreview
@@ -163,6 +163,9 @@ highlight CursorLine term=bold cterm=bold
 " Split window
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
+
+command! Config execute "FZF ~/.config/"
+command! Reload execute "source ~/.config/nvim/init.vim"
 
 augroup General
     au!
