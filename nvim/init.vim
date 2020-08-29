@@ -98,7 +98,6 @@ Plug 'Yggdroot/indentLine'
 " syntax stuff
 Plug 'sheerun/vim-polyglot'
 
-" Plug 'lifepillar/vim-gruvbox8'
 Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
@@ -107,8 +106,7 @@ call plug#end()
 
 " theme
 set termguicolors
-set background=light
-" colorscheme gruvbox8
+set background=dark
 colorscheme PaperColor
 
 filetype plugin indent on
