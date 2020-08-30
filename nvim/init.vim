@@ -2,7 +2,6 @@ call plug#begin()
 Plug 'easymotion/vim-easymotion'
 " nmap <leader>f <Plug>(easymotion-overwin-f)
 nmap ;; <Plug>(easymotion-overwin-f)
-" nmap <silent> ;l <Plug>(easymotion-overwin-line)
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
@@ -96,7 +95,7 @@ let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 Plug 'Yggdroot/indentLine'
 
 Plug 'NLKNguyen/papercolor-theme'
-" Plug 'huyvohcmc/atlas.vim'
+Plug 'huyvohcmc/atlas.vim'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
