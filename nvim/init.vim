@@ -91,13 +91,12 @@ let g:mkdp_auto_start = 0
 let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 
 " fancy
-Plug 'luochen1990/rainbow'
-let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+" Plug 'luochen1990/rainbow'
+" let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 Plug 'Yggdroot/indentLine'
-" syntax stuff
-Plug 'sheerun/vim-polyglot'
 
-Plug 'NLKNguyen/papercolor-theme'
+" Plug 'NLKNguyen/papercolor-theme'
+Plug 'huyvohcmc/atlas.vim'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -106,7 +105,8 @@ call plug#end()
 " theme
 set termguicolors
 set background=dark
-colorscheme PaperColor
+" colorscheme PaperColor
+colorscheme atlas
 
 filetype plugin indent on
 set encoding=UTF-8
