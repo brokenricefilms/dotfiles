@@ -95,8 +95,8 @@ let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 " let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 Plug 'Yggdroot/indentLine'
 
-" Plug 'NLKNguyen/papercolor-theme'
-Plug 'huyvohcmc/atlas.vim'
+Plug 'NLKNguyen/papercolor-theme'
+" Plug 'huyvohcmc/atlas.vim'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -105,8 +105,8 @@ call plug#end()
 " theme
 set termguicolors
 set background=dark
-" colorscheme PaperColor
-colorscheme atlas
+colorscheme PaperColor
+" colorscheme atlas
 
 filetype plugin indent on
 set encoding=UTF-8
