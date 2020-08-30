@@ -159,6 +159,12 @@ highlight CursorLine term=bold cterm=bold
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
 
+nmap <C-t> :tabnew<Return>
+nmap <C-w> :q<Return>
+nmap <S-k> gt
+nmap <S-j> gT
+
+
 command! Config execute "FZF ~/.config/"
 command! Reload execute "source ~/.config/nvim/init.vim"
 
