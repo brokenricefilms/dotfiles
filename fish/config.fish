@@ -112,10 +112,6 @@ alias 777='chmod -R 777'
 alias x='chmod +x'
 alias f='fd . -H | grep'
 
-# imagemagick
-# eg. convert -delay 100 -loop 0 *.jpeg animatedGIF.gif
-alias gif='convert -delay 20 -loop 0 '
-
 # ubuntu apt
 alias ins='sudo apt install -y'
 alias uins='sudo apt remove -y'
@@ -454,8 +450,6 @@ alias hi='browser_daily ; rem'
 # alias rem='sudo dnf update -y ; sudo dnf autoremove -y ; flatpak update -y'
 function rem
     nvim -c "PlugUpdate | qa"
-    # echo "Snap update"
-    # sudo snap refresh
     sudo apt update
     sudo apt upgrade -y
     sudo apt autoremove -y
