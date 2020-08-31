@@ -256,6 +256,9 @@ d/home/master
 d/home
 	master
 1
+d/home/master/.config/BraveSoftware/Brave-Browser-Beta
+	SingletonLock
+33
 d
 
 # Right window history (oldest to newest):
@@ -273,6 +276,8 @@ D
 /pic
 /doc
 /pi
+/exn
+/ex
 
 # Prompt history (oldest to newest):
 
