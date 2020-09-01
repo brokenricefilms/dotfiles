@@ -1,6 +1,5 @@
 call plug#begin()
 Plug 'easymotion/vim-easymotion'
-" nmap <leader>f <Plug>(easymotion-overwin-f)
 nmap ;; <Plug>(easymotion-overwin-f)
 
 Plug 'christoomey/vim-tmux-navigator'
