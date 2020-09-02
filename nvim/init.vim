@@ -21,7 +21,8 @@ noremap <leader>b :Buffers<CR>
 noremap <c-p> :Commands<CR>
 noremap // :BLines<CR>
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
-" let $FZF_DEFAULT_OPTS='--reverse'
+" move search on top
+let $FZF_DEFAULT_OPTS='--reverse'
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
@@ -163,12 +164,11 @@ nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
 
 nmap <C-t> :tabnew<Return>
-nmap <C-w> :q<Return>
 nmap <S-k> gt
 nmap <S-j> gT
 
 
-command! Config execute "FZF ~/.config/"
+command! Config execute "cd ~/.config | FZF ~/.config/"
 command! Reload execute "source ~/.config/nvim/init.vim"
 
 augroup General
