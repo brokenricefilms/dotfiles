@@ -257,8 +257,32 @@ d/home
 	master
 1
 d/home/master/.config/BraveSoftware/Brave-Browser-Beta
-	SingletonLock
-33
+	SingletonSocket
+34
+d/home/master/Documents
+	Book
+1
+d/home/master/Documents/Book
+	nonfiction
+2
+d/home/master/Documents/Book/nonfiction
+	songDonGianChoDoiThanhThang.pdf
+28
+d/home/master/Documents
+	Book
+1
+d/home/master/Documents/Book
+	nonfiction
+2
+d/home/master/Documents/Book/nonfiction
+	Giao Duc Va U Nghia Song - Jiddu Krishnamurti.pdf
+10
+d/home/master/Documents/Book
+	nonfiction
+2
+d/home/master/Documents/Book/nonfiction
+	songDonGianChoDoiThanhThang.pdf
+13
 d
 
 # Right window history (oldest to newest):
@@ -269,6 +293,7 @@ D
 
 # Command line history (oldest to newest):
 :trashes
+:help
 :q
 
 # Search history (oldest to newest):

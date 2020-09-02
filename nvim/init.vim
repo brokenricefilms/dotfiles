@@ -166,7 +166,7 @@ nmap sv :vsplit<Return><C-w>w
 nmap <C-t> :tabnew<Return>
 nmap <S-k> gt
 nmap <S-j> gT
-
+imap <C-S-tab> <Esc>/<++><Return>cw
 
 command! Config execute "cd ~/.config | FZF ~/.config/"
 command! Reload execute "source ~/.config/nvim/init.vim"
@@ -178,7 +178,7 @@ augroup General
     autocmd BufNewFile *.sh  :call CheckShFile()
     autocmd BufNewFile *.fish  :call CheckFishFile()
     autocmd BufNewFile *.py :call CheckPyFile()
-    autocmd BufNewFile *.cpp :call CheckCppFile()
+    autocmd BufNewFile *.cpp :read ~/.config/nvim/stuff/cppTemplate.cpp | normal!kdd3j
 augroup END
 
 
@@ -190,15 +190,6 @@ endfunction
 function! CheckPyFile()
     normal!i#! /usr/bin/env python3
     normal!o
-endfunction
-
-function! CheckCppFile()
-    normal!i#include <iostream>
-    normal!ousing namespace std;
-    normal!o
-    normal!oint main() {
-    normal!oreturn 0;
-    normal!o}
 endfunction
 
 function! CheckFishFile()
