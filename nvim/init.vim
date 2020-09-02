@@ -4,7 +4,6 @@ nmap ;; <Plug>(easymotion-overwin-f)
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
-Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 
 Plug 'preservim/nerdcommenter'
@@ -13,7 +12,7 @@ map mm <Plug>NERDCommenterToggle
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'stsewd/fzf-checkout.vim'
+" Plug 'stsewd/fzf-checkout.vim'
 noremap <leader>g :GFiles<CR>
 noremap <leader>f :Files<CR>
 noremap <leader>t :FZF ~<CR>
@@ -22,7 +21,7 @@ noremap <leader>b :Buffers<CR>
 noremap <c-p> :Commands<CR>
 noremap // :BLines<CR>
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
-let $FZF_DEFAULT_OPTS='--reverse'
+" let $FZF_DEFAULT_OPTS='--reverse'
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
@@ -51,6 +50,7 @@ let g:coc_global_extensions = [
                         \ "coc-highlight",
                         \ "coc-json",
                         \ "coc-python",
+                        \ "coc-pairs",
                         \ "coc-clangd",
                         \ "coc-sh",
                         \ "coc-sql",
@@ -62,6 +62,7 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 
 function! s:check_back_space() abort
+
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
