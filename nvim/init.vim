@@ -71,6 +71,9 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
+hi CocInfoFloat guifg=#ffffff guibg=#333333
+hi CocErrorFloat guifg=#ffffff guibg=#333333
+
 " coc explorer
 nmap <space>e :CocCommand explorer<CR>
 
@@ -100,7 +103,6 @@ let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 Plug 'Yggdroot/indentLine'
 
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'huyvohcmc/atlas.vim'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -110,7 +112,6 @@ call plug#end()
 set termguicolors
 set background=light
 colorscheme PaperColor
-" colorscheme atlas
 
 filetype plugin indent on
 set encoding=UTF-8
@@ -166,7 +167,6 @@ nmap sv :vsplit<Return><C-w>w
 nmap <C-t> :tabnew<Return>
 nmap <S-k> gt
 nmap <S-j> gT
-imap <C-S-tab> <Esc>/<++><Return>cw
 
 command! Config execute "cd ~/.config | FZF ~/.config/"
 command! Reload execute "source ~/.config/nvim/init.vim"
