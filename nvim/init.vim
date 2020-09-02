@@ -54,6 +54,7 @@ let g:coc_global_extensions = [
                         \ "coc-clangd",
                         \ "coc-sh",
                         \ "coc-sql",
+                        \ "coc-explorer",
                         \ "coc-tsserver",]
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
@@ -68,6 +69,9 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
+
+" coc explorer
+nmap <space>e :CocCommand explorer<CR>
 
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
