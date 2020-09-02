@@ -5,6 +5,7 @@ nmap ;; <Plug>(easymotion-overwin-f)
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
+Plug 'jiangmiao/auto-pairs'
 
 Plug 'preservim/nerdcommenter'
 let g:NERDSpaceDelims = 1
@@ -51,7 +52,6 @@ let g:coc_global_extensions = [
                         \ "coc-highlight",
                         \ "coc-json",
                         \ "coc-python",
-                        \ "coc-pairs",
                         \ "coc-clangd",
                         \ "coc-sh",
                         \ "coc-sql",
@@ -70,9 +70,6 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
-
-hi CocInfoFloat guifg=#ffffff guibg=#333333
-hi CocErrorFloat guifg=#ffffff guibg=#333333
 
 " coc explorer
 nmap <space>e :CocCommand explorer<CR>
@@ -110,7 +107,7 @@ call plug#end()
 
 " theme
 set termguicolors
-set background=light
+set background=dark
 colorscheme PaperColor
 
 filetype plugin indent on
