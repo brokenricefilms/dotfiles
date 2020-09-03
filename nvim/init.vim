@@ -100,6 +100,7 @@ let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 Plug 'Yggdroot/indentLine'
 
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'lifepillar/vim-gruvbox8'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -108,7 +109,8 @@ call plug#end()
 " theme
 set termguicolors
 set background=dark
-colorscheme PaperColor
+" colorscheme PaperColor
+colorscheme gruvbox8
 
 filetype plugin indent on
 set encoding=UTF-8
