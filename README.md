@@ -25,6 +25,9 @@ My OS: Ubuntu (linux)
 Okay! Run code below in command line
 
 ```bash
+# I don't usually update this script
+# for more updates, you can visit my linux setup project at github
+# https://github.com/thuanpham2311/linux_setup
 cd ~/Dowloads
 wget https://raw.githubusercontent.com/nicholaspham2311/dotfiles/master/install
 chmod +x install

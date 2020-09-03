@@ -98,7 +98,6 @@ let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 Plug 'Yggdroot/indentLine'
-Plug 'sheerun/vim-polyglot'
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'lifepillar/vim-gruvbox8'
