@@ -89,9 +89,6 @@ set undofile
 nnoremap <leader>u :UndotreeShow<CR>
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-" tldr command :MarkdownPreview
-" auto open windown when edit file .md | 1 is able mode
-let g:mkdp_auto_start = 0
 let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 
 " fancy
