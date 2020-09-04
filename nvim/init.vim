@@ -1,6 +1,6 @@
 call plug#begin()
 Plug 'easymotion/vim-easymotion'
-nmap ;; <Plug>(easymotion-overwin-f)
+nmap ff <Plug>(easymotion-overwin-f)
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
@@ -19,7 +19,8 @@ noremap <leader>f :Files<CR>
 noremap <leader>t :FZF ~<CR>
 noremap <leader>r :Rg<CR>
 noremap <leader>b :Buffers<CR>
-noremap <c-p> :Commands<CR>
+" noremap <c-p> :Commands<CR>
+noremap ; :Commands<CR>
 noremap // :BLines<CR>
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 " move search on top
@@ -143,8 +144,8 @@ vmap < <gv
 vmap > >gv
 
 " remap Esc
-:imap jj <Esc>
-" Map leader to space
+" :imap jj <Esc>
+" remap leader to space
 map <space> <leader>
 
 " Display different types of white spaces
