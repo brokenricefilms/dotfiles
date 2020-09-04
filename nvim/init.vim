@@ -108,9 +108,10 @@ call plug#end()
 
 " theme
 set termguicolors
-set background=dark
-" colorscheme PaperColor
-colorscheme gruvbox8
+set background=light
+colorscheme PaperColor
+" set background=dark
+" colorscheme gruvbox8
 
 filetype plugin indent on
 set encoding=UTF-8
