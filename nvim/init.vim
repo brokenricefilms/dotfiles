@@ -143,7 +143,7 @@ set scrolloff=8
 vmap < <gv
 vmap > >gv
 
-" remap Esc
+" remap Esc | update use remap caplock to esc 
 " :imap jj <Esc>
 " remap leader to space
 map <space> <leader>
@@ -171,7 +171,8 @@ command! Reload execute "source ~/.config/nvim/init.vim"
 
 augroup General
     au!
-    autocmd FileType markdown,text setlocal spell spelllang=en
+    " autocmd FileType markdown,text setlocal spell spelllang=en
+    autocmd FileType markdown setlocal spell spelllang=en
     " auto insert when open file
     autocmd BufNewFile *.sh  :call CheckShFile()
     autocmd BufNewFile *.fish  :call CheckFishFile()
