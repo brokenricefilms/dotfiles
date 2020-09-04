@@ -88,6 +88,7 @@ export VISUAL='nvim'
 # alias l='ls -lha'
 # ls, tree more color
 alias l='clear ; exa -al --color=always --group-directories-first'
+alias ls='clear ; exa -al --color=always --group-directories-first'
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
 alias ll='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
@@ -246,6 +247,7 @@ alias ghthuanpham2311='cd ~/git/thuanpham2311 ; okp ; cd -'
 alias ghtheNewsTimes='cd ~/git/theNewsTimes ; okp ; cd -'
 alias ghfour-card-feature-section='cd ~/git/four-card-feature-section ; okp ; cd -'
 alias ghcalculatorOnIOS='cd ~/git/calculatorOnIOS ; okp ; cd -'
+alias ghnote='cd ~/git/note ; ok ; cd -'
 
 function gha --description "git push all project"
 	cowsay "git push lazyscript"
@@ -290,6 +292,9 @@ function gha --description "git push all project"
 	cowsay "git push calculatorOnIOS" 
     ghcalculatorOnIOS
 
+	cowsay "git push note" 
+    ghnote
+
 	cowsay "D O N E"
 end
 
@@ -307,6 +312,7 @@ alias glthuanpham2311='cd ~/git/thuanpham2311 ; pull ; cd -'
 alias gltheNewsTimes='cd ~/git/theNewsTimes ; pull ; cd -'
 alias glfour-card-feature-section='cd ~/git/four-card-feature-section ; pull ; cd -'
 alias glcalculatorOnIOS='cd ~/git/calculatorOnIOS ; pull ; cd -'
+alias glnote='cd ~/git/note ; pull ; cd -'
 
 function gla --description "git pull all project"
 	cowsay "git pull lazyscript" 
@@ -350,6 +356,9 @@ function gla --description "git pull all project"
 
 	cowsay "git pull calculatorOnIOS"
     glcalculatorOnIOS
+
+	cowsay "git pull note"
+    glnote
 
 	cowsay "D O N E"
 end
