@@ -125,6 +125,7 @@ alias o='open'
 alias 777='chmod -R 777'
 alias x='chmod +x'
 alias f='fdfind . -H | grep'
+alias c='clear'
 
 # ubuntu apt
 alias ins='sudo apt install -y'
