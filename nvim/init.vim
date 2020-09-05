@@ -142,8 +142,8 @@ set scrolloff=8
 vmap < <gv
 vmap > >gv
 
-" remap Esc | update use remap caplock to esc 
-" :imap jj <Esc>
+" remap Esc
+:imap jj <Esc>
 " remap leader to space
 map <space> <leader>
 
