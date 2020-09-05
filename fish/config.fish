@@ -156,7 +156,8 @@ alias tdl='trash ~/Downloads/*'
 
 # fzf
 alias cf='cd ~/.config/ ; nvim -o (fzf)'
-export FZF_DEFAULT_COMMAND='fd --type f'
+# export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_COMMAND='fd -H --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # paper color
@@ -215,7 +216,8 @@ function ghdotfiles
     cp -r ~/.config/vifm/* ~/git/dotfiles/vifm
 	cp ~/.selected_editor ~/git/dotfiles
 	cp ~/.gitconfig  ~/git/dotfiles/git/
-	cp ~/.tmux.conf ~/git/dotfiles/tmux/
+	cp ~/.config/tmux/.tmux.conf ~/git/dotfiles/tmux/
+    cp ~/.config/zsh/.zshrc ~/git/dotfiles/zsh/
 
     # nvim
 	cp ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
