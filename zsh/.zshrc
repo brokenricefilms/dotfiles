@@ -41,8 +41,17 @@ compinit
 # export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
+# loading nvm zsh sow down | fix it
+nvm() {
+  echo "🚨 NVM not loaded! Loading now..."
+  unset -f nvm
+  export NVM_PREFIX=$(brew --prefix nvm)
+  [ -s "$NVM_PREFIX/nvm.sh" ] && . "$NVM_PREFIX/nvm.sh"
+  nvm "$@"
+}
+
 # aliasrc file = alias + function + stuff | sorry I'm nood
-source ~/.config/zsh/aliasrc.zsh 
+source ~/.config/zsh/aliasrc.zsh  2>/dev/null
 
 # fzf
 source /usr/share/fzf/key-bindings.zsh 2>/dev/null
