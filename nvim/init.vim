@@ -171,7 +171,7 @@ command! Reload execute "source ~/.config/nvim/init.vim"
 augroup General
     au!
     " autocmd FileType markdown,text setlocal spell spelllang=en
-    autocmd FileType markdown setlocal spell spelllang=en
+    autocmd FileType markdown setlocal spell spelllang=en_US
     " auto insert when open file
     autocmd BufNewFile *.sh  :call CheckShFile()
     autocmd BufNewFile *.fish  :call CheckFishFile()
