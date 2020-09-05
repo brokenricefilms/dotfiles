@@ -13,6 +13,10 @@ HISTFILE=~/.config/zsh/.zsh_history
 bindkey -v
 alias fd='fdfind'
 
+# fzf
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
   if [[ ${KEYMAP} == vicmd ]] ||

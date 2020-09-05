@@ -19,8 +19,7 @@ noremap <leader>f :Files<CR>
 noremap <leader>t :FZF ~<CR>
 noremap <leader>r :Rg<CR>
 noremap <leader>b :Buffers<CR>
-" noremap <c-p> :Commands<CR>
-noremap ; :Commands<CR>
+noremap <c-p> :Commands<CR>
 noremap // :BLines<CR>
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 " move search on top
