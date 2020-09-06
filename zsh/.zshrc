@@ -12,7 +12,6 @@ HISTFILE=~/.config/zsh/.zsh_history
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -v
 
-
 # # Change cursor shape for different vi modes.
 function zle-keymap-select {
   if [[ ${KEYMAP} == vicmd ]] ||
@@ -49,9 +48,6 @@ nvm() {
   [ -s "$NVM_PREFIX/nvm.sh" ] && . "$NVM_PREFIX/nvm.sh"
   nvm "$@"
 }
-
-# aliasrc file = alias + function + stuff | sorry I'm nood
-# source ~/.config/zsh/aliasrc.zsh  2>/dev/null
 
 u () {
     if [ -f $1 ]; then
@@ -155,12 +151,14 @@ export VISUAL='nvim'
 # ls, tree more color
 alias l='clear ; exa -al --color=always --group-directories-first'
 alias ls='clear ; exa -al --color=always --group-directories-first'
+# for when you want type ls, result: you type sl
+alias sl='clear ; exa -al --color=always --group-directories-first'
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
+alias l.='exa -a | egrep "^\."'
 alias ll='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
-alias l.='exa -a | egrep "^\."'
 
-# alias fd='fdfind'
+alias ascii='man ascii | grep -m 1 -A 63 --color=never Oct | less'
 alias cpf='xclip -sel clip'
 alias re='source ~/.config/zsh/.zshrc'
 alias tmuxr='tmux source ~/.tmux.conf'
@@ -178,7 +176,6 @@ alias o='open'
 alias 777='chmod -R 777'
 alias x='chmod +x'
 alias f='fdfind . -H | grep'
-alias c='clear'
 
 # ubuntu apt
 alias ins='sudo apt install -y'
@@ -213,7 +210,7 @@ alias tdl='trash ~/Downloads/*'
 
 # fzf
 alias cf='cd ~/.config/ ; nvim -o $(fzf)'
-# export FZF_DEFAULT_COMMAND='fd --type f'
+# export FZF_DEFAULT_COMMAND='fdfind --type f'
 export FZF_DEFAULT_COMMAND='fdfind -H --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
@@ -228,6 +225,15 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 # export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
         # --color fg:#ebdbb2,bg:#282828,hl:#fabd2f,fg+:#ebdbb2,bg+:#3c3836,hl+:#fabd2f
         # --color info:#83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#83a598,marker:#fe8019,header:#665c54'
+
+c () {
+  local dir
+  dir=$(find ~ -path '*/\.*' -prune \
+                  -o -type d -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
+  clear
+  ls
+}
 
 fco () {
   git branch --all | grep -v HEAD | string trim | fzf | read -l result; and git checkout "$result"
@@ -249,43 +255,43 @@ alias okp='prettier ; yo ; push '
 alias ok='yo ; push'
 
 ghdotfiles () {
-    cp -r ~/.config/vifm/* ~/git/dotfiles/vifm
-	cp ~/.selected_editor ~/git/dotfiles
-	cp ~/.gitconfig  ~/git/dotfiles/git/
 	cp ~/.config/tmux/.tmux.conf ~/git/dotfiles/tmux/
     cp ~/.config/zsh/.zshrc ~/git/dotfiles/zsh/
+	cp ~/.gitconfig  ~/git/dotfiles/git/
+    cp -r ~/.config/vifm/* ~/git/dotfiles/vifm
     cp -r ~/.config/zsh/function ~/git/dotfiles/zsh/
+	cp ~/.selected_editor ~/git/dotfiles
 
     # nvim
 	cp ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
     cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim/
-    cp -r ~/.config/nvim/stuff ~/git/dotfiles/nvim/
     cp -r ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
+    cp -r ~/.config/nvim/stuff ~/git/dotfiles/nvim/
     # I don't want you see my undoir, hack me if you can.
     cp -r ~/.config/nvim/undodir ~/git/ok/
 
-	cp -r ~/.config/fish/* ~/git/dotfiles/fish/
-    crontab -l > ~/git/dotfiles/crontab/crontabConfig
     cp ~/.config/fish/functions/crontab* ~/git/dotfiles/crontab/
-    dconf dump /org/gnome/desktop/wm/keybindings/ > ~/git/dotfiles/keybindings.dconf
+	cp -r ~/.config/fish/* ~/git/dotfiles/fish/
     cp -r ~/.fonts ~/git/dotfiles/
+    crontab -l > ~/git/dotfiles/crontab/crontabConfig
+    dconf dump /org/gnome/desktop/wm/keybindings/ > ~/git/dotfiles/keybindings.dconf
 	cd ~/git/dotfiles/
 	okp ; cd -
 }
 
+alias ghcalculatorOnIOS='cd ~/git/calculatorOnIOS ; okp ; cd -'
+alias ghdataLab='cd ~/git/dataLab ; okp ; cd -'
+alias ghfour-card-feature-section='cd ~/git/four-card-feature-section ; okp ; cd -'
+alias ghFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; okp ; cd -'
+alias ghimg='cd ~/git/img ; okp ; cd -'
 alias ghlazyscript='cd ~/git/lazyscript ; okp ; cd -'
 alias ghlinux_setup='cd ~/git/linux_setup ; okp ; cd -'
-alias ghvimium_dark_theme='cd ~/git/vimium_dark_theme ; okp ; cd -'
-alias ghFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; okp ; cd -'
 alias ghok='cd ~/git/ok ; ok ; cd -'
-alias ghdataLab='cd ~/git/dataLab ; okp ; cd -'
-alias ghwindowsSetup='cd ~/git/windowsSetup ; okp ; cd -'
 alias ghtermuxSetup='cd ~/git/termuxSetup ; okp ; cd -'
-alias ghimg='cd ~/git/img ; okp ; cd -'
-alias ghthuanpham2311='cd ~/git/thuanpham2311 ; okp ; cd -'
 alias ghtheNewsTimes='cd ~/git/theNewsTimes ; okp ; cd -'
-alias ghfour-card-feature-section='cd ~/git/four-card-feature-section ; okp ; cd -'
-alias ghcalculatorOnIOS='cd ~/git/calculatorOnIOS ; okp ; cd -'
+alias ghthuanpham2311='cd ~/git/thuanpham2311 ; okp ; cd -'
+alias ghvimium_dark_theme='cd ~/git/vimium_dark_theme ; okp ; cd -'
+alias ghwindowsSetup='cd ~/git/windowsSetup ; okp ; cd -'
 
 gha () {
 	cowsay "git push lazyscript"
@@ -333,20 +339,20 @@ gha () {
 	cowsay "D O N E"
 }
 
+alias glcalculatorOnIOS='cd ~/git/calculatorOnIOS ; pull ; cd -'
+alias gldataLab='cd ~/git/dataLab ; pull ; cd -'
 alias gldotfiles='cd ~/git/dotfiles ; pull ; cd -'
+alias glfour-card-feature-section='cd ~/git/four-card-feature-section ; pull ; cd -'
+alias glFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; pull ; cd -'
+alias glimg='cd ~/git/img ; pull ; cd -'
 alias gllazyscript='cd ~/git/lazyscript ; pull ; cd -'
 alias gllinux_setup='cd ~/git/linux_setup ; pull ; cd -'
-alias glvimium_dark_theme='cd ~/git/vimium_dark_theme ; pull ; cd -'
-alias glFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; pull ; cd -'
 alias glok='cd ~/git/ok ; pull ; cd -'
-alias gldataLab='cd ~/git/dataLab ; pull ; cd -'
-alias glwindowsSetup='cd ~/git/windowsSetup ;  pull ; cd -'
 alias gltermuxSetup='cd ~/git/termuxSetup ;  pull ; cd -'
-alias glimg='cd ~/git/img ; pull ; cd -'
-alias glthuanpham2311='cd ~/git/thuanpham2311 ; pull ; cd -'
 alias gltheNewsTimes='cd ~/git/theNewsTimes ; pull ; cd -'
-alias glfour-card-feature-section='cd ~/git/four-card-feature-section ; pull ; cd -'
-alias glcalculatorOnIOS='cd ~/git/calculatorOnIOS ; pull ; cd -'
+alias glthuanpham2311='cd ~/git/thuanpham2311 ; pull ; cd -'
+alias glvimium_dark_theme='cd ~/git/vimium_dark_theme ; pull ; cd -'
+alias glwindowsSetup='cd ~/git/windowsSetup ;  pull ; cd -'
 
 gla () {
 	cowsay "git pull lazyscript" 
@@ -400,15 +406,15 @@ alias browser='brave-browser'
 # alias browser='firefox'
 alias github='browser --new-window "https://github.com/thuanpham2311"'
 
-alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
 alias browser_fb='browser https://facebook.com'
-alias browser_stu='browser "http://stu.edu.vn/"'
-alias browser_stu2='browser "http://www.stu.edu.vn/vi/265/khoa-cong-nghe-thong-tin.html"'
+alias browser_linkedin='browser "https://www.linkedin.com/feed/"'
 alias browser_mail0='browser "https://mail.google.com/mail/u/0/#inbox"'
 alias browser_mail1='browser "https://mail.google.com/mail/u/1/#inbox"'
 alias browser_mail2='browser "https://mail.google.com/mail/u/2/#inbox"'
 alias browser_mail='browser_mail0 ; browser_mail1 ; browser_mail2'
-alias browser_linkedin='browser "https://www.linkedin.com/feed/"'
+alias browser_stu2='browser "http://www.stu.edu.vn/vi/265/khoa-cong-nghe-thong-tin.html"'
+alias browser_stu='browser "http://stu.edu.vn/"'
+alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
 
 browser_daily () {
     cowsay "GET.SHIT.DONE"

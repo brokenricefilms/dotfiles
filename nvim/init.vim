@@ -1,6 +1,7 @@
 call plug#begin()
 Plug 'easymotion/vim-easymotion'
-nmap ff <Plug>(easymotion-overwin-f)
+nmap ;; <Plug>(easymotion-overwin-f)
+
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
@@ -13,11 +14,11 @@ map mm <Plug>NERDCommenterToggle
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " Plug 'stsewd/fzf-checkout.vim'
-noremap <leader>g :GFiles<CR>
-noremap <leader>f :Files<CR>
-noremap <leader>t :FZF ~<CR>
-noremap <leader>r :Rg<CR>
 noremap <leader>b :Buffers<CR>
+noremap <leader>f :Files<CR>
+noremap <leader>g :GFiles<CR>
+noremap <leader>r :Rg<CR>
+noremap <leader>t :FZF ~<CR>
 noremap <c-p> :Commands<CR>
 noremap // :BLines<CR>
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
@@ -41,9 +42,9 @@ let g:fzf_colors =
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 set hidden
-set updatetime=300
 set shortmess+=c
 set signcolumn=yes
+set updatetime=300
 let g:coc_global_extensions = [
                         \ "coc-css",
                         \ "coc-html",
@@ -116,8 +117,8 @@ set clipboard=unnamedplus
 
 " better search
 set hlsearch
-set incsearch
 set ignorecase
+set incsearch
 set smartcase
 nmap <CR> :nohlsearch<CR>
 
@@ -134,14 +135,14 @@ syntax enable
 " set statusline=%F%m%r%h%w
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
 
-set autowrite
-set autoread
-set noswapfile
-set nobackup
-set nowritebackup
 set autoindent
-set smartindent
+set autoread
+set autowrite
+set nobackup
+set noswapfile
+set nowritebackup
 set scrolloff=8
+set smartindent
 
 " fix indenting visual block
 vmap < <gv
@@ -166,11 +167,11 @@ highlight CursorLine term=bold cterm=bold
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
 
-nmap <C-t> :tabnew<Return>
-nmap <S-k> gt
-nmap <S-j> gT
-
 map<F6> :setlocal spell! spelllang=en_us<CR>
+" tab remap
+nmap <C-t> :tabnew<Return>
+nmap <S-j> gT
+nmap <S-k> gt
 
 command! Config execute "cd ~/.config | FZF ~/.config/"
 command! Reload execute "source ~/.config/nvim/init.vim"
@@ -179,12 +180,11 @@ augroup General
     au!
     " autocmd FileType markdown setlocal spell spelllang=en_US
     " auto insert when open file
-    autocmd BufNewFile *.sh  :call CheckShFile()
+    autocmd BufNewFile *.cpp :read ~/.config/nvim/stuff/cppTemplate.cpp | normal!kdd3j
     autocmd BufNewFile *.fish  :call CheckFishFile()
     autocmd BufNewFile *.py :call CheckPyFile()
-    autocmd BufNewFile *.cpp :read ~/.config/nvim/stuff/cppTemplate.cpp | normal!kdd3j
+    autocmd BufNewFile *.sh  :call CheckShFile()
 augroup END
-
 
 function! CheckShFile()
     normal!i#! /usr/bin/env sh
