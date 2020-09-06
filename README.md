@@ -10,7 +10,7 @@
 
 ## Install
 
-![https://github.com/thuanpham2311/linux_setup](https://github.com/thuanpham2311/linux_setup).
+[https://github.com/thuanpham2311/linux_setup](https://github.com/thuanpham2311/linux_setup).
 
 ## Q & A
 

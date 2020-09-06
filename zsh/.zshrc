@@ -254,7 +254,6 @@ ghdotfiles () {
 	cp ~/.gitconfig  ~/git/dotfiles/git/
 	cp ~/.config/tmux/.tmux.conf ~/git/dotfiles/tmux/
     cp ~/.config/zsh/.zshrc ~/git/dotfiles/zsh/
-    cp ~/.config/zsh/aliasrc.zsh ~/git/dotfiles/zsh/
     cp -r ~/.config/zsh/function ~/git/dotfiles/zsh/
 
     # nvim
