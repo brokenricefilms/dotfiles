@@ -292,6 +292,27 @@ d/home/master/.config/fish
 d/home/master/.config/fish/functions
 	fish_prompt.fish
 3
+d/home/master
+	.vscode
+10
+d/home/master/.vscode
+	extensions
+1
+d/home/master
+	.vscode
+10
+d/home
+	master
+1
+d/home/master
+	.ipython
+5
+d/home/master/.ipython
+	extensions
+1
+d/home/master
+	.ipython
+5
 d
 
 # Right window history (oldest to newest):
