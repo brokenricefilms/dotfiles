@@ -113,7 +113,13 @@ filetype plugin indent on
 set encoding=UTF-8
 set mouse=a
 set clipboard=unnamedplus
-set nohlsearch
+
+" better search
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+nmap <CR> :nohlsearch<CR>
 
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -164,13 +170,14 @@ nmap <C-t> :tabnew<Return>
 nmap <S-k> gt
 nmap <S-j> gT
 
+map<F6> :setlocal spell! spelllang=en_us<CR>
+
 command! Config execute "cd ~/.config | FZF ~/.config/"
 command! Reload execute "source ~/.config/nvim/init.vim"
 
 augroup General
     au!
-    " autocmd FileType markdown,text setlocal spell spelllang=en
-    autocmd FileType markdown setlocal spell spelllang=en_US
+    " autocmd FileType markdown setlocal spell spelllang=en_US
     " auto insert when open file
     autocmd BufNewFile *.sh  :call CheckShFile()
     autocmd BufNewFile *.fish  :call CheckFishFile()
