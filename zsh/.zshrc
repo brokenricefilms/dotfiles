@@ -1,6 +1,6 @@
 # Set up the prompt
 autoload -U colors && colors
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+PROMPT=" %F{blue}%~%f %F{red}❯%f%F{yellow}❯%f%F{green}❯%f "
 
 setopt histignorealldups sharehistory
 
@@ -162,7 +162,6 @@ alias ascii='man ascii | grep -m 1 -A 63 --color=never Oct | less'
 alias cpf='xclip -sel clip'
 alias re='source ~/.config/zsh/.zshrc'
 alias tmuxr='tmux source ~/.tmux.conf'
-alias g='grep'
 alias h='htop'
 alias e='exit'
 alias :q='exit'
@@ -175,7 +174,8 @@ alias v='nvim'
 alias o='open'
 alias 777='chmod -R 777'
 alias x='chmod +x'
-alias f='fdfind . -H | grep'
+alias f='fdfind . -H | grep --colour=always'
+alias vifm='vifm .'
 
 # ubuntu apt
 alias ins='sudo apt install -y'
@@ -436,7 +436,6 @@ rem () {
     sudo apt autoremove -y
     sudo apt autoclean
     tldr --update
-    sudo npm install -g npm
     clear
 }
 

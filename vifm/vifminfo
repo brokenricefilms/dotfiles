@@ -281,8 +281,17 @@ d/home/master/Documents/Book
 	nonfiction
 2
 d/home/master/Documents/Book/nonfiction
-	..
-0
+	deepWork.pdf
+26
+d/home/master
+	.node_repl_history
+28
+d/home/master/.config/fish
+	functions
+1
+d/home/master/.config/fish/functions
+	fish_prompt.fish
+3
 d
 
 # Right window history (oldest to newest):
@@ -294,6 +303,7 @@ D
 # Command line history (oldest to newest):
 :trashes
 :help
+:qa
 :q
 
 # Search history (oldest to newest):
