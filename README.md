@@ -10,6 +10,7 @@
 
 ## Note
 
+- I use Crontab + auto commit script (used API whatthecommit.com), so my commit just auto sync, => sorry I'm so lazy to commit :D
 - I'm switch to zsh form fish, so fish shell files no longer updated.
 - List terminal, right now I don't use (I use native gnome terminal).
   - kitty
