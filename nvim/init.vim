@@ -1,7 +1,7 @@
 call plug#begin()
 Plug 'easymotion/vim-easymotion'
 nmap ff <Plug>(easymotion-overwin-f)
-
+Plug 'vimwiki/vimwiki'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
