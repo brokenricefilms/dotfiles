@@ -1,5 +1,5 @@
 #! /usr/bin/zsh
 
-source ~/.config/zsh/aliasrc.zsh
+source ~/.config/zsh/.zshrc
 gla
 gha

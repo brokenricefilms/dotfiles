@@ -22,5 +22,5 @@
 # 		
 # m h  dom mon dow   command		
 
-# 0 * * * * zsh /home/master/.config/zsh/function/crontabHourly.zsh
-*/5 * * * * zsh /home/master/.config/zsh/function/crontabHourly.zsh
+0 * * * * zsh /home/master/.config/zsh/function/crontabHourly.zsh
+# */5 * * * * zsh /home/master/.config/zsh/function/crontabHourly.zsh
