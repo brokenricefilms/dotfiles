@@ -83,11 +83,11 @@ tv () {
 }
 
 print256colours () {
-    bash ~/.config/zsh/functions/print256colours.sh
+    bash ~/.config/zsh/function/print256colours.sh
 }
 
 showTrueColor () {
-    bash ~/.config/zsh/functions/showTrueColor.sh
+    bash ~/.config/zsh/function/showTrueColor.sh
 }
 
 dl () {
