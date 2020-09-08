@@ -10,6 +10,7 @@
 
 ## Note
 
+- **All my commit message is BS, don't waste your time read that\***
 - I'm switch to zsh form fish, so fish shell files no longer updated.
 - List terminal, right now I don't use (I use native gnome terminal).
   - kitty
