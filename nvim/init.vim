@@ -1,6 +1,4 @@
 call plug#begin()
-Plug 'vimwiki/vimwiki'
-
 Plug 'easymotion/vim-easymotion'
 nmap ;; <Plug>(easymotion-overwin-f)
 
@@ -90,25 +88,8 @@ set undodir=~/.config/nvim/undodir
 set undofile
 nnoremap <leader>u :UndotreeShow<CR>
 
-Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install', 'for': 'markdown'}
+Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
 let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
-let g:mkdp_auto_start = 1
-let g:mkdp_browser = 'brave-browser-beta'
-
-" Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
-" let g:instant_markdown_browser = "brave-browser --new-window"
-
-"Uncomment to override defaults:
-"let g:instant_markdown_slow = 1
-" let g:instant_markdown_autostart = 0
-"let g:instant_markdown_open_to_the_world = 1
-"let g:instant_markdown_allow_unsafe_content = 1
-"let g:instant_markdown_allow_external_content = 0
-"let g:instant_markdown_mathjax = 1
-"let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
-" let g:instant_markdown_autoscroll = 0
-"let g:instant_markdown_port = 8888
-"let g:instant_markdown_python = 1
 
 " fancy
 " Plug 'luochen1990/rainbow'
@@ -136,12 +117,10 @@ set mouse=a
 set clipboard=unnamedplus
 
 " better search
-set hlsearch
+set nohlsearch
 set ignorecase
 set incsearch
 set smartcase
-" vimkiki have this map so? change this to ?
-nmap <leader><CR> :nohlsearch<CR>
 
 set tabstop=4 softtabstop=4
 set shiftwidth=4
