@@ -96,8 +96,10 @@ let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 " let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
 Plug 'Yggdroot/indentLine'
-" bug: markdown don't show bold style (** **)
 let g:indentLine_char = '▏'
+" bug: markdown don't show bold style (** **)
+" fix that:
+let g:indentLine_fileTypeExclude = ['text', 'markdown']
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'lifepillar/vim-gruvbox8'
@@ -120,10 +122,11 @@ set mouse=a
 set clipboard=unnamedplus
 
 " better search
-set nohlsearch
+set hlsearch
 set ignorecase
 set incsearch
 set smartcase
+nmap <CR> :nohlsearch<CR>
 
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -151,9 +154,7 @@ set smartindent
 vmap < <gv
 vmap > >gv
 
-" remap Esc
 :imap jj <Esc>
-" remap leader to space
 map <space> <leader>
 
 " Display different types of white spaces
