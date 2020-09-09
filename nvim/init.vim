@@ -94,7 +94,10 @@ let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 " fancy
 " Plug 'luochen1990/rainbow'
 " let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+
 Plug 'Yggdroot/indentLine'
+" bug: markdown don't show bold style (** **)
+let g:indentLine_char = '▏'
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'lifepillar/vim-gruvbox8'
