@@ -210,7 +210,6 @@ alias tdl='trash ~/Downloads/*'
 
 # fzf
 alias cf='cd ~/.config/ ; nvim -o $(fzf)'
-# export FZF_DEFAULT_COMMAND='fdfind --type f'
 export FZF_DEFAULT_COMMAND='fdfind -H --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
@@ -233,14 +232,6 @@ c () {
   cd "$dir"
   clear
   ls
-}
-
-fco () {
-  git branch --all | grep -v HEAD | string trim | fzf | read -l result; and git checkout "$result"
-}
-
-flog () {
-  git log --pretty=oneline --abbrev-commit --reverse | fzf --tac +s -e | awk '{print $1;}' | read -l result; and git checkout "$result"
 }
 
 # git
@@ -456,7 +447,7 @@ data () {
 
 # fzf
 source /usr/share/fzf/key-bindings.zsh 2>/dev/null
-source /usr/share/fzf/completion.zsh 2>/dev/null
+surce /usr/share/fzf/completion.zsh 2>/dev/null
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
