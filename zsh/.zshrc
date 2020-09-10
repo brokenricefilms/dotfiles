@@ -37,18 +37,6 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 autoload -Uz compinit
 compinit
 
-# export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-# loading nvm zsh sow down | fix it
-nvm() {
-  echo "🚨 NVM not loaded! Loading now..."
-  unset -f nvm
-  export NVM_PREFIX=$(brew --prefix nvm)
-  [ -s "$NVM_PREFIX/nvm.sh" ] && . "$NVM_PREFIX/nvm.sh"
-  nvm "$@"
-}
-
 u () {
     if [ -f $1 ]; then
         case $1 in
@@ -158,7 +146,6 @@ alias l.='exa -a | egrep "^\."'
 alias ll='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 
-alias ascii='man ascii | grep -m 1 -A 63 --color=never Oct | less'
 alias cpf='xclip -sel clip'
 alias re='source ~/.config/zsh/.zshrc'
 alias tmuxr='tmux source ~/.tmux.conf'
