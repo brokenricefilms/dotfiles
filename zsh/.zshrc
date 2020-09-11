@@ -406,7 +406,12 @@ browser_daily () {
 }
 
 # mode
-alias hi='browser_daily ; rem'
+hi () {
+    browser_daily
+    # wait for browser loading website, cuz maybe can effect system resource
+    sleep 30
+    rem
+}
 # alias rem='sudo dnf update -y ; sudo dnf autoremove -y ; flatpak update -y'
 rem () {
     nvim -c "PlugUpdate | qa"
