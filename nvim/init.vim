@@ -52,6 +52,7 @@ let g:coc_global_extensions = [
                         \ "coc-highlight",
                         \ "coc-json",
                         \ "coc-python",
+                        \ "coc-java",
                         \ "coc-clangd",
                         \ "coc-sh",
                         \ "coc-sql",
