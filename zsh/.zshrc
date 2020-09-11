@@ -385,20 +385,16 @@ alias browser='brave-browser'
 alias github='browser --new-window "https://github.com/thuanpham2311"'
 
 alias browser_fb='browser https://facebook.com'
-alias browser_mes='browser "https://www.facebook.com/messages/t/"'
-alias browser_linkedin='browser "https://www.linkedin.com/mynetwork/"'
 alias browser_mail0='browser "https://mail.google.com/mail/u/0/#inbox"'
 alias browser_mail1='browser "https://mail.google.com/mail/u/1/#inbox"'
 alias browser_mail2='browser "https://mail.google.com/mail/u/2/#inbox"'
 alias browser_mail='browser_mail0 ; browser_mail1 ; browser_mail2'
-alias browser_stu2='browser "http://www.stu.edu.vn/vi/265/khoa-cong-nghe-thong-tin.html"'
 alias browser_stu='browser "http://stu.edu.vn/"'
 alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
 
 browser_daily () {
     cowsay "GET.SHIT.DONE"
     browser_youtube_subsriptions
-	browser_linkedin
     browser_mail0
     browser_mail1
 	browser_fb
