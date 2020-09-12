@@ -37,6 +37,10 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 autoload -Uz compinit
 compinit
 
+BMI () {
+    ~/.config/zsh/function/BMI.py
+}
+
 u () {
     if [ -f $1 ]; then
         case $1 in
