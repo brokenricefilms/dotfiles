@@ -313,6 +313,9 @@ d/home/master/.ipython
 d/home/master
 	.ipython
 5
+d/home/master/Music
+	A fathers lesson _ Dark emotional music-gEzJ-o0gz_E.mp3
+1
 d
 
 # Right window history (oldest to newest):
@@ -334,17 +337,14 @@ D
 /pi
 /exn
 /ex
+/1 hour
 
 # Prompt history (oldest to newest):
 
 # Local filter history (oldest to newest):
 
 # Registers:
-""/home/master/.local/share/vifm/Trash/000_Screenshot from 2020-07-08 07-34-27.png
-""/home/master/.local/share/vifm/Trash/000_Screenshot from 2020-07-08 07-34-39.png
-""/home/master/.local/share/vifm/Trash/000_Screenshot from 2020-07-08 07-34-54.png
-""/home/master/.local/share/vifm/Trash/000_Screenshot from 2020-07-08 07-35-01.png
-""/home/master/.local/share/vifm/Trash/000_Screenshot from 2020-07-08 07-35-04.png
+""/home/master/.local/share/vifm/Trash/000_ Dark Magic Music . _ 1 Hour _ The Unspoken Tales-dcPJn5KxULM.mp3
 
 # Directory stack (oldest to newest):
 
@@ -369,6 +369,8 @@ t/home/master/.local/share/vifm/Trash/000_Screenshot from 2020-07-08 07-35-01.pn
 	/home/master/Pictures/Screenshot from 2020-07-08 07-35-01.png
 t/home/master/.local/share/vifm/Trash/000_Screenshot from 2020-07-08 07-35-04.png
 	/home/master/Pictures/Screenshot from 2020-07-08 07-35-04.png
+t/home/master/.local/share/vifm/Trash/000_ Dark Magic Music . _ 1 Hour _ The Unspoken Tales-dcPJn5KxULM.mp3
+	/home/master/Music/ Dark Magic Music . _ 1 Hour _ The Unspoken Tales-dcPJn5KxULM.mp3
 
 # State:
 f
