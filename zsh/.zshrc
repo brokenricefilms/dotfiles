@@ -222,7 +222,7 @@ c () {
                   -o -type d -print 2> /dev/null | fzf +m) &&
   cd "$dir"
   clear
-  ls
+  la
 }
 
 # git
