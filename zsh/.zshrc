@@ -167,6 +167,7 @@ alias 777='chmod -R 777'
 alias x='chmod +x'
 alias f='fdfind . -H | grep --colour=always'
 alias vifm='vifm .'
+alias m='tmux new-window ; mpv ~/Music/*'
 
 # ubuntu apt
 alias ins='sudo apt install -y'
