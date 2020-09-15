@@ -38,7 +38,7 @@ autoload -Uz compinit
 compinit
 
 BMI () {
-    ~/.config/zsh/function/BMI.py
+    ~/.config/zsh/functions/BMI.py
 }
 
 u () {
@@ -71,15 +71,15 @@ tv () {
 }
 
 24-bit-color () {
-    bash ~/.config/zsh/function/24-bit-color.sh
+    bash ~/.config/zsh/functions/24-bit-color.sh
 }
 
 print256colours () {
-    bash ~/.config/zsh/function/print256colours.sh
+    bash ~/.config/zsh/functions/print256colours.sh
 }
 
 showTrueColor () {
-    bash ~/.config/zsh/function/showTrueColor.sh
+    bash ~/.config/zsh/functions/showTrueColor.sh
 }
 
 dl () {
@@ -242,7 +242,7 @@ ghdotfiles () {
     cp ~/.config/zsh/.zshrc ~/git/dotfiles/zsh/
 	cp ~/.gitconfig  ~/git/dotfiles/git/
     cp -r ~/.config/vifm/* ~/git/dotfiles/vifm
-    cp -r ~/.config/zsh/function ~/git/dotfiles/zsh/
+    cp -r ~/.config/zsh/functions ~/git/dotfiles/zsh/
 	cp ~/.selected_editor ~/git/dotfiles
 
     # nvim
