@@ -234,30 +234,34 @@ alias pull="git pull"
 alias clone='git clone'
 alias commit='git commit -m'
 alias prettier='prettier --write .'
-alias okp='prettier ; yo ; push '
 alias ok='yo ; push'
+alias okp='prettier ; yo ; push '
 
 ghdotfiles () {
 	cp ~/.config/tmux/.tmux.conf ~/git/dotfiles/tmux/
-    cp ~/.config/zsh/.zshrc ~/git/dotfiles/zsh/
-	cp ~/.gitconfig  ~/git/dotfiles/git/
+
+	cp -r ~/.config/fish/* ~/git/dotfiles/fish/
+
     cp -r ~/.config/vifm/* ~/git/dotfiles/vifm
+
+    cp ~/.config/zsh/.zshrc ~/git/dotfiles/zsh/
     cp -r ~/.config/zsh/functions ~/git/dotfiles/zsh/
-	cp ~/.selected_editor ~/git/dotfiles
+    cp ~/.config/zsh/functions/crontab* ~/git/dotfiles/crontab/
+    crontab -l > ~/git/dotfiles/crontab/crontabConfig
 
     # nvim
 	cp ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
     cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim/
     cp -r ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
     cp -r ~/.config/nvim/stuff ~/git/dotfiles/nvim/
-    # I don't want you see my undoir, hack me if you can.
+    # I don't want you see my undoir, try hack me :D
     cp -r ~/.config/nvim/undodir ~/git/ok/
 
-    cp ~/.config/fish/functions/crontab* ~/git/dotfiles/crontab/
-	cp -r ~/.config/fish/* ~/git/dotfiles/fish/
+	cp ~/.gitconfig  ~/git/dotfiles/git/
+	cp ~/.selected_editor ~/git/dotfiles
     cp -r ~/.fonts ~/git/dotfiles/
-    crontab -l > ~/git/dotfiles/crontab/crontabConfig
     dconf dump /org/gnome/desktop/wm/keybindings/ > ~/git/dotfiles/keybindings.dconf
+
 	cd ~/git/dotfiles/
 	okp ; cd -
 }
@@ -393,7 +397,6 @@ alias browser_fb='browser https://facebook.com'
 alias browser_mail0='browser "https://mail.google.com/mail/u/0/#inbox"'
 alias browser_mail1='browser "https://mail.google.com/mail/u/1/#inbox"'
 alias browser_mail2='browser "https://mail.google.com/mail/u/2/#inbox"'
-alias browser_mail='browser_mail0 ; browser_mail1 ; browser_mail2'
 alias browser_stu='browser "http://stu.edu.vn/"'
 alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
 
@@ -413,7 +416,8 @@ hi () {
     sleep 30
     rem
 }
-# alias rem='sudo dnf update -y ; sudo dnf autoremove -y ; flatpak update -y'
+
+# ubuntu
 rem () {
     nvim -c "PlugUpdate | qa"
     sudo apt update
@@ -424,12 +428,25 @@ rem () {
     clear
 }
 
+# fedora
+# rem () {
+    # nvim -c "PlugUpdate | qa"
+    # sudo dnf update -y 
+    # sudo dnf autoremove -y 
+    # flatpak update -y
+    # tldr --update
+    # clear
+# }
+
 # arch
 # rem () {
+    # nvim -c "PlugUpdate | qa"
     # sudo pacman -Syyu --noconfirm
     # sudo npm install -g npm
     # nvim -c "PlugUpdate | qa"
     # tldr --update
+    # tldr --update
+    # clear
 # }
 
 data () {
