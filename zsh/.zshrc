@@ -402,6 +402,7 @@ alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscr
 
 browser_daily () {
     cowsay "GET.SHIT.DONE"
+    browser_youtube_subsriptions
     browser_mail0
     browser_mail1
 	browser_fb
