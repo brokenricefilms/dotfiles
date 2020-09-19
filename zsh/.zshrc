@@ -425,6 +425,7 @@ rem () {
     sudo apt autoclean
     tldr --update
     clear
+    la
 }
 
 # fedora
