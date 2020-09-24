@@ -37,6 +37,17 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 autoload -Uz compinit
 compinit
 
+mk () {
+  if [ ! -n "$1" ]; then
+    echo "Enter a directory name"
+  elif [ -d $1 ]; then
+    echo "\`$1' already exists"
+	cd $1
+  else
+    mkdir $1 && cd $1
+  fi
+}
+
 BMI () {
     ~/.config/zsh/functions/BMI.py
 }
@@ -159,7 +170,6 @@ alias :q='exit'
 alias p='ipython3'
 alias rbn='sudo reboot now'
 alias sdn='sudo shutdown now'
-alias mkd='mkdir -pv'
 alias ka='killall'
 alias v='nvim'
 alias o='open'
