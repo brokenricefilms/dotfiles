@@ -103,10 +103,6 @@ let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 " let g:indentLine_fileTypeExclude = ['text', 'markdown']
 "
 Plug 'bling/vim-bufferline'
-let g:bufferline_echo = 0
-autocmd VimEnter *
-    \ let &statusline='%{bufferline#refresh_status()}'
-    \ .bufferline#get_status_string()
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'lifepillar/vim-gruvbox8'
 call plug#end()
