@@ -101,8 +101,8 @@ let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 " bug: markdown don't show bold style (** **)
 " fix that ?, so don't work:
 " let g:indentLine_fileTypeExclude = ['text', 'markdown']
-"
-Plug 'bling/vim-bufferline'
+
+
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'lifepillar/vim-gruvbox8'
 call plug#end()

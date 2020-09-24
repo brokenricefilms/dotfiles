@@ -193,7 +193,7 @@ alias uins='sudo apt remove -y'
 
 # tmux
 # alias ide='tmux split-window -v -p 30 ; tmux split-window -h -p 66 ; tmux split-window -h -p 50'
-alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 75'
+alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 75 ; tmux last-pane ; nvim'
 alias qa='tmux ls; tmux kill-session -a'
 
 # cd
