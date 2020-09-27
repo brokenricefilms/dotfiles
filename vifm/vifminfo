@@ -22,12 +22,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/usr/share/icons/Yaru/48x48
-	emblems
-5
-d/usr/share/icons/Yaru/48x48/emblems
-	emblem-personal.png
-17
 d/home/master
 	Downloads
 11
@@ -320,13 +314,22 @@ d/home/master
 	Downloads
 15
 d/home/master/Downloads
-	21-lessons-for-the-21st-century-yuval-noah-harari.epub
+	..
+0
+d/home/master
+	Downloads
+15
+d/home/master/Downloads
+	[krug,_steve]_don't_make_me_think,_revisited___a_c(z-lib.org)-(1).epub
 1
 d
 
 # Right window history (oldest to newest):
 D/home/master
 	..
+0
+D/home/master/Downloads
+	
 0
 D
 
@@ -344,6 +347,7 @@ D
 /ex
 /1 hour
 /dow
+/d
 
 # Prompt history (oldest to newest):
 
