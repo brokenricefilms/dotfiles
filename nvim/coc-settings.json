@@ -1,4 +1,3 @@
 {
-    "suggest.noselect": false,
-    "snippets.userSnippetsDirectory": "~/.config/nvim/snips"
+    "suggest.noselect": false
 }
