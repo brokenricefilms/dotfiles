@@ -95,22 +95,22 @@ showTrueColor () {
 }
 
 dl () {
-	cd ~/Downloads
-	aria2c $argv
-	ls -lah ~/Downloads
-	cd -
+    cd ~/Downloads
+    aria2c $argv
+    ls -lah ~/Downloads
+    cd -
 }
 
 run () {
 	if ls $argv | grep ".cpp"
     then
         g++ $argv
-		./a.out
-		rm a.out
+        ./a.out
+        rm a.out
 	elif ls $argv | grep ".c"
     then
-		gcc $argv
-		./a.out
+        gcc $argv
+        ./a.out
         rm a.out
     fi
 }
