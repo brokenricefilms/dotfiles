@@ -182,6 +182,7 @@ nmap <S-j> gT
 nmap <S-k> gt
 
 command! Reload execute "source ~/.config/nvim/init.vim"
+command! CdHere execute "cd h:%"
 
 augroup General
     au!
