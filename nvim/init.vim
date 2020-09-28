@@ -112,10 +112,12 @@ call plug#end()
 
 " theme
 set termguicolors
-" set background=light
-" colorscheme PaperColor
-set background=dark
-colorscheme gruvbox8
+set background=light
+" set background=dark
+
+colorscheme PaperColor
+" colorscheme gruvbox8
+
 
 set nocompatible
 filetype plugin indent on
