@@ -182,7 +182,6 @@ nmap <S-j> gT
 nmap <S-k> gt
 
 command! Reload execute "source ~/.config/nvim/init.vim"
-command! RunCpp execute "!g++ % ; ./a.out ; rm ./a.out"
 
 augroup General
     au!
