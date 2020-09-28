@@ -21,9 +21,10 @@ Plug 'junegunn/fzf.vim'
 " Plug 'stsewd/fzf-checkout.vim'
 noremap <leader>b :Buffers<CR>
 noremap <leader>f :Files<CR>
+noremap <leader>t :Files ~<CR>
 noremap <leader>g :GFiles<CR>
 noremap <leader>r :Rg<CR>
-noremap <leader>t :FZF ~<CR>
+
 noremap <c-p> :Commands<CR>
 noremap // :BLines<CR>
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
@@ -57,7 +58,6 @@ let g:coc_global_extensions = [
                         \ "coc-highlight",
                         \ "coc-json",
                         \ "coc-python",
-                        \ "coc-java",
                         \ "coc-clangd",
                         \ "coc-sh",
                         \ "coc-sql",
@@ -181,8 +181,8 @@ nmap <C-t> :tabnew<Return>
 nmap <S-j> gT
 nmap <S-k> gt
 
-command! Config execute "cd ~/.config | FZF ~/.config/"
 command! Reload execute "source ~/.config/nvim/init.vim"
+command! RunCpp execute "!g++ % ; ./a.out ; rm ./a.out"
 
 augroup General
     au!
