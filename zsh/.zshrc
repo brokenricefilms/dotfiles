@@ -155,8 +155,6 @@ export VISUAL='nvim'
 # ls, tree more color
 alias l='clear ; exa -al --color=always --group-directories-first'
 alias ls='clear ; exa -al --color=always --group-directories-first'
-# for when you want type ls, result: you type sl
-alias sl='clear ; exa -al --color=always --group-directories-first'
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
 alias l.='exa -a | egrep "^\."'
 alias ll='exa -l --color=always --group-directories-first'  # long format
@@ -222,6 +220,13 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
     --color=fg+:#4d4d4c,bg+:#e8e8e8,hl+:#d7005f
     --color=info:#4271ae,prompt:#8959a8,pointer:#d7005f
     --color=marker:#4271ae,spinner:#4271ae,header:#4271ae'
+
+# mono
+# export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+    # --color=fg:#202020,bg:#efefef,hl:#202020
+    # --color=fg+:#505050,bg+:#efefef,hl+:#202020
+    # --color=info:#202020,prompt:#202020,pointer:#202020
+    # --color=marker:#202020,spinner:#202020,header:#202020'
 
 # gruvbox dark
 # export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
