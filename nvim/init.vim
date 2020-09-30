@@ -182,13 +182,6 @@ nmap <S-k> gt
 
 command! Reload execute "source ~/.config/nvim/init.vim"
 
-" quick test
-autocmd filetype c nnoremap <F5> : <bar> exec '!gcc '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
-autocmd filetype cpp nnoremap <F5> : <bar> exec '!g++ '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
-autocmd filetype python nnoremap <F5> : <bar> exec '!python3 '.shellescape('%')<CR>
-autocmd filetype javascript nnoremap <F5> : <bar> exec '!node '.shellescape('%')<CR>
-
-
 augroup General
     au!
     " autocmd FileType markdown setlocal spell spelllang=en_US
