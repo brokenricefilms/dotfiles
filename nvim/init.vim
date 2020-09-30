@@ -180,6 +180,15 @@ nmap <C-t> :tabnew<Return>
 nmap <S-j> gT
 nmap <S-k> gt
 
+" rethinking hjkl
+nnoremap L l
+nnoremap H h
+nnoremap l w
+nnoremap h b
+
+nnoremap <C-k> <C-u>
+nnoremap <C-j> <C-d>
+
 command! Reload execute "source ~/.config/nvim/init.vim"
 
 augroup General
