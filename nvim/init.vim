@@ -55,7 +55,6 @@ let g:coc_global_extensions = [
             \ "coc-css",
             \ "coc-html",
             \ "coc-snippets",
-            \ "coc-highlight",
             \ "coc-json",
             \ "coc-python",
             \ "coc-clangd",
@@ -64,10 +63,17 @@ let g:coc_global_extensions = [
             \ "coc-explorer",
             \ "coc-tsserver",]
 
+" inoremap <silent><expr> <TAB>
+            " \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+            " \ <SID>check_back_space() ? "\<TAB>" :
+            " \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
 inoremap <silent><expr> <TAB>
-            \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-            \ <SID>check_back_space() ? "\<TAB>" :
-            \ coc#refresh()
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
 
 function! s:check_back_space() abort
     let col = col('.') - 1
@@ -75,6 +81,8 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
+
+Plug 'honza/vim-snippets'
 
 " coc explorer
 nmap <space>e :CocCommand explorer<CR>
@@ -95,12 +103,12 @@ let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 " Plug 'luochen1990/rainbow'
 " let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
+"Plug 'RRethy/vim-hexokinase'
 Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '▏'
 " bug: markdown don't show bold style (** **)
 " fix that ?, so don't work:
 let g:indentLine_fileTypeExclude = ['text', 'markdown']
-
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'lifepillar/vim-gruvbox8'
@@ -180,15 +188,6 @@ nmap <C-t> :tabnew<Return>
 nmap <S-j> gT
 nmap <S-k> gt
 
-" rethinking hjkl
-nnoremap L l
-nnoremap H h
-nnoremap l w
-nnoremap h b
-
-nnoremap <C-k> <C-u>
-nnoremap <C-j> <C-d>
-
 command! Reload execute "source ~/.config/nvim/init.vim"
 
 augroup General
@@ -216,36 +215,51 @@ function! CheckFishFile()
     normal!o
 endfunction
 
-nmap t :call OpenFloatTerm()<CR>
-function! OpenFloatTerm()
-    let height = float2nr((&lines - 2) / 1.5)
-    let row = float2nr((&lines - height) / 2)
-    let width = float2nr(&columns / 1.5)
-    let col = float2nr((&columns - width) / 2)
-    " Border Window
-    let border_opts = {
-                \ 'relative': 'editor',
-                \ 'row': row - 1,
-                \ 'col': col - 2,
-                \ 'width': width + 4,
-                \ 'height': height + 2,
-                \ 'style': 'minimal'
-                \ }
-    let border_buf = nvim_create_buf(v:false, v:true)
-    let s:border_win = nvim_open_win(border_buf, v:true, border_opts)
-    " Main Window
-    let opts = {
-                \ 'relative': 'editor',
-                \ 'row': row,
-                \ 'col': col,
-                \ 'width': width,
-                \ 'height': height,
-                \ 'style': 'minimal'
-                \ }
-    let buf = nvim_create_buf(v:false, v:true)
-    let win = nvim_open_win(buf, v:true, opts)
+nmap t :call FloatTerm()<CR>
+nnoremap <Leader>a :call FloatTerm('"tig"')<CR>
+function! FloatTerm(...)
+  " Configuration
+  let height = float2nr((&lines - 2) * 0.6)
+  let row = float2nr((&lines - height) / 2)
+  let width = float2nr(&columns * 0.6)
+  let col = float2nr((&columns - width) / 2)
+  " Border Window
+  let border_opts = {
+        \ 'relative': 'editor',
+        \ 'row': row - 1,
+        \ 'col': col - 2,
+        \ 'width': width + 4,
+        \ 'height': height + 2,
+        \ 'style': 'minimal'
+        \ }
+  " Terminal Window
+  let opts = {
+        \ 'relative': 'editor',
+        \ 'row': row,
+        \ 'col': col,
+        \ 'width': width,
+        \ 'height': height,
+        \ 'style': 'minimal'
+        \ }
+  let top = "╭" . repeat("─", width + 2) . "╮"
+  let mid = "│" . repeat(" ", width + 2) . "│"
+  let bot = "╰" . repeat("─", width + 2) . "╯"
+  let lines = [top] + repeat([mid], height) + [bot]
+  let bbuf = nvim_create_buf(v:false, v:true)
+  call nvim_buf_set_lines(bbuf, 0, -1, v:true, lines)
+  let s:float_term_border_win = nvim_open_win(bbuf, v:true, border_opts)
+  let buf = nvim_create_buf(v:false, v:true)
+  let s:float_term_win = nvim_open_win(buf, v:true, opts)
+  " Styling
+  hi FloatWinBorder guifg=#87bb7c
+  call setwinvar(s:float_term_border_win, '&winhl', 'Normal:FloatWinBorder')
+  call setwinvar(s:float_term_win, '&winhl', 'Normal:Normal')
+  if a:0 == 0
     terminal
-    startinsert
-    " Hook up TermClose event to close both terminal and border windows
-    autocmd TermClose * ++once :q | call nvim_win_close(s:border_win, v:true)
+  else
+    call termopen(a:1)
+  endif
+  startinsert
+  " Close border window when terminal window close
+  autocmd TermClose * ++once :bd! | call nvim_win_close(s:float_term_border_win, v:true)
 endfunction
