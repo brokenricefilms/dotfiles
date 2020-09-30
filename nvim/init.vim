@@ -65,7 +65,6 @@ let g:coc_global_extensions = [
             \ "coc-tsserver",]
 
 inoremap <silent><expr> <TAB>
-            \ pumvisible() ? coc#_select_confirm() :
             \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
             \ <SID>check_back_space() ? "\<TAB>" :
             \ coc#refresh()
@@ -182,7 +181,13 @@ nmap <S-j> gT
 nmap <S-k> gt
 
 command! Reload execute "source ~/.config/nvim/init.vim"
-command! CdHere execute "cd h:%"
+
+" quick test
+autocmd filetype c nnoremap <F5> : <bar> exec '!gcc '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
+autocmd filetype cpp nnoremap <F5> : <bar> exec '!g++ '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
+autocmd filetype python nnoremap <F5> : <bar> exec '!python3 '.shellescape('%')<CR>
+autocmd filetype javascript nnoremap <F5> : <bar> exec '!node '.shellescape('%')<CR>
+
 
 augroup General
     au!
