@@ -16,19 +16,19 @@ bindkey -v
 function zle-keymap-select {
     if [[ ${KEYMAP} == vicmd ]] ||
         [[ $1 = 'block' ]]; then
-    echo -ne '\e[1 q'
-    elif [[ ${KEYMAP} == main ]] ||
-        [[ ${KEYMAP} == viins ]] ||
-        [[ ${KEYMAP} = '' ]] ||
-        [[ $1 = 'beam' ]]; then
-    echo -ne '\e[5 q'
+            echo -ne '\e[1 q'
+        elif [[ ${KEYMAP} == main ]] ||
+            [[ ${KEYMAP} == viins ]] ||
+            [[ ${KEYMAP} = '' ]] ||
+            [[ $1 = 'beam' ]]; then
+                    echo -ne '\e[5 q'
     fi
 }
 
 zle -N zle-keymap-select
 zle-line-init() {
-    zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
-    echo -ne "\e[5 q"
+zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
+echo -ne "\e[5 q"
 }
 zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
@@ -39,14 +39,14 @@ autoload -Uz compinit
 compinit
 
 mk () {
-  if [ ! -n "$1" ]; then
-    echo "Enter a directory name"
-  elif [ -d $1 ]; then
-    echo "\`$1' already exists"
-	cd $1
-  else
-    mkdir $1 && cd $1
-  fi
+    if [ ! -n "$1" ]; then
+        echo "Enter a directory name"
+    elif [ -d $1 ]; then
+        echo "\`$1' already exists"
+        cd $1
+    else
+        mkdir $1 && cd $1
+    fi
 }
 
 BMI () {
@@ -83,7 +83,7 @@ tv () {
 }
 
 24-bit-color () {
-    bash ~/.config/zsh/functions/24-bit-color.sh
+bash ~/.config/zsh/functions/24-bit-color.sh
 }
 
 print256colours () {
@@ -102,12 +102,12 @@ dl () {
 }
 
 run () {
-	if ls $argv | grep ".cpp"
+    if ls $argv | grep ".cpp"
     then
         g++ $argv
         ./a.out
         rm a.out
-	elif ls $argv | grep ".c"
+    elif ls $argv | grep ".c"
     then
         gcc $argv
         ./a.out
@@ -129,19 +129,19 @@ runcpp () {
 }
 
 r () {
-	while true
+    while true
     do
-		$argv
-		sleep 1
+        $argv
+        sleep 1
     done
 }
 
 SERVER_IP () {
-	hostname -I
+    hostname -I
 }
 
 se () {
-	browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000
+    browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000
 }
 
 ########################################################################
@@ -216,31 +216,31 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # paper color
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-    --color=fg:#4d4d4c,bg:#eeeeee,hl:#d7005f
-    --color=fg+:#4d4d4c,bg+:#e8e8e8,hl+:#d7005f
-    --color=info:#4271ae,prompt:#8959a8,pointer:#d7005f
-    --color=marker:#4271ae,spinner:#4271ae,header:#4271ae'
+--color=fg:#4d4d4c,bg:#eeeeee,hl:#d7005f
+--color=fg+:#4d4d4c,bg+:#e8e8e8,hl+:#d7005f
+--color=info:#4271ae,prompt:#8959a8,pointer:#d7005f
+--color=marker:#4271ae,spinner:#4271ae,header:#4271ae'
 
 # mono
 # export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-    # --color=fg:#202020,bg:#efefef,hl:#202020
-    # --color=fg+:#505050,bg+:#efefef,hl+:#202020
-    # --color=info:#202020,prompt:#202020,pointer:#202020
-    # --color=marker:#202020,spinner:#202020,header:#202020'
+# --color=fg:#202020,bg:#efefef,hl:#202020
+# --color=fg+:#505050,bg+:#efefef,hl+:#202020
+# --color=info:#202020,prompt:#202020,pointer:#202020
+# --color=marker:#202020,spinner:#202020,header:#202020'
 
 # gruvbox dark
 # export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-        # --color fg:#ebdbb2,bg:#282828,hl:#fabd2f,fg+:#ebdbb2,bg+:#3c3836,hl+:#fabd2f
-        # --color info:#83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#83a598,marker:#fe8019,header:#665c54'
+# --color fg:#ebdbb2,bg:#282828,hl:#fabd2f,fg+:#ebdbb2,bg+:#3c3836,hl+:#fabd2f
+# --color info:#83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#83a598,marker:#fe8019,header:#665c54'
 
 c () {
-  local dir
-  dir=$(find ~ -path '*/\.*' -prune \
-                  -o -type d -print 2> /dev/null | fzf +m) &&
-  cd "$dir"
-  clear
-  la
-}
+    local dir
+    dir=$(find ~ -path '*/\.*' -prune \
+        -o -type d -print 2> /dev/null | fzf +m) &&
+        cd "$dir"
+            clear
+            la
+        }
 
 # git
 alias yo='git add -A ; git commit -m "$(curl -s whatthecommit.com/index.txt)"'
@@ -254,9 +254,9 @@ alias ok='yo ; push'
 alias okp='prettier ; yo ; push '
 
 ghdotfiles () {
-	cp ~/.config/tmux/.tmux.conf ~/git/dotfiles/tmux/
+    cp ~/.config/tmux/.tmux.conf ~/git/dotfiles/tmux/
 
-	cp -r ~/.config/fish/* ~/git/dotfiles/fish/
+    cp -r ~/.config/fish/* ~/git/dotfiles/fish/
 
     cp -r ~/.config/vifm/* ~/git/dotfiles/vifm
 
@@ -266,20 +266,20 @@ ghdotfiles () {
     crontab -l > ~/git/dotfiles/crontab/crontabConfig
 
     # nvim
-	cp ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
+    cp ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
     cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim/
     cp -r ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
     cp -r ~/.config/nvim/stuff ~/git/dotfiles/nvim/
     # I don't want you see my undoir, try hack me :D
     cp -r ~/.config/nvim/undodir ~/git/ok/
 
-	cp ~/.gitconfig  ~/git/dotfiles/git/
-	cp ~/.selected_editor ~/git/dotfiles
+    cp ~/.gitconfig  ~/git/dotfiles/git/
+    cp ~/.selected_editor ~/git/dotfiles
     cp -r ~/.fonts ~/git/dotfiles/
     dconf dump /org/gnome/desktop/wm/keybindings/ > ~/git/dotfiles/keybindings.dconf
 
-	cd ~/git/dotfiles/
-	okp ; cd -
+    cd ~/git/dotfiles/
+    okp ; cd -
 }
 
 alias ghcalculatorOnIOS='cd ~/git/calculatorOnIOS ; okp ; cd -'
@@ -298,22 +298,22 @@ alias ghwindowsSetup='cd ~/git/windowsSetup ; okp ; cd -'
 alias ghfemLayout='cd ~/git/fem-layout ; okp ; cd -'
 
 gha () {
-	cowsay "git push lazyscript" ; ghlazyscript
-	cowsay "git push dotfiles" ; ghdotfiles
-	cowsay "git push linux_setup" ; ghlinux_setup
-	cowsay "git push vimium-dark-theme" ; ghvimium_dark_theme
-	cowsay "git push FreeCodeCampProject" ; ghFreeCodeCampProject
-	cowsay "git push ok" ; ghok
-	cowsay "git push dataLab" ; ghdataLab
-	cowsay "git push windowsSetup" ; ghwindowsSetup
-	cowsay "git push termuxSetup" ; ghtermuxSetup
-	cowsay "git push img" ; ghimg
-	cowsay "git push thuanpham2311" ; ghthuanpham2311
-	cowsay "git push theNewsTimes" ; ghtheNewsTimes
-	cowsay "git push four-card-feature-section" ; ghfour-card-feature-section
-	cowsay "git push calculatorOnIOS" ; ghcalculatorOnIOS
-	cowsay "git push fem layout" ; ghfemLayout
-	cowsay "D O N E"
+    cowsay "git push lazyscript" ; ghlazyscript
+    cowsay "git push dotfiles" ; ghdotfiles
+    cowsay "git push linux_setup" ; ghlinux_setup
+    cowsay "git push vimium-dark-theme" ; ghvimium_dark_theme
+    cowsay "git push FreeCodeCampProject" ; ghFreeCodeCampProject
+    cowsay "git push ok" ; ghok
+    cowsay "git push dataLab" ; ghdataLab
+    cowsay "git push windowsSetup" ; ghwindowsSetup
+    cowsay "git push termuxSetup" ; ghtermuxSetup
+    cowsay "git push img" ; ghimg
+    cowsay "git push thuanpham2311" ; ghthuanpham2311
+    cowsay "git push theNewsTimes" ; ghtheNewsTimes
+    cowsay "git push four-card-feature-section" ; ghfour-card-feature-section
+    cowsay "git push calculatorOnIOS" ; ghcalculatorOnIOS
+    cowsay "git push fem layout" ; ghfemLayout
+    cowsay "D O N E"
 }
 
 alias glcalculatorOnIOS='cd ~/git/calculatorOnIOS ; pull ; cd -'
@@ -333,22 +333,22 @@ alias glwindowsSetup='cd ~/git/windowsSetup ;  pull ; cd -'
 alias glfemLayout='cd ~/git/fem-layout ;  pull ; cd -'
 
 gla () {
-	cowsay "git pull lazyscript" ; gllazyscript 
-	cowsay "git pull dotfiles" ; gldotfiles 
-	cowsay "git pull linux_setup" ; gllinux_setup 
-	cowsay "git pull vimium-dark-theme" ; glvimium_dark_theme
-	cowsay "git pull FreeCodeCampProject" ; glFreeCodeCampProject 
-	cowsay "git pull ok" ; glok
-	cowsay "git pull dataLab" ; gldataLab
-	cowsay "git pull windowsSetup" ; glwindowsSetup
-	cowsay "git pull termuxSetup" ; gltermuxSetup
-	cowsay "git pull img" ; glimg
-	cowsay "git pull thuanpham2311" ; glthuanpham2311
-	cowsay "git pull theNewsTimes" ; gltheNewsTimes
-	cowsay "git pull four-card-feature-section" ; glfour-card-feature-section
-	cowsay "git pull calculatorOnIOS" ; glcalculatorOnIOS
-	cowsay "git pull fem layout" ; glfemLayout
-	cowsay "D O N E"
+    cowsay "git pull lazyscript" ; gllazyscript 
+    cowsay "git pull dotfiles" ; gldotfiles 
+    cowsay "git pull linux_setup" ; gllinux_setup 
+    cowsay "git pull vimium-dark-theme" ; glvimium_dark_theme
+    cowsay "git pull FreeCodeCampProject" ; glFreeCodeCampProject 
+    cowsay "git pull ok" ; glok
+    cowsay "git pull dataLab" ; gldataLab
+    cowsay "git pull windowsSetup" ; glwindowsSetup
+    cowsay "git pull termuxSetup" ; gltermuxSetup
+    cowsay "git pull img" ; glimg
+    cowsay "git pull thuanpham2311" ; glthuanpham2311
+    cowsay "git pull theNewsTimes" ; gltheNewsTimes
+    cowsay "git pull four-card-feature-section" ; glfour-card-feature-section
+    cowsay "git pull calculatorOnIOS" ; glcalculatorOnIOS
+    cowsay "git pull fem layout" ; glfemLayout
+    cowsay "D O N E"
 }
 
 # browser
@@ -370,8 +370,8 @@ browser_daily () {
     browser_youtube_subsriptions
     browser_mail0
     browser_mail1
-	browser_fb
-	browser_stu
+    browser_fb
+    browser_stu
 }
 
 # mode
@@ -396,29 +396,29 @@ rem () {
 
 # fedora
 # rem () {
-    # nvim -c "PlugUpdate | qa"
-    # sudo dnf update -y 
-    # sudo dnf autoremove -y 
-    # flatpak update -y
-    # tldr --update
-    # clear
+# nvim -c "PlugUpdate | qa"
+# sudo dnf update -y 
+# sudo dnf autoremove -y 
+# flatpak update -y
+# tldr --update
+# clear
 # }
 
 # arch
 # rem () {
-    # nvim -c "PlugUpdate | qa"
-    # sudo pacman -Syyu --noconfirm
-    # sudo npm install -g npm
-    # nvim -c "PlugUpdate | qa"
-    # tldr --update
-    # tldr --update
-    # clear
+# nvim -c "PlugUpdate | qa"
+# sudo pacman -Syyu --noconfirm
+# sudo npm install -g npm
+# nvim -c "PlugUpdate | qa"
+# tldr --update
+# tldr --update
+# clear
 # }
 
 data () {
-	cd ~/git/dataLab/
-	tmux split-window -h -p 50
-	jupyter lab
+    cd ~/git/dataLab/
+    tmux split-window -h -p 50
+    jupyter lab
 }
 
 # fzf

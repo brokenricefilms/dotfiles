@@ -32,19 +32,19 @@ let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'border':  ['fg', 'Ignore'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
+            \ { 'fg':      ['fg', 'Normal'],
+            \ 'bg':      ['bg', 'Normal'],
+            \ 'hl':      ['fg', 'Comment'],
+            \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+            \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+            \ 'hl+':     ['fg', 'Statement'],
+            \ 'info':    ['fg', 'PreProc'],
+            \ 'border':  ['fg', 'Ignore'],
+            \ 'prompt':  ['fg', 'Conditional'],
+            \ 'pointer': ['fg', 'Exception'],
+            \ 'marker':  ['fg', 'Keyword'],
+            \ 'spinner': ['fg', 'Label'],
+            \ 'header':  ['fg', 'Comment'] }
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 set hidden
@@ -52,27 +52,27 @@ set shortmess+=c
 set signcolumn=yes
 set updatetime=300
 let g:coc_global_extensions = [
-                        \ "coc-css",
-                        \ "coc-html",
-                        \ "coc-snippets",
-                        \ "coc-highlight",
-                        \ "coc-json",
-                        \ "coc-python",
-                        \ "coc-clangd",
-                        \ "coc-sh",
-                        \ "coc-sql",
-                        \ "coc-explorer",
-                        \ "coc-tsserver",]
+            \ "coc-css",
+            \ "coc-html",
+            \ "coc-snippets",
+            \ "coc-highlight",
+            \ "coc-json",
+            \ "coc-python",
+            \ "coc-clangd",
+            \ "coc-sh",
+            \ "coc-sql",
+            \ "coc-explorer",
+            \ "coc-tsserver",]
 
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+            \ pumvisible() ? coc#_select_confirm() :
+            \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+            \ <SID>check_back_space() ? "\<TAB>" :
+            \ coc#refresh()
 
 function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 let g:coc_snippet_next = '<tab>'
@@ -207,4 +207,38 @@ endfunction
 function! CheckFishFile()
     normal!i#! /usr/bin/env fish
     normal!o
+endfunction
+
+nmap t :call OpenFloatTerm()<CR>
+function! OpenFloatTerm()
+    let height = float2nr((&lines - 2) / 1.5)
+    let row = float2nr((&lines - height) / 2)
+    let width = float2nr(&columns / 1.5)
+    let col = float2nr((&columns - width) / 2)
+    " Border Window
+    let border_opts = {
+                \ 'relative': 'editor',
+                \ 'row': row - 1,
+                \ 'col': col - 2,
+                \ 'width': width + 4,
+                \ 'height': height + 2,
+                \ 'style': 'minimal'
+                \ }
+    let border_buf = nvim_create_buf(v:false, v:true)
+    let s:border_win = nvim_open_win(border_buf, v:true, border_opts)
+    " Main Window
+    let opts = {
+                \ 'relative': 'editor',
+                \ 'row': row,
+                \ 'col': col,
+                \ 'width': width,
+                \ 'height': height,
+                \ 'style': 'minimal'
+                \ }
+    let buf = nvim_create_buf(v:false, v:true)
+    let win = nvim_open_win(buf, v:true, opts)
+    terminal
+    startinsert
+    " Hook up TermClose event to close both terminal and border windows
+    autocmd TermClose * ++once :q | call nvim_win_close(s:border_win, v:true)
 endfunction
