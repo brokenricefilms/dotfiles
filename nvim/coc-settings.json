@@ -1,3 +1,5 @@
 {
-    "suggest.noselect": false
+  "diagnostic.warningSign": "",
+  "diagnostic.errorSign": "",
+  "diagnostic.infoSign": ""
 }

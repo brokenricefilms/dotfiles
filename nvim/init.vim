@@ -103,7 +103,13 @@ let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 " Plug 'luochen1990/rainbow'
 " let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
-"Plug 'RRethy/vim-hexokinase'
+" highlight
+Plug 'sheerun/vim-polyglot'
+
+" color show
+Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
+let g:Hexokinase_highlighters = ['virtual']
+
 Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '▏'
 " bug: markdown don't show bold style (** **)
@@ -216,7 +222,6 @@ function! CheckFishFile()
 endfunction
 
 nmap t :call FloatTerm()<CR>
-nnoremap <Leader>a :call FloatTerm('"tig"')<CR>
 function! FloatTerm(...)
   " Configuration
   let height = float2nr((&lines - 2) * 0.6)
