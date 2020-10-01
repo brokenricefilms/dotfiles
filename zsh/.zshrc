@@ -406,7 +406,7 @@ data () {
 
 # fzf
 source /usr/share/fzf/key-bindings.zsh 2>/dev/null
-surce /usr/share/fzf/completion.zsh 2>/dev/null
+source /usr/share/fzf/completion.zsh 2>/dev/null
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
