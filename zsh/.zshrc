@@ -374,35 +374,29 @@ hi () {
 # ubuntu
 rem () {
     nvim -c "PlugUpdate | qa"
+    sudo pip3 install --upgrade pynvim
+    sudo npm -g install neovim
+    sudo gem update neovim
+
+    sudo npm -g install npm
+    tldr --update
+
+    # debian base (ubuntu, kali,...)
     sudo apt update
     sudo apt upgrade -y
     sudo apt autoremove -y
     sudo apt autoclean
-    tldr --update
-    clear
-    la
+
+    # rehat base (fedora)
+    # sudo dnf update -y 
+    # sudo dnf autoremove -y 
+    # flatpak update -y
+
+    # arch base
+    # sudo pacman -Syyu --noconfirm
+
+    cd ~ ; clear ; la
 }
-
-# fedora
-# rem () {
-# nvim -c "PlugUpdate | qa"
-# sudo dnf update -y 
-# sudo dnf autoremove -y 
-# flatpak update -y
-# tldr --update
-# clear
-# }
-
-# arch
-# rem () {
-# nvim -c "PlugUpdate | qa"
-# sudo pacman -Syyu --noconfirm
-# sudo npm install -g npm
-# nvim -c "PlugUpdate | qa"
-# tldr --update
-# tldr --update
-# clear
-# }
 
 data () {
     cd ~/git/dataLab/
