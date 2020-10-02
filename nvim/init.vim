@@ -128,10 +128,10 @@ highlight EasyMotionTargetDefault guifg=#ffb400
 highlight WildMenu guifg=#87bb7c
 
 set termguicolors
-" if exists('+termguicolors')
-    " let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    " let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-" endif
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
 
 " set background=light
 set background=dark
@@ -186,7 +186,7 @@ map <space> <leader>
 set list
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
-set colorcolumn=80
+" set colorcolumn=80
 " highlight cursorline
 set cursorline
 highlight CursorLine guibg=bold gui=bold
