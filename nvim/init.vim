@@ -209,7 +209,6 @@ command! Reload execute "source ~/.config/nvim/init.vim"
 
 augroup General
     au!
-    " autocmd FileType markdown setlocal spell spelllang=en_US
     " auto insert when open file
     autocmd BufNewFile *.cpp :read ~/.config/nvim/stuff/cppTemplate.cpp | normal!kdd3j
     autocmd BufNewFile *.fish  :call CheckFishFile()
