@@ -356,7 +356,6 @@ alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscr
 
 browser_daily () {
     cowsay "GET.SHIT.DONE"
-    browser_youtube_subsriptions
     browser_mail0
     browser_mail1
     browser_fb
@@ -366,7 +365,8 @@ browser_daily () {
 # mode
 hi () {
     browser_daily
-    # wait for browser loading website, cuz maybe can effect system resource
+    # wait for browser loading website
+    # cuz maybe can effect system resource
     sleep 30
     rem
 }
