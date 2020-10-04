@@ -191,8 +191,8 @@ alias uins='sudo apt remove -y'
 # alias uins='sudo pacman -Rs --noconfirm'
 
 # tmux
-# alias ide='tmux split-window -v -p 30 ; tmux split-window -h -p 66 ; tmux split-window -h -p 50'
-alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 75 ; tmux last-pane ; nvim'
+alias ide='c ; tmux split-window -v -p 20 ; tmux split-window -h -p 75 ; tmux last-pane ; nvim'
+# alias ide='c ; tmux split-window -h -p 30 ; tmux split-window -v -p 75 ; tmux last-pane ; nvim'
 alias qa='tmux ls; tmux kill-session -a'
 
 # cd
@@ -356,6 +356,7 @@ alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscr
 
 browser_daily () {
     cowsay "GET.SHIT.DONE"
+    browser_youtube_subsriptions
     browser_mail0
     browser_mail1
     browser_fb
