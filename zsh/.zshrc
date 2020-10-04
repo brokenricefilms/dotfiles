@@ -193,7 +193,7 @@ alias uins='sudo apt remove -y'
 # tmux
 alias ide='c ; tmux split-window -v -p 20 ; tmux split-window -h -p 75 ; tmux last-pane ; nvim'
 # alias ide='c ; tmux split-window -h -p 30 ; tmux split-window -v -p 75 ; tmux last-pane ; nvim'
-alias qa='tmux ls; tmux kill-session -a'
+alias qa='tmux kill-session -a ; cowsay "All session deleted" ; tmux ls'
 
 # cd
 alias ..='cd .. ; clear ; l'

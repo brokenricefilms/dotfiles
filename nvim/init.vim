@@ -178,7 +178,7 @@ set scrolloff=8
 vmap < <gv
 vmap > >gv
 
-:imap jj <Esc>
+imap jj <Esc>
 map <space> <leader>
 
 " Display different types of white spaces
@@ -188,8 +188,8 @@ set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 " set colorcolumn=80
 " highlight cursorline
 set cursorline
-highlight CursorLine guibg=bold gui=bold
-" highlight CursorLine term=bold cterm=bold
+" highlight CursorLine guibg=bold gui=bold
+highlight CursorLine term=bold cterm=bold
 
 " Split window
 nmap ss :split<Return><C-w>w
