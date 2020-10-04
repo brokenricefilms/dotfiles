@@ -22,15 +22,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/home/master/.vscode
-	extensions
-1
-d/home/master
-	.config
-2
-d/home/master/.config
-	google-chrome
-17
 d/home/master/.config/google-chrome
 	Crash Reports
 3
@@ -322,6 +313,15 @@ d/home/master/Downloads/fem-layout/day-1-flexbox/1-intro-floats/begin
 d/home/master/git/lazyscript/nhapMonLapTrinh
 	week12
 1
+d/home/master
+	Downloads
+26
+d/home/master/Downloads
+	..
+0
+d/home/master
+	Downloads
+16
 d
 
 # Right window history (oldest to newest):
@@ -350,8 +350,8 @@ D
 /exn
 /ex
 /1 hour
-/dow
 /d
+/dow
 
 # Prompt history (oldest to newest):
 
