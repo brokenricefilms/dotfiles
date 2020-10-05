@@ -15,5 +15,3 @@ map! <C-Return> <esc>:wq<Return>
 set smartcase
 set expandtab
 set autoindent
-
-set fs

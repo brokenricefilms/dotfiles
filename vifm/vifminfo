@@ -22,9 +22,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/home/master/.config/google-chrome
-	Crash Reports
-3
 d/home/master/.config
 	google-chrome
 17
@@ -322,6 +319,9 @@ d/home/master/Downloads
 d/home/master
 	Downloads
 16
+d/home/master/Music
+	Đôi Mắt - GDucky.mp3
+1
 d
 
 # Right window history (oldest to newest):
@@ -332,6 +332,9 @@ D/home/master/Downloads
 	
 0
 D/home/master/git/lazyscript/nhapMonLapTrinh
+	
+0
+D/home/master/Music
 	
 0
 D
@@ -354,6 +357,7 @@ D
 /dow
 
 # Prompt history (oldest to newest):
+pĐôi Mắt - GDucky.mp3
 
 # Local filter history (oldest to newest):
 
