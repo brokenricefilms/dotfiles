@@ -22,9 +22,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/home/master/.config
-	google-chrome
-17
 d/home/master
 	.mozilla
 6
@@ -322,6 +319,9 @@ d/home/master
 d/home/master/Music
 	Ai - B Ray.mp3
 1
+d/home/master
+	.config
+4
 d
 
 # Right window history (oldest to newest):
@@ -345,6 +345,7 @@ D
 :qa
 :qj
 :q
+:10select
 
 # Search history (oldest to newest):
 /pic
