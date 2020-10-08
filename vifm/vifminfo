@@ -25,12 +25,6 @@ r2
 d/home/master
 	.mozilla
 6
-d/home/master/.mozilla
-	firefox
-2
-d/home/master
-	.mozilla
-6
 d/home
 	master
 1
@@ -320,8 +314,14 @@ d/home/master/Music
 	Ai - B Ray.mp3
 1
 d/home/master
-	.config
-4
+	Downloads
+26
+d/home/master/Downloads
+	..
+0
+d/home/master
+	Downloads
+26
 d
 
 # Right window history (oldest to newest):
@@ -344,8 +344,8 @@ D
 :help
 :qa
 :qj
-:q
 :10select
+:q
 
 # Search history (oldest to newest):
 /pic
