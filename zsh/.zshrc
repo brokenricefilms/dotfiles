@@ -396,7 +396,7 @@ rem () {
     # arch base
     # sudo pacman -Syyu --noconfirm
 
-    cd ~ ; clear ; la
+    cd ~ ; clear ; neofetch
 }
 
 data () {
