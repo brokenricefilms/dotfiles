@@ -201,8 +201,8 @@ nmap <C-t> :tabnew<Return>
 nmap <S-j> gT
 nmap <S-k> gt
 
-" save :w but i type :W
-com! W w
+" Save A File Without Root Permission With sudo
+command! W execute "w !sudo tee %"
 
 command! Reload execute "source ~/.config/nvim/init.vim"
 

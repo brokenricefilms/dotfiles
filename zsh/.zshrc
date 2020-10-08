@@ -155,6 +155,7 @@ export VISUAL='nvim'
 # ls, tree more color
 alias l='clear ; exa -al --color=always --group-directories-first'
 alias ls='clear ; exa -al --color=always --group-directories-first'
+alias sl='clear ; exa -al --color=always --group-directories-first'
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
 alias l.='exa -a | egrep "^\."'
 alias ll='exa -l --color=always --group-directories-first'  # long format
