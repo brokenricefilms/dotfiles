@@ -112,7 +112,7 @@ let g:Hexokinase_highlighters = ['virtual']
 Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '▏'
 " bug: markdown don't show bold style (** **)
-" fix that ?, so don't work:
+" fix that ???
 let g:indentLine_fileTypeExclude = ['text', 'markdown']
 
 " colorscheme stuff
