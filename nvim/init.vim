@@ -18,9 +18,16 @@ map mm <Plug>NERDCommenterToggle
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-" Plug 'stsewd/fzf-checkout.vim'
 noremap <leader>b :Buffers<CR>
-noremap <leader>f :Files<CR>
+" noremap <leader>f :Files<CR>
+if isdirectory(".git")
+    " if in a git project, use :GFiles
+    nmap <silent> <leader>f :GitFiles --cached --others --exclude-standard<cr>
+else
+    " otherwise, use :FZF
+    nmap <silent> <leader>f :Files<cr>
+endif
+
 noremap <leader>t :Files ~<CR>
 noremap <leader>g :GFiles<CR>
 noremap <leader>r :Rg<CR>
@@ -151,6 +158,7 @@ set hlsearch
 set ignorecase
 set incsearch
 set smartcase
+set magic " for regex
 nmap <CR> :nohlsearch<CR>
 
 set tabstop=4 softtabstop=4
