@@ -162,7 +162,7 @@ alias ll='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 
 alias cpf='xclip -sel clip'
-alias re='source ~/.config/zsh/.zshrc'
+alias re='source ~/.config/zsh/.zshrc ; tmux source-file ~/.tmux.conf'
 alias tmuxr='tmux source ~/.tmux.conf'
 alias h='htop'
 alias e='exit'
@@ -354,9 +354,13 @@ alias browser_mail2='browser "https://mail.google.com/mail/u/2/#inbox"'
 alias browser_stu='browser "http://stu.edu.vn/"'
 alias browser_stu2='browser "http://stu.edu.vn/vi/cat/95/nghien-cuu-khoa-hoc.html"'
 alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
+alias browser_anime='browser "https://animedao.to/"'
+alias browser_kdrama='browser "http://www.phimhanz.net/"'
 
 browser_daily () {
     cowsay "GET.SHIT.DONE"
+    browser_kdrama
+    browser_anime
     browser_youtube_subsriptions
     browser_mail0
     browser_mail1
