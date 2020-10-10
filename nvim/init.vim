@@ -1,4 +1,5 @@
 call plug#begin()
+Plug 'rhysd/clever-f.vim'
 Plug 'easymotion/vim-easymotion'
 nmap ;; <Plug>(easymotion-overwin-f)
 
@@ -107,7 +108,7 @@ Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
 let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 
 " better search
-Plug 'romainl/vim-cool'
+Plug 'romainl/vim-cool' " when search done, turn off highlight
 set hlsearch
 set ignorecase
 set incsearch
@@ -120,10 +121,9 @@ let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowTo
 
 Plug 'gregsexton/MatchTag', { 'for': 'html' }
 
-" highlight stuff
-Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot' " highlight stuff
 
-" color show
+" show color human can see
 Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
 let g:Hexokinase_highlighters = ['virtual']
 
