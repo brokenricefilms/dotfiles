@@ -18,18 +18,19 @@ map mm <Plug>NERDCommenterToggle
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+imap <c-x><c-f> <plug>(fzf-complete-path)
+
 noremap <leader>b :Buffers<CR>
 " noremap <leader>f :Files<CR>
 if isdirectory(".git")
     " if in a git project, use :GFiles
-    nmap <silent> <leader>f :GitFiles --cached --others --exclude-standard<cr>
+    noremap <leader>f :GFiles<cr>
 else
     " otherwise, use :FZF
-    nmap <silent> <leader>f :Files<cr>
+    noremap <leader>f :Files<cr>
 endif
 
 noremap <leader>t :Files ~<CR>
-noremap <leader>g :GFiles<CR>
 noremap <leader>r :Rg<CR>
 
 noremap <c-p> :Commands<CR>
@@ -105,9 +106,19 @@ nnoremap <leader>u :UndotreeShow<CR>
 Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
 let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 
+" better search
+Plug 'romainl/vim-cool'
+set hlsearch
+set ignorecase
+set incsearch
+set smartcase
+set magic " for regex
+
 " fancy
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+
+Plug 'gregsexton/MatchTag', { 'for': 'html' }
 
 " highlight stuff
 Plug 'sheerun/vim-polyglot'
@@ -152,14 +163,6 @@ filetype plugin indent on
 set encoding=UTF-8
 set mouse=a
 set clipboard=unnamedplus
-
-" better search
-set hlsearch
-set ignorecase
-set incsearch
-set smartcase
-set magic " for regex
-nmap <CR> :nohlsearch<CR>
 
 set tabstop=4 softtabstop=4
 set shiftwidth=4
