@@ -102,19 +102,20 @@ let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
-" highlight
+" highlight stuff
 Plug 'sheerun/vim-polyglot'
 
 " color show
 Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
 let g:Hexokinase_highlighters = ['virtual']
 
-" Plug 'Yggdroot/indentLine'
-" let g:indentLine_char = '▏'
+Plug 'Yggdroot/indentLine'
+let g:indentLine_char = '▏'
 " bug: markdown don't show bold style (** **)
 " fix that ?, so don't work:
-" let g:indentLine_fileTypeExclude = ['text', 'markdown']
+let g:indentLine_fileTypeExclude = ['text', 'markdown']
 
+" colorscheme stuff
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'gruvbox-community/gruvbox'
 call plug#end()
