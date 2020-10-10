@@ -109,11 +109,11 @@ Plug 'sheerun/vim-polyglot'
 Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
 let g:Hexokinase_highlighters = ['virtual']
 
-Plug 'Yggdroot/indentLine'
-let g:indentLine_char = '▏'
+" Plug 'Yggdroot/indentLine'
+" let g:indentLine_char = '▏'
 " bug: markdown don't show bold style (** **)
 " fix that ?, so don't work:
-let g:indentLine_fileTypeExclude = ['text', 'markdown']
+" let g:indentLine_fileTypeExclude = ['text', 'markdown']
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'gruvbox-community/gruvbox'
