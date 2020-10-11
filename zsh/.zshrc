@@ -349,7 +349,7 @@ alias browser='brave-browser'
 alias github='browser --new-window "https://github.com/thuanpham2311"'
 
 alias browser_fb='browser https://facebook.com'
-alias browser_mes='browser "https://www.facebook.com/messages/t/thuanpham2311"'
+alias browser_mes='browser "https://www.facebook.com/messages/t"'
 alias browser_mail0='browser "https://mail.google.com/mail/u/0/#inbox"'
 alias browser_mail1='browser "https://mail.google.com/mail/u/1/#inbox"'
 alias browser_mail2='browser "https://mail.google.com/mail/u/2/#inbox"'
