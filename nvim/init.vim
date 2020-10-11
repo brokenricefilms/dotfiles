@@ -210,7 +210,7 @@ highlight CursorLine term=bold cterm=bold
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
 
-map<F6> :setlocal spell! spelllang=en_us,vi<CR>
+map<F6> :setlocal spell! spelllang=en_us<CR>
 " tab remap
 nmap <C-t> :tabnew<Return>
 nmap <S-j> gT
