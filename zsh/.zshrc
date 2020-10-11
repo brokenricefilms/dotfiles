@@ -268,6 +268,8 @@ ghdotfiles () {
     # I don't want you see my undoir, try hack me :D
     cp -r ~/.config/nvim/undodir ~/git/ok/
 
+    cp -r ~/.config/kitty/ ~/git/dotfiles
+
     cp ~/.gitconfig  ~/git/dotfiles/git/
     cp ~/.selected_editor ~/git/dotfiles
     cp -r ~/.fonts ~/git/dotfiles/
