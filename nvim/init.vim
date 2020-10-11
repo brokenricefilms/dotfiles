@@ -128,10 +128,13 @@ Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
 let g:Hexokinase_highlighters = ['virtual']
 
 Plug 'Yggdroot/indentLine'
-let g:indentLine_char = '▏'
+" let g:indentLine_char = '▏'
+let g:indentLine_char = '┊'
 " bug: markdown don't show bold style (** **)
 " fix that ???
-let g:indentLine_fileTypeExclude = ['text', 'markdown']
+let g:indentLine_fileTypeExclude = ['help', 'text', 'markdown']
+let g:indentLine_bufTypeExclude = ['help', 'terminal', 'markdown', 'text']
+
 
 " colorscheme stuff
 Plug 'NLKNguyen/papercolor-theme'
@@ -242,7 +245,7 @@ function! CheckFishFile()
     normal!o
 endfunction
 
-nmap t :call FloatTerm()<CR>
+nmap ` :call FloatTerm()<CR>
 function! FloatTerm(...)
     " Configuration
     let height = float2nr((&lines - 2) * 0.6)
