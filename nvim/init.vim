@@ -21,8 +21,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 imap <c-x><c-f> <plug>(fzf-complete-path)
 
-noremap <leader>b :Buffers<CR>
-" noremap <leader>f :Files<CR>
 if isdirectory(".git")
     " if in a git project, use :GFiles
     noremap <leader>f :GFiles<cr>
@@ -31,6 +29,8 @@ else
     noremap <leader>f :Files<cr>
 endif
 
+noremap <leader>b :Buffers<CR>
+" noremap <leader>f :Files<CR>
 noremap <leader>t :Files ~<CR>
 noremap <leader>r :Rg<CR>
 
@@ -128,10 +128,10 @@ Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
 let g:Hexokinase_highlighters = ['virtual']
 
 Plug 'Yggdroot/indentLine'
-" let g:indentLine_char = '▏'
-let g:indentLine_char = '┊'
+let g:indentLine_char = '▏'
+" let g:indentLine_char = '┊'
 " bug: markdown don't show bold style (** **)
-" fix that ???
+" fix:
 let g:indentLine_fileTypeExclude = ['help', 'text', 'markdown']
 let g:indentLine_bufTypeExclude = ['help', 'terminal', 'markdown', 'text']
 
