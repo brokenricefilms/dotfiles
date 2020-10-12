@@ -363,8 +363,6 @@ alias browser_kdrama='browser "http://www.phimhanz.net/"'
 
 browser_daily () {
     cowsay "GET.SHIT.DONE"
-    browser_kdrama
-    browser_anime
     browser_youtube_subsriptions
     browser_mail0
     browser_mail1
