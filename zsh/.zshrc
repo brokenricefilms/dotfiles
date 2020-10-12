@@ -367,7 +367,6 @@ browser_daily () {
     browser_mail0
     browser_mail1
     browser_fb
-    browser_mes
     browser_stu
 }
 
