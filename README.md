@@ -16,9 +16,9 @@
   - kitty
   - alacritty
 
-## Install
+## You want setup like me?
 
-[https://github.com/thuanpham2311/linux_setup](https://github.com/thuanpham2311/linux_setup).
+[https://github.com/thuanpham2311/linux_setup](https://github.com/thuanpham2311/linux_setup)
 
 ## Q & A
 
