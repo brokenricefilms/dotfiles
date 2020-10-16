@@ -149,6 +149,7 @@ se () {
 set -U EDITOR nvim
 export EDITOR='nvim'
 export VISUAL='nvim'
+export PATH="$HOME/.npm/bin:$PATH"
 
 # lazy code
 # alias l='ls -lha'
@@ -384,10 +385,10 @@ hi () {
 rem () {
     nvim -c "PlugUpdate | qa"
     sudo pip3 install --upgrade pynvim
-    sudo npm -g install neovim
+    npm -g install neovim
     sudo gem update neovim
 
-    sudo npm -g install npm
+    npm -g install npm
     tldr --update
 
     # debian base (ubuntu, kali,...)
