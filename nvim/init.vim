@@ -1,4 +1,18 @@
 call plug#begin()
+Plug 'godlygeek/tabular'
+" auto format "|" table when typing
+inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
+function! s:align()
+    let p = '^\s*|\s.*\s|\s*$'
+    if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+        let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+        let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+        Tabularize/|/l1
+        normal! 0
+        call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+    endif
+endfunction
+
 Plug 'rhysd/clever-f.vim'
 Plug 'easymotion/vim-easymotion'
 nmap ;; <Plug>(easymotion-overwin-f)
@@ -139,14 +153,12 @@ let g:indentLine_bufTypeExclude = ['help', 'terminal', 'markdown', 'text']
 " colorscheme stuff
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'gruvbox-community/gruvbox'
-Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " theme
-highlight EasyMotionTargetDefault guifg=#ffb400
 highlight WildMenu guifg=#87bb7c
 
 set termguicolors
@@ -155,13 +167,12 @@ if exists('+termguicolors')
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 
-" set background=light
-set background=dark
+set background=light
+" set background=dark
 
-" colorscheme PaperColor
+colorscheme PaperColor
 " colorscheme gruvbox
 " let g:gruvbox_invert_selection='0'
-colorscheme solarized8_flat
 
 set nocompatible
 filetype plugin indent on
