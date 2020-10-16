@@ -23,12 +23,6 @@ r2
 
 # Left window history (oldest to newest):
 d/home/master
-	.mozilla
-6
-d/home
-	master
-1
-d/home/master
 	Pictures
 17
 d/home/master/Pictures
@@ -321,7 +315,13 @@ d/home/master/Downloads
 0
 d/home/master
 	Downloads
-26
+24
+d/home/master/Downloads
+	..
+0
+d/home/master
+	Downloads
+24
 d
 
 # Right window history (oldest to newest):
