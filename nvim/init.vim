@@ -139,6 +139,7 @@ let g:indentLine_bufTypeExclude = ['help', 'terminal', 'markdown', 'text']
 " colorscheme stuff
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'gruvbox-community/gruvbox'
+Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -158,8 +159,9 @@ endif
 set background=dark
 
 " colorscheme PaperColor
-colorscheme gruvbox
-let g:gruvbox_invert_selection='0'
+" colorscheme gruvbox
+" let g:gruvbox_invert_selection='0'
+colorscheme solarized8_flat
 
 set nocompatible
 filetype plugin indent on
