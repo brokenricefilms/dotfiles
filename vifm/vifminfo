@@ -22,9 +22,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/home/master
-	Pictures
-17
 d/home/master/Pictures
 	118303.jpg
 1
@@ -322,6 +319,9 @@ d/home/master/Downloads
 d/home/master
 	Downloads
 24
+d/home/master/Downloads
+	bi-mat-cua-phan-thien-an--nguoi-giau-nhat-the-gioi.epub
+1
 d
 
 # Right window history (oldest to newest):
@@ -336,6 +336,9 @@ D/home/master/git/lazyscript/nhapMonLapTrinh
 0
 D/home/master/Music
 	
+0
+D/home/master/Downloads
+	..
 0
 D
 
