@@ -1,17 +1,9 @@
 call plug#begin()
-Plug 'godlygeek/tabular'
-" auto format "|" table when typing
-inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
-function! s:align()
-    let p = '^\s*|\s.*\s|\s*$'
-    if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
-        let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
-        let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
-        Tabularize/|/l1
-        normal! 0
-        call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
-    endif
-endfunction
+Plug 'junegunn/vim-easy-align'
+"start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+" " Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap <Enter> <Plug>(EasyAlign)
 
 Plug 'rhysd/clever-f.vim'
 Plug 'easymotion/vim-easymotion'
@@ -130,6 +122,15 @@ set smartcase
 set magic " for regex
 
 " fancy
+" Source Code Outline Viewer:
+Plug 'majutsushi/tagbar'
+" let g:tagbar_left=1
+nnoremap <leader>n :TagbarOpen j<CR>
+nnoremap <leader>N :TagbarToggle<CR>
+
+Plug 'ntpeters/vim-better-whitespace'
+highlight ExtraWhitespace ctermbg=None
+
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
