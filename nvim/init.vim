@@ -1,4 +1,8 @@
 call plug#begin()
+" color select/picker
+" use <Alt>+<r>
+Plug 'KabbAmine/vCoolor.vim'
+
 Plug 'junegunn/vim-easy-align'
 "start interactive EasyAlign in visual mode (e.g. vip<Enter>)
 vmap <Enter> <Plug>(EasyAlign)
@@ -13,7 +17,6 @@ Plug 'mattn/emmet-vim'
 let g:user_emmet_leader_key=','
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
-
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
@@ -37,7 +40,7 @@ endif
 
 noremap <leader>b :Buffers<CR>
 " noremap <leader>f :Files<CR>
-noremap <leader>t :Files ~<CR>
+noremap <leader>F :Files ~<CR>
 noremap <leader>r :Rg<CR>
 
 noremap <c-p> :Commands<CR>
@@ -122,11 +125,14 @@ set smartcase
 set magic " for regex
 
 " fancy
+" Better Tabline display
+Plug 'mkitt/tabline.vim'
+
 " Source Code Outline Viewer:
 Plug 'majutsushi/tagbar'
 " let g:tagbar_left=1
-nnoremap <leader>n :TagbarOpen j<CR>
-nnoremap <leader>N :TagbarToggle<CR>
+nnoremap <leader>t :TagbarOpen j<CR>
+nnoremap <leader>T :TagbarToggle<CR>
 
 Plug 'ntpeters/vim-better-whitespace'
 highlight ExtraWhitespace ctermbg=None
@@ -201,7 +207,6 @@ set autowrite
 set nobackup
 set noswapfile
 set nowritebackup
-set scrolloff=8
 
 " fix indenting visual block
 vmap < <gv
@@ -209,6 +214,30 @@ vmap > >gv
 
 imap jj <Esc>
 map <space> <leader>
+
+" Easier navigation between tabs
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+
+" Toggle Spelling checking
+nmap <space>s :setlocal spell! spell?<CR>
+" ]s — move to the next mispelled word
+" [s — move to the previous mispelled word
+" zg — add a word to the dictionary
+" zug — undo the addition of a word to the dictionary
+" z= — view spelling suggestions for a mispelled word
+
+command! Reload execute "source ~/.config/nvim/init.vim"
+
+" Show full path of the current file
+nnoremap <space>? :echo expand("%:p")<CR>
 
 " Display different types of white spaces
 set list
@@ -224,7 +253,6 @@ highlight CursorLine guibg=bold gui=bold
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
 
-map<F6> :setlocal spell! spelllang=en_us<CR>
 " tab remap
 nmap <C-t> :tabnew<Return>
 nmap <S-j> gT
@@ -232,8 +260,6 @@ nmap <S-k> gt
 
 " Save A File Without Root Permission With sudo
 command! W execute "w !sudo tee %"
-
-command! Reload execute "source ~/.config/nvim/init.vim"
 
 augroup General
     au!
