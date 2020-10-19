@@ -4,9 +4,7 @@ call plug#begin()
 Plug 'KabbAmine/vCoolor.vim'
 
 Plug 'junegunn/vim-easy-align'
-"start interactive EasyAlign in visual mode (e.g. vip<Enter>)
 vmap <Enter> <Plug>(EasyAlign)
-" " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap <Enter> <Plug>(EasyAlign)
 
 Plug 'rhysd/clever-f.vim'
@@ -39,7 +37,6 @@ else
 endif
 
 noremap <leader>b :Buffers<CR>
-" noremap <leader>f :Files<CR>
 noremap <leader>F :Files ~<CR>
 noremap <leader>r :Rg<CR>
 
@@ -81,9 +78,6 @@ let g:coc_global_extensions = [
             \ "coc-explorer",
             \ "coc-tsserver",]
 
-" inoremap <silent><expr> <TAB>
-" \ <SID>check_back_space() ? "\<TAB>" :
-" \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 inoremap <silent><expr> <TAB>
@@ -142,7 +136,7 @@ Plug 'ntpeters/vim-better-whitespace'
 highlight ExtraWhitespace ctermbg=None
 
 Plug 'luochen1990/rainbow'
-let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+let g:rainbow_active = 1
 
 Plug 'gregsexton/MatchTag', { 'for': 'html' }
 
@@ -154,9 +148,6 @@ let g:Hexokinase_highlighters = ['virtual']
 
 Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '▏'
-" let g:indentLine_char = '┊'
-" bug: markdown don't show bold style (** **)
-" fix:
 let g:indentLine_fileTypeExclude = ['help', 'text', 'markdown']
 let g:indentLine_bufTypeExclude = ['help', 'terminal', 'markdown', 'text']
 
