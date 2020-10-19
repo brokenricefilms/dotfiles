@@ -124,6 +124,10 @@ set incsearch
 set smartcase
 set magic " for regex
 
+" search word in the center screen
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
 " fancy
 " Better Tabline display
 Plug 'mkitt/tabline.vim'

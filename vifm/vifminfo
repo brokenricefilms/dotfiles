@@ -22,102 +22,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/home/master/Pictures
-	118303.jpg
-1
-d/home/master
-	Pictures
-17
-d/home
-	master
-1
-d/
-	lib32
-6
-d/lib32
-	..
-0
-d/
-	lib32
-6
-d/lib32
-	..
-0
-d/
-	lib32
-6
-d/lib32
-	..
-0
-d/
-	lib32
-6
-d/lib32
-	..
-0
-d/
-	lib32
-6
-d/lib32
-	libutil.so.1
-43
-d/home/master/git/note/notion/Note 350b3ad012f742599101d07f89655884
-	4HabitsThatWillTrainYourBraintoStopWorryidaf580af97fa437ab8f5353fdcec0aa8
-1
-d/home/master/git/note/notion/Note 350b3ad012f742599101d07f89655884/4HabitsThatWillTrainYourBraintoStopWorryidaf580af97fa437ab8f5353fdcec0aa8
-	..
-0
-d/home/master/git/note/notion/Note 350b3ad012f742599101d07f89655884
-	the7habitsofhighlyeffectiveteen26bfcc4665bc4c6babed100ff4d4ce1d
-45
-d/home/master/git/note/notion/img
-	Anhbnthn02363f8783e040f7be63d2a227ec0b57
-1
-d/home/master/git/note/notion/img/Anhbnthn02363f8783e040f7be63d2a227ec0b57
-	..
-0
-d/home/master/git/note/notion/img
-	Anhbnthn02363f8783e040f7be63d2a227ec0b57
-1
-d/home/master/git/note/notion/img/Anhbnthn02363f8783e040f7be63d2a227ec0b57
-	..
-0
-d/home/master/git/note/notion/img
-	0KeB7YLD8wlQwQSGL
-30
-d/home/master/git/note/notion
-	tu i tr b n ng gi bao nhi u 662d0b0bfe664057b405a4dcb52e6487.md
-42
-d/home/master/.local/share/vifm/Trash
-	000_note dfff81d1d26145ffafb706981f930dfb.csv
-2
-d/home/master/.local/share/vifm
-	Trash
-1
-d/home/master/.local/share/vifm/Trash
-	..
-0
-d/home/master/.local/share/vifm
-	Trash
-1
-d/home/master/.local/share
-	vifm
-21
-d/home/master/git/note/notion
-	M t Ng i Tr ng Th nh H c Nh Th N o 119885b2c24b491488bc9f0025b843c1.md
-47
-d/home/master/git
-	lazyscript
-4
-d/home/master/git/lazyscript
-	nhapMonLapTrinh
-3
-d/home/master/git/lazyscript/nhapMonLapTrinh
-	phamTanThuanDH51902283_nhapMonLapTrinh_week5.cpp
-5
-d/usr/share/icons
-	Yaru
-8
 d/usr/share/icons/Yaru
 	256x256@2x
 15
@@ -320,8 +224,104 @@ d/home/master
 	Downloads
 24
 d/home/master/Downloads
-	bi-mat-cua-phan-thien-an--nguoi-giau-nhat-the-gioi.epub
+	..
+0
+d/home/master
+	Downloads
+16
+d/home/master/Downloads
+	..
+0
+d/home/master
+	Downloads
+16
+d/home/master/Downloads
+	..
+0
+d/home/master
+	Downloads
+16
+d/home/master/Downloads
+	..
+0
+d/home/master
+	Downloads
+16
+d/home/master/Downloads
+	..
+0
+d/home/master
+	Downloads
+16
+d/home/master/Downloads
+	..
+0
+d/home/master
+	Downloads
+16
+d/home/master/Downloads
+	..
+0
+d/home/master
+	Downloads
+16
+d/home/master/Downloads
+	..
+0
+d/home/master
+	Downloads
+16
+d/home/master/Downloads
+	..
+0
+d/home/master
+	Downloads
+16
+d/home/master/Downloads
+	..
+0
+d/home/master
+	Downloads
+16
+d/home/master/Downloads
+	..
+0
+d/home/master
+	Pictures
+16
+d/home/master/Pictures
+	Rectangle 1 (1).png
 1
+d/home/master
+	Desktop
+11
+d/home/master/Pictures
+	..
+0
+d/home/master
+	git
+19
+d/home/master/git
+	dotfiles
+4
+d/home/master/git/dotfiles
+	img
+7
+d/home/master/git/dotfiles/img
+	..
+0
+d/home/master/git/dotfiles
+	img
+7
+d/home/master/git
+	dotfiles
+4
+d/home/master
+	git
+19
+d/home/master/Pictures
+	avata.jpg
+2
 d
 
 # Right window history (oldest to newest):
@@ -345,13 +345,14 @@ D
 # Command line history (oldest to newest):
 :trashes
 :help
-:qa
 :qj
 :10select
+:--elseif
+:C
+:qa
 :q
 
 # Search history (oldest to newest):
-/pic
 /doc
 /pi
 /exn
@@ -359,11 +360,16 @@ D
 /1 hour
 /d
 /dow
+/pic
+/git
+/dt
+/dot
 
 # Prompt history (oldest to newest):
 pĐôi Mắt - GDucky.mp3
 
 # Local filter history (oldest to newest):
+|==:q
 
 # Registers:
 ""/home/master/.local/share/vifm/Trash/000_ Dark Magic Music . _ 1 Hour _ The Unspoken Tales-dcPJn5KxULM.mp3
