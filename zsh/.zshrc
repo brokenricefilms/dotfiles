@@ -242,7 +242,7 @@ c () {
 alias yo='git add -A ; git commit -m "$(curl -s whatthecommit.com/index.txt)"'
 alias sta='git status'
 alias push="git push"
-alias pull="git pull" 
+alias pull="git pull"
 alias clone='git clone'
 alias commit='git commit -m'
 alias prettier='prettier --write .'
@@ -329,11 +329,11 @@ alias glvimium_dark_theme='cd ~/git/vimium_dark_theme ; pull ; cd -'
 alias glwindowsSetup='cd ~/git/windowsSetup ;  pull ; cd -'
 
 gla () {
-    cowsay "git pull lazyscript" ; gllazyscript 
-    cowsay "git pull dotfiles" ; gldotfiles 
-    cowsay "git pull linux_setup" ; gllinux_setup 
+    cowsay "git pull lazyscript" ; gllazyscript
+    cowsay "git pull dotfiles" ; gldotfiles
+    cowsay "git pull linux_setup" ; gllinux_setup
     cowsay "git pull vimium-dark-theme" ; glvimium_dark_theme
-    cowsay "git pull FreeCodeCampProject" ; glFreeCodeCampProject 
+    cowsay "git pull FreeCodeCampProject" ; glFreeCodeCampProject
     cowsay "git pull ok" ; glok
     cowsay "git pull dataLab" ; gldataLab
     cowsay "git pull windowsSetup" ; glwindowsSetup
@@ -398,8 +398,8 @@ rem () {
     sudo apt autoclean
 
     # rehat base (fedora)
-    # sudo dnf update -y 
-    # sudo dnf autoremove -y 
+    # sudo dnf update -y
+    # sudo dnf autoremove -y
     # flatpak update -y
 
     # arch base
