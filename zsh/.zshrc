@@ -1,6 +1,7 @@
 # Set up the prompt
 autoload -U colors && colors
 PROMPT=" %F{blue}%~%f %F{red}❯%f%F{yellow}❯%f%F{green}❯%f "
+# PROMPT=" %F{blue}%~%f 👉 "
 
 setopt histignorealldups sharehistory
 
