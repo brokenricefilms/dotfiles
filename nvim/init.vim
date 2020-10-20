@@ -164,10 +164,6 @@ call plug#end()
 highlight WildMenu guifg=#87bb7c
 
 set termguicolors
-if exists('+termguicolors')
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-endif
 
 set background=light
 " set background=dark
@@ -176,11 +172,7 @@ colorscheme PaperColor
 " colorscheme gruvbox
 " let g:gruvbox_invert_selection='0'
 
-set nocompatible
-filetype plugin indent on
-set encoding=UTF-8
-set mouse=a
-set clipboard=unnamedplus
+set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
 
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -192,8 +184,11 @@ set expandtab
 set number relativenumber
 syntax enable
 
-" set statusline=%F%m%r%h%w
-set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
+set nocompatible
+filetype plugin indent on
+set encoding=UTF-8
+set mouse=a
+set clipboard=unnamedplus
 
 set autoindent
 set smartindent
@@ -210,6 +205,11 @@ vmap > >gv
 imap jj <Esc>
 map <space> <leader>
 
+" tab remap
+nmap <C-t> :tabnew<Return>
+nmap <S-j> gT
+nmap <S-k> gt
+
 " Easier navigation between tabs
 noremap <leader>1 1gt
 noremap <leader>2 2gt
@@ -221,7 +221,6 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 
-" Toggle Spelling checking
 nmap <space>s :setlocal spell! spell?<CR>
 " ]s — move to the next mispelled word
 " [s — move to the previous mispelled word
@@ -239,7 +238,6 @@ set list
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
 " set colorcolumn=80
-" highlight cursorline
 set cursorline
 highlight CursorLine guibg=bold gui=bold
 " highlight CursorLine term=bold cterm=bold
@@ -248,37 +246,8 @@ highlight CursorLine guibg=bold gui=bold
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
 
-" tab remap
-nmap <C-t> :tabnew<Return>
-nmap <S-j> gT
-nmap <S-k> gt
-
 " Save A File Without Root Permission With sudo
 command! W execute "w !sudo tee %"
-
-augroup General
-    au!
-    " auto insert when open file
-    autocmd BufNewFile *.cpp :read ~/.config/nvim/stuff/cppTemplate.cpp | normal!kdd3j
-    autocmd BufNewFile *.fish  :call CheckFishFile()
-    autocmd BufNewFile *.py :call CheckPyFile()
-    autocmd BufNewFile *.sh  :call CheckShFile()
-augroup END
-
-function! CheckShFile()
-    normal!i#! /usr/bin/env sh
-    normal!o
-endfunction
-
-function! CheckPyFile()
-    normal!i#! /usr/bin/env python3
-    normal!o
-endfunction
-
-function! CheckFishFile()
-    normal!i#! /usr/bin/env fish
-    normal!o
-endfunction
 
 nmap ` :call FloatTerm()<CR>
 function! FloatTerm(...)
@@ -325,4 +294,28 @@ function! FloatTerm(...)
     endif
     startinsert
     autocmd TermClose * ++once :bd! | call nvim_win_close(s:float_term_border_win, v:true)
+endfunction
+
+augroup General
+    au!
+    " auto insert when open file
+    autocmd BufNewFile *.cpp :read ~/.config/nvim/stuff/cppTemplate.cpp | normal!kdd3j
+    autocmd BufNewFile *.fish  :call CheckFishFile()
+    autocmd BufNewFile *.py :call CheckPyFile()
+    autocmd BufNewFile *.sh  :call CheckShFile()
+augroup END
+
+function! CheckShFile()
+    normal!i#! /usr/bin/env sh
+    normal!o
+endfunction
+
+function! CheckPyFile()
+    normal!i#! /usr/bin/env python3
+    normal!o
+endfunction
+
+function! CheckFishFile()
+    normal!i#! /usr/bin/env fish
+    normal!o
 endfunction
