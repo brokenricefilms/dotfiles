@@ -126,12 +126,6 @@ nnoremap N Nzzzv
 " Better Tabline display
 Plug 'mkitt/tabline.vim'
 
-" Source Code Outline Viewer:
-Plug 'majutsushi/tagbar'
-" let g:tagbar_left=1
-nnoremap <leader>t :TagbarOpen j<CR>
-nnoremap <leader>T :TagbarToggle<CR>
-
 Plug 'ntpeters/vim-better-whitespace'
 highlight ExtraWhitespace ctermbg=None
 
