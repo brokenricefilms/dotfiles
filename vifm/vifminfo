@@ -22,21 +22,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/usr/share/icons/Yaru
-	256x256@2x
-15
-d/usr/share/icons/Yaru/256x256@2x
-	devices
-4
-d/usr/share/icons/Yaru/256x256@2x/devices
-	input-mouse.png
-19
-d/usr/share/icons/Yaru/256x256@2x
-	devices
-4
-d/usr/share/icons/Yaru/256x256@2x/devices
-	gtk-cdrom.png
-16
 d/usr/share/icons/Yaru/256x256@2x
 	devices
 4
@@ -322,6 +307,21 @@ d/home/master
 d/home/master/Pictures
 	avata.jpg
 2
+d/home/master
+	Downloads
+12
+d/home/master/Downloads
+	..
+0
+d/home/master
+	Pictures
+14
+d/home/master/Pictures
+	avata.jpg
+2
+d/home/master
+	.gitconfig
+20
 d
 
 # Right window history (oldest to newest):
@@ -359,11 +359,11 @@ D
 /ex
 /1 hour
 /d
+/dt
+/dot
 /dow
 /pic
 /git
-/dt
-/dot
 
 # Prompt history (oldest to newest):
 pĐôi Mắt - GDucky.mp3
