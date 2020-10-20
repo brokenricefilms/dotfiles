@@ -165,14 +165,19 @@ highlight WildMenu guifg=#87bb7c
 
 set termguicolors
 
-set background=light
-" set background=dark
+" set background=light
+set background=dark
 
-colorscheme PaperColor
-" colorscheme gruvbox
-" let g:gruvbox_invert_selection='0'
+" colorscheme PaperColor
+colorscheme gruvbox
+let g:gruvbox_invert_selection='0'
 
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
+
+" set colorcolumn=80
+set cursorline
+" highlight CursorLine guibg=bold gui=bold
+highlight CursorLine term=bold cterm=bold
 
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -237,11 +242,6 @@ nnoremap <space>? :echo expand("%:p")<CR>
 set list
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
-" set colorcolumn=80
-set cursorline
-highlight CursorLine guibg=bold gui=bold
-" highlight CursorLine term=bold cterm=bold
-
 " Split window
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
@@ -249,7 +249,7 @@ nmap sv :vsplit<Return><C-w>w
 " Save A File Without Root Permission With sudo
 command! W execute "w !sudo tee %"
 
-nmap ` :call FloatTerm()<CR>
+nmap <leader>a :call FloatTerm()<CR>
 function! FloatTerm(...)
     " Configuration
     let height = float2nr((&lines - 2) * 0.6)
