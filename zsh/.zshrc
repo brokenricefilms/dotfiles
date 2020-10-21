@@ -1,7 +1,7 @@
 # Set up the prompt
 autoload -U colors && colors
-PROMPT=" %F{blue}%~%f %F{red}❯%f%F{yellow}❯%f%F{green}❯%f "
-# PROMPT=" %F{blue}%~%f 👉 "
+# PROMPT=" %F{blue}%~%f %F{red}❯%f%F{yellow}❯%f%F{green}❯%f "
+PROMPT=" %F{blue}%~%f 👉 "
 
 setopt histignorealldups sharehistory
 
@@ -181,6 +181,7 @@ alias x='chmod +x'
 alias f='fdfind . -H | grep --colour=always'
 alias vifm='vifm .'
 alias m='tmux new-window ; mpv --shuffle ~/Music/*'
+alias fd='fdfind'
 
 # ubuntu apt
 alias ins='sudo apt install -y'
