@@ -159,12 +159,12 @@ highlight WildMenu guifg=#87bb7c
 
 set termguicolors
 
-set background=light
-" set background=dark
+" set background=light
+set background=dark
 
 colorscheme PaperColor
-" colorscheme gruvbox
-" let g:gruvbox_invert_selection='0'
+colorscheme gruvbox
+let g:gruvbox_invert_selection='0'
 
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
 
@@ -196,6 +196,10 @@ set autowrite
 set nobackup
 set noswapfile
 set nowritebackup
+
+" Increment/decrement
+nnoremap + <C-a>
+nnoremap - <C-x>
 
 " fix indenting visual block
 vmap < <gv
