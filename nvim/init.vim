@@ -1,4 +1,6 @@
 call plug#begin()
+Plug 'preservim/tagbar'
+nmap <leader>t :TagbarToggle<CR>
 " color select/picker
 " use <Alt>+<r>
 Plug 'KabbAmine/vCoolor.vim'
