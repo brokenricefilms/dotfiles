@@ -22,9 +22,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/usr/share/icons/Yaru/256x256@2x
-	devices
-4
 d/usr/share/icons/Yaru
 	256x256@2x
 15
@@ -322,6 +319,9 @@ d/home/master/Pictures
 d/home/master
 	.gitconfig
 20
+d/home/master/Music/dark
+	..
+0
 d
 
 # Right window history (oldest to newest):
@@ -339,6 +339,9 @@ D/home/master/Music
 0
 D/home/master/Downloads
 	..
+0
+D/home/master/Music/dark
+	
 0
 D
 

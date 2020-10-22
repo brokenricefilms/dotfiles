@@ -180,7 +180,7 @@ alias 777='chmod -R 777'
 alias x='chmod +x'
 alias f='fdfind . -H | grep --colour=always'
 alias vifm='vifm .'
-alias m='tmux new-window ; mpv --shuffle ~/Music/*'
+alias m='mpv --shuffle ~/Music/*'
 alias fd='fdfind'
 
 # ubuntu apt
