@@ -152,16 +152,14 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 export PATH="$HOME/.npm/bin:$PATH"
 
-# lazy code
 # alias l='ls -lha'
-# ls, tree more color
 alias l='clear ; exa -al --color=always --group-directories-first'
 alias ls='clear ; exa -al --color=always --group-directories-first'
 alias sl='clear ; exa -al --color=always --group-directories-first'
-alias la='exa -a --color=always --group-directories-first'  # all files and dirs
-alias l.='exa -a | egrep "^\."'
-alias ll='exa -l --color=always --group-directories-first'  # long format
-alias lt='exa -aT --color=always --group-directories-first' # tree listing
+alias la='clear ; exa -a --color=always --group-directories-first'
+alias l.='clear ; exa -a | egrep "^\."'
+alias ll='clear ; exa -l --color=always --group-directories-first'
+alias lt='clear ; exa -aT --color=always --group-directories-first'
 
 alias cpf='xclip -sel clip'
 alias re='source ~/.config/zsh/.zshrc ; tmux source-file ~/.tmux.conf'
@@ -270,8 +268,6 @@ ghdotfiles () {
     cp -r ~/.config/nvim/stuff ~/git/dotfiles/nvim/
     # I don't want you see my undoir, try hack me :D
     cp -r ~/.config/nvim/undodir ~/git/ok/
-
-    cp -r ~/.config/kitty/ ~/git/dotfiles
 
     cp ~/.gitconfig  ~/git/dotfiles/git/
     cp ~/.selected_editor ~/git/dotfiles
