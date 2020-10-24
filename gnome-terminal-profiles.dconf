@@ -1,25 +1,6 @@
 [/]
 default='5acbe1cc-77ca-45f0-b3b7-b275be36c58f'
-list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', '5acbe1cc-77ca-45f0-b3b7-b275be36c58f', 'a66db604-8144-4bb5-a748-5efd980a7d86', '2a34ff7a-8216-47db-9301-c401c5635edf', 'ec67ac6b-fc3e-4ea1-9e23-33d2dcefb1d5']
-
-[:2a34ff7a-8216-47db-9301-c401c5635edf]
-audible-bell=false
-background-color='#00002B2B3636'
-bold-color='#9393a1a1a1a1'
-bold-color-same-as-fg=false
-bold-is-bright=false
-custom-command='tmux'
-font='Hack 11'
-foreground-color='#838394949696'
-login-shell=true
-palette=['#070736364242', '#DCDC32322F2F', '#858599990000', '#B5B589890000', '#26268B8BD2D2', '#D3D336368282', '#2A2AA1A19898', '#EEEEE8E8D5D5', '#00002B2B3636', '#CBCB4B4B1616', '#58586E6E7575', '#65657B7B8383', '#838394949696', '#6C6C7171C4C4', '#9393A1A1A1A1', '#FDFDF6F6E3E3']
-scroll-on-keystroke=false
-scrollback-unlimited=true
-scrollbar-policy='never'
-use-custom-command=true
-use-system-font=false
-use-theme-colors=false
-visible-name='solar'
+list=['5acbe1cc-77ca-45f0-b3b7-b275be36c58f', 'a66db604-8144-4bb5-a748-5efd980a7d86']
 
 [:5acbe1cc-77ca-45f0-b3b7-b275be36c58f]
 audible-bell=false
@@ -56,37 +37,3 @@ use-system-font=false
 use-theme-background=false
 use-theme-colors=false
 visible-name='gruvbox dark'
-
-[:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
-audible-bell=false
-background-color='#fdfdf6f6e3e3'
-bold-color='#58586e6e7575'
-bold-color-same-as-fg=false
-custom-command='tmux'
-font='Hack 11'
-foreground-color='#65657b7b8383'
-login-shell=true
-palette=['#070736364242', '#DCDC32322F2F', '#858599990000', '#B5B589890000', '#26268B8BD2D2', '#D3D336368282', '#2A2AA1A19898', '#EEEEE8E8D5D5', '#00002B2B3636', '#CBCB4B4B1616', '#58586E6E7575', '#65657B7B8383', '#838394949696', '#6C6C7171C4C4', '#9393A1A1A1A1', '#FDFDF6F6E3E3']
-scroll-on-keystroke=false
-scrollback-unlimited=true
-scrollbar-policy='never'
-use-custom-command=true
-use-system-font=false
-use-theme-colors=false
-visible-name='solar'
-
-[:ec67ac6b-fc3e-4ea1-9e23-33d2dcefb1d5]
-audible-bell=false
-background-color='rgb(239,241,245)'
-custom-command='tmux'
-font='Hack 11'
-foreground-color='rgb(32,32,32)'
-login-shell=true
-palette=['rgb(32,32,32)', 'rgb(32,32,32)', 'rgb(32,32,32)', 'rgb(32,32,32)', 'rgb(32,32,32)', 'rgb(32,32,32)', 'rgb(32,32,32)', 'rgb(239,241,245)', 'rgb(80,80,80)', 'rgb(32,32,32)', 'rgb(32,32,32)', 'rgb(32,32,32)', 'rgb(32,32,32)', 'rgb(32,32,32)', 'rgb(32,32,32)', 'rgb(198,198,198)']
-scroll-on-keystroke=false
-scrollback-unlimited=true
-scrollbar-policy='never'
-use-custom-command=true
-use-system-font=false
-use-theme-colors=false
-visible-name='mono'
