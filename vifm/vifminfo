@@ -22,9 +22,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/usr/share/icons/Yaru
-	256x256@2x
-15
 d/usr/share/icons
 	Yaru
 8
@@ -322,6 +319,9 @@ d/home/master
 d/home/master/Music/dark
 	..
 0
+d/home/master/Downloads
+	Peach Jam - 88rising_ Joji_ BlocBoy JB.flac
+20
 d
 
 # Right window history (oldest to newest):
@@ -341,6 +341,9 @@ D/home/master/Downloads
 	..
 0
 D/home/master/Music/dark
+	
+0
+D/home/master/Downloads
 	
 0
 D
@@ -375,7 +378,7 @@ pĐôi Mắt - GDucky.mp3
 |==:q
 
 # Registers:
-""/home/master/.local/share/vifm/Trash/000_ Dark Magic Music . _ 1 Hour _ The Unspoken Tales-dcPJn5KxULM.mp3
+""/home/master/.local/share/vifm/Trash/000_Test Drive - Joji (1).flac
 
 # Directory stack (oldest to newest):
 
@@ -402,6 +405,10 @@ t/home/master/.local/share/vifm/Trash/000_Screenshot from 2020-07-08 07-35-04.pn
 	/home/master/Pictures/Screenshot from 2020-07-08 07-35-04.png
 t/home/master/.local/share/vifm/Trash/000_ Dark Magic Music . _ 1 Hour _ The Unspoken Tales-dcPJn5KxULM.mp3
 	/home/master/Music/ Dark Magic Music . _ 1 Hour _ The Unspoken Tales-dcPJn5KxULM.mp3
+t/home/master/.local/share/vifm/Trash/000_Daylight - Joji_ Diplo (1).flac
+	/home/master/Downloads/Daylight - Joji_ Diplo (1).flac
+t/home/master/.local/share/vifm/Trash/000_Test Drive - Joji (1).flac
+	/home/master/Downloads/Test Drive - Joji (1).flac
 
 # State:
 f
