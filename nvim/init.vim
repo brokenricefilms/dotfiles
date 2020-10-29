@@ -126,6 +126,9 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 
 " fancy
+Plug 'camspiers/animate.vim'
+Plug 'camspiers/lens.vim'
+
 " Better Tabline display
 Plug 'mkitt/tabline.vim'
 
