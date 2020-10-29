@@ -11,6 +11,7 @@ vmap <Enter> <Plug>(EasyAlign)
 nmap <Enter> <Plug>(EasyAlign)
 
 Plug 'rhysd/clever-f.vim'
+let g:clever_f_across_no_line = 1
 Plug 'easymotion/vim-easymotion'
 nmap ;; <Plug>(easymotion-overwin-f)
 
@@ -29,6 +30,7 @@ map mm <Plug>NERDCommenterToggle
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
 imap <c-x><c-f> <plug>(fzf-complete-path)
 
 if isdirectory(".git")
@@ -127,7 +129,10 @@ nnoremap N Nzzzv
 
 " fancy
 Plug 'camspiers/animate.vim'
-Plug 'camspiers/lens.vim'
+nnoremap <silent> <Up>    :call animate#window_delta_height(10)<CR>
+nnoremap <silent> <Down>  :call animate#window_delta_height(-10)<CR>
+nnoremap <silent> <Left>  :call animate#window_delta_width(10)<CR>
+nnoremap <silent> <Right> :call animate#window_delta_width(-10)<CR>
 
 " Better Tabline display
 Plug 'mkitt/tabline.vim'

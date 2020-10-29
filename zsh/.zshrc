@@ -262,6 +262,7 @@ ghdotfiles () {
 
     cp ~/.config/zsh/.zshrc ~/git/dotfiles/zsh/
     cp -r ~/.config/zsh/functions ~/git/dotfiles/zsh/
+
     cp ~/.config/zsh/functions/crontab* ~/git/dotfiles/crontab/
     crontab -l > ~/git/dotfiles/crontab/crontabConfig
 
