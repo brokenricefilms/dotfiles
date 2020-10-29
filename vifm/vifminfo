@@ -22,9 +22,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/usr/share/icons
-	Yaru
-8
 d/usr/share
 	icons
 54
@@ -322,6 +319,9 @@ d/home/master/Music/dark
 d/home/master/Downloads
 	Peach Jam - 88rising_ Joji_ BlocBoy JB.flac
 20
+d/home/master/.config/vifm
+	..
+0
 d
 
 # Right window history (oldest to newest):
