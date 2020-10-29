@@ -181,7 +181,8 @@ alias vifm='vifm .'
 alias fd='fdfind'
 
 # music stuff
-alias m='tmux new-window ; mpv --shuffle ~/Music/*'
+# alias m='tmux new-window ; mpv --shuffle ~/Music/*'
+alias m='mpv --shuffle ~/Music/*'
 
 # ubuntu apt
 alias ins='sudo apt install -y'
