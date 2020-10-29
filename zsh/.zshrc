@@ -216,6 +216,7 @@ alias tdl='trash ~/Downloads/*'
 
 # fzf
 alias cf='cd ~/.config/ ; nvim -o $(fzf)'
+alias vi='cd ~/ ; nvim -o $(fzf)'
 export FZF_DEFAULT_COMMAND='fdfind -H --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
