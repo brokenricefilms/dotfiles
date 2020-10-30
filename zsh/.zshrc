@@ -367,7 +367,7 @@ alias browser_kdrama='browser "http://www.phimhanz.net/"'
 
 browser_daily () {
     cowsay "GET.SHIT.DONE"
-    # browser_youtube_subsriptions
+    browser_youtube_subsriptions
     browser_mail0
     browser_mail1
     browser_fb
