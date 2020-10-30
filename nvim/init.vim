@@ -165,8 +165,8 @@ let g:Hexokinase_highlighters = ['virtual']
 
 Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '▏'
-let g:indentLine_fileTypeExclude = ['help', 'text', 'markdown']
 let g:indentLine_bufTypeExclude = ['help', 'terminal', 'markdown', 'text']
+let g:indentLine_fileTypeExclude = ['help', 'text', 'markdown']
 
 
 " colorscheme stuff
