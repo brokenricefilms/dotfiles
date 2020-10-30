@@ -203,8 +203,8 @@ alias uins='sudo apt remove -y'
 # alias uins='sudo pacman -Rs --noconfirm'
 
 # tmux
-alias ide='c ; tmux split-window -v -p 20 ; tmux split-window -h -p 75 ; tmux last-pane ; nvim'
-# alias ide='c ; tmux split-window -h -p 30 ; tmux split-window -v -p 75 ; tmux last-pane ; nvim'
+alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 75 ; tmux last-pane ; nvim'
+# alias ide='tmux split-window -h -p 30 ; tmux split-window -v -p 75 ; tmux last-pane ; nvim'
 alias qa='tmux kill-session -a ; cowsay "All session deleted" ; tmux ls'
 
 # cd
