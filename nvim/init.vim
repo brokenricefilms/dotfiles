@@ -221,8 +221,8 @@ set noswapfile
 set nowritebackup
 
 " Increment/decrement
-nnoremap - <C-a>
-nnoremap + <C-x>
+nnoremap + <C-a>
+nnoremap - <C-x>
 
 " fix indenting visual block
 vmap < <gv

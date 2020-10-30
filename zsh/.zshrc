@@ -1,6 +1,8 @@
 # Set up the prompt
 # tmux
-[[ $TERM != "screen" ]] && exec tmux
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
 
 autoload -U colors && colors
 PROMPT=" %F{blue}%~%f %F{red}❯%f%F{yellow}❯%f%F{green}❯%f "
@@ -182,6 +184,7 @@ alias x='chmod +x'
 alias f='fdfind . -H | grep --colour=always'
 alias vifm='vifm .'
 alias fd='fdfind'
+alias n='nnn -de'
 
 # music stuff
 # alias m='tmux new-window ; mpv --shuffle ~/Music/*'
@@ -258,31 +261,24 @@ alias okp='prettier ; yo ; push '
 
 ghdotfiles () {
     cp ~/.config/tmux/.tmux.conf ~/git/dotfiles/tmux/
-
+    cp -r ~/.config/kitty/* ~/git/dotfiles/kitty
     cp -r ~/.config/fish/* ~/git/dotfiles/fish/
-
     cp -r ~/.config/vifm/* ~/git/dotfiles/vifm
-
     cp ~/.config/zsh/.zshrc ~/git/dotfiles/zsh/
     cp -r ~/.config/zsh/functions ~/git/dotfiles/zsh/
-
     cp ~/.config/zsh/functions/crontab* ~/git/dotfiles/crontab/
     crontab -l > ~/git/dotfiles/crontab/crontabConfig
-
-    # nvim
     cp ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
     cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim/
     cp -r ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
     cp -r ~/.config/nvim/stuff ~/git/dotfiles/nvim/
     # I don't want you see my undoir, try hack me :D
     cp -r ~/.config/nvim/undodir ~/git/ok/
-
     cp ~/.gitconfig  ~/git/dotfiles/git/
     cp ~/.selected_editor ~/git/dotfiles
     cp -r ~/.fonts ~/git/dotfiles/
     dconf dump /org/gnome/desktop/wm/keybindings/ > ~/git/dotfiles/keybindings.dconf
     dconf dump /org/gnome/terminal/legacy/profiles:/ > ~/git/dotfiles/gnome-terminal-profiles.dconf
-
     cd ~/git/dotfiles/
     okp ; cd -
 }

@@ -22,9 +22,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/usr/share
-	icons
-54
 d/usr
 	share
 11
@@ -322,6 +319,9 @@ d/home/master/Downloads
 d/home/master/.config/vifm
 	..
 0
+d/home/master/Pictures
+	avata.jpg
+2
 d
 
 # Right window history (oldest to newest):
