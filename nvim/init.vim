@@ -128,6 +128,17 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 
 " fancy
+Plug 'yuttie/comfortable-motion.vim'
+let g:comfortable_motion_scroll_down_key = "j"
+let g:comfortable_motion_scroll_up_key = "k"
+nnoremap <silent> <C-d> :call comfortable_motion#flick(100)<CR>
+nnoremap <silent> <C-u> :call comfortable_motion#flick(-100)<CR>
+noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<CR>
+noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<CR>
+
+nnoremap <silent> <C-f> :call comfortable_motion#flick(200)<CR>
+nnoremap <silent> <C-b> :call comfortable_motion#flick(-200)<CR>
+
 Plug 'camspiers/animate.vim'
 Plug 'camspiers/lens.vim'
 nnoremap <silent> <Up>    :call animate#window_delta_height(10)<CR>
