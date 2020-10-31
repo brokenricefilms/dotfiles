@@ -22,9 +22,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/usr
-	share
-11
 d/
 	sys
 20
@@ -322,6 +319,9 @@ d/home/master/.config/vifm
 d/home/master/Pictures
 	avata.jpg
 2
+d/home/master
+	.gitconfig
+22
 d
 
 # Right window history (oldest to newest):
