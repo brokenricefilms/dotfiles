@@ -163,10 +163,11 @@ Plug 'sheerun/vim-polyglot' " highlight stuff
 Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
 let g:Hexokinase_highlighters = ['virtual']
 
-Plug 'Yggdroot/indentLine'
-let g:indentLine_char = '▏'
-let g:indentLine_bufTypeExclude = ['help', 'terminal', 'markdown', 'text']
-let g:indentLine_fileTypeExclude = ['help', 'text', 'markdown']
+" BUG: markdown file (fixed but not good enough)
+" Plug 'Yggdroot/indentLine'
+" let g:indentLine_char = '▏'
+" let g:indentLine_bufTypeExclude = ['help', 'terminal', 'markdown', 'text']
+" let g:indentLine_fileTypeExclude = ['help', 'text', 'markdown']
 
 
 " colorscheme stuff
