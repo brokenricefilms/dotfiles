@@ -296,6 +296,7 @@ alias ghtheNewsTimes='cd ~/git/theNewsTimes ; okp ; cd -'
 alias ghthuanpham2311='cd ~/git/thuanpham2311 ; okp ; cd -'
 alias ghvimium_dark_theme='cd ~/git/vimium_dark_theme ; okp ; cd -'
 alias ghwindowsSetup='cd ~/git/windowsSetup ; okp ; cd -'
+alias ghstuDarkTheme='cd ~/git/stuDarkTheme ; okp ; cd -'
 
 gha () {
     cowsay "git push lazyscript" ; ghlazyscript
@@ -312,6 +313,7 @@ gha () {
     cowsay "git push theNewsTimes" ; ghtheNewsTimes
     cowsay "git push four-card-feature-section" ; ghfour-card-feature-section
     cowsay "git push calculatorOnIOS" ; ghcalculatorOnIOS
+    cowsay "git push stuDarkTheme" ; ghstuDarkTheme
     cowsay "D O N E"
 }
 
@@ -329,6 +331,7 @@ alias gltheNewsTimes='cd ~/git/theNewsTimes ; pull ; cd -'
 alias glthuanpham2311='cd ~/git/thuanpham2311 ; pull ; cd -'
 alias glvimium_dark_theme='cd ~/git/vimium_dark_theme ; pull ; cd -'
 alias glwindowsSetup='cd ~/git/windowsSetup ;  pull ; cd -'
+alias glstuDarkTheme='cd ~/git/stuDarkTheme ;  pull ; cd -'
 
 gla () {
     cowsay "git pull lazyscript" ; gllazyscript
@@ -345,6 +348,7 @@ gla () {
     cowsay "git pull theNewsTimes" ; gltheNewsTimes
     cowsay "git pull four-card-feature-section" ; glfour-card-feature-section
     cowsay "git pull calculatorOnIOS" ; glcalculatorOnIOS
+    cowsay "git pull stuDarkTheme" ; glstuDarkTheme
     cowsay "D O N E"
 }
 
