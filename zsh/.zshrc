@@ -188,7 +188,7 @@ alias n='nnn -de'
 
 # music stuff
 # alias m='tmux new-window ; mpv --shuffle ~/Music/*'
-alias m='mpv --shuffle ~/Music/*'
+alias m='mpv --audio-display=no --shuffle ~/Music/*'
 
 # ubuntu apt
 alias ins='sudo apt install -y'
