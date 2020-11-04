@@ -128,6 +128,9 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 
 " fancy
+Plug 'mhinz/vim-signify'
+
+
 Plug 'yuttie/comfortable-motion.vim'
 let g:comfortable_motion_scroll_down_key = "j"
 let g:comfortable_motion_scroll_up_key = "k"
