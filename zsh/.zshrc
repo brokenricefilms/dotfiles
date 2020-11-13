@@ -366,6 +366,7 @@ alias browser_stu2='browser "http://stu.edu.vn/vi/cat/95/nghien-cuu-khoa-hoc.htm
 alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
 alias browser_anime='browser "https://animedao.to/"'
 alias browser_kdrama='browser "http://www.phimhanz.net/"'
+alias browser_feedly='browser "https://feedly.com/i/my"'
 
 browser_daily () {
     cowsay "GET.SHIT.DONE"
@@ -374,6 +375,7 @@ browser_daily () {
     browser_mail1
     browser_fb
     browser_stu
+    browser_feedly
 }
 
 # mode
