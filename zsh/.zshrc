@@ -371,11 +371,11 @@ alias browser_feedly='browser "https://feedly.com/i/my"'
 
 browser_daily () {
     cowsay "GET.SHIT.DONE"
+    browser_feedly
     browser_mail0
     browser_mail1
     browser_fb
     browser_stu
-    browser_feedly
 }
 
 # mode
