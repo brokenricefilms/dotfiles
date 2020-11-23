@@ -11,7 +11,6 @@ vmap <Enter> <Plug>(EasyAlign)
 nmap <Enter> <Plug>(EasyAlign)
 
 Plug 'rhysd/clever-f.vim'
-" let g:clever_f_across_no_line = 1
 Plug 'easymotion/vim-easymotion'
 nmap ;; <Plug>(easymotion-overwin-f)
 
@@ -34,10 +33,8 @@ Plug 'junegunn/fzf.vim'
 imap <c-x><c-f> <plug>(fzf-complete-path)
 
 if isdirectory(".git")
-    " if in a git project, use :GFiles
     noremap <leader>f :GFiles<cr>
 else
-    " otherwise, use :FZF
     noremap <leader>f :Files<cr>
 endif
 
@@ -48,9 +45,7 @@ noremap <leader>r :Rg<CR>
 noremap <c-p> :Commands<CR>
 noremap // :BLines<CR>
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
-" move search on top
 let $FZF_DEFAULT_OPTS='--reverse'
-" Customize fzf colors to match your color scheme
 let g:fzf_colors =
             \ { 'fg':      ['fg', 'Normal'],
             \ 'bg':      ['bg', 'Normal'],
@@ -100,10 +95,8 @@ let g:coc_snippet_next = '<tab>'
 
 Plug 'honza/vim-snippets'
 
-" coc explorer
 nmap <space>e :CocCommand explorer<CR>
 
-" Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
@@ -115,19 +108,16 @@ nnoremap <leader>u :UndotreeShow<CR>
 Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
 let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 
-" better search
 Plug 'romainl/vim-cool' " when search done, turn off highlight
 set hlsearch
 set ignorecase
 set incsearch
 set smartcase
-set magic " for regex
+set magic
 
-" search word in the center screen
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
-" fancy
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'camspiers/animate.vim'
 Plug 'camspiers/lens.vim'
@@ -136,9 +126,7 @@ nnoremap <silent> <Down>  :call animate#window_delta_height(-10)<CR>
 nnoremap <silent> <Left>  :call animate#window_delta_width(10)<CR>
 nnoremap <silent> <Right> :call animate#window_delta_width(-10)<CR>
 
-" Better Tabline display
 Plug 'mkitt/tabline.vim'
-
 Plug 'ntpeters/vim-better-whitespace'
 highlight ExtraWhitespace ctermbg=None
 
@@ -146,10 +134,7 @@ Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
 
 Plug 'gregsexton/MatchTag', { 'for': 'html' }
-
 Plug 'sheerun/vim-polyglot' " highlight stuff
-
-" show color human can see
 Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
 let g:Hexokinase_highlighters = ['virtual']
 
@@ -159,23 +144,15 @@ let g:indentLine_char = '▏'
 let g:indentLine_bufTypeExclude = ['help', 'terminal', 'markdown', 'text']
 let g:indentLine_fileTypeExclude = ['help', 'text', 'markdown']
 
-
-" colorscheme stuff
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'gruvbox-community/gruvbox'
 call plug#end()
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" theme
+syntax enable
 highlight WildMenu guifg=#87bb7c
-
 set termguicolors
-
 set background=light
 " set background=dark
-
 colorscheme PaperColor
 " colorscheme gruvbox
 " let g:gruvbox_invert_selection='0'
@@ -187,15 +164,15 @@ set cursorline
 " highlight CursorLine guibg=bold gui=bold
 highlight CursorLine term=bold cterm=bold
 
+set list
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
+
 set tabstop=4 softtabstop=4
 set shiftwidth=4
-" 4 space in html, css look non-fancy, 2 space is better
 autocmd BufRead,BufNewFile *.scss,*.css,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
-" convert tab to space, some issue when I see file at github,...
 set expandtab
 
 set number relativenumber
-syntax enable
 
 set nocompatible
 filetype plugin indent on
@@ -211,23 +188,19 @@ set nobackup
 set noswapfile
 set nowritebackup
 
-" Increment/decrement
 nnoremap + <C-a>
 nnoremap - <C-x>
 
-" fix indenting visual block
 vmap < <gv
 vmap > >gv
 
 imap jj <Esc>
 map <space> <leader>
 
-" tab remap
 nmap <C-t> :tabnew<Return>
 nmap <S-j> gT
 nmap <S-k> gt
 
-" Easier navigation between tabs
 noremap <leader>1 1gt
 noremap <leader>2 2gt
 noremap <leader>3 3gt
@@ -247,14 +220,8 @@ nmap <space>s :setlocal spell! spell?<CR>
 
 command! Reload execute "source ~/.config/nvim/init.vim"
 
-" Show full path of the current file
 nnoremap <space>? :echo expand("%:p")<CR>
 
-" Display different types of white spaces
-set list
-set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
-
-" Split window
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
 
@@ -264,12 +231,11 @@ command! W execute "w !sudo tee %"
 nmap <leader>a :call FloatTerm()<CR>
 nmap <leader>g :call FloatTerm("tig")<CR>
 function! FloatTerm(...)
-    " Configuration
     let height = float2nr((&lines - 2) * 0.6)
     let row = float2nr((&lines - height) / 2)
     let width = float2nr(&columns * 0.6)
     let col = float2nr((&columns - width) / 2)
-    " Border Window
+
     let border_opts = {
                 \ 'relative': 'editor',
                 \ 'row': row - 1,
@@ -278,7 +244,7 @@ function! FloatTerm(...)
                 \ 'height': height + 2,
                 \ 'style': 'minimal'
                 \ }
-    " Terminal Window
+
     let opts = {
                 \ 'relative': 'editor',
                 \ 'row': row,
@@ -296,7 +262,7 @@ function! FloatTerm(...)
     let s:float_term_border_win = nvim_open_win(bbuf, v:true, border_opts)
     let buf = nvim_create_buf(v:false, v:true)
     let s:float_term_win = nvim_open_win(buf, v:true, opts)
-    " Styling
+
     hi FloatWinBorder guifg=#87bb7c
     call setwinvar(s:float_term_border_win, '&winhl', 'Normal:FloatWinBorder')
     call setwinvar(s:float_term_win, '&winhl', 'Normal:Normal')
@@ -311,7 +277,6 @@ endfunction
 
 augroup General
     au!
-    " auto insert when open file
     autocmd BufNewFile *.cpp :read ~/.config/nvim/stuff/cppTemplate.cpp | normal!kdd3j
     autocmd BufNewFile *.fish  :call CheckFishFile()
     autocmd BufNewFile *.py :call CheckPyFile()
