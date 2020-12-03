@@ -278,6 +278,7 @@ ghdotfiles () {
     cp -r ~/.fonts ~/git/dotfiles/
     dconf dump /org/gnome/desktop/wm/keybindings/ > ~/git/dotfiles/keybindings.dconf
     dconf dump /org/gnome/terminal/legacy/profiles:/ > ~/git/dotfiles/gnome-terminal-profiles.dconf
+    cp -r ~/.config/autokey ~/git/dotfiles/autokey
     cd ~/git/dotfiles/
     okp ; cd -
 }
