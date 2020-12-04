@@ -118,13 +118,13 @@ set magic
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
-Plug 'yuttie/comfortable-motion.vim'
-Plug 'camspiers/animate.vim'
-Plug 'camspiers/lens.vim'
-nnoremap <silent> <Up>    :call animate#window_delta_height(10)<CR>
-nnoremap <silent> <Down>  :call animate#window_delta_height(-10)<CR>
-nnoremap <silent> <Left>  :call animate#window_delta_width(10)<CR>
-nnoremap <silent> <Right> :call animate#window_delta_width(-10)<CR>
+" Plug 'yuttie/comfortable-motion.vim'
+" Plug 'camspiers/animate.vim'
+" Plug 'camspiers/lens.vim'
+" nnoremap <silent> <Up>    :call animate#window_delta_height(10)<CR>
+" nnoremap <silent> <Down>  :call animate#window_delta_height(-10)<CR>
+" nnoremap <silent> <Left>  :call animate#window_delta_width(10)<CR>
+" nnoremap <silent> <Right> :call animate#window_delta_width(-10)<CR>
 
 Plug 'mkitt/tabline.vim'
 Plug 'ntpeters/vim-better-whitespace'
