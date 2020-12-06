@@ -127,8 +127,9 @@ let g:rainbow_active = 1
 
 Plug 'gregsexton/MatchTag', { 'for': 'html' }
 Plug 'sheerun/vim-polyglot' " highlight stuff
-Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
-let g:Hexokinase_highlighters = ['virtual']
+Plug 'norcalli/nvim-colorizer.lua'
+" Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
+" let g:Hexokinase_highlighters = ['virtual']
 
 " BUG: markdown file (fixed but not good enough)
 Plug 'Yggdroot/indentLine'
