@@ -384,7 +384,7 @@ hi () {
     browser_daily
     # wait for browser loading website
     # cuz maybe can effect system resource
-    sleep 30
+    sleep 20
     rem
 }
 
