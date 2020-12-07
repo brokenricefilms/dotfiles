@@ -29,7 +29,6 @@ map mm <Plug>NERDCommenterToggle
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
 imap <c-x><c-f> <plug>(fzf-complete-path)
 
 if isdirectory(".git")
