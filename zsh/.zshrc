@@ -4,6 +4,25 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
   exec tmux
 fi
 
+## Options section
+setopt correct                                                  # Auto correct mistakes
+setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
+setopt nocaseglob                                               # Case insensitive globbing
+setopt rcexpandparam                                            # Array expension with parameters
+setopt nocheckjobs                                              # Don't warn about running processes when exiting
+setopt numericglobsort                                          # Sort filenames numerically when it makes sense
+setopt nobeep                                                   # No beep
+setopt autocd                                                   # if only directory path is entered, cd there.
+
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
+zstyle ':completion:*' rehash true                              # automatically find new executables in path
+# Speed up completions
+zstyle ':completion:*' accept-exact '*(N)'
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
+
 autoload -U colors && colors
 PROMPT=" %F{blue}%~%f %F{red}❯%f%F{yellow}❯%f%F{green}❯%f "
 # PROMPT=" %F{blue}%~%f 👉 "
@@ -181,9 +200,8 @@ alias v='nvim'
 alias o='xdg-open'
 alias 777='chmod -R 777'
 alias x='chmod +x'
-alias f='fdfind . -H | grep --colour=always'
+alias f='fd. -H | grep --colour=always'
 alias vifm='vifm .'
-alias fd='fdfind'
 alias n='nnn -de'
 
 # music stuff
@@ -191,16 +209,16 @@ alias n='nnn -de'
 alias m='mpv --audio-display=no --shuffle ~/Music/*'
 
 # ubuntu apt
-alias ins='sudo apt install -y'
-alias uins='sudo apt remove -y'
+# alias ins='sudo apt install -y'
+# alias uins='sudo apt remove -y'
 
 # fedora dnf
 # alias ins='sudo dnf install -y'
 # alias uins='sudo dnf remove -y'
 
 # arch
-# alias ins='sudo pacman -S --noconfirm'
-# alias uins='sudo pacman -Rs --noconfirm'
+alias ins='sudo pacman -S --noconfirm'
+alias uins='sudo pacman -Rs --noconfirm'
 
 # tmux
 alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 75 ; tmux last-pane ; nvim'
@@ -223,7 +241,7 @@ alias tdl='trash ~/Downloads/*'
 # fzf
 alias cf='cd ~/.config/ ; nvim -o $(fzf)'
 alias vi='cd ~/ ; nvim -o $(fzf)'
-export FZF_DEFAULT_COMMAND='fdfind -H --type f'
+export FZF_DEFAULT_COMMAND='fd -H --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # paper color
@@ -353,7 +371,7 @@ gla () {
 }
 
 # browser
-alias browser='brave-browser'
+alias browser='brave'
 # alias browser='google-chrome'
 # alias browser='firefox'
 alias github='browser --new-window "https://github.com/thuanpham2311"'
@@ -389,29 +407,41 @@ hi () {
 }
 
 # ubuntu
+# rem () {
+    # nvim -c "PlugUpdate | qa"
+    # sudo pip3 install --upgrade pynvim
+    # npm -g install neovim
+    # sudo gem update neovim
+
+    # npm -g install npm
+    # tldr --update
+
+    # # debian base (ubuntu, kali,...)
+    # sudo apt update
+    # sudo apt upgrade -y
+    # sudo apt autoremove -y
+    # sudo apt autoclean
+
+    # # rehat base (fedora)
+    # # sudo dnf update -y
+    # # sudo dnf autoremove -y
+    # # flatpak update -y
+
+    # # arch base
+    # # sudo pacman -Syyu --noconfirm
+
+    # cd ~ ; clear ; neofetch
+# }
+
+# arch
 rem () {
     nvim -c "PlugUpdate | qa"
-    sudo pip3 install --upgrade pynvim
     npm -g install neovim
     sudo gem update neovim
-
     npm -g install npm
     tldr --update
-
-    # debian base (ubuntu, kali,...)
-    sudo apt update
-    sudo apt upgrade -y
-    sudo apt autoremove -y
-    sudo apt autoclean
-
-    # rehat base (fedora)
-    # sudo dnf update -y
-    # sudo dnf autoremove -y
-    # flatpak update -y
-
-    # arch base
-    # sudo pacman -Syyu --noconfirm
-
+    sudo pacman -Syu --noconfirm
+    sudo yay -Sua --noconfirm
     cd ~ ; clear ; neofetch
 }
 
@@ -421,9 +451,15 @@ data () {
     jupyter lab
 }
 
+# Offer to install missing package if command is not found
+if [[ -r /usr/share/zsh/functions/command-not-found.zsh ]]; then
+    source /usr/share/zsh/functions/command-not-found.zsh
+    export PKGFILE_PROMPT_INSTALL_MISSING=1
+fi
+
 # fzf
 source /usr/share/fzf/key-bindings.zsh 2>/dev/null
 source /usr/share/fzf/completion.zsh 2>/dev/null
 # Load zsh-syntax-highlighting; should be last.
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
