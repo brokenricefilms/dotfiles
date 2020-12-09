@@ -135,7 +135,7 @@ let g:indentLine_bufTypeExclude = ['help', 'terminal', 'markdown', 'text']
 let g:indentLine_fileTypeExclude = ['help', 'text', 'markdown']
 
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'gruvbox-community/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 call plug#end()
 
 syntax enable
@@ -144,8 +144,7 @@ set termguicolors
 " set background=light
 set background=dark
 " colorscheme PaperColor
-colorscheme gruvbox
-let g:gruvbox_invert_selection='0'
+colorscheme gruvbox-material
 
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
 
