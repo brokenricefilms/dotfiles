@@ -297,6 +297,7 @@ ghdotfiles () {
     dconf dump /org/gnome/desktop/wm/keybindings/ > ~/git/dotfiles/keybindings.dconf
     dconf dump /org/gnome/terminal/legacy/profiles:/ > ~/git/dotfiles/gnome-terminal-profiles.dconf
     cp -r ~/.config/autokey ~/git/dotfiles/
+    cp ~/.ssh/config ~/git/dotfiles/ssh
     cd ~/git/dotfiles/
     okp ; cd -
 }
@@ -441,7 +442,7 @@ rem () {
     npm -g install npm
     tldr --update
     sudo pacman -Syu --noconfirm
-    sudo yay -Sua --noconfirm
+    yay -Sua --noconfirm
     cd ~ ; clear ; neofetch
 }
 
