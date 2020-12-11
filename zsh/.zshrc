@@ -198,7 +198,7 @@ alias v='nvim'
 alias o='xdg-open'
 alias 777='chmod -R 777'
 alias x='chmod +x'
-alias f='fd. -H | grep --colour=always'
+alias f='fd . -H | grep --colour=always'
 alias vifm='vifm .'
 alias n='nnn -de'
 
