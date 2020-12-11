@@ -141,10 +141,10 @@ call plug#end()
 syntax enable
 highlight WildMenu guifg=#87bb7c
 set termguicolors
-set background=light
-" set background=dark
-colorscheme PaperColor
-" colorscheme gruvbox-material
+" set background=light
+set background=dark
+" colorscheme PaperColor
+colorscheme gruvbox-material
 
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
 
