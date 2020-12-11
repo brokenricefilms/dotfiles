@@ -1,4 +1,3 @@
-# Set up the prompt
 # tmux
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux
@@ -409,42 +408,30 @@ hi () {
 
 # ubuntu
 # rem () {
-    # nvim -c "PlugUpdate | qa"
-    # sudo pip3 install --upgrade pynvim
-    # npm -g install neovim
-    # sudo gem update neovim
+    nvim -c "PlugUpdate | qa"
+    npm -g install neovim
+    npm -g install npm
+    sudo gem update neovim
+    python -m pip install neovim
+    tldr --update
 
-    # npm -g install npm
-    # tldr --update
+    # arch base
+    sudo pacman -Syu --noconfirm
+    yay -Sua --noconfirm
 
-    # # debian base (ubuntu, kali,...)
+    # debian base (ubuntu, kali,...)
     # sudo apt update
     # sudo apt upgrade -y
     # sudo apt autoremove -y
     # sudo apt autoclean
 
-    # # rehat base (fedora)
-    # # sudo dnf update -y
-    # # sudo dnf autoremove -y
-    # # flatpak update -y
+    # rehat base (fedora)
+    # sudo dnf update -y
+    # sudo dnf autoremove -y
+    # flatpak update -y
 
-    # # arch base
-    # # sudo pacman -Syyu --noconfirm
-
-    # cd ~ ; clear ; neofetch
-# }
-
-# arch
-rem () {
-    nvim -c "PlugUpdate | qa"
-    npm -g install neovim
-    sudo gem update neovim
-    npm -g install npm
-    tldr --update
-    sudo pacman -Syu --noconfirm
-    yay -Sua --noconfirm
     cd ~ ; clear ; neofetch
-}
+# }
 
 data () {
     cd ~/git/dataLab/
@@ -452,15 +439,8 @@ data () {
     jupyter lab
 }
 
-# Offer to install missing package if command is not found
-if [[ -r /usr/share/zsh/functions/command-not-found.zsh ]]; then
-    source /usr/share/zsh/functions/command-not-found.zsh
-    export PKGFILE_PROMPT_INSTALL_MISSING=1
-fi
-
 # fzf
-source /usr/share/fzf/key-bindings.zsh 2>/dev/null
-source /usr/share/fzf/completion.zsh 2>/dev/null
-# Load zsh-syntax-highlighting; should be last.
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
