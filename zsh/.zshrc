@@ -1,9 +1,8 @@
 # tmux
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
+    exec tmux
 fi
 
-## Options section
 setopt correct                                                  # Auto correct mistakes
 setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
 setopt nocaseglob                                               # Case insensitive globbing
@@ -219,41 +218,36 @@ alias m='mpv --audio-display=no --shuffle ~/Music/*'
 alias ins='sudo pacman -S --noconfirm'
 alias uins='sudo pacman -Rs --noconfirm'
 
-# tmux
 alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 75 ; tmux last-pane ; nvim'
 # alias ide='tmux split-window -h -p 30 ; tmux split-window -v -p 75 ; tmux last-pane ; nvim'
 alias qa='tmux kill-session -a ; cowsay "All session deleted" ; tmux ls'
 
-# cd
 alias ..='cd .. ; clear ; l'
 alias ...='cd .. ; cd .. ; cd .. ; clear ; l'
 alias dow='cd ~/Downloads ; clear ; l'
 
-# youtube-dl
 alias yt='youtube-dl --add-metadata -i'
 alias yta='yt -x --audio-format mp3'
 
-# trash-cli
 alias t='trash'
 alias tdl='trash ~/Downloads/*'
 
-# fzf
 alias cf='cd ~/.config/ ; nvim -o $(fzf)'
 alias vi='cd ~/ ; nvim -o $(fzf)'
 export FZF_DEFAULT_COMMAND='fd -H --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # paper color
-# export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-# --color=fg:#4d4d4c,bg:#eeeeee,hl:#d7005f
-# --color=fg+:#4d4d4c,bg+:#e8e8e8,hl+:#d7005f
-# --color=info:#4271ae,prompt:#8959a8,pointer:#d7005f
-# --color=marker:#4271ae,spinner:#4271ae,header:#4271ae'
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+--color=fg:#4d4d4c,bg:#eeeeee,hl:#d7005f
+--color=fg+:#4d4d4c,bg+:#e8e8e8,hl+:#d7005f
+--color=info:#4271ae,prompt:#8959a8,pointer:#d7005f
+--color=marker:#4271ae,spinner:#4271ae,header:#4271ae'
 
 # gruvbox dark
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
---color fg:#ebdbb2,bg:#282828,hl:#fabd2f,fg+:#ebdbb2,bg+:#3c3836,hl+:#fabd2f
---color info:#83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#83a598,marker:#fe8019,header:#665c54'
+# export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+# --color fg:#ebdbb2,bg:#282828,hl:#fabd2f,fg+:#ebdbb2,bg+:#3c3836,hl+:#fabd2f
+# --color info:#83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#83a598,marker:#fe8019,header:#665c54'
 
 c () {
     local dir
@@ -264,7 +258,6 @@ c () {
             la
         }
 
-# git
 alias yo='git add -A ; git commit -m "$(curl -s whatthecommit.com/index.txt)"'
 alias sta='git status'
 alias push="git push"
@@ -370,7 +363,6 @@ gla () {
     cowsay "D O N E"
 }
 
-# browser
 alias browser='brave'
 # alias browser='google-chrome'
 # alias browser='firefox'
@@ -397,7 +389,6 @@ browser_daily () {
     browser_stu
 }
 
-# mode
 hi () {
     browser_daily
     # wait for browser loading website
@@ -406,8 +397,7 @@ hi () {
     rem
 }
 
-# ubuntu
-# rem () {
+rem () {
     nvim -c "PlugUpdate | qa"
     npm -g install neovim
     npm -g install npm
@@ -431,7 +421,7 @@ hi () {
     # flatpak update -y
 
     cd ~ ; clear ; neofetch
-# }
+}
 
 data () {
     cd ~/git/dataLab/
@@ -439,7 +429,6 @@ data () {
     jupyter lab
 }
 
-# fzf
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
