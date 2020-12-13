@@ -185,7 +185,6 @@ alias lt='clear ; exa -aT --color=always --group-directories-first'
 
 alias cpf='xclip -sel clip'
 alias re='source ~/.config/zsh/.zshrc ; tmux source-file ~/.tmux.conf'
-alias tmuxr='tmux source ~/.tmux.conf'
 alias h='htop'
 alias e='exit'
 alias :q='exit'
@@ -199,12 +198,11 @@ alias o='xdg-open'
 alias 777='chmod -R 777'
 alias x='chmod +x'
 alias f='fd . -H | grep --colour=always'
-alias vifm='vifm .'
 alias n='nnn -de'
 
 # music stuff
-# alias m='tmux new-window ; mpv --shuffle ~/Music/*'
-alias m='mpv --audio-display=no --shuffle ~/Music/*'
+alias m='tmux new-window ; mpv --shuffle ~/Music/*'
+# alias m='mpv --audio-display=no --shuffle ~/Music/*'
 
 # ubuntu apt
 # alias ins='sudo apt install -y'
