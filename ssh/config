@@ -1,3 +1,7 @@
 Host github.com
   Hostname ssh.github.com
   Port 443
+Host phone
+    HostName 192.168.1.5
+    User u0_a176
+    Port 8022
