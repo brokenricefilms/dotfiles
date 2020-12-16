@@ -223,6 +223,7 @@ alias qa='tmux kill-session -a ; cowsay "All session deleted" ; tmux ls'
 alias ..='cd .. ; clear ; l'
 alias ...='cd .. ; cd .. ; cd .. ; clear ; l'
 alias dow='cd ~/Downloads ; clear ; l'
+alias doc='cd ~/Documents ; clear ; l'
 
 alias yt='youtube-dl --add-metadata -i'
 alias yta='yt -x --audio-format mp3'
