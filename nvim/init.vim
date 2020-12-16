@@ -10,6 +10,11 @@ Plug 'junegunn/vim-easy-align'
 vmap <Enter> <Plug>(EasyAlign)
 nmap <Enter> <Plug>(EasyAlign)
 
+" mapping jj to esc better way
+Plug 'jdhao/better-escape.vim'
+let g:better_escape_interval = 200
+let g:better_escape_shortcut = 'jj'
+
 Plug 'rhysd/clever-f.vim'
 Plug 'easymotion/vim-easymotion'
 nmap ;; <Plug>(easymotion-overwin-f)
@@ -183,7 +188,6 @@ nnoremap - <C-x>
 vmap < <gv
 vmap > >gv
 
-imap jj <Esc>
 map <space> <leader>
 
 nmap <C-t> :tabnew<Return>
