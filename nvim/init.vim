@@ -8,10 +8,6 @@ Plug 'KabbAmine/vCoolor.vim'
 Plug 'tpope/vim-repeat'
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 
-Plug 'junegunn/vim-easy-align'
-vmap <Enter> <Plug>(EasyAlign)
-nmap <Enter> <Plug>(EasyAlign)
-
 " mapping jj to esc better way
 Plug 'jdhao/better-escape.vim'
 let g:better_escape_interval = 200

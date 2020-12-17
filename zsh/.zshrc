@@ -179,6 +179,7 @@ alias 777='chmod -R 777'
 alias x='chmod +x'
 alias f='fd . -H | grep --colour=always'
 alias n='nnn -de'
+alias colorPicker='zenity --color-selection'
 
 # music stuff
 alias m='tmux new-window ; mpv --shuffle ~/Music/*'
