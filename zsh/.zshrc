@@ -423,12 +423,6 @@ rem () {
     cd ~ ; clear ; neofetch
 }
 
-data () {
-    cd ~/git/dataLab/
-    tmux split-window -h -p 50
-    jupyter lab
-}
-
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
