@@ -3,22 +3,13 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
     exec tmux
 fi
 
-setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
-setopt nocaseglob                                               # Case insensitive globbing
-setopt rcexpandparam                                            # Array expension with parameters
-setopt nocheckjobs                                              # Don't warn about running processes when exiting
-setopt numericglobsort                                          # Sort filenames numerically when it makes sense
-setopt nobeep                                                   # No beep
-setopt autocd                                                   # if only directory path is entered, cd there.
-
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
-zstyle ':completion:*' rehash true                              # automatically find new executables in path
-# Speed up completions
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' rehash true
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.config/zsh/cache
-WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
+WORDCHARS=${WORDCHARS//\/[&.;]}
 
 autoload -U colors && colors
 PROMPT=" %F{blue}%~%f %F{red}❯%f%F{yellow}❯%f%F{green}❯%f "
@@ -28,7 +19,6 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.config/zsh/.zsh_history
 
-# Use emacs keybindings even if our EDITOR is set to vi
 bindkey -v
 
 # Change cursor shape for different vi modes.
@@ -46,14 +36,13 @@ function zle-keymap-select {
 
 zle -N zle-keymap-select
 zle-line-init() {
-zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
+zle -K viins
 echo -ne "\e[5 q"
 }
 zle -N zle-line-init
-echo -ne '\e[5 q' # Use beam shape cursor on startup.
-preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+echo -ne '\e[5 q'
+preexec() { echo -ne '\e[5 q' ;}
 
-# Use modern completion system
 autoload -Uz compinit
 compinit
 
@@ -96,11 +85,6 @@ u () {
     fi
 }
 
-tv () {
-    pactl set-card-profile 0 output:hdmi-stereo
-    xrandr --output LVDS-1 --off --output VGA-1 --off --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-2 --off --output HDMI-3 --off --output DP-2 --off --output DP-3 --off
-}
-
 24-bit-color () {
 bash ~/.config/zsh/functions/24-bit-color.sh
 }
@@ -141,7 +125,7 @@ cpppro () {
     nvim -O *
 }
 
-runcpp () {
+runcpp() {
     g++ *.cpp
     ./a.out
     rm a.out
@@ -198,7 +182,6 @@ alias n='nnn -de'
 
 # music stuff
 alias m='tmux new-window ; mpv --shuffle ~/Music/*'
-# alias m='mpv --audio-display=no --shuffle ~/Music/*'
 
 # ubuntu apt
 # alias ins='sudo apt install -y'
@@ -228,7 +211,6 @@ alias yta='yt -x --audio-format mp3'
 alias t='trash'
 alias tdl='trash ~/Downloads/*'
 
-alias cf='cd ~/.config/ ; nvim -o $(fzf)'
 alias vi='cd ~/ ; nvim -o $(fzf)'
 export FZF_DEFAULT_COMMAND='fd -H --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -443,7 +425,6 @@ rem () {
     # rehat base (fedora)
     # sudo dnf update -y
     # sudo dnf autoremove -y
-    # flatpak update -y
 
     cd ~ ; clear ; neofetch
 }
