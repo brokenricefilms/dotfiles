@@ -22,11 +22,8 @@ WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider
 
 autoload -U colors && colors
 PROMPT=" %F{blue}%~%f %F{red}❯%f%F{yellow}❯%f%F{green}❯%f "
-# PROMPT=" %F{blue}%~%f 👉 "
 
 setopt histignorealldups sharehistory
-
-# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.config/zsh/.zsh_history
@@ -34,7 +31,7 @@ HISTFILE=~/.config/zsh/.zsh_history
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -v
 
-# # Change cursor shape for different vi modes.
+# Change cursor shape for different vi modes.
 function zle-keymap-select {
     if [[ ${KEYMAP} == vicmd ]] ||
         [[ $1 = 'block' ]]; then
@@ -71,8 +68,8 @@ mk () {
     fi
 }
 
-BMI () {
-    ~/.config/zsh/functions/BMI.py
+bmi () {
+    ~/.config/zsh/functions/bmi.py
 }
 
 u () {
@@ -257,41 +254,41 @@ c () {
             l
         }
 
-alias yo='git add -A ; git commit -m "$(curl -s whatthecommit.com/index.txt)"'
-alias sta='git status'
-alias push="git push"
-alias pull="git pull"
-alias clone='git clone'
-alias commit='git commit -m'
-alias prettier='prettier --write .'
-alias ok='yo ; push'
-alias okp='prettier ; yo ; push '
+    alias yo='git add -A ; git commit -m "$(curl -s whatthecommit.com/index.txt)"'
+    alias sta='git status'
+    alias push="git push"
+    alias pull="git pull"
+    alias clone='git clone'
+    alias commit='git commit -m'
+    alias prettier='prettier --write .'
+    alias ok='yo ; push'
+    alias okp='prettier ; yo ; push '
 
-ghdotfiles () {
-    cp ~/.config/tmux/.tmux.conf ~/git/dotfiles/tmux/
-    cp -r ~/.config/kitty/* ~/git/dotfiles/kitty
-    cp -r ~/.config/fish/* ~/git/dotfiles/fish/
-    cp -r ~/.config/vifm/* ~/git/dotfiles/vifm
-    cp ~/.config/zsh/.zshrc ~/git/dotfiles/zsh/
-    cp -r ~/.config/zsh/functions ~/git/dotfiles/zsh/
-    cp ~/.config/zsh/functions/crontab* ~/git/dotfiles/crontab/
-    crontab -l > ~/git/dotfiles/crontab/crontabConfig
-    cp ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
-    cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim/
-    cp -r ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
-    cp -r ~/.config/nvim/stuff ~/git/dotfiles/nvim/
-    # I don't want you see my undoir, try hack me :D
-    cp -r ~/.config/nvim/undodir ~/git/ok/
-    cp ~/.gitconfig  ~/git/dotfiles/git/
-    cp ~/.selected_editor ~/git/dotfiles
-    cp -r ~/.fonts ~/git/dotfiles/
-    dconf dump /org/gnome/desktop/wm/keybindings/ > ~/git/dotfiles/keybindings.dconf
-    dconf dump /org/gnome/terminal/legacy/profiles:/ > ~/git/dotfiles/gnome-terminal-profiles.dconf
-    cp -r ~/.config/autokey ~/git/dotfiles/
-    cp ~/.ssh/config ~/git/dotfiles/ssh
-    cd ~/git/dotfiles/
-    okp ; cd -
-}
+    ghdotfiles () {
+        cp ~/.config/tmux/.tmux.conf ~/git/dotfiles/tmux/
+        cp -r ~/.config/kitty/* ~/git/dotfiles/kitty
+        cp -r ~/.config/fish/* ~/git/dotfiles/fish/
+        cp -r ~/.config/vifm/* ~/git/dotfiles/vifm
+        cp ~/.config/zsh/.zshrc ~/git/dotfiles/zsh/
+        cp -r ~/.config/zsh/functions ~/git/dotfiles/zsh/
+        cp ~/.config/zsh/functions/crontab* ~/git/dotfiles/crontab/
+        crontab -l > ~/git/dotfiles/crontab/crontabConfig
+        cp ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
+        cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim/
+        cp -r ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
+        cp -r ~/.config/nvim/stuff ~/git/dotfiles/nvim/
+        # I don't want you see my undoir, try hack me :D
+        cp -r ~/.config/nvim/undodir ~/git/ok/
+        cp ~/.gitconfig  ~/git/dotfiles/git/
+        cp ~/.selected_editor ~/git/dotfiles
+        cp -r ~/.fonts ~/git/dotfiles/
+        dconf dump /org/gnome/desktop/wm/keybindings/ > ~/git/dotfiles/keybindings.dconf
+        dconf dump /org/gnome/terminal/legacy/profiles:/ > ~/git/dotfiles/gnome-terminal-profiles.dconf
+        cp -r ~/.config/autokey ~/git/dotfiles/
+        cp ~/.ssh/config ~/git/dotfiles/ssh
+        cd ~/git/dotfiles/
+        okp ; cd -
+    }
 
 alias ghcalculatorOnIOS='cd ~/git/calculatorOnIOS ; okp ; cd -'
 alias ghdataLab='cd ~/git/dataLab ; okp ; cd -'
@@ -381,31 +378,31 @@ alias browser_feedly='browser "https://feedly.com/i/collection/content/user/0d89
 
 ## search
 function :t() {
-    browser --new-window "https://translate.google.com/?source=osdd#auto|auto|$argv"
+browser --new-window "https://translate.google.com/?source=osdd#auto|auto|$argv"
 }
 
 function :y() {
-    browser --new-window "https://www.youtube.com/results?search_query=$argv"
+browser --new-window "https://www.youtube.com/results?search_query=$argv"
 }
 
 function :d() {
-    browser --new-window "https://duckduckgo.com/?q=$argv"
+browser --new-window "https://duckduckgo.com/?q=$argv"
 }
 
 function :gm() {
-    browser --new-window "https://www.google.com/maps?q=$argv"
+browser --new-window "https://www.google.com/maps?q=$argv"
 }
 
 function :g() {
-    browser --new-window "https://www.google.com/search?q=$argv"
+browser --new-window "https://www.google.com/search?q=$argv"
 }
 
 function :gh() {
-    browser --new-window "https://github.com/search?q=$argv"
+browser --new-window "https://github.com/search?q=$argv"
 }
 
 function :f() {
-    browser --new-window "https://www.facebook.com/search?q=$argv"
+browser --new-window "https://www.facebook.com/search?q=$argv"
 }
 
 browser_daily () {
