@@ -214,6 +214,7 @@ alias m='tmux new-window ; mpv --shuffle ~/Music/*'
 
 # arch
 alias ins='sudo pacman -S --noconfirm'
+alias ins2='yay -S --noconfirm'
 alias uins='sudo pacman -Rs --noconfirm'
 
 alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 75 ; tmux last-pane ; nvim'
