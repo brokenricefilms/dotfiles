@@ -5,6 +5,8 @@ nmap <leader>t :TagbarToggle<CR>
 " color select/picker
 " use <Alt>+<r>
 Plug 'KabbAmine/vCoolor.vim'
+Plug 'tpope/vim-repeat'
+silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 
 Plug 'junegunn/vim-easy-align'
 vmap <Enter> <Plug>(EasyAlign)
@@ -134,10 +136,10 @@ Plug 'sheerun/vim-polyglot' " highlight stuff
 Plug 'norcalli/nvim-colorizer.lua'
 
 " BUG: markdown file (fixed but not good enough)
-Plug 'Yggdroot/indentLine'
-let g:indentLine_char = '▏'
-let g:indentLine_bufTypeExclude = ['help', 'terminal', 'markdown', 'text']
-let g:indentLine_fileTypeExclude = ['help', 'text', 'markdown']
+" Plug 'Yggdroot/indentLine'
+" let g:indentLine_char = '▏'
+" let g:indentLine_bufTypeExclude = ['help', 'terminal', 'markdown', 'text']
+" let g:indentLine_fileTypeExclude = ['help', 'text', 'markdown']
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'sainnhe/gruvbox-material'

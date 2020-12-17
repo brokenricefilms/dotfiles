@@ -3,7 +3,6 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
     exec tmux
 fi
 
-setopt correct                                                  # Auto correct mistakes
 setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
 setopt nocaseglob                                               # Case insensitive globbing
 setopt rcexpandparam                                            # Array expension with parameters
@@ -68,7 +67,7 @@ mk () {
         echo "\`$1' already exists"
         cd $1
     else
-        mkdir $1 && cd $1
+        mkdir -p $1 && cd $1
     fi
 }
 
@@ -379,6 +378,35 @@ alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscr
 alias browser_anime='browser "https://animedao.to/"'
 alias browser_kdrama='browser "http://www.phimhanz.net/"'
 alias browser_feedly='browser "https://feedly.com/i/collection/content/user/0d89157e-ce7d-4b2c-a2d6-98826f1e5089/category/global.all"'
+
+## search
+function :t() {
+    browser --new-window "https://translate.google.com/?source=osdd#auto|auto|$argv"
+}
+
+function :y() {
+    browser --new-window "https://www.youtube.com/results?search_query=$argv"
+}
+
+function :d() {
+    browser --new-window "https://duckduckgo.com/?q=$argv"
+}
+
+function :gm() {
+    browser --new-window "https://www.google.com/maps?q=$argv"
+}
+
+function :g() {
+    browser --new-window "https://www.google.com/search?q=$argv"
+}
+
+function :gh() {
+    browser --new-window "https://github.com/search?q=$argv"
+}
+
+function :f() {
+    browser --new-window "https://www.facebook.com/search?q=$argv"
+}
 
 browser_daily () {
     cowsay "GET.SHIT.DONE"
