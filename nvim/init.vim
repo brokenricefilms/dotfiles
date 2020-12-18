@@ -125,14 +125,7 @@ Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
 
 Plug 'gregsexton/MatchTag', { 'for': 'html' }
-Plug 'sheerun/vim-polyglot' " highlight stuff
 Plug 'norcalli/nvim-colorizer.lua'
-
-" BUG: markdown file (fixed but not good enough)
-" Plug 'Yggdroot/indentLine'
-" let g:indentLine_char = '▏'
-" let g:indentLine_bufTypeExclude = ['help', 'terminal', 'markdown', 'text']
-" let g:indentLine_fileTypeExclude = ['help', 'text', 'markdown']
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'sainnhe/gruvbox-material'

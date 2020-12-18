@@ -409,6 +409,11 @@ rem () {
     nvim -c "PlugUpdate | qa"
     npm -g install neovim
     npm -g install npm
+    npm -g install tinypng-cli
+    npm -g install browser-sync
+    npm -g install yarn
+    npm -g install typescript
+    npm -g install prettier
     sudo gem update neovim
     python -m pip install neovim
     tldr --update
