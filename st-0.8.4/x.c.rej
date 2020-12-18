@@ -1,0 +1,18 @@
+--- x.c
++++ x.c
+@@ -149,6 +149,7 @@ static void xhints(void);
+ static int xloadcolor(int, const char *, Color *);
+ static int xloadfont(Font *, FcPattern *);
+ static void xloadfonts(char *, double);
++static void xloadsparefont();
+ static void xunloadfont(Font *);
+ static void xunloadfonts(void);
+ static void xsetenv(void);
+@@ -296,6 +297,7 @@ zoomabs(const Arg *arg)
+ {
+ 	xunloadfonts();
+ 	xloadfonts(usedfont, arg->f);
++	xloadsparefont();
+ 	cresize(0, 0);
+ 	redraw();
+ 	xhints();
