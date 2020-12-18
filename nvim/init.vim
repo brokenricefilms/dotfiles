@@ -2,9 +2,6 @@ call plug#begin()
 Plug 'preservim/tagbar'
 nmap <leader>t :TagbarToggle<CR>
 
-" color select/picker
-" use <Alt>+<r>
-Plug 'KabbAmine/vCoolor.vim'
 Plug 'tpope/vim-repeat'
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 
@@ -151,9 +148,7 @@ colorscheme gruvbox-material
 
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
 
-" set colorcolumn=80
 set cursorline
-" highlight CursorLine guibg=bold gui=bold
 highlight CursorLine term=bold cterm=bold
 
 set list
@@ -216,7 +211,7 @@ nnoremap <space>? :echo expand("%:p")<CR>
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
 
-" Save A File Without Root Permission With sudo
+" write file when you forgot root
 command! W execute "w !sudo tee %"
 
 nmap <leader>a :call FloatTerm()<CR>
