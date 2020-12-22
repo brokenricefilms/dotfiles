@@ -1,0 +1,1 @@
+/home/master/git/ok/test.sh
