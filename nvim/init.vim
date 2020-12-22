@@ -126,13 +126,14 @@ let g:rainbow_active = 1
 
 Plug 'gregsexton/MatchTag', { 'for': 'html' }
 Plug 'norcalli/nvim-colorizer.lua'
+autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'sainnhe/gruvbox-material'
 call plug#end()
 
 syntax enable
-highlight WildMenu guifg=#87bb7c
+highlight WildMenu guifg=#78A79C
 set termguicolors
 " set background=light
 set background=dark
@@ -242,7 +243,7 @@ function! FloatTerm(...)
     let buf = nvim_create_buf(v:false, v:true)
     let s:float_term_win = nvim_open_win(buf, v:true, opts)
 
-    hi FloatWinBorder guifg=#87bb7c
+    hi FloatWinBorder guifg=#78A79C
     call setwinvar(s:float_term_border_win, '&winhl', 'Normal:FloatWinBorder')
     call setwinvar(s:float_term_win, '&winhl', 'Normal:Normal')
     if a:0 == 0

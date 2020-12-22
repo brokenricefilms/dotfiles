@@ -3,6 +3,8 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
     exec tmux
 fi
 
+setopt nobeep
+
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' rehash true
@@ -251,7 +253,6 @@ c () {
         cp ~/.config/tmux/.tmux.conf ~/git/dotfiles/tmux/
         cp -r ~/.config/kitty/* ~/git/dotfiles/kitty
         cp -r ~/.config/fish/* ~/git/dotfiles/fish/
-        cp -r ~/.config/vifm/* ~/git/dotfiles/vifm
         cp ~/.config/zsh/.zshrc ~/git/dotfiles/zsh/
         cp -r ~/.config/zsh/functions ~/git/dotfiles/zsh/
         cp ~/.config/zsh/functions/crontab* ~/git/dotfiles/crontab/
@@ -342,7 +343,7 @@ gla () {
     cowsay "D O N E"
 }
 
-alias browser='brave'
+alias browser='brave-beta'
 # alias browser='google-chrome'
 # alias browser='firefox'
 alias github='browser --new-window "https://github.com/thuanpham2311"'

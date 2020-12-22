@@ -7,7 +7,7 @@ print("Count your BMI")
 KG = float(input("Enter your weight (kg): "))
 M = float(input("Enter your height (m): "))
 
-BMI = KG / (M**2)
+BMI = KG / (M ** 2)
 
 BMI = round(BMI, 2)
 
