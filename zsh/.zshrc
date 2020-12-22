@@ -9,8 +9,6 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' rehash true
 zstyle ':completion:*' accept-exact '*(N)'
-zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ~/.config/zsh/cache
 WORDCHARS=${WORDCHARS//\/[&.;]}
 
 autoload -U colors && colors
@@ -19,7 +17,7 @@ PROMPT=" %F{blue}%~%f %F{red}❯%f%F{yellow}❯%f%F{green}❯%f "
 setopt histignorealldups sharehistory
 HISTSIZE=1000
 SAVEHIST=1000
-HISTFILE=~/.config/zsh/.zsh_history
+HISTFILE=~/.zsh_history
 
 bindkey -v
 
@@ -60,7 +58,7 @@ mk () {
 }
 
 bmi () {
-    ~/.config/zsh/functions/bmi.py
+    ./functions/bmi.py
 }
 
 u () {
@@ -88,15 +86,15 @@ u () {
 }
 
 24-bit-color () {
-bash ~/.config/zsh/functions/24-bit-color.sh
+bash ./functions/24-bit-color.sh
 }
 
 print256colours () {
-    bash ~/.config/zsh/functions/print256colours.sh
+    bash ./functions/print256colours.sh
 }
 
 showTrueColor () {
-    bash ~/.config/zsh/functions/showTrueColor.sh
+    bash ./functions/showTrueColor.sh
 }
 
 dl () {
@@ -166,7 +164,7 @@ alias ll='clear ; exa -l --color=always --group-directories-first'
 alias lt='clear ; exa -aT --color=always --group-directories-first'
 
 alias cpf='xclip -sel clip'
-alias re='source ~/.config/zsh/.zshrc ; tmux source-file ~/.tmux.conf'
+alias re='source ~/git/dotfiles/zsh/.zshrc ; tmux source-file ~/.tmux.conf'
 alias h='htop'
 alias e='exit'
 alias :q='exit'
@@ -249,30 +247,13 @@ c () {
     alias ok='yo ; push'
     alias okp='prettier ; yo ; push '
 
-    ghdotfiles () {
-        cp ~/.config/tmux/.tmux.conf ~/git/dotfiles/tmux/
-        cp -r ~/.config/kitty/* ~/git/dotfiles/kitty
-        cp -r ~/.config/fish/* ~/git/dotfiles/fish/
-        cp ~/.config/zsh/.zshrc ~/git/dotfiles/zsh/
-        cp -r ~/.config/zsh/functions ~/git/dotfiles/zsh/
-        cp ~/.config/zsh/functions/crontab* ~/git/dotfiles/crontab/
-        crontab -l > ~/git/dotfiles/crontab/crontabConfig
-        cp ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
-        cp ~/.config/nvim/init.vim ~/git/dotfiles/nvim/
-        cp -r ~/.config/nvim/coc-settings.json ~/git/dotfiles/nvim/
-        cp -r ~/.config/nvim/stuff ~/git/dotfiles/nvim/
-        # I don't want you see my undoir, try hack me :D
-        cp -r ~/.config/nvim/undodir ~/git/ok/
-        cp ~/.gitconfig  ~/git/dotfiles/git/
-        cp ~/.selected_editor ~/git/dotfiles
-        cp -r ~/.fonts ~/git/dotfiles/
-        dconf dump /org/gnome/desktop/wm/keybindings/ > ~/git/dotfiles/keybindings.dconf
-        dconf dump /org/gnome/terminal/legacy/profiles:/ > ~/git/dotfiles/gnome-terminal-profiles.dconf
-        cp -r ~/.config/autokey ~/git/dotfiles/
-        cp ~/.ssh/config ~/git/dotfiles/ssh
-        cd ~/git/dotfiles/
-        okp ; cd -
-    }
+ghdotfiles () {
+    crontab -l > ~/git/dotfiles/crontab/crontabConfig
+    dconf dump /org/gnome/desktop/wm/keybindings/ > ~/git/dotfiles/keybindings.dconf
+    dconf dump /org/gnome/terminal/legacy/profiles:/ > ~/git/dotfiles/gnome-terminal-profiles.dconf
+    cd ~/git/dotfiles/
+    ok ; cd -
+}
 
 alias ghcalculatorOnIOS='cd ~/git/calculatorOnIOS ; okp ; cd -'
 alias ghdataLab='cd ~/git/dataLab ; okp ; cd -'

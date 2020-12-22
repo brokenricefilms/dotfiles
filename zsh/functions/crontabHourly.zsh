@@ -1,5 +1,5 @@
 #! /usr/bin/zsh
 
-source ~/.config/zsh/.zshrc
+source ~/git/dotfiles/zsh/.zshrc
 gla
 gha
