@@ -12,7 +12,8 @@ zstyle ':completion:*' accept-exact '*(N)'
 WORDCHARS=${WORDCHARS//\/[&.;]}
 
 autoload -U colors && colors
-PROMPT=" %F{blue}%~%f %F{red}❯%f%F{yellow}❯%f%F{green}❯%f "
+eval "$(starship init zsh)"
+# PROMPT=" %F{blue}%~%f %F{red}❯%f%F{yellow}❯%f%F{green}❯%f "
 
 setopt histignorealldups sharehistory
 HISTSIZE=1000
