@@ -1,4 +1,6 @@
 [:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+cell-width-scale=1.0
 scroll-on-keystroke=false
 scrollback-unlimited=true
 scrollbar-policy='never'
+use-system-font=true
