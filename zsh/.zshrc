@@ -254,7 +254,7 @@ ghdotfiles () {
     dconf dump /org/gnome/desktop/wm/keybindings/ > ~/git/dotfiles/keybindings.dconf
     dconf dump /org/gnome/terminal/legacy/profiles:/ > ~/git/dotfiles/gnome-terminal-profiles.dconf
     cd ~/git/dotfiles/
-    ok ; cd -
+    okp ; cd -
 }
 
 alias ghcalculatorOnIOS='cd ~/git/calculatorOnIOS ; okp ; cd -'
@@ -264,7 +264,7 @@ alias ghFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; okp ; cd -'
 alias ghimg='cd ~/git/img ; okp ; cd -'
 alias ghlazyscript='cd ~/git/lazyscript ; okp ; cd -'
 alias ghlinux_setup='cd ~/git/linux_setup ; okp ; cd -'
-alias ghok='cd ~/git/ok ; ok ; cd -'
+alias ghok='cd ~/git/ok ; okp ; cd -'
 alias ghtermuxSetup='cd ~/git/termuxSetup ; okp ; cd -'
 alias ghtheNewsTimes='cd ~/git/theNewsTimes ; okp ; cd -'
 alias ghthuanpham2311='cd ~/git/thuanpham2311 ; okp ; cd -'
