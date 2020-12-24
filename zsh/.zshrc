@@ -59,7 +59,7 @@ mk () {
 }
 
 bmi () {
-    ./functions/bmi.py
+    bash ~/git/dotfiles/zsh/functions/bmi.py
 }
 
 u () {
@@ -87,15 +87,15 @@ u () {
 }
 
 24-bit-color () {
-bash ./functions/24-bit-color.sh
+    bash ~/git/dotfiles/zsh/functions/24-bit-color.sh
 }
 
 print256colours () {
-    bash ./functions/print256colours.sh
+    bash ~/git/dotfiles/zsh/functions/print256colours.sh
 }
 
 showTrueColor () {
-    bash ./functions/showTrueColor.sh
+    bash ~/git/dotfiles/zsh/functions/showTrueColor.sh
 }
 
 dl () {
