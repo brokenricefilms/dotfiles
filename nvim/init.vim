@@ -113,7 +113,6 @@ set ignorecase
 set incsearch
 set smartcase
 set magic
-
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
@@ -128,8 +127,6 @@ Plug 'gregsexton/MatchTag', { 'for': 'html' }
 Plug 'norcalli/nvim-colorizer.lua'
 autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
 
-Plug 'liuchengxu/eleline.vim'
-set laststatus=2
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'sainnhe/gruvbox-material'
 call plug#end()
