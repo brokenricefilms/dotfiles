@@ -143,7 +143,6 @@ colorscheme PaperColor
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
 
 set cursorline
-highlight CursorLine term=bold cterm=bold
 
 set list
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
