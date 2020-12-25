@@ -122,6 +122,7 @@ highlight ExtraWhitespace ctermbg=None
 
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
+Plug 'sheerun/vim-polyglot'
 
 Plug 'gregsexton/MatchTag', { 'for': 'html' }
 Plug 'norcalli/nvim-colorizer.lua'
