@@ -1,8 +1,6 @@
 include ./paper.conf
 linux_display_server x11
 
-enable_audio_bell none
-
 font_family    Cascadia-Code
 font_size 11
 
