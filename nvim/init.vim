@@ -1,6 +1,6 @@
 call plug#begin()
-Plug 'preservim/tagbar'
-nmap <leader>t :TagbarToggle<CR>
+Plug 'liuchengxu/vista.vim'
+nmap <leader>t :Vista!!<CR>
 
 Plug 'tpope/vim-repeat'
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
@@ -128,6 +128,8 @@ Plug 'gregsexton/MatchTag', { 'for': 'html' }
 Plug 'norcalli/nvim-colorizer.lua'
 autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
 
+Plug 'liuchengxu/eleline.vim'
+set laststatus=2
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'sainnhe/gruvbox-material'
 call plug#end()
@@ -208,7 +210,8 @@ nmap sv :vsplit<Return><C-w>w
 command! W execute "w !sudo tee %"
 
 nmap <leader>a :call FloatTerm()<CR>
-nmap <leader>g :call FloatTerm("tig")<CR>
+nmap <leader>g :call FloatTerm('"tig"')<CR>
+nmap <leader>h :call FloatTerm('"htop"')<CR>
 function! FloatTerm(...)
     let height = float2nr((&lines - 2) * 0.6)
     let row = float2nr((&lines - height) / 2)
