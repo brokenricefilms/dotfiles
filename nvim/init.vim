@@ -64,7 +64,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 set hidden
 set shortmess+=c
 set signcolumn=yes
-set updatetime=300
+set updatetime=100
 let g:coc_global_extensions = [
             \ "coc-css",
             \ "coc-html",
@@ -116,6 +116,7 @@ set magic
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
+Plug 'mhinz/vim-signify'
 Plug 'mkitt/tabline.vim'
 Plug 'ntpeters/vim-better-whitespace'
 highlight ExtraWhitespace ctermbg=None
