@@ -306,6 +306,7 @@ alias glthuanpham2311='cd ~/git/thuanpham2311 ; pull ; cd -'
 alias glvimium_dark_theme='cd ~/git/vimium_dark_theme ; pull ; cd -'
 alias glwindowsSetup='cd ~/git/windowsSetup ;  pull ; cd -'
 alias glstuDarkTheme='cd ~/git/stuDarkTheme ;  pull ; cd -'
+alias glcssbattle='cd ~/git/cssbattle ; pull ; cd -'
 
 gla () {
     cowsay "git pull lazyscript" ; gllazyscript
@@ -323,6 +324,7 @@ gla () {
     cowsay "git pull four-card-feature-section" ; glfour-card-feature-section
     cowsay "git pull calculatorOnIOS" ; glcalculatorOnIOS
     cowsay "git pull stuDarkTheme" ; glstuDarkTheme
+    cowsay "git pull cssbattle" ; glcssbattle
     cowsay "D O N E"
 }
 
