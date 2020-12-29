@@ -136,10 +136,7 @@ call plug#end()
 syntax enable
 highlight WildMenu guifg=#78A79C
 set termguicolors
-" set background=light
-set background=dark
-" colorscheme PaperColor
-colorscheme gruvbox-material
+source ~/git/dotfiles/nvim/darkOrLight.vim
 
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
 
