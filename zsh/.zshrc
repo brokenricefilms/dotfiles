@@ -48,21 +48,19 @@ autoload -Uz compinit
 compinit
 
 light () {
-    echo ~/git/zsh/function/light.zsh > ~/git/dotfiles/zsh/themeFzf.zsh
+    echo "source ~/git/dotfiles/zsh/functions/lightFzf.zsh" > ~/git/dotfiles/zsh/themeFzf.zsh
     echo "
 set background=light
 colorscheme PaperColor" > ~/git/dotfiles/nvim/darkOrLight.vim
+    echo "include ./paper.conf" > ~/git/dotfiles/kitty/theme.conf
 }
 
 dark () {
-    echo "
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
---color fg:#ebdbb2,bg:#282828,hl:#fabd2f,fg+:#ebdbb2,bg+:#3c3836,hl+:#fabd2f
---color info:#83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#83a598,marker:#fe8019,header:#665c54'
-" >  ~/git/dotfiles/zsh/themeFzf.zsh
+    echo "source ~/git/dotfiles/zsh/functions/darkFzf.zsh" >  ~/git/dotfiles/zsh/themeFzf.zsh
     echo "
 set background=dark
 colorscheme gruvbox-material" > ~/git/dotfiles/nvim/darkOrLight.vim
+    echo "include ./gruvbox-dark.conf" > ~/git/dotfiles/kitty/theme.conf
 }
 
 mk () {
