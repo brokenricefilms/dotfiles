@@ -218,16 +218,16 @@ export FZF_DEFAULT_COMMAND='fd -H --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # paper color
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
---color=fg:#4d4d4c,bg:#eeeeee,hl:#d7005f
---color=fg+:#4d4d4c,bg+:#e8e8e8,hl+:#d7005f
---color=info:#4271ae,prompt:#8959a8,pointer:#d7005f
---color=marker:#4271ae,spinner:#4271ae,header:#4271ae'
+# export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+# --color=fg:#4d4d4c,bg:#eeeeee,hl:#d7005f
+# --color=fg+:#4d4d4c,bg+:#e8e8e8,hl+:#d7005f
+# --color=info:#4271ae,prompt:#8959a8,pointer:#d7005f
+# --color=marker:#4271ae,spinner:#4271ae,header:#4271ae'
 
 # gruvbox dark
-# export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-# --color fg:#ebdbb2,bg:#282828,hl:#fabd2f,fg+:#ebdbb2,bg+:#3c3836,hl+:#fabd2f
-# --color info:#83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#83a598,marker:#fe8019,header:#665c54'
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+--color fg:#ebdbb2,bg:#282828,hl:#fabd2f,fg+:#ebdbb2,bg+:#3c3836,hl+:#fabd2f
+--color info:#83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#83a598,marker:#fe8019,header:#665c54'
 
 c () {
     local dir
@@ -271,6 +271,7 @@ alias ghthuanpham2311='cd ~/git/thuanpham2311 ; okp ; cd -'
 alias ghvimium_dark_theme='cd ~/git/vimium_dark_theme ; okp ; cd -'
 alias ghwindowsSetup='cd ~/git/windowsSetup ; okp ; cd -'
 alias ghstuDarkTheme='cd ~/git/stuDarkTheme ; okp ; cd -'
+alias ghcssbattle='cd ~/git/cssbattle ; okp ; cd -'
 
 gha () {
     cowsay "git push lazyscript" ; ghlazyscript
@@ -288,6 +289,7 @@ gha () {
     cowsay "git push four-card-feature-section" ; ghfour-card-feature-section
     cowsay "git push calculatorOnIOS" ; ghcalculatorOnIOS
     cowsay "git push stuDarkTheme" ; ghstuDarkTheme
+    cowsay "git push cssbattle" ; ghcssbattle
     cowsay "D O N E"
 }
 
