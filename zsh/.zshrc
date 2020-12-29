@@ -53,6 +53,7 @@ light () {
 set background=light
 colorscheme PaperColor" > ~/git/dotfiles/nvim/darkOrLight.vim
     echo "include ./paper.conf" > ~/git/dotfiles/kitty/theme.conf
+    echo "--theme=\"GitHub\"" > ~/git/dotfiles/bat/config
 }
 
 dark () {
@@ -61,6 +62,7 @@ dark () {
 set background=dark
 colorscheme gruvbox-material" > ~/git/dotfiles/nvim/darkOrLight.vim
     echo "include ./gruvbox-dark.conf" > ~/git/dotfiles/kitty/theme.conf
+    echo "--theme=\"gruvbox\"" > ~/git/dotfiles/bat/config
 }
 
 mk () {
