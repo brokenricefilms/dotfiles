@@ -1,4 +1,7 @@
 call plug#begin()
+Plug 'simeji/winresizer'
+let g:winresizer_start_key = "<leader>w"
+
 Plug 'liuchengxu/vista.vim'
 nmap <leader>t :Vista!!<CR>
 
