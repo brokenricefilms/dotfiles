@@ -199,6 +199,7 @@ alias x='chmod +x'
 alias f='fd . -H | grep --colour=always'
 alias n='nnn -de'
 alias colorPicker='zenity --color-selection'
+alias cat='bat'
 
 # music stuff
 alias m='tmux new-window ; mpv --shuffle ~/Music/*'
