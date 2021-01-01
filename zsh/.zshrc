@@ -243,7 +243,7 @@ c () {
         -o -type d -print 2> /dev/null | fzf +m) &&
         cd "$dir"
             clear
-            la
+            l
 }
 
     alias yo='git add -A ; git commit -m "$(curl -s whatthecommit.com/index.txt)"'
