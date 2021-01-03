@@ -1,0 +1,40 @@
+[
+  {
+    "enabled": true,
+    "updateUrl": null,
+    "md5Url": null,
+    "url": null,
+    "originalMd5": null,
+    "installDate": 1609671673879,
+    "name": "stu.edu.vn",
+    "sections": [
+      {
+        "code": ":root {\n  --bg: #282828;\n  --fg: #ebdbb2;\n  --red: #cc241d;\n  --green: #98971a;\n  --yellow: #d79921;\n  --blue: #458588;\n  --purple: #b16286;\n  --aqua: #689d6a;\n  --gray: #a89984;\n}\n\n* {\n  background: var(--bg) !important;\n  color: var(--fg) !important;\n}\n\na {\n  color: var(--aqua) !important;\n}\n\n#bodyWrapper\n  > div:nth-child(1)\n  > div:nth-child(3)\n  > div\n  > div\n  > div.container.allColumnsContainer\n  > div\n  > div.col-xs-12.col-sm-3.col-md-3.rightColumnContainerMain\n  > div\n  > div.col-xs-12.col-sm-12.col-md-12.moduleStyle\n  > h6\n  > img,\n#featuredNewsContainerMain > h6 > img,\n#bodyWrapper\n  > div:nth-child(1)\n  > div:nth-child(3)\n  > div\n  > div\n  > div.container.allColumnsContainer\n  > div\n  > div.col-xs-12.col-sm-9.col-md-9.leftColumnContainerMain\n  > div:nth-child(1)\n  > div.col-12\n  > h6\n  > a\n  > img,\n#bodyWrapper\n  > div:nth-child(1)\n  > div:nth-child(3)\n  > div\n  > div\n  > div.container.allColumnsContainer\n  > div\n  > div.col-xs-12.col-sm-3.col-md-3.rightColumnContainerMain\n  > div\n  > div.col-xs-12.col-sm-12.col-md.eventListContainer.moduleStyle\n  > h6\n  > img,\n#bodyWrapper\n  > div:nth-child(1)\n  > div:nth-child(3)\n  > div\n  > div\n  > div.container.allColumnsContainer\n  > div\n  > div.col-xs-12.col-sm-9.col-md-9.leftColumnContainerMain\n  > div:nth-child(6)\n  > div:nth-child(1)\n  > h6\n  > a\n  > img {\n  filter: grayscale(100%);\n}\n\ninput {\n  /* background: var(--gray) !important; */\n  color: var(--fg) !important;\n  box-shadow: -1rem 0 3rem #000;\n}\n\n.headerModule {\n  border-bottom: 1px solid var(--fg) !important;\n}\n\n#bodyWrapper > div:nth-child(2) > footer,\n#bodyWrapper\n  > div:nth-child(1)\n  > div:nth-child(3)\n  > div\n  > div\n  > div.container.allColumnsContainer\n  > div\n  > div.col-xs-12.col-sm-3.col-md-3.rightColumnContainerMain\n  > div\n  > div.col-xs-12.col-sm-12.col-md-12.moduleStyle\n  > ul\n  > li:nth-child(10),\n#bodyWrapper\n  > div:nth-child(1)\n  > div:nth-child(3)\n  > div\n  > div\n  > div.container.allColumnsContainer\n  > div\n  > div.col-xs-12.col-sm-3.col-md-3.rightColumnContainerMain\n  > div\n  > div.col-xs-12.col-sm-12.col-md-12.moduleStyle\n  > ul\n  > li:nth-child(11) {\n  box-shadow: -1rem 0 3rem #000;\n}\n\n#bodyWrapper\n  > div:nth-child(1)\n  > div:nth-child(3)\n  > div\n  > div\n  > div.container.allColumnsContainer\n  > div\n  > div.col-xs-12.col-sm-3.col-md-3.rightColumnContainerMain\n  > div\n  > div.col-xs-12.col-sm-12.col-md-12.moduleStyle\n  > ul\n  > li:nth-child(10)\n  > a,\n#bodyWrapper\n  > div:nth-child(1)\n  > div:nth-child(3)\n  > div\n  > div\n  > div.container.allColumnsContainer\n  > div\n  > div.col-xs-12.col-sm-3.col-md-3.rightColumnContainerMain\n  > div\n  > div.col-xs-12.col-sm-12.col-md-12.moduleStyle\n  > ul\n  > li:nth-child(11)\n  > a {\n  color: var(--green) !important;\n}\n\n.badge-danger {\n  color: var(--red) !important;\n}\n\n#navbarNavDropdown .dropdown-menu a {\n  border-bottom: 1px solid var(--fg) !important;\n}\n\n#navbarNavDropdown .dropdown-menu a:hover {\n  background-color: var(--fg) !important;\n}\n",
+        "urlPrefixes": ["http://stu.edu.vn/"]
+      }
+    ],
+    "updateDate": 1609671673879,
+    "_id": "3f743e3e-d0a8-4680-b4eb-276e4ef1dd56",
+    "_rev": 1609671673880,
+    "id": 1
+  },
+  {
+    "enabled": true,
+    "updateUrl": null,
+    "md5Url": null,
+    "url": null,
+    "originalMd5": null,
+    "installDate": 1609671695230,
+    "name": "daotao1.stu.edu.vn",
+    "sections": [
+      {
+        "code": ":root {\n  --bg: #282828;\n  --fg: #ebdbb2;\n  --red: #cc241d;\n  --green: #98971a;\n  --yellow: #d79921;\n  --blue: #458588;\n  --purple: #b16286;\n  --aqua: #689d6a;\n  --gray: #a89984;\n}\n\n* {\n  background: var(--bg) !important;\n  color: var(--fg) !important;\n}\n\na {\n  color: var(--aqua) !important;\n}\n\n/* img { */\n/* filter: grayscale(100%); */\n/* } */\n\ninput {\n  /* background: var(--gray) !important; */\n  color: var(--fg) !important;\n  box-shadow: -1rem 0 3rem #000;\n}\n\n#ctl00_ContentPlaceHolder1_ctl00_ucDangNhap_btnDangNhap {\n  color: var(--green) !important;\n  background-color: var(--bg) !important;\n\n  display: inline-block !important;\n\n  font-weight: bold !important;\n  padding: 5px 11px !important;\n  margin: 10px 24px !important;\n  text-align: center !important;\n  text-decoration: none !important;\n\n  box-shadow: -1rem 0 3rem #000;\n  border: 0px;\n}\n\n#ctl00_ContentPlaceHolder1_ctl00_ucDangNhap_lnkBtnQuenMK {\n  color: var(--green) !important;\n\n  font-weight: bold !important;\n  box-shadow: -1rem 0 3rem #000;\n  padding: 7px 12px !important;\n  margin: 10px 24px !important;\n  text-align: center !important;\n  text-decoration: none !important;\n  display: inline-block !important;\n}\n\n.navigate-base {\n  border: 0px !important;\n  box-shadow: -1rem 0 3rem #000;\n}\n\n#id_form > div.center > table {\n  box-shadow: -1rem 0 3rem #000;\n  padding: 10px 10px;\n}\n#ctl00_ContentPlaceHolder1_ctl00_gcHocphi > img,\n#aspnetForm\n  > div:nth-child(9)\n  > div\n  > table\n  > tbody\n  > tr:nth-child(2)\n  > td\n  > div\n  > table\n  > tbody\n  > tr:nth-child(1)\n  > td\n  > img {\n  filter: invert(1);\n}\n",
+        "urlPrefixes": ["http://daotao1.stu.edu.vn/"]
+      }
+    ],
+    "updateDate": 1609671695230,
+    "_id": "3f895f85-53ee-4da9-9c23-4388e9884a18",
+    "_rev": 1609671695231,
+    "id": 2
+  }
+]
