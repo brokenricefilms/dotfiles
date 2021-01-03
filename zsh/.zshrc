@@ -254,6 +254,9 @@ c () {
     alias clone='git clone'
     alias commit='git commit -m'
     alias prettier='prettier --write .'
+    prettierCpp () {
+        clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp')
+    }
     alias ok='yo ; push'
     alias okp='prettier ; yo ; push '
 
