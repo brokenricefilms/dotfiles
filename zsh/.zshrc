@@ -172,6 +172,7 @@ set -U EDITOR nvim
 export EDITOR='nvim'
 export VISUAL='nvim'
 export PATH="$HOME/.npm/bin:$PATH"
+export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 
 # alias l='ls -lha'
 alias l='clear ; exa -al --color=always --group-directories-first'
