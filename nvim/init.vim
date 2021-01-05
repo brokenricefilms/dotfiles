@@ -8,14 +8,16 @@ nmap <leader>t :Vista!!<CR>
 Plug 'tpope/vim-repeat'
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 
-" mapping jj to esc better way
 Plug 'jdhao/better-escape.vim'
 let g:better_escape_interval = 200
 let g:better_escape_shortcut = 'jj'
 
 Plug 'rhysd/clever-f.vim'
 Plug 'easymotion/vim-easymotion'
-nmap ;; <Plug>(easymotion-overwin-f)
+" map  <Leader><space> <Plug>(easymotion-bd-f)
+" nmap <leader><space> <Plug>(easymotion-overwin-f)
+map  <Leader><space> <Plug>(easymotion-bd-w)
+nmap <Leader><space> <Plug>(easymotion-overwin-w)
 
 Plug 'mattn/emmet-vim'
 let g:user_emmet_leader_key=','
@@ -111,6 +113,11 @@ Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
 let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 
 Plug 'romainl/vim-cool' " when search done, turn off highlight
+Plug 'haya14busa/incsearch.vim'
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
 set hlsearch
 set ignorecase
 set incsearch
