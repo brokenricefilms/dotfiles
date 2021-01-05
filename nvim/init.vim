@@ -113,10 +113,6 @@ Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
 let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 
 Plug 'romainl/vim-cool' " when search done, turn off highlight
-Plug 'haya14busa/incsearch.vim'
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
 
 set hlsearch
 set ignorecase
