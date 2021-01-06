@@ -211,7 +211,7 @@ nmap sv :vsplit<Return><C-w>w
 command! W execute "w !sudo tee %"
 
 nmap <leader>a :call FloatTerm()<CR>
-nmap <leader>g :cd %:h && call FloatTerm('"tig"')<CR>
+nmap <leader>g :call FloatTerm('"tig"')<CR>
 nmap <leader>h :call FloatTerm('"htop"')<CR>
 function! FloatTerm(...)
     let height = float2nr((&lines - 2) * 0.6)

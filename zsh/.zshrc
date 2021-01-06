@@ -1,7 +1,7 @@
 # tmux
-# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-    # exec tmux
-# fi
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+    exec tmux
+fi
 
 setopt nobeep
 
@@ -218,7 +218,8 @@ alias ins='sudo pacman -S --noconfirm'
 alias ins2='yay -S --noconfirm'
 alias uins='sudo pacman -Rs --noconfirm'
 
-alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 75 ; tmux last-pane ; nvim'
+# alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 75 ; tmux last-pane ; nvim'
+alias ide='tmux split-window -v -p 8 ; tmux last-pane ; nvim'
 # alias ide='tmux split-window -h -p 30 ; tmux split-window -v -p 75 ; tmux last-pane ; nvim'
 alias qa='tmux kill-session -a ; cowsay "All session deleted" ; tmux ls'
 
