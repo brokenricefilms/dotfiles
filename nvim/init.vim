@@ -12,7 +12,6 @@ Plug 'jdhao/better-escape.vim'
 let g:better_escape_interval = 200
 let g:better_escape_shortcut = 'jj'
 
-Plug 'rhysd/clever-f.vim'
 Plug 'easymotion/vim-easymotion'
 " map  <Leader><space> <Plug>(easymotion-bd-f)
 " nmap <leader><space> <Plug>(easymotion-overwin-f)
