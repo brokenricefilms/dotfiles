@@ -13,8 +13,7 @@ let g:better_escape_interval = 200
 let g:better_escape_shortcut = 'jj'
 
 Plug 'easymotion/vim-easymotion'
-" map  <Leader><space> <Plug>(easymotion-bd-f)
-" nmap <leader><space> <Plug>(easymotion-overwin-f)
+hi link EasyMotionTarget Search
 map  <Leader><space> <Plug>(easymotion-bd-w)
 nmap <Leader><space> <Plug>(easymotion-overwin-w)
 
