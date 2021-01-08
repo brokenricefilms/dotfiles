@@ -131,7 +131,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'gregsexton/MatchTag', { 'for': 'html' }
 Plug 'norcalli/nvim-colorizer.lua'
 autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
-
+Plug 'Yggdroot/indentLine'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'sainnhe/gruvbox-material'
 call plug#end()
@@ -149,7 +149,7 @@ autocmd InsertEnter,WinLeave * set nocursorline
 set list
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
-set tabstop=4 softtabstop=4
+set tabstop=4 softtabstop=4 noet
 set shiftwidth=4
 autocmd BufRead,BufNewFile *.scss,*.css,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
 set expandtab
