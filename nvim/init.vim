@@ -143,7 +143,8 @@ source ~/git/dotfiles/nvim/darkOrLight.vim
 
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
 
-set cursorline
+autocmd InsertLeave,WinEnter * set cursorline
+autocmd InsertEnter,WinLeave * set nocursorline
 
 set list
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
