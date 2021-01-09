@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/master/dev/thuanpham2311.github.io/content/posts/curses-and-counter-courses'
 let g:netrw_dirhist_5='/home/master/dev/thuanpham2311.github.io'
 let g:netrw_dirhist_4='/home/master/dev/thuanpham2311.github.io/content'
 let g:netrw_dirhist_3='/home/master/.gem/ruby/2.7.0/bin'
