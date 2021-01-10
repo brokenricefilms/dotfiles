@@ -184,6 +184,7 @@ alias ll='clear ; exa -l --color=always --group-directories-first'
 alias lt='clear ; exa -aT --color=always --group-directories-first'
 
 alias fd='fdfind'
+alias bat='batcat'
 alias cpf='xclip -sel clip'
 alias re='source ~/git/dotfiles/zsh/.zshrc ; tmux source-file ~/.tmux.conf'
 alias h='htop'
