@@ -183,6 +183,7 @@ alias l.='clear ; exa -a | egrep "^\."'
 alias ll='clear ; exa -l --color=always --group-directories-first'
 alias lt='clear ; exa -aT --color=always --group-directories-first'
 
+alias fd='fdfind'
 alias cpf='xclip -sel clip'
 alias re='source ~/git/dotfiles/zsh/.zshrc ; tmux source-file ~/.tmux.conf'
 alias h='htop'
@@ -206,17 +207,17 @@ alias cat='bat'
 alias m='tmux new-window ; mpv --shuffle ~/Music/*'
 
 # ubuntu apt
-# alias ins='sudo apt install -y'
-# alias uins='sudo apt remove -y'
+alias ins='sudo apt install -y'
+alias uins='sudo apt remove -y'
 
 # fedora dnf
 # alias ins='sudo dnf install -y'
 # alias uins='sudo dnf remove -y'
 
 # arch
-alias ins='sudo pacman -S --noconfirm'
-alias ins2='yay -S --noconfirm'
-alias uins='sudo pacman -Rs --noconfirm'
+# alias ins='sudo pacman -S --noconfirm'
+# alias ins2='yay -S --noconfirm'
+# alias uins='sudo pacman -Rs --noconfirm'
 
 # alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 75 ; tmux last-pane ; nvim'
 alias ide='tmux split-window -v -p 8 ; tmux last-pane ; nvim'
@@ -235,7 +236,7 @@ alias t='trash'
 alias tdl='trash ~/Downloads/*'
 
 alias vi='cd ~/ ; nvim -o $(fzf)'
-export FZF_DEFAULT_COMMAND='fd -H --type f'
+export FZF_DEFAULT_COMMAND='fdfind -H --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 
@@ -406,14 +407,14 @@ rem () {
     tldr --update
 
     # arch base
-    sudo pacman -Syu --noconfirm
-    yay -Sua --noconfirm
+    # sudo pacman -Syu --noconfirm
+    # yay -Sua --noconfirm
 
     # debian base (ubuntu, kali,...)
-    # sudo apt update
-    # sudo apt upgrade -y
-    # sudo apt autoremove -y
-    # sudo apt autoclean
+    sudo apt update
+    sudo apt upgrade -y
+    sudo apt autoremove -y
+    sudo apt autoclean
 
     # rehat base (fedora)
     # sudo dnf update -y
@@ -425,5 +426,5 @@ rem () {
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 source ~/git/dotfiles/zsh/themeFzf.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
