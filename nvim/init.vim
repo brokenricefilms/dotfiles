@@ -131,11 +131,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'gregsexton/MatchTag', { 'for': 'html' }
 Plug 'norcalli/nvim-colorizer.lua'
 autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
-Plug 'blueyed/vim-diminactive'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'sainnhe/gruvbox-material'
