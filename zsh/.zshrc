@@ -1,9 +1,6 @@
-# tmux
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
     exec tmux
 fi
-
-setopt nobeep
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
@@ -13,7 +10,6 @@ WORDCHARS=${WORDCHARS//\/[&.;]}
 
 autoload -U colors && colors
 eval "$(starship init zsh)"
-# PROMPT=" %F{blue}%~%f %F{red}❯%f%F{yellow}❯%f%F{green}❯%f "
 
 setopt histignorealldups sharehistory
 HISTSIZE=1000
