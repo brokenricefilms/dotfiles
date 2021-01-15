@@ -122,7 +122,6 @@ nnoremap N Nzzzv
 
 Plug 'mhinz/vim-signify'
 Plug 'mkitt/tabline.vim'
-Plug 'ntpeters/vim-better-whitespace'
 highlight ExtraWhitespace ctermbg=None
 
 Plug 'luochen1990/rainbow'
@@ -260,11 +259,12 @@ function! FloatTerm(...)
 endfunction
 
 augroup General
-    au!
+    autocmd!
     autocmd BufNewFile *.cpp :read ~/.config/nvim/stuff/cppTemplate.cpp | normal!kdd3j
     autocmd BufNewFile *.fish  :call CheckFishFile()
     autocmd BufNewFile *.py :call CheckPyFile()
     autocmd BufNewFile *.sh  :call CheckShFile()
+    autocmd BufWritePre * :call TrimWhitespace()
 augroup END
 
 function! CheckShFile()
@@ -281,3 +281,10 @@ function! CheckFishFile()
     normal!i#! /usr/bin/env fish
     normal!o
 endfunction
+
+fun! TrimWhitespace()
+  let l:save = winsaveview()
+  keeppatterns %s/\s\+$//e
+  call winrestview(l:save)
+endfun
+command! TrimWhitespace call TrimWhitespace()
