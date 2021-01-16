@@ -73,7 +73,11 @@ mk () {
 }
 
 bmi () {
-    bash ~/git/dotfiles/zsh/functions/bmi.py
+    python3 ~/git/dotfiles/zsh/functions/bmi.py
+}
+
+tv () {
+    bash ~/git/dotfiles/zsh/functions/tv.sh
 }
 
 u () {
