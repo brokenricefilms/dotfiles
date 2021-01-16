@@ -225,8 +225,8 @@ alias ...='cd .. ; cd .. ; cd .. ; clear ; l'
 alias dow='cd ~/Downloads ; clear ; l'
 alias doc='cd ~/Documents ; clear ; l'
 
-alias yt='youtube-dl --add-metadata -i'
-alias yta='yt -x --audio-format mp3'
+alias yt='youtube-dl -f bestvideo+bestaudio'
+alias yta='youtube-dl -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"'
 
 alias t='trash'
 alias tdl='trash ~/Downloads/*'
