@@ -196,7 +196,6 @@ alias o='xdg-open'
 alias 777='chmod -R 777'
 alias x='chmod +x'
 alias f='fd . -H | grep --colour=always'
-alias n='nnn -de'
 alias colorPicker='zenity --color-selection'
 alias cat='bat'
 
@@ -246,19 +245,27 @@ c () {
             l
 }
 
-    alias yo='git add -A ; git commit -m "$(curl -s whatthecommit.com/index.txt)"'
-    alias status='git status -sb'
-    alias add='git add'
-    alias push="git push"
-    alias pull="git pull"
-    alias clone='git clone'
-    alias commit='git commit -m'
-    alias prettier='prettier --write .'
-    prettierCpp () {
-        clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp')
-    }
-    alias ok='yo ; push'
-    alias okp='prettier ; yo ; push '
+n () {
+    local dir
+    dir=$(find ~ -path '*/\.*' -prune \
+        -o -type d -print 2> /dev/null | fzf-tmux +m) &&
+        cd "$dir"
+        nnn -de
+}
+
+alias yo='git add -A ; git commit -m "$(curl -s whatthecommit.com/index.txt)"'
+alias status='git status -sb'
+alias add='git add'
+alias push="git push"
+alias pull="git pull"
+alias clone='git clone'
+alias commit='git commit -m'
+alias prettier='prettier --write .'
+prettierCpp () {
+    clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp')
+}
+alias ok='yo ; push'
+alias okp='prettier ; yo ; push '
 
 ghdotfiles () {
     crontab -l > ~/git/dotfiles/crontab/crontabConfig
