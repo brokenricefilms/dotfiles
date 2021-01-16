@@ -232,15 +232,15 @@ alias yta='yt -x --audio-format mp3'
 alias t='trash'
 alias tdl='trash ~/Downloads/*'
 
-alias vi='cd ~/ ; nvim -o $(fzf-file-widget)'
 export FZF_DEFAULT_COMMAND='fdfind -H --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+alias vi='cd ~/ ; nvim -o $(fzf-tmux)'
 
 
 c () {
     local dir
-    dir=$(fdfind ~ -path '*/\.*' -prune \
-        -o -type d -print 2> /dev/null | fzf-cd-widget +m) &&
+    dir=$(find ~ -path '*/\.*' -prune \
+        -o -type d -print 2> /dev/null | fzf-tmux +m) &&
         cd "$dir"
             clear
             l
