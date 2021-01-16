@@ -232,22 +232,22 @@ alias yta='yt -x --audio-format mp3'
 alias t='trash'
 alias tdl='trash ~/Downloads/*'
 
-alias vi='cd ~/ ; nvim -o $(fzf)'
+alias vi='cd ~/ ; nvim -o $(fzf-file-widget)'
 export FZF_DEFAULT_COMMAND='fdfind -H --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 
 c () {
     local dir
-    dir=$(find ~ -path '*/\.*' -prune \
-        -o -type d -print 2> /dev/null | fzf +m) &&
+    dir=$(fdfind ~ -path '*/\.*' -prune \
+        -o -type d -print 2> /dev/null | fzf-cd-widget +m) &&
         cd "$dir"
             clear
             l
 }
 
     alias yo='git add -A ; git commit -m "$(curl -s whatthecommit.com/index.txt)"'
-    alias sta='git status'
+    alias status='git status -sb'
     alias add='git add'
     alias push="git push"
     alias pull="git pull"
