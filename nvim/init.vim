@@ -140,10 +140,7 @@ syntax enable
 highlight WildMenu guifg=#78A79C
 set termguicolors
 source ~/git/dotfiles/nvim/darkOrLight.vim
-
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
-hi StatusLineTerm ctermbg=24 ctermfg=254 guibg=#004f87 guifg=#e4e4e4
-hi StatusLineTermNC ctermbg=252 ctermfg=238 guibg=#d0d0d0 guifg=#444444
 
 autocmd InsertLeave,WinEnter * set cursorline
 autocmd InsertEnter,WinLeave * set nocursorline
