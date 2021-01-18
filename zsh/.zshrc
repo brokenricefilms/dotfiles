@@ -12,8 +12,8 @@ autoload -U colors && colors
 eval "$(starship init zsh)"
 
 setopt histignorealldups sharehistory
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
 bindkey -v
