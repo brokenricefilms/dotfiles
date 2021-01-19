@@ -6,12 +6,15 @@
 <img src="./img/dotfiles.gif">
 </a>
 
+<a href="https://raw.githubusercontent.com/thuanpham2311/dotfiles/master/img/light.gif">
+<img src="./img/light.gif">
+</a>
+
 ---
 
 ## Note
 
 - **All my commit message is BS, don't waste your time read that**
-- I'm switch to zsh form fish, so fish shell files no longer updated.
 
 ## You want setup like me?
 
