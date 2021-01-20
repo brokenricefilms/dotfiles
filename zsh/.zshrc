@@ -58,7 +58,7 @@ dark () {
 set background=dark
 colorscheme gruvbox-material" > ~/git/dotfiles/nvim/darkOrLight.vim
     echo "include ./gruvbox-dark.conf" > ~/git/dotfiles/kitty/theme.conf
-    echo "--theme=\"gruvbox\"" > ~/git/dotfiles/bat/config
+    echo "--theme=\"OneHalfDark\"" > ~/git/dotfiles/bat/config
 }
 
 mk () {
