@@ -1,1 +1,1 @@
-source ~/git/dotfiles/zsh/functions/lightFzf.zsh
+source ~/git/dotfiles/zsh/functions/darkFzf.zsh
