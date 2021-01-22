@@ -279,35 +279,37 @@ ghdotfiles () {
     okp ; cd -
 }
 
-alias ghcalculatorOnIOS='cd ~/git/calculatorOnIOS ; okp ; cd -'
-alias ghdataLab='cd ~/git/dataLab ; okp ; cd -'
-alias ghfour-card-feature-section='cd ~/git/four-card-feature-section ; okp ; cd -'
-alias ghFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; okp ; cd -'
-alias ghimg='cd ~/git/img ; okp ; cd -'
-alias ghlazyscript='cd ~/git/lazyscript ; okp ; prettierCpp ; cd -'
-alias ghlinux_setup='cd ~/git/linux_setup ; okp ; cd -'
-alias ghok='cd ~/git/ok ; okp ; cd -'
-alias ghtermuxSetup='cd ~/git/termuxSetup ; okp ; cd -'
-alias ghtheNewsTimes='cd ~/git/theNewsTimes ; okp ; cd -'
-alias ghthuanpham2311='cd ~/git/thuanpham2311 ; okp ; cd -'
-alias ghvimium_dark_theme='cd ~/git/vimium_dark_theme ; okp ; cd -'
 alias ghwindowsSetup='cd ~/git/windowsSetup ; okp ; cd -'
+alias ghvimium_dark_theme='cd ~/git/vimium_dark_theme ; okp ; cd -'
+alias ghblog='cd ~/git/thuanpham2311.github.io ; ok ; cd -'
+alias ghthuanpham2311='cd ~/git/thuanpham2311 ; okp ; cd -'
+alias ghtheNewsTimes='cd ~/git/theNewsTimes ; okp ; cd -'
+alias ghtermuxSetup='cd ~/git/termuxSetup ; okp ; cd -'
+alias ghok='cd ~/git/ok ; okp ; cd -'
+alias ghlinux_setup='cd ~/git/linux_setup ; okp ; cd -'
+alias ghlazyscript='cd ~/git/lazyscript ; okp ; prettierCpp ; cd -'
+alias ghimg='cd ~/git/img ; okp ; cd -'
+alias ghfour-card-feature-section='cd ~/git/four-card-feature-section ; okp ; cd -'
+alias ghdataLab='cd ~/git/dataLab ; okp ; cd -'
+alias ghcalculatorOnIOS='cd ~/git/calculatorOnIOS ; okp ; cd -'
+alias ghFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; okp ; cd -'
 
 gha () {
-    cowsay "git push lazyscript" ; ghlazyscript
-    cowsay "git push dotfiles" ; ghdotfiles
-    cowsay "git push linux_setup" ; ghlinux_setup
-    cowsay "git push vimium-dark-theme" ; ghvimium_dark_theme
-    cowsay "git push FreeCodeCampProject" ; ghFreeCodeCampProject
-    cowsay "git push ok" ; ghok
-    cowsay "git push dataLab" ; ghdataLab
     cowsay "git push windowsSetup" ; ghwindowsSetup
-    cowsay "git push termuxSetup" ; ghtermuxSetup
-    cowsay "git push img" ; ghimg
+    cowsay "git push vimium-dark-theme" ; ghvimium_dark_theme
     cowsay "git push thuanpham2311" ; ghthuanpham2311
+    cowsay "git push blog" ; ghblog
     cowsay "git push theNewsTimes" ; ghtheNewsTimes
+    cowsay "git push termuxSetup" ; ghtermuxSetup
+    cowsay "git push ok" ; ghok
+    cowsay "git push linux_setup" ; ghlinux_setup
+    cowsay "git push lazyscript" ; ghlazyscript
+    cowsay "git push img" ; ghimg
     cowsay "git push four-card-feature-section" ; ghfour-card-feature-section
+    cowsay "git push dotfiles" ; ghdotfiles
+    cowsay "git push dataLab" ; ghdataLab
     cowsay "git push calculatorOnIOS" ; ghcalculatorOnIOS
+    cowsay "git push FreeCodeCampProject" ; ghFreeCodeCampProject
     cowsay "D O N E"
 }
 
@@ -323,6 +325,7 @@ alias glok='cd ~/git/ok ; pull ; cd -'
 alias gltermuxSetup='cd ~/git/termuxSetup ;  pull ; cd -'
 alias gltheNewsTimes='cd ~/git/theNewsTimes ; pull ; cd -'
 alias glthuanpham2311='cd ~/git/thuanpham2311 ; pull ; cd -'
+alias glblog='cd ~/git/thuanpham2311.github.io ; pull ; cd -'
 alias glvimium_dark_theme='cd ~/git/vimium_dark_theme ; pull ; cd -'
 alias glwindowsSetup='cd ~/git/windowsSetup ;  pull ; cd -'
 
@@ -338,6 +341,7 @@ gla () {
     cowsay "git pull termuxSetup" ; gltermuxSetup
     cowsay "git pull img" ; glimg
     cowsay "git pull thuanpham2311" ; glthuanpham2311
+    cowsay "git pull blog" ; glblog
     cowsay "git pull theNewsTimes" ; gltheNewsTimes
     cowsay "git pull four-card-feature-section" ; glfour-card-feature-section
     cowsay "git pull calculatorOnIOS" ; glcalculatorOnIOS
