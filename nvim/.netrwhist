@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/etc/profile.d'
 let g:netrw_dirhist_7='/home/master/.config'
 let g:netrw_dirhist_6='/home/master/dev/thuanpham2311.github.io/content/posts/curses-and-counter-courses'
 let g:netrw_dirhist_5='/home/master/dev/thuanpham2311.github.io'
