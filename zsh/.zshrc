@@ -268,8 +268,8 @@ alias prettier='prettier --write .'
 prettierCpp () {
     clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp')
 }
-alias ok='yo ; push'
-alias okp='prettier ; yo ; push '
+alias ok='status ; yo ; push'
+alias okp='prettier ; status ; yo ; push '
 
 ghdotfiles () {
     crontab -l > ~/git/dotfiles/crontab/crontabConfig
