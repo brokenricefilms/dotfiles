@@ -1,5 +1,5 @@
 [/]
-default='7c3a9a31-cbc0-41e5-8aeb-6962d574174f'
+default='b1dcc9dd-5262-4d8d-a863-c897e6d979b9'
 list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', '7c3a9a31-cbc0-41e5-8aeb-6962d574174f']
 
 [:7c3a9a31-cbc0-41e5-8aeb-6962d574174f]
@@ -14,7 +14,7 @@ scrollback-unlimited=true
 scrollbar-policy='never'
 use-system-font=false
 use-theme-colors=false
-visible-name='darkk'
+visible-name='dark'
 
 [:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
 audible-bell=false
@@ -26,3 +26,4 @@ scrollback-unlimited=true
 scrollbar-policy='never'
 use-system-font=false
 use-theme-colors=false
+visible-name='light'
