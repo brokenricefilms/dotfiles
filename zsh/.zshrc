@@ -204,7 +204,7 @@ alias colorPicker='zenity --color-selection'
 alias cat='bat'
 
 # music stuff
-alias m='tmux rename-window "music" ; mpv --shuffle ~/Music/*'
+alias m='mpv --shuffle ~/Music/*'
 
 # ubuntu apt
 alias ins='sudo apt install -y'
