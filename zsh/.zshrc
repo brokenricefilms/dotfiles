@@ -202,6 +202,7 @@ alias x='chmod +x'
 alias f='fd . -H | grep --colour=always'
 alias colorPicker='zenity --color-selection'
 alias cat='bat'
+alias nnn='nnn -de'
 
 # music stuff
 alias m='mpv --shuffle ~/Music/*'
