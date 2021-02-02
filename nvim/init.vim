@@ -167,6 +167,7 @@ set autoread
 set autowrite
 set nobackup
 set noswapfile
+set lazyredraw
 set nowritebackup
 
 nnoremap + <C-a>
