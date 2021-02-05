@@ -349,7 +349,7 @@ gla () {
     cowsay "D O N E"
 }
 
-alias browser='brave-browser-beta'
+alias browser='brave-browser'
 # alias browser='google-chrome'
 # alias browser='firefox'
 alias github='browser --new-window "https://github.com/thuanpham2311"'
