@@ -8,11 +8,10 @@ font pango:Cascadia Code Regular 8
 
 for_window [class="^.*"] border pixel 0
 
-# thin borders
-# hide_edge_borders both
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
+focus_follows_mouse yes
 
 # start a terminal
 # bindsym $mod+Return exec kitty
@@ -182,7 +181,7 @@ bar {
         focused_workspace  #444444  #5faf5f     #444444
         active_workspace   #444444  #eeeeee     #444444
         inactive_workspace #444444  #eeeeee     #444444
-        urgent_workspace   #444444  #900000     #444444
+        urgent_workspace   #444444  #900000     #eeeeee
     }
 }
 
@@ -232,3 +231,20 @@ bindsym $mod+p exec rofi -modi drun -show drun -line-padding 4 \
 bindsym F10 exec rofi -show window -line-padding 4 \
                 -lines 6 -padding 50 -hide-scrollbar \
                 -show-icons -drun-icon-theme "Arc-X-D" -font "Cascadia Code Regular 10"
+
+# Set shut down, restart and locking features
+bindsym $mod+minus mode "$mode_system"
+set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id i3exit lock, mode "default"
+    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
+    bindsym e exec --no-startup-id i3exit logout, mode "default"
+    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+
+    # exit system mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
