@@ -15,7 +15,8 @@ hide_edge_borders both
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty
+# bindsym $mod+Return exec kitty
+bindsym ctrl+space exec kitty
 
 # kill focused window
 bindsym $mod+q kill
@@ -67,7 +68,8 @@ bindsym $mod+Shift+w layout tabbed
 bindsym $mod+Shift+t layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+# bindsym $mod+Shift+space floating toggle
+bindsym $mod+space floating toggle
 
 # change focus between tiling / floating windows
 # bindsym $mod+space focus mode_toggle
@@ -82,6 +84,8 @@ bindsym $mod+a focus parent
 exec --no-startup-id picom -cC
 exec --no-startup-id connman-gtk
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id ibus-daemon &
+
 #backup packages lists:
 #exec pacman -Qqen > packages-repository.txt && pacman -Qqem > packages-AUR.txt
 #set powersavings for display:
@@ -94,10 +98,10 @@ for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
 # welcome and others
 for_window [class="Yad" instance="yad"] floating enable
 for_window [class="Galculator" instance="galculator"] floating enable
-for_window [class="Geany" instance="Geany"] floating enable
 for_window [class="Xsane" instance="xsane"] floating enable
 for_window [class="qt5ct" instance="qt5ct"] floating enable
 for_window [class="calamares"] floating enable
+for_window [class="connman-gtk"] floating enable
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -183,7 +187,7 @@ bar {
     tray_output primary
     position top
     tray_padding 0
-    
+
 	strip_workspace_numbers yes
 
     colors {
@@ -244,5 +248,3 @@ bindsym $mod+p exec rofi -modi drun -show drun -line-padding 4 \
 bindsym F10 exec rofi -show window -line-padding 4 \
                 -lines 6 -padding 50 -hide-scrollbar \
                 -show-icons -drun-icon-theme "Arc-X-D" -font "Droid Sans Regular 10"
-
-
