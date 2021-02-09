@@ -6,10 +6,10 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # is used in the bar {} block below.
 font pango:Cascadia Code Regular 8
 
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
 
 # thin borders
-hide_edge_borders both
+# hide_edge_borders both
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -54,7 +54,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+b split h
+bindsym $mod+o split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -62,24 +62,6 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+z fullscreen toggle
 
-# bindsym $mod+Shift+S exec "flameshot gui"
-
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+Shift+s layout stacking
-bindsym $mod+Shift+w layout tabbed
-bindsym $mod+Shift+t layout toggle split
-
-# toggle tiling / floating
-# bindsym $mod+Shift+space floating toggle
-bindsym $mod+space floating toggle
-
-# change focus between tiling / floating windows
-# bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
 #bindsym $mod+d focus child
 
 # Autostart apps
@@ -190,7 +172,6 @@ bar {
     tray_output primary
     position top
     tray_padding 0
-
 	strip_workspace_numbers yes
 
     colors {
