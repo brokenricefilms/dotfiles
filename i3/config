@@ -62,6 +62,8 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+z fullscreen toggle
 
+# bindsym $mod+Shift+S exec "flameshot gui"
+
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+Shift+s layout stacking
 bindsym $mod+Shift+w layout tabbed
@@ -91,6 +93,8 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id xset s 480 dpms 600 600 600
 # Desktop notifications
 exec --no-startup-id /usr/bin/dunst
+
+exec --no-startup-id /usr/bin/ibus-daemon
 
 # set floating for apps needing it
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
