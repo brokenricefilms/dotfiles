@@ -442,4 +442,4 @@ source ~/git/dotfiles/zsh/functions/key-bindings.zsh
 source ~/git/dotfiles/zsh/functions/completion.zsh
 source ~/git/dotfiles/zsh/themeFzf.zsh
 source ~/git/dotfiles/zsh/functions/zsh-autosuggestions.zsh
-source ~/git/dotfiles/zsh/functions/zsh-syntax-highlighting.zsh
+source ~/git/dotfiles/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
