@@ -1,0 +1,1 @@
+0 * * * * zsh /home/master/git/dotfiles/zsh/functions/crontabHourly.zsh
