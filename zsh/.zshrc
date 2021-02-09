@@ -173,6 +173,9 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 export PATH="$HOME/.npm/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
+export GTK_IM_MODULE=ibus
+export XMODFIERS=@im=ibus
+export QT_IM_MODULE=ibus
 
 # alias l='ls -lha'
 alias l='clear ; exa -al --color=always --group-directories-first'
@@ -183,8 +186,6 @@ alias l.='clear ; exa -a | egrep "^\."'
 alias ll='clear ; exa -l --color=always --group-directories-first'
 alias lt='clear ; exa -aT --color=always --group-directories-first'
 
-alias fd='fdfind'
-alias bat='batcat'
 alias cpf='xclip -sel clip'
 alias re='source ~/git/dotfiles/zsh/.zshrc ; tmux source-file ~/.tmux.conf'
 alias h='htop'
@@ -208,17 +209,17 @@ alias nnn='nnn -de'
 alias m='mpv --shuffle ~/Music/*'
 
 # ubuntu apt
-alias ins='sudo apt install -y'
-alias uins='sudo apt remove -y'
+# alias ins='sudo apt install -y'
+# alias uins='sudo apt remove -y'
 
 # fedora dnf
 # alias ins='sudo dnf install -y'
 # alias uins='sudo dnf remove -y'
 
 # arch
-# alias ins='sudo pacman -S --noconfirm'
-# alias ins2='yay -S --noconfirm'
-# alias uins='sudo pacman -Rs --noconfirm'
+alias ins='sudo pacman -S --noconfirm'
+alias ins2='yay -S --noconfirm'
+alias uins='sudo pacman -Rs --noconfirm'
 
 # alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 75 ; tmux last-pane ; nvim'
 alias ide='tmux split-window -v -p 8 ; tmux last-pane ; nvim'
@@ -236,7 +237,7 @@ alias yta='youtube-dl -f "bestaudio" --continue --no-overwrites --ignore-errors 
 alias t='trash'
 alias tdl='trash ~/Downloads/*'
 
-export FZF_DEFAULT_COMMAND='fdfind -H --type f'
+export FZF_DEFAULT_COMMAND='fd -H --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 alias vi='cd ~/ ; nvim -o $(fzf-tmux)'
 
@@ -349,9 +350,9 @@ gla () {
     cowsay "D O N E"
 }
 
-alias browser='brave-browser'
+# alias browser='brave-browser'
 # alias browser='google-chrome'
-# alias browser='firefox'
+alias browser='firefox'
 alias github='browser --new-window "https://github.com/thuanpham2311"'
 
 alias browser_fb='browser https://facebook.com'
@@ -421,14 +422,14 @@ rem () {
     tldr --update
 
     # arch base
-    # sudo pacman -Syu --noconfirm
-    # yay -Sua --noconfirm
+    sudo pacman -Syu --noconfirm
+    yay -Sua --noconfirm
 
     # debian base (ubuntu, kali,...)
-    sudo apt update
-    sudo apt upgrade -y
-    sudo apt autoremove -y
-    sudo apt autoclean
+    # sudo apt update
+    # sudo apt upgrade -y
+    # sudo apt autoremove -y
+    # sudo apt autoclean
 
     # rehat base (fedora)
     # sudo dnf update -y
