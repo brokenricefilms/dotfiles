@@ -162,14 +162,14 @@ bindsym $mod+r mode "resize"
 
 title_align center
 
-set $bg-color               #292d35
-set $inactive-bg-color      #2f343f
-set $text-color             #f3f4f5
-set $border-color           #4c515d
-set $inactive-border-color  #2f343f
-set $inactive-text-color    #676e7d
+set $bg-color               #eeeeee
+set $inactive-bg-color      #eeeeee
+set $text-color             #444444
+set $border-color           #333333
+set $inactive-border-color  #eeeeee
+set $inactive-text-color    #eeeeee
 set $urgent-bg-color        #e53935
-set $indicator-color        #a0a0a0
+set $indicator-color        #444444
 
 # set window colors
 #                       border                 background         text                 indicator
@@ -194,10 +194,10 @@ bar {
         background         $bg-color
         statusline         #dddddd
 #                          border   background  text
-        focused_workspace  #0088CC  #0088CC     #ffffff
-        active_workspace   #333333  #333333     #ffffff
-        inactive_workspace #1a1a1a  #333333     #888888
-        urgent_workspace   #2f343a  #900000     #ffffff
+        focused_workspace  #444444  #03CD00     #444444
+        active_workspace   #444444  #eeeeee     #444444
+        inactive_workspace #444444  #eeeeee     #444444
+        urgent_workspace   #444444  #900000     #444444
     }
 }
 
