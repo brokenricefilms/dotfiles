@@ -228,6 +228,6 @@ bindsym $mod+p exec rofi -modi drun -show drun -line-padding 4 \
                 -columns 2 -padding 50 -hide-scrollbar \
                 -show-icons -drun-icon-theme "Arc-X-D" -font "Cascadia Code Regular 10"
 
-bindsym F10 exec rofi -show window -line-padding 4 \
+bindsym $mod+Shift+P exec rofi -show window -line-padding 4 \
                 -lines 6 -padding 50 -hide-scrollbar \
                 -show-icons -drun-icon-theme "Arc-X-D" -font "Cascadia Code Regular 10"
