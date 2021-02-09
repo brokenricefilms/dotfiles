@@ -438,8 +438,8 @@ rem () {
     cd ~ ; clear ; neofetch
 }
 
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+source ~/git/dotfiles/zsh/functions/key-bindings.zsh
+source ~/git/dotfiles/zsh/functions/completion.zsh
 source ~/git/dotfiles/zsh/themeFzf.zsh
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/git/dotfiles/zsh/functions/zsh-autosuggestions.zsh
+source ~/git/dotfiles/zsh/functions/zsh-syntax-highlighting.zsh
