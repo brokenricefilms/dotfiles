@@ -84,7 +84,6 @@ bindsym $mod+a focus parent
 exec --no-startup-id picom -cC
 exec --no-startup-id connman-gtk
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id ibus-daemon &
 
 #backup packages lists:
 #exec pacman -Qqen > packages-repository.txt && pacman -Qqem > packages-AUR.txt
