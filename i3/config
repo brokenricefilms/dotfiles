@@ -72,6 +72,7 @@ exec --no-startup-id nitrogen --restore
 #exec pacman -Qqen > packages-repository.txt && pacman -Qqem > packages-AUR.txt
 #set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
+exec --no-startup-id xset r rate 150 50
 # Desktop notifications
 exec --no-startup-id /usr/bin/dunst
 
