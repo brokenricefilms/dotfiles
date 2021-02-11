@@ -232,3 +232,20 @@ bindsym $mod+p exec rofi -modi drun -show drun -line-padding 4 \
 bindsym $mod+Shift+P exec rofi -show window -line-padding 4 \
                 -lines 6 -padding 50 -hide-scrollbar \
                 -show-icons -drun-icon-theme "Arc-X-D" -font "Cascadia Code Regular 10"
+
+#  system mode
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (p) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id i3lock -i ~/wallpaper/rem.png, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit,             mode "default"
+    bindsym s exec --no-startup-id systemctl suspend,       mode "default"
+    bindsym h exec --no-startup-id hibernate,               mode "default"
+    bindsym r exec --no-startup-id systemctl reboot,        mode "default"
+    bindsym p exec --no-startup-id systemctl poweroff -i,   mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+Escape mode "$mode_system"
