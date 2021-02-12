@@ -13,6 +13,11 @@ floating_modifier $mod
 
 focus_follows_mouse yes
 
+bindsym $mod+Tab exec --no-startup-id  i3-msg border pixel 5; focus right
+bindsym --release Mod1+Tab exec i3-msg border pixel 0
+bindsym $mod+Shift+Tab exec --no-startup-id  i3-msg border pixel 5; focus right
+bindsym --release Mod1+Shift+Tab exec i3-msg border pixel 0
+
 # start a terminal
 # bindsym $mod+Return exec kitty
 bindsym ctrl+space exec kitty
@@ -76,7 +81,7 @@ exec --no-startup-id xset r rate 150 50
 # Desktop notifications
 exec --no-startup-id /usr/bin/dunst
 
-exec --no-startup-id /usr/bin/ibus-daemon
+exec --no-startup-id ibus-daemon -drx
 
 # set floating for apps needing it
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
@@ -225,11 +230,11 @@ bindsym $mod+w exec "/usr/bin/firefox"
 bindsym Print exec "scrot ~/%Y-%m-%d-%T-screenshot.png"
 
 # rofi bindings fancy menu
-bindsym $mod+p exec rofi -modi drun -show drun -line-padding 4 \
+bindsym F9 exec rofi -modi drun -show drun -line-padding 4 \
                 -columns 2 -padding 50 -hide-scrollbar \
                 -show-icons -drun-icon-theme "Arc-X-D" -font "Cascadia Code Regular 10"
 
-bindsym $mod+Shift+P exec rofi -show window -line-padding 4 \
+bindsym F10 exec rofi -show window -line-padding 4 \
                 -lines 6 -padding 50 -hide-scrollbar \
                 -show-icons -drun-icon-theme "Arc-X-D" -font "Cascadia Code Regular 10"
 

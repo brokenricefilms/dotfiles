@@ -174,8 +174,13 @@ export VISUAL='nvim'
 export PATH="$HOME/.npm/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 export GTK_IM_MODULE=ibus
-export XMODFIERS=@im=ibus
 export QT_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+# Dành cho những phần mềm dựa trên qt4
+export QT4_IM_MODULE=ibus
+# Dành cho những phần mềm dùng thư viện đồ họa clutter/OpenGL
+export CLUTTER_IM_MODULE=ibus kitty
+export GLFW_IM_MODULE=ibus
 
 # alias l='ls -lha'
 alias l='clear ; exa -al --color=always --group-directories-first'
@@ -295,6 +300,8 @@ alias ghfour-card-feature-section='cd ~/git/four-card-feature-section ; okp ; cd
 alias ghdataLab='cd ~/git/dataLab ; okp ; cd -'
 alias ghcalculatorOnIOS='cd ~/git/calculatorOnIOS ; okp ; cd -'
 alias ghFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; okp ; cd -'
+alias ghsuckless='cd ~/git/suckless ; okp ; cd -'
+alias ghnote='cd ~/git/note ; ok ; cd -'
 
 gha () {
     cowsay "git push windowsSetup" ; ghwindowsSetup
@@ -312,6 +319,8 @@ gha () {
     cowsay "git push dataLab" ; ghdataLab
     cowsay "git push calculatorOnIOS" ; ghcalculatorOnIOS
     cowsay "git push FreeCodeCampProject" ; ghFreeCodeCampProject
+    cowsay "git push suckless" ; ghsuckless
+    cowsay "git push note" ; ghnote
     cowsay "D O N E"
 }
 
@@ -330,6 +339,8 @@ alias glthuanpham2311='cd ~/git/thuanpham2311 ; pull ; cd -'
 alias glblog='cd ~/git/thuanpham2311.github.io ; pull ; cd -'
 alias glvimium_dark_theme='cd ~/git/vimium_dark_theme ; pull ; cd -'
 alias glwindowsSetup='cd ~/git/windowsSetup ;  pull ; cd -'
+alias glsuckless='cd ~/git/suckless ;  pull ; cd -'
+alias glnote='cd ~/git/note ;  pull ; cd -'
 
 gla () {
     cowsay "git pull lazyscript" ; gllazyscript
@@ -347,6 +358,8 @@ gla () {
     cowsay "git pull theNewsTimes" ; gltheNewsTimes
     cowsay "git pull four-card-feature-section" ; glfour-card-feature-section
     cowsay "git pull calculatorOnIOS" ; glcalculatorOnIOS
+    cowsay "git pull suckless" ; glsuckless
+    cowsay "git pull note" ; glnote
     cowsay "D O N E"
 }
 
