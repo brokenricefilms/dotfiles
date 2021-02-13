@@ -167,7 +167,7 @@ set $text-color             #444444
 set $border-color           #333333
 set $inactive-border-color  #eeeeee
 set $inactive-text-color    #eeeeee
-set $urgent-bg-color        #e53935
+set $urgent-bg-color        #af0000
 set $indicator-color        #444444
 
 # set window colors
@@ -191,11 +191,11 @@ bar {
         separator          #666666
         background         $bg-color
         statusline         #dddddd
-#                          border   background  text
-        focused_workspace  #444444  #5faf5f     #444444
-        active_workspace   #444444  #eeeeee     #444444
-        inactive_workspace #444444  #eeeeee     #444444
-        urgent_workspace   #444444  #af005f     #eeeeee
+#                          border   background          text
+        focused_workspace  #444444  #5faf5f             #444444
+        active_workspace   #444444  #eeeeee             #444444
+        inactive_workspace #444444  #eeeeee             #444444
+        urgent_workspace   #444444  $urgent-bg-color     #eeeeee
     }
 }
 
@@ -204,9 +204,9 @@ bar {
 
 # volume
 # bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+ && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec amixer -q sset Master 10%+ && pkill -RTMIN+1 i3blocks
 # bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%- && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec amixer -q sset Master 10%- && pkill -RTMIN+1 i3blocks
 
 # mute
 bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
