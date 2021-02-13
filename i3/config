@@ -71,6 +71,10 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+z fullscreen toggle
 
+bindsym $mod+s layout stacking
+bindsym $mod+t layout tabbed
+bindsym $mod+e layout toggle split
+
 #bindsym $mod+d focus child
 
 # Autostart apps
@@ -158,7 +162,7 @@ bindsym $mod+r mode "resize"
 title_align center
 
 set $bg-color               #eeeeee
-set $inactive-bg-color      #eeeeee
+set $inactive-bg-color      #bcbcbc
 set $text-color             #444444
 set $border-color           #333333
 set $inactive-border-color  #eeeeee
