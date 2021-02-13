@@ -7,4 +7,3 @@ keysym k = k K Up
 keysym j = j J Down
 keysym i = i I Home
 keysym o = o O End
-keysym n = n N Escape
