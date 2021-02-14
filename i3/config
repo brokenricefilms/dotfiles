@@ -100,6 +100,7 @@ for_window [class="Xsane" instance="xsane"] floating enable
 for_window [class="qt5ct" instance="qt5ct"] floating enable
 for_window [class="calamares"] floating enable
 for_window [class="connman-gtk"] floating enable
+for_window [class="flameshot"] floating enable
 
 # switch to workspace
 bindsym $mod+1 workspace 1
