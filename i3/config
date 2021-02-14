@@ -205,9 +205,9 @@ bar {
 
 # volume
 # bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioRaiseVolume exec amixer -q sset Master 10%+ && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+ && pkill -RTMIN+1 i3blocks
 # bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec amixer -q sset Master 10%- && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%- && pkill -RTMIN+1 i3blocks
 
 # mute
 bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
