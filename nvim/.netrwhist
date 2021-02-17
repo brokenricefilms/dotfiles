@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/master/git/vimium_dark_theme'
+let g:netrw_dirhist_3='/home/master/git/windowsSetup'
 let g:netrw_dirhist_2='/home/master/git/dotfiles/nvim'
 let g:netrw_dirhist_1='/home/master'
 let g:netrw_dirhist_0='/home/master/git/suckless'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_8='/etc/profile.d'
 let g:netrw_dirhist_7='/home/master/.config'
 let g:netrw_dirhist_6='/home/master/dev/thuanpham2311.github.io/content/posts/curses-and-counter-courses'
 let g:netrw_dirhist_5='/home/master/dev/thuanpham2311.github.io'
-let g:netrw_dirhist_4='/home/master/dev/thuanpham2311.github.io/content'
-let g:netrw_dirhist_3='/home/master/.gem/ruby/2.7.0/bin'
