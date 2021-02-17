@@ -205,7 +205,7 @@ alias v='nvim'
 alias o='xdg-open'
 alias 777='chmod -R 777'
 alias x='chmod +x'
-alias f='fd . -H | grep --colour=always'
+alias f='fdfind . -H | grep --colour=always'
 alias colorPicker='zenity --color-selection'
 alias cat='bat'
 alias nnn='nnn -de'
@@ -214,17 +214,17 @@ alias nnn='nnn -de'
 alias m='mpv --shuffle ~/Music/*'
 
 # ubuntu apt
-# alias ins='sudo apt install -y'
-# alias uins='sudo apt remove -y'
+alias ins='sudo apt install -y'
+alias uins='sudo apt remove -y'
 
 # fedora dnf
 # alias ins='sudo dnf install -y'
 # alias uins='sudo dnf remove -y'
 
 # arch
-alias ins='sudo pacman -S --noconfirm'
-alias ins2='yay -S --noconfirm'
-alias uins='sudo pacman -Rs --noconfirm'
+# alias ins='sudo pacman -S --noconfirm'
+# alias ins2='yay -S --noconfirm'
+# alias uins='sudo pacman -Rs --noconfirm'
 
 # alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 75 ; tmux last-pane ; nvim'
 alias ide='tmux split-window -v -p 8 ; tmux last-pane ; nvim'
@@ -242,7 +242,7 @@ alias yta='youtube-dl -f "bestaudio" --continue --no-overwrites --ignore-errors 
 alias t='trash'
 alias tdl='trash ~/Downloads/*'
 
-export FZF_DEFAULT_COMMAND='fd -H --type f'
+export FZF_DEFAULT_COMMAND='fdfind -H --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 alias vi='cd ~/ ; nvim -o $(fzf-tmux)'
 
@@ -436,14 +436,14 @@ rem () {
     tldr --update
 
     # arch base
-    sudo pacman -Syu --noconfirm
-    yay -Sua --noconfirm
+    # sudo pacman -Syu --noconfirm
+    # yay -Sua --noconfirm
 
     # debian base (ubuntu, kali,...)
-    # sudo apt update
-    # sudo apt upgrade -y
-    # sudo apt autoremove -y
-    # sudo apt autoclean
+    sudo apt update
+    sudo apt upgrade -y
+    sudo apt autoremove -y
+    sudo apt autoclean
 
     # rehat base (fedora)
     # sudo dnf update -y
