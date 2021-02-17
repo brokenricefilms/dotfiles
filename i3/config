@@ -1,6 +1,10 @@
 # Mod1 === alt | Mod4 === Windows key
 set $mod Mod1
 
+# script
+exec --no-startup-id ./scripts/alternating_layouts.py
+
+
 # get auth work with polkit-gnome
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Font for window titles. Will also be used by the bar unless a different font
