@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=calendar
+Exec=firefox --new-window "https://calendar.google.com/calendar/u/0"
+Icon=calendar
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=Application
+StartupWMClass=calendar

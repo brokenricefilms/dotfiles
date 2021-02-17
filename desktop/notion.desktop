@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=notion
+Exec=firefox --new-window "https://www.notion.so/thuanpham2311"
+Icon=notion
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=Application
+StartupWMClass=notion

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=photos
+Exec=firefox --new-window "https://photos.google.com/"
+Icon=photos
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=Application
+StartupWMClass=photos
