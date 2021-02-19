@@ -207,7 +207,7 @@ alias 777='chmod -R 777'
 alias x='chmod +x'
 # debian
 alias f='fdfind . -H | grep --colour=always'
-# arch
+# arch | termux
 # alias f='fd . -H | grep --colour=always'
 alias colorPicker='zenity --color-selection'
 # debian
@@ -254,7 +254,7 @@ alias tdl='trash ~/Downloads/*'
 
 # debian
 export FZF_DEFAULT_COMMAND='fdfind -H --type f'
-# arch
+# arch | termux
 # export FZF_DEFAULT_COMMAND='fd -H --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 alias vi='cd ~/ ; nvim -o $(fzf-tmux)'
@@ -463,8 +463,8 @@ rem () {
     # sudo dnf autoremove -y
 
     # termux
-    pkg update
-    pkg upgrade -y
+    # pkg update
+    # pkg upgrade -y
 
     cd ~ ; clear ; neofetch
 }
