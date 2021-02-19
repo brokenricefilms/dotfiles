@@ -378,7 +378,7 @@ alias browser_stu2='browser "http://stu.edu.vn/vi/cat/95/nghien-cuu-khoa-hoc.htm
 alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
 alias browser_anime='browser "https://animedao.to/"'
 alias browser_kdrama='browser "http://www.phimhanz.net/"'
-alias browser_feedly='browser "https://feedly.com/i/my"'
+alias browser_feedly='browser "https://feedly.com/i/collection/content/user/0d89157e-ce7d-4b2c-a2d6-98826f1e5089/category/global.all"'
 
 ## search
 function :t() {
