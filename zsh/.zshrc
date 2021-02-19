@@ -223,6 +223,10 @@ alias m='mpv --shuffle ~/Music/*'
 alias ins='sudo apt install -y'
 alias uins='sudo apt remove -y'
 
+# termux pkg
+# alias ins='pkg install -y'
+# alias uins='pkg remove -y'
+
 # fedora dnf
 # alias ins='sudo dnf install -y'
 # alias uins='sudo dnf remove -y'
@@ -440,7 +444,7 @@ rem () {
     nvim -c "PlugUpdate | qa"
     npm update -g
     npm install -g npm
-    sudo gem update neovim
+    gem update neovim
     pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
     tldr --update
 
@@ -457,6 +461,10 @@ rem () {
     # rehat base (fedora)
     # sudo dnf update -y
     # sudo dnf autoremove -y
+
+    # termux
+    pkg update
+    pkg upgrade -y
 
     cd ~ ; clear ; neofetch
 }
