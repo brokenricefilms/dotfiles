@@ -2,6 +2,24 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
     exec tmux
 fi
 
+set -U EDITOR nvim
+export EDITOR='nvim'
+export VISUAL='nvim'
+export PATH="$HOME/.npm/bin:$PATH"
+
+export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+# Dành cho những phần mềm dựa trên qt4
+export QT4_IM_MODULE=ibus
+# Dành cho những phần mềm dùng thư viện đồ họa clutter/OpenGL
+export CLUTTER_IM_MODULE=ibus
+export GLFW_IM_MODULE=ibus
+
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' rehash true
@@ -165,22 +183,6 @@ SERVER_IP () {
 se () {
     browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000
 }
-
-########################################################################
-
-set -U EDITOR nvim
-export EDITOR='nvim'
-export VISUAL='nvim'
-export PATH="$HOME/.npm/bin:$PATH"
-export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
-export GTK_IM_MODULE=ibus
-export QT_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-# Dành cho những phần mềm dựa trên qt4
-export QT4_IM_MODULE=ibus
-# Dành cho những phần mềm dùng thư viện đồ họa clutter/OpenGL
-export CLUTTER_IM_MODULE=ibus
-export GLFW_IM_MODULE=ibus
 
 # alias l='ls -lha'
 alias l='clear ; exa -al --color=always --group-directories-first'
