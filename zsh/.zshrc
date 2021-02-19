@@ -205,9 +205,15 @@ alias v='nvim'
 alias o='xdg-open'
 alias 777='chmod -R 777'
 alias x='chmod +x'
+# debian
 alias f='fdfind . -H | grep --colour=always'
+# arch
+# alias f='fd . -H | grep --colour=always'
 alias colorPicker='zenity --color-selection'
-alias cat='bat'
+# debian
+alias cat='batcat'
+# arch
+# alias cat='bat'
 alias nnn='nnn -de'
 
 # music stuff
@@ -242,7 +248,10 @@ alias yta='youtube-dl -f "bestaudio" --continue --no-overwrites --ignore-errors 
 alias t='trash'
 alias tdl='trash ~/Downloads/*'
 
+# debian
 export FZF_DEFAULT_COMMAND='fdfind -H --type f'
+# arch
+# export FZF_DEFAULT_COMMAND='fd -H --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 alias vi='cd ~/ ; nvim -o $(fzf-tmux)'
 
