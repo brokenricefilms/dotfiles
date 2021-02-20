@@ -427,7 +427,6 @@ browser --new-window "https://www.facebook.com/search?q=$argv"
 browser_daily () {
     cowsay "GET.SHIT.DONE"
     browser_feedly
-    browser_mes
     browser_mail0
     browser_mail1
     browser_fb
