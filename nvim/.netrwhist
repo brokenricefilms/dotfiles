@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/master/.config/coc'
 let g:netrw_dirhist_2='/home/master/.config'
 let g:netrw_dirhist_1='/home/master/.config/dconf'
 let g:netrw_dirhist_0='/home/master/.config'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_7='/home/master/.config'
 let g:netrw_dirhist_6='/home/master'
 let g:netrw_dirhist_5='/home/master/git/note/.obsidian'
 let g:netrw_dirhist_4='/home/master/git/vimium_dark_theme'
-let g:netrw_dirhist_3='/home/master/git/windowsSetup'

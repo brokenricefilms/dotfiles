@@ -36,12 +36,12 @@ colors:
 
 font:
   normal:
-    family: Hack
+    family: Cascadia Code
     style: Regular
   bold:
-    family: Hack
+    family: Cascadia Code
     style: Bold
   italic:
-    family: Hack
+    family: Cascadia Code
     style: Italic
   size: 11
