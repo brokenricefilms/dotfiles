@@ -1,7 +1,4 @@
 call plug#begin()
-Plug 'simeji/winresizer'
-let g:winresizer_start_key = "<leader>w"
-
 Plug 'liuchengxu/vista.vim'
 nmap <leader>t :Vista!!<CR>
 
@@ -123,6 +120,15 @@ nnoremap N Nzzzv
 Plug 'mhinz/vim-signify'
 Plug 'mkitt/tabline.vim'
 highlight ExtraWhitespace ctermbg=None
+
+Plug 'camspiers/animate.vim'
+nnoremap <silent> <Up>    :call animate#window_delta_height(10)<CR>
+nnoremap <silent> <Down>  :call animate#window_delta_height(-10)<CR>
+nnoremap <silent> <Left>  :call animate#window_delta_width(10)<CR>
+nnoremap <silent> <Right> :call animate#window_delta_width(-10)<CR>
+
+Plug 'camspiers/lens.vim'
+" let g:lens#disabled_filetypes = ['coc-explorer','vim']
 
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
