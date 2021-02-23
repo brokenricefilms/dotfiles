@@ -335,7 +335,6 @@ gha () {
     cowsay "git push calculatorOnIOS" ; ghcalculatorOnIOS
     cowsay "git push FreeCodeCampProject" ; ghFreeCodeCampProject
     cowsay "git push suckless" ; ghsuckless
-    cowsay "git push note" ; ghnote
     cowsay "D O N E"
 }
 
@@ -374,7 +373,6 @@ gla () {
     cowsay "git pull four-card-feature-section" ; glfour-card-feature-section
     cowsay "git pull calculatorOnIOS" ; glcalculatorOnIOS
     cowsay "git pull suckless" ; glsuckless
-    cowsay "git pull note" ; glnote
     cowsay "D O N E"
 }
 
