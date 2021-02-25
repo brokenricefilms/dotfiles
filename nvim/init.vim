@@ -121,15 +121,6 @@ Plug 'mhinz/vim-signify'
 Plug 'mkitt/tabline.vim'
 highlight ExtraWhitespace ctermbg=None
 
-Plug 'camspiers/animate.vim'
-nnoremap <silent> <Up>    :call animate#window_delta_height(10)<CR>
-nnoremap <silent> <Down>  :call animate#window_delta_height(-10)<CR>
-nnoremap <silent> <Left>  :call animate#window_delta_width(10)<CR>
-nnoremap <silent> <Right> :call animate#window_delta_width(-10)<CR>
-
-Plug 'camspiers/lens.vim'
-" let g:lens#disabled_filetypes = ['coc-explorer','vim']
-
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
 Plug 'sheerun/vim-polyglot'
@@ -211,6 +202,11 @@ nnoremap <space>? :echo expand("%:p")<CR>
 
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
+
+map <silent> <Right> <C-w><
+map <silent> <Down> <C-W>-
+map <silent> <Up> <C-W>+
+map <silent> <Left> <C-w>>
 
 " write file when you forgot root
 command! W execute "w !sudo tee %"
