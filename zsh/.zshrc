@@ -3,6 +3,10 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 fi
 
 set -U EDITOR nvim
+# debian base
+export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+# arch base
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export EDITOR='nvim'
 export VISUAL='nvim'
 export PATH="$HOME/.npm/bin:$PATH"
@@ -76,7 +80,7 @@ dark () {
 set background=dark
 colorscheme gruvbox-material" > ~/git/dotfiles/nvim/darkOrLight.vim
     echo "include ./gruvbox-dark.conf" > ~/git/dotfiles/kitty/theme.conf
-    echo "--theme=\"OneHalfDark\"" > ~/git/dotfiles/bat/config
+    echo "--theme=\"base16\"" > ~/git/dotfiles/bat/config
 }
 
 mk () {
