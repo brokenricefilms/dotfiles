@@ -1,4 +1,6 @@
 call plug#begin()
+Plug 'metakirby5/codi.vim'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'liuchengxu/vista.vim'
 nmap <leader>t :Vista!!<CR>
 
