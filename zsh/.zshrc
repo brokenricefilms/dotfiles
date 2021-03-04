@@ -300,7 +300,6 @@ alias okp='prettier ; status ; yo ; push '
 ghdotfiles () {
     crontab -l > ~/git/dotfiles/crontab/crontabConfig
     dconf dump /org/gnome/desktop/wm/keybindings/ > ~/git/dotfiles/keybindings.dconf
-    dconf dump /org/gnome/terminal/legacy/profiles:/ > ~/git/dotfiles/gnome-terminal-profiles.dconf
     cd ~/git/dotfiles/
     okp ; cd -
 }
