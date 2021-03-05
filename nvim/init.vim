@@ -168,6 +168,7 @@ set nobackup
 set noswapfile
 set lazyredraw
 set nowritebackup
+set inccommand=split
 
 nnoremap + <C-a>
 nnoremap - <C-x>
