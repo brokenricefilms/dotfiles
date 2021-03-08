@@ -234,8 +234,8 @@ alias m='mpv --shuffle ~/Music/*'
 # alias uins='pkg remove -y'
 
 # fedora dnf
-alias ins='sudo dnf install -y'
-alias uins='sudo dnf remove -y'
+alias ins='sudo dnf -y install'
+alias uins='sudo dnf -y remove'
 
 # arch
 # alias ins='sudo pacman -S --noconfirm'
