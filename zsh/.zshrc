@@ -4,9 +4,9 @@ fi
 
 set -U EDITOR nvim
 # debian base
-export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
-# arch base
-# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+# arch base | fedora
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export EDITOR='nvim'
 export VISUAL='nvim'
 export PATH="$HOME/.npm/bin:$PATH"
@@ -263,13 +263,13 @@ alias tdl='trash ~/Downloads/*'
 # arch | termux | fedora
 export FZF_DEFAULT_COMMAND='fd -H --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-alias vi='cd ~/ ; nvim -o "$(fzf-tmux)"'
+alias vi='cd ~/ ; nvim -o "$(fzf)"'
 
 
 c () {
     local dir
     dir=$(find ~ -path '*/\.*' -prune \
-        -o -type d -print 2> /dev/null | fzf-tmux +m) &&
+        -o -type d -print 2> /dev/null | fzf +m) &&
         cd "$dir"
             clear
             l
