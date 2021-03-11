@@ -306,7 +306,6 @@ ghdotfiles () {
 
 alias ghwindowsSetup='cd ~/git/windowsSetup ; okp ; cd -'
 alias ghvimium_dark_theme='cd ~/git/vimium_dark_theme ; okp ; cd -'
-alias ghblog='cd ~/git/thuanpham2311.github.io ; ok ; cd -'
 alias ghthuanpham2311='cd ~/git/thuanpham2311 ; okp ; cd -'
 alias ghtheNewsTimes='cd ~/git/theNewsTimes ; okp ; cd -'
 alias ghtermuxSetup='cd ~/git/termuxSetup ; okp ; cd -'
@@ -325,7 +324,6 @@ gha () {
     cowsay "git push windowsSetup" ; ghwindowsSetup
     cowsay "git push vimium-dark-theme" ; ghvimium_dark_theme
     cowsay "git push thuanpham2311" ; ghthuanpham2311
-    cowsay "git push blog" ; ghblog
     cowsay "git push theNewsTimes" ; ghtheNewsTimes
     cowsay "git push termuxSetup" ; ghtermuxSetup
     cowsay "git push ok" ; ghok
@@ -353,7 +351,6 @@ alias glok='cd ~/git/ok ; pull ; cd -'
 alias gltermuxSetup='cd ~/git/termuxSetup ;  pull ; cd -'
 alias gltheNewsTimes='cd ~/git/theNewsTimes ; pull ; cd -'
 alias glthuanpham2311='cd ~/git/thuanpham2311 ; pull ; cd -'
-alias glblog='cd ~/git/thuanpham2311.github.io ; pull ; cd -'
 alias glvimium_dark_theme='cd ~/git/vimium_dark_theme ; pull ; cd -'
 alias glwindowsSetup='cd ~/git/windowsSetup ;  pull ; cd -'
 alias glsuckless='cd ~/git/suckless ;  pull ; cd -'
@@ -371,7 +368,6 @@ gla () {
     cowsay "git pull termuxSetup" ; gltermuxSetup
     cowsay "git pull img" ; glimg
     cowsay "git pull thuanpham2311" ; glthuanpham2311
-    cowsay "git pull blog" ; glblog
     cowsay "git pull theNewsTimes" ; gltheNewsTimes
     cowsay "git pull four-card-feature-section" ; glfour-card-feature-section
     cowsay "git pull calculatorOnIOS" ; glcalculatorOnIOS
