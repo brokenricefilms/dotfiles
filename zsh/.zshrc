@@ -4,9 +4,9 @@ fi
 
 set -U EDITOR nvim
 # debian base
-# export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 # arch base | fedora
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export EDITOR='nvim'
 export VISUAL='nvim'
 export PATH="$HOME/.npm/bin:$PATH"
@@ -212,30 +212,30 @@ alias o='xdg-open'
 alias 777='chmod -R 777'
 alias x='chmod +x'
 # debian
-# alias f='fdfind . -H | grep --colour=always'
+alias f='fdfind . -H | grep --colour=always'
 # arch | termux | fedora
-alias f='fd . -H | grep --colour=always'
+# alias f='fd . -H | grep --colour=always'
 alias colorPicker='zenity --color-selection'
 # debian
-# alias cat='batcat'
+alias cat='batcat'
 # arch | fedora
-alias cat='bat'
+# alias cat='bat'
 alias nnn='nnn -de'
 
 # music stuff
 alias m='mpv --shuffle ~/Music/*'
 
 # ubuntu apt
-# alias ins='sudo apt install -y'
-# alias uins='sudo apt remove -y'
+alias ins='sudo apt install -y'
+alias uins='sudo apt remove -y'
 
 # termux pkg
 # alias ins='pkg install -y'
 # alias uins='pkg remove -y'
 
 # fedora dnf
-alias ins='sudo dnf -y install'
-alias uins='sudo dnf -y remove'
+# alias ins='sudo dnf -y install'
+# alias uins='sudo dnf -y remove'
 
 # arch
 # alias ins='sudo pacman -S --noconfirm'
@@ -259,9 +259,9 @@ alias t='trash'
 alias tdl='trash ~/Downloads/*'
 
 # debian
-# export FZF_DEFAULT_COMMAND='fdfind -H --type f'
+export FZF_DEFAULT_COMMAND='fdfind -H --type f'
 # arch | termux | fedora
-export FZF_DEFAULT_COMMAND='fd -H --type f'
+# export FZF_DEFAULT_COMMAND='fd -H --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 alias vi='cd ~/ ; nvim -o "$(fzf)"'
 
@@ -452,14 +452,14 @@ rem () {
     # yay -Sua --noconfirm
 
     # debian base (ubuntu, kali,...)
-    # sudo apt update
-    # sudo apt upgrade -y
-    # sudo apt autoremove -y
-    # sudo apt autoclean
+    sudo apt update
+    sudo apt upgrade -y
+    sudo apt autoremove -y
+    sudo apt autoclean
 
     # rehat base (fedora)
-    sudo dnf update -y
-    sudo dnf autoremove -y
+    # sudo dnf update -y
+    # sudo dnf autoremove -y
 
     # termux
     # pkg update
