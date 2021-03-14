@@ -320,6 +320,7 @@ alias ghFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; okp ; cd -'
 alias ghsuckless='cd ~/git/suckless ; okp ; cd -'
 alias ghnote='cd ~/git/note ; ok ; cd -'
 alias ghtemplate='cd ~/git/template ; okp ; cd -'
+alias ghblog='cd ~/git/thuanpham2311.github.io ; ok ; cd -'
 
 gha () {
     cowsay "git push windowsSetup" ; ghwindowsSetup
@@ -338,6 +339,7 @@ gha () {
     cowsay "git push FreeCodeCampProject" ; ghFreeCodeCampProject
     cowsay "git push suckless" ; ghsuckless
     cowsay "git push template" ; ghtemplate
+    cowsay "git push blog" ; ghblog
     cowsay "D O N E"
 }
 
@@ -358,6 +360,7 @@ alias glwindowsSetup='cd ~/git/windowsSetup ;  pull ; cd -'
 alias glsuckless='cd ~/git/suckless ;  pull ; cd -'
 alias glnote='cd ~/git/note ;  pull ; cd -'
 alias gltemplate='cd ~/git/template ;  pull ; cd -'
+alias glblog='cd ~/git/thuanpham2311.github.io ;  pull ; cd -'
 
 gla () {
     cowsay "git pull lazyscript" ; gllazyscript
@@ -376,6 +379,7 @@ gla () {
     cowsay "git pull calculatorOnIOS" ; glcalculatorOnIOS
     cowsay "git pull suckless" ; glsuckless
     cowsay "git pull template" ; gltemplate
+    cowsay "git pull blog" ; glblog
     cowsay "D O N E"
 }
 
