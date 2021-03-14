@@ -319,6 +319,7 @@ alias ghcalculatorOnIOS='cd ~/git/calculatorOnIOS ; okp ; cd -'
 alias ghFreeCodeCampProject='cd ~/git/FreeCodeCampProject ; okp ; cd -'
 alias ghsuckless='cd ~/git/suckless ; okp ; cd -'
 alias ghnote='cd ~/git/note ; ok ; cd -'
+alias ghtemplate='cd ~/git/template ; okp ; cd -'
 
 gha () {
     cowsay "git push windowsSetup" ; ghwindowsSetup
@@ -336,6 +337,7 @@ gha () {
     cowsay "git push calculatorOnIOS" ; ghcalculatorOnIOS
     cowsay "git push FreeCodeCampProject" ; ghFreeCodeCampProject
     cowsay "git push suckless" ; ghsuckless
+    cowsay "git push template" ; ghtemplate
     cowsay "D O N E"
 }
 
@@ -355,6 +357,7 @@ alias glvimium_dark_theme='cd ~/git/vimium_dark_theme ; pull ; cd -'
 alias glwindowsSetup='cd ~/git/windowsSetup ;  pull ; cd -'
 alias glsuckless='cd ~/git/suckless ;  pull ; cd -'
 alias glnote='cd ~/git/note ;  pull ; cd -'
+alias gltemplate='cd ~/git/template ;  pull ; cd -'
 
 gla () {
     cowsay "git pull lazyscript" ; gllazyscript
@@ -372,6 +375,7 @@ gla () {
     cowsay "git pull four-card-feature-section" ; glfour-card-feature-section
     cowsay "git pull calculatorOnIOS" ; glcalculatorOnIOS
     cowsay "git pull suckless" ; glsuckless
+    cowsay "git pull template" ; gltemplate
     cowsay "D O N E"
 }
 
