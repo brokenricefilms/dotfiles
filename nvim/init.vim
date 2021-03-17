@@ -138,9 +138,9 @@ call plug#end()
 syntax enable
 highlight WildMenu guifg=#78A79C
 set termguicolors
-" source ~/git/dotfiles/nvim/darkOrLight.vim
-set background=light
-source ~/git/dotfiles/nvim/theme/base16-grayscale-light.vim
+source ~/git/dotfiles/nvim/darkOrLight.vim
+" set background=light
+" source ~/git/dotfiles/nvim/theme/paper.vim
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
 
 autocmd InsertLeave,WinEnter * set cursorline
