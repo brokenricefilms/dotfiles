@@ -4,9 +4,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'liuchengxu/vista.vim'
 nmap <leader>t :Vista!!<CR>
 
-Plug 'tpope/vim-repeat'
-silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
-
 Plug 'jdhao/better-escape.vim'
 let g:better_escape_interval = 200
 let g:better_escape_shortcut = 'jj'
