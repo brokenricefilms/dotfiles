@@ -259,7 +259,7 @@ alias t='trash'
 alias tdl='trash ~/Downloads/*'
 
 # debian
-export FZF_DEFAULT_COMMAND='fdfind -H --type f'
+export FZF_DEFAULT_COMMAND='fdfind --type f'
 # arch | termux | fedora
 # export FZF_DEFAULT_COMMAND='fd -H --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
