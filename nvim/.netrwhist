@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/master/git/dotfiles/.git'
 let g:netrw_dirhist_1='/home/master'
 let g:netrw_dirhist_0='/etc/ImageMagick-6'
 let g:netrw_dirhist_9='/etc'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_6='/home/master'
 let g:netrw_dirhist_5='/home/master/git/note/.trash'
 let g:netrw_dirhist_4='/home/master/git/note/.git'
 let g:netrw_dirhist_3='/home/master/.config/coc'
-let g:netrw_dirhist_2='/home/master/.config'
