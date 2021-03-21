@@ -211,10 +211,6 @@ alias v='nvim'
 alias o='xdg-open'
 alias 777='chmod -R 777'
 alias x='chmod +x'
-# debian
-alias f='fdfind . -H | grep --colour=always'
-# arch | termux | fedora
-# alias f='fd . -H | grep --colour=always'
 alias colorPicker='zenity --color-selection'
 # debian
 alias cat='batcat'
@@ -263,7 +259,7 @@ export FZF_DEFAULT_COMMAND='fdfind --type f'
 # arch | termux | fedora
 # export FZF_DEFAULT_COMMAND='fd -H --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-alias vi='cd ~/ ; nvim -o "$(fzf)"'
+alias f='cd ~/ ; nvim -o "$(fzf)"'
 
 
 c () {
@@ -480,4 +476,3 @@ source ~/git/dotfiles/zsh/functions/key-bindings.zsh
 source ~/git/dotfiles/zsh/functions/completion.zsh
 source ~/git/dotfiles/zsh/themeFzf.zsh
 source ~/git/dotfiles/zsh/functions/zsh-autosuggestions.zsh
-source ~/git/dotfiles/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
