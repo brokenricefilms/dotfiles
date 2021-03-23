@@ -99,7 +99,7 @@ nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 Plug 'mbbill/undotree'
-set undodir=~/git/ok/undodir/
+set undodir=~/git/ok/undodir
 set undofile
 nnoremap <leader>u :UndotreeShow<CR>
 
