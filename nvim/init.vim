@@ -126,9 +126,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'gregsexton/MatchTag', { 'for': 'html' }
 Plug 'norcalli/nvim-colorizer.lua'
 autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
-Plug 'junegunn/limelight.vim'
-Plug 'lukas-reineke/indent-blankline.nvim'
-let g:indent_blankline_char_list = ['|', '¦', '┆', '┊']
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'sainnhe/gruvbox-material'
@@ -223,7 +220,6 @@ function! FloatTerm(...)
     let row = float2nr((&lines - height) / 2)
     let width = float2nr(&columns * 0.6)
     let col = float2nr((&columns - width) / 2)
-
     let border_opts = {
                 \ 'relative': 'editor',
                 \ 'row': row - 1,
@@ -232,7 +228,6 @@ function! FloatTerm(...)
                 \ 'height': height + 2,
                 \ 'style': 'minimal'
                 \ }
-
     let opts = {
                 \ 'relative': 'editor',
                 \ 'row': row,
