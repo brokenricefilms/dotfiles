@@ -127,6 +127,8 @@ Plug 'gregsexton/MatchTag', { 'for': 'html' }
 Plug 'norcalli/nvim-colorizer.lua'
 autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
 Plug 'junegunn/limelight.vim'
+Plug 'lukas-reineke/indent-blankline.nvim'
+let g:indent_blankline_char_list = ['|', '¦', '┆', '┊']
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'sainnhe/gruvbox-material'
