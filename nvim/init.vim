@@ -129,9 +129,7 @@ autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
 Plug 'junegunn/limelight.vim'
 Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '▏'
-" Let indentLine use current conceal options
-let g:indentLine_conceallevel  = &conceallevel
-let g:indentLine_concealcursor = &concealcursor
+let g:indentLine_fileTypeExclude = ['haskell','json','yaml','markdown','text','sh','vim']
 Plug 'lukas-reineke/indent-blankline.nvim'
 
 Plug 'NLKNguyen/papercolor-theme'
