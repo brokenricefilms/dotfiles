@@ -126,6 +126,13 @@ Plug 'sheerun/vim-polyglot'
 Plug 'gregsexton/MatchTag', { 'for': 'html' }
 Plug 'norcalli/nvim-colorizer.lua'
 autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
+Plug 'junegunn/limelight.vim'
+Plug 'Yggdroot/indentLine'
+let g:indentLine_char = '▏'
+" Let indentLine use current conceal options
+let g:indentLine_conceallevel  = &conceallevel
+let g:indentLine_concealcursor = &concealcursor
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'sainnhe/gruvbox-material'
