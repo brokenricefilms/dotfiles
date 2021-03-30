@@ -134,14 +134,13 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'sainnhe/gruvbox-material'
+Plug 'jaredgorski/spacecamp'
 call plug#end()
 
 syntax enable
 highlight WildMenu guifg=#78A79C
 set termguicolors
 source ~/git/dotfiles/nvim/darkOrLight.vim
-" set background=light
-" source ~/git/dotfiles/nvim/theme/paper.vim
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
 
 autocmd InsertLeave,WinEnter * set cursorline

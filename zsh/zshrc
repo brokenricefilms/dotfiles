@@ -66,6 +66,7 @@ autoload -Uz compinit
 compinit
 
 light () {
+    # ==color paper==
     echo "source ~/git/dotfiles/zsh/functions/lightFzf.zsh" > ~/git/dotfiles/zsh/themeFzf.zsh
     echo "
 set background=light
@@ -75,11 +76,19 @@ colorscheme PaperColor" > ~/git/dotfiles/nvim/darkOrLight.vim
 }
 
 dark () {
+    # ==gruvbox==
+    # echo "source ~/git/dotfiles/zsh/functions/darkFzf.zsh" >  ~/git/dotfiles/zsh/themeFzf.zsh
+    # echo "
+# set background=dark
+# colorscheme gruvbox-material" > ~/git/dotfiles/nvim/darkOrLight.vim
+    # echo "include ./gruvbox-dark.conf" > ~/git/dotfiles/kitty/theme.conf
+    # echo "--theme=\"base16\"" > ~/git/dotfiles/bat/config
+    # ==spacecamp==
     echo "source ~/git/dotfiles/zsh/functions/darkFzf.zsh" >  ~/git/dotfiles/zsh/themeFzf.zsh
     echo "
 set background=dark
-colorscheme gruvbox-material" > ~/git/dotfiles/nvim/darkOrLight.vim
-    echo "include ./gruvbox-dark.conf" > ~/git/dotfiles/kitty/theme.conf
+colorscheme spacecamp" > ~/git/dotfiles/nvim/darkOrLight.vim
+    echo "include ./spacecamp.conf" > ~/git/dotfiles/kitty/theme.conf
     echo "--theme=\"base16\"" > ~/git/dotfiles/bat/config
 }
 
