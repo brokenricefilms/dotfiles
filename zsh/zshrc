@@ -18,9 +18,7 @@ export PATH="$HOME/gems/bin:$PATH"
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
-# Dành cho những phần mềm dựa trên qt4
 export QT4_IM_MODULE=ibus
-# Dành cho những phần mềm dùng thư viện đồ họa clutter/OpenGL
 export CLUTTER_IM_MODULE=ibus
 export GLFW_IM_MODULE=ibus
 
@@ -40,7 +38,6 @@ HISTFILE=~/.zsh_history
 
 bindkey -v
 
-# Change cursor shape for different vi modes.
 function zle-keymap-select {
     if [[ ${KEYMAP} == vicmd ]] ||
         [[ $1 = 'block' ]]; then
@@ -197,7 +194,6 @@ se () {
     browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000
 }
 
-# alias l='ls -lha'
 alias l='clear ; exa -al --color=always --group-directories-first'
 alias ls='clear ; exa -al --color=always --group-directories-first'
 alias sl='clear ; exa -al --color=always --group-directories-first'
@@ -247,8 +243,8 @@ alias uins='sudo apt remove -y'
 # alias ins2='yay -S --noconfirm'
 # alias uins='sudo pacman -Rs --noconfirm'
 
-# alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 75 ; tmux last-pane ; nvim'
-alias ide='tmux split-window -v -p 8 ; tmux last-pane ; nvim'
+alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 75 ; tmux last-pane ; nvim'
+# alias ide='tmux split-window -v -p 8 ; tmux last-pane ; nvim'
 # alias ide='tmux split-window -h -p 30 ; tmux split-window -v -p 75 ; tmux last-pane ; nvim'
 alias qa='tmux kill-session -a ; cowsay "All session deleted" ; tmux ls'
 
@@ -385,8 +381,6 @@ gla () {
 }
 
 alias browser='brave-browser'
-# alias browser='google-chrome'
-# alias browser='firefox'
 alias github='browser --new-window "https://github.com/thuanpham2311"'
 
 alias browser_fb='browser https://facebook.com'
@@ -401,7 +395,6 @@ alias browser_anime='browser "https://animedao.to/"'
 alias browser_kdrama='browser "http://www.phimhanz.net/"'
 alias browser_feedly='browser "https://feedly.com/i/collection/content/user/0d89157e-ce7d-4b2c-a2d6-98826f1e5089/category/global.all"'
 
-## search
 function :t() {
 browser --new-window "https://translate.google.com/?source=osdd#auto|auto|$argv"
 }
@@ -442,8 +435,6 @@ browser_daily () {
 
 hi () {
     browser_daily
-    # wait for browser loading website
-    # cuz maybe can effect system resource
     sleep 20
     rem
 }

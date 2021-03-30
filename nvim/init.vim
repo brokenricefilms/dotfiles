@@ -106,7 +106,7 @@ nnoremap <leader>u :UndotreeShow<CR>
 Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
 let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 
-Plug 'romainl/vim-cool' " when search done, turn off highlight
+Plug 'romainl/vim-cool'
 
 set hlsearch
 set ignorecase
@@ -195,11 +195,6 @@ noremap <leader>8 8gt
 noremap <leader>9 9gt
 
 nmap <space>s :setlocal spell! spell?<CR>
-" ]s — move to the next mispelled word
-" [s — move to the previous mispelled word
-" zg — add a word to the dictionary
-" zug — undo the addition of a word to the dictionary
-" z= — view spelling suggestions for a mispelled word
 
 command! Reload execute "source ~/.config/nvim/init.vim"
 
@@ -213,7 +208,6 @@ map <silent> <Down> <C-W>-
 map <silent> <Up> <C-W>+
 map <silent> <Left> <C-w>>
 
-" write file when you forgot root
 command! W execute "w !sudo tee %"
 
 nmap <leader>a :call FloatTerm()<CR>
