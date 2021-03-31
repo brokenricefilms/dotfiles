@@ -1,3 +1,3 @@
 
 set background=dark
-colorscheme spacecamp
+colorscheme gruvbox-material

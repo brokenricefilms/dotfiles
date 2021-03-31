@@ -64,7 +64,6 @@ compinit
 
 light () {
     # ==color paper==
-    echo "source ~/git/dotfiles/zsh/functions/paperColorFzf.zsh" > ~/git/dotfiles/zsh/themeFzf.zsh
     echo "
 set background=light
 colorscheme PaperColor" > ~/git/dotfiles/nvim/darkOrLight.vim
@@ -74,14 +73,12 @@ colorscheme PaperColor" > ~/git/dotfiles/nvim/darkOrLight.vim
 
 dark () {
     # ==gruvbox==
-    # echo "source ~/git/dotfiles/zsh/functions/gruvboxFzf.zsh" >  ~/git/dotfiles/zsh/themeFzf.zsh
     # echo "
 # set background=dark
 # colorscheme gruvbox-material" > ~/git/dotfiles/nvim/darkOrLight.vim
     # echo "include ./gruvbox-dark.conf" > ~/git/dotfiles/kitty/theme.conf
     # echo "--theme=\"base16\"" > ~/git/dotfiles/bat/config
     # ==spacecamp==
-    echo "source ~/git/dotfiles/zsh/functions/spacecampFZF.zsh" >  ~/git/dotfiles/zsh/themeFzf.zsh
     echo "
 set background=dark
 colorscheme spacecamp" > ~/git/dotfiles/nvim/darkOrLight.vim
@@ -470,5 +467,4 @@ rem () {
 
 source ~/git/dotfiles/zsh/functions/key-bindings.zsh
 source ~/git/dotfiles/zsh/functions/completion.zsh
-source ~/git/dotfiles/zsh/themeFzf.zsh
 source ~/git/dotfiles/zsh/functions/zsh-autosuggestions.zsh
