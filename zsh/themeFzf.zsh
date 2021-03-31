@@ -1,1 +1,1 @@
-source ~/git/dotfiles/zsh/functions/spacecampFZF.zsh
+# source ~/git/dotfiles/zsh/functions/spacecampFZF.zsh
