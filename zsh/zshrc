@@ -73,17 +73,17 @@ colorscheme PaperColor" > ~/git/dotfiles/nvim/darkOrLight.vim
 
 dark () {
     # ==gruvbox==
-    # echo "
-# set background=dark
-# colorscheme gruvbox-material" > ~/git/dotfiles/nvim/darkOrLight.vim
-    # echo "include ./gruvbox-dark.conf" > ~/git/dotfiles/kitty/theme.conf
-    # echo "--theme=\"base16\"" > ~/git/dotfiles/bat/config
-    # ==spacecamp==
     echo "
 set background=dark
-colorscheme spacecamp" > ~/git/dotfiles/nvim/darkOrLight.vim
-    echo "include ./spacecamp.conf" > ~/git/dotfiles/kitty/theme.conf
+colorscheme gruvbox-material" > ~/git/dotfiles/nvim/darkOrLight.vim
+    echo "include ./gruvbox-dark.conf" > ~/git/dotfiles/kitty/theme.conf
     echo "--theme=\"base16\"" > ~/git/dotfiles/bat/config
+    # ==spacecamp==
+    # echo "
+# set background=dark
+# colorscheme spacecamp" > ~/git/dotfiles/nvim/darkOrLight.vim
+    # echo "include ./spacecamp.conf" > ~/git/dotfiles/kitty/theme.conf
+    # echo "--theme=\"base16\"" > ~/git/dotfiles/bat/config
 }
 
 mk () {

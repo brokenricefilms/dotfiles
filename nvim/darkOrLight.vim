@@ -1,3 +1,3 @@
 
-set background=dark
-colorscheme spacecamp
+set background=light
+colorscheme PaperColor
