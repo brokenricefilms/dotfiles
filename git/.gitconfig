@@ -1,6 +1,6 @@
 [user]
-	name = thuan
-	email = phamtanthuan2311@gmail.com
+    name = thuan
+    email = phamtanthuan2311@gmail.com
 [merge]
   tool = vimdiff
 [mergetool]
