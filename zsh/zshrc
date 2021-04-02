@@ -285,6 +285,7 @@ alias status='git status -sb'
 alias add='git add'
 alias push="git push"
 alias pull="git pull"
+alias checkout="git for-each-ref --format='%(refname:short)' refs/heads | fzf | xargs git checkout"
 alias clone='git clone'
 alias commit='git commit -m'
 alias prettier='prettier --write .'
