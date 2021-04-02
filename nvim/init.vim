@@ -303,7 +303,7 @@ function! IBusOn()
 	silent! execute '!ibus engine ' . g:ibus_prev_engine
 endfunction
 
-augroup IBusHandler
+augroup vietnameseSwitch
 	autocmd CmdLineEnter [/?] silent call IBusOn()
 	autocmd CmdLineLeave [/?] silent call IBusOff()
 	autocmd CmdLineEnter \? silent call IBusOn()
