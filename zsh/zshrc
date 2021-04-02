@@ -18,8 +18,11 @@ export PATH="$HOME/gems/bin:$PATH"
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
+
 export QT4_IM_MODULE=ibus
+
 export CLUTTER_IM_MODULE=ibus
+
 export GLFW_IM_MODULE=ibus
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
@@ -280,7 +283,8 @@ n () {
         nnn -de
 }
 
-alias yo='git add -A ; git commit -m "[:ok_hand: auto commit] $(curl -s whatthecommit.com/index.txt)"'
+alias autoCommit='git add -A \
+                ; git commit -m "[:ok_hand:Auto commit] $(curl -s whatthecommit.com/index.txt)"'
 alias status='git status -sb'
 alias add='git add'
 alias push="git push"
@@ -292,8 +296,8 @@ alias prettier='prettier --write .'
 prettierCpp () {
     clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp')
 }
-alias ok='status ; yo ; push'
-alias okp='prettier ; status ; yo ; push '
+alias ok='status ; autoCommit ; push'
+alias okp='prettier ; status ; autoCommit ; push '
 
 ghdotfiles () {
     crontab -l > ~/git/dotfiles/crontab/crontabConfig

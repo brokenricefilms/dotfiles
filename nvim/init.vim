@@ -74,6 +74,7 @@ let g:coc_global_extensions = [
             \ "coc-sh",
             \ "coc-sql",
             \ "coc-explorer",
+            \ "coc-emoji",
             \ "coc-tsserver",]
 
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
@@ -287,27 +288,34 @@ function! TrimWhitespace()
 endfunction
 command! TrimWhitespace call TrimWhitespace()
 
-function! IBusOff()
-	let g:ibus_prev_engine = system('ibus engine')
-	" Nếu bạn thấy cái cờ ở đây
-	" khả năng là font của bạn đang render emoji lung tung...
-	" xkb : us :: eng (không có dấu cách)
-	silent! execute '!ibus engine xkb:us::eng'
-endfunction
 
-function! IBusOn()
-	let l:current_engine = system('ibus engine')
-	if l:current_engine !~? 'xkb:us::eng'
-		let g:ibus_prev_engine = l:current_engine
-	endif
-	silent! execute '!ibus engine ' . g:ibus_prev_engine
-endfunction
+" BUG: slowing down nvim
 
-augroup vietnameseSwitch
-	autocmd CmdLineEnter [/?] silent call IBusOn()
-	autocmd CmdLineLeave [/?] silent call IBusOff()
-	autocmd CmdLineEnter \? silent call IBusOn()
-	autocmd CmdLineLeave \? silent call IBusOff()
-	autocmd InsertEnter * silent call IBusOn()
-	autocmd InsertLeave * silent call IBusOff()
-augroup END
+""""""""""""
+""""""""""""
+" function! IBusOff()
+    " let g:ibus_prev_engine = system('ibus engine')
+    " " Nếu bạn thấy cái cờ ở đây
+    " " khả năng là font của bạn đang render emoji lung tung...
+    " " xkb : us :: eng (không có dấu cách)
+    " silent! execute '!ibus engine xkb:us::eng'
+" endfunction
+
+" function! IBusOn()
+    " let l:current_engine = system('ibus engine')
+    " if l:current_engine !~? 'xkb:us::eng'
+        " let g:ibus_prev_engine = l:current_engine
+    " endif
+    " silent! execute '!ibus engine ' . g:ibus_prev_engine
+" endfunction
+
+" augroup vietnameseSwitch
+    " autocmd CmdLineEnter [/?] silent call IBusOn()
+    " autocmd CmdLineLeave [/?] silent call IBusOff()
+    " autocmd CmdLineEnter \? silent call IBusOn()
+    " autocmd CmdLineLeave \? silent call IBusOff()
+    " autocmd InsertEnter * silent call IBusOn()
+    " autocmd InsertLeave * silent call IBusOff()
+" augroup END
+""""""""""""
+""""""""""""
