@@ -75,6 +75,7 @@ let g:coc_global_extensions = [
             \ "coc-sql",
             \ "coc-explorer",
             \ "coc-emoji",
+            \ "coc-word",
             \ "coc-tsserver",]
 
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
