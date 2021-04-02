@@ -280,7 +280,7 @@ n () {
         nnn -de
 }
 
-alias yo='git add -A ; git commit -m "$(curl -s whatthecommit.com/index.txt)"'
+alias yo='git add -A ; git commit -m "[:ok_hand: auto commit] $(curl -s whatthecommit.com/index.txt)"'
 alias status='git status -sb'
 alias add='git add'
 alias push="git push"
