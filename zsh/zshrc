@@ -260,7 +260,7 @@ alias yt='youtube-dl -f bestvideo+bestaudio'
 alias yta='youtube-dl -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"'
 
 alias t='trash'
-alias tdl='trash ~/Downloads/*'
+alias tdow='trash ~/Downloads/*'
 
 # debian
 export FZF_DEFAULT_COMMAND='fdfind --type f'
