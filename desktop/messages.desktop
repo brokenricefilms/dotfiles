@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=messages
-Exec=firefox --new-window "https://www.facebook.com/messages/t/thuanpham2311"
-Icon=messages
-Terminal=false
-Type=Application
-Encoding=UTF-8
-Categories=Application
-StartupWMClass=messages
