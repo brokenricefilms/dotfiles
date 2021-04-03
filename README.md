@@ -15,8 +15,8 @@
 ## feature
 
 - Auto switch (dark | light) theme
-    - using `dark | light` in commandline
-    - change nvim & kitty & batcat theme
+  - using `dark | light` in commandline
+  - change nvim & kitty & batcat theme
 
 ## You want setup like me?
 
