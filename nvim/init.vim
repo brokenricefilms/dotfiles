@@ -1,4 +1,5 @@
 call plug#begin()
+Plug 'wellle/tmux-complete.vim'
 Plug 'metakirby5/codi.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'liuchengxu/vista.vim'
