@@ -128,11 +128,10 @@ Plug 'sheerun/vim-polyglot'
 Plug 'gregsexton/MatchTag', { 'for': 'html' }
 Plug 'norcalli/nvim-colorizer.lua'
 autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
-Plug 'junegunn/limelight.vim'
-Plug 'Yggdroot/indentLine'
-let g:indentLine_char = '▏'
-let g:indentLine_fileTypeExclude = ['haskell','json','yaml','markdown','text','sh','vim']
-Plug 'lukas-reineke/indent-blankline.nvim'
+" Plug 'Yggdroot/indentLine'
+" let g:indentLine_char = '▏'
+" let g:indentLine_fileTypeExclude = ['haskell','json','yaml','markdown','text','sh','vim']
+" Plug 'lukas-reineke/indent-blankline.nvim'
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'sainnhe/gruvbox-material'
