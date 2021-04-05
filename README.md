@@ -2,12 +2,10 @@
 
 ## Demo
 
-<div align="center">
-    &emsp;
-    <img src="./img/dotfiles.gif" width="50%" height="50%">
-    &emsp;
-    <img src="./img/light.gif" width="50%" height="50%">
-    &emsp;
+<div>
+<img src="./img/dotfiles.gif" width="auto" height="auto">
+&emsp;
+<img src="./img/light.gif" width="auto" height="auto">
 </div>
 
 ---
