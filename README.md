@@ -23,7 +23,7 @@
   - `h,j,k,l` (left, down, up, right)
   - `i` (HOME), `o` (END)
 
-## You want setup like me?
+## You want setup like me? (Auto script)
 
 [https://github.com/thuanpham2311/linux_setup](https://github.com/thuanpham2311/linux_setup)
 
