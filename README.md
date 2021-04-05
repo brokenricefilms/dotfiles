@@ -17,10 +17,10 @@
 ## feature
 
 - Auto switch (dark | light) theme
-    - using `dark | light` in commandline
+    - using `dark | light` in command line
     - change nvim & kitty & batcat theme
-- vim key map every where
-    - philosophy: replace (Caps Lock) for vim key map when you pressed left hand (busy), right hand (free) so I prefer mod these key your right hand can press
+- vim keymap everywhere
+    - philosophy: replace (Caps Lock) for vim keymap when you pressed left hand (busy), right hand (free) so I prefer mod these key your right hand can press
     - using Xmodmap
     - h,j,k,l (left, down, up, right)
     - i (HOME), o (END)
