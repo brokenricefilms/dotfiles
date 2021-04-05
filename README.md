@@ -2,14 +2,10 @@
 
 ## Demo
 
-<div>
-    <a href="https://raw.githubusercontent.com/thuanpham2311/dotfiles/master/img/dotfiles.gif">
-    <img src="./img/dotfiles.gif">
-    </a>
+<div align="center">
+    <img src="./img/dotfiles.gif" width="50%" height="50%">
     &emsp;
-    <a href="https://raw.githubusercontent.com/thuanpham2311/dotfiles/master/img/light.gif">
-    <img src="./img/light.gif">
-    </a>
+    <img src="./img/light.gif" width="50%" height="50%">
 <div>
 
 ---
