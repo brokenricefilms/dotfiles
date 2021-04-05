@@ -2,11 +2,8 @@
 
 ## Demo
 
-<div>
-<img src="./img/dotfiles.gif" width="auto" height="auto">
-&emsp;
-<img src="./img/light.gif" width="auto" height="auto">
-</div>
+<img src="./img/dotfiles.gif">
+<img src="./img/light.gif">
 
 ---
 
