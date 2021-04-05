@@ -6,8 +6,7 @@
 => [https://youtube.com/playlist?list=PLiK7Zu7FR9jUZR__9M1S2UWozwVLFqveL][Youtube playlist Programming and research stuff]
 
 [Youtube playlist Programming and research stuff]: https://youtube.com/playlist?list=PLiK7Zu7FR9jUZR__9M1S2UWozwVLFqveL
-<img src="./img/dotfiles.gif">
-<img src="./img/light.gif">
+<img src="./img/dotfiles.gif" width="50%" height="50%"><img src="./img/light.gif" width="50%" height="50%">
 
 ---
 
