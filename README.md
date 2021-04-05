@@ -3,9 +3,11 @@
 ## Demo
 
 <div align="center">
+    &emsp;
     <img src="./img/dotfiles.gif" width="50%" height="50%">
     &emsp;
     <img src="./img/light.gif" width="50%" height="50%">
+    &emsp;
 </div>
 
 ---
