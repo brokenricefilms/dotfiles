@@ -2,21 +2,28 @@
 
 ## Demo
 
-<a href="https://raw.githubusercontent.com/thuanpham2311/dotfiles/master/img/dotfiles.gif">
-<img src="./img/dotfiles.gif">
-</a>
-
-<a href="https://raw.githubusercontent.com/thuanpham2311/dotfiles/master/img/light.gif">
-<img src="./img/light.gif">
-</a>
+<div>
+    <a href="https://raw.githubusercontent.com/thuanpham2311/dotfiles/master/img/dotfiles.gif">
+    <img src="./img/dotfiles.gif">
+    </a>
+    &emsp;
+    <a href="https://raw.githubusercontent.com/thuanpham2311/dotfiles/master/img/light.gif">
+    <img src="./img/light.gif">
+    </a>
+<div>
 
 ---
 
 ## feature
 
 - Auto switch (dark | light) theme
-  - using `dark | light` in commandline
-  - change nvim & kitty & batcat theme
+    - using `dark | light` in commandline
+    - change nvim & kitty & batcat theme
+- vim key map every where
+    - philosophy: replace (Caps Lock) for vim key map when you pressed left hand (busy), right hand (free) so I prefer mod these key your right hand can press
+    - using Xmodmap
+    - h,j,k,l (left, down, up, right)
+    - i (HOME), o (END)
 
 ## You want setup like me?
 
