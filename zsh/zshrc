@@ -21,11 +21,8 @@ export PATH="$HOME/gems/bin:$PATH"
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
-
 export QT4_IM_MODULE=ibus
-
 export CLUTTER_IM_MODULE=ibus
-
 export GLFW_IM_MODULE=ibus
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
@@ -67,30 +64,6 @@ preexec() { echo -ne '\e[5 q' ;}
 
 autoload -Uz compinit
 compinit
-
-light () {
-    # ==color paper==
-    echo "
-set background=light
-colorscheme PaperColor" > ~/git/dotfiles/nvim/themeControl.vim
-    echo "include ./paper.conf" > ~/git/dotfiles/kitty/theme.conf
-    echo "--theme=\"GitHub\"" > ~/git/dotfiles/bat/config
-}
-
-dark () {
-    # ==gruvbox==
-    echo "
-set background=dark
-colorscheme gruvbox-material" > ~/git/dotfiles/nvim/themeControl.vim
-    echo "include ./gruvbox-dark.conf" > ~/git/dotfiles/kitty/theme.conf
-    echo "--theme=\"base16\"" > ~/git/dotfiles/bat/config
-    # ==spacecamp==
-    # echo "
-# set background=dark
-# colorscheme spacecamp" > ~/git/dotfiles/nvim/themeControl.vim
-    # echo "include ./spacecamp.conf" > ~/git/dotfiles/kitty/theme.conf
-    # echo "--theme=\"base16\"" > ~/git/dotfiles/bat/config
-}
 
 mk () {
     if [ ! -n "$1" ]; then
@@ -472,6 +445,8 @@ rem () {
     cd ~ ; clear ; neofetch
 }
 
-source ~/git/dotfiles/zsh/functions/key-bindings.zsh
-source ~/git/dotfiles/zsh/functions/completion.zsh
 source ~/git/dotfiles/zsh/functions/zsh-autosuggestions.zsh
+source ~/git/dotfiles/zsh/functions/completion.zsh
+source ~/git/dotfiles/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/git/dotfiles/zsh/functions/fzf-key-bindings.zsh
+source ~/git/dotfiles/zsh/functions/themeControl.zsh
