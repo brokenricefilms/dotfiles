@@ -22,6 +22,7 @@
   - using Xmodmap
   - `h,j,k,l` (left, down, up, right)
   - `i` (HOME), `o` (END)
+- fzf, moving fast.
 
 ## You want setup like me? (Auto script)
 
