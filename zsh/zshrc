@@ -77,11 +77,11 @@ mk () {
 }
 
 bmi () {
-    python3 ~/git/dotfiles/zsh/functions/bmi.py
+    python3 ~/dotfiles/zsh/functions/bmi.py
 }
 
 tv () {
-    bash ~/git/dotfiles/zsh/functions/tv.sh
+    bash ~/dotfiles/zsh/functions/tv.sh
 }
 
 u () {
@@ -109,15 +109,15 @@ u () {
 }
 
 24-bit-color () {
-    bash ~/git/dotfiles/zsh/functions/24-bit-color.sh
+    bash ~/dotfiles/zsh/functions/24-bit-color.sh
 }
 
 print256colours () {
-    bash ~/git/dotfiles/zsh/functions/print256colours.sh
+    bash ~/dotfiles/zsh/functions/print256colours.sh
 }
 
 showTrueColor () {
-    bash ~/git/dotfiles/zsh/functions/showTrueColor.sh
+    bash ~/dotfiles/zsh/functions/showTrueColor.sh
 }
 
 dl () {
@@ -275,10 +275,10 @@ prettierCpp () {
 alias ok='status ; autoCommit ; push'
 alias okp='prettier ; status ; autoCommit ; push '
 
-alias ghok='cd ~/git/ok ; okp ; cd -'
-alias ghnote='cd ~/git/note ; ok ; cd -'
-alias glok='cd ~/git/ok ; pull ; cd -'
-alias glnote='cd ~/git/note ;  pull ; cd -'
+alias ghok='cd ~/syns/ok ; okp ; cd -'
+alias ghnote='cd ~/syns/note ; ok ; cd -'
+alias glok='cd ~/syns/ok ; pull ; cd -'
+alias glnote='cd ~/syns/note ;  pull ; cd -'
 
 alias browser='brave-browser'
 alias github='browser --new-window "https://github.com/thuanpham2311"'
@@ -368,8 +368,8 @@ rem () {
     cd ~ ; clear ; neofetch
 }
 
-source ~/git/dotfiles/zsh/functions/zsh-autosuggestions.zsh
-source ~/git/dotfiles/zsh/functions/completion.zsh
-source ~/git/dotfiles/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/git/dotfiles/zsh/functions/fzf-key-bindings.zsh
-source ~/git/dotfiles/zsh/functions/themeControl.zsh
+source ~/dotfiles/zsh/functions/zsh-autosuggestions.zsh
+source ~/dotfiles/zsh/functions/completion.zsh
+source ~/dotfiles/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/dotfiles/zsh/functions/fzf-key-bindings.zsh
+source ~/dotfiles/zsh/functions/themeControl.zsh

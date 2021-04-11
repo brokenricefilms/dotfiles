@@ -3,7 +3,6 @@ Plug 'wellle/tmux-complete.vim'
 Plug 'metakirby5/codi.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'liuchengxu/vista.vim'
-
 nmap <leader>t :Vista!!<CR>
 
 Plug 'jdhao/better-escape.vim'
@@ -101,7 +100,7 @@ nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 Plug 'mbbill/undotree'
-set undodir=~/git/ok/undodir
+set undodir=~/syns/ok/undodir
 set undofile
 nnoremap <leader>u :UndotreeShow<CR>
 
@@ -146,7 +145,7 @@ call plug#end()
 syntax enable
 highlight WildMenu guifg=#78A79C
 set termguicolors
-source ~/git/dotfiles/nvim/themeControl.vim
+source ~/dotfiles/nvim/themeControl.vim
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
 
 autocmd InsertLeave,WinEnter * set cursorline
