@@ -7,13 +7,3 @@ keysym k = k K Up
 keysym j = j J Down
 keysym i = i I Home
 keysym o = o O End
-
-! keycode 66 = Mode_switch Mode_switch
-
-! keycode 45 = k K Up
-! keycode 44 = j J Down
-! keycode 43 = h H Left
-! keycode 46 = l L Right
-
-! keycode 32 = o O End
-! keycode 19 = 0 parenright Home
