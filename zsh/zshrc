@@ -261,7 +261,7 @@ n () {
 
 alias autoCommit='git add -A \
                 ; git commit -m "[👌Auto commit] $(curl -s whatthecommit.com/index.txt)"'
-alias status='git status -sb'
+alias st='git status -sb'
 alias add='git add'
 alias push="git push"
 alias pull="git pull"
