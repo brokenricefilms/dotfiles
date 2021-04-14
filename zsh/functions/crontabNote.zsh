@@ -1,5 +1,5 @@
 #! /usr/bin/zsh
 
-source ~/git/dotfiles/zsh/zshrc
+source ~/dotfiles/zsh/zshrc
 
 glnote ; ghnote

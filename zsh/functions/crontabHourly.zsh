@@ -1,4 +1,4 @@
 #! /usr/bin/zsh
 
-source ~/git/dotfiles/zsh/zshrc
+source ~/dotfiles/zsh/zshrc
 ghok
