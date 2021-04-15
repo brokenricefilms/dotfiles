@@ -117,6 +117,8 @@ set magic
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
+Plug 'machakann/vim-highlightedyank'
+let g:highlightedyank_highlight_duration = 250
 Plug 'mhinz/vim-signify'
 Plug 'mkitt/tabline.vim'
 highlight ExtraWhitespace ctermbg=None
