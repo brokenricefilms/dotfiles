@@ -1,5 +1,8 @@
 /nvim/plugged/*
 /zsh/functions/zsh-syntax-highlighting
+/dotfiles/nvim/themeControl.vim
+/dotfiles/kitty/theme.conf
+/dotfiles/bat/config
 
 # Created by https://www.toptal.com/developers/gitignore/api/vim,linux,zsh
 # Edit at https://www.toptal.com/developers/gitignore?templates=vim,linux,zsh
