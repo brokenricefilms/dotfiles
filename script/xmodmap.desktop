@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=xmodmap
+Exec=bash /home/master/dotfiles/script/xmodmap-on-input-change.sh
+Terminal=true
