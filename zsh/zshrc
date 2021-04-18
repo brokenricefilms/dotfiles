@@ -236,16 +236,25 @@ alias t='trash'
 alias tdow='trash ~/Downloads/*'
 
 # debian
-export FZF_DEFAULT_COMMAND='fdfind --type f'
+# export FZF_DEFAULT_COMMAND='fdfind --type f'
+export FZF_DEFAULT_COMMAND='fdfind --type f --follow --exclude .git --exclude undodir'
 # arch | termux | fedora
 # export FZF_DEFAULT_COMMAND='fd -H --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-alias f='cd ~/ ; nvim -o "$(fzf)"'
+
+fzf-down() {
+  fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@"
+}
+
+f() {
+   cd ~/
+   nvim -o "$(fzf-down --preview 'batcat --style=numbers --color=always --line-range :500 {}')"
+}
 
 c () {
     local dir
     dir=$(find ~ -path '*/\.*' -prune \
-        -o -type d -print 2> /dev/null | fzf +m) &&
+        -o -type d -print 2> /dev/null | fzf-down) &&
         cd "$dir"
             clear
             l
@@ -254,7 +263,7 @@ c () {
 n () {
     local dir
     dir=$(find ~ -path '*/\.*' -prune \
-        -o -type d -print 2> /dev/null | fzf +m) &&
+        -o -type d -print 2> /dev/null | fzf-down) &&
         cd "$dir"
         nnn -de
 }
