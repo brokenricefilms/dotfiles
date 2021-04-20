@@ -5,6 +5,14 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] \
     exec tmux
 fi
 
+nvm() {
+  echo "🚨 NVM not loaded! Loading now..."
+  unset -f nvm
+  export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  nvm "$@"
+}
+
 set -U EDITOR nvim
 # debian base
 export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
