@@ -276,21 +276,46 @@ n () {
         nnn -de
 }
 
-alias autoCommit='git add -A \
-                ; git commit -m "[👌Auto commit] $(curl -s whatthecommit.com/index.txt)"'
+is_in_git_repo() {
+  git rev-parse HEAD > /dev/null 2>&1
+}
+
+co () {
+    is_in_git_repo || return
+    git for-each-ref --format='%(refname:short)' refs/heads | fzf-down | xargs git checkout
+}
+
+autoCommit () {
+    is_in_git_repo || return
+    git add -A
+    git commit -m "[👌Auto commit] $(curl -s whatthecommit.com/index.txt)"'
+}
 alias st='git status -sb'
 alias add='git add'
 alias push="git push"
 alias pull="git pull"
-alias checkout="git for-each-ref --format='%(refname:short)' refs/heads | fzf | xargs git checkout"
 alias clone='git clone'
 alias commit='git commit -m'
 alias prettier='prettier --write .'
+
 prettierCpp () {
     clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp')
 }
-alias ok='status ; autoCommit ; push'
-alias okp='prettier ; status ; autoCommit ; push '
+
+ok () {
+    is_in_git_repo || return
+    status
+    autoCommit
+    push
+}
+
+okp () {
+    is_in_git_repo || return
+    prettier
+    status
+    autoCommit
+    push
+}
 
 alias ghok='cd ~/syns/ok ; okp ; cd -'
 alias ghnote='cd ~/syns/note ; ok ; cd -'
