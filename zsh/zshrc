@@ -288,8 +288,9 @@ co () {
 autoCommit () {
     is_in_git_repo || return
     git add -A
-    git commit -m "[👌Auto commit] $(curl -s whatthecommit.com/index.txt)"'
+    git commit -m "[👌Auto commit] $(curl -s whatthecommit.com/index.txt)"
 }
+
 alias st='git status -sb'
 alias add='git add'
 alias push="git push"
