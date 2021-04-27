@@ -1,4 +1,11 @@
 call plug#begin()
+Plug 'dkarter/bullets.vim'
+let g:bullets_enabled_file_types = [
+    \ 'markdown',
+    \ 'text',
+    \ 'gitcommit',
+    \ 'scratch'
+    \]
 Plug 'wellle/tmux-complete.vim'
 Plug 'metakirby5/codi.vim'
 Plug 'editorconfig/editorconfig-vim'
