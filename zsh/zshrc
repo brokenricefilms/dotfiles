@@ -201,6 +201,7 @@ alias o='xdg-open'
 alias 777='chmod -R 777'
 alias x='chmod +x'
 alias colorPicker='zenity --color-selection'
+alias prettier='prettier --write .'
 # debian
 alias cat='batcat'
 # arch | fedora
@@ -296,8 +297,8 @@ alias add='git add'
 alias push="git push"
 alias pull="git pull"
 alias clone='git clone'
-alias commit='git commit -m'
-alias prettier='prettier --write .'
+alias cm='git commit'
+alias dt='git difftool'
 
 prettierCpp () {
     clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp')
@@ -325,7 +326,6 @@ alias glnote='cd ~/syns/note ;  pull ; cd -'
 
 alias browser='xdg-open'
 alias github='browser --new-window "https://github.com/thuanpham2311"'
-
 alias browser_fb='browser https://facebook.com'
 alias browser_mes='browser "https://www.facebook.com/messages/t/thuanpham2311"'
 alias browser_mail0='browser "https://mail.google.com/mail/u/0/#inbox"'
@@ -334,36 +334,34 @@ alias browser_mail2='browser "https://mail.google.com/mail/u/2/#inbox"'
 alias browser_stu='browser "http://stu.edu.vn/"'
 alias browser_stu2='browser "http://stu.edu.vn/vi/393/thong-bao.html"'
 alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
-alias browser_anime='browser "https://animedao.to/"'
-alias browser_kdrama='browser "http://www.phimhanz.net/"'
 alias browser_feedly='browser "https://feedly.com/i/collection/content/user/0d89157e-ce7d-4b2c-a2d6-98826f1e5089/category/global.all"'
 
 function :t() {
-browser --new-window "https://translate.google.com/?source=osdd#auto|auto|$argv"
+    browser "https://translate.google.com/?source=osdd#auto|auto|$argv"
 }
 
 function :y() {
-browser --new-window "https://www.youtube.com/results?search_query=$argv"
+    browser "https://www.youtube.com/results?search_query=$argv"
 }
 
 function :d() {
-browser --new-window "https://duckduckgo.com/?q=$argv"
+    browser "https://duckduckgo.com/?q=$argv"
 }
 
 function :gm() {
-browser --new-window "https://www.google.com/maps?q=$argv"
+    browser "https://www.google.com/maps?q=$argv"
 }
 
 function :g() {
-browser --new-window "https://www.google.com/search?q=$argv"
+    browser "https://www.google.com/search?q=$argv"
 }
 
 function :gh() {
-browser --new-window "https://github.com/search?q=$argv"
+    browser "https://github.com/search?q=$argv"
 }
 
 function :f() {
-browser --new-window "https://www.facebook.com/search?q=$argv"
+    browser "https://www.facebook.com/search?q=$argv"
 }
 
 browser_daily () {
