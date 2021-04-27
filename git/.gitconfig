@@ -2,20 +2,19 @@
     name = thuan
     email = phamtanthuan2311@gmail.com
 [merge]
-  tool = vimdiff
+    tool = vimdiff
 [mergetool]
-  prompt = true
+    prompt = true
 [mergetool "vimdiff"]
-  cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+    cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [difftool]
-  prompt = false
+    prompt = false
 [diff]
-  tool = vimdiff
-	colorMoved = zebra
+    tool = vimdiff
+    colorMoved = zebra
 [credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
+    helper = !/usr/bin/gh auth git-credential
 [pull]
-	rebase = true
+    rebase = true
 [fetch]
-	prune = true
+    prune = true
