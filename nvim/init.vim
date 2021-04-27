@@ -38,11 +38,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 imap <c-x><c-f> <plug>(fzf-complete-path)
 
-if isdirectory(".git")
-    noremap <leader>f :GFiles<cr>
-else
-    noremap <leader>f :Files<cr>
-endif
+noremap <leader>f :Files<cr>
 
 noremap <leader>b :Buffers<CR>
 noremap <leader>F :Files ~<CR>
