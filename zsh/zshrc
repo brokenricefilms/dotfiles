@@ -201,7 +201,6 @@ alias o='xdg-open'
 alias 777='chmod -R 777'
 alias x='chmod +x'
 alias colorPicker='zenity --color-selection'
-alias prettier='prettier --write .'
 # debian
 alias cat='batcat'
 # arch | fedora
