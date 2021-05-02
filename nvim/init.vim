@@ -7,7 +7,6 @@ let g:bullets_enabled_file_types = [
     \ 'scratch'
     \]
 Plug 'wellle/tmux-complete.vim'
-Plug 'metakirby5/codi.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'liuchengxu/vista.vim'
 nmap <leader>t :Vista!!<CR>
@@ -37,13 +36,10 @@ map mm <Plug>NERDCommenterToggle
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 imap <c-x><c-f> <plug>(fzf-complete-path)
-
 noremap <leader>f :Files<cr>
-
 noremap <leader>b :Buffers<CR>
 noremap <leader>F :Files ~<CR>
 noremap <leader>r :Rg<CR>
-
 noremap <c-p> :Commands<CR>
 noremap // :BLines<CR>
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
@@ -137,14 +133,13 @@ Plug 'sheerun/vim-polyglot'
 Plug 'gregsexton/MatchTag', { 'for': 'html' }
 Plug 'norcalli/nvim-colorizer.lua'
 autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
-" Plug 'Yggdroot/indentLine'
-" let g:indentLine_char = '▏'
-" let g:indentLine_fileTypeExclude = ['haskell','json','yaml','markdown','text','sh','vim']
-" Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'Yggdroot/indentLine'
+let g:indentLine_char = '▏'
+let g:indentLine_fileTypeExclude = ['haskell','json','yaml','markdown','text','sh','vim']
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'sainnhe/gruvbox-material'
-Plug 'jaredgorski/spacecamp'
 call plug#end()
 
 syntax enable

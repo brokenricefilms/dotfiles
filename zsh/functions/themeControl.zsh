@@ -14,10 +14,4 @@ set background=dark
 colorscheme gruvbox-material" > ~/dotfiles/nvim/themeControl.vim
     echo "include ./gruvbox-dark.conf" > ~/dotfiles/kitty/theme.conf
     echo "--theme=\"base16\"" > ~/dotfiles/bat/config
-    # ==spacecamp==
-    # echo "
-# set background=dark
-# colorscheme spacecamp" > ~/dotfiles/nvim/themeControl.vim
-    # echo "include ./spacecamp.conf" > ~/dotfiles/kitty/theme.conf
-    # echo "--theme=\"base16\"" > ~/dotfiles/bat/config
 }
