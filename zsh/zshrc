@@ -247,7 +247,7 @@ alias tdow='trash ~/Downloads/*'
 # export FZF_DEFAULT_COMMAND='fdfind --type f'
 # export FZF_DEFAULT_COMMAND='fdfind --type f --follow --exclude .git --exclude undodir'
 # arch | termux | fedora
-export FZF_DEFAULT_COMMAND='fd -H --type f --follow --exclude .git --exclude undodir'
+export FZF_DEFAULT_COMMAND='fd --type f --follow --exclude .git --exclude undodir'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 fzf-down() {
