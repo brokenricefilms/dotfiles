@@ -23,8 +23,9 @@ export VISUAL='nvim'
 export PATH="$HOME/.npm/bin:$PATH"
 
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
-export GEM_HOME="$HOME/gems"
+export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 export PATH="$HOME/gems/bin:$PATH"
+export GEM_HOME="$HOME/gems"
 
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
