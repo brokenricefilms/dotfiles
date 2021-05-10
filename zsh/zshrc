@@ -261,8 +261,7 @@ f() {
 
 c () {
     local dir
-    dir=$(find ~ -path '*/\.*' -prune \
-        -o -type d -print 2> /dev/null | fzf-down) &&
+    dir=$(fd -t d . $HOME | fzf-down) &&
         cd "$dir"
             clear
             l
@@ -270,8 +269,7 @@ c () {
 
 n () {
     local dir
-    dir=$(find ~ -path '*/\.*' -prune \
-        -o -type d -print 2> /dev/null | fzf-down) &&
+    dir=$(fd -t d . $HOME | fzf-down) &&
         cd "$dir"
         nnn -de
 }
