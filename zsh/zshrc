@@ -305,7 +305,7 @@ prettierCpp () {
 
 ok () {
     is_in_git_repo || return
-    status
+    st
     autoCommit
     push
 }
@@ -313,7 +313,7 @@ ok () {
 okp () {
     is_in_git_repo || return
     prettier
-    status
+    st
     autoCommit
     push
 }
