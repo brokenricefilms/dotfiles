@@ -15,9 +15,9 @@ nvm() {
 
 set -U EDITOR nvim
 # debian base
-# export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 # arch base | fedora
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export EDITOR='nvim'
 export VISUAL='nvim'
 export PATH="$HOME/.npm/bin:$PATH"
@@ -203,9 +203,9 @@ alias 777='chmod -R 777'
 alias x='chmod +x'
 alias colorPicker='zenity --color-selection'
 # debian
-# alias cat='batcat'
+alias cat='batcat'
 # arch | fedora
-alias cat='bat'
+# alias cat='bat'
 alias nnn='nnn -de'
 
 # music stuff
@@ -246,11 +246,11 @@ alias tdow='trash ~/Downloads/*'
 
 # debian
 # export FZF_DEFAULT_COMMAND='fdfind --type f'
-# export FZF_DEFAULT_COMMAND='fdfind --type f --follow --exclude .git --exclude undodir'
+export FZF_DEFAULT_COMMAND='fdfind --type f --follow --exclude .git --exclude undodir'
 # arch | termux | fedora
-export FZF_DEFAULT_COMMAND='fd --type f --follow --exclude .git --exclude undodir'
+# export FZF_DEFAULT_COMMAND='fd --type f --follow --exclude .git --exclude undodir'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd -t d"
+export FZF_ALT_C_COMMAND="fdfind -t d"
 
 fzf-down() {
   fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@"
@@ -258,12 +258,12 @@ fzf-down() {
 
 f() {
    cd ~/
-   nvim -o "$(fzf-down --preview 'bat --style=numbers --color=always --line-range :500 {}')"
+   nvim -o "$(fzf-down --preview 'batcat --style=numbers --color=always --line-range :500 {}')"
 }
 
 c () {
     local dir
-    dir=$(fd -t d . $HOME | fzf-down) &&
+    dir=$(fdfind -t d . $HOME | fzf-down) &&
         cd "$dir"
             clear
             l
@@ -271,7 +271,7 @@ c () {
 
 n () {
     local dir
-    dir=$(fd -t d . $HOME | fzf-down) &&
+    dir=$(fdfind -t d . $HOME | fzf-down) &&
         cd "$dir"
         nnn -de
 }
@@ -388,14 +388,14 @@ rem () {
     tldr --update
 
     # arch base
-    sudo pacman -Syu --noconfirm
-    yay -Sua --noconfirm
+    # sudo pacman -Syu --noconfirm
+    # yay -Sua --noconfirm
 
     # debian base (ubuntu, kali,...)
-    # sudo apt update
-    # sudo apt upgrade -y
-    # sudo apt autoremove -y
-    # sudo apt autoclean
+    sudo apt update
+    sudo apt upgrade -y
+    sudo apt autoremove -y
+    sudo apt autoclean
 
     # rehat base (fedora)
     # sudo dnf update -y
