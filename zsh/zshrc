@@ -224,9 +224,9 @@ alias uins='sudo apt remove -y'
 # alias uins='sudo dnf -y remove'
 
 # arch
-alias ins='sudo pacman -S --noconfirm'
-alias ins2='yay -S --noconfirm'
-alias uins='sudo pacman -Rs --noconfirm'
+# alias ins='sudo pacman -S --noconfirm'
+# alias ins2='yay -S --noconfirm'
+# alias uins='sudo pacman -Rs --noconfirm'
 
 alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 50 ; tmux last-pane ; nvim'
 # alias ide='tmux split-window -v -p 8 ; tmux last-pane ; nvim'
