@@ -365,6 +365,7 @@ function :f() {
 
 browser_daily () {
     cowsay "GET.SHIT.DONE"
+    browser_youtube_subsriptions
     browser_feedly
     browser_mail0
     browser_mail1
