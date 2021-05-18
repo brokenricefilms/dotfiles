@@ -186,8 +186,8 @@ vmap > >gv
 map <space> <leader>
 
 nmap <C-t> :tabnew<Return>
-nmap <S-j> gT
-nmap <S-k> gt
+nmap <S-e> gT
+nmap <S-r> gt
 
 noremap <leader>1 1gt
 noremap <leader>2 2gt
