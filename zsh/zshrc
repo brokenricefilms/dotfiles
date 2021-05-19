@@ -25,6 +25,7 @@ export PATH="$HOME/.npm/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 export PATH="$HOME/gems/bin:$PATH"
+export PATH="$PATH:/opt/mssql-tools/bin"
 export GEM_HOME="$HOME/gems"
 
 export GTK_IM_MODULE=ibus
