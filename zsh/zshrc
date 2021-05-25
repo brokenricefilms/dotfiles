@@ -283,7 +283,7 @@ is_in_git_repo() {
 
 co () {
     is_in_git_repo || return
-    git for-each-ref --format='%(refname:short)' refs/heads | fzf-down | xargs git checkout
+    git branch -a | fzf | xargs git checkout
 }
 
 autoCommit () {
