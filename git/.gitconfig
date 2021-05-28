@@ -1,6 +1,8 @@
 [user]
     name = thuan
     email = phamtanthuan2311@gmail.com
+[core]
+    editor = nvim
 [merge]
     tool = vimdiff
 [mergetool]
