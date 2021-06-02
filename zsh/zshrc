@@ -382,6 +382,7 @@ hi () {
 
 rem () {
     nvim -c "PlugUpdate | qa"
+    nvim -c "CocUpdateSync | qa"
     npm update -g
     npm install -g npm
     gem update neovim
