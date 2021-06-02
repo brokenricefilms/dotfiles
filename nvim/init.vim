@@ -71,6 +71,7 @@ let g:coc_global_extensions = [
             \ "coc-json",
             \ "coc-python",
             \ "coc-vetur",
+            \ "coc-texlab",
             \ "coc-markdownlint",
             \ "coc-clangd",
             \ "coc-sh",
