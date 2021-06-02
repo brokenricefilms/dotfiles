@@ -70,6 +70,8 @@ let g:coc_global_extensions = [
             \ "coc-snippets",
             \ "coc-json",
             \ "coc-python",
+            \ "coc-vetur",
+            \ "coc-markdownlint",
             \ "coc-clangd",
             \ "coc-sh",
             \ "coc-sql",
