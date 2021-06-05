@@ -1,5 +1,3 @@
-keycode 135 = NoSymbol
-keycode  66 = Escape Caps_Lock Escape Caps_Lock
 keycode 66 = Mode_switch
 keysym h = h H Left
 keysym l = l L Right

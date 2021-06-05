@@ -1,4 +1,5 @@
 call plug#begin()
+Plug 'kevinhwang91/vim-ibus-sw'
 Plug 'dkarter/bullets.vim'
 let g:bullets_enabled_file_types = [
     \ 'markdown',
@@ -68,12 +69,7 @@ let g:coc_global_extensions = [
             \ "coc-css",
             \ "coc-html",
             \ "coc-snippets",
-            \ "coc-json",
-            \ "coc-python",
-            \ "coc-markdownlint",
             \ "coc-clangd",
-            \ "coc-sh",
-            \ "coc-sql",
             \ "coc-explorer",
             \ "coc-tsserver",]
 
@@ -130,7 +126,6 @@ let g:rainbow_conf = {
 \		'html': 0,
 \	}
 \}
-Plug 'sheerun/vim-polyglot'
 Plug 'gregsexton/MatchTag', { 'for': 'html' }
 Plug 'norcalli/nvim-colorizer.lua'
 autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
