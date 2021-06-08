@@ -1,4 +1,7 @@
 call plug#begin()
+Plug 'vimwiki/vimwiki'
+let g:vimwiki_list = [{'path': '~/syns/note/', 'path_html': '~/syns/note/publish_html/',
+                       \ 'syntax': 'markdown', 'ext': '.md','list_margin': 0}]
 Plug 'kevinhwang91/vim-ibus-sw'
 Plug 'dkarter/bullets.vim'
 let g:bullets_enabled_file_types = [
