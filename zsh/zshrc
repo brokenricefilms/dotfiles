@@ -376,7 +376,7 @@ browser_daily () {
 
 hi () {
     browser_daily
-    sleep 20
+    sleep 60
     rem
 }
 
