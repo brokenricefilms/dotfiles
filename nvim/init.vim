@@ -51,7 +51,7 @@ noremap <leader>f :Files<cr>
 noremap <leader>b :Buffers<CR>
 noremap <leader>F :Files ~<CR>
 noremap <leader>r :Rg<CR>
-noremap gc :GCheckout<CR>
+noremap <leader>gc :GCheckout<CR>
 noremap <c-p> :Commands<CR>
 noremap // :BLines<CR>
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }

@@ -398,7 +398,7 @@ rem () {
     sudo apt upgrade -y
     sudo apt autoremove -y
     sudo apt autoclean
-    # flatpak update -y
+    flatpak update -y
 
     # rehat base (fedora)
     # sudo dnf update -y
