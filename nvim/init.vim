@@ -1,6 +1,6 @@
 call plug#begin()
 Plug 'tpope/vim-fugitive'
-nmap <leader>g :G<CR>
+nmap <leader>gs :G<CR>
 Plug 'vimwiki/vimwiki'
 let g:vimwiki_list = [{'path': '~/syns/note/',
                     \ 'path_html': '~/syns/note/publish_html/',
@@ -45,11 +45,13 @@ map mm <Plug>NERDCommenterToggle
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'stsewd/fzf-checkout.vim'
 imap <c-x><c-f> <plug>(fzf-complete-path)
 noremap <leader>f :Files<cr>
 noremap <leader>b :Buffers<CR>
 noremap <leader>F :Files ~<CR>
 noremap <leader>r :Rg<CR>
+noremap gc :GCheckout<CR>
 noremap <c-p> :Commands<CR>
 noremap // :BLines<CR>
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
