@@ -1,4 +1,6 @@
 call plug#begin()
+Plug 'tpope/vim-fugitive'
+nmap <leader>g :G<CR>
 Plug 'vimwiki/vimwiki'
 let g:vimwiki_list = [{'path': '~/syns/note/',
                     \ 'path_html': '~/syns/note/publish_html/',
@@ -150,6 +152,8 @@ highlight WildMenu guifg=#78A79C
 set termguicolors
 source ~/dotfiles/nvim/themeControl.vim
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
+highlight OverLength ctermbg=red ctermfg=white guifg=#bcbcbc
+match OverLength /\%81v.\+/
 
 autocmd InsertLeave,WinEnter * set cursorline
 autocmd InsertEnter,WinLeave * set nocursorline
@@ -173,7 +177,6 @@ set clipboard=unnamedplus
 set autoindent
 set smartindent
 set autoread
-au CursorHold * checktime
 set autowrite
 set nobackup
 set noswapfile
@@ -220,7 +223,6 @@ map <silent> <Left> <C-w>>
 command! W execute "w !sudo tee %"
 
 nmap <leader>a :call FloatTerm()<CR>
-nmap <leader>g :call FloatTerm('"tig"')<CR>
 nmap <leader>h :call FloatTerm('"htop"')<CR>
 function! FloatTerm(...)
     let height = float2nr((&lines - 2) * 0.6)
