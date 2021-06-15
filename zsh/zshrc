@@ -207,7 +207,6 @@ alias colorPicker='zenity --color-selection'
 alias cat='batcat'
 # arch | fedora
 # alias cat='bat'
-alias nnn='nnn -de'
 
 # music stuff
 alias m='mpv --shuffle ~/Music/*'
@@ -268,13 +267,6 @@ c () {
         cd "$dir"
             clear
             l
-}
-
-n () {
-    local dir
-    dir=$(fdfind -t d . $HOME | fzf-down) &&
-        cd "$dir"
-        nnn -de
 }
 
 is_in_git_repo() {
