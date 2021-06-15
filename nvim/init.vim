@@ -1,4 +1,5 @@
 call plug#begin()
+Plug 'camspiers/lens.vim'
 Plug 'tpope/vim-fugitive'
 nmap <leader>gs :G<CR>
 Plug 'vimwiki/vimwiki'
