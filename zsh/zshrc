@@ -377,10 +377,10 @@ browser_daily () {
 hi () {
     browser_daily
     sleep 20
-    rem
+    update
 }
 
-rem () {
+update () {
     nvim -c "PlugUpdate | qa"
     nvim -c "CocUpdateSync | qa"
     npm update -g
