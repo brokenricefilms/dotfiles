@@ -1,5 +1,6 @@
 call plug#begin()
 Plug 'camspiers/lens.vim'
+let g:lens#disabled_filetypes = ['coc-explorer', 'fzf', 'fugitiveblame']
 Plug 'tpope/vim-fugitive'
 nmap <leader>gs :G<CR>
 Plug 'vimwiki/vimwiki'
