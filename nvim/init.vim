@@ -229,6 +229,7 @@ set noswapfile
 set lazyredraw
 set nowritebackup
 set inccommand=split
+set scrolloff=5
 
 nnoremap + <C-a>
 nnoremap - <C-x>
