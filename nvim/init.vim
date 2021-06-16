@@ -42,7 +42,8 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 Plug 'camspiers/lens.vim'
-let g:lens#disabled_filetypes = ['coc-explorer', 'fzf', 'fugitiveblame']
+let g:lens#disabled_filetypes = ['undotree', 'coc-explorer', 'fzf', 'fugitiveblame']
+
 Plug 'tpope/vim-fugitive'
 nmap <leader>gs :G<CR>
 nmap <leader>gl :Gclog<CR>
@@ -154,7 +155,7 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 Plug 'mbbill/undotree'
 set undodir=~/syns/ok/undodir
 set undofile
-nnoremap <leader>u :UndotreeShow<CR>
+nnoremap <leader>u :UndotreeToggle<CR>
 
 Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
 let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
