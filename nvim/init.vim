@@ -45,6 +45,7 @@ Plug 'camspiers/lens.vim'
 let g:lens#disabled_filetypes = ['coc-explorer', 'fzf', 'fugitiveblame']
 Plug 'tpope/vim-fugitive'
 nmap <leader>gs :G<CR>
+nmap <leader>gl :Gclog<CR>
 Plug 'vimwiki/vimwiki'
 let g:vimwiki_list = [{'path': '~/syns/note/',
             \ 'path_html': '~/syns/note/publish_html/',
