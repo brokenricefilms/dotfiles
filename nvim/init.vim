@@ -47,19 +47,19 @@ Plug 'tpope/vim-fugitive'
 nmap <leader>gs :G<CR>
 Plug 'vimwiki/vimwiki'
 let g:vimwiki_list = [{'path': '~/syns/note/',
-                    \ 'path_html': '~/syns/note/publish_html/',
-                    \ 'syntax': 'markdown',
-                    \ 'ext': '.md',
-                    \ 'list_margin': 0}]
+            \ 'path_html': '~/syns/note/publish_html/',
+            \ 'syntax': 'markdown',
+            \ 'ext': '.md',
+            \ 'list_margin': 0}]
 
 Plug 'kevinhwang91/vim-ibus-sw'
 Plug 'dkarter/bullets.vim'
 let g:bullets_enabled_file_types = [
-    \ 'markdown',
-    \ 'text',
-    \ 'gitcommit',
-    \ 'scratch'
-    \]
+            \ 'markdown',
+            \ 'text',
+            \ 'gitcommit',
+            \ 'scratch'
+            \]
 Plug 'wellle/tmux-complete.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'liuchengxu/vista.vim'
@@ -177,10 +177,10 @@ highlight ExtraWhitespace ctermbg=None
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
 let g:rainbow_conf = {
-\	'separately': {
-\		'html': 0,
-\	}
-\}
+            \	'separately': {
+            \		'html': 0,
+            \	}
+            \}
 Plug 'gregsexton/MatchTag', { 'for': 'html' }
 Plug 'norcalli/nvim-colorizer.lua'
 autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
@@ -338,18 +338,18 @@ function! CheckFishFile()
 endfunction
 
 function! TrimWhitespace()
-  let l:save = winsaveview()
-  keeppatterns %s/\s\+$//e
-  call winrestview(l:save)
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
 endfunction
 command! TrimWhitespace call TrimWhitespace()
 
 if has("autocmd")
-  augroup autoJumpLastCursor
-  autocmd!
-  autocmd BufReadPost *
-  \ if line("'\"") > 0 && line ("'\"") <= line("$") |
-  \   exe "normal! g'\"" |
-  \ endif
-  augroup END
+    augroup autoJumpLastCursor
+        autocmd!
+        autocmd BufReadPost *
+                    \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+                    \   exe "normal! g'\"" |
+                    \ endif
+    augroup END
 endif
