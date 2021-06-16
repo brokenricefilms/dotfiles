@@ -301,3 +301,13 @@ function! TrimWhitespace()
   call winrestview(l:save)
 endfunction
 command! TrimWhitespace call TrimWhitespace()
+
+if has("autocmd")
+  augroup autoJumpLastCursor
+  autocmd!
+  autocmd BufReadPost *
+  \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+  \   exe "normal! g'\"" |
+  \ endif
+  augroup END
+endif
