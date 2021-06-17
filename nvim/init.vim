@@ -42,7 +42,8 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 Plug 'camspiers/lens.vim'
-let g:lens#disabled_filetypes = ['undotree', 'coc-explorer', 'fzf', 'fugitiveblame']
+let g:lens#disabled_filetypes = ['undotree', 'coc-explorer',
+                                \ 'fzf', 'fugitiveblame']
 
 Plug 'tpope/vim-fugitive'
 nmap <leader>gs :G<CR>
@@ -62,6 +63,7 @@ let g:bullets_enabled_file_types = [
             \ 'gitcommit',
             \ 'scratch'
             \]
+
 Plug 'wellle/tmux-complete.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'liuchengxu/vista.vim'
@@ -188,7 +190,8 @@ Plug 'norcalli/nvim-colorizer.lua'
 autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
 Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '▏'
-let g:indentLine_fileTypeExclude = ['haskell','json','yaml','markdown','text','sh','vim']
+let g:indentLine_fileTypeExclude = ['haskell','json','yaml',
+                                \ 'markdown','text','sh','vim']
 Plug 'lukas-reineke/indent-blankline.nvim'
 
 Plug 'NLKNguyen/papercolor-theme'
@@ -211,7 +214,9 @@ set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
 set tabstop=4 softtabstop=4 noet
 set shiftwidth=4
-autocmd BufRead,BufNewFile *.scss,*.css,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd BufRead,BufNewFile *.scss,*.css,*.html setlocal tabstop=2
+                                                    \ shiftwidth=2
+                                                    \ softtabstop=2
 set expandtab
 
 set number relativenumber
