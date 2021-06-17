@@ -303,13 +303,6 @@ ok () {
     push
 }
 
-okp () {
-    is_in_git_repo || return
-    st
-    autoCommit
-    push
-}
-
 alias ghok='cd ~/syns/ok ; okp ; cd -'
 alias ghnote='cd ~/syns/note ; ok ; cd -'
 alias glok='cd ~/syns/ok ; pull ; cd -'
