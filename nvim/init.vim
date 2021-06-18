@@ -48,12 +48,12 @@ let g:lens#disabled_filetypes = ['undotree', 'coc-explorer',
 Plug 'tpope/vim-fugitive'
 nmap <leader>gs :G<CR>
 nmap <leader>gl :Gclog<CR>
-Plug 'vimwiki/vimwiki'
-let g:vimwiki_list = [{'path': '~/syns/note/',
-            \ 'path_html': '~/syns/note/publish_html/',
-            \ 'syntax': 'markdown',
-            \ 'ext': '.md',
-            \ 'list_margin': 0}]
+" Plug 'vimwiki/vimwiki'
+" let g:vimwiki_list = [{'path': '~/syns/note/',
+            " \ 'path_html': '~/syns/note/publish_html/',
+            " \ 'syntax': 'markdown',
+            " \ 'ext': '.md',
+            " \ 'list_margin': 0}]
 
 Plug 'kevinhwang91/vim-ibus-sw'
 Plug 'dkarter/bullets.vim'
