@@ -1,7 +1,8 @@
 call plug#begin()
 Plug 'camspiers/lens.vim'
 let g:lens#disabled_filetypes = ['undotree', 'coc-explorer',
-                                \ 'fzf', 'fugitiveblame']
+                                \ 'fzf', 'fugitiveblame',
+                                \ 'Vista']
 
 Plug 'tpope/vim-fugitive'
 nmap <leader>gs :G<CR>
