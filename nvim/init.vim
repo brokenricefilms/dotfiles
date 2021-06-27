@@ -280,6 +280,7 @@ augroup General
     autocmd BufNewFile *.fish  :call CheckFishFile()
     autocmd BufNewFile *.py :call CheckPyFile()
     autocmd BufNewFile *.sh  :call CheckShFile()
+    autocmd BufNewFile *.html  :read ~/.config/nvim/stuff/htmlTemplate.html | normal!kdd
     autocmd BufWritePre * :call TrimWhitespace()
 augroup END
 
