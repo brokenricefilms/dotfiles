@@ -1,8 +1,22 @@
 call plug#begin()
+Plug 'phaazon/hop.nvim'
+map  <Leader><space> :HopWord<CR>
+nmap <Leader><space> :HopWord<CR>
+
+Plug 'kyazdani42/nvim-tree.lua'
+let g:nvim_tree_follow = 1
+let g:nvim_tree_special_files = [ 'README.md', 'Makefile', 'MAKEFILE' ]
+let g:nvim_tree_show_icons = {
+    \ 'git': 1,
+    \ 'folders': 0,
+    \ 'files': 0,
+    \ 'folder_arrows': 0,
+    \ }
+nnoremap <C-n> :NvimTreeToggle<CR>
+
 Plug 'camspiers/lens.vim'
-let g:lens#disabled_filetypes = ['undotree', 'coc-explorer',
-                                \ 'fzf', 'fugitiveblame',
-                                \ 'Vista']
+let g:lens#disabled_filetypes = ['undotree', 'Vista',
+                                \ 'fzf', 'fugitiveblame']
 
 Plug 'tpope/vim-fugitive'
 nmap <leader>gs :G<CR>
@@ -25,11 +39,6 @@ nmap <leader>t :Vista!!<CR>
 Plug 'jdhao/better-escape.vim'
 let g:better_escape_interval = 200
 let g:better_escape_shortcut = 'jj'
-
-Plug 'easymotion/vim-easymotion'
-hi link EasyMotionTarget Search
-map  <Leader><space> <Plug>(easymotion-bd-w)
-nmap <Leader><space> <Plug>(easymotion-overwin-w)
 
 Plug 'mattn/emmet-vim'
 let g:user_emmet_leader_key=','
@@ -82,7 +91,6 @@ let g:coc_global_extensions = [
             \ "coc-html",
             \ "coc-snippets",
             \ "coc-clangd",
-            \ "coc-explorer",
             \ "coc-tsserver",]
 
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
@@ -101,8 +109,6 @@ endfunction
 let g:coc_snippet_next = '<tab>'
 
 Plug 'honza/vim-snippets'
-
-nmap <space>e :CocCommand explorer<CR>
 
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
@@ -158,6 +164,8 @@ source ~/dotfiles/nvim/themeControl.vim
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
 highlight OverLength ctermbg=red ctermfg=white guifg=#bcbcbc
 match OverLength /\%81v.\+/
+hi HopNextKey guibg=#ffff00 guifg=#1c1c1c
+hi HopNextKey1 guibg=#ffff00 guifg=#1c1c1c
 
 autocmd InsertLeave,WinEnter * set cursorline
 autocmd InsertEnter,WinLeave * set nocursorline
