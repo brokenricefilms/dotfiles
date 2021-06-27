@@ -12,7 +12,7 @@ let g:nvim_tree_show_icons = {
     \ 'files': 0,
     \ 'folder_arrows': 0,
     \ }
-nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <leader>e :NvimTreeToggle<CR>
 
 Plug 'camspiers/lens.vim'
 let g:lens#disabled_filetypes = ['undotree', 'Vista',
