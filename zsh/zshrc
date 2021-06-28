@@ -265,7 +265,6 @@ c () {
     local dir
     dir=$(fdfind -t d . $HOME | fzf-down) &&
         cd "$dir"
-            clear
             l
 }
 
