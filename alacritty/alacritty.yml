@@ -36,10 +36,10 @@ colors:
 
 font:
   normal:
-    family: Cascadia Code
+    family: JetBrains Mono
     style: Regular
   bold:
-    family: Cascadia Code
+    family: JetBrains Mono
     style: Bold
   italic:
     family: Cascadia Code
