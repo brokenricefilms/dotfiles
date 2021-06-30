@@ -1,18 +1,15 @@
 env:
   TERM: xterm-256color
-# PaperColor Light 256 - alacritty color config
+
 colors:
-  # Default colors
   primary:
     background: "0xeeeeee"
     foreground: "0x4d4d4c"
 
-  # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
     text: "0xf3f3f3"
     cursor: "0x4d4d4c"
 
-  # Normal colors
   normal:
     black: "0xededed"
     red: "0xd7005f"
@@ -23,7 +20,6 @@ colors:
     cyan: "0x3e999f"
     white: "0x4d4d4c"
 
-  # Bright colors
   bright:
     black: "0x949494"
     red: "0xd7005f"
@@ -42,6 +38,6 @@ font:
     family: JetBrains Mono
     style: Bold
   italic:
-    family: Cascadia Code
+    family: JetBrains Mono
     style: Italic
   size: 11
