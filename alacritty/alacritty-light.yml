@@ -3,32 +3,32 @@ env:
 
 colors:
   primary:
-    background: "0xeeeeee"
-    foreground: "0x4d4d4c"
+    background: "#eeeeee"
+    foreground: "#444444"
 
   cursor:
-    text: "0xf3f3f3"
-    cursor: "0x4d4d4c"
+    text: "#eeeeee"
+    cursor: "#444444"
 
   normal:
-    black: "0xededed"
-    red: "0xd7005f"
-    green: "0x718c00"
-    yellow: "0xd75f00"
-    blue: "0x4271ae"
-    magenta: "0x8959a8"
-    cyan: "0x3e999f"
-    white: "0x4d4d4c"
+    black: "#eeeeee"
+    red: "#af0000"
+    green: "#008700"
+    yellow: "#5f8700"
+    blue: "#0087af"
+    magenta: "#8700af"
+    cyan: "#005f87"
+    white: "#878787"
 
   bright:
-    black: "0x949494"
-    red: "0xd7005f"
-    green: "0x718c00"
-    yellow: "0xd75f00"
-    blue: "0x4271ae"
-    magenta: "0x8959a8"
-    cyan: "0x3e999f"
-    white: "0xf5f5f5"
+    black: "#bcbcbc"
+    red: "#af0000"
+    green: "#008700"
+    yellow: "#5f8700"
+    blue: "#0087af"
+    magenta: "#8700af"
+    cyan: "#005f87"
+    white: "#eeeeee"
 
 font:
   normal:
