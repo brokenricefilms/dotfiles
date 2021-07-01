@@ -3,17 +3,11 @@ Plug 'phaazon/hop.nvim'
 map  <Leader><space> :HopWord<CR>
 nmap <Leader><space> :HopWord<CR>
 
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 let g:nvim_tree_follow = 1
 let g:nvim_tree_special_files = [ 'README.md', 'Makefile', 'MAKEFILE' ]
-let g:nvim_tree_show_icons = {
-    \ 'git': 1,
-    \ 'folders': 0,
-    \ 'files': 0,
-    \ 'folder_arrows': 0,
-    \ }
 nnoremap <leader>e :NvimTreeToggle<CR>
-
 Plug 'camspiers/lens.vim'
 let g:lens#disabled_filetypes = ['undotree', 'Vista',
                                 \ 'fzf', 'fugitiveblame']
