@@ -60,12 +60,12 @@ colors:
 
 font:
   normal:
-    family: JetBrainsMono Nerd Font Mono
+    family: SauceCodePro Nerd Font
     style: Regular
   bold:
-    family: JetBrainsMono Nerd Font Mono
+    family: SauceCodePro Nerd Font
     style: Bold
   italic:
-    family: JetBrainsMono Nerd Font Mono
+    family: SauceCodePro Nerd Font
     style: Italic
   size: 11
