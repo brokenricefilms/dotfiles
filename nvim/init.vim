@@ -155,15 +155,14 @@ Plug 'sainnhe/gruvbox-material'
 call plug#end()
 
 syntax enable
-highlight WildMenu guifg=#5f8700
 set termguicolors
-source ~/dotfiles/nvim/themeControl.vim
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
-highlight OverLength ctermbg=red ctermfg=white guifg=#bcbcbc
-match OverLength /\%81v.\+/
 hi HopNextKey guibg=#ffff00 guifg=#1c1c1c
 hi HopNextKey1 guibg=#ffff00 guifg=#1c1c1c
 hi HopNextKey2 guibg=#ffff00 guifg=#1c1c1c
+highlight WildMenu guifg=#5f8700
+highlight OverLength ctermbg=red ctermfg=white guifg=#bcbcbc
+match OverLength /\%81v.\+/
 
 autocmd InsertLeave,WinEnter * set cursorline
 autocmd InsertEnter,WinLeave * set nocursorline
