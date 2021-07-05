@@ -28,13 +28,6 @@ export PATH="$HOME/gems/bin:$PATH"
 export PATH="$PATH:/opt/mssql-tools/bin"
 export GEM_HOME="$HOME/gems"
 
-export GTK_IM_MODULE=ibus
-export QT_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT4_IM_MODULE=ibus
-export CLUTTER_IM_MODULE=ibus
-export GLFW_IM_MODULE=ibus
-
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' rehash true
