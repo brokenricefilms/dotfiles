@@ -158,9 +158,11 @@ call plug#end()
 syntax enable
 set termguicolors
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
+source ~/.config/nvim/themeControl.vim
 hi HopNextKey guibg=#ffff00 guifg=#1c1c1c
 hi HopNextKey1 guibg=#ffff00 guifg=#1c1c1c
 hi HopNextKey2 guibg=#ffff00 guifg=#1c1c1c
+
 highlight WildMenu guifg=#5f8700
 highlight OverLength ctermbg=red ctermfg=white guifg=#bcbcbc
 match OverLength /\%81v.\+/

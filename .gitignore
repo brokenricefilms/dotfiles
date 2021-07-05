@@ -1,7 +1,7 @@
 /nvim/plugged/*
 /nvim/plugged/*
 /zsh/functions/zsh-syntax-highlighting
-/nvim/after/plugin/themeControl.vim
+/nvim/themeControl.vim
 /kitty/theme.conf
 /bat/config
 
