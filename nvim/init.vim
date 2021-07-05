@@ -29,6 +29,7 @@ Plug 'wellle/tmux-complete.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'liuchengxu/vista.vim'
 nmap <leader>t :Vista!!<CR>
+let g:vista_sidebar_width=25
 
 Plug 'jdhao/better-escape.vim'
 let g:better_escape_interval = 200
