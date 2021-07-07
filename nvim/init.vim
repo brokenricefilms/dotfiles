@@ -1,7 +1,7 @@
 call plug#begin()
 Plug 'phaazon/hop.nvim'
-map  <Leader><space> :HopWord<CR>
-nmap <Leader><space> :HopWord<CR>
+map  f :HopWord<CR>
+nmap f :HopWord<CR>
 
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
@@ -13,8 +13,10 @@ let g:lens#disabled_filetypes = ['undotree', 'Vista',
                                 \ 'fzf', 'fugitiveblame']
 
 Plug 'tpope/vim-fugitive'
-nmap <leader>gs :G<CR>
-nmap <leader>gl :Gclog<CR>
+nmap gs :G<CR>
+nmap gl :Gclog<CR>
+Plug 'stsewd/fzf-checkout.vim'
+noremap gc :GCheckout<CR>
 
 Plug 'kevinhwang91/vim-ibus-sw'
 Plug 'dkarter/bullets.vim'
@@ -50,13 +52,11 @@ map mm <Plug>NERDCommenterToggle
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'stsewd/fzf-checkout.vim'
 imap <c-x><c-f> <plug>(fzf-complete-path)
 noremap <leader>f :Files<cr>
 noremap <leader>b :Buffers<CR>
 noremap <leader>F :Files ~<CR>
 noremap <leader>r :Rg<CR>
-noremap <leader>gc :GCheckout<CR>
 noremap <c-p> :Commands<CR>
 noremap // :BLines<CR>
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
