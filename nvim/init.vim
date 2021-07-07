@@ -164,8 +164,6 @@ hi HopNextKey1 guibg=#ffff00 guifg=#1c1c1c
 hi HopNextKey2 guibg=#ffff00 guifg=#1c1c1c
 
 highlight WildMenu guifg=#5f8700
-highlight OverLength ctermbg=red ctermfg=white guifg=#bcbcbc
-match OverLength /\%81v.\+/
 
 set cursorline
 autocmd InsertLeave,WinEnter * set cursorline
