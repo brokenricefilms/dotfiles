@@ -200,6 +200,8 @@ alias colorPicker='zenity --color-selection'
 alias cat='batcat'
 # arch | fedora
 # alias cat='bat'
+export GREP_COLOR='1;31'
+alias grep='grep --color=auto'
 
 # music stuff
 alias m='mpv --shuffle ~/Music/*'
