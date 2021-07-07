@@ -167,6 +167,7 @@ highlight WildMenu guifg=#5f8700
 highlight OverLength ctermbg=red ctermfg=white guifg=#bcbcbc
 match OverLength /\%81v.\+/
 
+set cursorline
 autocmd InsertLeave,WinEnter * set cursorline
 autocmd InsertEnter,WinLeave * set nocursorline
 
