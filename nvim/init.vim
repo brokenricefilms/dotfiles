@@ -233,6 +233,7 @@ map <silent> <Right> <C-w><
 map <silent> <Down> <C-W>-
 map <silent> <Up> <C-W>+
 map <silent> <Left> <C-w>>
+
 nmap cd. :cd %:h<CR>
 nmap cd :cd<CR>
 
