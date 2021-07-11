@@ -52,7 +52,7 @@ map mm <Plug>NERDCommenterToggle
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-f> <plug>(fzf-complete-path)
 noremap <leader>f :Files<cr>
 noremap <leader>b :Buffers<CR>
 noremap <leader>F :Files ~<CR>

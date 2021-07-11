@@ -26,6 +26,7 @@ export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 export PATH="$HOME/gems/bin:$PATH"
 export PATH="$PATH:/opt/mssql-tools/bin"
+export PATH=$PATH:~/.local/bin
 export GEM_HOME="$HOME/gems"
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
@@ -269,7 +270,7 @@ is_in_git_repo() {
 
 co () {
     is_in_git_repo || return
-    git branch -a | fzf | xargs git checkout
+    git branch -a | fzf-down | xargs git checkout
 }
 
 autoCommit () {
