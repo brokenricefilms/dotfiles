@@ -3,3 +3,4 @@
 source ~/dotfiles/zsh/zshrc
 
 glnote ; ghnote
+gldocs ; ghdocs

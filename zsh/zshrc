@@ -282,9 +282,14 @@ alias st='git status -sb'
 alias add='git add'
 alias push="git push"
 alias pull="git pull"
-alias clone='git clone'
 alias cm='git commit'
 alias dt='git difftool'
+
+gc () {
+  git_dir="$(basename "$1" .git)"
+  git_dir_resolved=${2:-$git_dir}
+  git clone "$@" && cd "$git_dir_resolved";
+}
 
 prettierCpp () {
     clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp')
@@ -299,8 +304,10 @@ ok () {
 
 alias ghok='cd ~/syns/ok ; okp ; cd -'
 alias ghnote='cd ~/syns/note ; ok ; cd -'
+alias ghdocs='cd ~/syns/docs ; ok ; cd -'
 alias glok='cd ~/syns/ok ; pull ; cd -'
 alias glnote='cd ~/syns/note ;  pull ; cd -'
+alias gldocs='cd ~/syns/docs ;  pull ; cd -'
 
 alias browser='xdg-open'
 alias github='browser --new-window "https://github.com/thuanpham2311"'
