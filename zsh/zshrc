@@ -248,6 +248,8 @@ export FZF_DEFAULT_COMMAND='fdfind --type f --follow --exclude .git --exclude un
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fdfind -t d"
 
+alias ej="emoji-fzf preview --prepend | fzf-down | awk '{ print \$1 }' | xclip -selection c"
+
 fzf-down() {
   fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse
 }
