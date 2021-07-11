@@ -307,10 +307,8 @@ ok () {
 
 alias ghok='cd ~/syns/ok ; okp ; cd -'
 alias ghnote='cd ~/syns/note ; ok ; cd -'
-alias ghdocs='cd ~/syns/docs ; ok ; cd -'
 alias glok='cd ~/syns/ok ; pull ; cd -'
 alias glnote='cd ~/syns/note ;  pull ; cd -'
-alias gldocs='cd ~/syns/docs ;  pull ; cd -'
 
 alias browser='xdg-open'
 alias github='browser --new-window "https://github.com/thuanpham2311"'
