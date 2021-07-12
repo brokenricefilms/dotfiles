@@ -16,6 +16,7 @@ let g:lens#disabled_filetypes = ['undotree', 'Vista',
 Plug 'tpope/vim-fugitive'
 nmap gs :G<CR>
 nmap gl :Gclog<CR>
+
 Plug 'stsewd/fzf-checkout.vim'
 noremap gc :GCheckout<CR>
 
