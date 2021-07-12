@@ -8,6 +8,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 let g:nvim_tree_follow = 1
 let g:nvim_tree_special_files = [ 'README.md', 'Makefile', 'MAKEFILE' ]
 nnoremap <leader>e :NvimTreeToggle<CR>
+
 Plug 'camspiers/lens.vim'
 let g:lens#disabled_filetypes = ['undotree', 'Vista',
                                 \ 'fzf', 'fugitiveblame']
