@@ -1,4 +1,13 @@
 call plug#begin()
+Plug 'ferrine/md-img-paste.vim'
+let g:mdip_imgdir = '.'
+autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
+Plug 'vimwiki/vimwiki'
+let g:vimwiki_list = [{'path': '~/syns/note/',
+            \ 'path_html': '~/syns/note/publish_html/',
+            \ 'syntax': 'markdown',
+            \ 'ext': '.md',
+            \ 'list_margin': 0}]
 Plug 'phaazon/hop.nvim'
 map  f :HopWord<CR>
 nmap f :HopWord<CR>
@@ -225,6 +234,7 @@ noremap <leader>9 9gt
 nmap <space>s :setlocal spell! spell?<CR>
 
 command! Reload execute "source ~/.config/nvim/init.vim"
+nmap R :Reload<CR>
 
 nnoremap <space>? :echo expand("%:p")<CR>
 
