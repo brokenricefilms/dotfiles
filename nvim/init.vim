@@ -96,6 +96,7 @@ let g:coc_global_extensions = [
             \ "coc-css",
             \ "coc-html",
             \ "coc-snippets",
+            \ "coc-sql",
             \ "coc-clangd",
             \ "coc-tsserver",]
 
