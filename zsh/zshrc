@@ -230,7 +230,7 @@ alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 50 ; tmux last-p
 alias qa='tmux kill-session -a ; cowsay "All session deleted" ; tmux ls'
 
 alias ..='cd .. ; clear ; l'
-alias ...='cd .. ; cd .. ; cd .. ; clear ; l'
+alias ...='cd .. ; cd .. ; clear ; l'
 alias dow='cd ~/Downloads ; clear ; l'
 alias doc='cd ~/Documents ; clear ; l'
 
