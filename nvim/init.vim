@@ -3,6 +3,7 @@ Plug 'ferrine/md-img-paste.vim'
 let g:mdip_imgdir = '.'
 autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
 Plug 'vimwiki/vimwiki'
+let g:vimwiki_table_mappings = 0
 let g:vimwiki_list = [{'path': '~/syns/note/',
             \ 'path_html': '~/syns/note/publish_html/',
             \ 'syntax': 'markdown',
@@ -110,6 +111,7 @@ endfunction
 let g:coc_snippet_next = '<tab>'
 
 Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
 
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
