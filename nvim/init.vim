@@ -38,8 +38,6 @@ let g:bullets_enabled_file_types = [
             \]
 
 Plug 'wellle/tmux-complete.vim'
-Plug 'editorconfig/editorconfig-vim'
-
 Plug 'jdhao/better-escape.vim'
 let g:better_escape_interval = 200
 let g:better_escape_shortcut = 'jj'
