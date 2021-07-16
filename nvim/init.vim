@@ -19,8 +19,7 @@ let g:nvim_tree_special_files = [ 'README.md', 'Makefile', 'MAKEFILE' ]
 nnoremap <leader>e :NvimTreeToggle<CR>
 
 Plug 'camspiers/lens.vim'
-let g:lens#disabled_filetypes = ['undotree', 'Vista',
-                                \ 'fzf', 'fugitiveblame']
+let g:lens#disabled_filetypes = ['undotree', 'fzf', 'fugitiveblame']
 
 Plug 'tpope/vim-fugitive'
 nmap gs :G<CR>
@@ -40,9 +39,6 @@ let g:bullets_enabled_file_types = [
 
 Plug 'wellle/tmux-complete.vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'liuchengxu/vista.vim'
-nmap <leader>t :Vista!!<CR>
-let g:vista_sidebar_width=25
 
 Plug 'jdhao/better-escape.vim'
 let g:better_escape_interval = 200
