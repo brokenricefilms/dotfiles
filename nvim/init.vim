@@ -111,7 +111,7 @@ endfunction
 let g:coc_snippet_next = '<tab>'
 
 Plug 'honza/vim-snippets'
-Plug 'SirVer/ultisnips'
+Plug 'sirver/ultisnips'
 
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
