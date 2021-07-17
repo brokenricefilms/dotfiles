@@ -2,6 +2,7 @@ call plug#begin()
 Plug 'ferrine/md-img-paste.vim'
 let g:mdip_imgdir = '.'
 autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
+
 Plug 'vimwiki/vimwiki'
 let g:vimwiki_table_mappings = 0
 let g:vimwiki_list = [{'path': '~/syns/note/',
@@ -9,6 +10,7 @@ let g:vimwiki_list = [{'path': '~/syns/note/',
             \ 'syntax': 'markdown',
             \ 'ext': '.md',
             \ 'list_margin': 0}]
+
 Plug 'phaazon/hop.nvim'
 map  f :HopWord<CR>
 nmap f :HopWord<CR>
