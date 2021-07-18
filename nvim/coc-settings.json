@@ -1,4 +1,5 @@
 {
+  "snippets.userSnippetsDirectory": "~/dotfiles/nvim/snips",
   "coc.preferences.useQuickfixForLocations": true,
   "diagnostic.warningSign": "",
   "diagnostic.errorSign": "",
@@ -32,6 +33,5 @@
     "default": "\uf29c"
   },
   "typescript.showUnused": true,
-  "javascript.showUnused": true,
-  "suggest.noselect": true
+  "javascript.showUnused": true
 }
