@@ -5,6 +5,7 @@ autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownCli
 
 Plug 'vimwiki/vimwiki'
 let g:vimwiki_table_mappings = 0
+au filetype vimwiki silent! iunmap <buffer> <Tab>
 let g:vimwiki_list = [{'path': '~/syns/note/',
             \ 'path_html': '~/syns/note/publish_html/',
             \ 'syntax': 'markdown',
