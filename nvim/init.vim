@@ -12,8 +12,8 @@ let g:vimwiki_list = [{'path': '~/syns/note/',
             \ 'list_margin': 0}]
 
 Plug 'phaazon/hop.nvim'
-map  f :HopWord<CR>
-nmap f :HopWord<CR>
+map  f :HopChar1<CR>
+nmap  f :HopChar1<CR>
 
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
@@ -233,7 +233,6 @@ noremap <leader>9 9gt
 nmap <space>s :setlocal spell! spell?<CR>
 
 command! Reload execute "source ~/.config/nvim/init.vim"
-nmap R :Reload<CR>
 
 nnoremap <space>? :echo expand("%:p")<CR>
 
