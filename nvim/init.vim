@@ -1,7 +1,7 @@
 call plug#begin()
 Plug 'ferrine/md-img-paste.vim'
 let g:mdip_imgdir = '.'
-autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
+autocmd FileType markdown noremap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
 
 Plug 'vimwiki/vimwiki'
 let g:vimwiki_key_mappings = {
@@ -25,7 +25,7 @@ let g:vimwiki_list = [{'path': '~/syns/note/',
 
 Plug 'phaazon/hop.nvim'
 map  f :HopChar1<CR>
-nmap  f :HopChar1<CR>
+noremap  f :HopChar1<CR>
 
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
@@ -37,8 +37,8 @@ Plug 'camspiers/lens.vim'
 let g:lens#disabled_filetypes = ['undotree', 'fzf', 'fugitiveblame']
 
 Plug 'tpope/vim-fugitive'
-nmap gs :G<CR>
-nmap gl :Gclog<CR>
+noremap gs :G<CR>
+noremap gl :Gclog<CR>
 
 Plug 'stsewd/fzf-checkout.vim'
 noremap gc :GCheckout<CR>
@@ -72,7 +72,7 @@ map mm <Plug>NERDCommenterToggle
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-imap <c-f> <plug>(fzf-complete-path)
+inoremap <c-f> <plug>(fzf-complete-path)
 noremap <leader>f :Files<cr>
 noremap <leader>b :Buffers<CR>
 noremap <leader>F :Files ~<CR>
@@ -116,8 +116,8 @@ let g:coc_snippet_prev = '<S-TAB>'
 
 inoremap <silent><expr> <c-n> coc#refresh()
 
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+noremap <silent> [g <Plug>(coc-diagnostic-prev)
+noremap <silent> ]g <Plug>(coc-diagnostic-next)
 
 Plug 'mbbill/undotree'
 set undodir=~/syns/ok/undodir
@@ -171,11 +171,12 @@ call plug#end()
 syntax enable
 set termguicolors
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
-source ~/.config/nvim/themeControl.vim
-hi HopNextKey guibg=#ffff00 guifg=#1c1c1c
-hi HopNextKey1 guibg=#ffff00 guifg=#1c1c1c
-hi HopNextKey2 guibg=#ffff00 guifg=#1c1c1c
 
+source ~/.config/nvim/themeControl.vim
+
+highlight HopNextKey guibg=#ffff00 guifg=#1c1c1c
+highlight HopNextKey1 guibg=#ffff00 guifg=#1c1c1c
+highlight HopNextKey2 guibg=#ffff00 guifg=#1c1c1c
 highlight WildMenu guifg=#5f8700
 
 set cursorline
@@ -219,9 +220,9 @@ vmap > >gv
 
 map <space> <leader>
 
-nmap <C-t> :tabnew<Return>
-nmap <S-e> gT
-nmap <S-r> gt
+noremap <C-t> :tabnew<Return>
+noremap <S-e> gT
+noremap <S-r> gt
 
 noremap <leader>1 1gt
 noremap <leader>2 2gt
@@ -233,27 +234,27 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 
-nmap <space>s :setlocal spell! spell?<CR>
+noremap <space>s :setlocal spell! spell?<CR>
 
 command! Reload execute "source ~/.config/nvim/init.vim"
 
 nnoremap <space>? :echo expand("%:p")<CR>
 
-nmap ss :split<Return><C-w>w
-nmap sv :vsplit<Return><C-w>w
+noremap ss :split<Return><C-w>w
+noremap sv :vsplit<Return><C-w>w
 
 map <silent> <Right> <C-w><
 map <silent> <Down> <C-W>-
 map <silent> <Up> <C-W>+
 map <silent> <Left> <C-w>>
 
-nmap cd. :cd %:h<CR>
-nmap cd :cd<CR>
+noremap cd. :cd %:h<CR>
+noremap cd :cd<CR>
 
 command! W execute "w !sudo tee %"
 
-nmap <leader>a :call FloatTerm()<CR>
-nmap <leader>h :call FloatTerm('"htop"')<CR>
+noremap <leader>a :call FloatTerm()<CR>
+noremap <leader>h :call FloatTerm('"htop"')<CR>
 function! FloatTerm(...)
     let height = float2nr((&lines - 2) * 0.6)
     let row = float2nr((&lines - height) / 2)
