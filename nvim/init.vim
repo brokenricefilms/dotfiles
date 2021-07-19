@@ -140,6 +140,8 @@ nnoremap N Nzzzv
 Plug 'machakann/vim-highlightedyank'
 let g:highlightedyank_highlight_duration = 250
 Plug 'mhinz/vim-signify'
+let g:signify_sign_add               = '│'
+let g:signify_sign_delete            = '│'
 Plug 'mkitt/tabline.vim'
 highlight ExtraWhitespace ctermbg=None
 
