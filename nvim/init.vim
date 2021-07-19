@@ -345,3 +345,15 @@ if has("autocmd")
                     \ endif
     augroup END
 endif
+
+function! WriteCreatingDirs()
+    let l:file=expand("%")
+    if empty(getbufvar(bufname("%"), '&buftype')) && l:file !~# '\v^\w+\:\/'
+        let dir=fnamemodify(l:file, ':h')
+        if !isdirectory(dir)
+            call mkdir(dir, 'p')
+        endif
+    endif
+    write
+endfunction
+command! WriteCreatingDirs call WriteCreatingDirs()
