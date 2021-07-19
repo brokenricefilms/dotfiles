@@ -149,9 +149,9 @@ Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
 let g:rainbow_conf = {
             \	'separately': {
-            \		'html': 0,
-            \	}
-            \}
+                \		'html': 0,
+                \	}
+                \}
 Plug 'gregsexton/MatchTag', { 'for': 'html' }
 Plug 'norcalli/nvim-colorizer.lua'
 autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
@@ -161,8 +161,8 @@ if &diff
 endif
 let g:indent_blankline_char = '▏'
 let g:indent_blankline_filetype_exclude = [
-    \ 'help', 'yaml'
-    \]
+            \ 'help', 'yaml'
+            \]
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'sainnhe/gruvbox-material'
@@ -188,8 +188,8 @@ set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 set tabstop=4 softtabstop=4 noet
 set shiftwidth=4
 autocmd BufRead,BufNewFile *.scss,*.css,*.html setlocal tabstop=2
-                                                    \ shiftwidth=2
-                                                    \ softtabstop=2
+            \ shiftwidth=2
+            \ softtabstop=2
 set expandtab
 
 set number relativenumber

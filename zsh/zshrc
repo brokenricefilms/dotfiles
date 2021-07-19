@@ -1,16 +1,16 @@
 if command -v tmux &> /dev/null && [ -n "$PS1" ] \
-                                && [[ ! "$TERM" =~ screen ]] \
-                                && [[ ! "$TERM" =~ tmux ]] \
-                                && [ -z "$TMUX" ]; then
+    && [[ ! "$TERM" =~ screen ]] \
+    && [[ ! "$TERM" =~ tmux ]] \
+    && [ -z "$TMUX" ]; then
     exec tmux
 fi
 
 nvm() {
-  echo "🚨 NVM not loaded! Loading now..."
-  unset -f nvm
-  export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  nvm "$@"
+    echo "🚨 NVM not loaded! Loading now..."
+    unset -f nvm
+    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    nvm "$@"
 }
 
 set -U EDITOR nvim
@@ -46,15 +46,15 @@ HISTFILE=~/.zsh_history
 bindkey -v
 
 function zle-keymap-select {
-    if [[ ${KEYMAP} == vicmd ]] ||
-        [[ $1 = 'block' ]]; then
-            echo -ne '\e[1 q'
-        elif [[ ${KEYMAP} == main ]] ||
-            [[ ${KEYMAP} == viins ]] ||
-            [[ ${KEYMAP} = '' ]] ||
-            [[ $1 = 'beam' ]]; then
-                    echo -ne '\e[5 q'
-    fi
+if [[ ${KEYMAP} == vicmd ]] ||
+    [[ $1 = 'block' ]]; then
+    echo -ne '\e[1 q'
+elif [[ ${KEYMAP} == main ]] ||
+    [[ ${KEYMAP} == viins ]] ||
+    [[ ${KEYMAP} = '' ]] ||
+    [[ $1 = 'beam' ]]; then
+    echo -ne '\e[5 q'
+fi
 }
 
 zle -N zle-keymap-select
@@ -113,7 +113,7 @@ u () {
 }
 
 24-bit-color () {
-    bash ~/dotfiles/zsh/functions/24-bit-color.sh
+bash ~/dotfiles/zsh/functions/24-bit-color.sh
 }
 
 print256colours () {
@@ -251,12 +251,12 @@ export FZF_ALT_C_COMMAND="fdfind -t d"
 alias ej="emoji-fzf preview --prepend | fzf-down | awk '{ print \$1 }' | xclip -selection c"
 
 fzf-down() {
-  fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse
+fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse
 }
 
 f() {
-   cd ~/
-   nvim -o "$(fzf-down --preview 'batcat --style=numbers --color=always --line-range :500 {}')"
+    cd ~/
+    nvim -o "$(fzf-down --preview 'batcat --style=numbers --color=always --line-range :500 {}')"
 }
 
 c () {
@@ -264,11 +264,11 @@ c () {
     dir=$(fdfind -t d . $HOME | fzf-down) &&
         cd "$dir"
             l
-}
+        }
 
-is_in_git_repo() {
-  git rev-parse HEAD > /dev/null 2>&1
-}
+    is_in_git_repo() {
+        git rev-parse HEAD > /dev/null 2>&1
+    }
 
 co () {
     is_in_git_repo || return
@@ -289,9 +289,9 @@ alias cm='git commit'
 alias dt='git difftool'
 
 gc () {
-  git_dir="$(basename "$1" .git)"
-  git_dir_resolved=${2:-$git_dir}
-  git clone "$@" && cd "$git_dir_resolved";
+    git_dir="$(basename "$1" .git)"
+    git_dir_resolved=${2:-$git_dir}
+    git clone "$@" && cd "$git_dir_resolved";
 }
 
 prettierCpp () {
@@ -323,31 +323,31 @@ alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscr
 alias browser_feedly='browser "https://feedly.com/i/collection/content/user/0d89157e-ce7d-4b2c-a2d6-98826f1e5089/category/global.all"'
 
 function :t() {
-    browser "https://translate.google.com/?source=osdd#auto|auto|$argv"
+browser "https://translate.google.com/?source=osdd#auto|auto|$argv"
 }
 
 function :y() {
-    browser "https://www.youtube.com/results?search_query=$argv"
+browser "https://www.youtube.com/results?search_query=$argv"
 }
 
 function :d() {
-    browser "https://duckduckgo.com/?q=$argv"
+browser "https://duckduckgo.com/?q=$argv"
 }
 
 function :gm() {
-    browser "https://www.google.com/maps?q=$argv"
+browser "https://www.google.com/maps?q=$argv"
 }
 
 function :g() {
-    browser "https://www.google.com/search?q=$argv"
+browser "https://www.google.com/search?q=$argv"
 }
 
 function :gh() {
-    browser "https://github.com/search?q=$argv"
+browser "https://github.com/search?q=$argv"
 }
 
 function :f() {
-    browser "https://www.facebook.com/search?q=$argv"
+browser "https://www.facebook.com/search?q=$argv"
 }
 
 browser_daily () {
