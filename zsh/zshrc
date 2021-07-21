@@ -373,7 +373,7 @@ update () {
     npm update -g
     npm install -g npm
     gem update neovim
-    pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
+    pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip install -U
     tldr --update
 
     # arch base
