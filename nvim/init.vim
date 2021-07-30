@@ -117,9 +117,8 @@ set smartcase
 set magic
 nnoremap n nzzzv
 nnoremap N Nzzzv
+noremap J mzJ`z
 
-Plug 'machakann/vim-highlightedyank'
-let g:highlightedyank_highlight_duration = 250
 Plug 'mhinz/vim-signify'
 let g:signify_sign_add               = '│'
 let g:signify_sign_delete            = '│'
@@ -234,6 +233,17 @@ noremap cd :cd<CR>
 
 command! W execute "w !sudo tee %"
 
+noremap Y y$
+
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+inoremap [ [<c-g>u
+
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
 noremap <leader>a :call FloatTerm()<CR>
 noremap <leader>h :call FloatTerm('"htop"')<CR>
 function! FloatTerm(...)
@@ -332,3 +342,8 @@ function! WriteCreatingDirs()
     write
 endfunction
 command! WriteCreatingDirs call WriteCreatingDirs()
+
+augroup highlight_yank
+    autocmd!
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 200})
+augroup END
