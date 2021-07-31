@@ -203,6 +203,7 @@ alias cat='batcat'
 # alias cat='bat'
 export GREP_COLOR='1;31'
 alias grep='grep --color=auto'
+alias n='nnn -de'
 
 # music stuff
 alias m='mpv --shuffle ~/Music/*'
