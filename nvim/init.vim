@@ -52,6 +52,7 @@ map mm <Plug>NERDCommenterToggle
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
 inoremap <expr> <c-x><c-f> fzf#vim#complete#path('rg --files')
 inoremap <expr> <c-x><c-w> fzf#vim#complete#word()
 noremap <leader>f :Files<cr>
@@ -60,6 +61,7 @@ noremap <leader>F :Files ~<CR>
 noremap <leader>r :Rg<CR>
 noremap <c-p> :Commands<CR>
 noremap // :BLines<CR>
+
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
 let g:fzf_colors =
