@@ -220,8 +220,6 @@ noremap <space>s :setlocal spell! spell?<CR>
 
 command! Reload execute "source ~/.config/nvim/init.vim"
 
-nnoremap <space>? :echo expand("%:p")<CR>
-
 noremap ss :split<Return><C-w>w
 noremap sv :vsplit<Return><C-w>w
 
