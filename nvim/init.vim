@@ -10,8 +10,8 @@ let g:mdip_imgdir = '.'
 autocmd FileType markdown noremap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
 
 Plug 'phaazon/hop.nvim'
-map  f :HopChar1<CR>
-noremap  f :HopChar1<CR>
+map f :HopChar1<CR>
+noremap f :HopChar1<CR>
 
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
