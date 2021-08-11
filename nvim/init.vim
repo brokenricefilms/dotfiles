@@ -1,4 +1,10 @@
 call plug#begin()
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+
+nmap <Leader>P <Plug>(Prettier)
+
 Plug 'ferrine/md-img-paste.vim'
 let g:mdip_imgdir = '.'
 autocmd FileType markdown noremap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
@@ -102,6 +108,9 @@ inoremap <silent><expr> <c-n> coc#refresh()
 noremap <silent> [g <Plug>(coc-diagnostic-prev)
 noremap <silent> ]g <Plug>(coc-diagnostic-next)
 
+vmap <leader>=  <Plug>(coc-format-selected)
+nmap <leader>=  <Plug>(coc-format-selected)
+
 Plug 'mbbill/undotree'
 set undodir=~/syns/ok/undodir
 set undofile
@@ -175,7 +184,7 @@ autocmd BufRead,BufNewFile *.scss,*.css,*.html setlocal tabstop=2
             \ softtabstop=2
 set expandtab
 
-set number relativenumber
+" set number relativenumber
 
 set nocompatible
 filetype plugin indent on
@@ -247,9 +256,9 @@ vnoremap K :m '<-2<CR>gv=gv
 noremap <leader>a :call FloatTerm()<CR>
 noremap <leader>h :call FloatTerm('"htop"')<CR>
 function! FloatTerm(...)
-    let height = float2nr((&lines - 2) * 0.6)
+    let height = float2nr((&lines - 2) * 0.75)
     let row = float2nr((&lines - height) / 2)
-    let width = float2nr(&columns * 0.6)
+    let width = float2nr(&columns * 0.75)
     let col = float2nr((&columns - width) / 2)
     let border_opts = {
                 \ 'relative': 'editor',
