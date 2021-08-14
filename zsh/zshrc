@@ -262,7 +262,7 @@ f() {
 
 c () {
     local dir
-    dir=$(fdfind -t d . $HOME | fzf-down) &&
+    dir=$(fdfind -t d . $HOME --exclude gems | fzf-down) &&
         cd "$dir"
             l
         }
