@@ -79,8 +79,8 @@ map mm <Plug>NERDCommenterToggle
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-inoremap <expr> <c-x><c-f> fzf#vim#complete#path('rg --files')
-inoremap <expr> <c-x><c-w> fzf#vim#complete#word()
+inoremap <expr> <c-f><c-f> fzf#vim#complete#path('rg --files')
+inoremap <expr> <c-f><c-w> fzf#vim#complete#word()
 noremap <leader>f :Files<cr>
 noremap <leader>b :Buffers<CR>
 noremap <leader>F :Files ~<CR>
