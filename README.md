@@ -1,5 +1,7 @@
 # My dot files
 
+**require nvim (>=0.5)**
+
 ## Demo
 
 **You can watch my screencast in my youtube channel**
