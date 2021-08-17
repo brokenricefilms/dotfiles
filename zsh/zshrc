@@ -174,13 +174,13 @@ se () {
     browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000
 }
 
-alias l='clear ; exa -al --color=always --group-directories-first'
-alias ls='clear ; exa -al --color=always --group-directories-first'
-alias sl='clear ; exa -al --color=always --group-directories-first'
-alias la='clear ; exa -a --color=always --group-directories-first'
-alias l.='clear ; exa -a | egrep "^\."'
-alias ll='clear ; exa -l --color=always --group-directories-first'
-alias lt='clear ; exa -aT --color=always --group-directories-first'
+alias l='clear ; exa -al --color=always --group-directories-first --icons'
+alias ls='clear ; exa -al --color=always --group-directories-first --icons'
+alias sl='clear ; exa -al --color=always --group-directories-first --icons'
+alias la='clear ; exa -a --color=always --group-directories-first --icons'
+alias l.='clear ; exa -a| egrep "^\."'
+alias ll='clear ; exa -l --color=always --group-directories-first --icons'
+alias lt='clear ; exa -aT --color=always --group-directories-first --icons'
 
 alias cpf='xclip -sel clip'
 alias re='source ~/.zshrc ; tmux source-file ~/.tmux.conf'
