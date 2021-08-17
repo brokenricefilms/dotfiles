@@ -15,9 +15,9 @@ nvm() {
 
 set -U EDITOR nvim
 # debian base
-export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+# export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 # arch base | fedora
-# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export EDITOR='nvim'
 export VISUAL='nvim'
 export PATH="$HOME/.npm/bin:$PATH"
@@ -198,9 +198,9 @@ alias 777='chmod -R 777'
 alias x='chmod +x'
 alias colorPicker='zenity --color-selection'
 # debian
-alias cat='batcat'
+# alias cat='batcat'
 # arch | fedora
-# alias cat='bat'
+alias cat='bat'
 export GREP_COLOR='1;31'
 alias grep='grep --color=auto'
 alias n='nnn -de'
@@ -209,16 +209,16 @@ alias n='nnn -de'
 alias m='mpv --shuffle ~/Music/*'
 
 # ubuntu apt
-alias ins='sudo apt install -y'
-alias uins='sudo apt remove -y'
+# alias ins='sudo apt install -y'
+# alias uins='sudo apt remove -y'
 
 # termux pkg
 # alias ins='pkg install -y'
 # alias uins='pkg remove -y'
 
 # fedora dnf
-# alias ins='sudo dnf -y install'
-# alias uins='sudo dnf -y remove'
+alias ins='sudo dnf -y install'
+alias uins='sudo dnf -y remove'
 
 # arch
 # alias ins='sudo pacman -S --noconfirm'
@@ -243,11 +243,11 @@ alias tdow='trash ~/Downloads/*'
 
 # debian
 # export FZF_DEFAULT_COMMAND='fdfind --type f'
-export FZF_DEFAULT_COMMAND='fdfind --type f --follow --exclude .git --exclude undodir --exclude gems'
+# export FZF_DEFAULT_COMMAND='fdfind --type f --follow --exclude .git --exclude undodir --exclude gems'
 # arch | termux | fedora
-# export FZF_DEFAULT_COMMAND='fd --type f --follow --exclude .git --exclude undodir'
+export FZF_DEFAULT_COMMAND='fd --type f --follow --exclude .git --exclude undodir --exclude gems'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fdfind -t d"
+export FZF_ALT_C_COMMAND="fd -t d"
 
 alias ej="emoji-fzf preview --prepend | fzf-down | awk '{ print \$1 }' | xclip -selection c"
 
@@ -262,7 +262,7 @@ f() {
 
 c () {
     local dir
-    dir=$(fdfind -t d . $HOME --exclude gems | fzf-down) &&
+    dir=$(fd -t d . $HOME --exclude gems | fzf-down) &&
         cd "$dir"
             l
         }
@@ -381,15 +381,15 @@ update () {
     # yay -Sua --noconfirm
 
     # debian base (ubuntu, kali,...)
-    sudo apt update
-    sudo apt upgrade -y
-    sudo apt autoremove -y
-    sudo apt autoclean
+    # sudo apt update
+    # sudo apt upgrade -y
+    # sudo apt autoremove -y
+    # sudo apt autoclean
     flatpak update -y
 
     # rehat base (fedora)
-    # sudo dnf update -y
-    # sudo dnf autoremove -y
+    sudo dnf update -y
+    sudo dnf autoremove -y
 
     # termux
     # pkg update
