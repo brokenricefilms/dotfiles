@@ -34,5 +34,5 @@
   },
   "typescript.showUnused": true,
   "javascript.showUnused": true,
-  "suggest.noselect": false
+  "suggest.noselect": true
 }
