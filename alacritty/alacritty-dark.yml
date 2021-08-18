@@ -8,6 +8,9 @@ window:
 
   startup_mode: Windowed
 
+mouse:
+  hide_when_typing: true
+
 # Colors (Gruvbox dark)
 colors:
   primary:

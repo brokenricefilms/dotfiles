@@ -8,6 +8,9 @@ window:
 
   startup_mode: Windowed
 
+mouse:
+  hide_when_typing: true
+
 colors:
   primary:
     background: "#eeeeee"
