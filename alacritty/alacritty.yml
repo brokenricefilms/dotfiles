@@ -1,6 +1,13 @@
 env:
   TERM: xterm-256color
 
+window:
+  dynamic_padding: true
+
+  decorations: none
+
+  startup_mode: Windowed
+
 colors:
   primary:
     background: "#eeeeee"
