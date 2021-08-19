@@ -222,6 +222,7 @@ set lazyredraw
 set nowritebackup
 set inccommand=split
 set scrolloff=5
+set splitbelow splitright
 
 nnoremap + <C-a>
 nnoremap - <C-x>
