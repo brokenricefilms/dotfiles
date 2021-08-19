@@ -339,6 +339,8 @@ augroup General
         \ :sp<cr>:term node %<cr> :startinsert<cr>
     autocmd FileType ruby nnoremap <leader>E
         \ :sp<cr>:term ruby %<cr> :startinsert<cr>
+    autocmd FileType sh nnoremap <leader>E
+        \ :sp<cr>:term chmod +x ./%  && ./% <cr> :startinsert<cr>
 augroup END
 
 function! CheckShFile()
