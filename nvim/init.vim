@@ -326,6 +326,19 @@ augroup General
     autocmd BufNewFile *.sh  :call CheckShFile()
     autocmd BufNewFile *.html  :read ~/.config/nvim/stuff/htmlTemplate.html | normal!kdd
     autocmd BufWritePre * :call TrimWhitespace()
+
+    autocmd FileType c nnoremap <leader>E
+        \ :sp<cr>:term gcc % -o %< && ./%< && rm ./%< <cr>:startinsert<cr>
+    autocmd FileType java nnoremap <leader>E
+        \ :sp<cr>:term javac % && java %< <cr>:startinsert<cr>
+    autocmd FileType cpp nnoremap <leader>E
+        \ :sp<cr>:term g++ -std=c++17 % -o %< && ./%< && rm ./%< <cr> :startinsert<cr>
+    autocmd FileType python nnoremap <leader>E
+        \ :sp<cr>:term python %<cr> :startinsert<cr>
+    autocmd FileType javascript nnoremap <leader>E
+        \ :sp<cr>:term node %<cr> :startinsert<cr>
+    autocmd FileType ruby nnoremap <leader>E
+        \ :sp<cr>:term ruby %<cr> :startinsert<cr>
 augroup END
 
 function! CheckShFile()
