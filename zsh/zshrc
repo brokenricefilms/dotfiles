@@ -152,12 +152,6 @@ cpppro () {
     nvim -O *
 }
 
-runcpp() {
-    g++ *.cpp
-    ./a.out
-    rm a.out
-}
-
 r () {
     while true
     do
