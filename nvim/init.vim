@@ -326,6 +326,7 @@ augroup General
     autocmd BufNewFile *.py :call CheckPyFile()
     autocmd BufNewFile *.sh  :call CheckShFile()
     autocmd BufNewFile *.html  :read ~/.config/nvim/stuff/htmlTemplate.html | normal!kdd
+
     autocmd BufWritePre * :call TrimWhitespace()
 
     autocmd FileType c nnoremap <leader>E
