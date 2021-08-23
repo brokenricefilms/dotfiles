@@ -115,6 +115,7 @@ let g:coc_global_extensions = [
             \ "coc-css",
             \ "coc-html",
             \ "coc-snippets",
+            \ "coc-emmet",
             \ "coc-sql",
             \ "coc-clangd",
             \ "coc-tsserver",]
@@ -325,7 +326,7 @@ augroup General
     autocmd BufNewFile *.fish  :call CheckFishFile()
     autocmd BufNewFile *.py :call CheckPyFile()
     autocmd BufNewFile *.sh  :call CheckShFile()
-    autocmd BufNewFile *.html  :read ~/.config/nvim/stuff/htmlTemplate.html | normal!kdd
+    autocmd BufNewFile *.html  :read ~/.config/nvim/stuff/htmlTemplate.html | normal!kdd6j
 
     autocmd BufWritePre * :call TrimWhitespace()
 
