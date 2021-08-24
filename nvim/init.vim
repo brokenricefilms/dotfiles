@@ -154,7 +154,6 @@ noremap J mzJ`z
 Plug 'mhinz/vim-signify'
 let g:signify_sign_add               = '│'
 let g:signify_sign_delete            = '│'
-Plug 'mkitt/tabline.vim'
 highlight ExtraWhitespace ctermbg=None
 
 Plug 'luochen1990/rainbow'
@@ -201,8 +200,8 @@ set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 set tabstop=4 softtabstop=4 noet
 set shiftwidth=4
 autocmd BufRead,BufNewFile *.scss,*.css,*.html setlocal tabstop=2
-            \ shiftwidth=2
-            \ softtabstop=2
+	    \ shiftwidth=2
+	    \ softtabstop=2
 set expandtab
 
 set number relativenumber
@@ -394,3 +393,31 @@ augroup highlight_yank
     autocmd!
     autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 200})
 augroup END
+
+function! Tabline()
+  let s = ''
+  for i in range(tabpagenr('$'))
+    let tab = i + 1
+    let winnr = tabpagewinnr(tab)
+    let buflist = tabpagebuflist(tab)
+    let bufnr = buflist[winnr - 1]
+    let bufname = bufname(bufnr)
+    let bufmodified = getbufvar(bufnr, "&mod")
+
+    let s .= '%' . tab . 'T'
+    let s .= (tab == tabpagenr() ? '%#TabLineSel#' : '%#TabLine#')
+    let s .= ' ' . tab .':'
+    let s .= (bufname != '' ? '['. fnamemodify(bufname, ':t') . '] ' : '[No Name] ')
+
+    if bufmodified
+      let s .= '[+] '
+    endif
+  endfor
+
+  let s .= '%#TabLineFill#'
+  if (exists("g:tablineclosebutton"))
+    let s .= '%=%999XX'
+  endif
+  return s
+endfunction
+set tabline=%!Tabline()
