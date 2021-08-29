@@ -109,7 +109,7 @@ Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 set hidden
 set shortmess+=c
-set signcolumn=number
+set signcolumn=auto
 set updatetime=100
 let g:coc_global_extensions = [
             \ "coc-css",
