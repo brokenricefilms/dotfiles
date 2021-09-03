@@ -251,6 +251,7 @@ fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse
 f() {
     cd ~/
     nvim -o "$(fzf-down --preview 'bat --style=numbers --color=always --line-range :500 {}')"
+    cd -
 }
 
 c () {
