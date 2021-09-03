@@ -187,7 +187,6 @@ alias rbn='sudo reboot now'
 alias sdn='sudo shutdown now'
 alias ka='killall'
 alias v='nvim'
-alias o='xdg-open'
 alias 777='chmod -R 777'
 alias x='chmod +x'
 alias colorPicker='zenity --color-selection'
@@ -268,6 +267,12 @@ c () {
 co () {
     is_in_git_repo || return
     git branch -a | fzf-down | xargs git checkout
+}
+
+o() {
+    cd ~/
+    xdg-open "$(fzf-down --preview 'bat --style=numbers --color=always --line-range :500 {}')"
+    cd -
 }
 
 autoCommit () {
