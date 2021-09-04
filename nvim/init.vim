@@ -35,6 +35,7 @@ noremap f :HopChar1<CR>
 
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
+let g:nvim_tree_side = 'right'
 let g:nvim_tree_follow = 1
 let g:nvim_tree_special_files = [ 'README.md', 'Makefile', 'MAKEFILE' ]
 nnoremap <leader>e :NvimTreeToggle<CR>
@@ -136,6 +137,7 @@ Plug 'mbbill/undotree'
 set undodir=~/syns/ok/undodir
 set undofile
 nnoremap <leader>u :UndotreeToggle<CR>
+let g:undotree_WindowLayout = 3
 
 Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
 let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
