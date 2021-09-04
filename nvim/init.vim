@@ -40,9 +40,6 @@ let g:nvim_tree_follow = 1
 let g:nvim_tree_special_files = [ 'README.md', 'Makefile', 'MAKEFILE' ]
 nnoremap <leader>e :NvimTreeToggle<CR>
 
-Plug 'camspiers/lens.vim'
-let g:lens#disabled_filetypes = ['undotree', 'fzf', 'fugitiveblame']
-
 Plug 'tpope/vim-fugitive'
 noremap gs :G<CR>
 noremap gl :Gclog<CR>
