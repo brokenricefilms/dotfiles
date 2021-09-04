@@ -367,6 +367,7 @@ hi () {
     browser_daily
     sleep 30
     update
+    speedtest-cli
 }
 
 update () {
