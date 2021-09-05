@@ -1,4 +1,5 @@
 call plug#begin()
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'vimwiki/vimwiki'
 let g:vimwiki_key_mappings = {
             \ 'all_maps': 1,
@@ -181,7 +182,7 @@ syntax enable
 set termguicolors
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
 
-source ~/.config/nvim/themeControl.vim
+runtime ./themeControl.vim
 
 highlight HopNextKey guibg=#ffff00 guifg=#1c1c1c
 highlight HopNextKey1 guibg=#ffff00 guifg=#1c1c1c
