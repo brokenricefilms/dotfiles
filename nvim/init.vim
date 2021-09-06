@@ -1,6 +1,7 @@
 call plug#begin()
-Plug 'TimUntersberger/neogit'
-noremap gs :Neogit kind=split_above<CR>
+Plug 'tpope/vim-fugitive'
+noremap gs :G<CR>
+noremap gl :Gclog<CR>
 
 Plug 'nvim-lua/plenary.nvim'
 
@@ -41,6 +42,7 @@ noremap f :HopChar1<CR>
 Plug 'kyazdani42/nvim-web-devicons'
 
 Plug 'kyazdani42/nvim-tree.lua'
+
 let g:nvim_tree_side = 'right'
 let g:nvim_tree_follow = 1
 let g:nvim_tree_special_files = [ 'README.md', 'Makefile', 'MAKEFILE' ]
