@@ -374,7 +374,9 @@ hi () {
     browser_daily
     sleep 30
     update
+    cowsay "internet speed"
     speedtest-cli
+    cowsay "github habit"
     gh graph --pixel %EF%90%88%20 --scheme github
 }
 
