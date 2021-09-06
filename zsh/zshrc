@@ -384,6 +384,7 @@ update () {
     npm install -g npm
     gem update neovim
     tldr --update
+    gh extension upgrade --all
 
     # arch base
     # sudo pacman -Syu --noconfirm
