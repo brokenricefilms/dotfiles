@@ -5,6 +5,8 @@ noremap gl :Gclog<CR>
 
 Plug 'nvim-lua/plenary.nvim'
 
+Plug 'michal-h21/vim-zettel'
+let g:zettel_link_format="[[%link]"
 Plug 'vimwiki/vimwiki'
 let g:vimwiki_key_mappings = {
             \ 'all_maps': 1,
@@ -78,7 +80,7 @@ Plug 'tpope/vim-surround'
 
 Plug 'alvan/vim-closetag'
 
-Plug 'jiangmiao/auto-pairs'
+Plug 'windwp/nvim-autopairs'
 
 Plug 'preservim/nerdcommenter'
 let g:NERDSpaceDelims = 1
