@@ -322,6 +322,7 @@ alias browser_stu='browser "http://stu.edu.vn/"'
 alias browser_stu2='browser "http://stu.edu.vn/vi/393/thong-bao.html"'
 alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
 alias browser_feedly='browser "https://feedly.com/i/collection/content/user/0d89157e-ce7d-4b2c-a2d6-98826f1e5089/category/global.all"'
+alias browser_google-podcast-subscriptions='browser "https://podcasts.google.com/subscriptions"'
 
 function :t() {
 browser "https://translate.google.com/?source=osdd#auto|auto|$argv"
@@ -354,6 +355,7 @@ browser "https://www.facebook.com/search?q=$argv"
 browser_daily () {
     cowsay "GET.SHIT.DONE"
     browser_youtube_subsriptions
+    browser_google-podcast-subscriptions
     browser_feedly
     browser_mail0
     browser_mail1
