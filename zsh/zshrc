@@ -375,6 +375,7 @@ hi () {
     sleep 30
     update
     speedtest-cli
+    gh graph --pixel %EF%90%88%20 --scheme github
 }
 
 update () {
