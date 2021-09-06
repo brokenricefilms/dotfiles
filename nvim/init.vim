@@ -348,6 +348,8 @@ augroup General
         \ :sp<cr>:term python %<cr> :startinsert<cr>
     autocmd FileType javascript nnoremap <leader>e
         \ :sp<cr>:term node %<cr> :startinsert<cr>
+    autocmd FileType go nnoremap <leader>e
+        \ :sp<cr>:term go run %<cr> :startinsert<cr>
     autocmd FileType ruby nnoremap <leader>e
         \ :sp<cr>:term ruby %<cr> :startinsert<cr>
     autocmd FileType sh nnoremap <leader>e
