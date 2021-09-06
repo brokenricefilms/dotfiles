@@ -1,5 +1,9 @@
 call plug#begin()
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'TimUntersberger/neogit'
+noremap gs :Neogit kind=split_above<CR>
+
+Plug 'nvim-lua/plenary.nvim'
+
 Plug 'vimwiki/vimwiki'
 let g:vimwiki_key_mappings = {
             \ 'all_maps': 1,
@@ -35,20 +39,18 @@ map f :HopChar1<CR>
 noremap f :HopChar1<CR>
 
 Plug 'kyazdani42/nvim-web-devicons'
+
 Plug 'kyazdani42/nvim-tree.lua'
 let g:nvim_tree_side = 'right'
 let g:nvim_tree_follow = 1
 let g:nvim_tree_special_files = [ 'README.md', 'Makefile', 'MAKEFILE' ]
 nnoremap <leader>e :NvimTreeToggle<CR>
 
-Plug 'tpope/vim-fugitive'
-noremap gs :G<CR>
-noremap gl :Gclog<CR>
-
 Plug 'stsewd/fzf-checkout.vim'
 noremap gc :GCheckout<CR>
 
 Plug 'kevinhwang91/vim-ibus-sw'
+
 Plug 'dkarter/bullets.vim'
 let g:bullets_enabled_file_types = [
             \ 'markdown',
@@ -58,6 +60,7 @@ let g:bullets_enabled_file_types = [
             \]
 
 Plug 'wellle/tmux-complete.vim'
+
 Plug 'jdhao/better-escape.vim'
 let g:better_escape_interval = 200
 let g:better_escape_shortcut = 'jj'
@@ -66,9 +69,13 @@ Plug 'mattn/emmet-vim'
 let g:user_emmet_leader_key=','
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,markdown EmmetInstall
+
 Plug 'christoomey/vim-tmux-navigator'
+
 Plug 'tpope/vim-surround'
+
 Plug 'alvan/vim-closetag'
+
 Plug 'jiangmiao/auto-pairs'
 
 Plug 'preservim/nerdcommenter'
@@ -76,6 +83,7 @@ let g:NERDSpaceDelims = 1
 map mm <Plug>NERDCommenterToggle
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
 Plug 'junegunn/fzf.vim'
 
 inoremap <expr> <c-f><c-f> fzf#vim#complete#path('rg --files')
@@ -150,11 +158,6 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 noremap J mzJ`z
 
-Plug 'mhinz/vim-signify'
-let g:signify_sign_add               = '│'
-let g:signify_sign_delete            = '│'
-highlight ExtraWhitespace ctermbg=None
-
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
 let g:rainbow_conf = {
@@ -162,7 +165,9 @@ let g:rainbow_conf = {
                 \		'html': 0,
                 \	}
                 \}
+
 Plug 'gregsexton/MatchTag', { 'for': 'html' }
+
 Plug 'norcalli/nvim-colorizer.lua'
 autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
 Plug 'lukas-reineke/indent-blankline.nvim'
@@ -174,22 +179,24 @@ let g:indent_blankline_filetype_exclude = [
             \ 'help', 'yaml'
             \]
 
-Plug 'NLKNguyen/papercolor-theme'
+Plug 'lewis6991/gitsigns.nvim'
+
+Plug 'hoob3rt/lualine.nvim'
+
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+Plug 'mcchrish/zenbones.nvim'
+
 Plug 'sainnhe/gruvbox-material'
 call plug#end()
 
 syntax enable
 set termguicolors
-set statusline=%F%m%r%h%w%=(%{&ff}/%Y)
 
 runtime ./themeControl.vim
 
-highlight HopNextKey guibg=#ffff00 guifg=#1c1c1c
-highlight HopNextKey1 guibg=#ffff00 guifg=#1c1c1c
-highlight HopNextKey2 guibg=#ffff00 guifg=#1c1c1c
-highlight WildMenu guifg=#5f8700
-
 set cursorline
+
 autocmd InsertLeave,WinEnter * set cursorline
 autocmd InsertEnter,WinLeave * set nocursorline
 

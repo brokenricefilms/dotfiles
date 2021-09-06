@@ -13,32 +13,26 @@ mouse:
 
 colors:
   primary:
-    background: "#eeeeee"
-    foreground: "#444444"
-
-  cursor:
-    text: "#eeeeee"
-    cursor: "#444444"
-
+    background: '#F0EDEC'
+    foreground: '#2C363C'
   normal:
-    black: "#eeeeee"
-    red: "#af0000"
-    green: "#008700"
-    yellow: "#5f8700"
-    blue: "#0087af"
-    magenta: "#8700af"
-    cyan: "#005f87"
-    white: "#878787"
-
+    black:   '#2C363C'
+    red:     '#A8334C'
+    green:   '#617437'
+    yellow:  '#944927'
+    blue:    '#286486'
+    magenta: '#88507D'
+    cyan:    '#3B8992'
+    white:   '#F0EDEC'
   bright:
-    black: "#bcbcbc"
-    red: "#af0000"
-    green: "#008700"
-    yellow: "#5f8700"
-    blue: "#0087af"
-    magenta: "#8700af"
-    cyan: "#005f87"
-    white: "#eeeeee"
+    black:   '#44525B'
+    red:     '#9C2842'
+    green:   '#55672A'
+    yellow:  '#87411E'
+    blue:    '#1F5A7A'
+    magenta: '#864079'
+    cyan:    '#2F7C85'
+    white:   '#DCD2CE'
 
 font:
   normal:
