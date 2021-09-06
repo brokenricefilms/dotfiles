@@ -46,7 +46,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 let g:nvim_tree_side = 'right'
 let g:nvim_tree_follow = 1
 let g:nvim_tree_special_files = [ 'README.md', 'Makefile', 'MAKEFILE' ]
-nnoremap <leader>e :NvimTreeToggle<CR>
+nnoremap <leader>t :NvimTreeToggle<CR>
 
 Plug 'stsewd/fzf-checkout.vim'
 noremap gc :GCheckout<CR>
@@ -338,19 +338,19 @@ augroup General
 
     autocmd BufWritePre * :call TrimWhitespace()
 
-    autocmd FileType c nnoremap <leader>E
+    autocmd FileType c nnoremap <leader>e
         \ :sp<cr>:term gcc % -o %< && ./%< && rm ./%< <cr>:startinsert<cr>
-    autocmd FileType java nnoremap <leader>E
+    autocmd FileType java nnoremap <leader>e
         \ :sp<cr>:term javac % && java %< <cr>:startinsert<cr>
-    autocmd FileType cpp nnoremap <leader>E
+    autocmd FileType cpp nnoremap <leader>e
         \ :sp<cr>:term g++ -std=c++17 % -o %< && ./%< && rm ./%< <cr> :startinsert<cr>
-    autocmd FileType python nnoremap <leader>E
+    autocmd FileType python nnoremap <leader>e
         \ :sp<cr>:term python %<cr> :startinsert<cr>
-    autocmd FileType javascript nnoremap <leader>E
+    autocmd FileType javascript nnoremap <leader>e
         \ :sp<cr>:term node %<cr> :startinsert<cr>
-    autocmd FileType ruby nnoremap <leader>E
+    autocmd FileType ruby nnoremap <leader>e
         \ :sp<cr>:term ruby %<cr> :startinsert<cr>
-    autocmd FileType sh nnoremap <leader>E
+    autocmd FileType sh nnoremap <leader>e
         \ :sp<cr>:term chmod +x ./%  && ./% <cr> :startinsert<cr>
 augroup END
 
