@@ -189,6 +189,8 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 Plug 'mcchrish/zenbones.nvim'
 
+Plug 'rktjmp/lush.nvim'
+
 Plug 'sainnhe/gruvbox-material'
 call plug#end()
 
