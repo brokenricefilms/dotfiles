@@ -314,7 +314,7 @@ function! FloatTerm(...)
     let buf = nvim_create_buf(v:false, v:true)
     let s:float_term_win = nvim_open_win(buf, v:true, opts)
 
-    hi FloatWinBorder guifg=#5f8700
+    hi FloatWinBorder guifg=#88507D
     call setwinvar(s:float_term_border_win, '&winhl', 'Normal:FloatWinBorder')
     call setwinvar(s:float_term_win, '&winhl', 'Normal:Normal')
     if a:0 == 0
