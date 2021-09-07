@@ -6,7 +6,7 @@ noremap gl :Gclog<CR>
 Plug 'nvim-lua/plenary.nvim'
 
 Plug 'michal-h21/vim-zettel'
-let g:zettel_link_format="[[%link]"
+let g:zettel_link_format="[[%link]]"
 Plug 'vimwiki/vimwiki'
 let g:vimwiki_key_mappings = {
             \ 'all_maps': 1,
