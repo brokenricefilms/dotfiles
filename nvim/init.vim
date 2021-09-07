@@ -285,51 +285,6 @@ inoremap [ [<c-g>u
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-noremap <leader>a :call FloatTerm()<CR>
-noremap <leader>h :call FloatTerm('"htop"')<CR>
-function! FloatTerm(...)
-    let height = float2nr((&lines - 2) * 0.75)
-    let row = float2nr((&lines - height) / 2)
-    let width = float2nr(&columns * 0.75)
-    let col = float2nr((&columns - width) / 2)
-    let border_opts = {
-                \ 'relative': 'editor',
-                \ 'row': row - 1,
-                \ 'col': col - 2,
-                \ 'width': width + 4,
-                \ 'height': height + 2,
-                \ 'style': 'minimal'
-                \ }
-    let opts = {
-                \ 'relative': 'editor',
-                \ 'row': row,
-                \ 'col': col,
-                \ 'width': width,
-                \ 'height': height,
-                \ 'style': 'minimal'
-                \ }
-    let top = "╭" . repeat("─", width + 2) . "╮"
-    let mid = "│" . repeat(" ", width + 2) . "│"
-    let bot = "╰" . repeat("─", width + 2) . "╯"
-    let lines = [top] + repeat([mid], height) + [bot]
-    let bbuf = nvim_create_buf(v:false, v:true)
-    call nvim_buf_set_lines(bbuf, 0, -1, v:true, lines)
-    let s:float_term_border_win = nvim_open_win(bbuf, v:true, border_opts)
-    let buf = nvim_create_buf(v:false, v:true)
-    let s:float_term_win = nvim_open_win(buf, v:true, opts)
-
-    hi FloatWinBorder guifg=#88507D
-    call setwinvar(s:float_term_border_win, '&winhl', 'Normal:FloatWinBorder')
-    call setwinvar(s:float_term_win, '&winhl', 'Normal:Normal')
-    if a:0 == 0
-        terminal
-    else
-        call termopen(a:1)
-    endif
-    startinsert
-    autocmd TermClose * ++once :bd! | call nvim_win_close(s:float_term_border_win, v:true)
-endfunction
-
 augroup General
     autocmd!
     autocmd BufNewFile *.cpp :read ~/.config/nvim/stuff/cppTemplate.cpp | normal!kdd3j
@@ -339,23 +294,6 @@ augroup General
     autocmd BufNewFile *.html  :read ~/.config/nvim/stuff/htmlTemplate.html | normal!kdd6j
 
     autocmd BufWritePre * :call TrimWhitespace()
-
-    autocmd FileType c nnoremap <leader>e
-        \ :sp<cr>:term gcc % -o %< && ./%< && rm ./%< <cr>:startinsert<cr>
-    autocmd FileType java nnoremap <leader>e
-        \ :sp<cr>:term javac % && java %< <cr>:startinsert<cr>
-    autocmd FileType cpp nnoremap <leader>e
-        \ :sp<cr>:term g++ -std=c++17 % -o %< && ./%< && rm ./%< <cr> :startinsert<cr>
-    autocmd FileType python nnoremap <leader>e
-        \ :sp<cr>:term python %<cr> :startinsert<cr>
-    autocmd FileType javascript nnoremap <leader>e
-        \ :sp<cr>:term node %<cr> :startinsert<cr>
-    autocmd FileType go nnoremap <leader>e
-        \ :sp<cr>:term go run %<cr> :startinsert<cr>
-    autocmd FileType ruby nnoremap <leader>e
-        \ :sp<cr>:term ruby %<cr> :startinsert<cr>
-    autocmd FileType sh nnoremap <leader>e
-        \ :sp<cr>:term chmod +x ./%  && ./% <cr> :startinsert<cr>
 augroup END
 
 function! CheckShFile()
@@ -406,31 +344,3 @@ augroup highlight_yank
     autocmd!
     autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 200})
 augroup END
-
-function! Tabline()
-  let s = ''
-  for i in range(tabpagenr('$'))
-    let tab = i + 1
-    let winnr = tabpagewinnr(tab)
-    let buflist = tabpagebuflist(tab)
-    let bufnr = buflist[winnr - 1]
-    let bufname = bufname(bufnr)
-    let bufmodified = getbufvar(bufnr, "&mod")
-
-    let s .= '%' . tab . 'T'
-    let s .= (tab == tabpagenr() ? '%#TabLineSel#' : '%#TabLine#')
-    let s .= ' ' . tab .':'
-    let s .= (bufname != '' ? '['. fnamemodify(bufname, ':t') . '] ' : '[No Name] ')
-
-    if bufmodified
-      let s .= '[+] '
-    endif
-  endfor
-
-  let s .= '%#TabLineFill#'
-  if (exists("g:tablineclosebutton"))
-    let s .= '%=%999XX'
-  endif
-  return s
-endfunction
-set tabline=%!Tabline()
