@@ -51,7 +51,7 @@ let g:nvim_tree_special_files = [ 'README.md', 'Makefile', 'MAKEFILE' ]
 nnoremap <leader>t :NvimTreeToggle<CR>
 
 Plug 'stsewd/fzf-checkout.vim'
-noremap gc :GCheckout<CR>
+noremap gb :cd %:h <CR>:GBranches<CR>
 
 Plug 'kevinhwang91/vim-ibus-sw'
 
