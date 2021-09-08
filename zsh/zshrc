@@ -416,4 +416,3 @@ source ~/dotfiles/zsh/functions/completion.zsh
 source ~/dotfiles/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/dotfiles/zsh/functions/fzf-key-bindings.zsh
 source ~/dotfiles/zsh/functions/themeControl.zsh
-if [ -e /home/master/.nix-profile/etc/profile.d/nix.sh ]; then . /home/master/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
