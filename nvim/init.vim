@@ -25,15 +25,75 @@ noremap <silent> ]g <Plug>(coc-diagnostic-next)
 vmap <leader>=  <Plug>(coc-format-selected)
 nmap <leader>=  <Plug>(coc-format-selected)
 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
+Plug 'junegunn/fzf.vim'
+
+inoremap <expr> <c-f><c-f> fzf#vim#complete#path('rg --files')
+inoremap <expr> <c-f><c-w> fzf#vim#complete#word()
+noremap <leader>f :Files<cr>
+noremap <leader>b :Buffers<CR>
+noremap <leader>F :Files ~<CR>
+noremap <leader>r :Rg<CR>
+noremap <c-p> :Commands<CR>
+noremap // :BLines<CR>
+
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let $FZF_DEFAULT_OPTS='--reverse'
+let g:fzf_colors =
+            \ { 'fg':      ['fg', 'Normal'],
+            \ 'bg':      ['bg', 'Normal'],
+            \ 'hl':      ['fg', 'Comment'],
+            \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+            \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+            \ 'hl+':     ['fg', 'Statement'],
+            \ 'info':    ['fg', 'PreProc'],
+            \ 'border':  ['fg', 'Ignore'],
+            \ 'prompt':  ['fg', 'Conditional'],
+            \ 'pointer': ['fg', 'Exception'],
+            \ 'marker':  ['fg', 'Keyword'],
+            \ 'spinner': ['fg', 'Label'],
+            \ 'header':  ['fg', 'Comment'] }
+
 Plug 'tpope/vim-fugitive'
 noremap gs :G<CR>
 noremap gl :Gclog<CR>
 
-Plug 'nvim-lua/plenary.nvim'
+Plug 'michal-h21/vim-zettel'
+let g:zettel_link_format="[[%link]]"
 
-Plug 'nvim-telescope/telescope.nvim'
+Plug 'vimwiki/vimwiki'
+let g:vimwiki_key_mappings = {
+            \ 'all_maps': 1,
+            \ 'global': 1,
+            \ 'headers': 1,
+            \ 'text_objs': 1,
+            \ 'table_format': 1,
+            \ 'table_mappings': 0,
+            \ 'lists': 1,
+            \ 'links': 1,
+            \ 'html': 1,
+            \ 'mouse': 0,
+            \ }
 
-nmap <Leader>P <Plug>(Prettier)
+let g:vimwiki_list = [{'path': '~/syns/note/',
+            \ 'path_html': '~/syns/note/publish_html/',
+            \ 'syntax': 'markdown',
+            \ 'ext': '.md',
+            \ 'list_margin': 0}]
+
+Plug 'kevinhwang91/vim-ibus-sw'
+
+Plug 'dkarter/bullets.vim'
+let g:bullets_enabled_file_types = [
+            \ 'markdown',
+            \ 'text',
+            \ 'gitcommit',
+            \ 'scratch'
+            \]
+
+Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
+let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 
 Plug 'ferrine/md-img-paste.vim'
 let g:mdip_imgdir = '.'
@@ -52,16 +112,6 @@ let g:nvim_tree_follow = 1
 let g:nvim_tree_special_files = [ 'README.md', 'Makefile', 'MAKEFILE' ]
 nnoremap <leader>t :NvimTreeToggle<CR>
 
-Plug 'kevinhwang91/vim-ibus-sw'
-
-Plug 'dkarter/bullets.vim'
-let g:bullets_enabled_file_types = [
-            \ 'markdown',
-            \ 'text',
-            \ 'gitcommit',
-            \ 'scratch'
-            \]
-
 Plug 'wellle/tmux-complete.vim'
 
 Plug 'jdhao/better-escape.vim'
@@ -77,8 +127,6 @@ Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'tpope/vim-surround'
 
-Plug 'alvan/vim-closetag'
-
 Plug 'windwp/nvim-autopairs'
 
 Plug 'preservim/nerdcommenter'
@@ -90,9 +138,6 @@ set undodir=~/syns/ok/undodir
 set undofile
 nnoremap <leader>u :UndotreeToggle<CR>
 let g:undotree_WindowLayout = 3
-
-Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
-let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 
 Plug 'romainl/vim-cool'
 
@@ -109,6 +154,7 @@ Plug 'gregsexton/MatchTag', { 'for': 'html' }
 
 Plug 'norcalli/nvim-colorizer.lua'
 autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
+
 Plug 'lukas-reineke/indent-blankline.nvim'
 if &diff
     let g:indent_blankline_enabled = v:false
@@ -117,6 +163,8 @@ let g:indent_blankline_char = '▏'
 let g:indent_blankline_filetype_exclude = [
             \ 'help', 'yaml'
             \]
+
+Plug 'nvim-lua/plenary.nvim'
 
 Plug 'lewis6991/gitsigns.nvim'
 
