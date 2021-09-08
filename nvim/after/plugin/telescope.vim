@@ -1,11 +1,4 @@
-nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files{
-            \   find_command = {
-                \     'fd',
-                \     '--type', 'f',
-                \     '--exclude', 'gems',
-                \     '--exclude', 'undodir',
-                \   },
-                \ }<CR>
+nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files()<cr>
 
 nnoremap <Leader>b :lua require'telescope.builtin'.buffers()<cr>
 
@@ -17,6 +10,7 @@ lua << EOF
 local actions = require('telescope.actions')
 require('telescope').setup{
 defaults = {
+    file_ignore_patterns = {"gems", "undodir"},
     mappings = {
         i = {
             ["<esc>"] = actions.close
