@@ -1,32 +1,38 @@
 call plug#begin()
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+set hidden
+set shortmess+=c
+set signcolumn=auto
+set updatetime=100
+let g:coc_global_extensions = [
+            \ "coc-css",
+            \ "coc-html",
+            \ "coc-snippets",
+            \ "coc-emmet",
+            \ "coc-sql",
+            \ "coc-clangd",
+            \ "coc-tsserver",]
+
+inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
+let g:coc_snippet_next = '<TAB>'
+let g:coc_snippet_prev = '<S-TAB>'
+
+inoremap <silent><expr> <c-n> coc#refresh()
+
+noremap <silent> [g <Plug>(coc-diagnostic-prev)
+noremap <silent> ]g <Plug>(coc-diagnostic-next)
+
+vmap <leader>=  <Plug>(coc-format-selected)
+nmap <leader>=  <Plug>(coc-format-selected)
+
 Plug 'tpope/vim-fugitive'
 noremap gs :G<CR>
 noremap gl :Gclog<CR>
 
 Plug 'nvim-lua/plenary.nvim'
 
-Plug 'michal-h21/vim-zettel'
-let g:zettel_link_format="[[%link]]"
-
-Plug 'vimwiki/vimwiki'
-let g:vimwiki_key_mappings = {
-            \ 'all_maps': 1,
-            \ 'global': 1,
-            \ 'headers': 1,
-            \ 'text_objs': 1,
-            \ 'table_format': 1,
-            \ 'table_mappings': 0,
-            \ 'lists': 1,
-            \ 'links': 1,
-            \ 'html': 1,
-            \ 'mouse': 0,
-            \ }
-
-let g:vimwiki_list = [{'path': '~/syns/note/',
-            \ 'path_html': '~/syns/note/publish_html/',
-            \ 'syntax': 'markdown',
-            \ 'ext': '.md',
-            \ 'list_margin': 0}]
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'prettier/vim-prettier', {
             \ 'do': 'yarn install',
@@ -83,62 +89,6 @@ Plug 'windwp/nvim-autopairs'
 Plug 'preservim/nerdcommenter'
 let g:NERDSpaceDelims = 1
 map mm <Plug>NERDCommenterToggle
-
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-
-Plug 'junegunn/fzf.vim'
-
-inoremap <expr> <c-f><c-f> fzf#vim#complete#path('rg --files')
-inoremap <expr> <c-f><c-w> fzf#vim#complete#word()
-noremap <leader>f :Files<cr>
-noremap <leader>b :Buffers<CR>
-noremap <leader>F :Files ~<CR>
-noremap <leader>r :Rg<CR>
-noremap <c-p> :Commands<CR>
-noremap // :BLines<CR>
-
-let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
-let $FZF_DEFAULT_OPTS='--reverse'
-let g:fzf_colors =
-            \ { 'fg':      ['fg', 'Normal'],
-            \ 'bg':      ['bg', 'Normal'],
-            \ 'hl':      ['fg', 'Comment'],
-            \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-            \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-            \ 'hl+':     ['fg', 'Statement'],
-            \ 'info':    ['fg', 'PreProc'],
-            \ 'border':  ['fg', 'Ignore'],
-            \ 'prompt':  ['fg', 'Conditional'],
-            \ 'pointer': ['fg', 'Exception'],
-            \ 'marker':  ['fg', 'Keyword'],
-            \ 'spinner': ['fg', 'Label'],
-            \ 'header':  ['fg', 'Comment'] }
-
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-set hidden
-set shortmess+=c
-set signcolumn=auto
-set updatetime=100
-let g:coc_global_extensions = [
-            \ "coc-css",
-            \ "coc-html",
-            \ "coc-snippets",
-            \ "coc-emmet",
-            \ "coc-sql",
-            \ "coc-clangd",
-            \ "coc-tsserver",]
-
-inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
-let g:coc_snippet_next = '<TAB>'
-let g:coc_snippet_prev = '<S-TAB>'
-
-inoremap <silent><expr> <c-n> coc#refresh()
-
-noremap <silent> [g <Plug>(coc-diagnostic-prev)
-noremap <silent> ]g <Plug>(coc-diagnostic-next)
-
-vmap <leader>=  <Plug>(coc-format-selected)
-nmap <leader>=  <Plug>(coc-format-selected)
 
 Plug 'mbbill/undotree'
 set undodir=~/syns/ok/undodir
