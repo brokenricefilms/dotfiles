@@ -105,14 +105,6 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 noremap J mzJ`z
 
-Plug 'luochen1990/rainbow'
-let g:rainbow_active = 1
-let g:rainbow_conf = {
-            \	'separately': {
-                \		'html': 0,
-                \	}
-                \}
-
 Plug 'gregsexton/MatchTag', { 'for': 'html' }
 
 Plug 'norcalli/nvim-colorizer.lua'
