@@ -2,7 +2,6 @@ nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files{
             \   find_command = {
                 \     'fd',
                 \     '--type', 'f',
-                \     '--ignore-case',
                 \     '--exclude', 'gems',
                 \     '--exclude', 'undodir',
                 \   },

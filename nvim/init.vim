@@ -31,7 +31,6 @@ noremap gl :Gclog<CR>
 
 Plug 'nvim-lua/plenary.nvim'
 
-Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'prettier/vim-prettier', {
