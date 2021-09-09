@@ -292,7 +292,7 @@ alias add='git add'
 alias push="git push"
 alias pull="git pull"
 alias cm='git commit'
-alias dt='git difftool'
+alias dv='git difftool'
 
 gc () {
     git_dir="$(basename "$1" .git)"
