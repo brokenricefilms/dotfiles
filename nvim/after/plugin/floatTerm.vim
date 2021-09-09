@@ -1,5 +1,5 @@
 noremap <leader>a :call FloatTerm()<CR>
-noremap <leader>h :call FloatTerm('"htop"')<CR>
+
 function! FloatTerm(...)
     let height = float2nr((&lines - 2) * 0.75)
     let row = float2nr((&lines - height) / 2)
