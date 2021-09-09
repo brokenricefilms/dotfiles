@@ -58,6 +58,7 @@ let g:fzf_colors =
 Plug 'tpope/vim-fugitive'
 noremap gs :G<CR>
 noremap gl :Gclog<CR>
+noremap gp :G push<CR>
 
 Plug 'michal-h21/vim-zettel'
 let g:zettel_link_format="[[%link]]"
