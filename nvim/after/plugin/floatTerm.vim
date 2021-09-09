@@ -1,6 +1,6 @@
-noremap <leader>a :call FloatTerm()<CR>
+noremap <leader>a :call Float_term()<CR>
 
-function! FloatTerm(...)
+function! Float_term(...)
     let height = float2nr((&lines - 2) * 0.75)
     let row = float2nr((&lines - height) / 2)
     let width = float2nr(&columns * 0.75)
@@ -31,8 +31,8 @@ function! FloatTerm(...)
     let buf = nvim_create_buf(v:false, v:true)
     let s:float_term_win = nvim_open_win(buf, v:true, opts)
 
-    hi FloatWinBorder guifg=#88507D
-    call setwinvar(s:float_term_border_win, '&winhl', 'Normal:FloatWinBorder')
+    hi float_win_border guifg=#88507D
+    call setwinvar(s:float_term_border_win, '&winhl', 'Normal:float_win_border')
     call setwinvar(s:float_term_win, '&winhl', 'Normal:Normal')
     if a:0 == 0
         terminal
