@@ -1,23 +1,35 @@
-snippet feature
+snippet feature "A new feature"
 feature($1): $2
 endsnippet
 
-snippet fix
+snippet fix "A bug fix"
 fix($1): $2
 endsnippet
 
-snippet documents
+snippet documents "Documentation only changes"
 documents($1): $2
 endsnippet
 
-snippet style
+snippet style "Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)"
 style($1): $2
+endsnippet
+
+snippet refactor "A code change that neither fixes a bug or adds a feature"
+refactor($1): $2
+endsnippet
+
+snippet performance "A code change that improves performance"
+performance($1): $2
+endsnippet
+
+snippet test "Adding missing tests"
+test($1): $2
+endsnippet
+
+snippet chore "Changes to the build process or auxiliary tools and libraries such as documentation generation"
+chore($1): $2
 endsnippet
 
 snippet clean_code
 style($1): clean code
-endsnippet
-
-snippet refactor
-refactor($1): $2
 endsnippet
