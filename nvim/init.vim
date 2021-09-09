@@ -150,8 +150,6 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 noremap J mzJ`z
 
-Plug 'gregsexton/MatchTag', { 'for': 'html' }
-
 Plug 'norcalli/nvim-colorizer.lua'
 autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
 
