@@ -62,6 +62,7 @@ noremap gp :G push<CR>
 
 Plug 'michal-h21/vim-zettel'
 let g:zettel_link_format="[[%link]]"
+let g:zettel_format = "%y%m%d%H%M%S-%title"
 
 Plug 'vimwiki/vimwiki'
 let g:vimwiki_key_mappings = {
