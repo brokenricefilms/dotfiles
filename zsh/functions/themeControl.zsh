@@ -1,7 +1,7 @@
 light () {
     echo "
 set background=light
-colorscheme zenbones-lush
+colorscheme zenbones
 " > ~/dotfiles/nvim/themeControl.vim
     echo "include ./zenbones.conf
     " > ~/dotfiles/kitty/theme.conf
