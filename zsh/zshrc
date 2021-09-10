@@ -45,7 +45,7 @@ HISTFILE=~/.zsh_history
 
 bindkey -v
 
-function zle-keymap-select {
+function zle_keymap_select {
 if [[ ${KEYMAP} == vicmd ]] ||
     [[ $1 = 'block' ]]; then
     echo -ne '\e[1 q'
@@ -57,13 +57,17 @@ elif [[ ${KEYMAP} == main ]] ||
 fi
 }
 
-zle -N zle-keymap-select
-zle-line-init() {
-zle -K viins
-echo -ne "\e[5 q"
+zle -N zle_keymap_select
+
+function zle_line_init() {
+    zle -K viins
+    echo -ne "\e[5 q"
 }
-zle -N zle-line-init
+
+zle -N zle_line_init
+
 echo -ne '\e[5 q'
+
 preexec() { echo -ne '\e[5 q' ;}
 
 autoload -Uz compinit
@@ -327,7 +331,7 @@ alias browser_stu='browser "http://stu.edu.vn/"'
 alias browser_stu2='browser "http://stu.edu.vn/vi/393/thong-bao.html"'
 alias browser_youtube_subsriptions='browser "https://www.youtube.com/feed/subscriptions"'
 alias browser_feedly='browser "https://feedly.com/i/collection/content/user/0d89157e-ce7d-4b2c-a2d6-98826f1e5089/category/global.all"'
-alias browser_google-podcast-subscriptions='browser "https://podcasts.google.com/subscriptions"'
+alias browser_google_podcast_subscriptions='browser "https://podcasts.google.com/subscriptions"'
 
 function :t() {
 browser "https://translate.google.com/?source=osdd#auto|auto|$argv"
@@ -360,7 +364,7 @@ browser "https://www.facebook.com/search?q=$argv"
 browser_daily () {
     cowsay "GET.SHIT.DONE"
     browser_youtube_subsriptions
-    browser_google-podcast-subscriptions
+    browser_google_podcast_subscriptions
     browser_feedly
     browser_mail0
     browser_mail1
