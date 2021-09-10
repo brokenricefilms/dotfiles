@@ -5,9 +5,9 @@ set shortmess+=c
 set signcolumn=auto
 set updatetime=100
 let g:coc_global_extensions = [
+            \ "coc-snippets",
             \ "coc-css",
             \ "coc-html",
-            \ "coc-snippets",
             \ "coc-emmet",
             \ "coc-sql",
             \ "coc-clangd",
@@ -17,13 +17,8 @@ inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
 let g:coc_snippet_next = '<TAB>'
 let g:coc_snippet_prev = '<S-TAB>'
 
-inoremap <silent><expr> <c-n> coc#refresh()
-
 noremap <silent> [g <Plug>(coc-diagnostic-prev)
 noremap <silent> ]g <Plug>(coc-diagnostic-next)
-
-vmap <leader>=  <Plug>(coc-format-selected)
-nmap <leader>=  <Plug>(coc-format-selected)
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
