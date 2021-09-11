@@ -27,9 +27,9 @@ Plug 'junegunn/fzf.vim'
 inoremap <expr> <c-f><c-f> fzf#vim#complete#path('rg --files')
 inoremap <expr> <c-f><c-w> fzf#vim#complete#word()
 noremap <leader>f :Files<cr>
-noremap <leader>b :Buffers<CR>
 noremap <leader>F :Files ~<CR>
-noremap <leader>r :Rg<CR>
+noremap <leader>k :Buffers<CR>
+noremap <leader>j :Rg<CR>
 noremap <c-p> :Commands<CR>
 noremap // :BLines<CR>
 
