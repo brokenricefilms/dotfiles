@@ -60,6 +60,7 @@ Plug 'michal-h21/vim-zettel'
 let g:zettel_link_format="[[%link]]"
 let g:zettel_format = "%y%m%d%H%M%S-%title"
 let g:zettel_options = [{"template" :  "~/.config/nvim/stuff/zet_template.md"}]
+nnoremap zn :ZettelNew<space>
 
 Plug 'vimwiki/vimwiki'
 let g:vimwiki_key_mappings = {
