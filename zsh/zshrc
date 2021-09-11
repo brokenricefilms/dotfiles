@@ -267,6 +267,10 @@ function o() {
     cd -
 }
 
+function O() {
+    xdg-open "$(fzf-down --preview 'bat --style=numbers --color=always --line-range :500 {}')"
+}
+
 function auto_commit () {
     is_in_git_repo || return
     git add -A
