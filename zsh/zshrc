@@ -80,10 +80,6 @@ function mk () {
     fi
 }
 
-bmi() { python3 ~/dotfiles/zsh/functions/bmi.py }
-
-tv () { bash ~/dotfiles/zsh/functions/tv.sh }
-
 function u () {
     if [ -f $1 ]; then
         case $1 in
@@ -107,12 +103,6 @@ function u () {
         echo "'$1' is not a valid file"
     fi
 }
-
-24_bit_color () { bash ~/dotfiles/zsh/functions/24_bit_color.sh }
-
-256_colours () { bash ~/dotfiles/zsh/functions/256_colours.sh }
-
-show_true_colour () { bash ~/dotfiles/zsh/functions/show_true_colour.sh }
 
 function download_file () {
     cd ~/Downloads
