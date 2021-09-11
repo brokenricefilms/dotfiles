@@ -14,10 +14,6 @@ function nvm() {
 }
 
 set -U EDITOR nvim
-# debian base
-# export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
-# arch base | fedora
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export EDITOR='nvim'
 export VISUAL='nvim'
 export PATH="$HOME/.npm/bin:$PATH"
