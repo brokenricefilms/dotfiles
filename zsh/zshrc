@@ -285,10 +285,21 @@ function ok () {
     push
 }
 
-alias ghok='cd ~/syns/ok ; okp ; cd -'
-alias ghnote='cd ~/syns/note ; ok ; cd -'
 alias glok='cd ~/syns/ok ; pull ; cd -'
+alias ghok='cd ~/syns/ok ; okp ; cd -'
+
 alias glnote='cd ~/syns/note ;  pull ; cd -'
+alias ghnote='cd ~/syns/note ; ok ; cd -'
+
+alias glzet='cd ~/.local/share/zet/ ; ok ; cd -'
+
+function ghzet () {
+    cp -r ~/syns/note/zet_publish ~/.local/share/zet/
+    cp ~/syns/note/README.md ~/.local/share/zet/
+    cd ~/.local/share/zet/
+    ok
+    cd -
+}
 
 alias browser='xdg-open'
 alias github='browser --new-window "https://github.com/thuanpham2311"'
