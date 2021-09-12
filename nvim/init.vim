@@ -140,8 +140,6 @@ Plug 'nvim-lua/plenary.nvim'
 
 Plug 'lewis6991/gitsigns.nvim'
 
-Plug 'hoob3rt/lualine.nvim'
-
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 Plug 'mcchrish/zenbones.nvim'
