@@ -1,0 +1,10 @@
+#! /usr/bin/env sh
+
+if [ ! -n "$1" ]; then
+    echo "Enter a directory name"
+elif [ -d $1 ]; then
+    echo "\`$1' already exists"
+    cd $1
+else
+    mkdir -p $1 && cd $1
+fi

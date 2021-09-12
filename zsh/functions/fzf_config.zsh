@@ -29,7 +29,7 @@ function c () {
     local dir
     dir=$(fd -t d . $HOME --exclude gems | fzf-down) &&
     cd "$dir"
-    clear
+    ls
 }
 
 function o() {
