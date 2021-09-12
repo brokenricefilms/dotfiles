@@ -6,7 +6,7 @@ noremap <leader>ww :ZettelHome<cr>
 
 command! NewZettel :execute ":e" zettelkasten . strftime("%Y%m%d%H%M%S") . ".md"
 
-noremap zn :NewZettel<cr>
+noremap <leader>n :NewZettel<cr>
 
 function! s:make_note_link(l)
     let line = split(a:l[0], ':')
