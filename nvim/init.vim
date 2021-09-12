@@ -24,7 +24,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 Plug 'junegunn/fzf.vim'
 
-inoremap <expr> <c-f><c-f> fzf#vim#complete#path('rg --files')
 inoremap <expr> <c-f><c-w> fzf#vim#complete#word()
 noremap <leader>f :Files<cr>
 noremap <leader>F :Files ~<CR>
@@ -56,32 +55,6 @@ Plug 'tpope/vim-fugitive'
 noremap gs :G<CR>
 noremap gl :Gclog<CR>
 noremap gp :G push<CR>
-
-Plug 'michal-h21/vim-zettel'
-let g:zettel_link_format="[[%link]]"
-let g:zettel_format = "%y%m%d%H%M%S-%title"
-let g:zettel_options = [{"template" :  "~/.config/nvim/stuff/zet_template.md"}]
-nnoremap zn :ZettelNew<space>
-
-Plug 'vimwiki/vimwiki'
-let g:vimwiki_key_mappings = {
-            \ 'all_maps': 1,
-            \ 'global': 1,
-            \ 'headers': 1,
-            \ 'text_objs': 1,
-            \ 'table_format': 1,
-            \ 'table_mappings': 0,
-            \ 'lists': 1,
-            \ 'links': 1,
-            \ 'html': 1,
-            \ 'mouse': 0,
-            \ }
-
-let g:vimwiki_list = [{'path': '~/syns/note/',
-            \ 'path_html': '~/syns/note/publish_html/',
-            \ 'syntax': 'markdown',
-            \ 'ext': '.md',
-            \ 'list_margin': 0}]
 
 Plug 'kevinhwang91/vim-ibus-sw'
 
