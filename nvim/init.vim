@@ -242,3 +242,5 @@ vnoremap j gj
 vnoremap k gk
 nnoremap gj j
 nnoremap gk k
+
+noremap gf :e <cfile><cr>

@@ -5,14 +5,6 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] \
     exec tmux
 fi
 
-function nvm() {
-    echo "🚨 NVM not loaded! Loading now..."
-    unset -f nvm
-    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-    nvm "$@"
-}
-
 set -U EDITOR nvim
 export EDITOR='nvim'
 export VISUAL='nvim'
@@ -132,6 +124,8 @@ function create_cpp_project () {
     nvim -O *
 }
 
+prettierCpp () { clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp') }
+
 function repeat_in_1s () {
     while true
     do
@@ -160,8 +154,8 @@ alias e='exit'
 alias :q='exit'
 alias q='exit'
 alias p='ipython3'
-alias rbn='sudo reboot now'
-alias sdn='sudo shutdown now'
+alias rb='sudo reboot now'
+alias sd='sudo shutdown now'
 alias ka='killall'
 alias v='nvim'
 alias 777='chmod -R 777'
@@ -210,95 +204,12 @@ alias yta='youtube-dl -f "bestaudio" --continue --no-overwrites --ignore-errors 
 alias t='trash'
 alias tdl='trash ~/Downloads/*'
 
-# debian
-# export FZF_DEFAULT_COMMAND='fdfind --type f'
-# export FZF_DEFAULT_COMMAND='fdfind --type f --follow --exclude .git --exclude undodir --exclude gems'
-# arch | termux | fedora
-export FZF_DEFAULT_COMMAND='fd --type f --follow --exclude .git --exclude undodir --exclude gems'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd -t d"
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
- --color=fg:-1,bg:-1,hl:#dcd2ce
- --color=fg+:-1,bg+:#dcd2ce,hl+:-1
- --color=info:-1,prompt:-1,pointer:-1
- --color=marker:-1,spinner:-1,header:-1'
-
-alias ej="emoji-fzf preview --prepend | fzf-down | awk '{ print \$1 }' | xclip -selection c"
-
-fzf-down() { fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse }
-
-function f() {
-    cd ~/
-    nvim -o "$(fzf-down --preview 'bat --style=numbers --color=always --line-range :500 {}')"
-    cd -
-}
-
-function c () {
-    local dir
-    dir=$(fd -t d . $HOME --exclude gems | fzf-down) &&
-        cd "$dir"
-            l
-        }
-
-is_in_git_repo() { git rev-parse HEAD > /dev/null 2>&1 }
-
-function co () {
-    is_in_git_repo || return
-    git branch -a | fzf-down | xargs git checkout
-}
-
-function o() {
-    cd ~/
-    xdg-open "$(fzf-down --preview 'bat --style=numbers --color=always --line-range :500 {}')"
-    cd -
-}
-
-function O() {
-    xdg-open "$(fzf-down --preview 'bat --style=numbers --color=always --line-range :500 {}')"
-}
-
-function auto_commit () {
-    is_in_git_repo || return
-    git add -A
-    git commit -m "[👌Auto commit] $(curl -s whatthecommit.com/index.txt)"
-}
-
-alias st='git status -sb'
-alias add='git add'
-alias push="git push"
-alias pull="git pull"
-alias cm='git commit'
-alias dv='git difftool'
-
-function gc () {
-    git_dir="$(basename "$1" .git)"
-    git_dir_resolved=${2:-$git_dir}
-    git clone "$@" && cd "$git_dir_resolved";
-}
-
-prettierCpp () { clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp') }
-
-function ok () {
-    is_in_git_repo || return
-    st
-    auto_commit
-    push
-}
-
-alias glok='cd ~/syns/ok ; pull ; cd -'
-alias ghok='cd ~/syns/ok ; okp ; cd -'
-
-alias glnote='cd ~/syns/note ;  pull ; cd -'
-alias ghnote='cd ~/syns/note ; ok ; cd -'
-
-alias glzet='cd ~/.local/share/zet/ ; ok ; cd -'
-
-function ghzet () {
-    cp -r ~/syns/note/zet_publish ~/.local/share/zet/
-    cp ~/syns/note/README.md ~/.local/share/zet/
-    cd ~/.local/share/zet/
-    ok
-    cd -
+function nvm() {
+    echo "🚨 NVM not loaded! Loading now..."
+    unset -f nvm
+    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    nvm "$@"
 }
 
 alias browser='xdg-open'
@@ -382,8 +293,10 @@ function update () {
     cd ~ ; clear ; neofetch
 }
 
-source ~/dotfiles/zsh/functions/zsh-autosuggestions.zsh
-source ~/dotfiles/zsh/functions/completion.zsh
-source ~/dotfiles/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/dotfiles/zsh/functions/fzf-key-bindings.zsh
 source ~/dotfiles/zsh/functions/theme_control.zsh
+source ~/dotfiles/zsh/functions/git_config.zsh
+source ~/dotfiles/zsh/functions/completion.zsh
+source ~/dotfiles/zsh/functions/fzf_config.zsh
+source ~/dotfiles/zsh/functions/fzf-key-bindings.zsh
+source ~/dotfiles/zsh/functions/zsh-autosuggestions.zsh
+source ~/dotfiles/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
