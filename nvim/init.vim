@@ -242,6 +242,6 @@ vnoremap k gk
 nnoremap gj j
 nnoremap gk k
 
-noremap gf :e <cfile><cr>
+noremap <leader>gf :e <cfile><cr>
 
 nmap gx :silent execute "!xdg-open " . "<cfile>"<CR>
