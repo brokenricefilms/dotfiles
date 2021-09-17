@@ -103,14 +103,14 @@ SERVER_IP () { hostname -I }
 
 se () { browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000 }
 
-alias l='exa -al --color=always --group-directories-first --icons'
-alias ls='exa -al --color=always --group-directories-first --icons'
-alias sl='exa -al --color=always --group-directories-first --icons'
-alias la='exa -a --color=always --group-directories-first --icons'
-alias al='exa -a --color=always --group-directories-first --icons'
-alias l.='exa -a| egrep "^\."'
-alias ll='exa -l --color=always --group-directories-first --icons'
-alias lt='exa -aT --color=always --group-directories-first --icons'
+alias l='clear ; exa -al --color=always --group-directories-first --icons'
+alias ls='clear ; exa -al --color=always --group-directories-first --icons'
+alias sl='clear ; exa -al --color=always --group-directories-first --icons'
+alias la='clear ; exa -a --color=always --group-directories-first --icons'
+alias al='clear ; exa -a --color=always --group-directories-first --icons'
+alias l.='clear ; exa -a| egrep "^\."'
+alias ll='clear ; exa -l --color=always --group-directories-first --icons'
+alias lt='clear ; exa -aT --color=always --group-directories-first --icons'
 
 alias cpf='xclip -sel clip'
 alias reload='source ~/.zshrc ; tmux source-file ~/.tmux.conf'
