@@ -164,7 +164,7 @@ set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
 set tabstop=4 softtabstop=4 noet
 set shiftwidth=4
-autocmd BufRead,BufNewFile *.scss,*.css,*.html setlocal tabstop=2
+autocmd BufRead,BufNewFile *.scss,*.css,*.html,*.md setlocal tabstop=2
 	    \ shiftwidth=2
 	    \ softtabstop=2
 set expandtab
