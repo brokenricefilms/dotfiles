@@ -39,6 +39,9 @@ alias ghok='cd ~/syns/ok ; okp ; cd -'
 alias glnote='cd ~/syns/note ;  pull ; cd -'
 alias ghnote='cd ~/syns/note ; ok ; cd -'
 
+alias gldrive='cd ~/syns/drive ;  pull ; cd -'
+alias ghdrive='cd ~/syns/drive ; ok ; cd -'
+
 alias glzet='cd ~/.local/share/zet/ ; ok ; cd -'
 
 function ghzet () {
