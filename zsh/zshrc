@@ -177,17 +177,6 @@ function nvm() {
     nvm "$@"
 }
 
-function hi () {
-    browser_daily
-    sleep 30
-    update
-    cowsay "internet speed"
-    speedtest-cli
-    cowsay "github habit"
-    gh graph --pixel %EF%90%88%20 --scheme github
-    nvim -p ~/syns/note/*.md
-}
-
 function update () {
     nvim -c "PlugUpdate | qa"
     nvim -c "CocUpdateSync | qa"
@@ -196,6 +185,7 @@ function update () {
     gem update neovim
     tldr --update
     gh extension upgrade --all
+    ~/.tmux/plugins/tpm/bin/update_plugins all
 
     # arch base
     # sudo pacman -Syu --noconfirm
@@ -215,8 +205,18 @@ function update () {
     # termux
     # pkg update
     # pkg upgrade -y
+}
 
-    cd ~ ; neofetch
+function hi () {
+    browser_daily
+    sleep 30
+    update
+    neofetch
+    cowsay "internet speed"
+    speedtest-cli
+    cowsay "github habit"
+    gh graph --pixel %EF%90%88%20 --scheme github
+    nvim -p ~/syns/note/*.md
 }
 
 source ~/dotfiles/zsh/functions/theme_control.zsh
