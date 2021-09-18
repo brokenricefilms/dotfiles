@@ -247,4 +247,4 @@ nnoremap gk k
 
 noremap <leader>gf :e <cfile><cr>
 
-nmap gx :silent execute "!xdg-open " . "<cfile>"<CR>
+noremap gx :silent execute "!xdg-open " . "<cfile>"<CR>
