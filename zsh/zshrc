@@ -112,7 +112,7 @@ alias l.='clear ; exa -a| egrep "^\."'
 alias ll='clear ; exa -l --color=always --group-directories-first --icons'
 alias lt='clear ; exa -aT --color=always --group-directories-first --icons'
 
-alias cpf='xclip -sel clip'
+alias cpf='wl-copy'
 alias reload='source ~/.zshrc ; tmux source-file ~/.tmux.conf'
 alias h='htop'
 alias e='exit'
