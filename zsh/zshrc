@@ -186,6 +186,10 @@ function update () {
     tldr --update
     gh extension upgrade --all
     ~/.tmux/plugins/tpm/bin/update_plugins all
+    flatpak update -y
+    nix upgrade-nix
+    nix optimise-store
+    nix-env -u
 
     # arch base
     # sudo pacman -Syu --noconfirm
@@ -196,15 +200,12 @@ function update () {
     # sudo apt upgrade -y
     # sudo apt autoremove -y
     # sudo apt autoclean
-    flatpak update -y
 
     # rehat base (fedora)
     sudo dnf update -y
     sudo dnf autoremove -y
 
-    # termux
-    # pkg update
-    # pkg upgrade -y
+
 }
 
 function hi () {
