@@ -68,20 +68,6 @@ function download_file () {
     cd -
 }
 
-function run () {
-    if ls $argv | grep ".cpp"
-    then
-        g++ $argv
-        ./a.out
-        rm a.out
-    elif ls $argv | grep ".c"
-    then
-        gcc $argv
-        ./a.out
-        rm a.out
-    fi
-}
-
 function create_cpp_project () {
     mkdir $argv
     cd $argv
