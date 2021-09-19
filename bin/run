@@ -1,8 +1,10 @@
 #! /usr/bin/env sh
 
 if [ -f $1 ]; then
-    cowsay "run $1"
-    echo "====Result===="
+    cowsay "👋Hey, I will run $1 for you."
+    echo "=========="
+    echo "==Result=="
+    echo "=========="
     echo ""
     case $1 in
         *.cpp) g++ $1 ; ./a.out ; rm a.out ;;
@@ -15,5 +17,5 @@ if [ -f $1 ]; then
         *) cowsay "Oh no, How I can run it?"
     esac
 else
-    cowsay "'$1' is not a valid file"
+    cowsay "I guess, you don't type right the file name. 🤣 Try again."
 fi
