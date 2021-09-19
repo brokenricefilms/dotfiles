@@ -1,9 +1,6 @@
 autocmd FileType c nnoremap <leader>e
     \ :sp<cr>:term gcc % -o %< && ./%< && rm ./%< <cr>:startinsert<cr>
 
-autocmd FileType java nnoremap <leader>e
-    \ :sp<cr>:term javac % && java %< <cr>:startinsert<cr>
-
 autocmd FileType cpp nnoremap <leader>e
     \ :sp<cr>:term g++ -std=c++17 % -o %< && ./%< && rm ./%< <cr> :startinsert<cr>
 
