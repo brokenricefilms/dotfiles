@@ -121,7 +121,7 @@ alias grep='grep --color=auto'
 alias n='nnn -de'
 
 # music stuff
-alias m='mpv --shuffle ~/Music/*'
+alias m='mpv --shuffle --loop ~/Music/*'
 
 # ubuntu apt
 # alias ins='sudo apt install -y'
