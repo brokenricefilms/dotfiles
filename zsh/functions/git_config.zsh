@@ -56,7 +56,7 @@ function yo () {
     git diff
     git add .
     cowsay "What is commmit message?"
-    read shit
-    git commit -m $shit
+    read commit_message
+    git commit -m $commit_message
     git push
 }
