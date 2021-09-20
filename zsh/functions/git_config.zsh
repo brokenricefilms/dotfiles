@@ -51,3 +51,12 @@ function ghzet () {
     ok
     cd -
 }
+
+function yo () {
+    git diff
+    git add .
+    cowsay "What is commmit message?"
+    read shit
+    git commit -m $shit
+    git push
+}
