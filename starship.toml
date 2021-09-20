@@ -1,6 +1,6 @@
 # ~/.config/starship.toml
 
 [character]
-success_symbol = "👉 "
+success_symbol = "👉"
 error_symbol = "⚠️ "
-vicmd_symbol = "😈 "
+vicmd_symbol = "😈"
