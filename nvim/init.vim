@@ -90,7 +90,7 @@ Plug 'wellle/tmux-complete.vim'
 
 Plug 'jdhao/better-escape.vim'
 let g:better_escape_interval = 200
-let g:better_escape_shortcut = 'jj'
+let g:better_escape_shortcut = ['jk', 'jj', 'kj', 'kk']
 
 Plug 'mattn/emmet-vim'
 let g:user_emmet_leader_key=','
