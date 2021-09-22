@@ -10,6 +10,9 @@ autocmd FileType python nnoremap <leader>e
 autocmd FileType javascript nnoremap <leader>e
     \ :sp<cr>:term node %<cr> :startinsert<cr>
 
+autocmd FileType javascript nnoremap <leader>e
+    \ :sp<cr>:term deno %<cr> :startinsert<cr>
+
 autocmd FileType go nnoremap <leader>e
     \ :sp<cr>:term go run %<cr> :startinsert<cr>
 

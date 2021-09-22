@@ -11,6 +11,7 @@ if [ -f $1 ]; then
         *.c) gcc $1 ; ./a.out ; rm a.out ;;
         *.html) brave-browser --new-window $1 ;;
         *.js) node $1 ;;
+        *.ts) deno $1 ;;
         *.py) python $1 ;;
         *.go) go run $1 ;;
         *.sh) chmod +x $1 ; ./$1;;
