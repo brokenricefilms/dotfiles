@@ -8,7 +8,7 @@ autocmd FileType python nnoremap <leader>e
     \ :sp<cr>:term python %<cr> :startinsert<cr>
 
 autocmd FileType javascript nnoremap <leader>e
-    \ :sp<cr>:term node %<cr> :startinsert<cr>
+    \ :sp<cr>:term dene run %<cr> :startinsert<cr>
 
 autocmd FileType typescript nnoremap <leader>e
     \ :sp<cr>:term deno run %<cr> :startinsert<cr>
