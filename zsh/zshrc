@@ -217,4 +217,3 @@ source ~/dotfiles/zsh/functions/fzf-key-bindings.zsh
 source ~/dotfiles/zsh/functions/zsh-autosuggestions.zsh
 source ~/dotfiles/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/dotfiles/zsh/functions/command_startup_shell.zsh
-if [ -e /home/master/.nix-profile/etc/profile.d/nix.sh ]; then . /home/master/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
