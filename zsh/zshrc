@@ -100,7 +100,7 @@ alias l.='exa -a| egrep "^\."'
 alias ll='exa -l --color=always --group-directories-first --icons'
 alias lt='exa -aT --color=always --group-directories-first --icons'
 
-alias cpf='xclip'
+alias cpf='wl-copy'
 alias reload='source ~/.zshrc ; tmux source-file ~/.tmux.conf'
 alias h='htop'
 alias e='exit'
