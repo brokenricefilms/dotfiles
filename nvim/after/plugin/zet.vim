@@ -1,4 +1,4 @@
-let g:zettelkasten = "~/syns/note/"
+let g:zettelkasten = "~/sync/note/"
 
 command! ZettelHome :execute ":e" zettelkasten . "README.md"
 

@@ -108,7 +108,7 @@ let g:NERDSpaceDelims = 1
 map mm <Plug>NERDCommenterToggle
 
 Plug 'mbbill/undotree'
-set undodir=~/syns/ok/undodir
+set undodir=~/sync/ok/undodir
 set undofile
 nnoremap <leader>u :UndotreeToggle<CR>
 let g:undotree_WindowLayout = 3

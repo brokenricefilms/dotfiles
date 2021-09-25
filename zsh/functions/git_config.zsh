@@ -33,20 +33,20 @@ function gc () {
     git clone "$@" && cd "$git_dir_resolved";
 }
 
-alias glok='cd ~/syns/ok ; pull ; cd -'
-alias ghok='cd ~/syns/ok ; okp ; cd -'
+alias glok='cd ~/sync/ok ; pull ; cd -'
+alias ghok='cd ~/sync/ok ; okp ; cd -'
 
-alias glnote='cd ~/syns/note ;  pull ; cd -'
-alias ghnote='cd ~/syns/note ; ok ; cd -'
+alias glnote='cd ~/sync/note ;  pull ; cd -'
+alias ghnote='cd ~/sync/note ; ok ; cd -'
 
-alias gldrive='cd ~/syns/drive ;  pull ; cd -'
-alias ghdrive='cd ~/syns/drive ; ok ; cd -'
+alias gldrive='cd ~/sync/drive ;  pull ; cd -'
+alias ghdrive='cd ~/sync/drive ; ok ; cd -'
 
 alias glzet='cd ~/.local/share/zet/ ; ok ; cd -'
 
 function ghzet () {
-    cp -r ~/syns/note/zet_publish ~/.local/share/zet/
-    cp ~/syns/note/README.md ~/.local/share/zet/
+    cp -r ~/sync/note/zet_publish ~/.local/share/zet/
+    cp ~/sync/note/README.md ~/.local/share/zet/
     cd ~/.local/share/zet/
     ok
     cd -

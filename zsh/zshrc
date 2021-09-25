@@ -199,7 +199,7 @@ function hi () {
     speedtest-cli
     cowsay "github habit"
     gh graph --pixel %EF%90%88%20 --scheme github
-    nvim -p ~/syns/note/*.md
+    nvim -p ~/sync/note/*.md
 }
 
 source ~/dotfiles/zsh/functions/theme_control.zsh
