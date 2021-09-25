@@ -8,14 +8,14 @@ require'nvim-treesitter.configs'.setup {
     disable = {},
   },
   ensure_installed = {
-    "tsx",
-    "vim",
-    "bash",
-    "json",
-    "cpp",
-    "yaml",
-    "html",
-    "css",
+    -- "tsx",
+    -- "vim",
+    -- "bash",
+    -- "json",
+    -- "cpp",
+    -- "yaml",
+    -- "html",
+    -- "css",
   },
 }
 
