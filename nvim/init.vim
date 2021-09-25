@@ -138,8 +138,6 @@ let g:indent_blankline_filetype_exclude = [
 
 Plug 'mhinz/vim-signify'
 
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
 Plug 'mcchrish/zenbones.nvim'
 
 Plug 'sainnhe/gruvbox-material'
