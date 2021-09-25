@@ -18,7 +18,7 @@
 
 - Auto switch (dark | light) theme
     * using `dark | light` in command line
-    * change nvim & kitty & alacritty & batcat theme
+    * change nvim & kitty & batcat theme
 - vim keymap everywhere
     * i use [touchcursor](https://github.com/donniebreve/touchcursor-linux) for config my keyboard, older is use xmodmap but i have some issue with this then i switch to touchcursor and this work well
     * my touchcursor config [here](https://github.com/thuanpham2311/dotfiles/blob/master/touchcursor/touchcursor.conf)
