@@ -87,6 +87,17 @@ function repeat_in_1s () {
     done
 }
 
+function mk () {
+    if [ ! -n "$1" ]; then
+        echo "Enter a directory name"
+    elif [ -d $1 ]; then
+        echo "\`$1' already exists"
+        cd $1
+    else
+        mkdir -p $1 && cd $1
+    fi
+}
+
 SERVER_IP () { hostname -I }
 
 se () { browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000 }
