@@ -32,7 +32,7 @@ noremap <leader>F :Files ~<CR>
 noremap <leader>k :Buffers<CR>
 noremap <leader>j :Rg<CR>
 noremap <leader>h :History<CR>
-noremap <c-p> :Commands<CR>
+noremap <leader><space> :Commands<CR>
 noremap // :BLines<CR>
 noremap gc :cd %:h <CR>:BCommits<CR>
 
