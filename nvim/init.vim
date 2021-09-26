@@ -214,7 +214,7 @@ map <silent> <Left> <C-w>>
 noremap cd. :cd %:h<enter>
 noremap cd :cd<enter>
 
-command! W execute "w !sudo tee %"
+command! SudoWrite execute "w !sudo tee %"
 
 noremap Y y$
 
