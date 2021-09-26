@@ -20,6 +20,8 @@ let g:coc_snippet_prev = '<S-TAB>'
 noremap <silent> [g <Plug>(coc-diagnostic-prev)
 noremap <silent> ]g <Plug>(coc-diagnostic-next)
 
+noremap <silent> <Leader>: :CocCommand<cr>
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 Plug 'junegunn/fzf.vim'
