@@ -1,4 +1,4 @@
-noremap <leader>a :call Float_term()<CR>
+noremap <leader>a :call Float_term()<enter>
 
 function! Float_term(...)
     let height = float2nr((&lines - 2) * 0.75)

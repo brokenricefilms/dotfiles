@@ -1,23 +1,23 @@
 autocmd FileType c nnoremap <leader>e
-    \ :sp<cr>:term gcc % -o %< && ./%< && rm ./%< <cr>:startinsert<cr>
+    \ :sp<enter>:term gcc % -o %< && ./%< && rm ./%< <enter>:startinsert<enter>
 
 autocmd FileType cpp nnoremap <leader>e
-    \ :sp<cr>:term g++ -std=c++17 % -o %< && ./%< && rm ./%< <cr> :startinsert<cr>
+    \ :sp<enter>:term g++ -std=c++17 % -o %< && ./%< && rm ./%< <enter> :startinsert<enter>
 
 autocmd FileType python nnoremap <leader>e
-    \ :sp<cr>:term python %<cr> :startinsert<cr>
+    \ :sp<enter>:term python %<enter> :startinsert<enter>
 
-autocmd FileType javascript nnoremap <leader>e
-    \ :sp<cr>:term dene run %<cr> :startinsert<cr>
+autocmd FileType javasenteript nnoremap <leader>e
+    \ :sp<enter>:term dene run %<enter> :startinsert<enter>
 
-autocmd FileType typescript nnoremap <leader>e
-    \ :sp<cr>:term deno run %<cr> :startinsert<cr>
+autocmd FileType typesenteript nnoremap <leader>e
+    \ :sp<enter>:term deno run %<enter> :startinsert<enter>
 
 autocmd FileType go nnoremap <leader>e
-    \ :sp<cr>:term go run %<cr> :startinsert<cr>
+    \ :sp<enter>:term go run %<enter> :startinsert<enter>
 
 autocmd FileType ruby nnoremap <leader>e
-    \ :sp<cr>:term ruby %<cr> :startinsert<cr>
+    \ :sp<enter>:term ruby %<enter> :startinsert<enter>
 
 autocmd FileType sh nnoremap <leader>e
-    \ :sp<cr>:term chmod +x ./%  && ./% <cr> :startinsert<cr>
+    \ :sp<enter>:term chmod +x ./%  && ./% <enter> :startinsert<enter>
