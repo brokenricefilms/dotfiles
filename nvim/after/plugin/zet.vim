@@ -2,7 +2,7 @@ let g:zettelkasten = "~/sync/note/"
 
 command! ZettelHome :execute ":e" zettelkasten . "README.md"
 
-noremap <leader>ww :ZettelHome<enter>
+noremap gn :ZettelHome<enter>:cd %:h<enter>
 
 command! NewZettel :execute ":e" zettelkasten . strftime("%Y%m%d%H%M%S") . ".md"
 
