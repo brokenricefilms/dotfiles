@@ -22,6 +22,8 @@ noremap <silent> ]g <Plug>(coc-diagnostic-next)
 
 noremap <silent> <Leader>: :CocCommand<enter>
 
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 Plug 'junegunn/fzf.vim'
