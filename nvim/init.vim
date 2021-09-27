@@ -239,5 +239,5 @@ nnoremap gk k
 noremap gx :silent execute "!xdg-open " . "<cfile>"<enter>
 
 nnoremap <leader>q :q<enter>
-nnoremap <leader>Q :qa!<enter>
+nnoremap Q :qa!<enter>
 nnoremap <leader>w :w<enter>
