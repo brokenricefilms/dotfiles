@@ -60,6 +60,8 @@ noremap gs :G<enter>
 noremap gl :Gclog<enter>
 noremap gp :G push<enter>
 
+Plug 'tpope/vim-eunuch'
+
 Plug 'kevinhwang91/vim-ibus-sw'
 
 Plug 'dkarter/bullets.vim'
@@ -215,8 +217,6 @@ map <silent> <Left> <C-w>>
 
 noremap cd. :cd %:h<enter>
 noremap cd :cd<enter>
-
-command! SudoWrite execute "w !sudo tee %"
 
 noremap Y y$
 
