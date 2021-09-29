@@ -21,3 +21,9 @@ autocmd FileType ruby nnoremap <leader>e
 
 autocmd FileType sh nnoremap <leader>e
     \ :sp<enter>:term chmod +x ./%  && ./% <enter> :startinsert<enter>
+
+autocmd BufEnter *.wls nnoremap <leader>e
+    \ :sp<enter>:term chmod +x ./%  && ./% <enter> :startinsert<enter>
+
+autocmd BufEnter *.wl nnoremap <leader>e
+    \ :sp<enter>:term wolframscript -file %<enter> :startinsert<enter>
