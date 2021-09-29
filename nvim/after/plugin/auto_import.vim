@@ -13,6 +13,13 @@ function! Import_fish()
     normal!o
 endfunction
 
+function! Import_wolframscript()
+    normal!i#! /usr/bin/env wolframscript
+    normal!o
+endfunction
+
+autocmd BufNewFile *.wls  :call Import_wolframscript()
+
 autocmd BufNewFile *.fish  :call Import_fish()
 
 autocmd BufNewFile *.py :call Import_py()
