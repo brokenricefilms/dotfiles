@@ -34,7 +34,7 @@ function gc () {
 }
 
 alias glok='cd ~/sync/ok ; pull ; cd -'
-alias ghok='cd ~/sync/ok ; okp ; cd -'
+alias ghok='cd ~/sync/ok ; ok ; cd -'
 
 alias glnote='cd ~/sync/note ;  pull ; cd -'
 alias ghnote='cd ~/sync/note ; ok ; cd -'
