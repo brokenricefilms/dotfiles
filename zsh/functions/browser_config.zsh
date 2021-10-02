@@ -38,5 +38,4 @@ function browser_daily () {
     browser_fb
     browser_stu
     browser_stu2
-    firefox "facebook.com"
 }
