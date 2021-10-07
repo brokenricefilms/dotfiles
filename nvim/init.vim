@@ -7,6 +7,7 @@ set updatetime=100
 let g:coc_global_extensions = [
             \ "coc-snippets",
             \ "coc-css",
+            \ "coc-omnisharp",
             \ "coc-html",
             \ "coc-emmet",
             \ "coc-sql",
