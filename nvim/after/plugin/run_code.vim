@@ -4,6 +4,9 @@ autocmd FileType c nnoremap <leader>e
 autocmd FileType cpp nnoremap <leader>e
     \ :w<enter>:sp<enter>:term g++ -std=c++17 % -o %< && ./%< && rm ./%< <enter> :startinsert<enter>
 
+autocmd FileType cs nnoremap <leader>e
+    \ :w<enter>:sp<enter>:term mcs % && mono *.exe && rm *.exe <enter> :startinsert<enter>
+
 autocmd FileType python nnoremap <leader>e
     \ :w<enter>:sp<enter>:term python %<enter> :startinsert<enter>
 
