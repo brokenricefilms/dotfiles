@@ -3,5 +3,3 @@
 source ~/dotfiles/zsh/zshrc
 
 ghok
-
-ghdrive
