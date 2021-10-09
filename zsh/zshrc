@@ -74,10 +74,10 @@ function create_cpp_project () {
     mkdir $argv
     cd $argv
     cp -r ~/.config/nvim/stuff/cpppro/* .
-    nvim -O *
+    nvim -p *
 }
 
-prettierCpp () { clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp') }
+prettier_cpp () { clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp') }
 
 function repeat_in_1s () {
     while true
