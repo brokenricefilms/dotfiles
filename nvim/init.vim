@@ -96,6 +96,8 @@ let g:user_emmet_leader_key=','
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,markdown EmmetInstall
 
+Plug 'AndrewRadev/tagalong.vim'
+
 Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'tpope/vim-surround'
