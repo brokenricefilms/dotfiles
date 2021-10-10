@@ -2,7 +2,7 @@ call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 set hidden
 set shortmess+=c
-set signcolumn=auto
+set signcolumn=yes
 set updatetime=100
 let g:coc_global_extensions = [
             \ "coc-snippets",
@@ -166,7 +166,7 @@ autocmd BufRead,BufNewFile *.scss,*.css,*.html,*.md setlocal tabstop=2
 	    \ softtabstop=2
 set expandtab
 
-set number relativenumber
+" set number relativenumber
 
 set nocompatible
 filetype plugin indent on
