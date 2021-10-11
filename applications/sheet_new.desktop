@@ -1,0 +1,6 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=new sheet
+Exec=/usr/bin/brave-browser --app="https://sheet.new"

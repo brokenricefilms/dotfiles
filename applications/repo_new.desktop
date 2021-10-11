@@ -1,0 +1,6 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=new repo
+Exec=brave-browser --app="https://repo.new"

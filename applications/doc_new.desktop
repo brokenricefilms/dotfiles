@@ -1,0 +1,6 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=new doc
+Exec=brave-browser --app="https://doc.new"
