@@ -63,23 +63,23 @@ preexec() { echo -ne '\e[5 q' ;}
 autoload -Uz compinit
 compinit
 
-function download_file () {
+function downloadFile () {
     cd ~/Downloads
     aria2c $argv
     ls -lah ~/Downloads
     cd -
 }
 
-function create_cpp_project () {
+function createCppProject () {
     mkdir $argv
     cd $argv
     cp -r ~/.config/nvim/stuff/cpppro/* .
     nvim -p *
 }
 
-prettier_cpp () { clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp') }
+prettierCpp () { clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp') }
 
-function repeat_in_1s () {
+function repeatIn1s () {
     while true
     do
         $argv
@@ -124,7 +124,7 @@ alias ka='killall'
 alias v='nvim'
 alias 777='chmod -R 777'
 alias x='chmod +x'
-alias color_picker='zenity --color-selection'
+alias colorPicker='zenity --color-selection'
 alias cat='bat'
 export GREP_COLOR='1;31'
 alias grep='grep --color=auto'
@@ -202,7 +202,7 @@ function update () {
 }
 
 function hi () {
-    browser_daily
+    browserDaily
     sleep 30
     update
     neofetch
@@ -213,12 +213,12 @@ function hi () {
     nvim -p ~/sync/note/*.md
 }
 
-source ~/dotfiles/zsh/functions/theme_control.zsh
-source ~/dotfiles/zsh/functions/browser_config.zsh
-source ~/dotfiles/zsh/functions/git_config.zsh
+source ~/dotfiles/zsh/functions/themeControl.zsh
+source ~/dotfiles/zsh/functions/browserConfig.zsh
+source ~/dotfiles/zsh/functions/gitConfig.zsh
 source ~/dotfiles/zsh/functions/completion.zsh
-source ~/dotfiles/zsh/functions/fzf_config.zsh
-source ~/dotfiles/zsh/functions/fzf-key-bindings.zsh
-source ~/dotfiles/zsh/functions/zsh-autosuggestions.zsh
+source ~/dotfiles/zsh/functions/fzfConfig.zsh
+source ~/dotfiles/zsh/functions/fzfKeyBindings.zsh
+source ~/dotfiles/zsh/functions/zshAutoSuggestions.zsh
 source ~/dotfiles/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/dotfiles/zsh/functions/command_startup_shell.zsh
+source ~/dotfiles/zsh/functions/commandStartupShell.zsh

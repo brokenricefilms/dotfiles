@@ -11,29 +11,29 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --color=info:-1,prompt:-1,pointer:-1
 --color=marker:-1,spinner:-1,header:-1'
 
-alias ej="emoji-fzf preview --prepend | fzf-down | awk '{ print \$1 }' | xclip -selection c"
+alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \$1 }' | xclip -selection c"
 
-fzf-down() { fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse }
+fzfDown() { fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse }
 
 function f() {
     cd ~/
-    nvim -o "$(fzf-down --preview 'bat --style=numbers --color=always --line-range :500 {}')"
+    nvim -o "$(fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')"
     cd -
 }
 
 function c () {
     local dir
-    dir=$(fd -t d . $HOME --exclude gems | fzf-down) &&
+    dir=$(fd -t d . $HOME --exclude gems | fzfDown) &&
     cd "$dir"
     ls
 }
 
 function o() {
     cd ~/
-    xdg-open "$(fzf-down --preview 'bat --style=numbers --color=always --line-range :500 {}')"
+    xdg-open "$(fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')"
     cd -
 }
 
 function O() {
-    xdg-open "$(fzf-down --preview 'bat --style=numbers --color=always --line-range :500 {}')"
+    xdg-open "$(fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')"
 }

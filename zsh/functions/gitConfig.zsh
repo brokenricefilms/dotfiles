@@ -7,30 +7,30 @@ alias pull="git pull"
 alias cm='git commit'
 alias dv='git difftool'
 
-is_in_git_repo() { git rev-parse HEAD > /dev/null 2>&1 }
+isInGitRepo() { git rev-parse HEAD > /dev/null 2>&1 }
 
 function co () {
-    is_in_git_repo || return
+    isInGitRepo || return
     git branch -a | fzf-down | xargs git checkout
 }
 
-function auto_commit () {
-    is_in_git_repo || return
+function autoCommit () {
+    isInGitRepo || return
     git add -A
     git commit -m "[👌Auto commit] $(curl -s whatthecommit.com/index.txt)"
 }
 
 function ok () {
-    is_in_git_repo || return
+    isInGitRepo || return
     st
-    auto_commit
+    autoCommit
     push
 }
 
 function gc () {
-    git_dir="$(basename "$1" .git)"
-    git_dir_resolved=${2:-$git_dir}
-    git clone "$@" && cd "$git_dir_resolved";
+    gitDir="$(basename "$1" .git)"
+    gitDirResolved=${2:-$gitDir}
+    git clone "$@" && cd "$gitDirResolved";
 }
 
 alias glok='cd ~/sync/ok ; pull ; cd -'
@@ -53,7 +53,7 @@ function yo () {
     git diff
     git add .
     cowsay "What is commmit message?"
-    read commit_message
-    git commit -m $commit_message
+    read commitMessage
+    git commit -m $commitMessage
     git push
 }
