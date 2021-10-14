@@ -1,7 +1,0 @@
-{
-  "Markdown": {
-    "beautifiers": [
-      "Prettier"
-    ]
-  }
-}
