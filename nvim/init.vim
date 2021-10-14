@@ -141,6 +141,8 @@ let g:indent_blankline_filetype_exclude = [
 
 Plug 'mhinz/vim-signify'
 
+Plug 'rktjmp/lush.nvim'
+
 Plug 'mcchrish/zenbones.nvim'
 
 Plug 'sainnhe/gruvbox-material'
