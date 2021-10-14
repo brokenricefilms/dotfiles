@@ -79,6 +79,8 @@ function createCppProject () {
 
 prettierCpp () { clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp') }
 
+prettierCs () { clang-format --style=Google -i $(find -name '*.cs') }
+
 function repeatIn1s () {
     while true
     do
