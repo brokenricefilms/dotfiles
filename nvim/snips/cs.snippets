@@ -1,0 +1,8 @@
+snippet NhapMangMotChieu
+public static void NhapMangMotChieu(int[] array, int number) {
+  for (int i = 0; i < number; i++) {
+	Console.Write("Nhập phần tử thứ " + i + ": ");
+	array[i] = Convert.ToInt32(Console.ReadLine());
+  }
+}
+endsnippet
