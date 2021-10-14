@@ -94,7 +94,7 @@ let g:better_escape_shortcut = ['jk', 'jj', 'kj', 'kk']
 Plug 'mattn/emmet-vim'
 let g:user_emmet_leader_key=','
 let g:user_emmet_install_global = 0
-autocmd FileType cpp,cs,html,css,markdown EmmetInstall
+autocmd FileType html,css,markdown EmmetInstall
 
 Plug 'AndrewRadev/tagalong.vim'
 
@@ -161,7 +161,7 @@ set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
 set tabstop=4 softtabstop=4 noet
 set shiftwidth=4
-autocmd BufRead,BufNewFile *.scss,*.css,*.html,*.md setlocal tabstop=2
+autocmd BufRead,BufNewFile *.cs,*.cpp,*.scss,*.css,*.html,*.md setlocal tabstop=2
 	    \ shiftwidth=2
 	    \ softtabstop=2
 set expandtab
