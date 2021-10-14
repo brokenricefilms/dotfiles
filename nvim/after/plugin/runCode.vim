@@ -10,6 +10,12 @@ autocmd FileType cs nnoremap <leader>r
 autocmd FileType python nnoremap <leader>r
     \ :w<enter>:sp<enter>:term python %<enter> :startinsert<enter>
 
+autocmd FileType html nnoremap <leader>r
+    \ :w<enter>:!xdg-open %<enter>
+
+autocmd FileType markdown nnoremap <leader>r
+    \ :w<enter>:MarkdownPreview<enter>
+
 autocmd FileType javasenteript nnoremap <leader>r
     \ :w<enter>:sp<enter>:term dene run %<enter> :startinsert<enter>
 
