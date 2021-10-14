@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "@unibeautify/beautifier-prettier": "^0.9.0",
+    "prettier": "^2.4.1",
+    "unibeautify": "^0.17.1"
+  }
+}
