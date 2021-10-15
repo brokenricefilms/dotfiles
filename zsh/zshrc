@@ -131,7 +131,6 @@ alias cat='bat'
 export GREP_COLOR='1;31'
 alias grep='grep --color=auto'
 alias n='nnn -de'
-# alias cd='cd; ls'
 
 # music stuff
 alias m='mpv --shuffle --loop-playlist ~/Music/*'

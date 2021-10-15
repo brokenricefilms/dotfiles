@@ -11,7 +11,7 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --color=info:-1,prompt:-1,pointer:-1
 --color=marker:-1,spinner:-1,header:-1'
 
-alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \$1 }' | xclip -selection c"
+alias ej="emojiFzf preview --prepend | fzfDown | awk '{ print \$1 }' | xclip -selection c"
 
 fzfDown() { fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse }
 
