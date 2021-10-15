@@ -155,7 +155,16 @@ alias uins='sudo dnf -y remove'
 alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 50 ; tmux last-pane ; nvim'
 # alias ide='tmux split-window -v -p 8 ; tmux last-pane ; nvim'
 # alias ide='tmux split-window -h -p 30 ; tmux split-window -v -p 75 ; tmux last-pane ; nvim'
-alias qa='tmux kill-session -a ; cowsay "All session deleted" ; tmux ls'
+
+function qa() {
+    cowsay "kill all unname tmux session"
+    tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >> ok.sh
+    sed -i 's/^/tmux kill-session -t /' ok.sh
+    chmod +x ok.sh
+    ./ok.sh
+    rm ok.sh
+    tmux ls
+}
 
 alias ..='cd .. ; l'
 alias ...='cd .. ; cd .. ; l'
