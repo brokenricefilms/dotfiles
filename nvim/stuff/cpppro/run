@@ -1,0 +1,10 @@
+#! /usr/bin/env sh
+
+cowsay "🚀 Executing..."
+g++ main.cpp source.cpp header.h
+echo ""
+./a.out
+echo ""
+cowsay "🧹 Clearing..."
+rm header.h.gch
+rm a.out
