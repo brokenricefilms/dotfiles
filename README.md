@@ -4,9 +4,9 @@
 
 ## Demo
 
-**You can watch my screencast in my youtube channel**
+**You can watch my Talk show Oct 15, 2021: my setup for coding, daily use**
 
-=> [https://youtube.com/playlist?list=PLiK7Zu7FR9jUZR\_\_9M1S2UWozwVLFqveL][youtube playlist programming and research stuff]
+=> <https://youtu.be/2OhzSP1uGLc>
 
 [youtube playlist programming and research stuff]: https://youtube.com/playlist?list=PLiK7Zu7FR9jUZR__9M1S2UWozwVLFqveL
 
