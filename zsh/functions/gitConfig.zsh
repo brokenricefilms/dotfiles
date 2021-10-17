@@ -39,12 +39,12 @@ alias ghok='cd ~/sync/ok ; ok ; cd -'
 alias glnote='cd ~/sync/note ;  pull ; cd -'
 alias ghnote='cd ~/sync/note ; ok ; cd -'
 
-alias glzet='cd ~/.local/share/zet/ ; ok ; cd -'
+alias glgarden='cd ~/.local/share/garden/ ; ok ; cd -'
 
-function ghzet () {
-    cp -r ~/sync/note/zet_publish ~/.local/share/zet/
-    cp ~/sync/note/README.md ~/.local/share/zet/
-    cd ~/.local/share/zet/
+function ghgarden () {
+    cp -r ~/sync/note/publish ~/.local/share/garden/
+    cp ~/sync/note/README.md ~/.local/share/garden/
+    cd ~/.local/share/garden/
     ok
     cd -
 }

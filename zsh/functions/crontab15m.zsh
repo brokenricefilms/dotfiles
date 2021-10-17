@@ -3,4 +3,4 @@
 source ~/dotfiles/zsh/zshrc
 
 glnote ; ghnote
-glzet ; ghzet
+glgarden ; ghgarden
