@@ -165,9 +165,7 @@ set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
 set tabstop=4 softtabstop=4 noet
 set shiftwidth=4
-autocmd BufRead,BufNewFile *.cs,*.h,*.cpp,*.scss,*.css,*.html,*.md setlocal tabstop=2
-	    \ shiftwidth=2
-	    \ softtabstop=2
+autocmd BufRead,BufNewFile *.cs,*.h,*.cpp,*.scss,*.css,*.html,*.md setlocal tabstop=2 shiftwidth=2 softtabstop=2
 set expandtab
 
 set number relativenumber
@@ -255,14 +253,14 @@ noremap H :cp<enter>
 noremap L :cn<enter>
 
 function! TwiddleCase(str)
-  if a:str ==# toupper(a:str)
-    let result = tolower(a:str)
-  elseif a:str ==# tolower(a:str)
-    let result = substitute(a:str,'\(\<\w\+\>\)', '\u\1', 'g')
-  else
-    let result = toupper(a:str)
-  endif
-  return result
+    if a:str ==# toupper(a:str)
+        let result = tolower(a:str)
+    elseif a:str ==# tolower(a:str)
+        let result = substitute(a:str,'\(\<\w\+\>\)', '\u\1', 'g')
+    else
+        let result = toupper(a:str)
+    endif
+    return result
 endfunction
 vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
 
