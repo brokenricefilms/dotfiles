@@ -19,10 +19,8 @@ inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
 let g:coc_snippet_next = '<TAB>'
 let g:coc_snippet_prev = '<S-TAB>'
 
-try
-    nmap <silent> [c :call CocAction('diagnosticNext')<cr>
-    nmap <silent> ]c :call CocAction('diagnosticPrevious')<cr>
-endtry
+nmap <silent> [c :call CocAction('diagnosticNext')<cr>
+nmap <silent> ]c :call CocAction('diagnosticPrevious')<cr>
 
 noremap <silent> <Leader>; :CocCommand<enter>
 
