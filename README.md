@@ -12,17 +12,23 @@
 
 ---
 
-## feature
+## Feature
 
-- Auto switch (dark | light) theme
-    * using `dark | light` in command line
-    * change nvim & kitty & batcat theme
-- vim keymap everywhere
-    * i use [touchcursor](https://github.com/donniebreve/touchcursor-linux) for config my keyboard, older is use xmodmap but i have some issue with this then i switch to touchcursor and this work well
-    * my touchcursor config [here](https://github.com/thuanpham2311/dotfiles/blob/master/touchcursor/touchcursor.conf)
-- fzf, moving fast.
-    * in cli press `f` edit file with nvim
-    * in cli press `c` cd to dir, clear screen and fancy ls
+- zsh
+  * fzf, moving fast.
+      + in cli press `f` edit file with nvim
+      + in cli press `c` cd to dir, clear screen and fancy ls
+  * Auto switch (dark | light) theme
+      + using `dark | light` in command line
+      + change nvim & kitty & batcat theme
+- Tmux:
+  * auto save, continuum session
+  * witch session quickly with fzf
+- Vim:
+  * zet note support using vim, [see function](https://github.com/thuanpham2311/dotfiles/blob/master/nvim/after/plugin/zet.vim)
+  * vim keymap everywhere
+      + i use [touchcursor](https://github.com/donniebreve/touchcursor-linux) for config my keyboard, older is use xmodmap but i have some issue with this then i switch to touchcursor and this work well
+      + my touchcursor config [here](https://github.com/thuanpham2311/dotfiles/blob/master/touchcursor/touchcursor.conf)
 
 ## You want setup like me? (Auto script)
 
