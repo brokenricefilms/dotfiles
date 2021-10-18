@@ -264,4 +264,5 @@ function! TwiddleCase(str)
 endfunction
 vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
 
-command! OpenFileInDefaultApp execute "!xdg-open %"
+command! OpenFileInDefaultApp execute "!xdg-open '%'"
+command! OpenFileInBraveBrowser execute "!brave-browser '%'"
