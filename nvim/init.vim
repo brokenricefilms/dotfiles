@@ -209,6 +209,8 @@ noremap <leader>9 9gt
 
 noremap <space>s :setlocal spell! spell?<enter>
 
+set spelllang=en_us,vi
+
 command! Reload execute "source ~/.config/nvim/init.vim"
 
 noremap ss :split<Return><C-w>w
