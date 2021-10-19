@@ -19,8 +19,8 @@ inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
 let g:coc_snippet_next = '<TAB>'
 let g:coc_snippet_prev = '<S-TAB>'
 
-nmap <silent> [c :call CocAction('diagnosticNext')<cr>
-nmap <silent> ]c :call CocAction('diagnosticPrevious')<cr>
+nmap <silent> ]d :call CocAction('diagnosticNext')<cr>
+nmap <silent> [d :call CocAction('diagnosticPrevious')<cr>
 
 noremap <silent> <Leader>; :CocCommand<enter>
 
@@ -137,7 +137,9 @@ let g:indent_blankline_filetype_exclude = [
             \ 'help', 'yaml'
             \]
 
-Plug 'mhinz/vim-signify'
+Plug 'nvim-lua/plenary.nvim'
+
+Plug 'lewis6991/gitsigns.nvim'
 
 Plug 'rktjmp/lush.nvim'
 
@@ -182,6 +184,7 @@ set nobackup
 set noswapfile
 set lazyredraw
 set nowritebackup
+
 set inccommand=split
 set scrolloff=5
 
