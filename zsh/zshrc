@@ -216,8 +216,6 @@ function update () {
     # rehat base (fedora)
     sudo dnf update -y
     sudo dnf autoremove -y
-
-
 }
 
 function hi () {
