@@ -1,10 +1,6 @@
 local status, autopairs = pcall(require, "nvim-autopairs")
 if (not status) then return end
 
-autopairs.setup({
-  disable_filetype = { "TelescopePrompt" , "vimwiki" },
-})
-
 local remap = vim.api.nvim_set_keymap
 local npairs = require('nvim-autopairs')
 
