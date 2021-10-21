@@ -27,7 +27,14 @@ function f() {
 
 function c () {
     local dir
-    dir=$(fd -t d . $HOME --exclude gems | fzfDown) &&
+    dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude Visual_Paradigm_CE_16.3 --exclude node_modules | fzfDown) &&
+    cd "$dir"
+    ls
+}
+
+function C () {
+    local dir
+    dir=$(fd -t d . $HOME --exclude .git --exclude undodir --exclude gems --exclude Visual_Paradigm_CE_16.3 --exclude node_modules | fzfDown) &&
     cd "$dir"
     ls
 }
