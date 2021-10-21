@@ -94,9 +94,12 @@ let g:better_escape_shortcut = ['jk', 'jj', 'kj', 'kk']
 Plug 'mattn/emmet-vim'
 let g:user_emmet_leader_key=','
 let g:user_emmet_install_global = 0
-autocmd FileType html,css,markdown EmmetInstall
+autocmd FileType xhtml,html,css,markdown EmmetInstall
 
 Plug 'AndrewRadev/tagalong.vim'
+let g:tagalong_filetypes = ['eco', 'eelixir', 'ejs', 'eruby', 'html', 'xhtml', 'htmldjango', 'javascriptreact', 'jsx', 'php', 'typescriptreact', 'xml']
+
+Plug 'leafOfTree/vim-matchtag'
 
 Plug 'christoomey/vim-tmux-navigator'
 
