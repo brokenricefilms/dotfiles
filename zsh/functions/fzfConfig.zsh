@@ -15,13 +15,13 @@ alias ej="emojiFzf preview --prepend | fzfDown | awk '{ print \$1 }' | xclip -se
 
 fzfDown() { fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse }
 
-function f() {
+function F() {
     cd ~/
     nvim -o "$(fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')"
     cd -
 }
 
-function F() {
+function f() {
     nvim -o "$(fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')"
 }
 
@@ -32,12 +32,12 @@ function c () {
     ls
 }
 
-function o() {
+function O() {
     cd ~/
     xdg-open "$(fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')"
     cd -
 }
 
-function O() {
+function o() {
     xdg-open "$(fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')"
 }
