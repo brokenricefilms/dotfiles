@@ -21,6 +21,10 @@ function f() {
     cd -
 }
 
+function F() {
+    nvim -o "$(fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')"
+}
+
 function c () {
     local dir
     dir=$(fd -t d . $HOME --exclude gems | fzfDown) &&
