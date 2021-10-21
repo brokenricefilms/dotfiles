@@ -24,6 +24,8 @@ nmap <silent> [d :call CocAction('diagnosticPrevious')<cr>
 
 noremap <silent> <Leader>; :CocCommand<enter>
 
+Plug 'djoshea/vim-autoread'
+
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
