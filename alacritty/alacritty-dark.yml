@@ -1,6 +1,9 @@
 env:
   TERM: xterm-256color
 
+window:
+  decorations: "none"
+
 # Colors (Gruvbox dark)
 colors:
   primary:
