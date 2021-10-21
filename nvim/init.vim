@@ -107,7 +107,7 @@ Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'tpope/vim-surround'
 
-Plug 'windwp/nvim-autopairs'
+Plug 'jiangmiao/auto-pairs'
 
 Plug 'preservim/nerdcommenter'
 let g:NERDSpaceDelims = 1
