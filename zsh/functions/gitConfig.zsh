@@ -24,6 +24,7 @@ function ok () {
     isInGitRepo || return
     st
     autoCommit
+    pull
     push
 }
 
@@ -32,6 +33,7 @@ function okp () {
     prettier --write *
     st
     autoCommit
+    pull
     push
 }
 
