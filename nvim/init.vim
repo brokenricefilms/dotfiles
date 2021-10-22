@@ -1,28 +1,16 @@
 call plug#begin()
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+
+Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+
+Plug 'neovim/nvim-lspconfig'
+
+Plug 'williamboman/nvim-lsp-installer'
+
 set hidden
 set shortmess+=c
 set signcolumn=yes
 set updatetime=100
-let g:coc_global_extensions = [
-            \ "coc-snippets",
-            \ "coc-css",
-            \ "coc-prettier",
-            \ "coc-omnisharp",
-            \ "coc-html",
-            \ "coc-emmet",
-            \ "coc-sql",
-            \ "coc-clangd",
-            \ "coc-tsserver",]
-
-inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
-let g:coc_snippet_next = '<TAB>'
-let g:coc_snippet_prev = '<S-TAB>'
-
-nmap <silent> ]d :call CocAction('diagnosticNext')<cr>
-nmap <silent> [d :call CocAction('diagnosticPrevious')<cr>
-
-noremap <silent> <Leader>; :CocCommand<enter>
 
 Plug 'djoshea/vim-autoread'
 
