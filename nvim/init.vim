@@ -128,8 +128,8 @@ set smartcase
 set magic
 nnoremap n nzzzv
 nnoremap N Nzzzv
-:nnoremap * *zz
-:nnoremap # #zz
+nnoremap * *zz
+nnoremap # #zz
 noremap J mzJ`z
 
 Plug 'norcalli/nvim-colorizer.lua'
