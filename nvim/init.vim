@@ -65,7 +65,6 @@ let g:bullets_enabled_file_types = [
             \]
 
 Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
-let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 
 Plug 'ferrine/md-img-paste.vim'
 let g:mdip_imgdir = '.'
