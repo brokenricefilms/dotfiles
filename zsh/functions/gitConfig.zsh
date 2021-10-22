@@ -11,7 +11,7 @@ isInGitRepo() { git rev-parse HEAD > /dev/null 2>&1 }
 
 function co () {
     isInGitRepo || return
-    git branch -a | fzf-down | xargs git checkout
+    git branch -a | fzfDown | xargs git checkout
 }
 
 function autoCommit () {
