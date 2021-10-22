@@ -7,9 +7,18 @@ set updatetime=100
 let g:coc_global_extensions = [
             \ "coc-snippets",
             \ "coc-css",
+            \ "coc-diagnostic",
             \ "coc-prettier",
+            \ "coc-dot-complete",
+            \ "coc-dash-complete",
+            \ "coc-deno",
+            \ "coc-sh",
+            \ "coc-go",
+            \ "coc-eslint",
             \ "coc-omnisharp",
             \ "coc-html",
+            \ "coc-htmlhint",
+            \ "coc-html-css-support",
             \ "coc-emmet",
             \ "coc-sql",
             \ "coc-clangd",
@@ -77,7 +86,6 @@ let g:bullets_enabled_file_types = [
             \]
 
 Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
-let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 
 Plug 'ferrine/md-img-paste.vim'
 let g:mdip_imgdir = '.'
