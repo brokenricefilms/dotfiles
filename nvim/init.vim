@@ -113,6 +113,7 @@ set ignorecase
 set incsearch
 set smartcase
 set magic
+set linebreak breakat
 nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap * *zz
