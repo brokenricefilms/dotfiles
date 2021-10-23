@@ -223,8 +223,8 @@ set scrolloff=5
 nnoremap + <C-a>
 nnoremap - <C-x>
 
-vmap < <gv
-vmap > >gv
+xnoremap < <gv
+xnoremap > >gv
 
 map <space> <leader>
 
