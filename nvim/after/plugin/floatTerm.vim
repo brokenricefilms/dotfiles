@@ -1,9 +1,14 @@
-noremap <leader>a :call Float_term()<enter>
+noremap <leader>a :call FloatTerm()<enter>
 
-function! Float_term(...)
-    let height = float2nr((&lines - 2) * 0.75)
+set wildoptions=pum
+set pumblend=1
+let s:float_term_border_win = 0
+let s:float_term_win = 0
+
+function! FloatTerm(...)
+    let height = float2nr((&lines - 2) * 0.7)
     let row = float2nr((&lines - height) / 2)
-    let width = float2nr(&columns * 0.75)
+    let width = float2nr(&columns * 0.9)
     let col = float2nr((&columns - width) / 2)
     let border_opts = {
                 \ 'relative': 'editor',
@@ -30,9 +35,8 @@ function! Float_term(...)
     let s:float_term_border_win = nvim_open_win(bbuf, v:true, border_opts)
     let buf = nvim_create_buf(v:false, v:true)
     let s:float_term_win = nvim_open_win(buf, v:true, opts)
-
-    hi float_win_border guifg=#88507D
-    call setwinvar(s:float_term_border_win, '&winhl', 'Normal:float_win_border')
+    hi FloatWinBorder guifg=#d2a6c8
+    call setwinvar(s:float_term_border_win, '&winhl', 'Normal:FloatWinBorder')
     call setwinvar(s:float_term_win, '&winhl', 'Normal:Normal')
     if a:0 == 0
         terminal
