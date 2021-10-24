@@ -6,7 +6,7 @@ let s:float_term_border_win = 0
 let s:float_term_win = 0
 
 function! FloatTerm(...)
-    let height = float2nr((&lines - 2) * 0.7)
+    let height = float2nr((&lines - 2) * 0.9)
     let row = float2nr((&lines - height) / 2)
     let width = float2nr(&columns * 0.9)
     let col = float2nr((&columns - width) / 2)

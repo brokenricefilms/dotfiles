@@ -32,7 +32,7 @@ noremap gc :cd %:h <enter>:BCommits<enter>
 
 let g:fzf_layout = { 'window': {
       \ 'width': 0.9,
-      \ 'height': 0.7,
+      \ 'height': 0.9,
       \ 'highlight': 'Comment',
       \ 'rounded': v:true } }
 let $FZF_DEFAULT_OPTS='--reverse'
