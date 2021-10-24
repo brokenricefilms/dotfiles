@@ -200,7 +200,7 @@ autocmd InsertLeave,WinEnter * set cursorline
 autocmd InsertEnter,WinLeave * set nocursorline
 
 set list
-set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
+let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±'
 
 set tabstop=4 softtabstop=4 noet
 set shiftwidth=4
