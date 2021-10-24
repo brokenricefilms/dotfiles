@@ -14,19 +14,19 @@ alias browserYoutubeSubsriptions='browser "https://www.youtube.com/feed/subscrip
 alias browserFeedly='browser "https://feedly.com/i/collection/content/user/0d89157e-ce7d-4b2c-a2d6-98826f1e5089/category/global.all"'
 alias browserGooglePodcastSubscriptions='browser "https://podcasts.google.com/subscriptions"'
 
-!t() { browserNewTab "https://translate.google.com/?source=osdd#auto|auto|$argv" }
+sbt() { browserNewTab "https://translate.google.com/?source=osdd#auto|auto|$argv" }
 
-!y() { browserNewTab "https://www.youtube.com/results?search_query=$argv" }
+sby() { browserNewTab "https://www.youtube.com/results?search_query=$argv" }
 
-!d() { browserNewTab "https://duckduckgo.com/?q=$argv" }
+sbd() { browserNewTab "https://duckduckgo.com/?q=$argv" }
 
-!g() { browserNewTab "https://www.google.com/search?q=$argv" }
+sbg() { browserNewTab "https://www.google.com/search?q=$argv" }
 
-!gm() { browserNewTab "https://www.google.com/maps?q=$argv" }
+sbgm() { browserNewTab "https://www.google.com/maps?q=$argv" }
 
-!gi() { browserNewTab "https://www.google.com/search?tbm=isch&q=$argv"}
+sbgi() { browserNewTab "https://www.google.com/search?tbm=isch&q=$argv"}
 
-!gh() { browserNewTab "https://github.com/search?q=$argv" }
+sbgh() { browserNewTab "https://github.com/search?q=$argv" }
 
 function browserDaily () {
     cowsay "GET.SHIT.DONE"
