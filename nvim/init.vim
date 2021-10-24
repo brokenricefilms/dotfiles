@@ -291,7 +291,6 @@ nnoremap <leader>w :w<enter>
 nnoremap <leader>q :q<enter>
 nnoremap <leader>o :wq<enter>
 nnoremap Q :qa!<enter>
-noremap yp :let @+ = expand("%:p")<enter>
 
 noremap H :cp<enter>
 noremap L :cn<enter>
