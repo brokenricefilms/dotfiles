@@ -67,3 +67,9 @@ function yo () {
     git commit -m $commitMessage
     git push
 }
+
+ghi() {
+  local item
+  item=$(gh issue list | fzf | awk '{print $1}')
+  gh issue view $item --web
+}
