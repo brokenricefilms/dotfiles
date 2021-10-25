@@ -1,57 +1,14 @@
 call plug#begin()
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+
+Plug 'neovim/nvim-lspconfig'
+
+Plug 'williamboman/nvim-lsp-installer'
+
 set hidden
 set shortmess+=c
 set signcolumn=yes
 set updatetime=100
-let g:coc_global_extensions = [
-            \ "coc-snippets",
-            \ "coc-css",
-            \ "coc-diagnostic",
-            \ "coc-prettier",
-            \ "coc-dot-complete",
-            \ "coc-dash-complete",
-            \ "coc-deno",
-            \ "coc-sh",
-            \ "coc-go",
-            \ "coc-eslint",
-            \ "coc-omnisharp",
-            \ "coc-html",
-            \ "coc-htmlhint",
-            \ "coc-html-css-support",
-            \ "coc-emmet",
-            \ "coc-sql",
-            \ "coc-clangd",
-            \ "coc-tsserver",]
-
-let g:coc_status_error_sign=" "
-let g:coc_status_warning_sign=" "
-
-imap <C-l> <Plug>(coc-snippets-expand)
-vmap <C-j> <Plug>(coc-snippets-select)
-let g:coc_snippet_next = '<c-j>'
-let g:coc_snippet_prev = '<c-k>'
-imap <C-j> <Plug>(coc-snippets-expand-jump)
-xmap <leader>x  <Plug>(coc-convert-snippet)
-
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-nmap <silent> ]d :call CocAction('diagnosticNext')<cr>
-nmap <silent> [d :call CocAction('diagnosticPrevious')<cr>
-
-noremap <silent> <Leader>; :CocCommand<enter>
 
 Plug 'djoshea/vim-autoread'
 
@@ -309,3 +266,5 @@ vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
 
 command! OpenFileInDefaultApp execute "!xdg-open '%'"
 command! OpenFileInBraveBrowser execute "!brave-browser '%'"
+
+let g:coq_settings = { 'auto_start': 'shut-up' }
