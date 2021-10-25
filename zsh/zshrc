@@ -37,8 +37,8 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_FIND_NO_DUPS
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_BEEP
-HISTSIZE=1000000
-SAVEHIST=1000000
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
 bindkey -v
@@ -78,11 +78,9 @@ function downloadFile () {
     cd -
 }
 
-function createCppProject () {
-    mkdir $argv
-    cd $argv
+function cppProject () {
     cp -r ~/.config/nvim/stuff/cpppro/* .
-    nvim -p *
+    nvim -p main.cpp source.cpp header.h
 }
 
 prettierCpp () { clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp') }
@@ -139,6 +137,7 @@ alias cat='bat'
 export GREP_COLOR='1;31'
 alias grep='grep --color=auto'
 alias n='nnn -de'
+alias dud='du -d 1 -h'
 
 # music stuff
 alias m='mpv --shuffle --loop-playlist ~/Music/*'

@@ -24,6 +24,7 @@ function ok () {
     isInGitRepo || return
     st
     autoCommit
+    pull
     push
 }
 
@@ -32,6 +33,7 @@ function okp () {
     prettier --write *
     st
     autoCommit
+    pull
     push
 }
 
@@ -64,4 +66,10 @@ function yo () {
     read commitMessage
     git commit -m $commitMessage
     git push
+}
+
+ghi() {
+  local item
+  item=$(gh issue list | fzf | awk '{print $1}')
+  gh issue view $item --web
 }

@@ -1,8 +1,6 @@
 call plug#begin()
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 
-Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
-
 Plug 'neovim/nvim-lspconfig'
 
 Plug 'williamboman/nvim-lsp-installer'
@@ -30,7 +28,11 @@ noremap ; :Commands<enter>
 noremap // :BLines<enter>
 noremap gc :cd %:h <enter>:BCommits<enter>
 
-let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let g:fzf_layout = { 'window': {
+      \ 'width': 0.9,
+      \ 'height': 0.9,
+      \ 'highlight': 'Comment',
+      \ 'rounded': v:true } }
 let $FZF_DEFAULT_OPTS='--reverse'
 let g:fzf_colors =
             \ { 'fg':      ['fg', 'Normal'],
@@ -65,7 +67,6 @@ let g:bullets_enabled_file_types = [
             \]
 
 Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
-let g:mkdp_markdown_css = '~/.config/nvim/stuff/github-markdown.css'
 
 Plug 'ferrine/md-img-paste.vim'
 let g:mdip_imgdir = '.'
@@ -156,7 +157,7 @@ autocmd InsertLeave,WinEnter * set cursorline
 autocmd InsertEnter,WinLeave * set nocursorline
 
 set list
-set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
+let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±'
 
 set tabstop=4 softtabstop=4 noet
 set shiftwidth=4
@@ -178,6 +179,7 @@ set autowrite
 set nobackup
 set noswapfile
 set lazyredraw
+set ttyfast
 set nowritebackup
 
 set inccommand=split
@@ -186,8 +188,8 @@ set scrolloff=5
 nnoremap + <C-a>
 nnoremap - <C-x>
 
-vmap < <gv
-vmap > >gv
+xnoremap < <gv
+xnoremap > >gv
 
 map <space> <leader>
 
@@ -264,3 +266,5 @@ vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
 
 command! OpenFileInDefaultApp execute "!xdg-open '%'"
 command! OpenFileInBraveBrowser execute "!brave-browser '%'"
+
+let g:coq_settings = { 'auto_start': 'shut-up' }
