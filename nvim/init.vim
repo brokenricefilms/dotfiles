@@ -1,15 +1,37 @@
 call plug#begin()
-Plug 'williamboman/nvim-lsp-installer'
-Plug 'neovim/nvim-lspconfig'
-noremap [d :lua vim.lsp.diagnostic.goto_next()<enter>
-noremap ]d :lua vim.lsp.diagnostic.goto_prev()<enter>
-
-Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
-
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 set hidden
 set shortmess+=c
 set signcolumn=yes
 set updatetime=100
+let g:coc_global_extensions = [
+            \ "coc-snippets",
+            \ "coc-prettier",
+            \ "coc-html-css-support",
+            \ "coc-html",
+            \ "coc-eslint",
+            \ "coc-emmet",
+            \ "coc-dot-complete",
+            \ "coc-diagnostic",
+            \ "coc-dash-complete",
+            \ "coc-tsserver",
+            \ "coc-sql",
+            \ "coc-sh",
+            \ "coc-omnisharp",
+            \ "coc-htmlhint",
+            \ "coc-go",
+            \ "coc-deno ",
+            \ "coc-css",
+            \ "coc-clangd"]
+
+inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
+let g:coc_snippet_next = '<TAB>'
+let g:coc_snippet_prev = '<S-TAB>'
+
+nmap <silent> [d :call CocAction('diagnosticNext')<cr>
+nmap <silent> ]d :call CocAction('diagnosticPrevious')<cr>
+
+noremap <silent> <Leader>; :CocCommand<enter>
 
 Plug 'djoshea/vim-autoread'
 
@@ -30,10 +52,10 @@ noremap // :BLines<enter>
 noremap gc :cd %:h <enter>:BCommits<enter>
 
 let g:fzf_layout = { 'window': {
-      \ 'width': 0.9,
-      \ 'height': 0.9,
-      \ 'highlight': 'Comment',
-      \ 'rounded': v:true } }
+            \ 'width': 0.9,
+            \ 'height': 0.9,
+            \ 'highlight': 'Comment',
+            \ 'rounded': v:true } }
 let $FZF_DEFAULT_OPTS='--reverse'
 let g:fzf_colors =
             \ { 'fg':      ['fg', 'Normal'],
@@ -267,5 +289,3 @@ vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
 
 command! OpenFileInDefaultApp execute "!xdg-open '%'"
 command! OpenFileInBraveBrowser execute "!brave-browser '%'"
-
-let g:coq_settings = { 'auto_start': 'shut-up' }

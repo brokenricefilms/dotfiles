@@ -1,0 +1,16 @@
+snippet NhapMang
+public static void NhapMang(int[] array, int number) {
+  for (int i = 0; i < number; i++) {
+	Console.Write("Nhập phần tử thứ " + (i + 1) + ": ");
+	array[i] = Convert.ToInt32(Console.ReadLine());
+  }
+}
+endsnippet
+
+snippet XuatMang
+public static void XuatMang(int[] array, int number) {
+  for (int i = 0; i < number; i++) {
+	Console.Write(array[i] + "\t");
+  }
+}
+endsnippet
