@@ -1,84 +1,76 @@
 snippet if
-if ( $1 ) {
-  $2
-}
-endsnippet
+    if ( $1 ) {
+      $2
+    }
 
 snippet for
-for (int ${1:i} = 0; $1 < ${2:n}; $1++) {
-  $0
-}
-endsnippet
+    for (int ${1:i} = 0; $1 < ${2:n}; $1++) {
+      $0
+    }
 
 snippet do
-do {
-  1;
-} while ($2);
-endsnippet
+    do {
+      1;
+    } while ($2);
 
 snippet while
-while ($1) {
-  $2;
-}
-endsnippet
+    while ($1) {
+      $2;
+    }
 
 snippet main
 #include <iostream>
-using namespace std;
+    using namespace std;
 
-int main() {
-  return 0;
-}
-endsnippet
+    int main() {
+      return 0;
+    }
 
 snippet kiemTraSoNguyenTo
-bool kiemTraSoNguyenTo(int number) {
-  bool flag = false;
-  int count = 0;
+    bool kiemTraSoNguyenTo(int number) {
+      bool flag = false;
+      int count = 0;
 
-  if (number < 2 || number > 100) {
-    flag = false;
-  } else {
-    for (int i = 2; i <= number / 2; i++) {
-      if (number % i == 0) {
-        count++;
+      if (number < 2 || number > 100) {
+        flag = false;
+      } else {
+        for (int i = 2; i <= number / 2; i++) {
+          if (number % i == 0) {
+            count++;
+          }
+        }
+        if (count == 0) {
+          flag = true;
+        }
       }
+      return flag;
     }
-    if (count == 0) {
-      flag = true;
-    }
-  }
-  return flag;
-}
-endsnippet
 
 snippet nhapSoNguyenDuong
-int nhapSoNguyenDuong(int &n) {
-  do {
-    cin >> n;
-  } while (n <= 0);
+    int nhapSoNguyenDuong(int &n) {
+      do {
+        cin >> n;
+      } while (n <= 0);
 
-  return n;
-}
-endsnippet
+      return n;
+    }
 
 snippet kiemTraSoHoangThien
-bool kiemTraSoHoangThien(int number) {
-  int sum = 0;
-  int flag = false;
+    bool kiemTraSoHoangThien(int number) {
+      int sum = 0;
+      int flag = false;
 
-  for (int i = 1; i < number; i++) {
-    if (number % i == 0) {
-      sum += i;
+      for (int i = 1; i < number; i++) {
+        if (number % i == 0) {
+          sum += i;
+        }
+      }
+
+      if (sum == number) {
+        flag = true;
+      } else {
+        flag = false;
+      }
+
+      return flag;
     }
-  }
-
-  if (sum == number) {
-    flag = true;
-  } else {
-    flag = false;
-  }
-
-  return flag;
-}
-endsnippet
