@@ -80,7 +80,7 @@ function downloadFile () {
 
 function cppProject () {
     cp -r ~/.config/nvim/stuff/cpppro/* .
-    nvim -p *
+    nvim -p main.cpp source.cpp header.h
 }
 
 prettierCpp () { clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp') }
