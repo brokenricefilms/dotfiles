@@ -268,3 +268,6 @@ vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
 
 command! OpenFileInDefaultApp execute "!xdg-open '%'"
 command! OpenFileInBraveBrowser execute "!brave-browser '%'"
+
+autocmd BufEnter *.md command! MoveNoteToPublish execute "Move ~/sync/note/publish/"
+autocmd BufEnter *.md command! MoveNoteToPersonal execute "Move ~/sync/note/personal/"
