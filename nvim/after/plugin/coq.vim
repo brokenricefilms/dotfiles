@@ -13,6 +13,6 @@ ino <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<BS>"
 
 lua << EOF
 vim.g.coq_settings = {
-        ['keymap.jump_to_mark'] = '<C-s>',
+        ['keymap.jump_to_mark'] = '<C-q>',
       }
 EOF
