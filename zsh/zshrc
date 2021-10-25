@@ -78,9 +78,7 @@ function downloadFile () {
     cd -
 }
 
-function createCppProject () {
-    mkdir $argv
-    cd $argv
+function cppProject () {
     cp -r ~/.config/nvim/stuff/cpppro/* .
     nvim -p *
 }
