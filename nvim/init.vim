@@ -30,7 +30,11 @@ noremap ; :Commands<enter>
 noremap // :BLines<enter>
 noremap gc :cd %:h <enter>:BCommits<enter>
 
-let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let g:fzf_layout = { 'window': {
+      \ 'width': 0.9,
+      \ 'height': 0.7,
+      \ 'highlight': 'Comment',
+      \ 'rounded': v:true } }
 let $FZF_DEFAULT_OPTS='--reverse'
 let g:fzf_colors =
             \ { 'fg':      ['fg', 'Normal'],
