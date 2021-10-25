@@ -3,7 +3,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 set hidden
 set shortmess+=c
 set signcolumn=yes
-set updatetime=100
+set updatetime=10
 let g:coc_global_extensions = [
             \ "coc-snippets",
             \ "coc-prettier",
