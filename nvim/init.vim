@@ -1,11 +1,10 @@
 call plug#begin()
-Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
-
-Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
-
-Plug 'neovim/nvim-lspconfig'
-
 Plug 'williamboman/nvim-lsp-installer'
+Plug 'neovim/nvim-lspconfig'
+noremap [d :lua vim.lsp.diagnostic.goto_next()<enter>
+noremap ]d :lua vim.lsp.diagnostic.goto_prev()<enter>
+
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 
 set hidden
 set shortmess+=c
@@ -268,3 +267,5 @@ vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
 
 command! OpenFileInDefaultApp execute "!xdg-open '%'"
 command! OpenFileInBraveBrowser execute "!brave-browser '%'"
+
+let g:coq_settings = { 'auto_start': 'shut-up' }

@@ -1,8 +1,6 @@
 " Set recommended to false
 let g:coq_settings = { "keymap.recommended": v:false }
 
-" let g:coq_settings = { "keymap.jump_to_mark": "<c-e>" }
-
 " Keybindings
 ino <silent><expr> <Esc>   pumvisible() ? "\<C-e><Esc>" : "\<Esc>"
 ino <silent><expr> <C-c>   pumvisible() ? "\<C-e><C-c>" : "\<C-c>"
