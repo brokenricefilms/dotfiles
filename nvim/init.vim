@@ -34,12 +34,12 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-nmap <silent> [d :call CocAction('diagnosticNext')<cr>
-nmap <silent> ]d :call CocAction('diagnosticPrevious')<cr>
+noremap <silent> [d :call CocAction('diagnosticNext')<cr>
+noremap <silent> ]d :call CocAction('diagnosticPrevious')<cr>
 
 noremap <silent> <Leader>; :CocCommand<enter>
 
-imap <C-l> <Plug>(coc-snippets-expand)
+inoremap <C-l> <Plug>(coc-snippets-expand)
 
 vmap <C-j> <Plug>(coc-snippets-select)
 
@@ -47,13 +47,13 @@ let g:coc_snippet_next = '<c-j>'
 
 let g:coc_snippet_prev = '<c-k>'
 
-imap <C-j> <Plug>(coc-snippets-expand-jump)
+inoremap <C-j> <Plug>(coc-snippets-expand-jump)
 
 xmap <leader>x  <Plug>(coc-convert-snippet)
 
 Plug 'lfilho/cosco.vim'
 
-autocmd FileType javascript,css,cpp,cs imap <silent> ;; <c-o><Plug>(cosco-commaOrSemiColon)
+autocmd FileType javascript,css,cpp,cs inoremap <silent> ;; <c-o><Plug>(cosco-commaOrSemiColon)
 
 Plug 'djoshea/vim-autoread'
 
