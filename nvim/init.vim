@@ -23,14 +23,33 @@ let g:coc_global_extensions = [
             \ "coc-css",
             \ "coc-clangd"]
 
-inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
-let g:coc_snippet_next = '<TAB>'
-let g:coc_snippet_prev = '<S-TAB>'
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 nmap <silent> [d :call CocAction('diagnosticNext')<cr>
 nmap <silent> ]d :call CocAction('diagnosticPrevious')<cr>
 
 noremap <silent> <Leader>; :CocCommand<enter>
+
+imap <C-l> <Plug>(coc-snippets-expand)
+
+vmap <C-j> <Plug>(coc-snippets-select)
+
+let g:coc_snippet_next = '<c-j>'
+
+let g:coc_snippet_prev = '<c-k>'
+
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+xmap <leader>x  <Plug>(coc-convert-snippet)
 
 Plug 'djoshea/vim-autoread'
 
