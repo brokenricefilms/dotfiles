@@ -51,6 +51,10 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 xmap <leader>x  <Plug>(coc-convert-snippet)
 
+Plug 'lfilho/cosco.vim'
+
+autocmd FileType javascript,css,cpp,cs imap <silent> ;; <c-o><Plug>(cosco-commaOrSemiColon)
+
 Plug 'djoshea/vim-autoread'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
