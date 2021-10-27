@@ -4,7 +4,6 @@ alias st='git status -sb'
 alias add='git add'
 alias push="git push"
 alias pull="git pull"
-alias cm='git commit'
 alias dv='git difftool'
 
 isInGitRepo() { git rev-parse HEAD > /dev/null 2>&1 }
