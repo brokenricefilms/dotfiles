@@ -1,0 +1,9 @@
+#! /usr/bin/env sh
+
+# what cm meaning? ⇒ command, command i want to write in vim
+
+cd /tmp/
+
+nvim $(mktemp --suffix ".sh")
+
+cd -
