@@ -34,28 +34,24 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-noremap <silent> [d :call CocAction('diagnosticNext')<cr>
-noremap <silent> ]d :call CocAction('diagnosticPrevious')<cr>
+nmap <silent> [d :call CocAction('diagnosticNext')<cr>
+nmap <silent> ]d :call CocAction('diagnosticPrevious')<cr>
 
 noremap <silent> <Leader>; :CocCommand<enter>
 
-inoremap <C-l> <Plug>(coc-snippets-expand)
+imap <C-l> <Plug>(coc-snippets-expand)
 
 vmap <C-j> <Plug>(coc-snippets-select)
-
-let g:coc_snippet_next = '<c-j>'
 
 let g:coc_snippet_prev = '<c-k>'
 
 inoremap <C-j> <Plug>(coc-snippets-expand-jump)
 
-xmap <leader>x  <Plug>(coc-convert-snippet)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 Plug 'lfilho/cosco.vim'
 
-autocmd FileType javascript,css,cpp,cs inoremap <silent> ;; <c-o><Plug>(cosco-commaOrSemiColon)
-
-Plug 'djoshea/vim-autoread'
+autocmd FileType javascript,css,cpp,cs imap <silent> ;; <c-o><Plug>(cosco-commaOrSemiColon)
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
@@ -113,8 +109,8 @@ let g:bullets_enabled_file_types = [
 
 Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
 
-Plug 'ferrine/md-img-paste.vim'
-let g:mdip_imgdir = '.'
+Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
+
 autocmd FileType markdown noremap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<enter>
 
 Plug 'phaazon/hop.nvim'
