@@ -136,6 +136,7 @@ export GREP_COLOR='1;31'
 alias grep='grep --color=auto'
 alias n='nnn -de'
 alias dud='du -d 1 -h'
+alias gn='cd ~/sync/note/ ; nvim README.md'
 
 # music stuff
 alias m='mpv --shuffle --loop-playlist ~/Music/*'
