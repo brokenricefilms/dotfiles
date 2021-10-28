@@ -210,7 +210,7 @@ set shiftwidth=4
 autocmd BufRead,BufNewFile *.cs,*.h,*.cpp,*.scss,*.css,*.html,*.md setlocal tabstop=2 shiftwidth=2 softtabstop=2
 set expandtab
 
-set number relativenumber
+" set number relativenumber
 
 set nocompatible
 filetype plugin indent on
