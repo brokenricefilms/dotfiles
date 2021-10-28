@@ -197,7 +197,7 @@ runtime ./themeControl.vim
 
 set cursorline
 
-set statusline=[\ [%F]\ %{fugitive#statusline()}%m%r%h%w%=[%{&ff}/%Y]\ ]
+set statusline=[%F]\ %{fugitive#statusline()}%m%r%h%w%=[%{&ff}/%Y]
 
 autocmd InsertLeave,WinEnter * set cursorline
 autocmd InsertEnter,WinLeave * set nocursorline
@@ -257,7 +257,7 @@ noremap <space>s :setlocal spell! spell?<enter>
 
 set spelllang=en_us,vi
 
-command! Reload execute "source ~/.config/nvim/init.vim"
+command! Reload execute "source ~/.config/nvim/init.vim | !tmux source-file ~/.tmux.conf"
 
 noremap ss :split<Return><C-w>w
 noremap sv :vsplit<Return><C-w>w
