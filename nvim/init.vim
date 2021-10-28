@@ -7,7 +7,9 @@ set updatetime=10
 let g:coc_global_extensions = [
             \ "coc-snippets",
             \ "coc-prettier",
+            \ "coc-json",
             \ "coc-html",
+            \ "coc-htmlhint",
             \ "coc-eslint",
             \ "coc-emmet",
             \ "coc-dot-complete",
@@ -17,7 +19,6 @@ let g:coc_global_extensions = [
             \ "coc-sql",
             \ "coc-sh",
             \ "coc-omnisharp",
-            \ "coc-htmlhint",
             \ "coc-go",
             \ "coc-deno",
             \ "coc-css",
