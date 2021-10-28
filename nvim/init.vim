@@ -46,6 +46,8 @@ vmap <C-j> <Plug>(coc-snippets-select)
 
 let g:coc_snippet_prev = '<c-k>'
 
+xmap <leader>x  <Plug>(coc-convert-snippet)
+
 inoremap <C-j> <Plug>(coc-snippets-expand-jump)
 
 imap <C-j> <Plug>(coc-snippets-expand-jump)
