@@ -217,8 +217,6 @@ set shiftwidth=4
 autocmd BufRead,BufNewFile *.cs,*.h,*.cpp,*.scss,*.css,*.html,*.md setlocal tabstop=2 shiftwidth=2 softtabstop=2
 set expandtab
 
-" set number relativenumber
-
 set nocompatible
 filetype plugin indent on
 set encoding=UTF-8
@@ -319,3 +317,5 @@ vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
 
 command! OpenFileInDefaultApp execute "!xdg-open '%'"
 command! OpenFileInBraveBrowser execute "!brave-browser '%'"
+command! NumberLine execute "set number relativenumber"
+command! NumberLineOff execute "set number! relativenumber!"
