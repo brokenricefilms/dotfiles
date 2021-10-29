@@ -225,6 +225,7 @@ function update () {
 }
 
 function hi () {
+    qa
     browserDaily
     sleep 30
     update
