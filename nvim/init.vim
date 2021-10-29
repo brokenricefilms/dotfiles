@@ -207,7 +207,7 @@ set guicursor+=i:ver100-iCursor
 autocmd InsertLeave,WinEnter * set cursorline
 autocmd InsertEnter,WinLeave * set nocursorline
 
-set statusline=[%F]\ %{fugitive#statusline()}%m%r%h%w%=[%{&ff}/%Y]
+set statusline=[\ %F\ ]\ %{fugitive#statusline()}%m%r%h%w%=[\ %{&ff}/%Y\ ]
 
 set list
 let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±'
