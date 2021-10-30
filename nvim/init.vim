@@ -318,3 +318,5 @@ command! OpenFileInDefaultApp execute "!xdg-open '%'"
 command! OpenFileInBraveBrowser execute "!brave-browser '%'"
 command! NumberLine execute "set number relativenumber"
 command! NumberLineOff execute "set number! relativenumber!"
+
+nmap gf :edit <cfile><cr>
