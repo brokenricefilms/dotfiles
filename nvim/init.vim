@@ -276,8 +276,6 @@ map <silent> <Left> <C-w>>
 noremap cd. :cd %:h<enter>
 noremap cd :cd<enter>
 
-noremap Y y$
-
 inoremap , ,<c-g>u
 inoremap . .<c-g>u
 inoremap ! !<c-g>u
