@@ -56,10 +56,6 @@ command! -nargs=0 EditSnippets :call CocAction('runCommand', 'snippets.editSnipp
 command! -nargs=0 FormatFile :call CocAction('runCommand', 'prettier.formatFile')
 command! -nargs=0 RenameCurrentWord :call CocAction('runCommand', 'document.renameCurrentWord')
 
-Plug 'lfilho/cosco.vim'
-
-autocmd FileType javascript,css,cpp,cs imap <silent> ;; <c-o><Plug>(cosco-commaOrSemiColon)
-
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -314,10 +310,14 @@ function! TwiddleCase(str)
 endfunction
 vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
 
-command! OpenFileInDefaultApp execute "!xdg-open '%'"
-nmap <leader>x :!xdg-open '%'<cr><cr>
 command! OpenFileInBraveBrowser execute "!brave-browser '%'"
 command! NumberLine execute "set number relativenumber"
 command! NumberLineOff execute "set number! relativenumber!"
 
+command! OpenFileInDefaultApp execute "!xdg-open '%'"
+nmap <leader>x :!xdg-open '%'<cr><cr>
+
 nmap gf :edit <cfile><cr>
+
+imap ;; <esc>A;<esc>o
+imap ,, <esc>A,<esc>o
