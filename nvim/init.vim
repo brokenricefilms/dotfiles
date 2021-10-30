@@ -67,6 +67,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 inoremap <expr> <c-f><c-w> fzf#vim#complete#word()
+imap <c-x><c-f> <plug>(fzf-complete-path)
 noremap <leader>f :Files<enter>
 noremap <leader>F :Files ~<enter>
 noremap <leader>k :Buffers<enter>
