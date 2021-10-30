@@ -34,7 +34,7 @@
     - my touchcursor config [here](https://github.com/thuanpham2311/dotfiles/blob/master/touchcursor/touchcursor.conf)
 - [Using vim keymap everywhere use hold space with touchcursor](<https://github.com/thuanpham2311/touchcursor-vim>)
 
-## You want setup like me? (Auto script)
+## You want setup like me?
 
 [https://github.com/thuanpham2311/linux_setup](https://github.com/thuanpham2311/linux_setup)
 
