@@ -315,6 +315,7 @@ endfunction
 vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
 
 command! OpenFileInDefaultApp execute "!xdg-open '%'"
+nmap <leader>x :!xdg-open '%'<cr><cr>
 command! OpenFileInBraveBrowser execute "!brave-browser '%'"
 command! NumberLine execute "set number relativenumber"
 command! NumberLineOff execute "set number! relativenumber!"
