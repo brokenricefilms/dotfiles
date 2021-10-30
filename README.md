@@ -29,6 +29,7 @@
   - vim keymap everywhere
     - i use [touchcursor](https://github.com/donniebreve/touchcursor-linux) for config my keyboard, older is use xmodmap but i have some issue with this then i switch to touchcursor and this work well
     - my touchcursor config [here](https://github.com/thuanpham2311/dotfiles/blob/master/touchcursor/touchcursor.conf)
+- [Using vim keymap everywhere use hold space with touchcursor](<https://github.com/thuanpham2311/touchcursor-vim>)
 
 ## You want setup like me? (Auto script)
 
