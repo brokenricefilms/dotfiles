@@ -27,9 +27,6 @@
 [pull]
     rebase = true
 
-[branch]
-    autosetuprebase = always
-
 [fetch]
     prune = true
 
