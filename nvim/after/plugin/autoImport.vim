@@ -1,31 +1,11 @@
-function! Import_sh()
-    normal!i#! /usr/bin/env sh
-    normal!o
-endfunction
+autocmd BufNewFile *.wls 0r ~/.config/nvim/stuff/wolframscriptTemplate.wls
 
-function! Import_py()
-    normal!i#! /usr/bin/env python3
-    normal!o
-endfunction
+autocmd BufNewFile *.fish  ~/.config/nvim/stuff/fishTemplate.fish
 
-function! Import_fish()
-    normal!i#! /usr/bin/env fish
-    normal!o
-endfunction
+autocmd BufNewFile *.py 0r ~/.config/nvim/stuff/pythonTemplate.py
 
-function! Import_wolframscript()
-    normal!i#! /usr/bin/env wolframscript
-    normal!o
-endfunction
+autocmd BufNewFile *.sh 0r ~/.config/nvim/stuff/shTemplate.sh
 
-autocmd BufNewFile *.wls  :call Import_wolframscript()
+autocmd BufNewFile *.cpp 0r ~/.config/nvim/stuff/cppTemplate.cpp | normal!3j
 
-autocmd BufNewFile *.fish  :call Import_fish()
-
-autocmd BufNewFile *.py :call Import_py()
-
-autocmd BufNewFile *.sh  :call Import_sh()
-
-autocmd BufNewFile *.cpp :read ~/.config/nvim/stuff/cpp_template.cpp | normal!kdd3j
-
-autocmd BufNewFile *.html  :read ~/.config/nvim/stuff/html_template.html | normal!kdd6j
+autocmd BufNewFile *.html 0r ~/.config/nvim/stuff/htmlTemplate.html | normal!6j
