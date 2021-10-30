@@ -1,6 +1,9 @@
 # My dot files
 
-**require nvim (>=0.5)**
+## Requirement
+
+- Neovim ≥ 0.5
+- [vim plug](<https://github.com/junegunn/vim-plug>)
 
 ## Demo
 
