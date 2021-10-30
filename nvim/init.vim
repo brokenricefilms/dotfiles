@@ -132,9 +132,25 @@ let g:better_escape_interval = 200
 let g:better_escape_shortcut = ['jk', 'jj', 'kj', 'kk']
 
 Plug 'mattn/emmet-vim'
-let g:user_emmet_leader_key=','
+function! s:expand_html_tab()
+    let line = getline('.')
+    if col('.') < len(line)
+        let line = matchstr(line, '[">][^<"]*\%'.col('.').'c[^>"]*[<"]')
+        if len(line) >= 2
+            return "\<C-n>"
+        endif
+    endif
+    if emmet#isExpandable()
+        return emmet#expandAbbrIntelligent("\<tab>")
+    endif
+    return "\<tab>"
+endfunction
+
+autocmd FileType html,css,scss,typescriptreact,vue,javascript,markdown.mdx imap <silent><buffer><expr><tab> <sid>expand_html_tab()
+let g:user_emmet_mode='a'
+let g:user_emmet_complete_tag = 0
 let g:user_emmet_install_global = 0
-autocmd FileType xhtml,html,css,markdown EmmetInstall
+autocmd FileType html,css,scss,typescriptreact,vue,javascript,markdown.mdx EmmetInstall
 
 Plug 'AndrewRadev/tagalong.vim'
 let g:tagalong_filetypes = ['eco', 'eelixir', 'ejs', 'eruby', 'html', 'xhtml', 'htmldjango', 'javascriptreact', 'jsx', 'php', 'typescriptreact', 'xml']
