@@ -18,7 +18,7 @@ function! s:make_note_link(l)
     return mdlink
 endfunction
 
-inoremap <expr> fl fzf#vim#complete({
+autocmd BufRead,BufNewFile *.md inoremap <expr> fn fzf#vim#complete({
             \ 'source':  'rg --no-heading --smart-case  ^\#',
             \ 'reducer': function('<sid>make_note_link'),
             \ 'options': '--multi --reverse --margin 5%,0',
