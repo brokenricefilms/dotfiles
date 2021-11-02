@@ -316,5 +316,5 @@ nmap <leader>x :!xdg-open '%'<cr><cr>
 
 nmap gf :edit <cfile><cr>
 
-imap ;; <esc>A;<esc>o
-imap ,, <esc>A,<esc>o
+imap ;; <esc>A;<esc>
+imap ,, <esc>A,<esc>
