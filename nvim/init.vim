@@ -58,6 +58,15 @@ command! -nargs=0 RenameCurrentWord :call CocAction('runCommand', 'document.rena
 
 Plug 'nvim-lua/popup.nvim'
 Plug 'ThePrimeagen/harpoon'
+nmap ga :lua require("harpoon.mark").add_file()<enter>
+nmap gm :lua require("harpoon.ui").toggle_quick_menu()<enter>
+nmap g1 :lua require("harpoon.ui").nav_file(1)<enter>
+nmap g2 :lua require("harpoon.ui").nav_file(2)<enter>
+nmap g5 :lua require("harpoon.ui").nav_file(5)<enter>
+nmap g6 :lua require("harpoon.ui").nav_file(6)<enter>
+nmap g7 :lua require("harpoon.ui").nav_file(7)<enter>
+nmap g8 :lua require("harpoon.ui").nav_file(8)<enter>
+nmap g9 :lua require("harpoon.ui").nav_file(9)<enter>
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
