@@ -141,6 +141,8 @@ Plug 'tpope/vim-surround'
 
 Plug 'windwp/nvim-autopairs'
 
+Plug 'windwp/nvim-ts-autotag'
+
 Plug 'preservim/nerdcommenter'
 let g:NERDSpaceDelims = 1
 map mm <Plug>NERDCommenterToggle
