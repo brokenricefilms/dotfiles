@@ -317,4 +317,4 @@ nmap <leader>x :!xdg-open '%'<cr><cr>
 nmap gf :edit <cfile><cr>
 
 imap ;; <esc>A;<enter>
-imap ,, <esc>A,<enter>
+imap ;, <esc>A,<enter>
