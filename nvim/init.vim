@@ -333,6 +333,7 @@ nmap gf :edit <cfile><cr>
 imap ;; <esc>A;<enter>
 imap ;, <esc>A,<enter>
 
-imap <S-CR> <esc>o
-nnoremap <CR> o<esc>
-nnoremap <S-CR> O<esc>
+imap <S-enter> <esc>O
+imap <C-enter> <esc>o
+nnoremap <S-enter> O<esc>
+nnoremap <C-enter> o<esc>
