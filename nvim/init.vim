@@ -56,6 +56,9 @@ command! -nargs=0 EditSnippets :call CocAction('runCommand', 'snippets.editSnipp
 command! -nargs=0 FormatFile :call CocAction('runCommand', 'prettier.formatFile')
 command! -nargs=0 RenameCurrentWord :call CocAction('runCommand', 'document.renameCurrentWord')
 
+Plug 'nvim-lua/popup.nvim'
+Plug 'ThePrimeagen/harpoon'
+
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -320,3 +323,7 @@ nmap gf :edit <cfile><cr>
 
 imap ;; <esc>A;<enter>
 imap ;, <esc>A,<enter>
+
+imap <S-CR> <esc>o
+nnoremap <CR> o<esc>
+nnoremap <S-CR> O<esc>
