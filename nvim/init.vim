@@ -346,3 +346,5 @@ imap <S-enter> <esc>O
 imap <C-enter> <esc>o
 nnoremap <S-enter> O<esc>
 nnoremap <C-enter> o<esc>
+
+noremap! <C-BS> <C-w>
