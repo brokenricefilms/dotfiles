@@ -58,15 +58,24 @@ command! -nargs=0 RenameCurrentWord :call CocAction('runCommand', 'document.rena
 
 Plug 'nvim-lua/popup.nvim'
 Plug 'ThePrimeagen/harpoon'
-nmap ga :lua require("harpoon.mark").add_file()<enter>
-nmap gm :lua require("harpoon.ui").toggle_quick_menu()<enter>
-nmap g1 :lua require("harpoon.ui").nav_file(1)<enter>
-nmap g2 :lua require("harpoon.ui").nav_file(2)<enter>
-nmap g5 :lua require("harpoon.ui").nav_file(5)<enter>
-nmap g6 :lua require("harpoon.ui").nav_file(6)<enter>
-nmap g7 :lua require("harpoon.ui").nav_file(7)<enter>
-nmap g8 :lua require("harpoon.ui").nav_file(8)<enter>
-nmap g9 :lua require("harpoon.ui").nav_file(9)<enter>
+nmap mi :lua require("harpoon.mark").add_file()<enter>
+nmap mo :lua require("harpoon.ui").toggle_quick_menu()<enter>
+" moving less, thinking like hjkl, now with number qwert|asdfg
+" 6|7|8|9|10
+" q|w|e|r|t
+" ----------
+" 1|2|3|4|5
+" a|s|d|f|g
+nmap ma :lua require("harpoon.ui").nav_file(1)<enter>
+nmap ms :lua require("harpoon.ui").nav_file(2)<enter>
+nmap md :lua require("harpoon.ui").nav_file(3)<enter>
+nmap mf :lua require("harpoon.ui").nav_file(4)<enter>
+nmap mg :lua require("harpoon.ui").nav_file(5)<enter>
+nmap mq :lua require("harpoon.ui").nav_file(6)<enter>
+nmap mw :lua require("harpoon.ui").nav_file(7)<enter>
+nmap me :lua require("harpoon.ui").nav_file(8)<enter>
+nmap mr :lua require("harpoon.ui").nav_file(9)<enter>
+nmap mt :lua require("harpoon.ui").nav_file(10)<enter>
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
