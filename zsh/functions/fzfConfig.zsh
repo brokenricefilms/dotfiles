@@ -1,9 +1,9 @@
 #! /usr/bin/env zsh
 
-export FZF_DEFAULT_COMMAND='fd --type f --follow --exclude .git --exclude undodir --exclude gems --exclude Visual_Paradigm_CE_16.3 --exclude node_modules'
+export FZF_DEFAULT_COMMAND='fdfind --type f --follow --exclude .git --exclude undodir --exclude gems --exclude Visual_Paradigm_CE_16.3 --exclude node_modules'
 
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd -t d"
+export FZF_ALT_C_COMMAND="fdfind -t d"
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --color=fg:-1,bg:-1,hl:#dcd2ce
@@ -27,14 +27,14 @@ function f() {
 
 function c () {
     local dir
-    dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude Visual_Paradigm_CE_16.3 --exclude node_modules | fzfDown) &&
+    dir=$(fdfind -t d . --exclude .git --exclude undodir --exclude gems --exclude Visual_Paradigm_CE_16.3 --exclude node_modules | fzfDown) &&
     cd "$dir"
     ls
 }
 
 function C () {
     local dir
-    dir=$(fd -t d . $HOME --exclude .git --exclude undodir --exclude gems --exclude Visual_Paradigm_CE_16.3 --exclude node_modules | fzfDown) &&
+    dir=$(fdfind -t d . $HOME --exclude .git --exclude undodir --exclude gems --exclude Visual_Paradigm_CE_16.3 --exclude node_modules | fzfDown) &&
     cd "$dir"
     ls
 }
@@ -52,3 +52,6 @@ function o() {
 fman() {
     man -k . | fzf -q "$1" --prompt='man> '  --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r man | col -bx | bat -l man -p --color always' | tr -d '()' | awk '{printf "%s ", $2} {print $1}' | xargs -r man
 }
+
+source ~/dotfiles/zsh/functions/fzf-tab/fzf-tab.plugin.zsh
+source ~/dotfiles/zsh/functions/fzf-zsh-completions/fzf-zsh-completions.plugin.zsh
