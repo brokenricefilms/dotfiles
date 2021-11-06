@@ -17,12 +17,12 @@ fzfDown() { fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" -
 
 function F() {
     cd ~/
-    nvim -o "$(fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')"
+    nvim -o "$(fzfDown --preview 'batcat --style=numbers --color=always --line-range :500 {}')"
     cd -
 }
 
 function f() {
-    nvim -o "$(fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')"
+    nvim -o "$(fzfDown --preview 'batcat --style=numbers --color=always --line-range :500 {}')"
 }
 
 function c () {
@@ -41,16 +41,16 @@ function C () {
 
 function O() {
     cd ~/
-    xdg-open "$(fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')"
+    xdg-open "$(fzfDown --preview 'batcat --style=numbers --color=always --line-range :500 {}')"
     cd -
 }
 
 function o() {
-    xdg-open "$(fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')"
+    xdg-open "$(fzfDown --preview 'batcat --style=numbers --color=always --line-range :500 {}')"
 }
 
 fman() {
-    man -k . | fzf -q "$1" --prompt='man> '  --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r man | col -bx | bat -l man -p --color always' | tr -d '()' | awk '{printf "%s ", $2} {print $1}' | xargs -r man
+    man -k . | fzf -q "$1" --prompt='man> '  --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r man | col -bx | batcat -l man -p --color always' | tr -d '()' | awk '{printf "%s ", $2} {print $1}' | xargs -r man
 }
 
 source ~/dotfiles/zsh/functions/fzf-tab/fzf-tab.plugin.zsh
