@@ -29,8 +29,8 @@ headerbar separator {
 headerbar button.titlebutton.minimize,
 headerbar button.titlebutton.maximize,
 headerbar button.titlebutton.close {
-  min-height: 0px;
-  min-width: 0px;
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
+  min-height: 3px;
+  min-width: 3px;
+  margin: 3px 3px 3px 3px;
+  padding: 3px 3px 3px 3px;
 }
