@@ -142,16 +142,16 @@ alias gn='cd ~/sync/note/ ; nvim README.md'
 alias m='mpv --shuffle --loop-playlist ~/Music/*'
 
 # ubuntu apt
-# alias ins='sudo apt install -y'
-# alias uins='sudo apt remove -y'
+alias ins='sudo apt install -y'
+alias uins='sudo apt remove -y'
 
 # termux pkg
 # alias ins='pkg install -y'
 # alias uins='pkg remove -y'
 
 # fedora dnf
-alias ins='sudo dnf -y install'
-alias uins='sudo dnf -y remove'
+# alias ins='sudo dnf -y install'
+# alias uins='sudo dnf -y remove'
 
 # arch
 # alias ins='sudo pacman -S --noconfirm'
