@@ -136,8 +136,6 @@ let g:bullets_enabled_file_types = [
 
 Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
 
-Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
-
 autocmd FileType markdown noremap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<enter>
 
 Plug 'phaazon/hop.nvim'
