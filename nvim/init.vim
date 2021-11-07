@@ -117,7 +117,7 @@ let g:fzf_colors =
             \ 'header':  ['fg', 'Comment'] }
 
 Plug 'tpope/vim-fugitive'
-noremap gs :G<enter>
+noremap gs :G<enter>gg4j
 noremap gl :Gclog<enter>
 noremap gp :G push<enter>
 command! PushF execute "G push -f"
