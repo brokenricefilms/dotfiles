@@ -19,6 +19,7 @@ function! s:make_note_link(l)
 endfunction
 
 autocmd BufRead,BufNewFile,BufEnter *.md execute "cd %:h"
+autocmd BufRead,BufNewFile,BufEnter *.md vnoremap <enter> xa[<esc>pA](.md)<esc>T("=strftime("%Y%m%d%H%M%S")<CR>PT[yi[t):edit <cfile><cr>i#<space><esc>po<enter>---<enter>><space><esc>kkO<enter>
 autocmd BufRead,BufNewFile *.md inoremap <expr> [[ fzf#vim#complete({
             \ 'source':  'rg --no-heading --smart-case  ^\#',
             \ 'reducer': function('<sid>make_note_link'),
