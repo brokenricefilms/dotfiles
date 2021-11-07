@@ -120,6 +120,7 @@ Plug 'tpope/vim-fugitive'
 noremap gs :G<enter>
 noremap gl :Gclog<enter>
 noremap gp :G push<enter>
+command! PushF execute "G push -f"
 
 Plug 'tpope/vim-eunuch'
 
@@ -347,5 +348,3 @@ imap <S-enter> <esc>O
 imap <C-enter> <esc>o
 nnoremap <S-enter> O<esc>
 nnoremap <C-enter> o<esc>
-
-command! PushF execute "G push -f"
