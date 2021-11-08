@@ -12,7 +12,7 @@ endsnippet
 
 snippet do
 do {
-  1;
+  $1;
 } while ($2);
 endsnippet
 
@@ -85,4 +85,11 @@ endsnippet
 
 snippet max
 const int MAX = $1;
+endsnippet
+
+snippet struct
+struct $1 {
+  $2
+};
+$0
 endsnippet
