@@ -217,11 +217,6 @@ runtime ./themeControl.vim
 
 set cursorline
 
-highlight Cursor guifg=white guibg=#cbd9e3
-highlight iCursor guifg=white guibg=#3b8992
-set guicursor=n-v-c:block-Cursor
-set guicursor+=i:ver100-iCursor
-
 autocmd InsertLeave,WinEnter * set cursorline
 autocmd InsertEnter,WinLeave * set nocursorline
 
