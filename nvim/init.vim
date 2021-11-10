@@ -313,6 +313,8 @@ nnoremap Q :qa!<enter>
 
 noremap H :cp<enter>
 noremap L :cn<enter>
+noremap J :bn<enter>
+noremap K :bp<enter>
 
 function! TwiddleCase(str)
     if a:str ==# toupper(a:str)
