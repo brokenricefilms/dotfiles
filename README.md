@@ -26,7 +26,7 @@
     - change nvim & kitty & batcat theme
 - Tmux:
   - auto save, continuum session
-  - witch session quickly with fzf
+  - switch session quickly with fzf
 - Vim:
   - zet note support using vim, [see function](https://github.com/thuanpham2311/dotfiles/blob/master/nvim/after/plugin/zet.vim)
   - vim keymap everywhere
