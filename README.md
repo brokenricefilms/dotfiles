@@ -14,6 +14,8 @@
 - The project started before college and is still actively developing today.
 - Design my Linux distro for everyday use and programming environments, optimized for productivity and simplicity.
 
+**Requirements**
+
 - Neovim ≥ 0.5
 - [vim plug](https://github.com/junegunn/vim-plug)
 
