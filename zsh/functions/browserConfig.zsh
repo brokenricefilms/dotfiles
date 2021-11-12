@@ -13,6 +13,7 @@ alias browserStu2='browser "http://stu.edu.vn/vi/393/thong-bao.html"'
 alias browserYoutubeSubsriptions='browser "https://www.youtube.com/feed/subscriptions"'
 alias browserFeedly='browser "https://feedly.com/i/collection/content/user/0d89157e-ce7d-4b2c-a2d6-98826f1e5089/category/global.all"'
 alias browserGooglePodcastSubscriptions='browser "https://podcasts.google.com/subscriptions"'
+alias createPassword='brave-browser --app="https://duckduckgo.com/?q=28+strong+password&t=h_&ia=answer"'
 
 sbt() { browserNewTab "https://translate.google.com/?source=osdd#auto|auto|$argv" }
 
