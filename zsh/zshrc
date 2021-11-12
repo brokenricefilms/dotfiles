@@ -137,6 +137,7 @@ alias grep='grep --color=auto'
 alias n='nnn -de'
 alias dud='du -d 1 -h'
 alias gn='cd ~/sync/note/ ; nvim README.md'
+alias shit='sudo $(fc -ln -1)'
 
 # music stuff
 alias m='mpv --shuffle --loop-playlist ~/Music/*'
