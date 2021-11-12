@@ -9,8 +9,6 @@
 - [You want setup like me?](#you-want-setup-like-me)
 - [Contributing workflow](#contributing-workflow)
 
-Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
-
 ## About
 
 - The project started before college and is still actively developing today.
