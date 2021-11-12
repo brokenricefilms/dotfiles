@@ -1,9 +1,23 @@
 # My dot files
 
-## Requirement
+**↓↓Table of Contents↓↓**
+
+- [About](#about)
+- [Requirement](#requirement)
+- [Demo](#demo)
+- [Feature](#feature)
+- [You want setup like me?](#you-want-setup-like-me)
+- [Contributing workflow](#contributing-workflow)
+
+Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
+
+## About
+
+- The project started before college and is still actively developing today.
+- Design my Linux distro for everyday use and programming environments, optimized for productivity and simplicity.
 
 - Neovim ≥ 0.5
-- [vim plug](<https://github.com/junegunn/vim-plug>)
+- [vim plug](https://github.com/junegunn/vim-plug)
 
 ## Demo
 
@@ -31,6 +45,8 @@
   - zet note support using vim, [see function](https://github.com/thuanpham2311/dotfiles/blob/master/nvim/after/plugin/zet.vim)
   - vim keymap everywhere
     - i use [touchcursor](https://github.com/donniebreve/touchcursor-linux) for config my keyboard, older is use xmodmap but i have some issue with this then i switch to touchcursor and this work well
+    - my touchcursor config [here](https://github.com/thuanpham2311/dotfiles/blob/master/touchcursor/touchcursor.conf)
+- [Using vim keymap everywhere use hold space with touchcursor](https://github.com/thuanpham2311/touchcursor-vim)
     - my touchcursor config [here](https://github.com/thuanpham2311/dotfiles/blob/master/touchcursor/touchcursor.conf)
 - [Using vim keymap everywhere use hold space with touchcursor](<https://github.com/thuanpham2311/touchcursor-vim>)
 
