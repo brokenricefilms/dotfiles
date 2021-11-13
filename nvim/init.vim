@@ -1,5 +1,5 @@
 call plug#begin()
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 set hidden
 set shortmess+=c
 set signcolumn=yes
