@@ -346,3 +346,4 @@ nnoremap <S-enter> O<esc>
 nnoremap <C-enter> o<esc>
 
 xnoremap <silent> p p:let @+=@0<CR>:let @"=@0<CR>
+nnoremap M <c-^>
