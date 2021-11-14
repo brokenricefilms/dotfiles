@@ -19,7 +19,10 @@ function! s:make_note_link(l)
 endfunction
 
 autocmd BufRead,BufNewFile,BufEnter *.md execute "cd %:h"
-autocmd BufRead,BufNewFile,BufEnter *.md vnoremap <enter> xi[<esc>pa](.md)<esc>T("=strftime("%Y%m%d%H%M%S")<CR>PT[yi[t):edit <cfile><cr>i#<space><esc>po<enter>---<enter>><space><esc>kkO<enter>
+autocmd BufRead,BufNewFile,BufEnter *.md vnoremap <enter> c[<esc>pa](<.md>)<esc>T<"=strftime("%Y%m%d%H%M%S")<CR>PT[yi[t):edit <cfile><cr>i#<space><esc>po<enter>---<enter>><space><esc>kkO<enter>
+autocmd BufRead,BufNewFile,BufEnter *.md noremap <c-k> a[](<>)<esc>F<pT[i
+autocmd BufRead,BufNewFile,BufEnter *.md inoremap <c-k> [](<>)<esc>F<pT[i
+autocmd BufRead,BufNewFile,BufEnter *.md vnoremap <c-k> c[<esc>pa](<>)<esc>T<h"*p
 autocmd BufRead,BufNewFile *.md inoremap <expr> [[ fzf#vim#complete({
             \ 'source':  'rg --no-heading --smart-case  ^\#',
             \ 'reducer': function('<sid>make_note_link'),
