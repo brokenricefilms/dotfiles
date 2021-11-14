@@ -337,6 +337,7 @@ command! OpenFileInBraveBrowser execute "!brave-browser '%'"
 command! NumberLine execute "set number relativenumber"
 command! NumberLineOff execute "set number! relativenumber!"
 command! CopyFileName execute "!echo % | wl-copy"
+command! ViewRepoInWeb execute "cd %:h | !gh repo view -w"
 
 nmap <leader>x :!xdg-open '%'<cr><cr>
 
