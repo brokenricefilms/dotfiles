@@ -246,7 +246,8 @@ set lazyredraw
 set ttyfast
 set nowritebackup
 set wrap linebreak
-set number relativenumber
+let &showbreak = '↪'
+set cpo+=n
 
 set inccommand=split
 set scrolloff=5
