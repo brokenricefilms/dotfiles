@@ -19,6 +19,8 @@ function! s:make_note_link(l)
 endfunction
 
 autocmd BufRead,BufNewFile,BufEnter *.md execute "cd %:h"
+autocmd BufRead,BufNewFile,BufEnter *.md noremap <c-l> a[](.md)<esc>T("=strftime("%Y%m%d%H%M%S")<CR>PT[i
+autocmd BufRead,BufNewFile,BufEnter *.md inoremap <c-l> [](.md)<esc>T("=strftime("%Y%m%d%H%M%S")<CR>PT[i
 autocmd BufRead,BufNewFile,BufEnter *.md vnoremap <enter> c[<esc>pa](.md)<esc>T("=strftime("%Y%m%d%H%M%S")<CR>PT[yi[t):edit <cfile><cr>i#<space><esc>po<enter>---<enter>><space><esc>kkO<enter>
 autocmd BufRead,BufNewFile,BufEnter *.md noremap <c-k> a[](<>)<esc>F<pT[i
 autocmd BufRead,BufNewFile,BufEnter *.md inoremap <c-k> [](<>)<esc>F<pT[i
