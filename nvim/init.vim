@@ -57,6 +57,9 @@ command! -nargs=0 EditSnippets :call CocAction('runCommand', 'snippets.editSnipp
 command! -nargs=0 FormatFile :call CocAction('runCommand', 'prettier.formatFile')
 command! -nargs=0 RenameCurrentWord :call CocAction('runCommand', 'document.renameCurrentWord')
 
+Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp']}
+let g:clang_format#auto_format=1
+
 Plug 'nvim-lua/popup.nvim'
 Plug 'ThePrimeagen/harpoon'
 nmap mi :lua require("harpoon.mark").add_file()<enter>
