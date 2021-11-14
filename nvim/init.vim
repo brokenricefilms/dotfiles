@@ -246,6 +246,7 @@ set lazyredraw
 set ttyfast
 set nowritebackup
 set wrap linebreak
+set number relativenumber
 
 set inccommand=split
 set scrolloff=5
