@@ -222,7 +222,7 @@ set cursorline
 autocmd InsertLeave,WinEnter * set cursorline
 autocmd InsertEnter,WinLeave * set nocursorline
 
-set statusline=[\ %F\ ]\ %{fugitive#statusline()}%m%r%h%w%=[\ %{&ff}/%Y\ ]
+set statusline=[\ %F\ %m]\ %r%h%w%=\ %{fugitive#statusline()}
 
 set list
 let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±'
