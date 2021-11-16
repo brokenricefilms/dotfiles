@@ -222,6 +222,10 @@ set cursorline
 autocmd InsertLeave,WinEnter * set cursorline
 autocmd InsertEnter,WinLeave * set nocursorline
 
+set number relativenumber
+command! NumberLine execute "set number relativenumber"
+command! NumberLineOff execute "set number! relativenumber!"
+
 set statusline=[\ %F\ %m]\ %r%h%w%=\ %{fugitive#statusline()}
 
 set list
@@ -334,8 +338,6 @@ endfunction
 vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
 
 command! OpenFileInBraveBrowser execute "!brave-browser '%'"
-command! NumberLine execute "set number relativenumber"
-command! NumberLineOff execute "set number! relativenumber!"
 command! CopyFileName execute "!echo % | wl-copy"
 command! ViewRepoInWeb execute "cd %:h | !gh repo view -w"
 
