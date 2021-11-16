@@ -136,7 +136,7 @@ export GREP_COLOR='1;31'
 alias grep='grep --color=auto'
 alias n='nnn -de'
 alias dud='du -d 1 -h'
-# alias gn='cd ~/sync/note/ ; nvim -c "NumberLineOff" -c "Rg" README.md'
+alias gn='cd ~/sync/note/ ; nvim -c "NumberLineOff" -c "Rg" README.md'
 alias shit='sudo $(fc -ln -1)'
 
 # music stuff
