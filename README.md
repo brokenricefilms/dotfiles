@@ -2,12 +2,14 @@
 
 **↓↓Table of Contents↓↓**
 
-- [About](#about)
-- [Requirement](#requirement)
-- [Demo](#demo)
-- [Feature](#feature)
-- [You want setup like me?](#you-want-setup-like-me)
-- [Contributing workflow](#contributing-workflow)
+- [My dot files](#my-dot-files)
+  - [About](#about)
+  - [Demo](#demo)
+  - [Feature](#feature)
+  - [You want setup like me?](#you-want-setup-like-me)
+  - [Contributing workflow](#contributing-workflow)
+
+---
 
 ## About
 
@@ -47,8 +49,8 @@
     - i use [touchcursor](https://github.com/donniebreve/touchcursor-linux) for config my keyboard, older is use xmodmap but i have some issue with this then i switch to touchcursor and this work well
     - my touchcursor config [here](https://github.com/thuanpham2311/dotfiles/blob/master/touchcursor/touchcursor.conf)
 - [Using vim keymap everywhere use hold space with touchcursor](https://github.com/thuanpham2311/touchcursor-vim)
-    - my touchcursor config [here](https://github.com/thuanpham2311/dotfiles/blob/master/touchcursor/touchcursor.conf)
-- [Using vim keymap everywhere use hold space with touchcursor](<https://github.com/thuanpham2311/touchcursor-vim>)
+  - my touchcursor config [here](https://github.com/thuanpham2311/dotfiles/blob/master/touchcursor/touchcursor.conf)
+- [Using vim keymap everywhere use hold space with touchcursor](https://github.com/thuanpham2311/touchcursor-vim)
 
 ## You want setup like me?
 
