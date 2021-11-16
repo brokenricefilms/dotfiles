@@ -18,7 +18,8 @@ function! s:make_note_link(l)
     return mdlink
 endfunction
 
-autocmd BufRead,BufNewFile,BufEnter *.md command! TOC execute "normal! gg" | execute"read !ghMdToc %" | execute "normal! ddddggjddddddO<enter>**↓↓Table of Contents↓↓**<esc>"
+autocmd BufRead,BufNewFile,BufEnter *.md command! TOC execute "normal! ggo<enter>---<esc>gg" | execute"read !ghMdToc %" | execute "normal! ddddggjddddddO<enter>**↓↓Table of Contents↓↓**"
+autocmd BufRead,BufNewFile,BufEnter *.md command! TOCUpdate execute "normal! gg2jV/---<enter>dddggo---<esc>gg" | execute"read !ghMdToc %" | execute "normal! ddggjddddddO<enter>**↓↓Table of Contents↓↓**<esc>"
 autocmd BufRead,BufNewFile,BufEnter *.md execute "cd %:h"
 autocmd BufRead,BufNewFile,BufEnter *.md noremap <c-l> a[](.md)<esc>T("=strftime("%Y%m%d%H%M%S")<CR>PT[i
 autocmd BufRead,BufNewFile,BufEnter *.md inoremap <c-l> [](.md)<esc>T("=strftime("%Y%m%d%H%M%S")<CR>PT[i
