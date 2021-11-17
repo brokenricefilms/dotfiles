@@ -199,7 +199,7 @@ function nvm() {
     nvm "$@"
 }
 
-function updateHostsBlockShit() {
+function updateDns() {
     sudo curl https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling/hosts --output /etc/hosts
     cowsay "sometimes if you not lazy try to clear host cache: chrome://net-internals/#dns"
     sudo systemctl restart NetworkManager.service
