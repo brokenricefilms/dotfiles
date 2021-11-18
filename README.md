@@ -40,6 +40,7 @@
   - `f` find file in current path edit file with nvim (`F` find in home)
   - `c` cd to dir in current path with fancy ls If in git dir print git status, (`C` find in home)
   - `o` open file int current path with default application with `xdg-open` (`O` find in home)
+  - `ej`: find emoji and copy using fzf, wl-copy (require [emoij fzf](https://github.com/noahp/emoji-fzf), wl-copy or you can change the clipboard you using)
   - `killAllUnnameTmuxSession`/`qa`: kill all session not have a name just number session like 23,11,12,... Keep tmux session clean
 - Auto switch dark\light theme
   - Using `dark`\`light` in command line
@@ -50,6 +51,7 @@
   - `vpnJapan`: connect to Japan
   - `vpnStop`: stop openvpn
 - `cm`: create a `?.sh` file in `/tmp` open it in vim and press `space+r` to run. (required my [run.vim](https://github.com/thuanpham2311/dotfiles/blob/master/nvim/after/plugin/run.vim))
+- `u`: unzip/rar/tar,...
 
 ### Tmux
 
@@ -133,7 +135,7 @@
 > For my daily use, i development this dotfiles repos on this, for several month maybe i will change my daily combo (Linux distro hopping)
 
 - Ubuntu 21.10
-- Gnome 40.5
+- Gnome 40.5 / Wayland
 - Neovim nightly
 - Kitty terminal 0.23.1
 
@@ -150,6 +152,7 @@
 - Neovim ≥ 0.5
 - [vim plug](https://github.com/junegunn/vim-plug)
 - [Tmux plugin manager](https://github.com/tmux-plugins/tpm)
+- [Delta](https://github.com/dandavison/delta) fancy git diff
 
 ## Demo
 
