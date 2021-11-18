@@ -30,7 +30,7 @@
 
 - The project started before college and is still actively developing today.
 - Design my Linux distro for everyday use and programming environments, optimized for productivity and simplicity.
-- For me dotfiles is very personal, but you can find some tips, tricks, function i used in this repos (i copy alot in internet, if not have a create once cuz i a programmer)
+- For me dotfiles is very personal, but you can find some tips, tricks, function i used in this repos (i copy a lot in internet, if not have i create once cuz am a programmer)
 
 ## Feature
 
@@ -115,7 +115,7 @@
 
 #### Emmet:
 
-- `,,` in insert mode: execute like h1`,,` to <h1>|</h1>
+- `,,` in insert mode: execute like h1`,,` to `<h1>|</h1>`
 - Preview with coc.nvim
 
 #### vim stuff
