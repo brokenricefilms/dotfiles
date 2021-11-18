@@ -43,7 +43,7 @@
   - `ej`: find emoji and copy using fzf, wl-copy (require [emoij fzf](https://github.com/noahp/emoji-fzf), wl-copy or you can change the clipboard you using)
   - `killAllUnnameTmuxSession`/`qa`: kill all sessions does not have a name just a number session like 23,11,12,... Keep tmux session clean
 - Auto switch dark\light theme
-  - Using `dark`\`light` in the command line
+  - Using `dark` \ `light` in the command line
   - Change Nvim & Kitty & Alacritty & Bat cat theme
   - Supported [zenbones](https://github.com/mcchrish/zenbones.nvim) of light theme, [Gruvbox with Material Palette](https://github.com/sainnhe/gruvbox-material) for dark theme
 - Open VPN
