@@ -28,7 +28,7 @@
 
 ## About
 
-- The project started before college and is still actively developing today.
+- The project started before i go to uni and is still actively developing today.
 - Design my Linux distro for everyday use and programming environments, optimized for productivity and simplicity.
 - For me dotfiles is very personal, but you can find some tips, tricks, function i used in this repos (i copy a lot in internet, if not have i create once cuz am a programmer)
 
