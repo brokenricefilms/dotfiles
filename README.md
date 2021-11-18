@@ -13,7 +13,7 @@
         - [Spell check](#spell-check)
       - [Vim everywhere](#vim-everywhere)
       - [Fzf](#fzf)
-      - [Git (i using <a href="https://github.com/tpope/vim-fugitive">tpope/vim-fugitive</a> plugin)](#git-i-using-tpopevim-fugitive-plugin)
+      - [Git](#git)
       - [Emmet:](#emmet)
       - [vim stuff](#vim-stuff)
   - [Install](#install)
@@ -107,7 +107,9 @@
 - `space + k`: open fzf with buffer files
 - `gc` in normal mode: open fzf with git commmits + diff
 
-#### Git (i using [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) plugin)
+#### Git
+
+> (i using [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) plugin)
 
 - `gs`: open git status
 - `gl`: open git log in quick fix list
