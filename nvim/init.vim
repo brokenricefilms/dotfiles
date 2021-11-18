@@ -229,7 +229,11 @@ command! NumberLineOff execute "set number! relativenumber!"
 set statusline=[\ %F\ %m]\ %r%h%w%=\ %{fugitive#statusline()}
 
 set list
-let &listchars = 'tab:▸ ,extends:❯,precedes:❮,nbsp:±'
+let &listchars = 'tab:▸,extends:❯,precedes:❮,nbsp:±,eol:⤶'
+
+set wrap linebreak
+let &showbreak = '⤷'
+set cpo+=n
 
 set tabstop=4 softtabstop=4 noet
 set shiftwidth=4
@@ -251,9 +255,6 @@ set noswapfile
 set lazyredraw
 set ttyfast
 set nowritebackup
-set wrap linebreak
-let &showbreak = '↪'
-set cpo+=n
 
 set inccommand=split
 set scrolloff=5
