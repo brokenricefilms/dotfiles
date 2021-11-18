@@ -69,6 +69,7 @@
   - `TOCUpdate`: update the TOC (requited have the TOC create by using `TOC` command before)
 - Markdown auto format when you save the file
 - Auto create bullet point, number list
+- `fw` in insert mode: fzf with directory, find the word you forget very usefull for me when write English
 
 ##### Note-taking
 
