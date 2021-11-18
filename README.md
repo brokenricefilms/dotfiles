@@ -109,7 +109,7 @@
 
 #### Git
 
-> (i using [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) plugin)
+> I using [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) plugin
 
 - `gs`: open git status
 - `gl`: open git log in quick fix list
