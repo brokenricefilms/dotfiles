@@ -4,9 +4,13 @@
 
 - [My dot files](#my-dot-files)
   - [About](#about)
+  - [Install](#install)
+  - [Supported](#supported)
+    - [My daily combo](#my-daily-combo)
+    - [Distro Supported](#distro-supported)
+  - [Requirements](#requirements)
   - [Demo](#demo)
   - [Feature](#feature)
-  - [You want setup like me?](#you-want-setup-like-me)
   - [Contributing workflow](#contributing-workflow)
 
 ---
@@ -16,10 +20,34 @@
 - The project started before college and is still actively developing today.
 - Design my Linux distro for everyday use and programming environments, optimized for productivity and simplicity.
 
-**Requirements**
+## Install
+
+- [Here is my script](https://github.com/thuanpham2311/linux_setup) to install Linux distro, but it's not good shell script (like copy 1 time pasted to terminal).
+
+## Supported
+
+### My daily combo
+
+> For my daily use, i development this dotfiles repos on this, for several month maybe i will change my daily combo (Linux distro hopping)
+
+- Ubuntu 21.10
+- Gnome 40.5
+- Neovim nightly
+- Kitty terminal 0.23.1
+
+### Distro Supported
+
+- Ubuntu (latest version)
+- Fedora (\*)
+- Arch (\*)
+
+> (\*): required edit un comment stuff in zsh config file
+
+## Requirements
 
 - Neovim ≥ 0.5
 - [vim plug](https://github.com/junegunn/vim-plug)
+- [Tmux plugin manager](https://github.com/tmux-plugins/tpm)
 
 ## Demo
 
@@ -34,27 +62,24 @@
 ## Feature
 
 - zsh
-  - fzf, moving fast.
-    - in cli press `f` edit file with nvim
-    - in cli press `c` cd to dir, clear screen and fancy ls
+  - Fzf, moving fast.
+    - In cli press `f` edit file with nvim
+    - In cli press `c` cd to dir, clear screen and fancy ls
   - Auto switch (dark | light) theme
-    - using `dark | light` in command line
-    - change nvim & kitty & batcat theme
+    - Using `dark | light` in command line
+    - Change nvim & kitty & batcat theme
 - Tmux:
-  - auto save, continuum session
-  - switch session quickly with fzf
+  - Auto save, continuum session
+  - Switch session quickly with fzf
 - Vim:
-  - zet note support using vim, [see function](https://github.com/thuanpham2311/dotfiles/blob/master/nvim/after/plugin/zet.vim)
-  - vim keymap everywhere
-    - i use [touchcursor](https://github.com/donniebreve/touchcursor-linux) for config my keyboard, older is use xmodmap but i have some issue with this then i switch to touchcursor and this work well
-    - my touchcursor config [here](https://github.com/thuanpham2311/dotfiles/blob/master/touchcursor/touchcursor.conf)
-- [Using vim keymap everywhere use hold space with touchcursor](https://github.com/thuanpham2311/touchcursor-vim)
-  - my touchcursor config [here](https://github.com/thuanpham2311/dotfiles/blob/master/touchcursor/touchcursor.conf)
-- [Using vim keymap everywhere use hold space with touchcursor](https://github.com/thuanpham2311/touchcursor-vim)
-
-## You want setup like me?
-
-[https://github.com/thuanpham2311/linux_setup](https://github.com/thuanpham2311/linux_setup)
+  - Zet note support using vim, [see function](https://github.com/thuanpham2311/dotfiles/blob/master/nvim/after/plugin/zet.vim)
+    - My notes <https://github.com/thuanpham2311/garden>
+    - [My note-taking setup](https://github.com/thuanpham2311/garden/blob/main/publish/20211017203814.md)
+  - Vim keymap everywhere
+    - I use [touchcursor](https://github.com/donniebreve/touchcursor-linux) for config my keyboard, older is use xmodmap but i have some issue with this then i switch to touchcursor and this work well
+    - My touchcursor config [here](https://github.com/thuanpham2311/dotfiles/blob/master/touchcursor/touchcursor.conf)
+  - [Using vim keymap everywhere use hold space with touchcursor](https://github.com/thuanpham2311/touchcursor-vim)
+    - My touchcursor nightly config [here](https://github.com/thuanpham2311/dotfiles/blob/master/touchcursor/touchcursor.conf)
 
 ## Contributing workflow
 
