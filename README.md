@@ -1,4 +1,4 @@
-# My dot files
+# My dotfiles
 
 **↓↓Table of Contents↓↓**
 
@@ -30,20 +30,20 @@
 
 - The project started before i went to uni and is still actively developing today.
 - Design my Linux distro for everyday use and programming environments, optimized for productivity and simplicity.
-- For me dotfiles is very personal, but you can find some tips, tricks, function i used in this repos (i copy a lot in internet, if not have i create once cuz am a programmer)
+- For me, dotfiles is very personal, but you can find some tips, tricks, functions i used in this repos (i copy a lot on the internet, if not have i created once cuz am a programmer)
 
 ## Feature
 
 ### Zsh
 
 - Fzf, moving fast.
-  - `f` find file in current path edit file with nvim (`F` find in home)
+  - `f` find the file in current path edit file with nvim (`F` find in home)
   - `c` cd to dir in current path with fancy ls If in git dir print git status, (`C` find in home)
   - `o` open file int current path with default application with `xdg-open` (`O` find in home)
   - `ej`: find emoji and copy using fzf, wl-copy (require [emoij fzf](https://github.com/noahp/emoji-fzf), wl-copy or you can change the clipboard you using)
-  - `killAllUnnameTmuxSession`/`qa`: kill all session not have a name just number session like 23,11,12,... Keep tmux session clean
+  - `killAllUnnameTmuxSession`/`qa`: kill all sessions does not have a name just a number session like 23,11,12,... Keep tmux session clean
 - Auto switch dark\light theme
-  - Using `dark`\`light` in command line
+  - Using `dark`\`light` in the command line
   - Change Nvim & Kitty & Alacritty & Bat cat theme
   - Supported [zenbones](https://github.com/mcchrish/zenbones.nvim) of light theme, [Gruvbox with Material Palette](https://github.com/sainnhe/gruvbox-material) for dark theme
 - Open VPN
@@ -55,9 +55,9 @@
 
 ### Tmux
 
-- Auto save, continuum session
-- Switch session quickly with fzf, if not have create once, [see plugin](https://github.com/thuanpham2311/tmux-fzf-session-switch)
-- Select the file/link press `o` will open in default app
+- Autosave, continuum session
+- Switch session quickly with fzf, if not have created once, [see plugin](https://github.com/thuanpham2311/tmux-fzf-session-switch)
+- Select the file/link press `o` will open in the default app
 - Tmux ❤️ Vim:
   - Support navigation with `Ctrl+h\j\k\l`
   - Select mode using vim keymap
@@ -70,30 +70,30 @@
   - `TOC`: create the table of contents
   - `TOCUpdate`: update the TOC (requited have the TOC create by using `TOC` command before)
 - Markdown auto format when you save the file
-- Auto create bullet point, number list
-- `fw` in insert mode: fzf with directory, find the word you forget very usefull for me when write English
+- Auto-create bullet point, number list
+- `fw` in insert mode: fzf with directory, find the word you forget very useful for me when writing English
 
 ##### Note-taking
 
 - Zettelkasten note-taking support using vim, [see function](https://github.com/thuanpham2311/dotfiles/blob/master/nvim/after/plugin/zet.vim)
   - My notes <https://github.com/thuanpham2311/garden>
   - [My note-taking setup](https://github.com/thuanpham2311/garden/blob/main/publish/20211017203814.md)
-- Zen writing with my minimal theme by default, better way you can use `gn` in zsh shell it will go to note dir and open vim with README.md (you can edit for your note path, what file you want open by default)
-- `[[` in insert mode: for linking the note with Ag search content in you note
+- Zen writing with my minimal theme by default, the better way you can use `gn` in zsh shell it will go to note dir and open vim with README.md (you can edit for your note path, what file you want to open by default)
+- `[[` in insert mode: for linking the note with Ag search content in your note
 - `ctrl+k` insert mode: create a link with your latest copy (required wl-copy, you also change clipboard you using)
-- Select sth... in virual mode `Enter`: auto link the new note with title = "# what you select"
-  - Eg. select `Thuan Pham so cute` -> [Thuan Pham so cute](yyyymmddhhmmss.md) -> `# Thuan Pham so cute`
+- Select sth... in visual mode `Enter`: auto-link the new note with title = "# what you select"
+  - E.g. select `Thuan Pham so cute` ⇾ [Thuan Pham so cute](yyyymmddhhmmss.md) ⇾ `# Thuan Pham so cute`
 
 ##### Spell check
 
 - Support: Vietnamese, English
-- More new slang, lang
+- More new slang, Lang
 - Vocabulary in programming
 - `space + s` in normal mode: enable (disable by default)
 
 #### Vim everywhere
 
-- I use [touchcursor](https://github.com/donniebreve/touchcursor-linux) for config my keyboard, older is use xmodmap but i have some issue with this then i switch to touchcursor and this work well
+- I use [touchcursor](https://github.com/donniebreve/touchcursor-linux) for config my keyboard, older is used xmodmap but i have some issue with this then i switch to touchcursor, and this work well
   - <https://github.com/thuanpham2311/touchcursor-vim>
   - My touchcursor nightly config [here](https://github.com/thuanpham2311/dotfiles/blob/master/touchcursor/touchcursor.conf)
 - Browser ❤️ vim with touchcursor, see my config file [here](https://github.com/thuanpham2311/dotfiles/blob/master/surfingkeys.js)
@@ -103,16 +103,16 @@
 - `;` in normal mode: open vim command with fzf completion (`space + ;` in normal mode for coc list command)
 - `space + f`: find file in current path (`space + F` in home)
 - `space + h`: open fzf history files
-- `space + j`: open fzf with rig grep, search file content in current path
+- `space + j`: open fzf with rig grep, search file content in the current path
 - `space + k`: open fzf with buffer files
-- `gc` in normal mode: open fzf with git commmits + diff
+- `gc` in normal mode: open fzf with git commits + diff
 
 #### Git
 
 > I using [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) plugin
 
 - `gs`: open git status
-- `gl`: open git log in quick fix list
+- `gl`: open git log in the quick-fix list
   - use can use `H`/`L` to prev/next the quick fix list
 - `gp` in normal mode: git push
 - `PushForce`: git push -f
@@ -124,17 +124,17 @@
 
 #### vim stuff
 
-- `space+u`: open undotree (use need to change undodir path)
+- `space+u`: open undo tree (use need to change undodir path)
 
 ## Install
 
-- [Here is my script](https://github.com/thuanpham2311/linux_setup) to install Linux distro, but it's not good shell script (like copy 1 time pasted to terminal).
+- [Here is my script](https://github.com/thuanpham2311/linux_setup) to install the Linux distro, but it's not a good shell script (like copy 1 time pasted to terminal).
 
 ## Supported
 
 ### My daily combo
 
-> For my daily use, i development this dotfiles repos on this, for several month maybe i will change my daily combo (Linux distro hopping)
+> For my daily use, i develop this dotfiles repos on this, for several months maybe i will change my daily combo (Linux distro hopping)
 
 - Ubuntu 21.10
 - Gnome 40.5 / Wayland
@@ -143,11 +143,11 @@
 
 ### Distro Supported
 
-- Ubuntu (latest version)
+- Ubuntu (the latest version)
 - Fedora (\*)
 - Arch (\*)
 
-> (\*): required edit un comment stuff in zsh config file
+> (\*): required edit uncomment stuff in zsh config file
 
 ## Requirements
 
@@ -158,7 +158,7 @@
 
 ## Demo
 
-**You can watch my Talk show Oct 15, 2021: my setup for coding, daily use**
+**You can watch my Talk show on Oct 15, 2021: my setup for coding, daily use**
 
 ⇒ <https://youtu.be/2OhzSP1uGLc>
 
