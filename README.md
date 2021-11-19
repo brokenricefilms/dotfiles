@@ -73,6 +73,7 @@
 - `space + q`: is `:q`, just quit the window if file not save -> can't quit
 - `Q`: is `:qa!` so much stuff on the screen you want quit (vim not write file you don't save)
 - `space + o`: is `:wq`, this "okay" for me just save and close this
+- `space + z`: is `Ctrl + w + o`, this 'z' = 'zoom' for me, keep current window other? -> close this (will save in buffer)
 
 #### Writing
 
