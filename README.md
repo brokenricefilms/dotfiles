@@ -2,12 +2,13 @@
 
 **↓↓Table of Contents↓↓**
 
-- [My dot files](#my-dot-files)
+- [My dotfiles](#my-dotfiles)
   - [About](#about)
   - [Feature](#feature)
     - [Zsh](#zsh)
     - [Tmux](#tmux)
     - [Vim](#vim)
+      - [Thuan fly keys](#thuan-fly-keys)
       - [Writing](#writing)
         - [Note-taking](#note-taking)
         - [Spell check](#spell-check)

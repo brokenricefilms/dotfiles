@@ -229,7 +229,7 @@ command! NumberLineOff execute "set number! relativenumber!"
 set statusline=[\ %F\ %m]\ %r%h%w%=\ %{fugitive#statusline()}
 
 set list
-let &listchars = 'tab:▸,extends:❯,precedes:❮,nbsp:±,eol:⤶'
+let &listchars = 'tab:▸ ,trail:·,nbsp:±,extends:❯,precedes:❮'
 
 set wrap linebreak
 let &showbreak = '⤷'
