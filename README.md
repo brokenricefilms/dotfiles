@@ -65,6 +65,15 @@
 
 ### Vim
 
+#### Thuan fly keys
+
+> I [like Xah fly key](https://github.com/xahlee/xah-fly-keys) for Emacs so i use the similar name
+
+- `space + w`: is `:w`, write the file
+- `space + q`: is `:q`, just quit the window if file not save -> can't quit
+- `Q`: is `:qa!` so much stuff on the screen you want quit (vim not write file you don't save)
+- `space + o`: is `:wq`, this "okay" for me just save and close this
+
 #### Writing
 
 - Table of contents
