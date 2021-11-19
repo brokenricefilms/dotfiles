@@ -67,7 +67,7 @@
 
 #### Thuan fly keys
 
-> I [like Xah fly key](https://github.com/xahlee/xah-fly-keys) for Emacs so i use the similar name
+> I [like Xah fly key](https://github.com/xahlee/xah-fly-keys) for Emacs so i use the similar name, less key press is the goal
 
 - `space + w`: is `:w`, write the file
 - `space + q`: is `:q`, just quit the window if file not save -> can't quit
