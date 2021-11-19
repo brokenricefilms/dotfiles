@@ -74,6 +74,10 @@
 - `Q`: is `:qa!` so much stuff on the screen you want quit (vim not write file you don't save)
 - `space + o`: is `:wq`, this "okay" for me just save and close this
 - `space + z`: is `Ctrl + w + o`, this 'z' = 'zoom' for me, keep current window other? -> close this (will save in buffer)
+- `J`: buffer next
+- `K`: buffer previous
+- `H`: is `:cprevious` the previous error in the list
+- `L`: is `:cNext` the next error in the list
 
 #### Writing
 
