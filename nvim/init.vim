@@ -119,7 +119,7 @@ let g:fzf_colors =
 
 Plug 'https://github.com/tpope/vim-fugitive'
 noremap gs :G<enter>gg4j
-noremap gc :cd %:h <enter>:BCommits<enter>
+noremap gc :cd %:h<enter>:BCommits<enter>
 noremap gp :G push<enter>
 noremap gb :G blame<CR>
 noremap gd :vsplit<Return><C-w>w:Gdiff<CR>
