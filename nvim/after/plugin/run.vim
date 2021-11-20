@@ -4,6 +4,9 @@ autocmd BufEnter *.c nnoremap <leader>r
 autocmd BufEnter *.cpp nnoremap <leader>r
     \ :w<enter>:sp<enter>:term g++ -std=c++17 % -o %< && ./%< && rm ./%< <enter> :startinsert<enter>
 
+autocmd BufEnter *.cpp nnoremap <leader>R
+    \ :w<enter>:sp<enter>:term ./run <enter> :startinsert<enter>
+
 autocmd BufEnter *.cs nnoremap <leader>r
     \ :w<enter>:sp<enter>:term mcs % && mono *.exe && rm *.exe <enter> :startinsert<enter>
 
