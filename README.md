@@ -37,9 +37,7 @@
 
 ### Zsh
 
-<!-- TODO talk about the bin dir -->
-  <!-- labels: documentation -->
-  <!-- assignees: thuanpham2311 -->
+<!-- TODO will it not working -->
 
 - Fzf, moving fast.
   - `f` find the file in current path edit file with nvim (`F` find in home)
