@@ -95,7 +95,6 @@ noremap <leader>j :Rg<enter>
 noremap <leader>h :History<enter>
 noremap ; :Commands<enter>
 noremap // :BLines<enter>
-noremap gc :cd %:h <enter>:BCommits<enter>
 
 let g:fzf_layout = { 'window': {
             \ 'width': 0.9,
@@ -120,8 +119,10 @@ let g:fzf_colors =
 
 Plug 'https://github.com/tpope/vim-fugitive'
 noremap gs :G<enter>gg4j
-noremap gl :Gclog<enter>
+noremap gc :cd %:h <enter>:BCommits<enter>
 noremap gp :G push<enter>
+noremap gb :G blame<CR>
+noremap gd :vsplit<Return><C-w>w:Gdiff<CR>
 command! PushForce execute "G push -f"
 
 Plug 'https://github.com/tpope/vim-eunuch'
