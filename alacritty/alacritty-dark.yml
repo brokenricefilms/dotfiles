@@ -3,6 +3,7 @@ env:
 
 window:
   decorations: "none"
+  dynamic_padding: true
 
 # Colors (Gruvbox dark)
 colors:
