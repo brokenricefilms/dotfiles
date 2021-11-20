@@ -217,6 +217,7 @@ function update () {
     ~/.tmux/plugins/tpm/bin/update_plugins all
     flatpak update -y
 
+    # TODO auto change command to update base on distro
     # arch base
     # sudo pacman -Syu --noconfirm
     # yay -Sua --noconfirm
