@@ -150,6 +150,8 @@ Plug 'https://github.com/wellle/tmux-complete.vim'
 
 Plug 'https://github.com/preservim/vimux'
 
+noremap <leader>t :VimuxTogglePane<cr>:VimuxOpenRunner<cr>
+
 Plug 'https://github.com/christoomey/vim-tmux-navigator'
 
 Plug 'https://github.com/max397574/better-escape.nvim'
