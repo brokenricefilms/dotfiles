@@ -119,8 +119,8 @@ let g:fzf_colors =
 
 Plug 'https://github.com/tpope/vim-fugitive'
 
-command! PushForce execute "call VimuxRunCommandInDir(\"git push -f\", 0)" | execute "VimuxTogglePane"
-noremap gp :call VimuxRunCommandInDir("git push", 0):VimuxTogglePane<CR>
+command! PushForce execute "call VimuxRunCommandInDir(\"git push -f\", 0)"
+noremap gp :call VimuxRunCommandInDir("git push", 0)<cr>
 noremap gs :G<enter>gg5j2ly$k0
 noremap gc :cd %:h<enter>:BCommits<enter>
 noremap gb :G blame<CR>
