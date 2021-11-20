@@ -78,6 +78,7 @@
 - `K`: buffer previous
 - `H`: is `:cprevious` the previous error in the list
 - `L`: is `:cNext` the next error in the list
+- `M`: is `Ctrl + ^`, switch between the previous file.
 
 #### Writing
 
