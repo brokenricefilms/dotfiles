@@ -37,6 +37,10 @@
 
 ### Zsh
 
+<!-- TODO talk about the bin dir -->
+  <!-- labels: documentation -->
+  <!-- assignees: thuanpham2311 -->
+
 - Fzf, moving fast.
   - `f` find the file in current path edit file with nvim (`F` find in home)
   - `c` cd to dir in current path with fancy ls If in git dir print git status, (`C` find in home)
@@ -184,18 +188,3 @@
 ⇒ <https://youtu.be/2OhzSP1uGLc>
 
 <img src="./img/dotfiles.gif" width="50%" height="50%"><img src="./img/light.gif" width="50%" height="50%">
-
----
-
-## Contributing workflow
-
-Here’s how we suggest you go about proposing a change to this project:
-
-1. [Fork this project][fork] to your account.
-2. [Create a branch][branch] for the change you intend to make.
-3. Make your changes to your fork.
-4. [Send a pull request][pr] from your fork’s branch to our `master` branch.
-
-[fork]: https://help.github.com/articles/fork-a-repo/
-[branch]: https://help.github.com/articles/creating-and-deleting-branches-within-your-repository
-[pr]: https://help.github.com/articles/using-pull-requests/
