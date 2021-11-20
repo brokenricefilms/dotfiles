@@ -123,7 +123,7 @@ noremap gc :cd %:h<enter>:BCommits<enter>
 noremap gp :call VimuxRunCommandInDir("git push", 0)<CR>:VimuxTogglePane<CR>
 noremap gb :G blame<CR>
 noremap gd :vsplit<Return><C-w>w:Gdiff<CR>
-command! PushForce execute "call VimuxRunCommandInDir("git push", 0)" | execute "VimuxTogglePane"
+command! PushForce execute "call VimuxRunCommandInDir(\"git push -f\", 0)" | execute "VimuxTogglePane"
 
 Plug 'https://github.com/tpope/vim-eunuch'
 
