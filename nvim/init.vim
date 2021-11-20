@@ -1,5 +1,5 @@
 call plug#begin()
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 set hidden
 set shortmess+=c
 set signcolumn=yes
@@ -56,11 +56,11 @@ command! -nargs=0 EditSnippets :call CocAction('runCommand', 'snippets.editSnipp
 command! -nargs=0 FormatFile :call CocAction('runCommand', 'prettier.formatFile')
 command! -nargs=0 RenameCurrentWord :call CocAction('runCommand', 'document.renameCurrentWord')
 
-Plug 'rhysd/vim-clang-format', {'for': ['c', 'cpp']}
+Plug 'https://github.com/rhysd/vim-clang-format', {'for': ['c', 'cpp']}
 let g:clang_format#auto_format=1
 
-Plug 'nvim-lua/popup.nvim'
-Plug 'ThePrimeagen/harpoon'
+Plug 'https://github.com/nvim-lua/popup.nvim'
+Plug 'https://github.com/ThePrimeagen/harpoon'
 nmap mi :lua require("harpoon.mark").add_file()<enter>
 nmap mo :lua require("harpoon.ui").toggle_quick_menu()<enter>
 " moving less, thinking like hjkl, now with number qwert|asdfg
@@ -80,11 +80,11 @@ nmap me :lua require("harpoon.ui").nav_file(8)<enter>
 nmap mr :lua require("harpoon.ui").nav_file(9)<enter>
 nmap mt :lua require("harpoon.ui").nav_file(10)<enter>
 
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'https://github.com/nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
 
-Plug 'junegunn/fzf.vim'
+Plug 'https://github.com/junegunn/fzf.vim'
 
 inoremap <expr> fw fzf#vim#complete#word()
 imap fp <plug>(fzf-complete-path)
@@ -118,17 +118,17 @@ let g:fzf_colors =
             \ 'spinner': ['fg', 'Label'],
             \ 'header':  ['fg', 'Comment'] }
 
-Plug 'tpope/vim-fugitive'
+Plug 'https://github.com/tpope/vim-fugitive'
 noremap gs :G<enter>gg4j
 noremap gl :Gclog<enter>
 noremap gp :G push<enter>
 command! PushForce execute "G push -f"
 
-Plug 'tpope/vim-eunuch'
+Plug 'https://github.com/tpope/vim-eunuch'
 
-" Plug 'kevinhwang91/vim-ibus-sw'
+" Plug 'https://github.com/kevinhwang91/vim-ibus-sw'
 
-Plug 'dkarter/bullets.vim'
+Plug 'https://github.com/dkarter/bullets.vim'
 let g:bullets_enabled_file_types = [
             \ 'markdown',
             \ 'text',
@@ -136,47 +136,47 @@ let g:bullets_enabled_file_types = [
             \ 'scratch'
             \]
 
-Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
+Plug 'https://github.com/iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
 
 autocmd FileType markdown noremap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<enter>
 
-Plug 'phaazon/hop.nvim'
+Plug 'https://github.com/phaazon/hop.nvim'
 map f :HopChar1<enter>
 noremap f :HopChar1<enter>
 
-Plug 'wellle/tmux-complete.vim'
+Plug 'https://github.com/wellle/tmux-complete.vim'
 
-Plug 'max397574/better-escape.nvim'
+Plug 'https://github.com/christoomey/vim-tmux-navigator'
 
-Plug 'mattn/emmet-vim'
+Plug 'https://github.com/max397574/better-escape.nvim'
+
+Plug 'https://github.com/mattn/emmet-vim'
 let g:user_emmet_leader_key=','
 let g:user_emmet_install_global = 0
 autocmd FileType xhtml,html,css,markdown EmmetInstall
 
-Plug 'AndrewRadev/tagalong.vim'
+Plug 'https://github.com/AndrewRadev/tagalong.vim'
 let g:tagalong_filetypes = ['eco', 'eelixir', 'ejs', 'eruby', 'html', 'xhtml', 'htmldjango', 'javascriptreact', 'jsx', 'php', 'typescriptreact', 'xml']
 
-Plug 'leafOfTree/vim-matchtag'
+Plug 'https://github.com/leafOfTree/vim-matchtag'
 
-Plug 'christoomey/vim-tmux-navigator'
+Plug 'https://github.com/tpope/vim-surround'
 
-Plug 'tpope/vim-surround'
+Plug 'https://github.com/windwp/nvim-autopairs'
 
-Plug 'windwp/nvim-autopairs'
+Plug 'https://github.com/windwp/nvim-ts-autotag'
 
-Plug 'windwp/nvim-ts-autotag'
-
-Plug 'preservim/nerdcommenter'
+Plug 'https://github.com/preservim/nerdcommenter'
 let g:NERDSpaceDelims = 1
 map mm <Plug>NERDCommenterToggle
 
-Plug 'mbbill/undotree'
+Plug 'https://github.com/mbbill/undotree'
 set undodir=~/sync/ok/undodir
 set undofile
 nnoremap <leader>u :UndotreeToggle<enter>
 let g:undotree_WindowLayout = 3
 
-Plug 'romainl/vim-cool'
+Plug 'https://github.com/romainl/vim-cool'
 
 set hlsearch
 set ignorecase
@@ -189,10 +189,10 @@ nnoremap * *zz
 nnoremap # #zz
 noremap J mzJ`z
 
-Plug 'norcalli/nvim-colorizer.lua'
+Plug 'https://github.com/norcalli/nvim-colorizer.lua'
 autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
 
-Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'https://github.com/lukas-reineke/indent-blankline.nvim'
 if &diff
     let g:indent_blankline_enabled = v:false
 endif
@@ -201,15 +201,15 @@ let g:indent_blankline_filetype_exclude = [
             \ 'help', 'yaml'
             \]
 
-Plug 'nvim-lua/plenary.nvim'
+Plug 'https://github.com/nvim-lua/plenary.nvim'
 
-Plug 'lewis6991/gitsigns.nvim'
+Plug 'https://github.com/lewis6991/gitsigns.nvim'
 
-Plug 'rktjmp/lush.nvim'
+Plug 'https://github.com/rktjmp/lush.nvim'
 
-Plug 'mcchrish/zenbones.nvim'
+Plug 'https://github.com/mcchrish/zenbones.nvim'
 
-Plug 'sainnhe/gruvbox-material'
+Plug 'https://github.com/sainnhe/gruvbox-material'
 call plug#end()
 
 syntax enable
@@ -285,8 +285,6 @@ noremap <space>s :setlocal spell! spell?<enter>
 
 set spelllang=en_us,vi
 
-command! Reload execute "source ~/.config/nvim/init.vim | !tmux source-file ~/.tmux.conf"
-
 noremap ss :split<Return><C-w>w
 noremap sv :vsplit<Return><C-w>w
 
@@ -339,12 +337,6 @@ function! TwiddleCase(str)
 endfunction
 vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
 
-command! OpenFileInBraveBrowser execute "!brave-browser '%'"
-command! CopyFileName execute "!echo % | wl-copy"
-command! ViewRepoInWeb execute "cd %:h | !gh repo view -w"
-command! Light execute "!light" | execute "Reload"
-command! Dark execute "!dark" | execute "Reload"
-
 nmap <leader>x :!xdg-open '%'<cr><cr>
 
 nmap gf :edit <cfile><cr>
@@ -359,3 +351,10 @@ nnoremap <C-enter> O<esc>
 
 xnoremap <silent> p p:let @+=@0<CR>:let @"=@0<CR>
 nnoremap M <c-^>
+
+command! OpenFileInBraveBrowser execute "!brave-browser '%'"
+command! CopyFileName execute "!echo % | wl-copy"
+command! ViewRepoInWeb execute "cd %:h | !gh repo view -w"
+command! Light execute "!light" | execute "Reload"
+command! Dark execute "!dark" | execute "Reload"
+command! Reload execute "source ~/.config/nvim/init.vim | !tmux source-file ~/.tmux.conf"
