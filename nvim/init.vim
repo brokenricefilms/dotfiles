@@ -352,10 +352,10 @@ nmap gf :edit <cfile><cr>
 imap ;; <esc>A;<enter>
 imap ;, <esc>A,<enter>
 
-imap <S-enter> <esc>O
-imap <C-enter> <esc>o
-nnoremap <S-enter> O<esc>
-nnoremap <C-enter> o<esc>
+imap <S-enter> <esc>o
+imap <C-enter> <esc>O
+nnoremap <S-enter> o<esc>
+nnoremap <C-enter> O<esc>
 
 xnoremap <silent> p p:let @+=@0<CR>:let @"=@0<CR>
 nnoremap M <c-^>
