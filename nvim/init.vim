@@ -150,6 +150,8 @@ Plug 'https://github.com/wellle/tmux-complete.vim'
 
 Plug 'https://github.com/preservim/vimux'
 
+let g:VimuxOrientation = "h"
+let g:VimuxHeight = "40"
 noremap <leader>t :VimuxTogglePane<cr>:VimuxOpenRunner<cr>
 
 Plug 'https://github.com/christoomey/vim-tmux-navigator'
