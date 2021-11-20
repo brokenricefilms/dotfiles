@@ -90,7 +90,7 @@
 - Markdown auto format when you save the file
 - Auto-create bullet point, number list
 - `fw` in insert mode: fzf with directory, find the word you forget very useful for me when writing English
-- Ibus: Auto switch Vietnamese → English when leaved insert mode (Vietnamese keyboard in normal mode not working perfectly)
+- Ibus: Auto switch Vietnamese → English when leaved insert mode (i disable this plugin now cuz some problem with gnome tweak key config, if you don't care about config key in gnome tweak you can uncomment this plugin in vim config file)
 
 ##### Note-taking
 
