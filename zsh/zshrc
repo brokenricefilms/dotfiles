@@ -245,7 +245,6 @@ function hi () {
     nvim -p ~/sync/note/*.md
 }
 
-source ~/dotfiles/zsh/functions/themeControl.zsh
 source ~/dotfiles/zsh/functions/browserConfig.zsh
 source ~/dotfiles/zsh/functions/gitConfig.zsh
 source ~/dotfiles/zsh/functions/completion.zsh

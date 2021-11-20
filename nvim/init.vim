@@ -342,6 +342,8 @@ vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
 command! OpenFileInBraveBrowser execute "!brave-browser '%'"
 command! CopyFileName execute "!echo % | wl-copy"
 command! ViewRepoInWeb execute "cd %:h | !gh repo view -w"
+command! Light execute "!light" | execute "Reload"
+command! Dark execute "!dark" | execute "Reload"
 
 nmap <leader>x :!xdg-open '%'<cr><cr>
 

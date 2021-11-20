@@ -142,6 +142,8 @@
 #### vim stuff
 
 - `space+u`: open undo tree (use need to change undodir path)
+- `:Dark`: switch to dark theme (changed nvim, kitty, Alacritty, bat)
+- `:Light`: switch to light theme (changed nvim, kitty, Alacritty, bat)
 
 ## Install
 
