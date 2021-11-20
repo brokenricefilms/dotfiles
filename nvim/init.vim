@@ -121,7 +121,7 @@ Plug 'https://github.com/tpope/vim-fugitive'
 
 command! PushForce execute "call VimuxRunCommandInDir(\"git push -f\", 0)" | execute "VimuxTogglePane"
 noremap gp :call VimuxRunCommandInDir("git push", 0):VimuxTogglePane<CR>
-noremap gs :G<enter>gg4j
+noremap gs :G<enter>gg5j2ly$k0
 noremap gc :cd %:h<enter>:BCommits<enter>
 noremap gb :G blame<CR>
 noremap gd :vsplit<Return><C-w>w:Gdiff<CR>
