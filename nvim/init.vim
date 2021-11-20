@@ -126,7 +126,7 @@ command! PushForce execute "G push -f"
 
 Plug 'tpope/vim-eunuch'
 
-Plug 'kevinhwang91/vim-ibus-sw'
+" Plug 'kevinhwang91/vim-ibus-sw'
 
 Plug 'dkarter/bullets.vim'
 let g:bullets_enabled_file_types = [
