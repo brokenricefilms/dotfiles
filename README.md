@@ -37,8 +37,6 @@
 
 ### Zsh
 
-<!-- TODO will it not working -->
-
 - Fzf, moving fast.
   - `f` find the file in current path edit file with nvim (`F` find in home)
   - `c` cd to dir in current path with fancy ls If in git dir print git status, (`C` find in home)
