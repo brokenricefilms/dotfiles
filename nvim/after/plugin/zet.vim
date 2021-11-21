@@ -36,4 +36,4 @@ autocmd BufRead,BufNewFile *.md inoremap <expr> [[ fzf#vim#complete({
             \ 'options': '--multi --reverse --margin 5%,0',
             \ 'down':    10})
 
-autocmd BufRead,BufNewFile,BufEnter *.md nmap <enter> /.md)<enter>gf
+autocmd BufRead,BufNewFile,BufEnter *.md noremap <enter> 3b/.md)<enter>gf
