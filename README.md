@@ -102,6 +102,7 @@
 - `ctrl+k` insert mode: create a link with your latest copy (required wl-copy, you also change clipboard you using)
 - Select sth... in visual mode `Enter`: auto-link the new note with title = "# what you select"
   - E.g. select `Thuan Pham so cute` ⇾ [Thuan Pham so cute](yyyymmddhhmmss.md) ⇾ `# Thuan Pham so cute`
+- `Enter`: will find the first note linking in the right and go to this
 
 ##### Spell check
 

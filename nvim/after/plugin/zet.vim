@@ -35,3 +35,5 @@ autocmd BufRead,BufNewFile *.md inoremap <expr> [[ fzf#vim#complete({
             \ 'reducer': function('<sid>make_note_link'),
             \ 'options': '--multi --reverse --margin 5%,0',
             \ 'down':    10})
+
+autocmd BufRead,BufNewFile,BufEnter *.md nmap <enter> t)gf
