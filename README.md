@@ -185,6 +185,3 @@
 ⇒ <https://youtu.be/2OhzSP1uGLc>
 
 <img src="./img/dotfiles.gif" width="50%" height="50%"><img src="./img/light.gif" width="50%" height="50%">
-
-< !--- TODO ahihi
--->
