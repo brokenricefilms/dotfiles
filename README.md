@@ -158,10 +158,10 @@
 
 > For my daily use, i develop this dotfiles repos on this, for several months maybe i will change my daily combo (Linux distro hopping)
 
-- Ubuntu 21.10
-- Gnome 40.5 / Wayland
-- Neovim nightly
-- Kitty terminal 0.23.1
+- Fedora 35
+- Gnome 41.1 (Wayland)
+- Neovim v0.5.1
+- Kitty terminal 0.21.2
 
 ### Distro Supported
 

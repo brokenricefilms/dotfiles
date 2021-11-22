@@ -131,7 +131,7 @@ alias v='nvim'
 alias 777='chmod -R 777'
 alias x='chmod +x'
 alias colorPicker='zenity --color-selection'
-alias cat='batcat'
+alias cat='bat'
 export GREP_COLOR='1;31'
 alias grep='grep --color=auto'
 alias n='nnn -de'
@@ -144,16 +144,16 @@ alias clear='qa; clear'
 alias m='mpv --shuffle --loop-playlist ~/Music/*'
 
 # ubuntu apt
-alias ins='sudo apt install -y'
-alias uins='sudo apt remove -y'
+# alias ins='sudo apt install -y'
+# alias uins='sudo apt remove -y'
 
 # termux pkg
 # alias ins='pkg install -y'
 # alias uins='pkg remove -y'
 
 # fedora dnf
-# alias ins='sudo dnf -y install'
-# alias uins='sudo dnf -y remove'
+alias ins='sudo dnf -y install'
+alias uins='sudo dnf -y remove'
 
 # arch
 # alias ins='sudo pacman -S --noconfirm'
@@ -218,20 +218,19 @@ function update () {
     ~/.tmux/plugins/tpm/bin/update_plugins all
     flatpak update -y
 
-    # TODO auto change command to update base on distro
     # arch base
     # sudo pacman -Syu --noconfirm
     # yay -Sua --noconfirm
 
     # debian base (ubuntu, kali,...)
-    sudo apt update
-    sudo apt upgrade -y
-    sudo apt autoremove -y
-    sudo apt autoclean
+    # sudo apt update
+    # sudo apt upgrade -y
+    # sudo apt autoremove -y
+    # sudo apt autoclean
 
     # rehat base (fedora)
-    # sudo dnf update -y
-    # sudo dnf autoremove -y
+    sudo dnf update -y
+    sudo dnf autoremove -y
 }
 
 function hi () {
