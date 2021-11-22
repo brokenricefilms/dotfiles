@@ -8,7 +8,7 @@ autocmd BufEnter *.md command! MoveNoteToPersonal execute "Move ~/sync/note/pers
 noremap gn :ZettelHome<enter>:cd %:h<enter>
 
 command! NewZettel :execute ":e" zettelkasten . strftime("%Y%m%d%H%M%S") . ".md"
-noremap <leader>n :tabnew<enter>:NewZettel<enter>
+noremap <leader>n :tabnew<enter>:NewZettel<enter>i# <enter><enter>---<enter><enter>> #<esc>ggA
 
 function! s:make_note_link(l)
     let line = split(a:l[0], ':')
