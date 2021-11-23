@@ -53,6 +53,7 @@
   - `vpnStop`: stop openvpn
 - `cm`: create a `?.sh` file in `/tmp` open it in vim and press `space+r` to run. (required my [run.vim](https://github.com/thuanpham2311/dotfiles/blob/master/nvim/after/plugin/run.vim))
 - `u`: unzip/rar/tar,...
+- `cppProject`: create cpp multi file template
 
 ### Tmux
 
