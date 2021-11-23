@@ -56,7 +56,7 @@ command! -nargs=0 EditSnippets :call CocAction('runCommand', 'snippets.editSnipp
 command! -nargs=0 FormatFile :call CocAction('runCommand', 'prettier.formatFile')
 command! -nargs=0 RenameCurrentWord :call CocAction('runCommand', 'document.renameCurrentWord')
 
-Plug 'https://github.com/rhysd/vim-clang-format', {'for': ['c', 'cpp']}
+Plug 'https://github.com/rhysd/vim-clang-format', {'for': ['h', 'c', 'cpp']}
 let g:clang_format#auto_format=1
 
 Plug 'https://github.com/nvim-lua/popup.nvim'
