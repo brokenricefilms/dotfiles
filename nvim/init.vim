@@ -312,8 +312,8 @@ inoremap ! !<c-g>u
 inoremap ? ?<c-g>u
 inoremap [ [<c-g>u
 
-vnoremap J :m '>+1<enter>gv=gv
-vnoremap K :m '<-2<enter>gv=gv
+vnoremap <C-j> :m '>+1<enter>gv=gv
+vnoremap <C-k> :m '<-2<enter>gv=gv
 
 nnoremap j gj
 nnoremap k gk
