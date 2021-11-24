@@ -1,7 +1,7 @@
-Hints.characters = "asdghklqwertyuiopzxcvbnmfj1234567890;/\.,][-=`";
+Hints.characters = "asdghklqwertyuiopzxcvbnmfj1234567890;/.,][-=`";
 
 const hintsCss =
-  "font-size: 10pt; font-family: SauceCodePro Nerd Font, Consolas, Menlo, monospace; border: 0px; color:#2c363c; background: initial; background-color: #f0edec;";
+  "font-size: 13pt; font-family: JetBrains Mono NL,SauceCodePro Nerd Font, Consolas, Menlo, monospace; border: 0px; color:#2c363c; background: initial; background-color: #f0edec;";
 
 Hints.style(hintsCss);
 Hints.style(hintsCss, "text");
@@ -9,7 +9,7 @@ Hints.style(hintsCss, "text");
 settings.theme = `
 .sk_theme {
   font-family: SauceCodePro Nerd Font, Consolas, Menlo, monospace;
-  font-size: 10pt;
+  font-size: 13pt;
   background: #f0edec;
   color: #2c363c;
 }
@@ -36,6 +36,6 @@ settings.theme = `
 }
 #sk_status,
 #sk_find {
-  font-size: 10pt;
+  font-size: 13pt;
 }
 `;
