@@ -1,6 +1,6 @@
 #! /usr/bin/env zsh
 
-export FZF_DEFAULT_COMMAND='fd --type f --follow --exclude .git --exclude undodir --exclude gems --exclude node_modules'
+export FZF_DEFAULT_COMMAND='fd --type f --follow --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go'
 
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d"
@@ -27,14 +27,14 @@ function f() {
 
 function c () {
     local dir
-    dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude node_modules | fzfDown) &&
+    dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go | fzfDown) &&
     cd "$dir"
     ls
 }
 
 function C () {
     local dir
-    dir=$(fd -t d . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules | fzfDown) &&
+    dir=$(fd -t d . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go | fzfDown) &&
     cd "$dir"
     ls
 }
