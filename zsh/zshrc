@@ -138,7 +138,6 @@ alias n='nnn -de'
 alias dud='du -d 1 -h'
 alias gn='cd ~/sync/note/ ; nvim -c "NumberLineOff" README.md'
 alias shit='sudo $(fc -ln -1)'
-alias clear='qa; clear'
 
 # music stuff
 alias m='mpv --shuffle --loop-playlist ~/Music/*'
@@ -166,14 +165,25 @@ alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 50 ; tmux last-p
 
 function killAllUnnameTmuxSession() {
     cowsay "kill all unname tmux session"
-    tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >> ok.sh
-    sed -i 's/^/tmux kill-session -t /' ok.sh
-    chmod +x ok.sh
-    ./ok.sh
-    rm ok.sh
+    cd /tmp/
+    tmux ls | awk '{print $1}' | grep -o '[0-9]\+' > /tmp/killAllUnnameTmuxSessionOutput.sh
+    sed -i 's/^/tmux kill-session -t /' killAllUnnameTmuxSessionOutput.sh
+    chmod +x killAllUnnameTmuxSessionOutput.sh
+    ./killAllUnnameTmuxSessionOutput.sh
+    cd -
     tmux ls
 }
-alias qa="killAllUnnameTmuxSession"
+
+function killAllUnnameTmuxSessionNoMessage() {
+    cd /tmp/
+    tmux ls | awk '{print $1}' | grep -o '[0-9]\+' > /tmp/killAllUnnameTmuxSessionOutput.sh
+    sed -i 's/^/tmux kill-session -t /' killAllUnnameTmuxSessionOutput.sh
+    chmod +x killAllUnnameTmuxSessionOutput.sh
+    ./killAllUnnameTmuxSessionOutput.sh
+    cd -
+}
+
+alias clear='clear ; killAllUnnameTmuxSessionNoMessage'
 
 alias ..='cd .. ; l'
 alias ...='cd .. ; cd .. ; l'
@@ -234,7 +244,7 @@ function update () {
 }
 
 function hi () {
-    qa
+    clear
     browserDaily
     sleep 30
     update
