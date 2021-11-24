@@ -30,15 +30,15 @@ colors:
 
 font:
   normal:
-    family: SauceCodePro Nerd Font
+    family: JetBrains Mono NL
     style: Regular
   bold:
-    family: SauceCodePro Nerd Font
+    family: JetBrains Mono NL
     style: Bold
   italic:
-    family: SauceCodePro Nerd Font
+    family: JetBrains Mono NL
     style: Italic
-  size: 11
+  size: 13
 
 key_bindings:
   - { key: Return,   mods: Shift,   chars: "\x1b[13;2u" }
