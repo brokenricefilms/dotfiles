@@ -356,7 +356,10 @@ nnoremap M <c-^>
 
 command! OpenFileInBraveBrowser execute "!brave-browser '%'"
 command! CopyFileName execute "!echo % | wl-copy"
-command! ViewRepoInWeb execute "cd %:h | !gh browse"
 command! Reload execute "source ~/.config/nvim/init.vim | !tmux source-file ~/.tmux.conf"
+
 command! Light execute "!light" | execute "source ~/.config/nvim/init.vim | !tmux source-file ~/.tmux.conf"
 command! Dark execute "!dark" | execute "source ~/.config/nvim/init.vim | !tmux source-file ~/.tmux.conf"
+
+command! GitubIssueList execute "!gh issue list"
+command! ViewRepoInWeb execute "cd %:h | !gh browse"
