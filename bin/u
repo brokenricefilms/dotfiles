@@ -11,6 +11,7 @@ if [ -f "$1" ]; then
         *.tar.xz)   tar -xvf "$1"                         ;;
         *.tbz2)     tar -jxvf "$1"                        ;;
         *.tgz)      tar -zxvf "$1"                        ;;
+        *.txz)      tar -Jxvf "$1"                        ;;
         *.zip)      unzip "$1"                            ;;
         *.ZIP)      unzip "$1"                            ;;
         *.pax)      cat "$1" | pax -r                     ;;
