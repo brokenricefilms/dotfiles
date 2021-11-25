@@ -335,6 +335,8 @@ noremap L :cn<enter>
 noremap J :bn<enter>
 noremap K :bp<enter>
 
+noremap Y y$
+
 nmap <leader>x :!xdg-open '%'<cr><cr>
 
 nmap gf :edit <cfile><cr>
