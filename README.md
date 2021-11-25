@@ -166,8 +166,8 @@
 
 ### Distro Supported
 
-- Ubuntu (the latest version)
-- Fedora (\*)
+- Ubuntu (\*)
+- Fedora (the latest version)
 - Arch (\*)
 
 > (\*): required edit uncomment stuff in zsh config file
