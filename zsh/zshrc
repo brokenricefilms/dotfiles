@@ -110,13 +110,13 @@ SERVER_IP () { hostname -I }
 
 se () { browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000 }
 
-alias l='exa -al --color=always --group-directories-first --icons'
-alias ls='exa -al --color=always --group-directories-first --icons'
-alias sl='exa -al --color=always --group-directories-first --icons'
-alias la='exa -a --color=always --group-directories-first --icons'
-alias al='exa -a --color=always --group-directories-first --icons'
+alias l='exa -al --color=always --group-directories-first --icons --git'
+alias ls='l'
+alias sl='l'
+alias la='l'
+alias al='l'
+alias ll='l'
 alias l.='exa -a| egrep "^\."'
-alias ll='exa -l --color=always --group-directories-first --icons'
 alias lt='exa -aT --color=always --group-directories-first --icons'
 
 alias cpf='wl-copy'
