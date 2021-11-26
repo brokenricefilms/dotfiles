@@ -149,6 +149,10 @@
 - `:Dark`: switch to dark theme (changed nvim, kitty, Alacritty, bat)
 - `:Light`: switch to light theme (changed nvim, kitty, Alacritty, bat)
 
+<!-- @todo write document about gnome -->
+<!-- @body @thuanpham2311 application, gnome extension -->
+<!-- ### Gnome -->
+
 ## Install
 
 - [Here is my script](https://github.com/thuanpham2311/linux_setup) to install the Linux distro, but it's not a good shell script (like copy 1 time pasted to terminal).
@@ -182,6 +186,9 @@
 ## Demo
 
 **You can watch my Talk show on Oct 15, 2021: my setup for coding, daily use**
+
+<!-- @todo new demo video base on readme -->
+<!-- @body @thuanpham2311 -->
 
 ⇒ <https://youtu.be/2OhzSP1uGLc>
 
