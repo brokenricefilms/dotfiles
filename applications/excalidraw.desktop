@@ -4,3 +4,4 @@ Terminal=false
 Type=Application
 Name=excalidraw
 Exec=brave-browser --app="https://excalidraw.com/"
+Icon=/home/master/dotfiles/applications/icons/excalidraw.png

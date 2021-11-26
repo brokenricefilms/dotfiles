@@ -4,3 +4,4 @@ Terminal=false
 Type=Application
 Name=new doc
 Exec=brave-browser --app="https://doc.new"
+Icon=/home/master/dotfiles/applications/icons/docs.png

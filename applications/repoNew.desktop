@@ -4,3 +4,4 @@ Terminal=false
 Type=Application
 Name=new repo
 Exec=brave-browser --app="https://repo.new"
+Icon=/home/master/dotfiles/applications/icons/github.png

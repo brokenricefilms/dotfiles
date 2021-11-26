@@ -4,3 +4,4 @@ Terminal=false
 Type=Application
 Name=contacts
 Exec=brave-browser --app="https://contacts.google.com"
+Icon=/home/master/dotfiles/applications/icons/contact.png
