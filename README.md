@@ -152,6 +152,10 @@
 <!-- @todo write document about gnome -->
 <!-- @body @thuanpham2311 application, gnome extension -->
 <!-- ### Gnome -->
+<!-- #### Extension -->
+<!-- @todo support icons for .desktop -->
+<!-- @body @thuanpham2311 -->
+<!-- #### application -->
 
 ## Install
 
