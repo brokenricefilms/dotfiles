@@ -1,0 +1,29 @@
+[custom0]
+binding='F2'
+command='kitty'
+name='kitty'
+
+[custom1]
+binding='F1'
+command='flameshot gui'
+name='flameshot'
+
+[custom2]
+binding='F3'
+command='brave-browser'
+name='brave-browser'
+
+[custom3]
+binding='F4'
+command='brave-browser --incognito'
+name='brave-browser --incognito'
+
+[custom4]
+binding='F6'
+command='nautilus /home/master/Downloads'
+name='natilus'
+
+[custom5]
+binding='<Alt>f'
+command='nautilus /home/master/'
+name='nautilus home'
