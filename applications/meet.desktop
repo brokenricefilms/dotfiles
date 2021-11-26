@@ -1,0 +1,6 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=google meet
+Exec=brave-browser --app="https://meet.google.com"

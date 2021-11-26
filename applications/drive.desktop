@@ -1,0 +1,6 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=drive
+Exec=brave-browser --app="https://drive.google.com/"
