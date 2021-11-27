@@ -66,24 +66,24 @@ let g:clang_format#auto_format=1
 
 Plug 'https://github.com/nvim-lua/popup.nvim'
 Plug 'https://github.com/ThePrimeagen/harpoon'
-nmap mi :lua require("harpoon.mark").add_file()<enter>
-nmap mo :lua require("harpoon.ui").toggle_quick_menu()<enter>
+nmap <silent> mi :lua require("harpoon.mark").add_file()<enter>
+nmap <silent> mo :lua require("harpoon.ui").toggle_quick_menu()<enter>
 " moving less, thinking like hjkl, now with number qwert|asdfg
 " 6|7|8|9|10
 " q|w|e|r|t
 " ----------
 " 1|2|3|4|5
 " a|s|d|f|g
-nmap ma :lua require("harpoon.ui").nav_file(1)<enter>
-nmap ms :lua require("harpoon.ui").nav_file(2)<enter>
-nmap md :lua require("harpoon.ui").nav_file(3)<enter>
-nmap mf :lua require("harpoon.ui").nav_file(4)<enter>
-nmap mg :lua require("harpoon.ui").nav_file(5)<enter>
-nmap mq :lua require("harpoon.ui").nav_file(6)<enter>
-nmap mw :lua require("harpoon.ui").nav_file(7)<enter>
-nmap me :lua require("harpoon.ui").nav_file(8)<enter>
-nmap mr :lua require("harpoon.ui").nav_file(9)<enter>
-nmap mt :lua require("harpoon.ui").nav_file(10)<enter>
+nmap <silent> ma :lua require("harpoon.ui").nav_file(1)<enter>
+nmap <silent> ms :lua require("harpoon.ui").nav_file(2)<enter>
+nmap <silent> md :lua require("harpoon.ui").nav_file(3)<enter>
+nmap <silent> mf :lua require("harpoon.ui").nav_file(4)<enter>
+nmap <silent> mg :lua require("harpoon.ui").nav_file(5)<enter>
+nmap <silent> mq :lua require("harpoon.ui").nav_file(6)<enter>
+nmap <silent> mw :lua require("harpoon.ui").nav_file(7)<enter>
+nmap <silent> me :lua require("harpoon.ui").nav_file(8)<enter>
+nmap <silent> mr :lua require("harpoon.ui").nav_file(9)<enter>
+nmap <silent> mt :lua require("harpoon.ui").nav_file(10)<enter>
 
 Plug 'https://github.com/nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
@@ -125,11 +125,11 @@ let g:fzf_colors =
 Plug 'https://github.com/tpope/vim-fugitive'
 
 command! PushForce execute "call VimuxRunCommandInDir(\"git push -f\", 0)"
-noremap gp :call VimuxRunCommandInDir("git push", 0)<enter>
-noremap gs :G<enter>gg5j2ly$k0
-noremap gc :cd %:h<enter>:BCommits<enter>
-noremap gb :G blame<enter>
-noremap gd :vsplit<Return><C-w>w:Gdiff<enter>
+noremap <silent> gp :call VimuxRunCommandInDir("git push", 0)<enter>
+noremap <silent> gs :G<enter>gg5j2ly$k0
+noremap <silent> gc :silent cd %:h<enter>:BCommits<enter>
+noremap <silent> gb :G blame<enter>
+noremap <silent> gd :vsplit<Return><C-w>w:Gdiff<enter>
 
 Plug 'https://github.com/tpope/vim-eunuch'
 
@@ -157,8 +157,8 @@ Plug 'https://github.com/preservim/vimux'
 
 let g:VimuxOrientation = "h"
 let g:VimuxHeight = "40"
-noremap <leader>t :VimuxTogglePane<enter>:VimuxOpenRunner<enter>
-noremap <leader>T :VimuxTogglePane<enter>:VimuxOpenRunner<enter>:TmuxNavigateLeft<enter>
+noremap <silent> <leader>T :VimuxTogglePane<enter>:VimuxOpenRunner<enter>:TmuxNavigateLeft<enter>
+noremap <silent> <leader>t :VimuxTogglePane<enter>:VimuxOpenRunner<enter>
 
 Plug 'https://github.com/christoomey/vim-tmux-navigator'
 
@@ -201,7 +201,6 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap * *zz
 nnoremap # #zz
-noremap J mzJ`z
 
 Plug 'https://github.com/norcalli/nvim-colorizer.lua'
 autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
@@ -281,21 +280,21 @@ xnoremap > >gv
 
 map <space> <leader>
 
-noremap <C-t> :tabnew<Return>
-noremap <S-e> gT
-noremap <S-r> gt
+noremap <silent> <C-t> :tabnew<Return>
+noremap <silent> <S-e> gT
+noremap <silent> <S-r> gt
 
-noremap <leader>1 1gt
-noremap <leader>2 2gt
-noremap <leader>3 3gt
-noremap <leader>4 4gt
-noremap <leader>5 5gt
-noremap <leader>6 6gt
-noremap <leader>7 7gt
-noremap <leader>8 8gt
-noremap <leader>9 9gt
+noremap <silent> <leader>1 1gt
+noremap <silent> <leader>2 2gt
+noremap <silent> <leader>3 3gt
+noremap <silent> <leader>4 4gt
+noremap <silent> <leader>5 5gt
+noremap <silent> <leader>6 6gt
+noremap <silent> <leader>7 7gt
+noremap <silent> <leader>8 8gt
+noremap <silent> <leader>9 9gt
 
-noremap <space>s :setlocal spell! spell?<enter>
+noremap <silent> <space>s :setlocal spell! spell?<enter>
 
 set spelllang=en_us,vi
 
@@ -307,8 +306,8 @@ map <silent> <Down> <C-W>-
 map <silent> <Up> <C-W>+
 map <silent> <Left> <C-w>>
 
-noremap cd. :cd %:h<enter>
-noremap cd :cd<enter>
+noremap <silent> cd. :cd %:h<enter>
+noremap <silent> cd :cd<enter>
 
 inoremap , ,<c-g>u
 inoremap . .<c-g>u
@@ -316,8 +315,8 @@ inoremap ! !<c-g>u
 inoremap ? ?<c-g>u
 inoremap [ [<c-g>u
 
-vnoremap <C-j> :m '>+1<enter>gv=gv
-vnoremap <C-k> :m '<-2<enter>gv=gv
+vnoremap <silent> <C-j> :m '>+1<enter>gv=gv
+vnoremap <silent> <C-k> :m '<-2<enter>gv=gv
 
 nnoremap j gj
 nnoremap k gk
@@ -326,7 +325,7 @@ vnoremap k gk
 nnoremap gj j
 nnoremap gk k
 
-noremap gx :silent execute "!xdg-open " . "<cfile>"<enter>
+noremap <silent> gx :silent execute "!xdg-open " . "<cfile>"<enter>
 
 nnoremap <leader>w :w<enter>
 nnoremap <leader>q :q<enter>
@@ -341,7 +340,7 @@ noremap K :bp<enter>
 
 noremap Y y$
 
-nmap <leader>x :!xdg-open '%'<enter><enter>
+nmap <silent> <leader>x :!xdg-open '%'<enter><enter>
 
 nmap gf :edit <cfile><enter>
 
@@ -352,18 +351,17 @@ imap ;, <esc>A,<enter>
 " @body @thuanpham2311
 imap <S-enter> <esc>o
 imap <C-enter> <esc>O
-nnoremap <S-enter> o<esc>
-nnoremap <C-enter> O<esc>
+nnoremap <silent> <S-enter> o<esc>
+nnoremap <silent> <C-enter> O<esc>
 
 xnoremap <silent> p p:let @+=@0<enter>:let @"=@0<enter>
 nnoremap M <c-^>
 
-command! OpenFileInBraveBrowser execute "!brave-browser '%'"
-command! CopyFileName execute "!echo % | wl-copy"
-command! Reload execute "source ~/.config/nvim/init.vim | !tmux source-file ~/.tmux.conf"
+command! OpenFileInBraveBrowser execute "silent !brave-browser '%'"
+command! CopyFileName execute "silent !echo % | wl-copy"
+command! Reload execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
 
-command! Light execute "!light" | execute "source ~/.config/nvim/init.vim | !tmux source-file ~/.tmux.conf"
-command! Dark execute "!dark" | execute "source ~/.config/nvim/init.vim | !tmux source-file ~/.tmux.conf"
-
+command! Light execute "silent !light" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
+command! Dark execute "silent !dark" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
 command! GitubIssueList execute "!gh issue list"
-command! ViewRepoInWeb execute "cd %:h | !gh browse"
+command! ViewRepoInWeb execute "silent cd %:h | silent !gh browse"
