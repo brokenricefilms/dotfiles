@@ -37,8 +37,8 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-nmap <silent> [d :call CocAction('diagnosticNext')<cr>
-nmap <silent> ]d :call CocAction('diagnosticPrevious')<cr>
+nmap <silent> [d :call CocAction('diagnosticNext')<enter>
+nmap <silent> ]d :call CocAction('diagnosticPrevious')<enter>
 
 noremap <silent> <Leader>; :CocCommand<enter>
 
@@ -123,11 +123,11 @@ let g:fzf_colors =
 Plug 'https://github.com/tpope/vim-fugitive'
 
 command! PushForce execute "call VimuxRunCommandInDir(\"git push -f\", 0)"
-noremap gp :call VimuxRunCommandInDir("git push", 0)<cr>
+noremap gp :call VimuxRunCommandInDir("git push", 0)<enter>
 noremap gs :G<enter>gg5j2ly$k0
 noremap gc :cd %:h<enter>:BCommits<enter>
-noremap gb :G blame<CR>
-noremap gd :vsplit<Return><C-w>w:Gdiff<CR>
+noremap gb :G blame<enter>
+noremap gd :vsplit<Return><C-w>w:Gdiff<enter>
 
 Plug 'https://github.com/tpope/vim-eunuch'
 
@@ -155,8 +155,8 @@ Plug 'https://github.com/preservim/vimux'
 
 let g:VimuxOrientation = "h"
 let g:VimuxHeight = "40"
-noremap <leader>t :VimuxTogglePane<cr>:VimuxOpenRunner<cr>
-noremap <leader>T :VimuxTogglePane<cr>:VimuxOpenRunner<cr>:TmuxNavigateLeft<cr>
+noremap <leader>t :VimuxTogglePane<enter>:VimuxOpenRunner<enter>
+noremap <leader>T :VimuxTogglePane<enter>:VimuxOpenRunner<enter>:TmuxNavigateLeft<enter>
 
 Plug 'https://github.com/christoomey/vim-tmux-navigator'
 
@@ -339,9 +339,9 @@ noremap K :bp<enter>
 
 noremap Y y$
 
-nmap <leader>x :!xdg-open '%'<cr><cr>
+nmap <leader>x :!xdg-open '%'<enter><enter>
 
-nmap gf :edit <cfile><cr>
+nmap gf :edit <cfile><enter>
 
 imap ;; <esc>A;<enter>
 imap ;, <esc>A,<enter>
@@ -353,7 +353,7 @@ imap <C-enter> <esc>O
 nnoremap <S-enter> o<esc>
 nnoremap <C-enter> O<esc>
 
-xnoremap <silent> p p:let @+=@0<CR>:let @"=@0<CR>
+xnoremap <silent> p p:let @+=@0<enter>:let @"=@0<enter>
 nnoremap M <c-^>
 
 command! OpenFileInBraveBrowser execute "!brave-browser '%'"
