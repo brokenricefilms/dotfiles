@@ -229,7 +229,7 @@ function update () {
     gem update neovim
     tldr --update
     gh extension upgrade --all
-    updateHostsBlockShit
+    updateDns
     ~/.tmux/plugins/tpm/bin/update_plugins all
     flatpak update -y
 
