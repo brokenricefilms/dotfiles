@@ -185,6 +185,9 @@ function killAllUnnameTmuxSessionNoMessage() {
 }
 
 alias clear='killAllUnnameTmuxSessionNoMessage ; clear'
+alias cler='killAllUnnameTmuxSessionNoMessage ; clear'
+alias clea='killAllUnnameTmuxSessionNoMessage ; clear'
+alias cl='killAllUnnameTmuxSessionNoMessage ; clear'
 
 alias ..='cd .. ; l'
 alias ...='cd .. ; cd .. ; l'
