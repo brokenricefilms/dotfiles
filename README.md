@@ -149,11 +149,23 @@
 - `:Dark`: switch to dark theme (changed nvim, kitty, Alacritty, bat)
 - `:Light`: switch to light theme (changed nvim, kitty, Alacritty, bat)
 
-<!-- @todo write document about gnome -->
-<!-- @body @thuanpham2311 application, gnome extension -->
-<!-- ### Gnome -->
-<!-- #### Extension -->
-<!-- #### application -->
+### Gnome
+
+#### Extension
+
+- AppIndicator and KStatus Notifieritem Support (ubuntu don't need this)
+- Clipboard Indicator (using folk support img, maybe in the feature can be merge)
+- Gnome Fuzzy App Search
+- GTK Title Bar (rip off some title bar support wayland)
+- Just Perfection (UI, UX in gnome)
+- Workspaces Bar (show the number workspace like titling window manager dwm, i3,...)
+
+#### Applications
+
+- I use `.desktop` for faster search and open in gnome search just press and enter.
+- I use brave for default application, recommend is chromium base but you can change whatever you want
+- In nowaday we have `.new` domain name, is use this alot
+- You can see all the application is custom [in `applications/`](https://github.com/thuanpham2311/dotfiles/tree/master/applications)
 
 ## Install
 
