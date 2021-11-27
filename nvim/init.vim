@@ -40,6 +40,8 @@ endfunction
 nmap <silent> [d :call CocAction('diagnosticNext')<enter>
 nmap <silent> ]d :call CocAction('diagnosticPrevious')<enter>
 
+nmap <silent> <leader>c :CocAction<enter>
+
 noremap <silent> <Leader>; :CocCommand<enter>
 
 imap <C-l> <Plug>(coc-snippets-expand)
