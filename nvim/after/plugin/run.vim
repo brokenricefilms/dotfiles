@@ -16,6 +16,9 @@ autocmd BufEnter *.python nnoremap <leader>r
 autocmd BufEnter *.md nnoremap <leader>r
     \ :w<enter>:MarkdownPreview<enter>
 
+autocmd BufEnter *.md nnoremap <leader>R
+    \ :call VimuxRunCommandInDir("markmap -w " . bufname("%"), 0)<enter>
+
 autocmd BufEnter *.js nnoremap <leader>r
     \ :w<enter>:sp<enter>:term deno run %<enter> :startinsert<enter>
 
