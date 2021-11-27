@@ -20,6 +20,7 @@ let g:coc_global_extensions = [
             \ "coc-sh",
             \ "coc-omnisharp",
             \ "coc-go",
+            \ "coc-vetur",
             \ "coc-deno",
             \ "coc-css",
             \ "coc-clangd"]
