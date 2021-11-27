@@ -10,6 +10,7 @@ let g:coc_global_extensions = [
             \ "coc-json",
             \ "coc-html",
             \ "coc-htmlhint",
+            \ "coc-html-css-support",
             \ "coc-eslint",
             \ "coc-emmet",
             \ "coc-dot-complete",
