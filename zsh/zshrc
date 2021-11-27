@@ -256,7 +256,6 @@ function hi () {
     neofetch
     cowsay "internet speed"
     speedtest-cli
-    cowsay "github habit"
     nvim -p ~/sync/note/*.md
 }
 
