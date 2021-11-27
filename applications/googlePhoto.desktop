@@ -2,6 +2,6 @@
 Version=1.0
 Terminal=false
 Type=Application
-Name=photos
+Name=google photos
 Exec=brave-browser --app="https://photos.google.com"
 Icon=/home/master/dotfiles/applications/icons/google-photos.png
