@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Gmail 1
+Exec=brave-browser --app="https://mail.google.com/mail/u/1/#inbox"
+Icon=/home/master/dotfiles/applications/icons/gmail.svg
