@@ -25,6 +25,9 @@ autocmd BufRead,BufNewFile,BufEnter *.md command! TOC execute "normal! ggo<enter
 autocmd BufRead,BufNewFile,BufEnter *.md command! TOCUpdate execute "normal! gg2jV/---<enter>dddggo---<esc>gg" | execute"read !ghMdToc %" | execute "normal! ddggjddddddO<enter>**↓↓Table of Contents↓↓**<esc>:w<enter>"
 
 autocmd BufRead,BufNewFile,BufEnter *.md inoremap <c-l> [](.md)<esc>T("=strftime("%Y%m%d%H%M%S")<CR>PT[i
+
+" @todo visual enter create new note don't working
+" @body @thuanpham2311 can relate #42
 autocmd BufRead,BufNewFile,BufEnter *.md vnoremap <enter> c[<esc>pa](.md)<esc>T("=strftime("%Y%m%d%H%M%S")<CR>PT[yi[t):edit <cfile><cr>i#<space><esc>po<enter>---<enter>><space><esc>kkO<enter>
 
 autocmd BufRead,BufNewFile,BufEnter *.md inoremap <c-k> [](<>)<esc>F<pT[i
