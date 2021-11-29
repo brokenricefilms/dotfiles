@@ -340,6 +340,8 @@ noremap K :bp<enter>
 
 noremap Y y$
 
+nnoremap <leader>i :%s/\<<C-r><C-w>\>/
+
 nmap <silent> <leader>x :!xdg-open '%'<enter><enter>
 
 nmap gf :edit <cfile><enter>
