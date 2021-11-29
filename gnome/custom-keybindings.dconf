@@ -1,6 +1,6 @@
 [custom0]
 binding='F2'
-command='kitty'
+command='/usr/bin/kitty'
 name='kitty'
 
 [custom1]
@@ -25,5 +25,5 @@ name='natilus'
 
 [custom5]
 binding='<Alt>f'
-command='nautilus /home/master/'
+command='nautilus /home/master'
 name='nautilus home'
