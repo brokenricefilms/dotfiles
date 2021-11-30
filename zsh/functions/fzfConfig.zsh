@@ -119,6 +119,8 @@ fman() {
     man -k . | fzf -q "$1" --prompt='man> '  --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r man | col -bx | bat -l man -p --color always' | tr -d '()' | awk '{printf "%s ", $2} {print $1}' | xargs -r man
 }
 
+# @todo [zsh] af if not have session create new like fzf session switch tmux plugin
+# @body @thuanpham2311
 # why `af`? cuz like the tmux command fzf session switch hold ctrl + a + f
 af() {
   local session
