@@ -15,15 +15,6 @@ alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \$1 }' | wl-copy"
 
 fzfDown() { fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse }
 
-function F() {
-    local file
-    file=$(fd . $HOME -t f | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
-    if [ ! -z "$file" ]
-    then
-        nvim "$file"
-    fi
-}
-
 function f() {
     local file
     file=$(fd . -t f | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
@@ -33,9 +24,9 @@ function f() {
     fi
 }
 
-function Fh() {
+function F() {
     local file
-    file=$(fd . $HOME -t f --hidden | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
+    file=$(fd . $HOME -t f | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
     if [ ! -z "$file" ]
     then
         nvim "$file"
@@ -51,9 +42,25 @@ function fh() {
     fi
 }
 
+function Fh() {
+    local file
+    file=$(fd . $HOME -t f --hidden | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
+    if [ ! -z "$file" ]
+    then
+        nvim "$file"
+    fi
+}
+
 function c () {
     local dir
     dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go | fzfDown) &&
+    cd "$dir"
+    ls
+}
+
+function C () {
+    local dir
+    dir=$(fd -t d . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go | fzfDown) &&
     cd "$dir"
     ls
 }
@@ -67,26 +74,19 @@ function ch () {
 
 function Ch () {
     local dir
-    dir=$(fd -t d --hidden | fzfDown) &&
+    dir=$(fd -t d . $HOME --hidden | fzfDown) &&
     cd "$dir"
     ls
 }
 
-function C () {
-    local dir
-    dir=$(fd -t d . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go | fzfDown) &&
-    cd "$dir"
-    ls
+function o() {
+    xdg-open "$(fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')"
 }
 
 function O() {
     cd ~/
     xdg-open "$(fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')"
     cd -
-}
-
-function o() {
-    xdg-open "$(fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')"
 }
 
 fman() {
