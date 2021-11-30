@@ -60,6 +60,13 @@ command! -nargs=0 EditSnippets :call CocAction('runCommand', 'snippets.editSnipp
 command! -nargs=0 FormatFile :call CocAction('runCommand', 'prettier.formatFile')
 command! -nargs=0 RenameCurrentWord :call CocAction('runCommand', 'document.renameCurrentWord')
 
+Plug 'liuchengxu/vista.vim'
+let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+let g:vista_fzf_preview = ['right:50%']
+let g:vista#renderer#enable_icon = 1
+noremap <leader>l :Vista finder fzf<enter>
+noremap <leader>v :Vista!!<enter>
+
 Plug 'https://github.com/rhysd/vim-clang-format', {'for': ['h', 'c', 'cpp']}
 Plug 'https://github.com/kana/vim-operator-user'
 let g:clang_format#auto_format=1
