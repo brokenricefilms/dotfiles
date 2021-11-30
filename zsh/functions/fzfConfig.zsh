@@ -16,13 +16,39 @@ alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \$1 }' | wl-copy"
 fzfDown() { fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse }
 
 function F() {
-    cd ~/
-    nvim -o "$(fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')"
-    cd -
+    local file
+    file=$(fd . $HOME -t f | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
+    if [ ! -z "$file" ]
+    then
+        nvim "$file"
+    fi
 }
 
 function f() {
-    nvim -o "$(fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')"
+    local file
+    file=$(fd . -t f | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
+    if [ ! -z "$file" ]
+    then
+        nvim "$file"
+    fi
+}
+
+function Fh() {
+    local file
+    file=$(fd . $HOME -t f --hidden | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
+    if [ ! -z "$file" ]
+    then
+        nvim "$file"
+    fi
+}
+
+function fh() {
+    local file
+    file=$(fd . -t f --hidden | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
+    if [ ! -z "$file" ]
+    then
+        nvim "$file"
+    fi
 }
 
 function c () {
