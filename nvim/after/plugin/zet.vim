@@ -20,6 +20,8 @@ endfunction
 
 autocmd BufRead,BufNewFile,BufEnter *.md execute "cd %:h"
 
+" @todo TOC click to show
+" @body @thuanpham2311
 autocmd BufRead,BufNewFile,BufEnter *.md command! TOC execute "normal! ggo<enter>---<esc>gg" | execute"read !ghMdToc %" | execute "normal! ddddggjddddddO<enter>**↓↓Table of Contents↓↓**<esc>:w<enter>"
 
 autocmd BufRead,BufNewFile,BufEnter *.md command! TOCUpdate execute "normal! gg2jV/---<enter>dddggo---<esc>gg" | execute"read !ghMdToc %" | execute "normal! ddggjddddddO<enter>**↓↓Table of Contents↓↓**<esc>:w<enter>"
