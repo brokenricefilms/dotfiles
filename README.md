@@ -167,7 +167,7 @@
 
 - I use `.desktop` for faster search and open in gnome search just press and enter.
 - I use brave for default application, recommend is chromium base but you can change whatever you want
-- In nowaday we have `.new` domain name, is use this alot
+- In nowaday we have `.new` domain name, i use this a lot
 - You can see all the application is custom [in `applications/`](https://github.com/thuanpham2311/dotfiles/tree/master/applications)
 
 ## Install
