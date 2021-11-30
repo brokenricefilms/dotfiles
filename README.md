@@ -38,9 +38,9 @@
 ### Zsh
 
 - Fzf, moving fast.
-  - `f` find the file in current path edit file with nvim (`F` find in home)
-  - `c` cd to dir in current path with fancy ls If in git dir print git status, (`C` find in home)
-  - `o` open file int current path with default application with `xdg-open` (`O` find in home)
+  - `f` find the file in current path edit file with nvim (`F` find in home, +h like 'fh' will find the hidden file )
+  - `c` cd to dir in current path with fancy ls If in git dir print git status, (`C` find in home, +h like 'ch' will find the hidden dir )
+  - `o` open file int current path with default application with `xdg-open` (`O` find in home, +h like 'oh' will find the hidden object)
   - `ej`: find emoji and copy using fzf, wl-copy (require [emoij fzf](https://github.com/noahp/emoji-fzf), wl-copy or you can change the clipboard you using)
   - `killAllUnnameTmuxSession`/`qa`: kill all sessions does not have a name just a number session like 23,11,12,... Keep tmux session clean
 - Auto switch dark\light theme

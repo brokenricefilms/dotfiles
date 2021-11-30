@@ -80,13 +80,39 @@ function Ch () {
 }
 
 function o() {
-    xdg-open "$(fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')"
+    local object
+    object=$(fd . | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
+    if [ ! -z "$object" ]
+    then
+        xdg-open "$object"
+    fi
 }
 
 function O() {
-    cd ~/
-    xdg-open "$(fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')"
-    cd -
+    local object
+    object=$(fd . $HOME | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
+    if [ ! -z "$object" ]
+    then
+        xdg-open "$object"
+    fi
+}
+
+function oh() {
+    local object
+    object=$(fd . --hidden | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
+    if [ ! -z "$object" ]
+    then
+        xdg-open "$object"
+    fi
+}
+
+function Oh() {
+    local object
+    object=$(fd . $HOME --hidden | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
+    if [ ! -z "$object" ]
+    then
+        xdg-open "$object"
+    fi
 }
 
 fman() {
