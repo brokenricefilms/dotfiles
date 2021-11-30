@@ -32,6 +32,20 @@ function c () {
     ls
 }
 
+function ch () {
+    local dir
+    dir=$(fd -t d --hidden | fzfDown) &&
+    cd "$dir"
+    ls
+}
+
+function Ch () {
+    local dir
+    dir=$(fd -t d --hidden | fzfDown) &&
+    cd "$dir"
+    ls
+}
+
 function C () {
     local dir
     dir=$(fd -t d . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go | fzfDown) &&
