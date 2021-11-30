@@ -67,5 +67,12 @@ fman() {
     man -k . | fzf -q "$1" --prompt='man> '  --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r man | col -bx | bat -l man -p --color always' | tr -d '()' | awk '{printf "%s ", $2} {print $1}' | xargs -r man
 }
 
+# why `af`? cuz like the tmux command fzf session switch hold ctrl + a + f
+af() {
+  local session
+  session=$(tmux list-sessions -F "#{session_name}" | fzfDown) &&
+  tmux switch-client -t "$session"
+}
+
 source ~/dotfiles/zsh/functions/fzf-tab/fzf-tab.plugin.zsh
 source ~/dotfiles/zsh/functions/fzf-zsh-completions/fzf-zsh-completions.plugin.zsh
