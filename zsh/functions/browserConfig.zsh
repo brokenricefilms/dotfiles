@@ -1,8 +1,9 @@
 #! /usr/bin/env zsh
 
 alias browser='xdg-open'
-alias browserNewTab='brave-browser --new-window'
-alias github='brave-browser --new-window "https://github.com/thuanpham2311"'
+alias defaultBrowser='google-chrome'
+alias browserNewTab='defaultBrowser --new-window'
+alias github='defaultBrowser --new-window "https://github.com/thuanpham2311"'
 alias browserFb='browser https://facebook.com'
 alias browserMes='browser "https://www.facebook.com/messages/t/thuanpham2311"'
 alias browserMail0='browser "https://mail.google.com/mail/u/0/#inbox"'
@@ -14,9 +15,9 @@ alias browserYoutubeSubsriptions='browser "https://www.youtube.com/feed/subscrip
 alias browserFeedly='browser "https://feedly.com/i/collection/content/user/0d89157e-ce7d-4b2c-a2d6-98826f1e5089/category/global.all"'
 alias browserGooglePodcastSubscriptions='browser "https://podcasts.google.com/subscriptions"'
 alias browserGithubNotification='browser "https://github.com/notifications?query=is%3Aunread"'
-alias createPassword='brave-browser --app="https://duckduckgo.com/?q=28+strong+password&t=h_&ia=answer"'
-alias pw='brave-browser --app="https://duckduckgo.com/?q=28+strong+password&t=h_&ia=answer"'
-qr() { brave-browser --app="https://duckduckgo.com/?q=qr+$argv" }
+alias createPassword='defaultBrowser --app="https://duckduckgo.com/?q=28+strong+password&t=h_&ia=answer"'
+alias pw='defaultBrowser --app="https://duckduckgo.com/?q=28+strong+password&t=h_&ia=answer"'
+qr() { defaultBrowser --app="https://duckduckgo.com/?q=qr+$argv" }
 
 sbt() { browserNewTab "https://translate.google.com/?source=osdd#auto|auto|$argv" }
 
