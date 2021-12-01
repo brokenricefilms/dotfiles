@@ -67,9 +67,10 @@ let g:vista#renderer#enable_icon = 1
 noremap <leader>l :Vista finder fzf<enter>
 noremap <leader>v :Vista!!<enter>
 
-Plug 'https://github.com/rhysd/vim-clang-format', {'for': ['h', 'c', 'cpp']}
-Plug 'https://github.com/kana/vim-operator-user'
+Plug 'https://github.com/rhysd/vim-clang-format', {'for': ['h', 'cs', 'c', 'cpp']}
 let g:clang_format#auto_format=1
+autocmd BufWritePre *.cs ClangFormat
+Plug 'https://github.com/kana/vim-operator-user'
 
 Plug 'https://github.com/nvim-lua/popup.nvim'
 Plug 'https://github.com/ThePrimeagen/harpoon'
