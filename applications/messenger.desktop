@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=messenger
-Exec=brave-browser --app="https://www.messenger.com/t/thuanpham2311"
+Exec=google-chrome --app="https://www.messenger.com/t/thuanpham2311"
 Icon=/home/master/dotfiles/applications/icons/facebook-messenger.png

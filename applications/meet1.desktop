@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=google meet 1
-Exec=brave-browser --app="https://meet.google.com/landing?authuser=1"
+Exec=google-chrome --app="https://meet.google.com/landing?authuser=1"
 Icon=/home/master/dotfiles/applications/icons/google-meet.png

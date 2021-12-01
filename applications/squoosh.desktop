@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=squoosh
-Exec=brave-browser --app="https://squoosh.app/"
+Exec=google-chrome --app="https://squoosh.app/"
 Icon=/home/master/dotfiles/applications/icons/squoosh.png

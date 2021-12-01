@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=keep
-Exec=brave-browser --app="https://keep.google.com/u/0/"
+Exec=google-chrome --app="https://keep.google.com/u/0/"
 Icon=/home/master/dotfiles/applications/icons/google-keep.png

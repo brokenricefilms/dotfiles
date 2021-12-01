@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=calendar
-Exec=brave-browser --app="https://calendar.google.com/calendar/u/0/r"
+Exec=google-chrome --app="https://calendar.google.com/calendar/u/0/r"
 Icon=/home/master/dotfiles/applications/icons/google-calendar.png
