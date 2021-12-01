@@ -128,5 +128,10 @@ af() {
   tmux switch-client -t "$session"
 }
 
+function co () {
+    isInGitRepo || return
+    git branch -a | fzfDown | xargs git checkout
+}
+
 source ~/dotfiles/zsh/functions/fzf-tab/fzf-tab.plugin.zsh
 source ~/dotfiles/zsh/functions/fzf-zsh-completions/fzf-zsh-completions.plugin.zsh

@@ -2,5 +2,4 @@
 
 source ~/dotfiles/zsh/zshrc
 
-glnote ; ghnote
-glgarden ; ghgarden
+syncNote

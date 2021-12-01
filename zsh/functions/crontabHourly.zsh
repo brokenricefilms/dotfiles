@@ -2,4 +2,4 @@
 
 source ~/dotfiles/zsh/zshrc
 
-ghok
+autoSync
