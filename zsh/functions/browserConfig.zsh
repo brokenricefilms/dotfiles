@@ -13,6 +13,7 @@ alias browserStu='browser "http://stu.edu.vn/"'
 alias browserStu2='browser "http://stu.edu.vn/vi/393/thong-bao.html"'
 alias browserYoutubeSubsriptions='browser "https://www.youtube.com/feed/subscriptions"'
 alias browserFeedly='browser "https://feedly.com/i/collection/content/user/0d89157e-ce7d-4b2c-a2d6-98826f1e5089/category/global.all"'
+alias browserFeeder='browser "https://feeder.co/reader"'
 alias browserGooglePodcastSubscriptions='browser "https://podcasts.google.com/subscriptions"'
 alias browserGithubNotification='browser "https://github.com/notifications?query=is%3Aunread"'
 alias createPassword='defaultBrowser --app="https://duckduckgo.com/?q=28+strong+password&t=h_&ia=answer"'
@@ -37,7 +38,7 @@ function browserDaily () {
     cowsay "GET.SHIT.DONE"
     browserYoutubeSubsriptions
     browserGooglePodcastSubscriptions
-    browserFeedly
+    browserFeeder
     browserMail0
     browserMail1
     browserGithubNotification
