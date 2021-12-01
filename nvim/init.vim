@@ -60,8 +60,6 @@ command! -nargs=0 EditSnippets :call CocAction('runCommand', 'snippets.editSnipp
 command! -nargs=0 FormatFile :call CocAction('runCommand', 'prettier.formatFile')
 command! -nargs=0 RenameCurrentWord :call CocAction('runCommand', 'document.renameCurrentWord')
 
-Plug 'https://github.com/kevinhwang91/nvim-hlslens'
-
 Plug 'liuchengxu/vista.vim'
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 let g:vista_fzf_preview = ['right:50%']
