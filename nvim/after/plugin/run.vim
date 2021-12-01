@@ -10,6 +10,9 @@ autocmd BufEnter *.cpp nnoremap <leader>R
 autocmd BufEnter *.cs nnoremap <leader>r
     \ :w<enter>:sp<enter>:term mcs % && mono *.exe && rm *.exe <enter> :startinsert<enter>
 
+autocmd BufEnter *.cs nnoremap <leader>R
+    \ :w<enter>:sp<enter>:term dotnet run <enter> :startinsert<enter>
+
 autocmd BufEnter *.python nnoremap <leader>r
     \ :w<enter>:sp<enter>:term python %<enter> :startinsert<enter>
 
