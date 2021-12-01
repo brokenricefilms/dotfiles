@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=zoom browser
-Exec=google-chrome --app="https://pwa.zoom.us/wc"
+Exec=google-chrome --app="https://zoom.us/join"
 Icon=/home/master/dotfiles/applications/icons/zoom.png
