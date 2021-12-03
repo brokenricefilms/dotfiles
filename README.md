@@ -2,6 +2,9 @@
 
 **↓↓Table of Contents↓↓**
 
+<details>
+<summary>Click here to show.</summary>
+
 - [My dotfiles](#my-dotfiles)
   - [About](#about)
   - [Feature](#feature)
@@ -28,6 +31,8 @@
   - [Demo](#demo)
 
 ---
+
+</details>
 
 ## About
 
