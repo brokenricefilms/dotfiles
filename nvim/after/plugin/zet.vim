@@ -20,9 +20,9 @@ endfunction
 
 autocmd BufRead,BufNewFile,BufEnter *.md execute "cd %:h"
 
-autocmd BufRead,BufNewFile,BufEnter *.md command! TOC execute "normal! ggo<enter>---<esc>gg" | execute"read !ghMdToc %" | execute "normal! ddddggjddddddO<enter>**↓↓Table of Contents↓↓**<esc>:w<enter>ggjjo<enter><details><enter><summary>Click here to show.</summary><esc>/---<enter>o</details><esc>:w<enter>"
+autocmd BufRead,BufNewFile,BufEnter *.md command! TOC execute "normal! ggo<enter>---<esc>gg" | execute"read !ghMdToc %" | execute "normal! ddddggjddddddO<enter>**↓↓Table of Contents↓↓**<esc>:w<enter>ggjjo<enter><details><enter><summary>Click here to show.</summary><esc>/---<enter>o</details><esc>gg:w<enter>"
 
-autocmd BufRead,BufNewFile,BufEnter *.md command! TOCUpdate execute "normal! gg4jdatgg2jddddddggo<enter>---<esc>gg" | execute"read !ghMdToc %" | execute "normal! ddddggjddddddO<enter>**↓↓Table of Contents↓↓**<esc>:w<enter>ggjjo<enter><details><enter><summary>Click here to show.</summary><esc>/---<enter>o</details><esc>:w<enter>"
+autocmd BufRead,BufNewFile,BufEnter *.md command! TOCUpdate execute "normal! gg4jdatgg2jddddddggo<enter>---<esc>gg" | execute"read !ghMdToc %" | execute "normal! ddddggjddddddO<enter>**↓↓Table of Contents↓↓**<esc>:w<enter>ggjjo<enter><details><enter><summary>Click here to show.</summary><esc>/---<enter>o</details><esc>gg:w<enter>"
 
 autocmd BufRead,BufNewFile,BufEnter *.md inoremap <c-l> [](.md)<esc>T("=strftime("%Y%m%d%H%M%S")<CR>PT[i
 
