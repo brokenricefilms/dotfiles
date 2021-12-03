@@ -67,8 +67,6 @@ function syncNote () {
     repoSync
 }
 
-# @todo why have sync with repos dir? just once repos?
-# @body @thuanpham2311
 function autoSync {
     repo=(
         /home/master/sync/ok
