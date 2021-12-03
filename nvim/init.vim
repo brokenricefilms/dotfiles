@@ -22,6 +22,7 @@ let g:coc_global_extensions = [
             \ "coc-omnisharp",
             \ "coc-go",
             \ "coc-vetur",
+            \ "coc-lua",
             \ "coc-deno",
             \ "coc-css",
             \ "coc-clangd"]
@@ -94,6 +95,7 @@ nmap <silent> mr :lua require("harpoon.ui").nav_file(9)<enter>
 nmap <silent> mt :lua require("harpoon.ui").nav_file(10)<enter>
 
 Plug 'https://github.com/nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'https://github.com/nvim-treesitter/nvim-treesitter-textobjects'
 
 Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
 
