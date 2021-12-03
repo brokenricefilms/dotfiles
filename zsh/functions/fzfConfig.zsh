@@ -5,12 +5,6 @@ export FZF_DEFAULT_COMMAND='fd --type f --follow --exclude .git --exclude undodi
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d"
 
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
---color=fg:-1,bg:-1,hl:#dcd2ce
---color=fg+:-1,bg+:#dcd2ce,hl+:-1
---color=info:-1,prompt:-1,pointer:-1
---color=marker:-1,spinner:-1,header:-1'
-
 alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \$1 }' | wl-copy"
 
 fzfDown() { fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse }

@@ -5,8 +5,11 @@ set background=light
 colorscheme zenbones
 highlight markdownH1 guifg=#2C363C guibg=NONE guisp=NONE gui=bold
 " > ~/dotfiles/nvim/themeControl.vim
-echo "include ./zenbones.conf
+
+echo "include ./zenbones_light.conf
 " > ~/dotfiles/kitty/theme.conf
-mkdir ~/dotfiles/bat/
+
 cp ~/dotfiles/alacritty/alacritty-light.yml ~/dotfiles/alacritty/alacritty.yml
+
+mkdir ~/dotfiles/bat/
 echo "--theme=\"GitHub\"" > ~/dotfiles/bat/config

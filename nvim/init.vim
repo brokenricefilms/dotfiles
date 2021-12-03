@@ -125,7 +125,7 @@ let g:fzf_colors =
             \ 'bg':      ['bg', 'Normal'],
             \ 'hl':      ['fg', 'Comment'],
             \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-            \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+            \ 'bg+':     ['bg', 'Normal', 'CursorColumn'],
             \ 'hl+':     ['fg', 'Statement'],
             \ 'info':    ['fg', 'PreProc'],
             \ 'border':  ['fg', 'Ignore'],
@@ -238,8 +238,6 @@ Plug 'https://github.com/lewis6991/gitsigns.nvim'
 Plug 'https://github.com/rktjmp/lush.nvim'
 
 Plug 'https://github.com/mcchrish/zenbones.nvim'
-
-Plug 'https://github.com/sainnhe/gruvbox-material'
 call plug#end()
 
 syntax enable
