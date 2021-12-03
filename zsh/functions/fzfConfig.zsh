@@ -47,28 +47,28 @@ function Fh() {
 
 function c () {
     local dir
-    dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app | fzfDown) &&
+    dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
     cd "$dir"
     ls
 }
 
 function C () {
     local dir
-    dir=$(fd -t d . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app | fzfDown) &&
+    dir=$(fd -t d . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
     cd "$dir"
     ls
 }
 
 function ch () {
     local dir
-    dir=$(fd -t d --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app | fzfDown) &&
+    dir=$(fd -t d --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
     cd "$dir"
     ls
 }
 
 function Ch () {
     local dir
-    dir=$(fd -t d . $HOME --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app | fzfDown) &&
+    dir=$(fd -t d . $HOME --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1') &&
     cd "$dir"
     ls
 }
