@@ -127,5 +127,20 @@ function co () {
     git branch -a | fzfDown | xargs git checkout
 }
 
+function gitHubIssueClose() {
+    id="$(gh issue list | fzf | cut -f1)"
+    [ -n "$id" ]
+    gh issue close "$id"
+}
+alias ic='githubIssueClose'
+
+function gitHubIssueViewWeb() {
+    id="$(gh issue list | fzf | cut -f1)"
+    [ -n "$id" ]
+    gh issue view "$id" --web &> /dev/null
+}
+
+alias iv='githubIssueViewWeb'
+
 source ~/dotfiles/zsh/functions/fzf-tab/fzf-tab.plugin.zsh
 source ~/dotfiles/zsh/functions/fzf-zsh-completions/fzf-zsh-completions.plugin.zsh
