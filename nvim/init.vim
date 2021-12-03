@@ -378,5 +378,5 @@ command! Reload execute "silent source ~/.config/nvim/init.vim | silent !tmux so
 
 command! Light execute "silent !light" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
 command! Dark execute "silent !dark" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
-command! GitubIssueList execute "!gh issue list"
+command! GitubIssueList execute "normal! :sp<enter>:term gh issue list | fzf | awk '{print $1}' | wl-copy <enter> :startinsert<enter>"
 command! ViewRepoInWeb execute "silent cd %:h | silent !gh browse"
