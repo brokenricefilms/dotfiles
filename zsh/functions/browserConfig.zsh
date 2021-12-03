@@ -43,6 +43,4 @@ function browserDaily () {
     browserMail1
     browserGithubNotification
     browserFb
-    browserStu
-    browserStu2
 }
