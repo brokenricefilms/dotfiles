@@ -337,12 +337,6 @@ vnoremap j gj
 vnoremap k gk
 nnoremap gj j
 nnoremap gk k
-nnoremap $ g$
-nnoremap 0 g0
-vnoremap $ g$
-vnoremap 0 g0
-nnoremap g$ $
-nnoremap g0 0
 
 noremap <silent> gx :silent execute "!xdg-open " . "<cfile>"<enter>
 
