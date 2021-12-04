@@ -78,11 +78,18 @@ noremap <silent> gP :FloatermSend! cd %:p:h ; git push -f ; cd -<enter>
 
 command! GitHubIssueList execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/fzfConfig.zsh ; cd %:h:p ; gitHubIssueList"
 noremap <silent> gil :GitHubIssueList<enter>
+
 command! GitHubIssueClose execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/fzfConfig.zsh ; cd %:h:p ; gitHubIssueClose"
 noremap <silent> gic :GitHubIssueClose<enter>
+
 command! GitHubIssueViewWeb execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/fzfConfig.zsh ; cd %:h:p ; gitHubIssueViewWeb"
 noremap <silent> giv :GitHubIssueViewWeb<enter>
+
+command! GitHubIssueComment execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/fzfConfig.zsh ; cd %:h:p ; gitHubIssueComment"
+noremap <silent> gim :GitHubIssueComment<enter>
+
 command! GithubRepoViewWeb execute "FloatermSend cd %:h:p ; gh browse ; cd -"
+
 command! LazyGit execute "FloatermNew --autoclose=1 cd %:h:p ; lazygit ; cd -"
 noremap <silent> gl :LazyGit<enter>
 

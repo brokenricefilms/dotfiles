@@ -128,14 +128,14 @@ function co () {
 }
 
 function gitHubIssueList() { gh issue list | fzf | cut -f1 | wl-copy}
-alias il='gitHubIssueList'
+alias gil='gitHubIssueList'
 
 function gitHubIssueClose() {
     id="$(gh issue list | fzf | cut -f1)"
     [ -n "$id" ]
     gh issue close "$id"
 }
-alias ic='gitHubIssueClose'
+alias gic='gitHubIssueClose'
 
 function gitHubIssueViewWeb() {
     id="$(gh issue list | fzf | cut -f1)"
@@ -144,6 +144,14 @@ function gitHubIssueViewWeb() {
 }
 
 alias iv='gitHubIssueViewWeb'
+
+function gitHubIssueComment() {
+    id="$(gh issue list | fzf | cut -f1)"
+    [ -n "$id" ]
+    gh issue comment "$id"
+}
+
+alias gim='gitHubIssueComment'
 
 source ~/dotfiles/zsh/functions/fzf-tab/fzf-tab.plugin.zsh
 source ~/dotfiles/zsh/functions/fzf-zsh-completions/fzf-zsh-completions.plugin.zsh
