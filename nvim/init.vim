@@ -62,12 +62,16 @@ command! -nargs=0 FormatFile :call CocAction('runCommand', 'prettier.formatFile'
 command! -nargs=0 RenameCurrentWord :call CocAction('runCommand', 'document.renameCurrentWord')
 
 Plug 'https://github.com/voldikss/vim-floaterm'
+
 let g:floaterm_width=0.9
 let g:floaterm_height=0.9
 let g:floaterm_title=""
 let g:floaterm_borderchar="─│─│╭╮╰╯"
-let g:floaterm_keymap_toggle = '<c-s>'
+hi FloatermBorder guibg=Normal guifg=#88507D
+
 autocmd VimEnter * FloatermNew --silent
+
+let g:floaterm_keymap_toggle = '<c-s>'
 
 noremap <silent> gp :FloatermSend! cd %:p:h ; git push ; cd -<enter>
 noremap <silent> gP :FloatermSend! cd %:p:h ; git push -f ; cd -<enter>
