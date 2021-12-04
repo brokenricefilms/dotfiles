@@ -61,6 +61,13 @@ command! -nargs=0 EditSnippets :call CocAction('runCommand', 'snippets.editSnipp
 command! -nargs=0 FormatFile :call CocAction('runCommand', 'prettier.formatFile')
 command! -nargs=0 RenameCurrentWord :call CocAction('runCommand', 'document.renameCurrentWord')
 
+Plug 'https://github.com/voldikss/vim-floaterm'
+let g:floaterm_width=0.9
+let g:floaterm_height=0.9
+let g:floaterm_title=""
+let g:floaterm_borderchar="─│─│╭╮╰╯"
+let g:floaterm_keymap_toggle = '<c-s>'
+
 Plug 'https://github.com/wellle/targets.vim'
 
 Plug 'liuchengxu/vista.vim'
@@ -138,7 +145,7 @@ Plug 'https://github.com/tpope/vim-fugitive'
 noremap <silent> gp :call VimuxRunCommandInDir("git push", 0)<enter>
 noremap <silent> gP :call VimuxRunCommandInDir("git push -f", 0)<enter>
 noremap <silent> gs :G<enter>gg5j2ly$k0
-noremap <silent> gc :silent cd %:h<enter>:BCommits<enter>
+noremap <silent> gc :silent lcd %:h<enter>:BCommits<enter>
 noremap <silent> gb :G blame<enter>
 noremap <silent> gd :vsplit<Return><C-w>w:Gdiff<enter>
 
@@ -378,6 +385,7 @@ command! Reload execute "silent source ~/.config/nvim/init.vim | silent !tmux so
 
 command! Light execute "silent !light" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
 command! Dark execute "silent !dark" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
-command! GitHubIssueClose execute "normal! :sp<enter>:term zsh -c 'source ~/dotfiles/zsh/functions/fzfConfig.zsh ; gitHubIssueClose' <enter> :startinsert<enter>"
-command! GitHubIssueViewWeb execute "normal! :sp<enter>:term zsh -c 'source ~/dotfiles/zsh/functions/fzfConfig.zsh ; gitHubIssueViewWeb' <enter> :startinsert<enter>"
-command! GithubRepoViewWeb execute "silent cd %:h | silent !gh browse"
+command! GitHubIssueList execute "FloatermNew --autoclose=1  source ~/dotfiles/zsh/functions/fzfConfig.zsh ; gitHubIssueList"
+command! GitHubIssueClose execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/fzfConfig.zsh ; gitHubIssueClose"
+command! GitHubIssueViewWeb execute "FloatermNew --autoclose=1  source ~/dotfiles/zsh/functions/fzfConfig.zsh ; gitHubIssueViewWeb"
+command! GithubRepoViewWeb execute "silent !cd %:h/.. ; gh browse"
