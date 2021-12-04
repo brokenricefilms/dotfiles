@@ -143,8 +143,8 @@
 
 - `gs`: open git status
 - `gl`: open lazygit in float term
-- `gp` in normal mode: git push
-- `PushForce`: git push -f
+- `gp` in normal mode: git push (run background using floaterm)
+- `gP` in normal mode: git push -f (run background using floaterm)
 
 #### Emmet:
 
