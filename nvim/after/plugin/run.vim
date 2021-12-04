@@ -46,11 +46,11 @@ autocmd BufEnter *.wls nnoremap <leader>r
 autocmd BufEnter *.wl nnoremap <leader>r
     \ :w<enter>:sp<enter>:term wolframscript -file %<enter> :startinsert<enter>
 
-autocmd BufEnter *.html nnoremap <leader>r :!xdg-open '%'<enter><enter>
-autocmd BufEnter *.png nnoremap <leader>r  :!xdg-open '%'<enter><enter>
-autocmd BufEnter *.jpeg nnoremap <leader>r :!xdg-open '%'<enter><enter>
-autocmd BufEnter *.jpg nnoremap <leader>r  :!xdg-open '%'<enter><enter>
-autocmd BufEnter *.mp3 nnoremap <leader>r  :!xdg-open '%'<enter><enter>
-autocmd BufEnter *.mkv nnoremap <leader>r  :!xdg-open '%'<enter><enter>
-autocmd BufEnter *.pdf nnoremap <leader>r  :!xdg-open '%'<enter><enter>
-autocmd BufEnter *.epub nnoremap <leader>r :!xdg-open '%'<enter><enter>
+autocmd BufEnter *.png nnoremap <leader>r  :silent !xdg-open '%'<enter>
+autocmd BufEnter *.html nnoremap <leader>r :silent !xdg-open '%'<enter>
+autocmd BufEnter *.jpeg nnoremap <leader>r :silent !xdg-open '%'<enter>
+autocmd BufEnter *.jpg nnoremap <leader>r  :silent !xdg-open '%'<enter>
+autocmd BufEnter *.mp3 nnoremap <leader>r  :silent !xdg-open '%'<enter>
+autocmd BufEnter *.mkv nnoremap <leader>r  :silent !xdg-open '%'<enter>
+autocmd BufEnter *.pdf nnoremap <leader>r  :silent !xdg-open '%'<enter>
+autocmd BufEnter *.epub nnoremap <leader>r :silent !xdg-open '%'<enter>
