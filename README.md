@@ -142,8 +142,7 @@
 > I using [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) plugin
 
 - `gs`: open git status
-- `gl`: open git log in the quick-fix list
-  - use can use `H`/`L` to prev/next the quick fix list
+- `gl`: open lazygit in float term
 - `gp` in normal mode: git push
 - `PushForce`: git push -f
 
