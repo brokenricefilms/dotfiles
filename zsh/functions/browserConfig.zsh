@@ -16,6 +16,11 @@ alias browserFeedly='browser "https://feedly.com/i/collection/content/user/0d891
 alias browserFeeder='browser "https://feeder.co/reader"'
 alias browserGooglePodcastSubscriptions='browser "https://podcasts.google.com/subscriptions"'
 alias browserGithubNotification='browser "https://github.com/notifications?query=is%3Aunread"'
+alias browserDiscord='browser "https://discord.com/channels/@me"'
+alias browserAnime='browser "http://animevietsub.tv/"'
+alias browserKdrama='browser "https://subnhanh.net/"'
+alias browserMovie='browser "https://ophim.net/"'
+
 alias createPassword='defaultBrowser --app="https://duckduckgo.com/?q=28+strong+password&t=h_&ia=answer"'
 alias pw='defaultBrowser --app="https://duckduckgo.com/?q=28+strong+password&t=h_&ia=answer"'
 qr() { defaultBrowser --app="https://duckduckgo.com/?q=qr+$argv" }
@@ -35,7 +40,7 @@ sbgi() { browserNewTab "https://www.google.com/search?tbm=isch&q=$argv"}
 sbgh() { browserNewTab "https://github.com/search?q=$argv" }
 
 function browserDaily () {
-    cowsay "GET.SHIT.DONE"
+    cowsay "just check once times a day bro"
     browserYoutubeSubsriptions
     browserGooglePodcastSubscriptions
     browserFeeder
@@ -43,4 +48,8 @@ function browserDaily () {
     browserMail1
     browserGithubNotification
     browserFb
+    browserAnime
+    browserKdrama
+    browserMovie
+    browserDiscord
 }
