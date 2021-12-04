@@ -135,7 +135,7 @@ function gitHubIssueClose() {
     [ -n "$id" ]
     gh issue close "$id"
 }
-alias ic='githubIssueClose'
+alias ic='gitHubIssueClose'
 
 function gitHubIssueViewWeb() {
     id="$(gh issue list | fzf | cut -f1)"
@@ -143,7 +143,7 @@ function gitHubIssueViewWeb() {
     gh issue view "$id" --web &> /dev/null
 }
 
-alias iv='githubIssueViewWeb'
+alias iv='gitHubIssueViewWeb'
 
 source ~/dotfiles/zsh/functions/fzf-tab/fzf-tab.plugin.zsh
 source ~/dotfiles/zsh/functions/fzf-zsh-completions/fzf-zsh-completions.plugin.zsh
