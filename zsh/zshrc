@@ -250,8 +250,9 @@ function update () {
 
 function hi () {
     clear
-    browserDaily
-    sleep 30
+    browserDaily &>/dev/null
+    cowsay "wait 10m for browsing stuff"
+    sleep 600
     update
     neofetch
     cowsay "internet speed"
