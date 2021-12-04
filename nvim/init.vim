@@ -72,6 +72,11 @@ autocmd VimEnter * FloatermNew --silent
 noremap <silent> gp :FloatermSend! cd %:p:h ; git push ; cd -<enter>
 noremap <silent> gP :FloatermSend! cd %:p:h ; git push -f ; cd -<enter>
 
+command! GitHubIssueList execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/fzfConfig.zsh ; cd %:h:p ; gitHubIssueList"
+command! GitHubIssueClose execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/fzfConfig.zsh ; cd %:h:p ; gitHubIssueClose"
+command! GitHubIssueViewWeb execute "FloatermNew --autoclose=1 cd %:h:p source ~/dotfiles/zsh/functions/fzfConfig.zsh ; gitHubIssueViewWeb"
+command! GithubRepoViewWeb execute "FloatermSend cd %:h:p ; gh browse ; cd -"
+
 Plug 'https://github.com/wellle/targets.vim'
 
 Plug 'liuchengxu/vista.vim'
@@ -387,7 +392,3 @@ command! Reload execute "silent source ~/.config/nvim/init.vim | silent !tmux so
 
 command! Light execute "silent !light" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
 command! Dark execute "silent !dark" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
-command! GitHubIssueList execute "FloatermNew --autoclose=1  source ~/dotfiles/zsh/functions/fzfConfig.zsh ; gitHubIssueList"
-command! GitHubIssueClose execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/fzfConfig.zsh ; gitHubIssueClose"
-command! GitHubIssueViewWeb execute "FloatermNew --autoclose=1  source ~/dotfiles/zsh/functions/fzfConfig.zsh ; gitHubIssueViewWeb"
-command! GithubRepoViewWeb execute "silent !cd %:h/.. ; gh browse"
