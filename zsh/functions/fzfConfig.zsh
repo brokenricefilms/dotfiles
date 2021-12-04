@@ -68,7 +68,7 @@ function ch () {
 
 function Ch () {
     local dir
-    dir=$(fd -t d . $HOME --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1') &&
+    dir=$(fd -t d . $HOME --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
     cd "$dir"
     ls
 }
@@ -117,15 +117,18 @@ fman() {
 # @body @thuanpham2311
 # why `af`? cuz like the tmux command fzf session switch hold ctrl + a + f
 af() {
-  local session
-  session=$(tmux list-sessions -F "#{session_name}" | fzfDown) &&
-  tmux switch-client -t "$session"
+    local session
+    session=$(tmux list-sessions -F "#{session_name}" | fzfDown)
+    tmux switch-client -t "$session"
 }
 
 function co () {
     isInGitRepo || return
     git branch -a | fzfDown | xargs git checkout
 }
+
+function gitHubIssueList() { gh issue list | fzf | cut -f1 | wl-copy}
+alias il='gitHubIssueList'
 
 function gitHubIssueClose() {
     id="$(gh issue list | fzf | cut -f1)"
