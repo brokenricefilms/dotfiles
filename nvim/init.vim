@@ -182,13 +182,6 @@ noremap f :HopChar1<enter>
 
 Plug 'https://github.com/wellle/tmux-complete.vim'
 
-Plug 'https://github.com/preservim/vimux'
-
-let g:VimuxOrientation = "h"
-let g:VimuxHeight = "40"
-noremap <silent> <leader>T :VimuxTogglePane<enter>:VimuxOpenRunner<enter>:TmuxNavigateLeft<enter>
-noremap <silent> <leader>t :VimuxTogglePane<enter>:VimuxOpenRunner<enter>
-
 Plug 'https://github.com/christoomey/vim-tmux-navigator'
 
 Plug 'https://github.com/max397574/better-escape.nvim'

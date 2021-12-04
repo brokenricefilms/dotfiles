@@ -24,7 +24,7 @@ autocmd BufRead,BufNewFile *.md inoremap <expr> [[ fzf#vim#complete({
             \ 'options': '--multi --reverse --margin 5%,0',
             \ 'down':    10})
 
-autocmd BufRead,BufNewFile,BufEnter *.md execute "cd %:h"
+autocmd BufRead,BufNewFile,BufEnter *.md silent! lcd %:p:h
 
 autocmd BufRead,BufNewFile,BufEnter *.md command! TOC execute "normal! ggo<enter>---<esc>gg" | execute"read !ghMdToc %" | execute "normal! ddddggjddddddO<enter>**↓↓Table of Contents↓↓**<esc>:w<enter>ggjjo<enter><details><enter><summary>Click here to show.</summary><esc>/---<enter>o</details><esc>gg:w<enter>"
 
