@@ -142,7 +142,6 @@ function gitHubIssueViewWeb() {
     [ -n "$id" ]
     gh issue view "$id" --web &> /dev/null
 }
-
 alias iv='gitHubIssueViewWeb'
 
 function gitHubIssueComment() {
@@ -150,7 +149,6 @@ function gitHubIssueComment() {
     [ -n "$id" ]
     gh issue comment "$id"
 }
-
 alias gim='gitHubIssueComment'
 
 source ~/dotfiles/zsh/functions/fzf-tab/fzf-tab.plugin.zsh
