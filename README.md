@@ -61,6 +61,8 @@
 - `cm`: create a `?.sh` file in `/tmp` open it in vim and press `space+r` to run. (required my [run.vim](https://github.com/thuanpham2311/dotfiles/blob/master/nvim/after/plugin/run.vim))
 - `u`: unzip/rar/tar,...
 - `cppProject`: create cpp multi file template
+  <!-- @todo write gh cli function for zsh -->
+  <!-- @body @thuanpham2311 -->
 
 ### Tmux
 
@@ -150,6 +152,10 @@
 
 - `,,` in insert mode: execute like h1`,,` to `<h1>|</h1>`
 - Preview with coc.nvim
+
+<!-- @todo write gh cli function for vim -->
+<!-- @body @thuanpham2311 -->
+<!-- #### gh cli -->
 
 #### vim stuff
 
