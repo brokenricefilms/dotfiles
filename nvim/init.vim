@@ -67,6 +67,10 @@ let g:floaterm_height=0.9
 let g:floaterm_title=""
 let g:floaterm_borderchar="─│─│╭╮╰╯"
 let g:floaterm_keymap_toggle = '<c-s>'
+autocmd VimEnter * FloatermNew --silent
+
+noremap <silent> gp :FloatermSend git push<enter>
+noremap <silent> gP :FloatermSend git push -f<enter>
 
 Plug 'https://github.com/wellle/targets.vim'
 
@@ -142,8 +146,6 @@ let g:fzf_colors =
 
 Plug 'https://github.com/tpope/vim-fugitive'
 
-noremap <silent> gp :cdl %:h | FloatermSend git push<enter>
-noremap <silent> gP :cdl %:h | FloatermSend git push -f<enter>
 noremap <silent> gs :G<enter>gg5j2ly$k0
 noremap <silent> gc :silent lcd %:h<enter>:BCommits<enter>
 noremap <silent> gb :G blame<enter>
