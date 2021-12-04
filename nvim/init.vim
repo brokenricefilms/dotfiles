@@ -80,9 +80,11 @@ command! GitHubIssueList execute "FloatermNew --autoclose=1 source ~/dotfiles/zs
 noremap <silent> gil :GitHubIssueList<enter>
 command! GitHubIssueClose execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/fzfConfig.zsh ; cd %:h:p ; gitHubIssueClose"
 noremap <silent> gic :GitHubIssueClose<enter>
-command! GitHubIssueViewWeb execute "FloatermNew --autoclose=1 cd %:h:p source ~/dotfiles/zsh/functions/fzfConfig.zsh ; gitHubIssueViewWeb"
+command! GitHubIssueViewWeb execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/fzfConfig.zsh ; cd %:h:p ; gitHubIssueViewWeb"
 noremap <silent> giv :GitHubIssueViewWeb<enter>
 command! GithubRepoViewWeb execute "FloatermSend cd %:h:p ; gh browse ; cd -"
+command! LazyGit execute "FloatermNew --autoclose=1 cd %:h:p ; lazygit ; cd -"
+noremap <silent> gl :LazyGit<enter>
 
 Plug 'https://github.com/wellle/targets.vim'
 
