@@ -69,8 +69,8 @@ let g:floaterm_borderchar="─│─│╭╮╰╯"
 let g:floaterm_keymap_toggle = '<c-s>'
 autocmd VimEnter * FloatermNew --silent
 
-noremap <silent> gp :FloatermSend! cd &:p:h git push<enter>
-noremap <silent> gP :FloatermSend! cd &:p:h git push -f<enter>
+noremap <silent> gp :FloatermSend! cd %:p:h ; git push ; cd -<enter>
+noremap <silent> gP :FloatermSend! cd %:p:h ; git push -f ; cd -<enter>
 
 Plug 'https://github.com/wellle/targets.vim'
 
