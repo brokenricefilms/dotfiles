@@ -142,8 +142,8 @@ let g:fzf_colors =
 
 Plug 'https://github.com/tpope/vim-fugitive'
 
-noremap <silent> gp :FloatermSend git push<enter>
-noremap <silent> gP :FloatermSend git push -f<enter>
+noremap <silent> gp :cdl %:h | FloatermSend git push<enter>
+noremap <silent> gP :cdl %:h | FloatermSend git push -f<enter>
 noremap <silent> gs :G<enter>gg5j2ly$k0
 noremap <silent> gc :silent lcd %:h<enter>:BCommits<enter>
 noremap <silent> gb :G blame<enter>
