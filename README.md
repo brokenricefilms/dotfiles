@@ -178,7 +178,7 @@
 
 ## Install
 
-- [Here is my script](https://github.com/thuanpham2311/linux_setup) to install the Linux distro, but it's not a good shell script (like copy 1 time pasted to terminal).
+- [Here is install guide, just read the README.md](https://github.com/thuanpham2311/linux_setup)
 
 ## Supported
 
