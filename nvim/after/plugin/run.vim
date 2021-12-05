@@ -13,7 +13,7 @@ autocmd BufEnter *.cs nnoremap <leader>r
 autocmd BufEnter *.cs nnoremap <leader>R
     \ :FloatermSend cd %:p:h ; dotnet run <enter>:FloatermToggle<enter>
 
-autocmd BufEnter *.python nnoremap <leader>r
+autocmd BufEnter *.py nnoremap <leader>r
     \ :FloatermSend cd %:p:h ; python %:t<enter>:FloatermToggle<enter>
 
 autocmd BufEnter *.md nnoremap <leader>r
