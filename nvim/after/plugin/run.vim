@@ -1,3 +1,6 @@
+autocmd BufEnter * nnoremap <leader>r
+    \ :FloatermSend cd %:p:h ; ./%:t<enter>:FloatermToggle<enter>
+
 autocmd BufEnter *.c nnoremap <leader>r
     \ :FloatermSend cd %:p:h ; gcc %:t -o %:t:r ; ./%:t:r ; rm ./%:t:r<enter>:FloatermToggle<enter>
 
