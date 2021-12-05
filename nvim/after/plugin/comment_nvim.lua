@@ -8,7 +8,8 @@ require('Comment').setup {
     },
 
     opleader = {
-        block = 'm',
+        line = 'mm',
+        block = 'mb',
     },
 
     mappings = {
