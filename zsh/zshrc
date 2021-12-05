@@ -225,13 +225,20 @@ function updateDns() {
 function update () {
     nvim -c "PlugUpdate | qa"
     nvim -c "CocUpdateSync | qa"
+
     npm update -g
     npm install -g npm
+
     gem update neovim
+
     tldr --update
+
     gh extension upgrade --all
+
     updateDns
+
     ~/.tmux/plugins/tpm/bin/update_plugins all
+
     flatpak update -y
 
     # arch base

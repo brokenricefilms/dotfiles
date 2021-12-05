@@ -1,3 +1,5 @@
+autocmd BufEnter * vnoremap <leader>r :'<,'>FloatermSend<enter>:FloatermToggle<enter>
+
 autocmd BufEnter * nnoremap <leader>r
     \ :FloatermSend cd %:p:h ; ./%:t<enter>:FloatermToggle<enter>
 
