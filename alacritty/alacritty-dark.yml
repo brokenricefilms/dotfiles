@@ -42,7 +42,7 @@ font:
   italic:
     family: JetBrains Mono NL
     style: Italic
-  size: 13
+  size: 11
 
 key_bindings:
   - { key: Return,   mods: Shift,   chars: "\x1b[13;2u" }
