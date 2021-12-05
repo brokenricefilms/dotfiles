@@ -380,7 +380,7 @@ nnoremap <leader>i :%s/\<<C-r><C-w>\>/
 
 nmap <silent> <leader>x :!xdg-open '%'<enter><enter>
 
-nmap gf :edit <cfile><enter>
+nmap gf :cd %:h<enter>:edit <cfile><enter>
 
 imap ;; <esc>A;<enter>
 imap ;, <esc>A,<enter>
