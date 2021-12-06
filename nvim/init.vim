@@ -220,7 +220,10 @@ Plug 'https://github.com/windwp/nvim-autopairs'
 
 Plug 'https://github.com/windwp/nvim-ts-autotag'
 
-Plug 'https://github.com/numToStr/Comment.nvim'
+Plug 'https://github.com/preservim/nerdcommenter'
+
+let g:NERDSpaceDelims = 1
+map mm <Plug>NERDCommenterToggle
 
 Plug 'https://github.com/mbbill/undotree'
 set undodir=~/sync/ok/undodir
