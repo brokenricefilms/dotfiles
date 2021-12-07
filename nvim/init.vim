@@ -66,7 +66,7 @@ Plug 'https://github.com/voldikss/vim-floaterm'
 let g:floaterm_width=0.9
 let g:floaterm_height=0.9
 let g:floaterm_title=""
-let g:floaterm_borderchar="─│─│╭╮╰╯"
+let g:floaterm_borderchars="─│─│╭╮╯╰"
 hi FloatermBorder guibg=Normal guifg=#88507D
 
 autocmd VimEnter * FloatermNew --silent
