@@ -399,6 +399,5 @@ nnoremap M <c-^>
 command! OpenFileInBraveBrowser execute "silent !brave-browser '%'"
 command! CopyFileName execute "silent !echo % | wl-copy"
 command! Reload execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
-
 command! Light execute "silent !light" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
 command! Dark execute "silent !dark" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
