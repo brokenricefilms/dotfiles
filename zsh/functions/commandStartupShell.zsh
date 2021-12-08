@@ -1,11 +1,15 @@
 function gitDir () {
     isInGitRepo || return
-    echo "git status"
+    echo ""
+    echo "👉 git status"
+    echo ""
     git status -sb
 }
 
 function mainThing () {
-    echo "you in `pwd`"
+    echo ""
+    echo "👉 you in `pwd`"
+    echo ""
     la
 }
 
