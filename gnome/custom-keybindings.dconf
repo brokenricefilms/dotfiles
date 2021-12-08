@@ -1,7 +1,7 @@
 [custom0]
 binding='F2'
-command='/usr/bin/kitty'
-name='kitty'
+command='kitty'
+name='terminal'
 
 [custom1]
 binding='F1'
@@ -9,21 +9,16 @@ command='flameshot gui'
 name='flameshot'
 
 [custom2]
-binding='F3'
-command='brave-browser'
-name='brave-browser'
+binding='<Alt>w'
+command='google-chrome'
+name='google-chrome'
 
 [custom3]
 binding='F4'
-command='brave-browser --incognito'
-name='brave-browser --incognito'
+command='google-chrome --incognito'
+name='google-chrome --incognito'
 
 [custom4]
 binding='F6'
 command='nautilus /home/master/Downloads'
 name='natilus'
-
-[custom5]
-binding='<Alt>f'
-command='nautilus /home/master'
-name='nautilus home'
