@@ -18,8 +18,8 @@ if [ -f "$1" ]; then
         *.pax.Z)    uncompress "$1" --stdout | pax -r     ;;
         *.rar)      unrar x "$1"                          ;;
         *.Z)        uncompress "$1"                       ;;
-        *)          cowsay "'"$1"' cannot be extracted/mounted via extract()" ;;
+        *)          echo "'"$1"' cannot be extracted/mounted via extract()" ;;
     esac
 else
-    cowsay "'$1' is not a valid file"
+    echo "'$1' is not a valid file"
 fi

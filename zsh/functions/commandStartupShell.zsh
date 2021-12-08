@@ -1,11 +1,11 @@
 function gitDir () {
     isInGitRepo || return
-    cowthink "git status"
+    echo "git status"
     git status -sb
 }
 
 function mainThing () {
-    cowthink "you in `pwd`"
+    echo "you in `pwd`"
     la
 }
 

@@ -14,4 +14,3 @@
 **requirement**
 - g++
 - Unix shell (bash/zsh/fish,...)
-- cowsay (pretty, recommend but not necessary)

@@ -192,15 +192,15 @@
 
 > For my daily use, i develop this dotfiles repos on this, for several months maybe i will change my daily combo (Linux distro hopping)
 
-- Fedora 35
+- Debian unstable
 - Gnome 41.1 (Wayland)
 - Neovim v0.5.1
 - Kitty terminal 0.21.2
 
 ### Distro Supported
 
-- Ubuntu (\*)
-- Fedora (the latest version)
+- Ubuntu (base on debian)
+- Fedora (\*)
 - Arch (\*)
 
 > (\*): required edit uncomment stuff in zsh config file
