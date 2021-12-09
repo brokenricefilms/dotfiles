@@ -289,7 +289,7 @@ set cpo+=n
 
 set tabstop=4 softtabstop=4 noet
 set shiftwidth=4
-autocmd BufRead,BufNewFile *.cs,*.h,*.cpp,*.scss,*.css,*.html,*.md setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd BufRead,BufNewFile *.cs,*.h,*.cpp,*.scss,*.css,*.html,*.md,*.js setlocal tabstop=2 shiftwidth=2 softtabstop=2
 set expandtab
 
 set nocompatible
