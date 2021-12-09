@@ -296,6 +296,7 @@ set expandtab
 set nocompatible
 filetype plugin indent on
 set encoding=UTF-8
+set fileformat=unix
 set mouse=a
 set clipboard=unnamedplus
 
