@@ -201,7 +201,7 @@ alias tmp='cd /tmp ; l'
 alias yt='youtube-dl -f bestvideo+bestaudio'
 alias yta='youtube-dl -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"'
 
-function musicSync() {
+function syncMusic() {
     cd ~/Music/
     trash *
     yta "https://thuanpham2311.github.io/l/music"
