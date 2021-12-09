@@ -386,12 +386,10 @@ nmap gf :cd %:h<enter>:edit <cfile><enter>
 imap ;; <esc>A;<enter>
 imap ;, <esc>A,<enter>
 
-" @todo vim S/C-enter not working in fedora gnome 41.1
-" @body @thuanpham2311
-imap <S-enter> <esc>o
-imap <C-enter> <esc>O
-nnoremap <silent> <S-enter> o<esc>
-nnoremap <silent> <C-enter> O<esc>
+imap <S-down> <esc>o
+imap <S-up> <esc>O
+nnoremap <silent> <S-down> o<esc>
+nnoremap <silent> <S-up> O<esc>
 
 xnoremap <silent> p p:let @+=@0<enter>:let @"=@0<enter>
 nnoremap M <c-^>
