@@ -299,7 +299,6 @@ set encoding=UTF-8
 set fileformat=unix
 set mouse=a
 set clipboard=unnamedplus
-
 set autoindent
 set smartindent
 set autoread
@@ -309,7 +308,6 @@ set noswapfile
 set lazyredraw
 set ttyfast
 set nowritebackup
-
 set inccommand=split
 set scrolloff=5
 
