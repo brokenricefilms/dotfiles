@@ -61,6 +61,7 @@ command! -nargs=0 EditSnippets :call CocAction('runCommand', 'snippets.editSnipp
 command! -nargs=0 FormatFile :call CocAction('runCommand', 'prettier.formatFile')
 command! -nargs=0 RenameCurrentWord :call CocAction('runCommand', 'document.renameCurrentWord')
 
+" don't recommend use this for the long long like log command (yarn dev,...)
 Plug 'https://github.com/voldikss/vim-floaterm'
 
 let g:floaterm_width=0.9
