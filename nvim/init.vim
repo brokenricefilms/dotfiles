@@ -367,7 +367,7 @@ nnoremap gk k
 noremap <silent> gx :silent execute "!xdg-open " . "<cfile>"<enter>
 
 nnoremap <leader>w :w<enter>
-nnoremap <leader>q :q<enter>
+nnoremap <backspace> :q<enter>
 nnoremap <leader>o :wq<enter>
 noremap <leader>z <C-w>o
 nnoremap Q :qa!<enter>
