@@ -61,6 +61,10 @@ command! -nargs=0 EditSnippets :call CocAction('runCommand', 'snippets.editSnipp
 command! -nargs=0 FormatFile :call CocAction('runCommand', 'prettier.formatFile')
 command! -nargs=0 RenameCurrentWord :call CocAction('runCommand', 'document.renameCurrentWord')
 
+Plug 'https://github.com/dhruvasagar/vim-zoom'
+nmap <leader>z <Plug>(zoom-toggle)
+let g:zoom#statustext = '[ zoomed ]'
+
 " don't recommend use this for the long long like log command (yarn dev,...)
 Plug 'https://github.com/voldikss/vim-floaterm'
 
@@ -279,7 +283,7 @@ set number relativenumber
 command! NumberLine execute "set number relativenumber"
 command! NumberLineOff execute "set number! relativenumber!"
 
-set statusline=[\ %F\ %m]\ %r%h%w%=\ %{fugitive#statusline()}
+set statusline=[\ %F\ %m]\ %{zoom#statusline()}\ %r%h%w%=\ %{fugitive#statusline()}
 
 set list
 let &listchars = 'tab:▸ ,trail:·,nbsp:±,extends:❯,precedes:❮'
@@ -369,7 +373,6 @@ noremap <silent> gx :silent execute "!xdg-open " . "<cfile>"<enter>
 nnoremap <leader>w :w<enter>
 nnoremap <leader>q :q<enter>
 nnoremap <leader>o :wq<enter>
-noremap <leader>z <C-w>o
 nnoremap Q :qa!<enter>
 
 noremap H :cprevious<enter>
