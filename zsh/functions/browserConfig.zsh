@@ -40,7 +40,7 @@ sbgi() { browserNewTab "https://www.google.com/search?tbm=isch&q=$argv"}
 sbgh() { browserNewTab "https://github.com/search?q=$argv" }
 
 function browserDaily () {
-    cowsay "just check once times a day bro"
+    echo "👉 just check once times a day bro"
     browserYoutubeSubsriptions
     browserGooglePodcastSubscriptions
     browserFeeder

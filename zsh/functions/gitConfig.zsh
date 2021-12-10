@@ -43,7 +43,7 @@ function gc () {
 function yo () {
     git diff
     git add .
-    cowsay "What is commmit message?"
+    echo "👉 What is commmit message?"
     read commitMessage
     git commit -m $commitMessage
     git push
