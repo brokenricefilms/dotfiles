@@ -372,10 +372,10 @@ nnoremap <leader>o :wq<enter>
 noremap <leader>z <C-w>o
 nnoremap Q :qa!<enter>
 
-noremap H :cp<enter>
-noremap L :cn<enter>
-noremap J :bn<enter>
-noremap K :bp<enter>
+noremap H :cprevious<enter>
+noremap L :cnext<enter>
+noremap J :bnext<enter>
+noremap K :bprevious<enter>
 
 noremap Y y$
 
