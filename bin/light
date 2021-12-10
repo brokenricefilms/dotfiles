@@ -2,14 +2,14 @@
 
 echo "
 set background=light
-colorscheme zenbones
+colorscheme zenwritten
 highlight markdownH1 guifg=#2C363C guibg=NONE guisp=NONE gui=bold
 " > ~/dotfiles/nvim/themeControl.vim
 
-echo "include ./zenbones_light.conf
+echo "include ./light_theme.conf
 " > ~/dotfiles/kitty/theme.conf
 
-cp ~/dotfiles/alacritty/alacritty-light.yml ~/dotfiles/alacritty/alacritty.yml
+cp ~/dotfiles/alacritty/light_theme.yml ~/dotfiles/alacritty/alacritty.yml
 
 mkdir ~/dotfiles/bat/
 echo "--theme=\"GitHub\"" > ~/dotfiles/bat/config

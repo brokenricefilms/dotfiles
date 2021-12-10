@@ -2,13 +2,13 @@
 
 echo "
 set background=dark
-colorscheme zenbones
+colorscheme zenwritten
 highlight markdownH1 guifg=#2C363C guibg=NONE guisp=NONE gui=bold
 " > ~/dotfiles/nvim/themeControl.vim
 
-echo "include ./zenbones_dark.conf" > ~/dotfiles/kitty/theme.conf
+echo "include ./dark_theme.conf" > ~/dotfiles/kitty/theme.conf
 
-cp ~/dotfiles/alacritty/alacritty-dark.yml ~/dotfiles/alacritty/alacritty.yml
+cp ~/dotfiles/alacritty/dark_theme.yml ~/dotfiles/alacritty/alacritty.yml
 
 mkdir ~/dotfiles/bat/
 echo "--theme=\"base16\"" > ~/dotfiles/bat/config
