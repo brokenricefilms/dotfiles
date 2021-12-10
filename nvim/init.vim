@@ -72,7 +72,7 @@ let g:floaterm_width=0.9
 let g:floaterm_height=0.9
 let g:floaterm_title=""
 let g:floaterm_borderchars="─│─│╭╮╯╰"
-hi FloatermBorder guibg=Normal guifg=#88507D
+hi FloatermBorder guibg=Normal guifg=#5c5c5c
 
 autocmd VimEnter * FloatermNew --silent
 
