@@ -265,7 +265,6 @@ function hi () {
     neofetch
     echo "internet speed"
     speedtest-cli
-    nvim -p ~/sync/note/*.md
 }
 
 function gnomeKeyBindingBackup {
