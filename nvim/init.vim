@@ -147,7 +147,8 @@ noremap <leader>k :Buffers<enter>
 noremap <leader>j :Rg<enter>
 noremap <leader>h :History<enter>
 noremap ; :Commands<enter>
-noremap // :BLines<enter>
+noremap / :BLines<enter>
+noremap // /
 
 let g:fzf_layout = { 'window': {
             \ 'width': 0.9,
