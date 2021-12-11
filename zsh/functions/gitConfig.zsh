@@ -5,6 +5,7 @@ alias add='git add'
 alias push="git push"
 alias pull="git pull"
 alias dv='git difftool'
+alias gl='git log --oneline | head -n 5'
 
 isInGitRepo() { git rev-parse HEAD > /dev/null 2>&1 }
 
