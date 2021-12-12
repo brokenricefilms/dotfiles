@@ -2,11 +2,12 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
     exec tmux
 fi
 
+if [ -e /home/master/.nix-profile/etc/profile.d/nix.sh ]; then . /home/master/.nix-profile/etc/profile.d/nix.sh; fi
+
 set -U EDITOR nvim
 export EDITOR='nvim'
 export VISUAL='nvim'
 export PATH="$HOME/.npm/bin:$PATH"
-
 export DENO_INSTALL="/home/master/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
