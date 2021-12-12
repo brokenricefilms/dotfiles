@@ -221,4 +221,7 @@
 
 ⇒ <https://youtu.be/2OhzSP1uGLc>
 
+**Talk show Dec 12, 2021: dotfiles, zsh, tmux**
+⇒ https://www.youtube.com/watch?v=hq1xF5U2Nqw
+
 <img src="./img/dotfiles.gif" width="50%" height="50%"><img src="./img/light.gif" width="50%" height="50%">
