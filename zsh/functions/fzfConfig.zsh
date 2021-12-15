@@ -110,8 +110,13 @@ function Oh() {
     fi
 }
 
-fman() {
-    man -k . | fzf -q "$1" --prompt='man> '  --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r man | col -bx | bat -l man -p --color always' | tr -d '()' | awk '{printf "%s ", $2} {print $1}' | xargs -r man
+function man() {
+    if [ -z $1 ]
+    then
+        /usr/bin/man -k . | fzf -q "$1" --prompt='man> '  --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r /usr/bin/man | col -bx | bat -l /usr/bin/man -p --color always' | tr -d '()' | awk '{printf "%s ", $2} {print $1}' | xargs -r /usr/bin/man
+    else
+        /usr/bin/man $1
+    fi
 }
 
 # @todo [zsh] af if not have session create new like fzf session switch tmux plugin
