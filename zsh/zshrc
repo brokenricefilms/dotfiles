@@ -286,6 +286,7 @@ function gnomeTerminalRestore {
     dconf load '/org/gnome/terminal/' < ~/dotfiles/gnome/gnomeTerminal.dconf
 }
 
+source ~/dotfiles/zsh/functions/gnome.zsh
 source ~/dotfiles/zsh/functions/browserConfig.zsh
 source ~/dotfiles/zsh/functions/gitConfig.zsh
 source ~/dotfiles/zsh/functions/completion.zsh
