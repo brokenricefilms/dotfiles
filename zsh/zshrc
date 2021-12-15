@@ -278,6 +278,14 @@ function gnomeKeyBindingRestore {
     dconf load '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/' < ~/dotfiles/gnome/custom-keybindings.dconf
 }
 
+function gnomeTerminalBackup {
+    dconf dump '/org/gnome/terminal/' > ~/dotfiles/gnome/gnomeTerminal.dconf
+}
+
+function gnomeTerminalRestore {
+    dconf load '/org/gnome/terminal/' < ~/dotfiles/gnome/gnomeTerminal.dconf
+}
+
 source ~/dotfiles/zsh/functions/browserConfig.zsh
 source ~/dotfiles/zsh/functions/gitConfig.zsh
 source ~/dotfiles/zsh/functions/completion.zsh
