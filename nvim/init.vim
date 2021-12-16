@@ -350,6 +350,17 @@ noremap <silent> <space>s :setlocal spell! spell?<enter>
 
 set spelllang=en_us,vi
 
+function! FzfSpellSink(word)
+    exe 'normal! "_ciw'.a:word
+endfunction
+
+function! FzfSpell()
+    let suggestions = spellsuggest(expand("<cword>"))
+    return fzf#run(fzf#wrap({'source': suggestions, 'sink': function("FzfSpellSink")}))
+endfunction
+
+nnoremap z= :call FzfSpell()<CR>
+
 noremap ss :split<Return><C-w>w
 noremap sv :vsplit<Return><C-w>w
 
