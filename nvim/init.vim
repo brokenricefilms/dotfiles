@@ -394,11 +394,10 @@ xnoremap <silent> p p:let @+=@0<enter>:let @"=@0<enter>
 nnoremap M <c-^>
 
 command! OpenFileInBraveBrowser execute "silent !brave-browser '%'"
-" command! CopyFileName execute "silent !echo % | wl-copy"
+" comand! CopyFileName execute "silent !echo % | wl-copy"
 command! CopyFileName execute "silent !echo % | xclip -sel clip"
-command! Reload execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
+comman! Reload execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
 command! Light execute "silent !light" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
 command! Dark execute "silent !dark" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
 command! DeleteDosLineEngdingChar execute "%s/\r$/ /g"
-command! PlugIns execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf" | execute "PlugInstall"
 command! PlugCle execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf" | execute "PlugClean"
