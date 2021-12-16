@@ -141,8 +141,6 @@ Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
 
 Plug 'https://github.com/junegunn/fzf.vim'
 
-imap <c-o>fw <plug>(fzf-complete-word)
-imap <c-o>fp <plug>(fzf-complete-path)
 noremap <leader>F :Files ~<enter>
 noremap <expr> <leader>f fugitive#head() != '' ? ':set autochdir<enter>:GFiles --cached --others --exclude-standard<CR>' : ':Files<CR>'
 noremap <expr> <leader>gf fugitive#head() != '' ? ':set autochdir<enter>:GFiles?<CR>' : ':Files<CR>'
