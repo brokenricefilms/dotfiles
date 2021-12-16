@@ -408,3 +408,5 @@ command! Reload execute "silent source ~/.config/nvim/init.vim | silent !tmux so
 command! Light execute "silent !light" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
 command! Dark execute "silent !dark" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
 command! DeleteDosLineEngdingChar execute "%s/\r$/ /g"
+command! PlugIns execute "Reload" | execute "PlugInstall"
+command! PlugCle execute "Reload" | execute "PlugClean"
