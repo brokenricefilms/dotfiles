@@ -141,8 +141,8 @@ Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
 
 Plug 'https://github.com/junegunn/fzf.vim'
 
-imap fw <plug>(fzf-complete-word)
-imap fp <plug>(fzf-complete-path)
+imap <c-o>fw <plug>(fzf-complete-word)
+imap <c-o>fp <plug>(fzf-complete-path)
 noremap <leader>F :Files ~<enter>
 noremap <expr> <leader>f fugitive#head() != '' ? ':set autochdir<enter>:GFiles --cached --others --exclude-standard<CR>' : ':Files<CR>'
 noremap <expr> <leader>gf fugitive#head() != '' ? ':set autochdir<enter>:GFiles?<CR>' : ':Files<CR>'
@@ -356,12 +356,6 @@ map <silent> <Left> <C-w>>
 noremap <silent> cd. :cd %:h<enter>
 noremap <silent> cd :cd<enter>
 
-inoremap , ,<c-g>u
-inoremap . .<c-g>u
-inoremap ! !<c-g>u
-inoremap ? ?<c-g>u
-inoremap [ [<c-g>u
-
 vnoremap <silent> <C-j> :m '>+1<enter>gv=gv
 vnoremap <silent> <C-k> :m '<-2<enter>gv=gv
 
@@ -391,9 +385,6 @@ nnoremap <leader>i :%s/\<<C-r><C-w>\>/
 nmap <silent> <leader>x :!xdg-open '%'<enter><enter>
 
 nmap gf :cd %:h<enter>:edit <cfile><enter>
-
-imap ;; <esc>A;<enter>
-imap ;, <esc>A,<enter>
 
 imap <S-down> <esc>o
 imap <S-up> <esc>O
