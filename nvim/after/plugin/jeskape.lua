@@ -21,6 +21,7 @@ require("jeskape").setup {
         ["!"] = "!<c-g>u",
         ["?"] = "?<c-g>u",
         ["["] = "[<c-g>u",
+        ["feat."] = "🌟feature(<esc>pa): ",
     },
     timeout = vim.o.timeoutlen,
 }
