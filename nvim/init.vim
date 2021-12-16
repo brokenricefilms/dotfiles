@@ -142,16 +142,6 @@ Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
 
 Plug 'https://github.com/junegunn/fzf.vim'
 
-noremap <leader>F :Files ~<enter>
-noremap <expr> <leader>f fugitive#head() != '' ? ':set autochdir<enter>:GFiles --cached --others --exclude-standard<CR>' : ':Files<CR>'
-noremap <expr> <leader>gf fugitive#head() != '' ? ':set autochdir<enter>:GFiles?<CR>' : ':Files<CR>'
-noremap <leader>k :Buffers<enter>
-noremap <leader>j :Rg<enter>
-noremap <leader>h :History<enter>
-noremap ; :Commands<enter>
-noremap / :BLines<enter>
-noremap // /
-
 let g:fzf_layout = { 'window': {
             \ 'width': 0.9,
             \ 'height': 0.9,
@@ -173,6 +163,21 @@ let g:fzf_colors =
             \ 'marker':  ['fg', 'Keyword'],
             \ 'spinner': ['fg', 'Label'],
             \ 'header':  ['fg', 'Comment'] }
+
+noremap <leader>F :Files ~<enter>
+noremap <expr> <leader>f fugitive#head() != '' ? ':set autochdir<enter>:GFiles --cached --others --exclude-standard<CR>' : ':Files<CR>'
+noremap <expr> <leader>gf fugitive#head() != '' ? ':set autochdir<enter>:GFiles?<enter>' : ':Files<CR>'
+noremap <expr> <leader>j fugitive#head() != '' ? ':set autochdir<enter>:GGrep<enter>' : ':Rg<CR>'
+noremap <leader>k :Buffers<enter>
+noremap <leader>h :History<enter>
+noremap ; :Commands<enter>
+noremap / :BLines<enter>
+noremap // /
+
+command! -bang -nargs=* GGrep
+            \ call fzf#vim#grep(
+            \   'git grep --line-number -- '.shellescape(<q-args>), 0,
+            \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0)
 
 Plug 'https://github.com/tpope/vim-fugitive'
 
