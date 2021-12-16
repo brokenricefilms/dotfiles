@@ -61,6 +61,8 @@ command! -nargs=0 EditSnippets :call CocAction('runCommand', 'snippets.editSnipp
 command! -nargs=0 FormatFile :call CocAction('runCommand', 'prettier.formatFile')
 command! -nargs=0 RenameCurrentWord :call CocAction('runCommand', 'document.renameCurrentWord')
 
+Plug 'https://github.com/Krafi2/jeskape.nvim'
+
 Plug 'https://github.com/dhruvasagar/vim-zoom'
 nmap <leader>z <Plug>(zoom-toggle)
 let g:zoom#statustext = '[ zoomed ]'
@@ -408,5 +410,5 @@ command! Reload execute "silent source ~/.config/nvim/init.vim | silent !tmux so
 command! Light execute "silent !light" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
 command! Dark execute "silent !dark" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
 command! DeleteDosLineEngdingChar execute "%s/\r$/ /g"
-command! PlugIns execute "Reload" | execute "PlugInstall"
-command! PlugCle execute "Reload" | execute "PlugClean"
+command! PlugIns execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf" | execute "PlugInstall"
+command! PlugCle execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf" | execute "PlugClean"
