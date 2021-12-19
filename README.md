@@ -194,9 +194,9 @@
 > For my daily use, i develop this dotfiles repos on this, for several months maybe i will change my daily combo (Linux distro hopping)
 
 - Debian unstable
-- Gnome 41.1 (Wayland)
-- Neovim v0.5.1
-- Kitty terminal 0.21.2
+- Gnome 41.1 (X11)
+- Neovim v0.6.0
+- gnome-terminal
 
 ### Distro Supported
 
