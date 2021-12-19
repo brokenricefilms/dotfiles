@@ -174,3 +174,24 @@ for (int i = 0; i < n - 1; i++)
 	}
 }
 endsnippet
+
+snippet menu
+int menuNumber;
+
+do {
+cout << "\n\n Nhập bạn số bạn muốn thực thi (nhập 0 để thoát)" << endl;
+cout << "1: $1\n" << endl;
+
+cout << "=> ? = ";
+cin >> menuNumber;
+
+switch (menuNumber) {
+	case 0:
+	break;
+	case 1:
+	$2
+
+	break;
+}
+} while (menuNumber != 0);
+endsnippet
