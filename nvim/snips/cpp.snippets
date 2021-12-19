@@ -110,7 +110,7 @@ endsnippet
 snippet nhapXuatMaTranVuong
 int nhapSoNguyenDuong(int &n) {
 do {
-	cin >> n;
+  cin >> n;
 } while (n <= 0);
 
 return n;
@@ -120,37 +120,37 @@ void nhapMaTranVuong(MaTranVuong &a) {
 cout << "Nhập bật của ma trận vuông (≤10): ";
 nhapSoNguyenDuong(a.n);
 for (int i = 0; i < a.n; i++) {
-	for (int j = 0; j < a.n; j++) {
-	cout << "[" << i << "\][" << j << "\]: ";
-	cin >> a.list[i\][j\];
-	}
+  for (int j = 0; j < a.n; j++) {
+  cout << "[" << i << "\][" << j << "\]: ";
+  cin >> a.list[i\][j\];
+  }
 }
 }
 
 void xuatMaTranVuong(MaTranVuong a) {
 for (int i = 0; i < a.n; i++) {
-	for (int j = 0; j < a.n; j++) {
-	cout << a.list[i\][j\] << " ";
-	}
-	cout << endl;
+  for (int j = 0; j < a.n; j++) {
+  cout << a.list[i\][j\] << " ";
+  }
+  cout << endl;
 }
 }
 endsnippet
 
 snippet bubbleSort
 void swap(int *x, int *y) {
-	int tmp = *x;
-	*x = *y;
-	*y = tmp;
+  int tmp = *x;
+  *x = *y;
+  *y = tmp;
 }
 
 void bubbleSort(int array[\], int n) {
 for (int i = 0; i < n - 1; i++)
-	for (int j = 0; j < n - i - 1; j++) {
-		if (array[j\] > array[j + 1\]) {
-			swap(array[j\], array[j + 1\]);
-		}
-	}
+  for (int j = 0; j < n - i - 1; j++) {
+    if (array[j\] > array[j + 1\]) {
+      swap(array[j\], array[j + 1\]);
+    }
+  }
 }
 endsnippet
 
@@ -165,29 +165,27 @@ cout << "=> ? = ";
 cin >> menuNumber;
 
 switch (menuNumber) {
-	case 0:
-	break;
-	case 1:
-	$2
+  case 0:
+  break;
+  case 1:
+  $2
 
-	break;
+  break;
 }
 } while (menuNumber != 0);
 endsnippet
 
 snippet kiemTraSoNguyenTo
 bool kiemTraSoNguyenTo(int number) {
-int count = 0;
-
-if (number < 2) {
-	return = false;
-} else {
-	for (int i = 2; i <= number / 2; i++) {
-	if (number % i == 0) {
-		return false;
-	}
-	}
-}
-return true;
+  if (number < 2) {
+    return = false;
+  } else {
+    for (int i = 2; i <= number / 2; i++) {
+      if (number % i == 0) {
+        return false;
+      }
+    }
+  }
+  return true;
 }
 endsnippet
