@@ -40,3 +40,6 @@ autocmd BufRead,BufNewFile,BufEnter *.md nmap <silent> <enter> 3b//.md)<enter>gf
 
 autocmd BufRead,BufNewFile,BufEnter *.md inoremap <c-k> [](<>)<esc>F<pT[i
 autocmd BufRead,BufNewFile,BufEnter *.md vnoremap <c-k> c[<esc>pa](<>)<esc>T<h"*p
+
+" @todo rename header -> change every link name
+" @body @thuanpham2311
