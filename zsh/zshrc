@@ -197,8 +197,8 @@ alias dow='cd ~/Downloads ; l'
 alias doc='cd ~/Documents ; l'
 alias tmp='cd /tmp ; l'
 
-alias yt='youtube-dl -f bestvideo+bestaudio'
-alias yta='youtube-dl -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"'
+alias yt='yt-dlp -f bestvideo+bestaudio'
+alias yta='yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"'
 
 function syncMusic() {
     cd ~/Music/
