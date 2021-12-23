@@ -89,8 +89,9 @@
 - `H`: is `:cprevious` the previous error in the list
 - `L`: is `:cNext` the next error in the list
 - `M`: is `Ctrl + ^`, switch between the previous file.
-- `Shift + enter` normal/insert mode: new line on bottom (require my kitty/Alacritty config, still stay in normal/insert mode)
-- `Ctrl + enter` normal/insert mode: new line on top (require my kitty/Alacritty config, still stay in normal/insert mode)
+- `Shift + up` normal/insert mode: new line on bottom
+- `Shift + down` normal/insert mode: new line on top
+  > i use [touchcursor linux](https://github.com/donniebreve/touchcursor-linux) to map hold space to [vim mode](https://github.com/thuanpham2311/touchcursor-vim), in this case this easy to me
 
 #### Writing
 
