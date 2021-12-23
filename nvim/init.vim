@@ -81,6 +81,8 @@ omap ic <Plug>(coc-classobj-i)
 xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
 
+Plug 'https://github.com/wakatime/vim-wakatime'
+
 Plug 'https://github.com/Krafi2/jeskape.nvim'
 
 Plug 'https://github.com/dhruvasagar/vim-zoom'
