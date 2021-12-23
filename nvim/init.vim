@@ -102,8 +102,8 @@ autocmd VimEnter * FloatermNew --silent
 
 let g:floaterm_keymap_toggle = '<c-s>'
 
-noremap <silent> gp :FloatermSend! cd %:p:h ; git push ; cd -<enter>
-noremap <silent> gP :FloatermSend! cd %:p:h ; git push -f ; cd -<enter>
+noremap <silent> gp :FloatermSend! cd %:p:h ; git pull ; git push ; cd -<enter>
+noremap <silent> gP :FloatermSend! cd %:p:h ; git pull ; git push -f ; cd -<enter>
 
 command! GitHubIssueList execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/fzfConfig.zsh ; cd %:h:p ; gitHubIssueList"
 noremap <silent> gil :GitHubIssueList<enter>
