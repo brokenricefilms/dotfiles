@@ -70,9 +70,8 @@ inoremap <C-j> <Plug>(coc-snippets-expand-jump)
 
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
-command! -nargs=0 EditSnippets :call CocAction('runCommand', 'snippets.editSnippets')
-command! -nargs=0 FormatFile :call CocAction('runCommand', 'prettier.formatFile')
-command! -nargs=0 RenameCurrentWord :call CocAction('runCommand', 'document.renameCurrentWord')
+command! EditSnippets :CocCommand snippets.editSnippets<enter>
+command! RenameFile :CocCommand workspace.renameCurrentFile<enter>
 
 xmap if <Plug>(coc-funcobj-i)
 omap if <Plug>(coc-funcobj-i)
