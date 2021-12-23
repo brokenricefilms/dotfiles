@@ -138,6 +138,7 @@ alias n='nnn -de'
 alias dud='du -d 1 -h'
 alias gn='cd ~/sync/note/ ; nvim -c "NumberLineOff" README.md'
 alias updateApplications='sudo ln -sf ~/dotfiles/applications/* /usr/share/applications/'
+alias fak='git stash &>/dev/null; git stash clear'
 
 # music stuff
 alias m='mpv --shuffle --loop-playlist ~/Music/*'
