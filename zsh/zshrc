@@ -137,7 +137,6 @@ alias grep='grep --color=auto'
 alias n='nnn -de'
 alias dud='du -d 1 -h'
 alias gn='cd ~/sync/note/ ; nvim -c "NumberLineOff" README.md'
-alias shit='sudo $(fc -ln -1)'
 alias updateApplications='sudo ln -sf ~/dotfiles/applications/* /usr/share/applications/'
 
 # music stuff
