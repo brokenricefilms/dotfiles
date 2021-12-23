@@ -417,5 +417,5 @@ comman! Reload execute "silent source ~/.config/nvim/init.vim | silent !tmux sou
 command! Light execute "silent !light" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
 command! Dark execute "silent !dark" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
 command! DeleteDosLineEngdingChar execute "%s/\r$/ /g"
-command! PlugCle execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf" | execute "PlugClean"
-command! PlugIns execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf" | execute "PlugInstall"
+command! PlugCleanWithReloadConfigFile execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf" | execute "PlugClean"
+command! PlugInstallWithReloadConfigFile execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf" | execute "PlugInstall"
