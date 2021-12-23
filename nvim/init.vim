@@ -41,6 +41,19 @@ endfunction
 nmap <silent> [d :call CocAction('diagnosticNext')<enter>
 nmap <silent> ]d :call CocAction('diagnosticPrevious')<enter>
 
+command! ShowDocumentation :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+nmap <leader>i <Plug>(coc-rename)
+nmap <leader>I :%s/\<<C-r><C-w>\>/
+
 nmap <silent> <leader>c :CocAction<enter>
 
 noremap <silent> <Leader>; :CocCommand<enter>
@@ -395,8 +408,6 @@ noremap J :bnext<enter>
 noremap K :bprevious<enter>
 
 noremap Y y$
-
-nnoremap <leader>i :%s/\<<C-r><C-w>\>/
 
 nmap <silent> <leader>x :!xdg-open '%'<enter><enter>
 
