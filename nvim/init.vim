@@ -157,8 +157,6 @@ nmap <silent> me :lua require("harpoon.ui").nav_file(8)<enter>
 nmap <silent> mr :lua require("harpoon.ui").nav_file(9)<enter>
 nmap <silent> mt :lua require("harpoon.ui").nav_file(10)<enter>
 
-Plug 'https://github.com/nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
 Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
 
 Plug 'https://github.com/junegunn/fzf.vim'
@@ -250,10 +248,6 @@ Plug 'https://github.com/leafOfTree/vim-matchtag'
 Plug 'https://github.com/tpope/vim-surround'
 
 set virtualedit=block
-
-Plug 'https://github.com/windwp/nvim-autopairs'
-
-Plug 'https://github.com/windwp/nvim-ts-autotag'
 
 Plug 'https://github.com/preservim/nerdcommenter'
 
