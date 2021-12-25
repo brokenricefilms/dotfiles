@@ -10,9 +10,15 @@ Invoke-Expression (&starship init powershell)
 Import-Module -Name PSFzf
 set-PSFzfOption -PSReadlineChordReverseHistory  'ctrl+r'
 
-function dow { Set-location -Path ~\Downloads }
+function dow {
+    Set-location -Path $env:USERPROFILE\Downloads
+    Get-ChildItem
+}
 
-function doc { Set-location -Path $env:USERPROFILE/Documents }
+function doc {
+    Set-location -Path $env:USERPROFILE\Documents\
+    Get-ChildItem
+}
 
 function e { exit }
 
@@ -30,10 +36,11 @@ function .. { Set-location .. }
 
 function ... { Set-location .. ; Set-location .. }
 
+Remove-Alias cd
 function cd {
 	$path=$args[0]
 	Set-location -Path $path
-	ls
+	Get-ChildItem
 }
 
 function ins {
