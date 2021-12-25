@@ -1,5 +1,7 @@
 Import-Module -Name Recycle
+Set-Alias t Remove-ItemSafely
 
+Import-Module PSReadLine
 Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -PredictionSource History
 
@@ -17,7 +19,6 @@ function e { exit }
 Set-Alias vi nvim
 Set-Alias vim nvim
 Set-Alias v nvim
-Set-Alias t Remove-ItemSafely
 
 function Get-ChildItem-Hidden { Get-ChildItem -Force }
 
@@ -63,3 +64,6 @@ function which ($command) {
 
 function push { git push }
 function pull { git pull }
+function st { git status -sb }
+function dv { git difftool }
+function gl { git log --oneline | head -n 5 }
