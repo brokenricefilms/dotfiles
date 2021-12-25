@@ -1,4 +1,6 @@
-# My dotfiles
+# Thuan's Linux dotfiles
+
+> For Windows [change the branch to linux](<https://github.com/thuanpham2311/dotfiles/tree/windows>)
 
 **↓↓Table of Contents↓↓**
 
