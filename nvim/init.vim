@@ -186,7 +186,7 @@ let g:fzf_colors =
 noremap <leader>F :Files ~<enter>
 noremap <expr> <leader>f fugitive#head() != '' ? ':set autochdir<enter>:GFiles --cached --others --exclude-standard<CR>' : ':Files<CR>'
 noremap <expr> <leader>gf fugitive#head() != '' ? ':set autochdir<enter>:GFiles?<enter>' : ':Files<CR>'
-noremap <expr> <leader>j fugitive#head() != '' ? ':set autochdir<enter>:GGrep<enter>' : ':Rg<CR>'
+noremap <expr> <leader>j fugitive#head() != '' ? ':set autochdir<enter>:GGrep<enter>' : ':Ag<CR>'
 noremap <leader>k :Buffers<enter>
 noremap <leader>h :History<enter>
 noremap ; :Commands<enter>
