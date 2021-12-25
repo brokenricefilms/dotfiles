@@ -90,7 +90,7 @@ let g:zoom#statustext = '[ zoomed ]'
 
 " don't recommend use this for the long long like log command (yarn dev,...)
 Plug 'https://github.com/voldikss/vim-floaterm'
-
+let g:floaterm_shell="pwsh"
 let g:floaterm_width=0.9
 let g:floaterm_height=0.9
 let g:floaterm_title=""
