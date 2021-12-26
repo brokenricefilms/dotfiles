@@ -400,6 +400,7 @@ nnoremap gk k
 noremap <silent> gx :silent execute "!xdg-open " . "<cfile>"<enter>
 
 nnoremap <leader>w :w<enter>
+nnoremap <leader>ư :w<enter>
 nnoremap <leader>q :q<enter>
 nnoremap <leader>o :wq<enter>
 nnoremap Q :qa!<enter>
