@@ -9,6 +9,7 @@ Invoke-Expression (&starship init powershell)
 
 Import-Module -Name PSFzf
 set-PSFzfOption -PSReadlineChordReverseHistory  'ctrl+r'
+Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
 
 function dow {
     Set-location -Path $env:USERPROFILE\Downloads
