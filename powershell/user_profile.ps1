@@ -1,37 +1,32 @@
+Import-Module -Name PSFzf
 Import-Module -Name Recycle
-Set-Alias t Remove-ItemSafely
-
 Import-Module PSReadLine
-Set-PSReadLineOption -PredictionViewStyle ListView
-Set-PSReadLineOption -PredictionSource History
 
 Invoke-Expression (&starship init powershell)
 
-Import-Module -Name PSFzf
+Set-PSReadLineOption -PredictionViewStyle ListView
+Set-PSReadLineOption -PredictionSource History
 set-PSFzfOption -PSReadlineChordReverseHistory  'ctrl+r'
 Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
-
-function dow {
-    Set-location -Path $env:USERPROFILE\Downloads
-    Get-ChildItem
-}
-
-function doc {
-    Set-location -Path $env:USERPROFILE\Documents\
-    Get-ChildItem
-}
-
-function e { exit }
 
 Set-Alias vi nvim
 Set-Alias vim nvim
 Set-Alias v nvim
+Set-Alias t Remove-ItemSafely
+Set-Alias la Get-ChildItem-Hidden
+Set-Alias l Get-ChildItem
+
+function push { git push }
+
+function pull { git pull }
+
+function st { git status -sb }
+
+function dv { git difftool }
+
+function gl { git log --oneline | head -n 5 }
 
 function Get-ChildItem-Hidden { Get-ChildItem -Force }
-
-Set-Alias la Get-ChildItem-Hidden
-
-Set-Alias l Get-ChildItem
 
 function .. { Set-location .. }
 
@@ -70,8 +65,21 @@ function which ($command) {
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
 
-function push { git push }
-function pull { git pull }
-function st { git status -sb }
-function dv { git difftool }
-function gl { git log --oneline | head -n 5 }
+function c {
+    $dir=fd -t d . $HOME --hidden --exclude .git --exclude undodir --exclude scoop --exclude AppData --exclude .cache | fzf
+    Set-location $dir
+    Get-ChildItem
+}
+
+function dow {
+    Set-location -Path $env:USERPROFILE\Downloads
+    Get-ChildItem
+}
+
+function doc {
+    Set-location -Path $env:USERPROFILE\Documents\
+    Get-ChildItem
+}
+
+function e { exit }
+
