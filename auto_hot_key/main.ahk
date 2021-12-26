@@ -1,5 +1,3 @@
-#Include %A_ScriptDir%\desktop_switcher.ahk
-
 launch_or_swich_chrome()
 {
 IfWinExist ahk_exe chrome.exe
@@ -26,7 +24,6 @@ Else
 Return
 }
 
-!w::launch_or_swich_chrome()
-!c::launch_or_swich_windows_terminal()
-
-!q::!F4
+F1::launch_or_swich_chrome()
+F2::launch_or_swich_windows_terminal()
+F4::!F4
