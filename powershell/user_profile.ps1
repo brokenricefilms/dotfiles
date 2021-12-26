@@ -32,6 +32,8 @@ function .. { Set-location .. }
 
 function ... { Set-location .. ; Set-location .. }
 
+function e { exit }
+
 Remove-Alias cd
 function cd {
 	$path=$args[0]
@@ -65,12 +67,6 @@ function which ($command) {
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
 
-function c {
-    $dir=fd -t d . $HOME --hidden --exclude .git --exclude undodir --exclude scoop --exclude AppData --exclude .cache | fzf
-    Set-location $dir
-    Get-ChildItem
-}
-
 function dow {
     Set-location -Path $env:USERPROFILE\Downloads
     Get-ChildItem
@@ -81,5 +77,19 @@ function doc {
     Get-ChildItem
 }
 
-function e { exit }
+function c {
+    $dir=fd -t d . $HOME --hidden --exclude .git --exclude undodir --exclude scoop --exclude AppData --exclude .cache | fzf
+    Set-location $dir
+    Get-ChildItem
+}
+
+
+function f() {
+    $file=fd . $HOME -t f --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude scoop --exclude AppData --exclude .cache | fzf
+    if ($file -eq '') {
+        Write-Out 'fak'
+    } else {
+        nvim "$file"
+    }
+}
 
