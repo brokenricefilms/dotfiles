@@ -1,13 +1,25 @@
 
 ; This AutoHotkey script is to Open, Restore or Minimize the desires Apps using the configured shortcuts key (hotkeys) you want.
-; There are three functions you can use for this:
+; There are three functions you can use for this: 
 ;
 ;
 ; a) OpenOrShowAppBasedOnExeName(AppAddress) //Useful for regular Window Apps
 
-; b) OpenOrShowAppBasedOnWindowTitle(WindowTitleWord, AppAddress)  //Specially useful for Chrome Apps and Chrome Shortcuts
+; b) OpenOrShowAppBasedOnWindowTitle(WindowTitleWord, AppAddress)  //Specially useful for Chrome Apps and Chrome Shortcuts 
 
 ; c) OpenOrShowAppBasedOnAppModelUserID(AppTitle, AppModelUserID) //Useful for Windows Store Apps (contained in the "shell:AppsFolder\")
+
+
+; Additionally, pressing Alt + ` (key above Tab key) you can switch between open Windows of the same "type" and same App (.exe)
+; The "type" checking is based on the App's Title convention that stipulates that the App name should be at the end of the Window title (Eg: New Document - Word )
+
+
+
+/* ;
+*****************************
+***** UTILITY FUNCTIONS *****
+*****************************
+*/
 
 
 #WinActivateForce ; Prevent task bar buttons from flashing when different windows are activated quickly one after the other.
@@ -21,11 +33,11 @@ OpenOrShowAppBasedOnExeName(AppAddress)
 
 
 	AppExeName := SubStr(AppAddress, InStr(AppAddress, "\", false, -1) + 1)
-
+		
 
 	IfWinExist ahk_exe %AppExeName%
 	{
-
+	
 		IfWinActive
 		{
 			WinMinimize
@@ -36,11 +48,11 @@ OpenOrShowAppBasedOnExeName(AppAddress)
 			WinActivate
 			Return
 		}
-
+				
 	}
 	else
-	{
-
+	{	
+	
 		Run, %AppAddress%, UseErrorLevel
         If ErrorLevel
         {
@@ -50,10 +62,10 @@ OpenOrShowAppBasedOnExeName(AppAddress)
 		else
 		{
 			WinWait, ahk_exe %AppExeName%
-			WinActivate ahk_exe %AppExeName%
+			WinActivate ahk_exe %AppExeName%			
 			Return
-		}
-
+		}			
+		
 	}
 }
 
@@ -65,10 +77,10 @@ OpenOrShowAppBasedOnWindowTitle(WindowTitleWord, AppAddress)
 {
 
 	SetTitleMatchMode, 2
-
+	
 
     IfWinExist, %WindowTitleWord%
-    {
+    {    
 
 		IfWinActive
 		{
@@ -80,7 +92,7 @@ OpenOrShowAppBasedOnWindowTitle(WindowTitleWord, AppAddress)
 			WinActivate
 			Return
 		}
-
+	
 	}
     else
     {
@@ -109,7 +121,7 @@ OpenOrShowAppBasedOnAppModelUserID(AppTitle, AppModelUserID)
 	SetTitleMatchMode, 2
 
     IfWinExist, %AppTitle%
-    {
+    {    
 
 		IfWinActive
 		{
@@ -120,7 +132,7 @@ OpenOrShowAppBasedOnAppModelUserID(AppTitle, AppModelUserID)
 		{
 			WinActivateBottom %AppTitle%
 		}
-
+		
 	}
     else
     {
@@ -131,7 +143,7 @@ OpenOrShowAppBasedOnAppModelUserID(AppTitle, AppModelUserID)
             Msgbox, File %AppModelUserID% Not Found
             Return
         }
-
+		
     }
 }
 
@@ -151,20 +163,23 @@ ExtractAppTitle(FullTitle)
 
 
 ; F7 - Open||Show "SnippingTool"
-; F7:: OpenOrShowAppBasedOnExeName("C:\Windows\System32\SnippingTool.exe")
+F7:: OpenOrShowAppBasedOnExeName("C:\Windows\System32\SnippingTool.exe")
 
 ; F8 - Open||Show "Gmail as Chrome App"
-; F8:: OpenOrShowAppBasedOnWindowTitle("Gmail", "C:\Program Files\Google\Chrome\Application\chrome.exe --app=https://mail.google.com/mail/")
+F8:: OpenOrShowAppBasedOnWindowTitle("Gmail", "C:\Program Files\Google\Chrome\Application\chrome.exe --app=https://mail.google.com/mail/")
 /*
  Use this if you have your chrome in the "Program Files (x86)" folder
  F8:: OpenOrShowAppBasedOnWindowTitle("Gmail", "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe --app=https://mail.google.com/mail/")
  */
 
 ; F9 - Open||Show "Windows store Calculator app"
-; F9:: OpenOrShowAppBasedOnAppModelUserID("Calculator", "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App")
+F9:: OpenOrShowAppBasedOnAppModelUserID("Calculator", "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App")
+
+
+
 
 ; Alt + ` -  Activate NEXT Window of same type (title checking) of the current APP
-F3::
+!`::
 WinGet, ActiveProcess, ProcessName, A
 WinGet, OpenWindowsAmount, Count, ahk_exe %ActiveProcess%
 
@@ -186,21 +201,3 @@ Else
 	}
 Return
 
-toggleMaxWindow()
-{
-    WinGet, WinState, MinMax, A
-        if (WinState = 1)
-        {
-            WinRestore, A
-        }
-        else
-        {
-            WinMaximize, A
-        }
-}
-
-F8::OpenOrShowAppBasedOnExeName("C:\Program Files\Google\Chrome\Application\chrome.exe")
-F9::OpenOrShowAppBasedOnExeName("C:\Users\PC\AppData\Local\Microsoft\WindowsApps\WindowsTerminal.exe")
-F1::toggleMaxWindow()
-$F4::Send !{Tab}
-F3::!Tab
