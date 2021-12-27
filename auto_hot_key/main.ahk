@@ -179,20 +179,6 @@ Else
 	}
 Return
 
-toggleMaxWindow()
-{
-    WinGet, WinState, MinMax, A
-        if (WinState = 1)
-        {
-            WinRestore, A
-        }
-        else
-        {
-            WinMaximize, A
-        }
-}
-
 F1::OpenOrShowAppBasedOnExeName("C:\Program Files\Google\Chrome\Application\chrome.exe")
 F2::OpenOrShowAppBasedOnWindowTitle("PowerShell", "C:\Users\PC\AppData\Local\Microsoft\WindowsApps\wt.exe")
-F7::toggleMaxWindow()
 $F4::Send !{Tab}
