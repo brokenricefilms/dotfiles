@@ -1,4 +1,3 @@
-
 ; This AutoHotkey script is to Open, Restore or Minimize the desires Apps using the configured shortcuts key (hotkeys) you want.
 ; There are three functions you can use for this:
 ;
@@ -200,7 +199,7 @@ toggleMaxWindow()
 }
 
 F8::OpenOrShowAppBasedOnExeName("C:\Program Files\Google\Chrome\Application\chrome.exe")
-F9::OpenOrShowAppBasedOnExeName("C:\Users\PC\AppData\Local\Microsoft\WindowsApps\WindowsTerminal.exe")
+F9::OpenOrShowAppBasedOnWindowTitle("PowerShell", "C:\Users\PC\AppData\Local\Microsoft\WindowsApps\wt.exe")
 F1::toggleMaxWindow()
 $F4::Send !{Tab}
 F3::!Tab
