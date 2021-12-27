@@ -1,7 +1,3 @@
-; This AutoHotkey script is to Open, Restore or Minimize the desires Apps using the configured shortcuts key (hotkeys) you want.
-; There are three functions you can use for this:
-;
-;
 ; a) OpenOrShowAppBasedOnExeName(AppAddress) //Useful for regular Window Apps
 
 ; b) OpenOrShowAppBasedOnWindowTitle(WindowTitleWord, AppAddress)  //Specially useful for Chrome Apps and Chrome Shortcuts
@@ -10,8 +6,6 @@
 
 
 #WinActivateForce ; Prevent task bar buttons from flashing when different windows are activated quickly one after the other.
-
-
 
 ; AppAddress: The address to the .exe (Eg: "C:\Windows\System32\SnippingTool.exe")
 
@@ -163,7 +157,7 @@ ExtractAppTitle(FullTitle)
 ; F9:: OpenOrShowAppBasedOnAppModelUserID("Calculator", "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App")
 
 ; Alt + ` -  Activate NEXT Window of same type (title checking) of the current APP
-F3::
+F5::
 WinGet, ActiveProcess, ProcessName, A
 WinGet, OpenWindowsAmount, Count, ahk_exe %ActiveProcess%
 
@@ -198,8 +192,7 @@ toggleMaxWindow()
         }
 }
 
-F8::OpenOrShowAppBasedOnExeName("C:\Program Files\Google\Chrome\Application\chrome.exe")
-F9::OpenOrShowAppBasedOnWindowTitle("PowerShell", "C:\Users\PC\AppData\Local\Microsoft\WindowsApps\wt.exe")
-F1::toggleMaxWindow()
+F1::OpenOrShowAppBasedOnExeName("C:\Program Files\Google\Chrome\Application\chrome.exe")
+F2::OpenOrShowAppBasedOnWindowTitle("PowerShell", "C:\Users\PC\AppData\Local\Microsoft\WindowsApps\wt.exe")
+F7::toggleMaxWindow()
 $F4::Send !{Tab}
-F3::!Tab

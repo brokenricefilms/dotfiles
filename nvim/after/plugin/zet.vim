@@ -20,7 +20,7 @@ function! s:make_note_link(l)
 endfunction
 
 autocmd BufRead,BufNewFile *.md inoremap <expr> [[ fzf#vim#complete({
-            \ 'source':  'rg --no-heading --smart-case  ^\#\ ',
+            \ 'source':  'ag ',
             \ 'reducer': function('<sid>make_note_link'),
             \ 'options': '--multi --reverse --margin 5%,0',
             \ 'down':    10})
