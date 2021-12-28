@@ -1,7 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Terminal=false
-Type=Application
-Name=bitwarden
-Exec=google-chrome --app="https://vault.bitwarden.com/#/vault"
-Icon=/home/master/dotfiles/applications/icons/bitwarden.png

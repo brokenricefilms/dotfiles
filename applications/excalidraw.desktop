@@ -1,7 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Terminal=false
-Type=Application
-Name=excalidraw
-Exec=google-chrome --app="https://excalidraw.com/"
-Icon=/home/master/dotfiles/applications/icons/excalidraw.png

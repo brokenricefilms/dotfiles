@@ -1,7 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Terminal=false
-Type=Application
-Name=youtube studio
-Exec=google-chrome --app="https://studio.youtube.com/channel/UCLAeh5SDjUBOjnE8HTXJLGw"
-Icon=/home/master/dotfiles/applications/icons/youtube.png
