@@ -249,14 +249,14 @@ function update () {
     flatpak update -y
 
     # arch base
-    # sudo pacman -Syu --noconfirm
-    # yay -Sua --noconfirm
+    sudo pacman -Syu --noconfirm
+    yay -Sua --noconfirm
 
     # debian base (ubuntu, kali,...)
-    sudo apt update
-    sudo apt upgrade -y
-    sudo apt autoremove -y
-    sudo apt autoclean
+    # sudo apt update
+    # sudo apt upgrade -y
+    # sudo apt autoremove -y
+    # sudo apt autoclean
 
     # rehat base (fedora)
     # sudo dnf update -y
