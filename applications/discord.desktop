@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=discord
-Exec=google-chrome --app="https://discord.com/channels/@me"
+Exec=google-chrome-stable --app="https://discord.com/channels/@me"
 Icon=/home/master/dotfiles/applications/icons/discord.png

@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=google photos
-Exec=google-chrome --app="https://photos.google.com"
+Exec=google-chrome-stable --app="https://photos.google.com"
 Icon=/home/master/dotfiles/applications/icons/google-photos.png

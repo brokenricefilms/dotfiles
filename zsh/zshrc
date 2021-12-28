@@ -140,6 +140,10 @@ alias gn='cd ~/sync/note/ ; nvim -c "NumberLineOff" README.md'
 alias updateApplications='sudo ln -sf ~/dotfiles/applications/* /usr/share/applications/'
 alias fak='git stash &>/dev/null; git stash clear'
 
+function wf() {
+    sudo sh -c "modprobe mt7921e ; echo 14c3 0608 > /sys/bus/pci/drivers/mt7921e/new_id"
+}
+
 # music stuff
 alias m='mpv --shuffle --loop-playlist ~/Music/*'
 
