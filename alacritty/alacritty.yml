@@ -1,8 +1,10 @@
+shell:
+  program: C:\Program Files\PowerShell\7\pwsh.exe
+
 env:
   TERM: xterm-256color
 
 window:
-  decorations: "none"
   dynamic_padding: true
 
 # https://raw.githubusercontent.com/mcchrish/zenbones.nvim/main/extras/alacritty/zenwritten_light.yml

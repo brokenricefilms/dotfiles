@@ -180,5 +180,5 @@ Else
 Return
 
 F1::OpenOrShowAppBasedOnExeName("C:\Program Files\Google\Chrome\Application\chrome.exe")
-F2::OpenOrShowAppBasedOnWindowTitle("PowerShell", "C:\Users\PC\AppData\Local\Microsoft\WindowsApps\wt.exe")
+F2::OpenOrShowAppBasedOnExeName("C:\Users\master\scoop\shims\alacritty.exe")
 $F4::Send !{Tab}
