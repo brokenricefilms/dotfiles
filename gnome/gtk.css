@@ -37,3 +37,11 @@ window.ssd headerbar.titlebar button.titlebutton {
   padding-bottom: 3px;
   min-height: 0;
 }
+
+/* disable padding bottom in gnome terminal */
+VteTerminal,
+TerminalScreen,
+vte-terminal {
+  padding: 0px 0px 0px 0px;
+  -vteterminal-inner-border: 0px 0px 0px 0px;
+}
