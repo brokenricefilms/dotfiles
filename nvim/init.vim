@@ -369,6 +369,8 @@ noremap <silent> <leader>7 7gt
 noremap <silent> <leader>8 8gt
 noremap <silent> <leader>9 9gt
 
+set spellfile=~/dotfiles/nvim/spell/en.utf-8.add
+
 noremap <silent> <space>s :setlocal spell! spell?<enter>
 
 set spelllang=en_us,vi
