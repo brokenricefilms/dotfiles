@@ -148,9 +148,9 @@ function wf() {
 alias m='mpv --shuffle --loop-playlist ~/Music/*'
 
 # ubuntu apt
-alias ins='sudo apt install -y'
-alias inss='apt search'
-alias uins='sudo apt remove -y'
+# alias ins='sudo apt install -y'
+# alias inss='apt search'
+# alias uins='sudo apt remove -y'
 
 # termux pkg
 # alias ins='pkg install -y'
@@ -162,9 +162,9 @@ alias uins='sudo apt remove -y'
 # alias uins='sudo dnf -y remove'
 
 # arch
-# alias ins='sudo pacman -S --noconfirm'
-# alias ins2='yay -S --noconfirm'
-# alias uins='sudo pacman -Rs --noconfirm'
+alias ins='sudo pacman -S --noconfirm'
+alias ins2='yay -S --noconfirm'
+alias uins='sudo pacman -Rs --noconfirm'
 
 alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 50 ; tmux last-pane ; nvim'
 # alias ide='tmux split-window -v -p 8 ; tmux last-pane ; nvim'

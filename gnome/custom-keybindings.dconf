@@ -1,5 +1,5 @@
 [custom0]
-binding='F2'
+binding='<Super>Return'
 command='kitty'
 name='terminal'
 
