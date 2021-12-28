@@ -164,6 +164,7 @@ alias m='mpv --shuffle --loop-playlist ~/Music/*'
 
 # arch
 alias ins='sudo pacman -S --noconfirm'
+alias inss='sudo pacman -Ss'
 alias ins2='yay -S --noconfirm'
 alias uins='sudo pacman -Rs --noconfirm'
 
