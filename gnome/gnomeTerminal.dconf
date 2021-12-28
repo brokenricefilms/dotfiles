@@ -1,10 +1,33 @@
 [legacy]
 default-show-menubar=false
 headerbar=@mb false
-menu-accelerator-enabled=true
+menu-accelerator-enabled=false
 
 [legacy/keybindings]
+close-tab='disabled'
+close-window='disabled'
+find='disabled'
+find-clear='disabled'
+find-next='disabled'
+find-previous='disabled'
 full-screen='F11'
+move-tab-left='disabled'
+move-tab-right='disabled'
+new-tab='disabled'
+new-window='disabled'
+next-tab='disabled'
+prev-tab='disabled'
+switch-to-tab-1='disabled'
+switch-to-tab-10='disabled'
+switch-to-tab-2='disabled'
+switch-to-tab-3='disabled'
+switch-to-tab-4='disabled'
+switch-to-tab-5='disabled'
+switch-to-tab-6='disabled'
+switch-to-tab-7='disabled'
+switch-to-tab-8='disabled'
+switch-to-tab-9='disabled'
+toggle-menubar='F10'
 zoom-in='<Primary>equal'
 
 [legacy/profiles:]
