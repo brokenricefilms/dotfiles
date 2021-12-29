@@ -56,11 +56,9 @@ nmap <leader>i <Plug>(coc-rename)
 nmap <leader>I :%s/\<<C-r><C-w>\>/
 
 nmap <silent> <leader>c :CocAction<enter>
-
 noremap <silent> <Leader>; :CocCommand<enter>
 
 imap <C-l> <Plug>(coc-snippets-expand)
-
 vmap <C-j> <Plug>(coc-snippets-select)
 
 let g:coc_snippet_prev = '<c-k>'
@@ -68,7 +66,6 @@ let g:coc_snippet_prev = '<c-k>'
 xmap <leader>x  <Plug>(coc-convert-snippet)
 
 inoremap <C-j> <Plug>(coc-snippets-expand-jump)
-
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 command! -nargs=0 EditSnippets :call CocAction('runCommand', 'snippets.editSnippets')
@@ -82,11 +79,14 @@ omap ic <Plug>(coc-classobj-i)
 xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
 
+Plug 'Pocco81/AutoSave.nvim'
+
 Plug 'https://github.com/wakatime/vim-wakatime'
 
 Plug 'https://github.com/Krafi2/jeskape.nvim'
 
 Plug 'https://github.com/dhruvasagar/vim-zoom'
+
 nmap <leader>z <Plug>(zoom-toggle)
 let g:zoom#statustext = '[ zoomed ]'
 
