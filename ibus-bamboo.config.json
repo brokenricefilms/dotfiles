@@ -162,10 +162,21 @@
   "OutputCharset": "Unicode",
   "Flags": 7,
   "IBflags": 262642,
-  "Shortcuts": [5, 105, 0, 0, 0, 0, 0, 0, 0, 0],
+  "Shortcuts": [
+    5,
+    105,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
   "DefaultInputMode": 3,
   "InputModeMapping": {
-    "discord.com__channels_@me:Google-chrome": 1
+    "discord.com__channels_@me:Google-chrome": 1,
+    "google-chrome:Google-chrome": 1
   }
 }
-
