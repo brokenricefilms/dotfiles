@@ -1,10 +1,10 @@
-Hints.characters = "asdghklqwertyuiopzxcvbnmfj1234567890;/.,][-=`";
+api.Hints.characters = "asdghklqwertyuiopzxcvbnmfj1234567890;/.,][-=`";
 
 const hintsCss =
   "font-size: 10pt; font-family: JetBrains Mono NL,SauceCodePro Nerd Font, Consolas, Menlo, monospace; border: 0px; color:#2c363c; background: initial; background-color: #f0edec;";
 
-Hints.style(hintsCss);
-Hints.style(hintsCss, "text");
+api.Hints.style(hintsCss);
+api.Hints.style(hintsCss, "text");
 
 settings.theme = `
 .sk_theme {
