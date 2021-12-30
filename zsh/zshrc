@@ -250,7 +250,7 @@ function update () {
 
     # arch base
     sudo pacman -Syu --noconfirm
-    yay -Sua --noconfirm
+    yay -Syu --noconfirm
 
     # debian base (ubuntu, kali,...)
     # sudo apt update

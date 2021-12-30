@@ -160,7 +160,7 @@ function gitHubIssueComment() {
 }
 alias gim='gitHubIssueComment'
 
-function listAlias() {
+function getAlias() {
     CMD=$(
         (
             (alias)
@@ -171,7 +171,7 @@ function listAlias() {
     eval $CMD
 }
 
-function listEnv() {
+function getEnvironment() {
   local out
   out=$(env | fzf)
   echo $(echo $out | cut -d= -f2)
