@@ -79,7 +79,7 @@ omap ic <Plug>(coc-classobj-i)
 xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
 
-Plug 'Pocco81/AutoSave.nvim'
+Plug 'https://github.com/pocco81/autosave.nvim'
 
 Plug 'https://github.com/wakatime/vim-wakatime'
 
