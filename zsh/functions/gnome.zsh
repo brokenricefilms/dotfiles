@@ -15,3 +15,11 @@ function gnomeTerminalBackup {
 function gnomeTerminalRestore {
     dconf load '/org/gnome/terminal/' < ~/dotfiles/gnome/gnomeTerminal.dconf
 }
+
+function gnomeSettingBackup {
+    dconf dump / > ~/dotfiles/gnome/gnomeSetting.dconf
+}
+
+function gnomeSettingRestore {
+    dconf load / < ~/dotfiles/gnome/gnomeSetting.dconf
+}
