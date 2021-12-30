@@ -420,7 +420,11 @@ noremap L :cnext<enter>
 noremap J :bnext<enter>
 noremap K :bprevious<enter>
 
-noremap Y y$
+imap , ,<c-g>u
+imap . .<c-g>u
+imap ! !<c-g>u
+imap ? ?<c-g>u
+imap [ [<c-g>u
 
 nmap <silent> <leader>x :!xdg-open '%'<enter><enter>
 

@@ -16,11 +16,6 @@ require("jeskape").setup {
             j = "<esc>",
             k = "<esc>",
         },
-        [","] = ",<c-g>u",
-        ["."] = ".<c-g>u",
-        ["!"] = "!<c-g>u",
-        ["?"] = "?<c-g>u",
-        ["["] = "[<c-g>u",
-        },
         timeout = vim.o.timeoutlen,
     }
+}
