@@ -119,6 +119,7 @@ function fzfMan() {
     fi
 }
 alias M='fzfMan'
+alias help="fzfMan"
 
 # @todo [zsh] af if not have session create new like fzf session switch tmux plugin
 # @body @thuanpham2311
