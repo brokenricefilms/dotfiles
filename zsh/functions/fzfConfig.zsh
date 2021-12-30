@@ -170,5 +170,11 @@ function listAlias() {
     eval $CMD
 }
 
+function listEnv() {
+  local out
+  out=$(env | fzf)
+  echo $(echo $out | cut -d= -f2)
+}
+
 source ~/dotfiles/zsh/functions/fzf-tab/fzf-tab.plugin.zsh
 source ~/dotfiles/zsh/functions/fzf-zsh-completions/fzf-zsh-completions.plugin.zsh
