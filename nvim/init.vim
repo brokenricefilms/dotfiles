@@ -80,6 +80,7 @@ xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
 
 Plug 'https://github.com/pocco81/autosave.nvim'
+let g:auto_save_events = ["InsertLeave"]
 
 Plug 'https://github.com/wakatime/vim-wakatime'
 
