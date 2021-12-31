@@ -42,7 +42,7 @@ endfunction
 nmap <silent> [d :call CocAction('diagnosticNext')<enter>
 nmap <silent> ]d :call CocAction('diagnosticPrevious')<enter>
 
-command! ShowDocumentation :call <SID>show_documentation()<CR>
+command! ShowDocumentation :call <SID>show_documentation()<enter>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -189,9 +189,10 @@ let g:fzf_colors =
             \ 'header':  ['fg', 'Comment'] }
 
 noremap <leader>F :Files ~<enter>
-noremap <expr> <leader>f fugitive#head() != '' ? ':set autochdir<enter>:GFiles --cached --others --exclude-standard<CR>' : ':Files<CR>'
-noremap <expr> <leader>gf fugitive#head() != '' ? ':set autochdir<enter>:GFiles?<enter>' : ':Files<CR>'
-noremap <expr> <leader>j fugitive#head() != '' ? ':set autochdir<enter>:GGrep<enter>' : ':Rg<CR>'
+noremap <leader>f :Files<enter>
+noremap <expr> <leader>gf fugitive#head() != '' ? ':GFiles?<enter>' : ':Files<enter>'
+autocmd BufRead,BufNewFile,BufEnter *.md noremap <expr> <leader>j fugitive#head() != '' ? ':GGrep<enter>' : ':Rg<enter>'
+noremap <leader>j :Rg<enter>
 noremap <leader>k :Buffers<enter>
 noremap <leader>h :History<enter>
 noremap ; :Commands<enter>
@@ -226,7 +227,7 @@ Plug 'https://github.com/iamcco/markdown-preview.nvim', {'do': 'cd app & yarn in
 
 Plug 'https://github.com/ferrine/md-img-paste.vim'
 
-autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
+autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<enter>
 let g:mdip_imgdir = 'img'
 let g:mdip_imgname = 'image'
 
@@ -385,7 +386,7 @@ function! FzfSpell()
     return fzf#run(fzf#wrap({'source': suggestions, 'sink': function("FzfSpellSink"), 'window': { 'width': 0.2, 'height': 0.9, 'xoffset': 1 }}))
 endfunction
 
-nnoremap z= :call FzfSpell()<CR>
+nnoremap z= :call FzfSpell()<enter>
 
 noremap ss :split<Return><C-w>w
 noremap sv :vsplit<Return><C-w>w
