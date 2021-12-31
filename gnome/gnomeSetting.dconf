@@ -1,5 +1,10 @@
 [ca/desrt/dconf-editor]
+saved-pathbar-path='power'
+saved-view='/org/gnome/settings-daemon/plugins/power/'
 show-warning=false
+window-height=500
+window-is-maximized=false
+window-width=540
 
 [com/github/maoschanz/DynamicWallpaperEditor]
 display-mode='list'
@@ -39,7 +44,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='keyboard'
+last-panel='mouse'
 
 [org/gnome/desktop/app-folders]
 folder-children=['accessories', 'system-tools']
@@ -81,12 +86,15 @@ font-antialiasing='grayscale'
 font-hinting='slight'
 font-name='DejaVu Sans 11'
 gtk-im-module='ibus'
-gtk-theme='WhiteSur-light'
-icon-theme='Papirus-Light'
+gtk-theme='Adwaita'
+icon-theme='Adwaita'
 show-battery-percentage=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel']
+application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel', 'ca-desrt-dconf-editor']
+
+[org/gnome/desktop/notifications/application/ca-desrt-dconf-editor]
+application-id='ca.desrt.dconf-editor.desktop'
 
 [org/gnome/desktop/notifications/application/gnome-network-panel]
 application-id='gnome-network-panel.desktop'
@@ -201,7 +209,7 @@ active-plugins=['modelines', 'docinfo', 'sort', 'spell', 'filebrowser']
 [org/gnome/gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/master/.ssh'
+virtual-root='file:///home/master/Downloads'
 
 [org/gnome/gedit/preferences/ui]
 show-tabs-mode='auto'
@@ -211,7 +219,7 @@ bottom-panel-size=140
 side-panel-active-page='GeditWindowDocumentsPanel'
 side-panel-size=200
 size=(900, 700)
-state=87040
+state=87168
 
 [org/gnome/gnome-screenshot]
 delay=0
@@ -240,6 +248,7 @@ col-6-width=0
 browser-sidebar-width=285
 fullscreen-sidebar='hidden'
 fullscreen-thumbnails-visible=false
+go-to-last-location=true
 maximized=false
 properties-visible=false
 sidebar-sections=['GthFileProperties:expanded', 'GthFileComment:expanded', 'GthFileDetails:expanded', 'GthImageHistogram:expanded']
@@ -247,21 +256,69 @@ sidebar-visible=true
 sort-inverse=false
 sort-type='file::mtime'
 startup-current-file=''
-startup-location='file:///home/master/Downloads'
+startup-location='file:///'
 statusbar-visible=true
 thumbnail-list-visible=true
-viewer-sidebar='hidden'
+use-startup-location=false
+viewer-sidebar='properties'
+viewer-thumbnails-orientation='vertical'
 window-height=810
 window-width=1363
+
+[org/gnome/gthumb/crop]
+aspect-ratio='none'
+aspect-ratio-height=1
+aspect-ratio-invert=false
+aspect-ratio-width=1
+bind-dimensions=false
+bind-factor=8
+grid-type='thirds'
 
 [org/gnome/gthumb/data-migration]
 catalogs-2-10=true
 
 [org/gnome/gthumb/general]
-active-extensions=['23hq', 'bookmarks', 'burn_disc', 'catalogs', 'change_date', 'comments', 'contact_sheet', 'convert_format', 'desktop_background', 'edit_metadata', 'exiv2_tools', 'file_manager', 'find_duplicates', 'flicker', 'gstreamer_tools', 'gstreamer_utils', 'image_print', 'image_rotation', 'importer', 'jpeg_utils', 'list_tools', 'oauth', 'photo_importer', 'raw_files', 'red_eye_removal', 'rename_series', 'resize_images', 'search', 'selections', 'slideshow', 'terminal', 'webalbums']
+active-extensions=['resize_images', 'image_print', 'webalbums', 'search', 'list_tools', 'convert_format', 'exiv2_tools', 'flicker', 'edit_metadata', 'find_duplicates', 'rename_series', '23hq', 'photo_importer', 'gstreamer_tools', 'catalogs', 'desktop_background', 'change_date', 'contact_sheet', 'image_rotation', 'selections', 'bookmarks', 'terminal', 'file_manager', 'red_eye_removal', 'comments', 'slideshow']
+store-metadata-in-files=true
+
+[org/gnome/gthumb/image-print]
+font-name='Sans 12'
+footer-font-name='sans 8'
+header-font-name='sans Bold 12'
+
+[org/gnome/gthumb/pixbuf-savers/avif]
+lossless=false
+quality=50
+
+[org/gnome/gthumb/pixbuf-savers/jpeg]
+default-ext='jpeg'
+optimize=true
+progressive=false
+quality=85
+smoothing=0
+
+[org/gnome/gthumb/pixbuf-savers/png]
+compression-level=6
+
+[org/gnome/gthumb/pixbuf-savers/tga]
+rle-compression=true
+
+[org/gnome/gthumb/pixbuf-savers/tiff]
+compression='deflate'
+default-ext='tiff'
+horizontal-resolution=72
+vertical-resolution=72
+
+[org/gnome/gthumb/pixbuf-savers/webp]
+lossless=false
+method=4
+quality=75
+
+[org/gnome/gthumb/slideshow]
+transition='none'
 
 [org/gnome/mutter]
-center-new-windows=false
+center-new-windows=true
 dynamic-workspaces=false
 edge-tiling=true
 
@@ -277,6 +334,7 @@ restore-shortcuts=['<Super>Escape']
 default-zoom-level='small'
 
 [org/gnome/nautilus/preferences]
+click-policy='single'
 default-folder-viewer='icon-view'
 search-filter-time-type='last_modified'
 search-view='list-view'
@@ -296,6 +354,8 @@ night-light-enabled=false
 [org/gnome/settings-daemon/plugins/media-keys]
 area-screenshot-clip=['Print']
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+screen-brightness-down-static=['']
+screen-brightness-up-static=['']
 screensaver=@as []
 screenshot=@as []
 www=['<Alt>w']
@@ -366,7 +426,7 @@ dash-icon-size=0
 double-super-to-appgrid=true
 gesture=false
 hot-corner=true
-osd=false
+osd=true
 panel=false
 panel-arrow=true
 panel-corner-size=1
@@ -385,7 +445,7 @@ workspace-popup=false
 workspaces-in-app-grid=false
 
 [org/gnome/shell/extensions/user-theme]
-name='WhiteSur-light'
+name=''
 
 [org/gnome/shell/extensions/x11gestures]
 swipe-fingers=3
@@ -474,5 +534,5 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(359, 69)
+window-position=(359, 66)
 window-size=(1203, 902)
