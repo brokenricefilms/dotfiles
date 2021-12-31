@@ -132,7 +132,7 @@ af() {
 
 function co () {
     isInGitRepo || return
-    git branch -a | fzfDown | xargs git checkout
+    git branch -v -a | fzfDown | xargs git checkout
 }
 
 # function gitHubIssueList() { gh issue list | fzf | cut -f1 | wl-copy}
