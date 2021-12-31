@@ -130,9 +130,9 @@ af() {
     tmux switch-client -t "$session"
 }
 
-function co () {
+function sb() {
     isInGitRepo || return
-    git branch -v -a | fzfDown | xargs git checkout
+    git branch -a | fzfDown | xargs git switch
 }
 
 # function gitHubIssueList() { gh issue list | fzf | cut -f1 | wl-copy}
