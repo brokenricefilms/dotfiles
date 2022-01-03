@@ -440,8 +440,8 @@ xnoremap <silent> p p:let @+=@0<enter>:let @"=@0<enter>
 nnoremap M <c-^>
 
 command! OpenFileInBraveBrowser execute "silent !brave-browser '%'"
-" comand! CopyFileName execute "silent !echo % | wl-copy"
-command! CopyFileName execute "silent !echo % | xclip -sel clip"
+command! CopyFileName execute "silent !echo % | wl-copy"
+" command! CopyFileName execute "silent !echo % | xclip -sel clip"
 command! CopyFilePath execute "silent !echo %:p | xclip -sel clip"
 comman! Reload execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
 command! Light execute "silent !light" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"

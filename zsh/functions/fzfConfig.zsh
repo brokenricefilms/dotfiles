@@ -6,7 +6,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d"
 
 alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \$1 }' | wl-copy"
-alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \$1 }' | xclip -sel clip"
+# alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \$1 }' | xclip -sel clip"
 
 fzfDown() { fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse }
 
@@ -135,8 +135,8 @@ function sb() {
     git branch -a | fzfDown | xargs git switch
 }
 
-# function gitHubIssueList() { gh issue list | fzf | cut -f1 | wl-copy}
-function gitHubIssueList() { gh issue list | fzf | cut -f1 | xclip -sel clip}
+function gitHubIssueList() { gh issue list | fzf | cut -f1 | wl-copy}
+# function gitHubIssueList() { gh issue list | fzf | cut -f1 | xclip -sel clip}
 alias gil='gitHubIssueList'
 
 function gitHubIssueClose() {
