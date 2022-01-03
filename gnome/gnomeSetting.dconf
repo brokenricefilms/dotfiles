@@ -44,7 +44,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='mouse'
+last-panel='sound'
 
 [org/gnome/desktop/app-folders]
 folder-children=['accessories', 'system-tools']
@@ -74,7 +74,7 @@ secondary-color='#000000000000'
 mru-sources=[('xkb', 'us'), ('ibus', 'Bamboo')]
 per-window=false
 sources=[('xkb', 'us'), ('ibus', 'Bamboo')]
-xkb-options=['caps:escape', 'lv3:menu_switch']
+xkb-options=['lv3:menu_switch', 'caps:escape', 'shift:both_capslock_cancel']
 
 [org/gnome/desktop/interface]
 clock-format='12h'
@@ -92,6 +92,7 @@ show-battery-percentage=false
 
 [org/gnome/desktop/notifications]
 application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel', 'ca-desrt-dconf-editor']
+show-in-lock-screen=false
 
 [org/gnome/desktop/notifications/application/ca-desrt-dconf-editor]
 application-id='ca.desrt.dconf-editor.desktop'
@@ -129,6 +130,9 @@ send-events='enabled'
 speed=0.45588235294117641
 tap-to-click=true
 two-finger-scrolling-enabled=true
+
+[org/gnome/desktop/privacy]
+disable-microphone=false
 
 [org/gnome/desktop/screensaver]
 color-shading-type='solid'
@@ -203,6 +207,25 @@ num-workspaces=10
 titlebar-font='DejaVu Sans Bold 11'
 workspace-names=@as []
 
+[org/gnome/evince/default]
+window-ratio=(0.97986577181208057, 0.75771971496437052)
+
+[org/gnome/file-roller/dialogs/extract]
+recreate-folders=true
+skip-newer=false
+
+[org/gnome/file-roller/listing]
+list-mode='as-folder'
+name-column-width=250
+show-path=false
+sort-method='name'
+sort-type='ascending'
+
+[org/gnome/file-roller/ui]
+sidebar-width=200
+window-height=480
+window-width=600
+
 [org/gnome/gedit/plugins]
 active-plugins=['modelines', 'docinfo', 'sort', 'spell', 'filebrowser']
 
@@ -238,11 +261,14 @@ maximized=false
 network-total-in-bits=false
 show-dependencies=false
 show-whose-processes='user'
-window-state=(974, 686, 26, 23)
+window-state=(974, 686, 121, 48)
 
 [org/gnome/gnome-system-monitor/disktreenew]
 col-6-visible=true
 col-6-width=0
+columns-order=[0, 1, 2, 3, 4, 5, 6]
+sort-col=6
+sort-order=0
 
 [org/gnome/gthumb/browser]
 browser-sidebar-width=285
@@ -330,6 +356,9 @@ toggle-tiled-right=['<Super>l']
 [org/gnome/mutter/wayland/keybindings]
 restore-shortcuts=['<Super>Escape']
 
+[org/gnome/nautilus/compression]
+default-compression-format='zip'
+
 [org/gnome/nautilus/icon-view]
 default-zoom-level='small'
 
@@ -352,8 +381,8 @@ ignore-phase2-ca-cert=false
 night-light-enabled=false
 
 [org/gnome/settings-daemon/plugins/media-keys]
-area-screenshot-clip=['Print']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+area-screenshot-clip=@as []
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
 screen-brightness-down-static=['']
 screen-brightness-up-static=['']
 screensaver=@as []
@@ -362,11 +391,11 @@ www=['<Alt>w']
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Super>Return'
-command='gnome-terminal'
+command='kitty'
 name='terminal'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
-binding='F1'
+binding='Print'
 command='flameshot gui'
 name='flameshot'
 
@@ -399,7 +428,7 @@ app-picker-layout=[{'accessories': <{'position': <0>}>, 'org.manjaro.pamac.manag
 command-history=['gnome-session-properties', 'r']
 disable-user-extensions=false
 disabled-extensions=['dash-to-dock@micxgx.gmail.com', 'material-shell@papyelgringo', 'gnome-ui-tune@itstime.tech', 'pamac-updates@manjaro.org', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'x11gestures@joseexposito.github.io']
-enabled-extensions=['gnome-fuzzy-app-search@gnome-shell-extensions.Czarlie.gitlab.com', 'just-perfection-desktop@just-perfection', 'gtktitlebar@velitasali.github.io', 'gnome-shell-Google-search-provider@MrNinso', 'ssh-search-provider@extensions.gnome-shell.fifi.org', 'escape-overview@raelgc', 'appindicatorsupport@rgcjonas.gmail.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'blur-my-shell@aunetx', 'sound-output-device-chooser@kgshank.net', 'clipboard-indicator@tudmotu.com']
+enabled-extensions=['gnome-fuzzy-app-search@gnome-shell-extensions.Czarlie.gitlab.com', 'just-perfection-desktop@just-perfection', 'gtktitlebar@velitasali.github.io', 'gnome-shell-Google-search-provider@MrNinso', 'ssh-search-provider@extensions.gnome-shell.fifi.org', 'escape-overview@raelgc', 'appindicatorsupport@rgcjonas.gmail.com', 'blur-my-shell@aunetx', 'clipboard-indicator@tudmotu.com', 'sound-output-device-chooser@kgshank.net']
 favorite-apps=@as []
 had-bluetooth-devices-setup=true
 welcome-dialog-last-shown-version='41.2'
@@ -443,6 +472,13 @@ workspace=true
 workspace-background-corner-size=15
 workspace-popup=false
 workspaces-in-app-grid=false
+
+[org/gnome/shell/extensions/sound-output-device-chooser]
+hide-on-single-device=false
+icon-theme='monochrome'
+integrate-with-slider=false
+omit-device-origins=false
+show-profiles=true
 
 [org/gnome/shell/extensions/user-theme]
 name=''
@@ -536,3 +572,6 @@ sort-order='ascending'
 type-format='category'
 window-position=(359, 66)
 window-size=(1203, 902)
+
+[re/sonny/Junction]
+show-app-names=false
