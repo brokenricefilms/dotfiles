@@ -259,8 +259,6 @@ Plug 'https://github.com/windwp/nvim-autopairs'
 
 Plug 'https://github.com/windwp/nvim-ts-autotag'
 
-Plug 'https://github.com/sbdchd/neoformat'
-
 Plug 'https://github.com/preservim/nerdcommenter'
 
 let g:NERDSpaceDelims = 1
@@ -451,8 +449,3 @@ command! Dark execute "silent !dark" | execute "silent source ~/.config/nvim/ini
 command! DeleteDosLineEngdingChar execute "%s/\r$/ /g"
 command! PlugCleanWithReloadConfigFile execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf" | execute "PlugClean"
 command! PlugInstallWithReloadConfigFile execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf" | execute "PlugInstall"
-
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END
