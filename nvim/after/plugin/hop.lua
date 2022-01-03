@@ -1,1 +1,1 @@
-require'hop'.setup { keys = 'asdghklqwertyuiopzxcvbnmfj1234567890;/.,][-=`' }
+require("hop").setup({ keys = "asdghklqwertyuiopzxcvbnmfj1234567890;/.,][-=`" })
