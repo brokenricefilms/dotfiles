@@ -172,7 +172,7 @@ let g:fzf_layout = { 'window': {
             \ 'highlight': 'Comment',
             \ 'rounded': v:true } }
 let $FZF_DEFAULT_OPTS='--reverse'
-let g:fzf_preview_window = ['down:60%', 'ctrl-/']
+let g:fzf_preview_window = ['down:80%', 'ctrl-/']
 let g:fzf_colors =
             \ { 'fg':      ['fg', 'Normal'],
             \ 'bg':      ['bg', 'Normal'],
