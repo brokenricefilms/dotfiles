@@ -245,7 +245,7 @@ function update () {
 
     ~/.tmux/plugins/tpm/bin/update_plugins all
 
-    flatpak update -y
+    # flatpak update -y
 
     # arch base
     sudo pacman -Syu --noconfirm
