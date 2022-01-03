@@ -1,6 +1,3 @@
-local Rule = require('nvim-autopairs.rule')
-local npairs = require('nvim-autopairs')npairs.setup({ map_cr = true })
-
 local npairs = require("nvim-autopairs")
 
 npairs.setup({
@@ -15,10 +12,10 @@ npairs.setup({
 local ts_conds = require('nvim-autopairs.ts-conds')
 
 
--- press % => %% is only inside comment or string
+-- press % => %% only while inside a comment or string
 npairs.add_rules({
   Rule("%", "%", "lua")
     :with_pair(ts_conds.is_ts_node({'string','comment'})),
   Rule("$", "$", "lua")
     :with_pair(ts_conds.is_not_ts_node({'function'}))
-})
+}))
