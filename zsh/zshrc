@@ -263,14 +263,9 @@ function update () {
 }
 
 function hi () {
-    clear
     browserDaily &>/dev/null
-    echo "wait 10m for browsing stuff"
-    sleep 600
     update
     neofetch
-    echo "internet speed"
-    speedtest-cli
 }
 
 source ~/dotfiles/zsh/functions/gnome.zsh
