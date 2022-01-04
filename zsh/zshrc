@@ -228,43 +228,9 @@ function updateDns() {
     sudo systemctl restart NetworkManager.service
 }
 
-function update () {
-    nvim -c "PlugUpdate | qa"
-    nvim -c "CocUpdateSync | qa"
-
-    npm update -g
-    npm install -g npm
-
-    gem update neovim
-
-    tldr --update
-
-    gh extension upgrade --all
-
-    updateDns
-
-    ~/.tmux/plugins/tpm/bin/update_plugins all
-
-    # flatpak update -y
-
-    # arch base
-    sudo pacman -Syu --noconfirm
-    yay -Syu --noconfirm
-
-    # debian base (ubuntu, kali,...)
-    # sudo apt update
-    # sudo apt upgrade -y
-    # sudo apt autoremove -y
-    # sudo apt autoclean
-
-    # rehat base (fedora)
-    # sudo dnf update -y
-    # sudo dnf autoremove -y
-}
-
 function hi () {
     browserDaily &>/dev/null
-    update
+    topgrade
     neofetch
 }
 
