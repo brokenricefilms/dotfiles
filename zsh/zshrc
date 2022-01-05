@@ -229,7 +229,7 @@ function updateDns() {
 }
 
 function hi () {
-    browserDaily &>/dev/null
+    browserDaily
     topgrade
     neofetch
 }
