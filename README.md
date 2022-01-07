@@ -1,13 +1,11 @@
 # Thuan's Linux dotfiles
 
-> For Windows [change the branch to windows](https://github.com/thuanpham2311/dotfiles/tree/windows)
-
 **↓↓Table of Contents↓↓**
 
 <details>
 <summary>Click here to show.</summary>
 
-- [My dotfiles](#my-dotfiles)
+- [Thuan's Linux dotfiles](#thuans-linux-dotfiles)
   - [About](#about)
   - [Feature](#feature)
     - [Zsh](#zsh)
@@ -35,6 +33,8 @@
 ---
 
 </details>
+
+> For Windows [change the branch to windows](https://github.com/thuanpham2311/dotfiles/tree/windows)
 
 ## About
 
