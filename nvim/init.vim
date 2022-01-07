@@ -79,6 +79,8 @@ omap ic <Plug>(coc-classobj-i)
 xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
 
+Plug 'https://github.com/sunjon/Shade.nvim'
+
 Plug 'https://github.com/psliwka/vim-smoothie'
 
 Plug 'https://github.com/AndrewRadev/splitjoin.vim'
