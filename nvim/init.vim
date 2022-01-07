@@ -79,6 +79,10 @@ omap ic <Plug>(coc-classobj-i)
 xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
 
+Plug 'https://github.com/AndrewRadev/splitjoin.vim'
+let g:splitjoin_split_mapping = 'gJ'
+let g:splitjoin_join_mapping  = 'gK'
+
 Plug 'https://github.com/pocco81/autosave.nvim'
 let g:auto_save_events = ["InsertLeave"]
 
