@@ -84,6 +84,7 @@ function autoSync {
         /home/master/repos/thuc_thanh_nhap_mon_lap_trinh
         /home/master/repos/ublock_adblock_list
         /home/master/repos/cong_nghe_phan_mem
+        /home/master/repos/thuan_ublacklist
     )
 
     for i in ${repo[*]}
