@@ -201,16 +201,16 @@
 
 > For my daily use, i develop this dotfiles repos on this, for several months maybe i will change my daily combo (Linux distro hopping)
 
-- Debian unstable
-- Gnome 41.1 (X11)
+- Manjaro
+- Gnome 41.2 (gnome)
 - Neovim v0.6.0
-- gnome-terminal
+- [foot terminal](https://codeberg.org/dnkl/foot)
 
 ### Distro Supported
 
-- Ubuntu (base on debian)
+- Ubuntu (\*)
 - Fedora (\*)
-- Arch (\*)
+- Arch
 
 > (\*): required edit uncomment stuff in zsh config file
 
