@@ -97,8 +97,8 @@
 - `Shift + up` normal/insert mode: new line on bottom
 - `Shift + down` normal/insert mode: new line on top
   > i use [touchcursor linux](https://github.com/donniebreve/touchcursor-linux) to map hold space to [vim mode](https://github.com/thuanpham2311/touchcursor-vim), in this case this easy to me
-- 'gJ': splitjoin_split mapping
-- 'gK': splitjoin_join_mapping
+- 'gJ': splitjoin split mapping
+- 'gK': splitjoin join mapping
 
 #### Writing
 
