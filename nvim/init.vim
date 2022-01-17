@@ -19,6 +19,7 @@ let g:coc_global_extensions = [
             \ "coc-tsserver",
             \ "coc-sql",
             \ "coc-sh",
+            \ "coc-calc",
             \ "coc-omnisharp",
             \ "coc-go",
             \ "coc-vetur",
@@ -131,6 +132,7 @@ command! GithubRepoViewWeb execute "FloatermSend cd %:h:p ; gh browse ; cd -"
 
 command! LazyGit execute "FloatermNew --autoclose=1 cd %:h:p ; lazygit ; cd -"
 noremap <silent> gl :LazyGit<enter>
+command! InsectCalculator execute "FloatermNew --autoclose=1 insect"
 
 Plug 'https://github.com/wellle/targets.vim'
 
