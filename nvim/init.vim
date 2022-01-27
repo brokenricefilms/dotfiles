@@ -80,6 +80,9 @@ omap ic <Plug>(coc-classobj-i)
 xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
 
+Plug 'https://github.com/github/copilot.vim'
+let b:copilot_enabled=1
+
 Plug 'https://github.com/sunjon/Shade.nvim'
 
 Plug 'https://github.com/psliwka/vim-smoothie'
