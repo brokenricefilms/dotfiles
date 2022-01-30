@@ -91,9 +91,6 @@ Plug 'https://github.com/AndrewRadev/splitjoin.vim'
 let g:splitjoin_split_mapping = 'gJ'
 let g:splitjoin_join_mapping  = 'gK'
 
-Plug 'https://github.com/pocco81/autosave.nvim'
-let g:auto_save_events = ["InsertLeave"]
-
 Plug 'https://github.com/wakatime/vim-wakatime'
 
 Plug 'https://github.com/Krafi2/jeskape.nvim'
@@ -204,7 +201,6 @@ let g:fzf_colors =
 noremap <leader>F :Files ~<enter>
 noremap <leader>f :Files<enter>
 noremap <expr> <leader>gf fugitive#head() != '' ? ':GFiles?<enter>' : ':Files<enter>'
-autocmd BufRead,BufNewFile,BufEnter *.md noremap <expr> <leader>j fugitive#head() != '' ? ':GGrep<enter>' : ':Rg<enter>'
 noremap <leader>j :Rg<enter>
 noremap <leader>k :Buffers<enter>
 noremap <leader>h :History<enter>
