@@ -33,7 +33,7 @@ autocmd BufRead,BufNewFile,BufEnter *.md command! TOCUpdate execute "normal! gg4
 
 autocmd BufRead,BufNewFile,BufEnter *.md inoremap <c-l> [](.md)<esc>T("=strftime("%Y%m%d%H%M%S")<CR>PT[i
 
-autocmd BufRead,BufNewFile,BufEnter *.md vnoremap <enter> c[<esc>pa](.md)<esc>T("=strftime("%Y%m%d%H%M%S")<CR>PT[yi[t):edit <cfile><cr>i#<space><esc>po<enter>---<enter>><space><esc>kkO<enter>
+autocmd BufRead,BufNewFile,BufEnter *.md vnoremap <enter> c[<esc>pa](.md)<esc>T("=strftime("%Y%m%d%H%M%S")<CR>PT[yi[t):edit <cfile><cr>i#<space><esc>po<enter>---<enter><enter>><space>#
 " @todo `q:` can't execute nmap enter in normal mode to enter quickly
 " @body thuanpham2311
 autocmd BufRead,BufNewFile,BufEnter *.md nmap <silent> <enter> 3b//.md)<enter>gf
