@@ -63,8 +63,7 @@ require"format".setup {
     go = {{cmd = {"gofmt -w", "goimports -w"}, tempfile_postfix = ".tmp"}},
     javascript = {{cmd = {"prettier -w", "./node_modules/.bin/eslint --fix"}}},
     typescript = {{cmd = {"prettier -w", "./node_modules/.bin/eslint --fix"}}},
-    markdown = {{cmd = {"prettier -w"}}
-      markdown = {
+    markdown = {
         {cmd = {"prettier -w"}},
         {
             cmd = {
@@ -106,7 +105,7 @@ require"format".setup {
             end_pattern = "^```$",
             target = "current"
         }
-    }},
+    },
     yaml = {{cmd = {"prettier -w"}}},
     json = {{cmd = {"prettier -w"}}},
     html = {{cmd = {"prettier -w"}}},
