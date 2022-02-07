@@ -6,7 +6,6 @@ set signcolumn=yes
 set updatetime=10
 let g:coc_global_extensions = [
             \ "coc-snippets",
-            \ "coc-prettier",
             \ "coc-json",
             \ "coc-html",
             \ "coc-htmlhint",
