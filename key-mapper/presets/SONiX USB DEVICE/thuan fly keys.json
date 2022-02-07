@@ -30,6 +30,7 @@
         "1,57,1+1,47,1": "KEY_MUTE",
         "1,59,1": "KEY_MUTE",
         "1,60,1": "KEY_VOLUMEDOWN",
-        "1,61,1": "KEY_VOLUMEUP"
+        "1,61,1": "KEY_VOLUMEUP",
+        "1,62,1": "KEY_MICMUTE"
     }
 }
