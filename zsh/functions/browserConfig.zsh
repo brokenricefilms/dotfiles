@@ -42,14 +42,11 @@ sbgh() { browserNewTab "https://github.com/search?q=$argv" }
 function browserDaily () {
     echo "👉 just check once times a day bro"
     browserYoutubeSubsriptions
-    browserGooglePodcastSubscriptions
     browserFeeder
     browserMail0
     browserMail1
     browserGithubNotification
     browserFb
     browserAnime
-    browserKdrama
-    browserMovie
     browserDiscord
 }
