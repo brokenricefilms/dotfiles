@@ -97,6 +97,12 @@ function autoSync {
 }
 
 function updateAllRepo() {
+    repoNotInDefaultDir=(
+       ~/dotfiles
+       ~/repos/youtube_live_chat/client
+       ~/repos/youtube_live_chat/server
+    )
+
     for dir in ~/repos/*
     do
         cd "$dir"
@@ -104,12 +110,6 @@ function updateAllRepo() {
         repoSync
         echo "---"
     done
-
-    repoNotInDefaultDir=(
-       ~/dotfiles
-       ~/repos/youtube_live_chat/client
-       ~/repos/youtube_live_chat/server
-    )
 
     for i in ${repoNotInDefaultDir[*]}
     do
