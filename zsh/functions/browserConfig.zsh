@@ -45,8 +45,6 @@ function browserDaily () {
     browserFeeder
     browserMail0
     browserMail1
-    browserGithubNotification
     browserFb
-    browserAnime
     browserDiscord
 }
