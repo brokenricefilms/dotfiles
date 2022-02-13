@@ -63,7 +63,6 @@
   - `vpnKorea`: connect to Korea
   - `vpnJapan`: connect to Japan
   - `vpnStop`: stop openvpn
-- `cm`: create a `?.sh` file in `/tmp` open it in vim and press `space+r` to run. (required my [run.vim](https://github.com/thuanpham2311/dotfiles/blob/master/nvim/after/plugin/run.vim))
 - `u`: unzip/rar/tar,...
 - `cppProject`: create cpp multi file template
   <!-- @todo write gh cli function for zsh -->
