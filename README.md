@@ -203,7 +203,7 @@
 - Manjaro
 - Gnome 41.2 (gnome)
 - Neovim v0.6.0
-- [foot terminal](https://codeberg.org/dnkl/foot)
+- kitty terminal
 
 ### Distro Supported
 
