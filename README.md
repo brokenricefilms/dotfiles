@@ -107,7 +107,6 @@
 - Markdown auto format when you save the file
 - Auto-create bullet point, number list
 - `fw` in insert mode: fzf with directory, find the word you forget very useful for me when writing English
-- Ibus: Auto switch Vietnamese → English when leaved insert mode (i disable this plugin now cuz some problem, you can see [the issue here](https://github.com/kevinhwang91/vim-ibus-sw/issues/12), tldr: if you have gnome 40 it not working well with gnome tweak, gnome 41↑ it not working)
 - `space + r`: to review the markdown file
 - `space + R`: to review the mindmap (require [markmap-cli](https://github.com/gera2ld/markmap/tree/master/packages/markmap-cli))
 - `z=`: Suggesting replacing the wrong word.

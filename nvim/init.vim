@@ -218,8 +218,6 @@ noremap <silent> gd :vsplit<Return><C-w>w:Gdiff<enter>
 
 Plug 'https://github.com/tpope/vim-eunuch'
 
-" Plug 'https://github.com/kevinhwang91/vim-ibus-sw'
-
 Plug 'https://github.com/dkarter/bullets.vim'
 let g:bullets_enabled_file_types = [
             \ 'markdown',
