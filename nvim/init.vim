@@ -84,8 +84,6 @@ Plug 'https://github.com/lukas-reineke/format.nvim'
 Plug 'https://github.com/github/copilot.vim'
 let b:copilot_enabled=1
 
-Plug 'https://github.com/sunjon/Shade.nvim'
-
 Plug 'https://github.com/psliwka/vim-smoothie'
 
 Plug 'https://github.com/AndrewRadev/splitjoin.vim'
