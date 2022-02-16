@@ -240,8 +240,6 @@ Plug 'https://github.com/wellle/tmux-complete.vim'
 
 Plug 'https://github.com/christoomey/vim-tmux-navigator'
 
-Plug 'https://github.com/max397574/better-escape.nvim'
-
 Plug 'https://github.com/mattn/emmet-vim'
 let g:user_emmet_leader_key=','
 let g:user_emmet_install_global = 0
