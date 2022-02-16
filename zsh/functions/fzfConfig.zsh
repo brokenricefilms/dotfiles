@@ -18,6 +18,7 @@ function f() {
         nvim "$file"
     fi
 }
+alias findFile='f'
 
 function F() {
     local file
@@ -27,6 +28,7 @@ function F() {
         nvim "$file"
     fi
 }
+alias findFileInHome='F'
 
 function fh() {
     local file
@@ -36,6 +38,7 @@ function fh() {
         nvim "$file"
     fi
 }
+alias findHiddenFile='fh'
 
 function Fh() {
     local file
@@ -45,6 +48,7 @@ function Fh() {
         nvim "$file"
     fi
 }
+alias findHiddenFileInHome='Fh'
 
 function c () {
     local dir
@@ -52,6 +56,7 @@ function c () {
     cd "$dir"
     ls
 }
+alias changeDir='c'
 
 function C () {
     local dir
@@ -59,6 +64,7 @@ function C () {
     cd "$dir"
     ls
 }
+alias changeDirInHome='C'
 
 function ch () {
     local dir
@@ -66,6 +72,7 @@ function ch () {
     cd "$dir"
     ls
 }
+alias changeHiddenDir='ch'
 
 function Ch () {
     local dir
@@ -73,6 +80,7 @@ function Ch () {
     cd "$dir"
     ls
 }
+alias changeHiddenDirInHome='Ch'
 
 function o() {
     local object
@@ -82,6 +90,7 @@ function o() {
         xdg-open "$object"
     fi
 }
+alias openFile='o'
 
 function O() {
     local object
@@ -91,6 +100,7 @@ function O() {
         xdg-open "$object"
     fi
 }
+alias openFileInHome='O'
 
 function oh() {
     local object
@@ -100,6 +110,7 @@ function oh() {
         xdg-open "$object"
     fi
 }
+alias openHiddenFile='oh'
 
 function Oh() {
     local object
@@ -109,6 +120,7 @@ function Oh() {
         xdg-open "$object"
     fi
 }
+alias openHiddenFileInHome='Oh'
 
 function fzfMan() {
     if [ -z $1 ]
@@ -129,11 +141,13 @@ function af() {
     session=$(tmux list-sessions -F "#{session_name}" | fzfDown)
     tmux switch-client -t "$session"
 }
+alias tmuxSessionSwitch='af'
 
 function sb() {
     isInGitRepo || return
     git branch -a | fzfDown | xargs git switch
 }
+alias switchBranch='sb'
 
 function gitHubIssueList() { gh issue list | fzf | cut -f1 | wl-copy}
 # function gitHubIssueList() { gh issue list | fzf | cut -f1 | xclip -sel clip}
