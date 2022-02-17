@@ -30,6 +30,16 @@ require"format".setup {
             }
         }
     },
+    java = {
+        {
+            cmd = {
+                function(file)
+                    return string.format('clang-format --style=Google -i %s',
+                                         file)
+                end
+            }
+        }
+    },
     cpp = {
         {
             cmd = {
@@ -64,8 +74,7 @@ require"format".setup {
     javascript = {{cmd = {"prettier -w", "./node_modules/.bin/eslint --fix"}}},
     typescript = {{cmd = {"prettier -w", "./node_modules/.bin/eslint --fix"}}},
     markdown = {
-        {cmd = {"prettier -w"}},
-        {
+        {cmd = {"prettier -w"}}, {
             cmd = {
                 function(file)
                     return string.format('clang-format --style=Google -i %s',
@@ -75,8 +84,7 @@ require"format".setup {
             start_pattern = "^```cpp$",
             end_pattern = "^```$",
             target = "current"
-        },
-        {
+        }, {
             cmd = {
                 function(file)
                     return string.format('clang-format --style=Google -i %s',
@@ -86,20 +94,17 @@ require"format".setup {
             start_pattern = "^```cs$",
             end_pattern = "^```$",
             target = "current"
-        },
-        {
+        }, {
             cmd = {cmd = {"prettier -w"}},
             start_pattern = "^```js$",
             end_pattern = "^```$",
             target = "current"
-        },
-        {
+        }, {
             cmd = {cmd = {"prettier -w"}},
             start_pattern = "^```css$",
             end_pattern = "^```$",
             target = "current"
-        },
-        {
+        }, {
             cmd = {cmd = {"prettier -w"}},
             start_pattern = "^```html$",
             end_pattern = "^```$",
