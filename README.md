@@ -59,10 +59,6 @@
   - Using `dark` \ `light` in the command line
   - Change Nvim & Kitty & Alacritty & Bat cat theme
   - Supported [zenbones](https://github.com/mcchrish/zenbones.nvim) of light theme, [Gruvbox with Material Palette](https://github.com/sainnhe/gruvbox-material) for dark theme
-- Open VPN
-  - `vpnKorea`: connect to Korea
-  - `vpnJapan`: connect to Japan
-  - `vpnStop`: stop openvpn
 - `u`: unzip/rar/tar,...
 - `cppProject`: create cpp multi file template
   <!-- @todo write gh cli function for zsh -->
