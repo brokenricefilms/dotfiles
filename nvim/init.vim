@@ -26,6 +26,7 @@ let g:coc_global_extensions = [
             \ "coc-deno",
             \ "coc-css",
             \ "coc-vimlsp",
+            \ "coc-java",
             \ "coc-clangd"]
 
 inoremap <silent><expr> <TAB>
