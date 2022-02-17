@@ -210,7 +210,7 @@ command! -bang -nargs=* GGrep
 Plug 'https://github.com/tpope/vim-fugitive'
 
 noremap <silent> gs :G<enter>gg5j2ly$k0
-noremap <silent> gc :silent lcd %:h<enter>:BCommits<enter>
+noremap <silent> gc :silent cd %:h<enter>:BCommits<enter>
 noremap <silent> gb :G blame<enter>
 noremap <silent> gd :vsplit<Return><C-w>w:Gdiff<enter>
 
