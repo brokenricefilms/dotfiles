@@ -105,6 +105,7 @@ function mk () {
         mkdir -p $1 && cd $1
     fi
 }
+alias makeDir="mk"
 
 SERVER_IP () { hostname -I }
 
