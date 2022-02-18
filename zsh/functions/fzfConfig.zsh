@@ -20,6 +20,15 @@ function f() {
 }
 alias findFile='f'
 
+function e () {
+    if [ ! -n "$1" ]; then
+        f
+    else
+        nvim "$1"
+    fi
+}
+alias v='e'
+
 function F() {
     local file
     file=$(fd . $HOME -t f --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
