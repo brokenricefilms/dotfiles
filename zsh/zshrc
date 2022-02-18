@@ -134,7 +134,6 @@ alias cat='bat'
 export GREP_COLOR='1;31'
 alias grep='grep --color=auto'
 alias dud='du -d 1 -h'
-alias gn='cd ~/sync/note/ ; nvim -c "NumberLineOff" README.md'
 alias updateApplications='sudo ln -sf ~/dotfiles/applications/* /usr/share/applications/'
 alias fak='git stash &>/dev/null; git stash clear'
 
@@ -210,6 +209,7 @@ source ~/dotfiles/zsh/functions/completion.zsh
 source ~/dotfiles/zsh/functions/fzfConfig.zsh
 source ~/dotfiles/zsh/functions/fzfKeyBindings.zsh
 source ~/dotfiles/zsh/functions/tmux.zsh
+source ~/dotfiles/zsh/functions/note.zsh
 source ~/dotfiles/zsh/functions/zshAutoSuggestions.zsh
 source ~/dotfiles/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/dotfiles/zsh/functions/commandStartupShell.zsh
