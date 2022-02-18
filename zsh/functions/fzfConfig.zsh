@@ -28,6 +28,8 @@ function e () {
     fi
 }
 alias v='e'
+alias vi='nvim'
+alias vim='nvim'
 
 function F() {
     local file
