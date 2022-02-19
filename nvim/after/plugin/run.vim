@@ -9,6 +9,9 @@ autocmd BufEnter *.c nnoremap <leader>r
 autocmd BufEnter *.cpp nnoremap <leader>r
     \ :w<enter>:FloatermSend cd %:p:h ; g++ -std=c++17 %:t -o %:t:r ; ./%:t:r ; rm ./%:t:r<enter>:FloatermToggle<enter>
 
+autocmd BufEnter *.java nnoremap <leader>r
+    \ :w<enter>:FloatermSend cd %:p:h ; javac %:t ; java %:t:r ; rm %:t:r.class<enter>:FloatermToggle<enter>
+
 autocmd BufEnter *.cpp nnoremap <leader>R
     \ :w<enter>:FloatermSend cd %:p:h ; ./run<enter>:FloatermToggle<enter>
 
