@@ -4,12 +4,13 @@ echo "
 set background=light
 colorscheme zenwritten
 highlight markdownH1 guifg=#2C363C guibg=NONE guisp=NONE gui=bold
-" > ~/dotfiles/nvim/themeControl.vim
+" >~/dotfiles/nvim/themeControl.vim
 
 echo "include ./light_theme.conf
-" > ~/dotfiles/kitty/theme.conf
+" >~/dotfiles/kitty/theme.conf
 
 cp ~/dotfiles/alacritty/light_theme.yml ~/dotfiles/alacritty/alacritty.yml
+cp ~/dotfiles/foot/light.ini ~/dotfiles/foot/foot.ini
 
 mkdir ~/dotfiles/bat/
-echo "--theme=\"GitHub\"" > ~/dotfiles/bat/config
+echo "--theme=\"GitHub\"" >~/dotfiles/bat/config
