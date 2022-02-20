@@ -1,7 +1,7 @@
 api.Hints.characters = "asdghklqwertyuiopzxcvbnmfj1234567890;/.,][-=`";
 
 const hintsCss =
-  "font-size: 12pt; font-family: JetBrains Mono NL,SauceCodePro Nerd Font, Consolas, Menlo, monospace; border: 0px; color: #eeeeee; background: initial; background-color: #a8334c";
+  "font-size: 12pt; font-family: JetBrains Mono NL,SauceCodePro Nerd Font, Consolas, Menlo, monospace; border: 0px; color: #353535; background: initial; background-color: #eeeeee";
 
 api.Hints.style(hintsCss);
 api.Hints.style(hintsCss, "text");
