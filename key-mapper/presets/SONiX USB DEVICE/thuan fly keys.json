@@ -108,12 +108,12 @@
             "KEY_VOLUMEUP",
             "keyboard"
         ],
-        "1,62,1": [
-            "KEY_MICMUTE",
-            "keyboard"
-        ],
         "1,57,1+1,37,1": [
             "set(space,0).h(KEY_UP)",
+            "keyboard"
+        ],
+        "1,62,1": [
+            "XF86AudioMicMute",
             "keyboard"
         ]
     }
