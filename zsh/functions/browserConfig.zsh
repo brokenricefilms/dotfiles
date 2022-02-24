@@ -25,19 +25,19 @@ alias createPassword='defaultBrowser --app="https://duckduckgo.com/?q=28+strong+
 alias pw='defaultBrowser --app="https://duckduckgo.com/?q=28+strong+password&t=h_&ia=answer"'
 qr() { defaultBrowser --app="https://duckduckgo.com/?q=qr+$argv" }
 
-sbt() { browserNewTab "https://translate.google.com/?source=osdd#auto|auto|$argv" }
+translate() { browserNewTab "https://translate.google.com/?source=osdd#auto|auto|$argv" }
 
-sby() { browserNewTab "https://www.youtube.com/results?search_query=$argv" }
+youtubeSearch() { browserNewTab "https://www.youtube.com/results?search_query=$argv" }
 
-sbd() { browserNewTab "https://duckduckgo.com/?q=$argv" }
+duckduckgoSearch() { browserNewTab "https://duckduckgo.com/?q=$argv" }
 
-sbg() { browserNewTab "https://www.google.com/search?q=$argv" }
+googleSearch() { browserNewTab "https://www.google.com/search?q=$argv" }
 
-sbgm() { browserNewTab "https://www.google.com/maps?q=$argv" }
+googleMapSearch() { browserNewTab "https://www.google.com/maps?q=$argv" }
 
-sbgi() { browserNewTab "https://www.google.com/search?tbm=isch&q=$argv"}
+googleImageSearch() { browserNewTab "https://www.google.com/search?tbm=isch&q=$argv"}
 
-sbgh() { browserNewTab "https://github.com/search?q=$argv" }
+githubSearch() { browserNewTab "https://github.com/search?q=$argv" }
 
 function browserDaily () {
     echo "👉 just check once times a day bro"
