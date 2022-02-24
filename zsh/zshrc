@@ -138,9 +138,10 @@ alias dud='du -d 1 -h'
 alias updateApplications='sudo ln -sf ~/dotfiles/applications/* /usr/share/applications/'
 alias fak='git stash &>/dev/null; git stash clear'
 
-function wf() {
+function wifiDriverEnable() {
     sudo sh -c "modprobe mt7921e ; echo 14c3 0608 > /sys/bus/pci/drivers/mt7921e/new_id"
 }
+alias wf='wifiDriverEnable'
 
 # music stuff
 alias m='mpv --shuffle --loop-playlist ~/Music/*'
