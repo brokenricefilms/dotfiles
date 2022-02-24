@@ -80,6 +80,9 @@ omap ic <Plug>(coc-classobj-i)
 xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
 
+Plug 'https://github.com/editorconfig/editorconfig-vim'
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
 Plug 'https://github.com/lukas-reineke/format.nvim'
 
 Plug 'https://github.com/github/copilot.vim'
