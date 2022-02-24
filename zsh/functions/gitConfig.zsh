@@ -35,11 +35,12 @@ function okp () {
     repoSync
 }
 
-function gc () {
+function goToGitCloneRepoDir () {
     gitDir="$(basename "$1" .git)"
     gitDirResolved=${2:-$gitDir}
     git clone "$@" && cd "$gitDirResolved";
 }
+alias gc='goToGitCloneRepoDir'
 
 function yo () {
     git diff
