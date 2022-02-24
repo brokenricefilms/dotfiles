@@ -88,7 +88,7 @@
 - `K`: buffer previous
 - `H`: is `:cprevious` the previous error in the list
 - `L`: is `:cNext` the next error in the list
-- `M`: is `Ctrl + ^`, switch between the previous file.
+- `space + space`: is `Ctrl + ^`, switch between the previous file.
 - `Shift + up` normal/insert mode: new line on bottom
 - `Shift + down` normal/insert mode: new line on top
   > i use [touchcursor linux](https://github.com/donniebreve/touchcursor-linux) to map hold space to [vim mode](https://github.com/thuanpham2311/touchcursor-vim), in this case this easy to me

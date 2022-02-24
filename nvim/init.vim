@@ -437,7 +437,7 @@ nnoremap <silent> <S-down> o<esc>
 nnoremap <silent> <S-up> O<esc>
 
 xnoremap <silent> p p:let @+=@0<enter>:let @"=@0<enter>
-nnoremap M <c-^>
+nnoremap <leader><space> <c-^>
 
 command! OpenFileInBraveBrowser execute "silent !brave-browser '%'"
 command! CopyFileName execute "silent !echo %:p:t | wl-copy"
