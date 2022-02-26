@@ -154,10 +154,6 @@
 - `,,` in insert mode: execute like h1`,,` to `<h1>|</h1>`
 - Preview with coc.nvim
 
-<!-- @todo write gh cli function for vim -->
-<!-- @body @thuanpham2311 -->
-<!-- #### gh cli -->
-
 #### vim stuff
 
 - `space+u`: open undo tree (use need to change undodir path)
