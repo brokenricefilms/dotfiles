@@ -4,6 +4,9 @@ env:
 window:
   decorations: "none"
   dynamic_padding: true
+  padding:
+    x: 2
+    y: 2
 
 # https://raw.githubusercontent.com/mcchrish/zenbones.nvim/main/extras/alacritty/zenwritten_light.yml
 colors:
