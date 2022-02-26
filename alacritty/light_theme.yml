@@ -8,29 +8,29 @@ window:
 # https://raw.githubusercontent.com/mcchrish/zenbones.nvim/main/extras/alacritty/zenwritten_light.yml
 colors:
   primary:
-    foreground: '#353535'
-    background: '#EEEEEE'
+    foreground: "#353535"
+    background: "#EEEEEE"
   cursor:
-    cursor: '#EEEEEE'
-    text: '#353535'
+    cursor: "#353535"
+    text: "#EEEEEE"
   normal:
-    black:   '#EEEEEE'
-    red:     '#A8334C'
-    green:   '#4F6C31'
-    yellow:  '#944927'
-    blue:    '#286486'
-    magenta: '#88507D'
-    cyan:    '#3B8992'
-    white:   '#353535'
+    black: "#EEEEEE"
+    red: "#A8334C"
+    green: "#4F6C31"
+    yellow: "#944927"
+    blue: "#286486"
+    magenta: "#88507D"
+    cyan: "#3B8992"
+    white: "#353535"
   bright:
-    black:   '#C6C3C3'
-    red:     '#94253E'
-    green:   '#3F5A22'
-    yellow:  '#803D1C'
-    blue:    '#1D5573'
-    magenta: '#7B3B70'
-    cyan:    '#2B747C'
-    white:   '#5C5C5C'
+    black: "#C6C3C3"
+    red: "#94253E"
+    green: "#3F5A22"
+    yellow: "#803D1C"
+    blue: "#1D5573"
+    magenta: "#7B3B70"
+    cyan: "#2B747C"
+    white: "#5C5C5C"
 
 font:
   normal:
@@ -50,9 +50,9 @@ cursor:
   blink_interval: 350
 
 key_bindings:
-  - { key: Return,   mods: Shift,     chars: "\x1b[13;2u" }
-  - { key: Return,   mods: Control,   chars: "\x1b[13;5u" }
-  - { key: Key0,     mods: Control,   action: ResetFontSize}
-  - { key: Equals,   mods: Control,   action: IncreaseFontSize}
-  - { key: Plus,     mods: Control,   action: IncreaseFontSize}
-  - { key: Minus,    mods: Control,   action: DecreaseFontSize}
+  - { key: Return, mods: Shift, chars: "\x1b[13;2u" }
+  - { key: Return, mods: Control, chars: "\x1b[13;5u" }
+  - { key: Key0, mods: Control, action: ResetFontSize }
+  - { key: Equals, mods: Control, action: IncreaseFontSize }
+  - { key: Plus, mods: Control, action: IncreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
