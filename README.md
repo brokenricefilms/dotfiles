@@ -213,9 +213,6 @@
 
 **You can watch my Talk show on Oct 15, 2021: my setup for coding, daily use**
 
-<!-- @todo new demo video base on readme -->
-<!-- @body @thuanpham2311 -->
-
 ⇒ <https://youtu.be/2OhzSP1uGLc>
 
 **Talk show Dec 12, 2021: dotfiles, zsh, tmux**
