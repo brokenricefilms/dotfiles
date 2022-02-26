@@ -61,8 +61,6 @@
   - Supported [zenbones](https://github.com/mcchrish/zenbones.nvim) of light theme, [Gruvbox with Material Palette](https://github.com/sainnhe/gruvbox-material) for dark theme
 - `u`: unzip/rar/tar,...
 - `cppProject`: create cpp multi file template
-  <!-- @todo write gh cli function for zsh -->
-  <!-- @body @thuanpham2311 -->
 
 ### Tmux
 
