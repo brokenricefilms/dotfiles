@@ -40,12 +40,12 @@ googleImageSearch() { browserNewTab "https://www.google.com/search?tbm=isch&q=$a
 githubSearch() { browserNewTab "https://github.com/search?q=$argv" }
 
 function browserDaily () {
-    echo "👉 just check once times a day bro"
-    browserYoutubeSubsriptions
-    browserFeeder
-    browserMail0
-    browserMail1
-    browserFb
-    browserAnime
-    browserDiscord
+  echo "👉 just check once times a day bro"
+  browserYoutubeSubsriptions
+  browserFeeder
+  browserMail0
+  browserMail1
+  browserFb
+  browserAnime
+  browserDiscord
 }

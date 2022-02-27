@@ -1,5 +1,5 @@
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-    exec tmux
+  exec tmux
 fi
 
 set -U EDITOR nvim
@@ -44,22 +44,22 @@ HISTFILE=~/.zsh_history
 bindkey -v
 
 function zle_keymap_select {
-if [[ ${KEYMAP} == vicmd ]] ||
+  if [[ ${KEYMAP} == vicmd ]] ||
     [[ $1 = 'block' ]]; then
-    echo -ne '\e[1 q'
-elif [[ ${KEYMAP} == main ]] ||
-    [[ ${KEYMAP} == viins ]] ||
-    [[ ${KEYMAP} = '' ]] ||
-    [[ $1 = 'beam' ]]; then
-    echo -ne '\e[5 q'
-fi
+      echo -ne '\e[1 q'
+    elif [[ ${KEYMAP} == main ]] ||
+      [[ ${KEYMAP} == viins ]] ||
+      [[ ${KEYMAP} = '' ]] ||
+      [[ $1 = 'beam' ]]; then
+          echo -ne '\e[5 q'
+  fi
 }
 
 zle -N zle_keymap_select
 
 function zle_line_init() {
-    zle -K viins
-    echo -ne "\e[5 q"
+  zle -K viins
+  echo -ne "\e[5 q"
 }
 
 zle -N zle_line_init
@@ -72,15 +72,15 @@ autoload -Uz compinit
 compinit
 
 function downloadFile () {
-    cd ~/Downloads
-    aria2c $argv
-    ls -lah ~/Downloads
-    cd -
+  cd ~/Downloads
+  aria2c $argv
+  ls -lah ~/Downloads
+  cd -
 }
 
 function cppProject () {
-    cp -r ~/.config/nvim/stuff/cpppro/* .
-    nvim main.cpp source.cpp header.h input
+  cp -r ~/.config/nvim/stuff/cpppro/* .
+  nvim main.cpp source.cpp header.h input
 }
 
 prettierCpp () { clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp') }
@@ -88,22 +88,22 @@ prettierCpp () { clang-format --style=Google -i $(find -name '*.h' && find -name
 prettierCs () { clang-format --style=Google -i $(find -name '*.cs') }
 
 function repeatIn1s () {
-    while true
-    do
-        $argv
-        sleep 1
-    done
+  while true
+  do
+    $argv
+    sleep 1
+  done
 }
 
 function mk () {
-    if [ ! -n "$1" ]; then
-        echo "Enter a directory name"
-    elif [ -d $1 ]; then
-        echo "\`$1' already exists"
-        cd $1
-    else
-        mkdir -p $1 && cd $1
-    fi
+  if [ ! -n "$1" ]; then
+    echo "Enter a directory name"
+  elif [ -d $1 ]; then
+    echo "\`$1' already exists"
+    cd $1
+  else
+    mkdir -p $1 && cd $1
+  fi
 }
 alias makeDir="mk"
 
@@ -136,7 +136,7 @@ alias updateApplications='sudo ln -sf ~/dotfiles/applications/* /usr/share/appli
 alias fak='git stash &>/dev/null; git stash clear'
 
 function wifiDriverEnable() {
-    sudo sh -c "modprobe mt7921e ; echo 14c3 0608 > /sys/bus/pci/drivers/mt7921e/new_id"
+  sudo sh -c "modprobe mt7921e ; echo 14c3 0608 > /sys/bus/pci/drivers/mt7921e/new_id"
 }
 alias wf='wifiDriverEnable'
 
@@ -173,32 +173,32 @@ alias yt='yt-dlp -f bestvideo+bestaudio'
 alias yta='yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"'
 
 function syncMusic() {
-    cd ~/Music/
-    trash *
-    yta "https://thuanpham2311.github.io/l/music"
+  cd ~/Music/
+  trash *
+  yta "https://thuanpham2311.github.io/l/music"
 }
 
 alias t='trash'
 alias tdl='trash ~/Downloads/*'
 
 function nvm() {
-    echo "🚨 NVM not loaded! Loading now..."
-    unset -f nvm
-    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-    nvm "$@"
+  echo "🚨 NVM not loaded! Loading now..."
+  unset -f nvm
+  export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  nvm "$@"
 }
 
 function updateDns() {
-    sudo curl https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling/hosts --output /etc/hosts
-    echo "sometimes if you not lazy try to clear host cache: chrome://net-internals/#dns"
-    sudo systemctl restart NetworkManager.service
+  sudo curl https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling/hosts --output /etc/hosts
+  echo "sometimes if you not lazy try to clear host cache: chrome://net-internals/#dns"
+  sudo systemctl restart NetworkManager.service
 }
 
 function hi () {
-    browserDaily
-    topgrade
-    neofetch
+  browserDaily
+  topgrade
+  neofetch
 }
 
 source ~/dotfiles/zsh/functions/gnome.zsh
