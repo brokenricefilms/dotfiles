@@ -111,6 +111,18 @@ SERVER_IP () { hostname -I }
 
 se () { browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000 }
 
+function diskFree () {
+  echo ""
+  df -h | awk 'NR==1' | rg Avail
+  df -h | awk 'NR==4'
+}
+
+function wifiDriverEnable() {
+  sudo sh -c "modprobe mt7921e ; echo 14c3 0608 > /sys/bus/pci/drivers/mt7921e/new_id"
+}
+alias wf='wifiDriverEnable'
+
+
 alias l='exa -al --color=always --group-directories-first --icons'
 alias ls='l'
 alias sl='l'
@@ -134,11 +146,6 @@ alias cat='bat'
 alias dud='du -d 1 -h'
 alias updateApplications='sudo ln -sf ~/dotfiles/applications/* /usr/share/applications/'
 alias fak='git stash &>/dev/null; git stash clear'
-
-function wifiDriverEnable() {
-  sudo sh -c "modprobe mt7921e ; echo 14c3 0608 > /sys/bus/pci/drivers/mt7921e/new_id"
-}
-alias wf='wifiDriverEnable'
 
 # music stuff
 alias m='mpv --shuffle --loop-playlist ~/Music/*'
