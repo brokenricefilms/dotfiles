@@ -83,9 +83,9 @@ function cppProject () {
   nvim main.cpp source.cpp header.h input
 }
 
-prettierCpp () { clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp') }
+formatCpp () { clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp') }
 
-prettierCs () { clang-format --style=Google -i $(find -name '*.cs') }
+formatCs () { clang-format --style=Google -i $(find -name '*.cs') }
 
 function repeatIn1s () {
   while true
