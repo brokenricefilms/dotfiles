@@ -1,25 +1,25 @@
-function gnomeKeyBindingBackup {
+function backupGnomeKeyBinding {
 	dconf dump '/org/gnome/desktop/wm/keybindings/' >~/dotfiles/gnome/keybindings.dconf
 	dconf dump '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/' >~/dotfiles/gnome/custom-keybindings.dconf
 }
 
-function gnomeKeyBindingRestore {
+function restoreGnomeKeyBinding {
 	dconf load '/org/gnome/desktop/wm/keybindings/' <~/dotfiles/gnome/keybindings.dconf
 	dconf load '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/' <~/dotfiles/gnome/custom-keybindings.dconf
 }
 
-function gnomeTerminalBackup {
+function backupGnomeTerminal {
 	dconf dump '/org/gnome/terminal/' >~/dotfiles/gnome/gnomeTerminal.dconf
 }
 
-function gnomeTerminalRestore {
+function restoreGnomeTerminal {
 	dconf load '/org/gnome/terminal/' <~/dotfiles/gnome/gnomeTerminal.dconf
 }
 
-function gnomeSettingBackup {
+function backupGnomeSetting {
 	dconf dump / >~/dotfiles/gnome/gnomeSetting.dconf
 }
 
-function gnomeSettingRestore {
+function restoreGnomeSetting {
 	dconf load / <~/dotfiles/gnome/gnomeSetting.dconf
 }

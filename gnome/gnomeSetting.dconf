@@ -1,16 +1,38 @@
 [ca/desrt/dconf-editor]
-saved-pathbar-path='power'
-saved-view='/org/gnome/settings-daemon/plugins/power/'
+saved-pathbar-path='/org/gnome/settings-daemon/plugins/power/idle-brightness'
+saved-view='/org/gnome/settings-daemon/plugins/power/idle-brightness'
 show-warning=false
 window-height=500
-window-is-maximized=false
+window-is-maximized=true
 window-width=540
+
+[com/github/johnfactotum/Foliate/window-state]
+fullscreen=false
+height=640
+last-file='/home/master/Documents/Book/khuyen-hoc-fukuzawa-yukichi.epub'
+maximized=false
+width=960
 
 [com/github/maoschanz/DynamicWallpaperEditor]
 display-mode='list'
 
+[desktop/ibus/engine/unikey]
+auto-restore-non-vn=false
+free-marking=true
+input-method='STelex'
+macro-enabled=false
+modern-style=false
+mouse-capture=true
+output-charset='Unicode'
+process-word-at-begin=false
+spell-check=false
+
 [desktop/ibus/general]
 preload-engines=['xkb:us::eng', 'Bamboo']
+version='1.5.25'
+
+[desktop/ibus/general/hotkey]
+triggers=['<Control>space']
 
 [desktop/ibus/panel/emoji]
 hotkey=@as []
@@ -31,7 +53,7 @@ source-currency=''
 source-units='degree'
 target-currency=''
 target-units='radian'
-window-position=(0, 0)
+window-position=(26, 23)
 word-size=64
 
 [org/gnome/cheese]
@@ -44,7 +66,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='sound'
+last-panel='keyboard'
 
 [org/gnome/desktop/app-folders]
 folder-children=['accessories', 'system-tools']
@@ -66,7 +88,7 @@ translate=true
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///home/master/.local/share/backgrounds/2021-12-30-16-29-56-saitama_ok.png'
+picture-uri='file:///home/master/.local/share/backgrounds/2022-01-28-22-03-30-Rectangle%201.png'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -74,7 +96,7 @@ secondary-color='#000000000000'
 mru-sources=[('xkb', 'us'), ('ibus', 'Bamboo')]
 per-window=false
 sources=[('xkb', 'us'), ('ibus', 'Bamboo')]
-xkb-options=['lv3:menu_switch', 'caps:escape', 'shift:both_capslock_cancel']
+xkb-options=['lv3:menu_switch', 'shift:both_capslock_cancel', 'caps:escape']
 
 [org/gnome/desktop/interface]
 clock-format='12h'
@@ -88,10 +110,11 @@ font-name='DejaVu Sans 11'
 gtk-im-module='ibus'
 gtk-theme='Adwaita'
 icon-theme='Adwaita'
+monospace-font-name='JetBrains Mono NL 10'
 show-battery-percentage=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel', 'ca-desrt-dconf-editor']
+application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel', 'ca-desrt-dconf-editor', 'ryzen-controller', 'org-gnome-extensions-desktop']
 show-in-lock-screen=false
 
 [org/gnome/desktop/notifications/application/ca-desrt-dconf-editor]
@@ -112,22 +135,29 @@ application-id='manjaro-settings-manager.desktop'
 [org/gnome/desktop/notifications/application/org-gnome-chromegnomeshell]
 application-id='org.gnome.ChromeGnomeShell.desktop'
 
+[org/gnome/desktop/notifications/application/org-gnome-extensions-desktop]
+application-id='org.gnome.Extensions.desktop.desktop'
+
 [org/gnome/desktop/notifications/application/org-gnome-nautilus]
 application-id='org.gnome.Nautilus.desktop'
 
 [org/gnome/desktop/notifications/application/org-manjaro-pamac-manager]
 application-id='org.manjaro.pamac.manager.desktop'
 
+[org/gnome/desktop/notifications/application/ryzen-controller]
+application-id='ryzen-controller.desktop'
+
 [org/gnome/desktop/peripherals/keyboard]
 delay=uint32 318
 repeat-interval=uint32 10
 
 [org/gnome/desktop/peripherals/mouse]
+natural-scroll=false
 speed=1.0
 
 [org/gnome/desktop/peripherals/touchpad]
 send-events='enabled'
-speed=0.45588235294117641
+speed=0.27941176470588225
 tap-to-click=true
 two-finger-scrolling-enabled=true
 
@@ -139,7 +169,7 @@ color-shading-type='solid'
 lock-delay=uint32 0
 lock-enabled=false
 picture-options='zoom'
-picture-uri='file:///home/master/.local/share/backgrounds/2021-12-30-16-29-56-saitama_ok.png'
+picture-uri='file:///home/master/.local/share/backgrounds/2022-01-28-22-03-30-Rectangle%201.png'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -148,15 +178,18 @@ disabled=['org.manjaro.pamac.manager.desktop']
 sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Nautilus.desktop', 'org.manjaro.pamac.manager.desktop']
 
 [org/gnome/desktop/session]
-idle-delay=uint32 300
+idle-delay=uint32 0
 
 [org/gnome/desktop/sound]
 allow-volume-above-100-percent=true
+event-sounds=true
+theme-name='__custom'
 
 [org/gnome/desktop/wm/keybindings]
 close=['<Alt>q']
-cycle-windows=['<Super>n']
-cycle-windows-backward=['<Shift><Super>n']
+cycle-windows=['<Alt>Tab']
+cycle-windows-backward=['<Shift><Alt>Tab']
+maximize=['<Super>k']
 minimize=['<Alt>comma']
 move-to-monitor-down=@as []
 move-to-monitor-left=@as []
@@ -177,8 +210,8 @@ move-to-workspace-down=@as []
 move-to-workspace-left=['<Shift><Alt>h']
 move-to-workspace-right=['<Shift><Alt>l']
 move-to-workspace-up=@as []
-switch-applications=['<Super>m']
-switch-applications-backward=['<Shift><Super>m']
+switch-applications=['<Alt>grave']
+switch-applications-backward=['<Shift><Alt>grave']
 switch-input-source=['<Primary>space']
 switch-input-source-backward=['<Primary><Shift>space']
 switch-panels=@as []
@@ -208,7 +241,17 @@ titlebar-font='DejaVu Sans Bold 11'
 workspace-names=@as []
 
 [org/gnome/evince/default]
-window-ratio=(0.97986577181208057, 0.75771971496437052)
+continuous=true
+dual-page=true
+dual-page-odd-left=false
+enable-spellchecking=true
+fullscreen=false
+inverted-colors=false
+show-sidebar=false
+sidebar-page='thumbnails'
+sidebar-size=246
+sizing-mode='automatic'
+window-ratio=(1.3891688503661899, 0.75768372048833788)
 
 [org/gnome/file-roller/dialogs/extract]
 recreate-folders=true
@@ -232,7 +275,7 @@ active-plugins=['modelines', 'docinfo', 'sort', 'spell', 'filebrowser']
 [org/gnome/gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/master/Downloads'
+virtual-root='file:///home/master/sync/note/personal'
 
 [org/gnome/gedit/preferences/ui]
 show-tabs-mode='auto'
@@ -250,10 +293,10 @@ include-pointer=false
 last-save-directory='file:///home/master/Pictures'
 
 [org/gnome/gnome-system-log]
-height=598
-logfile='/var/log/key-mapper-control'
+height=1051
+logfile='/var/log/key-mapper'
 logfiles=['/var/log/key-mapper', '/var/log/key-mapper-control', '/var/log/Calamares.log', '/var/log/pacman.log']
-width=704
+width=1920
 
 [org/gnome/gnome-system-monitor]
 current-tab='resources'
@@ -360,7 +403,7 @@ restore-shortcuts=['<Super>Escape']
 default-compression-format='zip'
 
 [org/gnome/nautilus/icon-view]
-default-zoom-level='small'
+default-zoom-level='larger'
 
 [org/gnome/nautilus/preferences]
 click-policy='single'
@@ -379,10 +422,12 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
+night-light-last-coordinates=(10.85059856011519, 106.6581)
 
 [org/gnome/settings-daemon/plugins/media-keys]
-area-screenshot-clip=@as []
+area-screenshot-clip=['Print']
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
+home=['<Alt>f']
 screen-brightness-down-static=['']
 screen-brightness-up-static=['']
 screensaver=@as []
@@ -391,11 +436,11 @@ www=['<Alt>w']
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Super>Return'
-command='kitty'
+command='foot'
 name='terminal'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
-binding='Print'
+binding=''
 command='flameshot gui'
 name='flameshot'
 
@@ -425,21 +470,33 @@ sleep-inactive-battery-type='suspend'
 
 [org/gnome/shell]
 app-picker-layout=[{'accessories': <{'position': <0>}>, 'org.manjaro.pamac.manager.desktop': <{'position': <1>}>, 'org.gnome.gThumb.desktop': <{'position': <2>}>, 'office': <{'position': <3>}>, 'system-tools': <{'position': <4>}>, 'org.gnome.Nautilus.desktop': <{'position': <5>}>, 'firefox.desktop': <{'position': <6>}>, 'org.gnome.Totem.desktop': <{'position': <7>}>, 'org.gnome.Cheese.desktop': <{'position': <8>}>}]
-command-history=['gnome-session-properties', 'r']
+command-history=['gnome-session-properties', 'r', 'ibus-deamon', 'ibus-daemon -vxr']
 disable-user-extensions=false
-disabled-extensions=['dash-to-dock@micxgx.gmail.com', 'material-shell@papyelgringo', 'gnome-ui-tune@itstime.tech', 'pamac-updates@manjaro.org', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'x11gestures@joseexposito.github.io']
-enabled-extensions=['gnome-fuzzy-app-search@gnome-shell-extensions.Czarlie.gitlab.com', 'just-perfection-desktop@just-perfection', 'gtktitlebar@velitasali.github.io', 'gnome-shell-Google-search-provider@MrNinso', 'ssh-search-provider@extensions.gnome-shell.fifi.org', 'escape-overview@raelgc', 'appindicatorsupport@rgcjonas.gmail.com', 'blur-my-shell@aunetx', 'clipboard-indicator@tudmotu.com', 'sound-output-device-chooser@kgshank.net']
+disabled-extensions=['dash-to-dock@micxgx.gmail.com', 'material-shell@papyelgringo', 'gnome-ui-tune@itstime.tech', 'pamac-updates@manjaro.org', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'x11gestures@joseexposito.github.io', 'focus@scaryrawr.github.io', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['gnome-fuzzy-app-search@gnome-shell-extensions.Czarlie.gitlab.com', 'just-perfection-desktop@just-perfection', 'gnome-shell-Google-search-provider@MrNinso', 'ssh-search-provider@extensions.gnome-shell.fifi.org', 'escape-overview@raelgc', 'appindicatorsupport@rgcjonas.gmail.com', 'blur-my-shell@aunetx', 'clipboard-indicator@tudmotu.com', 'sound-output-device-chooser@kgshank.net', 'smart-auto-move@khimaros.com', 'fildemGMenu@gonza.com', 'workspaces-bar@fthx', 'gtktitlebar@velitasali.github.io', 'worksets@blipk.xyz']
 favorite-apps=@as []
 had-bluetooth-devices-setup=true
 welcome-dialog-last-shown-version='41.2'
 
 [org/gnome/shell/extensions/auto-move-windows]
-application-list=['discord.desktop:6']
+application-list=@as []
 
 [org/gnome/shell/extensions/clipboard-indicator]
 history-size=50
 support-png=true
 toggle-menu=['<Alt>v']
+
+[org/gnome/shell/extensions/dash-to-dock]
+isolate-workspaces=false
+
+[org/gnome/shell/extensions/dash-to-panel]
+isolate-workspaces=false
+
+[org/gnome/shell/extensions/focus]
+focus-opacity=uint32 100
+inactive-opacity=uint32 90
+is-background-blur=false
+special-focus-opacity=uint32 87
 
 [org/gnome/shell/extensions/gtktitlebar]
 hide-window-titlebars='always'
@@ -449,29 +506,46 @@ accessibility-menu=false
 activities-button=false
 app-menu=false
 app-menu-icon=true
-background-menu=false
+background-menu=true
+clock-menu=true
+clock-menu-position=0
 dash=false
 dash-icon-size=0
 double-super-to-appgrid=true
 gesture=false
 hot-corner=true
+keyboard-layout=true
+notification-banner-position=1
 osd=true
-panel=false
+panel=true
 panel-arrow=true
-panel-corner-size=1
+panel-corner-size=0
 panel-in-overview=true
+panel-notification-icon=false
 ripple-box=false
 search=true
 show-apps-button=true
 startup-status=0
 theme=true
+top-panel-position=0
 window-demands-attention-focus=true
-window-picker-icon=false
-window-preview-caption=false
+window-picker-icon=true
+window-preview-caption=true
 workspace=true
-workspace-background-corner-size=15
-workspace-popup=false
+workspace-background-corner-size=0
+workspace-popup=true
+workspace-switcher-size=0
 workspaces-in-app-grid=false
+
+[org/gnome/shell/extensions/smart-auto-move]
+debug-logging=false
+match-threshold=0.69999999999999996
+overrides='{}'
+save-frequency=1000
+saved-windows='{"Gnome-shell":[{"id":2351449466,"hash":2351449466,"sequence":1,"title":"gnome-shell","workspace":1,"maximized":0,"x":-200,"y":-200,"width":1,"height":1,"occupied":true}],"org.gnome.Extensions":[{"id":2351451416,"hash":2351451416,"sequence":1951,"title":"Extensions","workspace":1,"maximized":0,"x":574,"y":226,"width":800,"height":500,"occupied":true}],"org.gnome.Shell.Extensions":[{"id":2351451413,"hash":2351451413,"sequence":1948,"title":"Smart Auto Move","workspace":1,"maximized":0,"x":560,"y":216,"width":800,"height":647,"occupied":false}]}'
+startup-delay=2500
+sync-frequency=100
+sync-mode='RESTORE'
 
 [org/gnome/shell/extensions/sound-output-device-chooser]
 hide-on-single-device=false
@@ -482,6 +556,17 @@ show-profiles=true
 
 [org/gnome/shell/extensions/user-theme]
 name=''
+
+[org/gnome/shell/extensions/worksets]
+debug-mode=true
+disable-wallpaper-management=false
+isolate-workspaces=false
+only-background-details=false
+reverse-menu=false
+show-helpers=false
+show-notifications=false
+show-panel-indicator=true
+show-workspace-overlay=true
 
 [org/gnome/shell/extensions/x11gestures]
 swipe-fingers=3
@@ -500,6 +585,9 @@ switch-to-application-9=['<Super>9']
 toggle-application-view=['<Super>a']
 toggle-message-tray=@as []
 toggle-overview=['<Super>s']
+
+[org/gnome/system/location]
+enabled=true
 
 [org/gnome/terminal/legacy]
 default-show-menubar=false
@@ -570,7 +658,7 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(359, 66)
+window-position=(359, 80)
 window-size=(1203, 902)
 
 [re/sonny/Junction]
