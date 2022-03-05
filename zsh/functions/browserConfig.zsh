@@ -27,17 +27,17 @@ qr() { defaultBrowser --app="https://duckduckgo.com/?q=qr+$argv" }
 
 translate() { browserNewTab "https://translate.google.com/?source=osdd#auto|auto|$argv" }
 
-youtubeSearch() { browserNewTab "https://www.youtube.com/results?search_query=$argv" }
+searchYoutube() { browserNewTab "https://www.youtube.com/results?search_query=$argv" }
 
-duckduckgoSearch() { browserNewTab "https://duckduckgo.com/?q=$argv" }
+searchDuckduckgo() { browserNewTab "https://duckduckgo.com/?q=$argv" }
 
-googleSearch() { browserNewTab "https://www.google.com/search?q=$argv" }
+searchGoogle() { browserNewTab "https://www.google.com/search?q=$argv" }
 
-googleMapSearch() { browserNewTab "https://www.google.com/maps?q=$argv" }
+searchGoogleMap() { browserNewTab "https://www.google.com/maps?q=$argv" }
 
-googleImageSearch() { browserNewTab "https://www.google.com/search?tbm=isch&q=$argv"}
+searchGoogleImage() { browserNewTab "https://www.google.com/search?tbm=isch&q=$argv"}
 
-githubSearch() { browserNewTab "https://github.com/search?q=$argv" }
+searchGithub() { browserNewTab "https://github.com/search?q=$argv" }
 
 function browserDaily () {
   echo "👉 just check once times a day bro"
