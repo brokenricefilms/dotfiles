@@ -422,10 +422,10 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.85059856011519, 106.6581)
+night-light-last-coordinates=(10.841599280057595, 106.6581)
 
 [org/gnome/settings-daemon/plugins/media-keys]
-area-screenshot-clip=['Print']
+area-screenshot-clip=@as []
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
 home=['<Alt>f']
 screen-brightness-down-static=['']
@@ -440,7 +440,7 @@ command='foot'
 name='terminal'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
-binding=''
+binding='Print'
 command='flameshot gui'
 name='flameshot'
 
@@ -479,7 +479,7 @@ had-bluetooth-devices-setup=true
 welcome-dialog-last-shown-version='41.2'
 
 [org/gnome/shell/extensions/auto-move-windows]
-application-list=@as []
+application-list=['foot_main.desktop:2', 'foot.desktop:4']
 
 [org/gnome/shell/extensions/clipboard-indicator]
 history-size=50
@@ -539,13 +539,14 @@ workspaces-in-app-grid=false
 
 [org/gnome/shell/extensions/smart-auto-move]
 debug-logging=false
+freeze-saves=false
 match-threshold=0.69999999999999996
-overrides='{}'
+overrides='{"Google-chrome":[{"query":{"title":"Zalo Web"},"action":1},{"query":{"title":"Messenger"},"action":1},{"query":{"title":"Untitled – Figma"},"action":1},{"query":{"title":"Meet - ~new"},"action":1},{"query":{"title":"Google Meet"},"action":1},{"query":{"title":"Discord"},"action":1},{"query":{"title":"Google Calendar - 4 days, starting Saturday, March 5, 2022"},"action":1}],"foot":[{"query":{"title":"note"},"action":1},{"query":{"title":"main"},"action":1}]}'
 save-frequency=1000
-saved-windows='{"Gnome-shell":[{"id":2351449466,"hash":2351449466,"sequence":1,"title":"gnome-shell","workspace":1,"maximized":0,"x":-200,"y":-200,"width":1,"height":1,"occupied":true}],"org.gnome.Extensions":[{"id":2351451416,"hash":2351451416,"sequence":1951,"title":"Extensions","workspace":1,"maximized":0,"x":574,"y":226,"width":800,"height":500,"occupied":true}],"org.gnome.Shell.Extensions":[{"id":2351451413,"hash":2351451413,"sequence":1948,"title":"Smart Auto Move","workspace":1,"maximized":0,"x":560,"y":216,"width":800,"height":647,"occupied":false}]}'
+saved-windows='{"Gnome-shell":[{"id":2351449466,"hash":2351449466,"sequence":1,"title":"gnome-shell","workspace":1,"maximized":0,"x":-200,"y":-200,"width":1,"height":1,"occupied":false}],"org.gnome.Extensions":[{"id":329038672,"hash":329038672,"sequence":642,"title":"Extensions","workspace":1,"maximized":0,"x":764,"y":206,"width":800,"height":500,"occupied":false}],"org.gnome.Shell.Extensions":[{"id":2351451413,"hash":2351451413,"sequence":1948,"title":"Smart Auto Move","workspace":1,"maximized":0,"x":560,"y":216,"width":800,"height":647,"occupied":false},{"id":2278350141,"hash":2278350141,"sequence":55,"title":"GNOME Fuzzy App Search","workspace":0,"maximized":0,"x":660,"y":354,"width":600,"height":400,"occupied":false}],"Google-chrome":[{"id":819633792,"hash":819633792,"sequence":5,"title":"Google Calendar - 4 days, starting Saturday, March 5, 2022","workspace":2,"maximized":3,"x":0,"y":29,"width":1920,"height":1051,"occupied":true},{"id":329038449,"hash":329038449,"sequence":419,"title":"Vĩnh Sinh Tập 07 - 08 VietSub - Google Chrome","workspace":0,"maximized":3,"x":0,"y":29,"width":1920,"height":1051,"occupied":false},{"id":329038303,"hash":329038303,"sequence":273,"title":"YouTube - Google Chrome","workspace":0,"maximized":3,"x":0,"y":29,"width":1920,"height":1051,"occupied":false},{"id":2278350099,"hash":2278350099,"sequence":13,"title":"🐧-linux","workspace":5,"maximized":3,"x":0,"y":29,"width":1920,"height":1051,"occupied":false},{"id":2278350090,"hash":2278350090,"sequence":4,"title":"YouTube - Google Chrome","workspace":0,"maximized":3,"x":0,"y":29,"width":1920,"height":1051,"occupied":false},{"id":2278350111,"hash":2278350111,"sequence":25,"title":"Google Meet","workspace":8,"maximized":3,"x":0,"y":29,"width":1920,"height":1051,"occupied":false},{"id":2278350116,"hash":2278350116,"sequence":30,"title":"Meet - ~new","workspace":8,"maximized":3,"x":0,"y":29,"width":1920,"height":1051,"occupied":false},{"id":2278350123,"hash":2278350123,"sequence":37,"title":"Untitled – Figma","workspace":7,"maximized":3,"x":0,"y":29,"width":1920,"height":1051,"occupied":false},{"id":2278350120,"hash":2278350120,"sequence":34,"title":"Untitled – Figma","workspace":0,"maximized":0,"x":10,"y":29,"width":945,"height":1051,"occupied":false},{"id":2278350125,"hash":2278350125,"sequence":39,"title":"Messenger","workspace":4,"maximized":2,"x":0,"y":29,"width":960,"height":1051,"occupied":false},{"id":819633803,"hash":819633803,"sequence":16,"title":"Zalo Web","workspace":6,"maximized":3,"x":0,"y":29,"width":1920,"height":1051,"occupied":false},{"id":819633791,"hash":819633791,"sequence":4,"title":"Stylus - Google Chrome","workspace":0,"maximized":3,"x":0,"y":29,"width":1920,"height":1051,"occupied":true},{"id":819633806,"hash":819633806,"sequence":19,"title":"uBlock₀ — Dashboard","workspace":0,"maximized":0,"x":10,"y":29,"width":945,"height":1051,"occupied":false}],"foot":[{"id":329038608,"hash":329038608,"sequence":578,"title":"foot","workspace":3,"maximized":3,"x":0,"y":29,"width":1920,"height":1051,"occupied":false},{"id":329038613,"hash":329038613,"sequence":583,"title":"foot","workspace":1,"maximized":3,"x":0,"y":29,"width":1920,"height":1051,"occupied":false},{"id":819633816,"hash":819633816,"sequence":29,"title":"main","workspace":1,"maximized":3,"x":0,"y":29,"width":705,"height":505,"occupied":true},{"id":819633817,"hash":819633817,"sequence":30,"title":"note","workspace":3,"maximized":3,"x":0,"y":29,"width":705,"height":505,"occupied":true},{"id":329038653,"hash":329038653,"sequence":623,"title":"note","workspace":0,"maximized":0,"x":610,"y":304,"width":700,"height":500,"occupied":false}],"gnome-tweaks":[{"id":329038671,"hash":329038671,"sequence":641,"title":"GNOME Tweaks","workspace":1,"maximized":0,"x":470,"y":211,"width":980,"height":687,"occupied":false}],"gnome-control-center":[{"id":2278350131,"hash":2278350131,"sequence":45,"title":"Settings","workspace":1,"maximized":0,"x":470,"y":211,"width":980,"height":687,"occupied":false}],"firefox":[{"id":2278350139,"hash":2278350139,"sequence":53,"title":"GNOME Fuzzy App Search - GNOME Shell Extensions — Mozilla Firefox","workspace":0,"maximized":3,"x":0,"y":29,"width":1920,"height":1051,"occupied":false}]}'
 startup-delay=2500
 sync-frequency=100
-sync-mode='RESTORE'
+sync-mode='IGNORE'
 
 [org/gnome/shell/extensions/sound-output-device-chooser]
 hide-on-single-device=false
