@@ -115,6 +115,14 @@
         "1,62,1": [
             "XF86AudioMicMute",
             "keyboard"
+        ],
+        "1,57,1+1,50,1": [
+            "KEY_LEFTCTRL + Shift_L + KEY_RIGHT",
+            "keyboard"
+        ],
+        "1,57,1+1,49,1": [
+            "KEY_LEFTCTRL + Shift_L + KEY_LEFT",
+            "keyboard"
         ]
     }
 }
