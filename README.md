@@ -171,6 +171,7 @@
 - GTK Title Bar (rip off some title bar support wayland)
 - Just Perfection (UI, UX in gnome)
 - Workspaces Bar (show the number workspace like titling window manager dwm, i3,...)
+- [Smart auto move](<https://github.com/khimaros/smart-auto-move>)
 
 #### Applications
 
