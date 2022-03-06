@@ -147,12 +147,12 @@ alias help="fzfMan"
 # @todo [zsh] af if not have session create new like fzf session switch tmux plugin
 # @body @thuanpham2311
 # why `af`? cuz like the tmux command fzf session switch hold ctrl + a + f
-function af() {
+function tmuxSessionSwitch() {
   local session
   session=$(tmux list-sessions -F "#{session_name}" | fzfDown)
   tmux switch-client -t "$session"
 }
-alias tmuxSessionSwitch='af'
+alias af='tmuxSessionSwitch'
 
 function sb() {
   isInGitRepo || return
