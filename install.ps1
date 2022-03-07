@@ -3,6 +3,7 @@ Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.
 scoop bucket add extras
 
 scoop install fd
+scoop install ripgrep
 scoop install git
 scoop install fzf
 scoop install starship
