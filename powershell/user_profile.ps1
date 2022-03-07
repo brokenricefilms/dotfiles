@@ -11,7 +11,6 @@ Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
 
 Set-Alias vi nvim
 Set-Alias vim nvim
-Set-Alias v nvim
 Set-Alias t Remove-ItemSafely
 Set-Alias la Get-ChildItem-Hidden
 Set-Alias l Get-ChildItem
@@ -32,7 +31,7 @@ function .. { Set-location .. }
 
 function ... { Set-location .. ; Set-location .. }
 
-function e { exit }
+function q { exit }
 
 Remove-Alias cd
 function cd {
@@ -92,4 +91,4 @@ function f() {
         nvim "$file"
     }
 }
-
+Set-Alias v f
