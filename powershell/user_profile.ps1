@@ -82,7 +82,6 @@ function c {
     Get-ChildItem
 }
 
-
 function f() {
     $file=fd . $HOME -t f --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude scoop --exclude AppData --exclude .cache | fzf
     if ($file -eq '') {
@@ -100,3 +99,8 @@ function autoCommit() {
     git push
 }
 Set-Alias ok autoCommit
+
+function update() {
+    winget upgrade --all
+    scoop update * 
+}
