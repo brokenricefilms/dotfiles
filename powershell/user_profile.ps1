@@ -92,3 +92,11 @@ function f() {
     }
 }
 Set-Alias v f
+
+function autoCommit() {
+    git add .
+    git commit -m "[auto commit]"
+    git pull
+    git push
+}
+Set-Alias ok autoCommit
