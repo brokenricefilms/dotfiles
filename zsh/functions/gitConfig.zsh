@@ -16,7 +16,7 @@ function autoCommit () {
 }
 
 function repoSync () {
-  git pull
+  git pull --all
   git push
 }
 
