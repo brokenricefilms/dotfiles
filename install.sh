@@ -1,6 +1,8 @@
 scoop install fd
 scoop install git
 scoop install fzf
+scoop install starship
+scoop install neovim
 scoop install sudo
 
 sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\.gitconfig" -Target "C:\Users\master\dotfiles\git\gitconfig" -Force
