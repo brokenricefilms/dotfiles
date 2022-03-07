@@ -12,3 +12,6 @@ sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\AppData\Local\Packag
 sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\AppData\Local\Microsoft\PowerToys\settings.json" -Target "C:\Users\master\dotfiles\PowerToys\settings.json" -Force
 sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\AppData\Local\Microsoft\PowerToys\Keyboard Manager\settings.json" -Target "C:\Users\master\dotfiles\PowerToys\Keyboard Manager\settings.json" -Force
 sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\AppData\Local\Microsoft\PowerToys\Keyboard Manager\default.json" -Target "C:\Users\master\dotfiles\PowerToys\Keyboard Manager\default.json" -Force
+
+sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\AppData\Roaming\TouchCursor\settings.cfg" -Target "C:\Users\master\dotfiles\TouchCursor\settings.cfg" -Force
+sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\AppData\Roaming\TouchCursor\pre-1.7.1-settings.cfg" -Target "C:\Users\master\dotfiles\TouchCursor\pre-1.7.1-settings.cfg" -Force
