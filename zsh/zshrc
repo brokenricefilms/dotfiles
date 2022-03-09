@@ -208,6 +208,16 @@ function hi () {
   neofetch
 }
 
+function switchToJava8() {
+  sudo archlinux-java set java-8-openjdk
+  archlinux-java status
+}
+
+function switchToJava17() {
+  sudo archlinux-java set java-17-openjdk
+  archlinux-java status
+}
+
 source ~/dotfiles/zsh/functions/gnome.zsh
 source ~/dotfiles/zsh/functions/browserConfig.zsh
 source ~/dotfiles/zsh/functions/gitConfig.zsh
