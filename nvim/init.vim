@@ -334,6 +334,9 @@ set shiftwidth=4
 autocmd BufRead,BufNewFile *.cs,*.h,*.cpp,*.scss,*.css,*.html,*.md,*.js,*.zsh,zshrc,*.vim setlocal tabstop=2 shiftwidth=2 softtabstop=2
 set expandtab
 
+" Disable automatic comment insertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 set nocompatible
 filetype plugin indent on
 set encoding=UTF-8
