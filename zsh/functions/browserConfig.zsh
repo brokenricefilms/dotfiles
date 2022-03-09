@@ -48,4 +48,5 @@ function browserDaily () {
   browserFb
   browserAnime
   browserDiscord
+  browser "https://www.truongquansuquankhu7.edu.vn/blog"
 }
