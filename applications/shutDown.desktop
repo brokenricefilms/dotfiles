@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Name=power off
+Exec=gnome-session-quit --power-off
+Keywords=shutdown;power;off;turn;off;
+Icon=/home/master/dotfiles/applications/icons/shutdown.svg
