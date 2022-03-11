@@ -5,6 +5,7 @@ fi
 set -U EDITOR nvim
 export EDITOR='nvim'
 export VISUAL='nvim'
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 export PATH="$HOME/.npm/bin:$PATH"
 export DENO_INSTALL="/home/master/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
