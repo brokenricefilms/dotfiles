@@ -53,8 +53,8 @@ function! s:show_documentation()
   endif
 endfunction
 
-nmap <leader>i <Plug>(coc-rename)
-nmap <leader>I :%s/\<<C-r><C-w>\>/
+nmap <leader>i :%s/\<<C-r><C-w>\>/
+nmap <leader>I <Plug>(coc-rename)
 
 nmap <silent> <leader>c :CocAction<enter>
 noremap <silent> <Leader>; :CocCommand<enter>
