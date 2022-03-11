@@ -146,6 +146,7 @@ alias cat='bat'
 alias dud='du -d 1 -h'
 alias updateApplications='sudo ln -sf ~/dotfiles/applications/* /usr/share/applications/'
 alias fak='git stash &>/dev/null; git stash clear'
+alias changeDirToUsbFolder='cd /run/media/master/ ; ls'
 
 # music stuff
 alias m='mpv --shuffle --loop-playlist ~/Music/*'
