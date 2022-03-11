@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Name=power off
+Exec=sudo shutdown -h now
+Icon=/home/master/dotfiles/applications/icons/shutdown.svg
+Keywords=shutdown;power;off;turn;off

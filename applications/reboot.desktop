@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Name=reboot
+Exec=sudo reboot
+Icon=/home/master/dotfiles/applications/icons/reboot.svg
+Keywords=restart;refest
