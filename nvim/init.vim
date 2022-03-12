@@ -441,6 +441,7 @@ imap <S-down> <esc>o
 imap <S-up> <esc>O
 nnoremap <silent> <S-down> o<esc>
 nnoremap <silent> <S-up> O<esc>
+nnoremap đ dd<s>
 
 xnoremap <silent> p p:let @+=@0<enter>:let @"=@0<enter>
 nnoremap <leader><space> <c-^>
