@@ -1,4 +1,3 @@
--- configuration options for stylua
 local filetype_configs = {
 	cs = {
 		-- clang-format
@@ -7,7 +6,7 @@ local filetype_configs = {
 				exe = "clang-format",
 				args = { "--assume-filename", vim.api.nvim_buf_get_name(0), "--style=Google" },
 				stdin = true,
-				cwd = vim.fn.expand("%:p:h"), -- Run clang-format in cwd of the file.
+				cwd = vim.fn.expand("%:p:h"),
 			}
 		end,
 	},
@@ -18,7 +17,7 @@ local filetype_configs = {
 				exe = "clang-format",
 				args = { "--assume-filename", vim.api.nvim_buf_get_name(0), "--style=Google" },
 				stdin = true,
-				cwd = vim.fn.expand("%:p:h"), -- Run clang-format in cwd of the file.
+				cwd = vim.fn.expand("%:p:h"),
 			}
 		end,
 	},
@@ -29,7 +28,7 @@ local filetype_configs = {
 				exe = "clang-format",
 				args = { "--assume-filename", vim.api.nvim_buf_get_name(0), "--style=Google" },
 				stdin = true,
-				cwd = vim.fn.expand("%:p:h"), -- Run clang-format in cwd of the file.
+				cwd = vim.fn.expand("%:p:h"),
 			}
 		end,
 	},
@@ -40,12 +39,11 @@ local filetype_configs = {
 				exe = "clang-format",
 				args = { "--assume-filename", vim.api.nvim_buf_get_name(0), "--style=Google" },
 				stdin = true,
-				cwd = vim.fn.expand("%:p:h"), -- Run clang-format in cwd of the file.
+				cwd = vim.fn.expand("%:p:h"),
 			}
 		end,
 	},
 	sh = {
-		-- Shell Script Formatter
 		function()
 			return {
 				exe = "shfmt",
@@ -59,7 +57,6 @@ local filetype_configs = {
 			return {
 				exe = "stylua",
 				args = {
-					-- '--config-path ~/dotfiles/stylua/stylua.toml',
 					"--search-parent-directories",
 					"-",
 				},
@@ -97,7 +94,6 @@ local filetype_configs = {
 	},
 }
 
--- configuration options for prettier
 local prettier_config = {
 	function()
 		return {
@@ -111,7 +107,6 @@ local prettier_config = {
 	end,
 }
 
--- add a prettier_config for all js/ts/vue/svelte filetypes
 for _, ft in pairs({
 	"javascript",
 	"javascriptreact",
@@ -128,16 +123,14 @@ for _, ft in pairs({
 	filetype_configs[ft] = prettier_config
 end
 
--- require formatter.nvim
 require("formatter").setup({
 	logging = false,
 	filetype = filetype_configs,
 })
 
--- call formatter.nvim automatically on save
 vim.cmd([[
 augroup AutoFormatting
-  au!
-  au BufWritePost *.* FormatWrite
+  autocmd!
+  autocmd BufWritePost *.* FormatWrite
 augroup END
 ]])
