@@ -83,8 +83,6 @@ omap ac <Plug>(coc-classobj-a)
 Plug 'https://github.com/editorconfig/editorconfig-vim'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
-Plug 'https://github.com/lukas-reineke/lsp-format.nvim'
-
 Plug 'https://github.com/github/copilot.vim'
 let b:copilot_enabled=1
 
