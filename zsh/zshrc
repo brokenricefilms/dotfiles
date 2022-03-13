@@ -148,29 +148,7 @@ alias dud='du -d 1 -h'
 alias updateApplications='sudo ln -sf ~/dotfiles/applications/* /usr/share/applications/'
 alias fak='git stash &>/dev/null; git stash clear'
 alias changeDirToUsbFolder='cd /run/media/master/ ; ls'
-
-# music stuff
 alias m='mpv --shuffle --loop-playlist ~/Music/*'
-
-# ubuntu apt
-# alias ins='sudo apt install -y'
-# alias inss='apt search'
-# alias uins='sudo apt remove -y'
-
-# termux pkg
-# alias ins='pkg install -y'
-# alias uins='pkg remove -y'
-
-# fedora dnf
-# alias ins='sudo dnf -y install'
-# alias inss='dnf search'
-# alias uins='sudo dnf -y remove'
-
-# arch
-alias ins='sudo pacman -S --noconfirm'
-alias inss='pacman -Ss'
-alias ya='yay --noconfirm'
-alias uins='sudo pacman -Rs --noconfirm'
 
 alias ..='cd .. ; l'
 alias ...='cd .. ; cd .. ; l'
@@ -210,16 +188,9 @@ function hi () {
   neofetch
 }
 
-function switchToJava8() {
-  sudo archlinux-java set java-8-openjdk
-  archlinux-java status
-}
-
-function switchToJava17() {
-  sudo archlinux-java set java-17-openjdk
-  archlinux-java status
-}
-
+source ~/dotfiles/zsh/functions/arch.zsh
+source ~/dotfiles/zsh/functions/debian.zsh
+source ~/dotfiles/zsh/functions/fedora.zsh
 source ~/dotfiles/zsh/functions/gnome.zsh
 source ~/dotfiles/zsh/functions/browserConfig.zsh
 source ~/dotfiles/zsh/functions/gitConfig.zsh
