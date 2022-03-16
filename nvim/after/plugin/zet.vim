@@ -5,7 +5,7 @@ command! ZettelHome :execute ":e" zettelkasten . "README.md"
 autocmd BufEnter *.md command! MoveNoteToPublish execute "silent Move ~/sync/note/publish/"
 autocmd BufEnter *.md command! MoveNoteToPersonal execute "silent Move ~/sync/note/personal/"
 
-noremap <silent> gn :ZettelHome<enter>:cd %:h<enter>
+noremap <silent> gn :ZettelHome<enter>:cd %:h<enter>:NumberLineOff<enter>
 
 command! NewZettel :execute ":e" zettelkasten . strftime("%Y%m%d%H%M%S") . ".md"
 noremap <silent> <leader>n :tabnew<enter>:NewZettel<enter>:MoveNoteToPublish<enter>i# <enter><enter>-<enter><enter>---<enter><enter>> #<esc>ggjjA<space>
