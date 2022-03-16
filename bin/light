@@ -1,7 +1,6 @@
 #! /usr/bin/env sh
 
-echo "
-set background=light
+echo "set background=light
 colorscheme zenwritten
 highlight markdownH1 guifg=#2C363C guibg=NONE guisp=NONE gui=bold
 " >~/dotfiles/nvim/themeControl.vim
