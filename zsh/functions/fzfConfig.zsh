@@ -21,7 +21,7 @@ function e () {
 
 fzfDown() { fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse }
 
-function f() {
+function findFile() {
   local file
   file=$(fd . -t f --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
   if [ ! -z "$file" ]
