@@ -7,6 +7,17 @@ export FZF_ALT_C_COMMAND="fd -t d"
 
 alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \$1 }' | wl-copy"
 # alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \$1 }' | xclip -sel clip"
+alias v='e'
+alias vi='nvim'
+alias vim='nvim'
+
+function e () {
+  if [ ! -n "$1" ]; then
+    f
+  else
+    nvim "$1"
+  fi
+}
 
 fzfDown() { fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse }
 
@@ -18,20 +29,9 @@ function f() {
     nvim "$file"
   fi
 }
-alias findFile='f'
+alias f='findFile'
 
-function e () {
-  if [ ! -n "$1" ]; then
-    f
-  else
-    nvim "$1"
-  fi
-}
-alias v='e'
-alias vi='nvim'
-alias vim='nvim'
-
-function F() {
+function findFileInHome() {
   local file
   file=$(fd . $HOME -t f --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
   if [ ! -z "$file" ]
@@ -39,9 +39,9 @@ function F() {
     nvim "$file"
   fi
 }
-alias findFileInHome='F'
+alias F='findFileInHome'
 
-function fh() {
+function findHiddenFile() {
   local file
   file=$(fd . -t f --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
   if [ ! -z "$file" ]
@@ -49,9 +49,9 @@ function fh() {
     nvim "$file"
   fi
 }
-alias findHiddenFile='fh'
+alias fh='findHiddenFile'
 
-function Fh() {
+function findHiddenFileInHome() {
   local file
   file=$(fd . $HOME -t f --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
   if [ ! -z "$file" ]
@@ -59,51 +59,51 @@ function Fh() {
     nvim "$file"
   fi
 }
-alias findHiddenFileInHome='Fh'
+alias Fh='findHiddenFileInHome'
 
-function c () {
+function changeDir () {
   local dir
   dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
   cd "$dir"
   ls
 }
-alias changeDir='c'
+alias c='changeDir'
 
-function C () {
+function changeDirInHome () {
   local dir
   dir=$(fd -t d . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
   cd "$dir"
   ls
 }
-alias changeDirInHome='C'
+alias C='changeDirInHome'
 
-function ch () {
+function changeHiddenDir () {
   local dir
   dir=$(fd -t d --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
   cd "$dir"
   ls
 }
-alias changeHiddenDir='ch'
+alias ch='changeHiddenDir'
 
-function Ch () {
+function changeHiddenDirInHome () {
   local dir
   dir=$(fd -t d . $HOME --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
   cd "$dir"
   ls
 }
-alias changeHiddenDirInHome='Ch'
+alias Ch='changeHiddenDirInHome'
 
-function o() {
+function openFile() {
   local object
   object=$(fd . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
-  if [ ! -z "$object" ]
+  if [ ! -z '$object' ]
   then
-    xdg-open "$object"
+    xdg-open '$object'
   fi
 }
-alias openFile='o'
+alias o='openFile'
 
-function O() {
+function openFileInHome() {
   local object
   object=$(fd . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
   if [ ! -z "$object" ]
@@ -111,9 +111,9 @@ function O() {
     xdg-open "$object"
   fi
 }
-alias openFileInHome='O'
+alias O='openFileInHome'
 
-function oh() {
+function openHiddenFile() {
   local object
   object=$(fd . --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
   if [ ! -z "$object" ]
@@ -121,9 +121,9 @@ function oh() {
     xdg-open "$object"
   fi
 }
-alias openHiddenFile='oh'
+alias oh='openHiddenFile'
 
-function Oh() {
+function openHiddenFileInHome() {
   local object
   object=$(fd . $HOME --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
   if [ ! -z "$object" ]
@@ -131,7 +131,7 @@ function Oh() {
     xdg-open "$object"
   fi
 }
-alias openHiddenFileInHome='Oh'
+alias Oh='openHiddenFileInHome'
 
 function fzfMan() {
   if [ -z $1 ]
@@ -154,11 +154,11 @@ function tmuxSessionSwitch() {
 }
 alias af='tmuxSessionSwitch'
 
-function sb() {
+function switchBranch() {
   isInGitRepo || return
   git branch -a | fzfDown | xargs git switch
 }
-alias switchBranch='sb'
+alias sb='switchBranch'
 
 function gitHubIssueList() { gh issue list | fzf | cut -f1 | wl-copy}
 # function gitHubIssueList() { gh issue list | fzf | cut -f1 | xclip -sel clip}
