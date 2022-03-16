@@ -334,6 +334,7 @@ set expandtab
 
 " Disable automatic comment insertion
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd FileType *.md setlocal formatoptions+=tcqj
 
 set nocompatible
 filetype plugin indent on
