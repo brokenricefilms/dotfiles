@@ -88,8 +88,6 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 Plug 'https://github.com/github/copilot.vim'
 let b:copilot_enabled=1
 
-Plug 'https://github.com/psliwka/vim-smoothie'
-
 Plug 'https://github.com/AndrewRadev/splitjoin.vim'
 let g:splitjoin_split_mapping = 'gJ'
 let g:splitjoin_join_mapping  = 'gK'
