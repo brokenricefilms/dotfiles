@@ -106,9 +106,9 @@ alias o='openFile'
 function openFileInHome() {
   local object
   object=$(fd . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
-  if [ ! -z "$object" ]
+  if [ ! -z '$object' ]
   then
-    xdg-open "$object"
+    xdg-open '$object'
   fi
 }
 alias O='openFileInHome'
