@@ -1,6 +1,5 @@
 local filetype_configs = {
 	cs = {
-		-- clang-format
 		function()
 			return {
 				exe = "clang-format",
@@ -11,7 +10,6 @@ local filetype_configs = {
 		end,
 	},
 	c = {
-		-- clang-format
 		function()
 			return {
 				exe = "clang-format",
@@ -22,7 +20,6 @@ local filetype_configs = {
 		end,
 	},
 	java = {
-		-- clang-format
 		function()
 			return {
 				exe = "clang-format",
@@ -33,7 +30,6 @@ local filetype_configs = {
 		end,
 	},
 	cpp = {
-		-- clang-format
 		function()
 			return {
 				exe = "clang-format",
