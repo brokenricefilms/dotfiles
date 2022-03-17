@@ -72,6 +72,7 @@ function syncNote () {
 function autoSync {
   repo=(
     /home/master/sync/ok
+    /home/master/sync/obs-studio
     /home/master/repos/co_so_du_lieu
     /home/master/repos/dataLab
     /home/master/repos/ky_thuat_lap_trinh
