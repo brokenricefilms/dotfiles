@@ -370,6 +370,8 @@ nnoremap đ dd<s>
 xnoremap <silent> p p:let @+=@0<enter>:let @"=@0<enter>
 nnoremap <leader><space> <c-^>
 
+nmap <leader>i :%s/\<<C-r><C-w>\>/
+
 command! OpenFileInBraveBrowser execute "silent !brave-browser '%'"
 command! CopyFileName execute "silent !echo %:p:t | wl-copy"
 " command! CopyFileName execute "silent !echo %:p:t | xclip -sel clip"
