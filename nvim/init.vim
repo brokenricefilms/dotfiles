@@ -278,6 +278,7 @@ set ttyfast
 set nowritebackup
 set inccommand=split
 set scrolloff=5
+set shortmess+=I
 
 nnoremap + <C-a>
 nnoremap - <C-x>
