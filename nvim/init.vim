@@ -1,84 +1,9 @@
 call plug#begin()
-Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
-set hidden
-set shortmess+=c
-set signcolumn=yes
-set updatetime=10
-let g:coc_global_extensions = [
-            \ "coc-snippets",
-            \ "coc-json",
-            \ "coc-html",
-            \ "coc-htmlhint",
-            \ "coc-html-css-support",
-            \ "coc-eslint",
-            \ "coc-emmet",
-            \ "coc-dot-complete",
-            \ "coc-diagnostic",
-            \ "coc-dash-complete",
-            \ "coc-tsserver",
-            \ "coc-sql",
-            \ "coc-sh",
-            \ "coc-calc",
-            \ "coc-omnisharp",
-            \ "coc-go",
-            \ "coc-vetur",
-            \ "coc-lua",
-            \ "coc-deno",
-            \ "coc-css",
-            \ "coc-vimlsp",
-            \ "coc-java",
-            \ "coc-clangd"]
+Plug 'https://github.com/ms-jpq/coq_nvim'
+Plug 'https://github.com/ms-jpq/coq.thirdparty', {'branch': '3p'}
 
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-nmap <silent> [d :call CocAction('diagnosticNext')<enter>
-nmap <silent> ]d :call CocAction('diagnosticPrevious')<enter>
-
-command! ShowDocumentation :call <SID>show_documentation()<enter>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-nmap <leader>i :%s/\<<C-r><C-w>\>/
-nmap <leader>I <Plug>(coc-rename)
-
-nmap <silent> <leader>c :CocAction<enter>
-noremap <silent> <Leader>; :CocCommand<enter>
-
-imap <C-l> <Plug>(coc-snippets-expand)
-vmap <C-j> <Plug>(coc-snippets-select)
-
-let g:coc_snippet_prev = '<c-k>'
-
-xmap <leader>x  <Plug>(coc-convert-snippet)
-
-inoremap <C-j> <Plug>(coc-snippets-expand-jump)
-imap <C-j> <Plug>(coc-snippets-expand-jump)
-
-command! -nargs=0 EditSnippets :call CocAction('runCommand', 'snippets.editSnippets')
-
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-xmap ic <Plug>(coc-classobj-i)
-omap ic <Plug>(coc-classobj-i)
-xmap ac <Plug>(coc-classobj-a)
-omap ac <Plug>(coc-classobj-a)
+Plug 'https://github.com/neovim/nvim-lspconfig'
+Plug 'https://github.com/williamboman/nvim-lsp-installer'
 
 Plug 'https://github.com/mhartington/formatter.nvim'
 
@@ -456,3 +381,5 @@ command! DeleteDosLineEngdingChar execute "%s/\r$/ /g"
 command! PlugCleanWithReloadConfigFile execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf" | execute "PlugClean"
 command! PlugInstallWithReloadConfigFile execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf" | execute "PlugInstall"
 command! ShowFileType execute "set filetype?"
+
+let g:coq_settings = { 'auto_start': 'shut-up' }
