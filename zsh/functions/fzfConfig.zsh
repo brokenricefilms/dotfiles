@@ -7,17 +7,18 @@ export FZF_ALT_C_COMMAND="fd -t d"
 
 alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \$1 }' | wl-copy"
 # alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \$1 }' | xclip -sel clip"
-alias v='findFile'
-alias vi='nvim'
-alias vim='nvim'
 
-function e () {
+function findFileEditInNvim () {
   if [ ! -n "$1" ]; then
     findFile
   else
     nvim "$1"
   fi
 }
+alias e='findFileEditInNvim'
+alias v='findFileEditInNvim'
+alias vi='findFileEditInNvim'
+alias vim='findFileEditInNvim'
 
 fzfDown() { fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse }
 
