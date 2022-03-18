@@ -1,20 +1,20 @@
 snippet **
-    ** $1**  $0
+    **$1** $0
 
 snippet *
-    * $1*  $0
+    *$1* $0
 
 snippet <
-    < $1>  $0
+    <$1> $0
 
 snippet ~~
-    ~~ $1~~  $0
+    ~~$1~~ $0
 
 snippet link
-    [ $2](< $1>)  $0
+    [$2](<$1>) $0
 
 snippet img
-    ![ $2](< $1>)  $0
+    ![$2](<$1>) $0
 
 snippet youtubeDefaultDescription
     👋 Hi folks
@@ -35,16 +35,16 @@ snippet youtubeDefaultDescription
     #thuanpham2311
 
 snippet	talk-show
-    # Talk show $CURRENT_MONTH_NAME_SHORT $CURRENT_DATE, $CURRENT_YEAR:   $1
+    # Talk show $CURRENT_MONTH_NAME_SHORT $CURRENT_DATE, $CURRENT_YEAR:  $1
 
     📚 Chapters
 
     - 0:00 Hi
-    -  $2
+    - $2
 
     📓 Note:
 
-    -  $0
+    - $0
 
     👋 Hi folks
     • I'm a random nerd, finding something fun to do every day.
@@ -65,11 +65,11 @@ snippet	talk-show
 
 snippet	post
     ---
-    title:  $1
+    title: $1
     author: thuanpham2311
     date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DAY $CURRENT_HOUR:$CURRENT_MINUTE
     categories: [Blogging]
-    tags: [ $2]
+    tags: [$2]
     ---
 
     $3
@@ -87,49 +87,49 @@ snippet	post
 snippet video
 
     ---
-    - Author:  $1
-    - Link: < $2>
+    - Author: $1
+    - Link: <$2>
     > #video
 
 snippet article
 
     ---
-    - Author:  $1
-    - Link: < $2>
+    - Author: $1
+    - Link: <$2>
     > #article
 
 snippet shortLink "short link"
     ---
-    redirect_to:  $1
+    redirect_to: $1
     ---
 
 snippet human
-    #  $1
+    # $1
 
-    -  $0
+    - $0
 
     ---
-    > #human  $2
+    > #human $2
 
 snippet note
-    [${1:note name}]($CURRENT_YEAR$CURRENT_MONTH$CURRENT_DATE$CURRENT_HOUR$CURRENT_MINUTE$CURRENT_SECOND.md)  $0
+    [${1:note name}]($CURRENT_YEAR$CURRENT_MONTH$CURRENT_DATE$CURRENT_HOUR$CURRENT_MINUTE$CURRENT_SECOND.md) $0
 
 snippet cpp
     ```cpp
-     $0
+    $0
     ```
 
 snippet js
     ```js
-     $0
+    $0
     ```
 
 snippet sh
     ```sh
-     $0
+    $0
     ```
 
 snippet bash
     ```bash
-     $0
+    $0
     ```
