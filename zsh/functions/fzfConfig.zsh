@@ -5,14 +5,14 @@ export FZF_DEFAULT_COMMAND='fd --type f --follow --exclude .git --exclude undodi
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d"
 
-alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \$1 }' | wl-copy"
-# alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \$1 }' | xclip -sel clip"
+alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \ $1 }' | wl-copy"
+# alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \ $1 }' | xclip -sel clip"
 
 function findFileEditInNvim () {
-  if [ ! -n "$1" ]; then
+  if [ ! -n " $1" ]; then
     findFile
   else
-    nvim "$1"
+    nvim " $1"
   fi
 }
 alias e='findFileEditInNvim'
@@ -64,7 +64,7 @@ alias Fh='findHiddenFileInHome'
 
 function changeDir () {
   local dir
-  dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
+  dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
   cd "$dir"
   ls
 }
@@ -72,7 +72,7 @@ alias c='changeDir'
 
 function changeDirInHome () {
   local dir
-  dir=$(fd -t d . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
+  dir=$(fd -t d . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
   cd "$dir"
   ls
 }
@@ -80,7 +80,7 @@ alias C='changeDirInHome'
 
 function changeHiddenDir () {
   local dir
-  dir=$(fd -t d --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
+  dir=$(fd -t d --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
   cd "$dir"
   ls
 }
@@ -88,7 +88,7 @@ alias ch='changeHiddenDir'
 
 function changeHiddenDirInHome () {
   local dir
-  dir=$(fd -t d . $HOME --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
+  dir=$(fd -t d . $HOME --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
   cd "$dir"
   ls
 }
@@ -135,11 +135,11 @@ function openHiddenFileInHome() {
 alias Oh='openHiddenFileInHome'
 
 function fzfMan() {
-  if [ -z $1 ]
+  if [ -z  $1 ]
   then
-    man -k . | fzf -q "$1" --prompt='man> '  --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r man | col -bx | bat -l man -p --color always' | tr -d '()' | awk '{printf "%s ", $2} {print $1}' | xargs -r man
+    man -k . | fzf -q " $1" --prompt='man> '  --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r man | col -bx | bat -l man -p --color always' | tr -d '()' | awk '{printf "%s ",  $2} {print  $1}' | xargs -r man
   else
-    man $1
+    man  $1
   fi
 }
 alias M='fzfMan'

@@ -1,22 +1,22 @@
 snippet if
-    if ( $1 ) {
-      $2
+    if (  $1 ) {
+       $2
     }
 
 
 snippet for
-    for (int ${1:i} = 0; $1 < ${2:n}; $1++) {
-      $0
+    for (int ${1:i} = 0;  $1 < ${2:n};  $1++) {
+       $0
     }
 
 snippet do
     do {
-      $1;
-    } while ($2);
+       $1;
+    } while ( $2);
 
 snippet while
-    while ($1) {
-      $2;
+    while ( $1) {
+       $2;
     }
 
 snippet main
@@ -57,16 +57,16 @@ snippet kiemTraSoHoangThien
     }
 
 snippet max
-    const int MAX = $1;
+    const int MAX =  $1;
 
 snippet struct
-    struct $1 {
-      $2
+    struct  $1 {
+       $2
     };
-    $0
+     $0
 
 snippet structDaySo
-    const int MAX = $1;
+    const int MAX =  $1;
 
     struct DaySo {
       int list[MAX];
@@ -147,7 +147,7 @@ snippet menu
 
     do {
     cout << "\n\n Nhập bạn số bạn muốn thực thi (nhập 0 để thoát)" << endl;
-    cout << "1: $1\n" << endl;
+    cout << "1:  $1\n" << endl;
 
     cout << "=> ? = ";
     cin >> menuNumber;
@@ -156,7 +156,7 @@ snippet menu
       case 0:
       break;
       case 1:
-      $2
+       $2
 
       break;
     }
