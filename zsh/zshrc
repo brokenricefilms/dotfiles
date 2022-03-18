@@ -96,7 +96,7 @@ function repeatIn1s () {
   done
 }
 
-function mk () {
+function makeDir () {
   if [ ! -n "$1" ]; then
     echo "Enter a directory name"
   elif [ -d $1 ]; then
@@ -106,7 +106,7 @@ function mk () {
     mkdir -p $1 && cd $1
   fi
 }
-alias makeDir="mk"
+alias mk="makeDir"
 
 SERVER_IP () { hostname -I }
 
@@ -186,6 +186,32 @@ function hi () {
   browserDaily
   topgrade
   neofetch
+}
+
+functions importDefaultEditorConfig() {
+  touch .editorconfig
+  echo "root = true
+
+  [*]
+  indent_style = space
+  indent_size = 2
+  charset = utf-8
+  trim_trailing_whitespace = true
+  insert_final_newline = true
+  end_of_line = lf
+  # editorconfig-tools is unable to ignore longs strings or urls
+  max_line_length = off" > .editorconfig
+}
+
+
+functions createJsTestProject() {
+  cd /tmp
+  mkdir js_test
+  cd js_test
+  yarn init --yes
+  yarn add eslint-config-airbnb
+  importDefaultEditorConfig
+  nvim js_test.js
 }
 
 source ~/dotfiles/zsh/functions/arch.zsh

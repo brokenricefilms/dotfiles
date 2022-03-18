@@ -7,13 +7,13 @@ export FZF_ALT_C_COMMAND="fd -t d"
 
 alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \$1 }' | wl-copy"
 # alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \$1 }' | xclip -sel clip"
-alias v='e'
+alias v='findFile'
 alias vi='nvim'
 alias vim='nvim'
 
 function e () {
   if [ ! -n "$1" ]; then
-    f
+    findFile
   else
     nvim "$1"
   fi
