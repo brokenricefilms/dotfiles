@@ -133,7 +133,7 @@
 
 #### Fzf
 
-- `;` in normal mode: open vim command with fzf completion (`space + ;` in normal mode for coc list command)
+- `;` in normal mode: open vim command with fzf completion
 - `space + f`: find file in current path (`space + F` in home)
 - `space + h`: open fzf history files
 - `space + j`: open fzf with rig grep, search file content in the current path
@@ -152,7 +152,7 @@
 #### Emmet:
 
 - `,,` in insert mode: execute like h1`,,` to `<h1>|</h1>`
-- Preview with coc.nvim
+- Preview with nvim lsp (coq_nvim)
 
 #### vim stuff
 
@@ -160,6 +160,31 @@
 - `space + r`: run the file (with `R` for second way)
 - `:Dark`: switch to dark theme (changed nvim, kitty, Alacritty, bat)
 - `:Light`: switch to light theme (changed nvim, kitty, Alacritty, bat)
+
+#### nvim lsp
+
+- using [coq_nvim](https://github.com/ms-jpq/coq_nvim), [nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer)
+
+```
+# lsp list
+emmet_ls
+bashls
+clangd (c, c++)
+csharp_ls (c#)
+cssls
+cssmodules_ls
+denols
+diagnosticls
+eslint (javascript, typescript)
+gopls (go)
+html
+jdtls (java)
+jsonls
+sqlls
+sumneko_lua (lua)
+tsserver (typescript, javascript)
+vimls
+```
 
 ### Gnome
 
@@ -171,7 +196,7 @@
 - GTK Title Bar (rip off some title bar support wayland)
 - Just Perfection (UI, UX in gnome)
 - Workspaces Bar (show the number workspace like titling window manager dwm, i3,...)
-- [Smart auto move](<https://github.com/khimaros/smart-auto-move>)
+- [Smart auto move](https://github.com/khimaros/smart-auto-move)
 
 #### Applications
 
