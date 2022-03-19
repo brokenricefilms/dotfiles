@@ -1,7 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Terminal=false
-Name=reboot
-Exec=gnome-session-quit --reboot
-Icon=/home/master/dotfiles/applications/icons/reboot.svg
-Keywords=restart;
