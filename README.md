@@ -216,7 +216,7 @@ vimls
 > For my daily use, i develop this dotfiles repos on this, for several months maybe i will change my daily combo (Linux distro hopping)
 
 - Manjaro
-- Gnome 41.2 (wayland)
+- Gnome 41.4 (wayland)
 - Neovim v0.6.1
 - kitty terminal
 
