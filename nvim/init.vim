@@ -182,8 +182,6 @@ Plug 'https://github.com/leafOfTree/vim-matchtag'
 
 Plug 'https://github.com/tpope/vim-surround'
 
-set virtualedit=block
-
 Plug 'https://github.com/windwp/nvim-autopairs'
 
 Plug 'https://github.com/windwp/nvim-ts-autotag'
