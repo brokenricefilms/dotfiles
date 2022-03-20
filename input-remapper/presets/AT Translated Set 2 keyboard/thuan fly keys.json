@@ -123,6 +123,10 @@
         "1,57,1+1,49,1": [
             "KEY_LEFTCTRL + Shift_L + KEY_LEFT",
             "keyboard"
+        ],
+        "1,57,1+1,47,1": [
+            "Alt_L+v",
+            "keyboard"
         ]
     }
 }
