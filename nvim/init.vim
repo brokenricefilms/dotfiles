@@ -1,8 +1,11 @@
 call plug#begin()
+Plug 'https://github.com/nvim-lualine/lualine.nvim'
+
 Plug 'https://github.com/ms-jpq/coq_nvim'
 Plug 'https://github.com/ms-jpq/coq.thirdparty', {'branch': '3p'}
 
 Plug 'https://github.com/neovim/nvim-lspconfig'
+
 Plug 'https://github.com/williamboman/nvim-lsp-installer'
 
 Plug 'https://github.com/mhartington/formatter.nvim'
@@ -14,8 +17,8 @@ Plug 'https://github.com/github/copilot.vim'
 let b:copilot_enabled=1
 
 Plug 'https://github.com/AndrewRadev/splitjoin.vim'
-let g:splitjoin_split_mapping = 'gJ'
-let g:splitjoin_join_mapping  = 'gK'
+let g:splitjoin_split_mapping = 'gj'
+let g:splitjoin_join_mapping  = 'gk'
 
 Plug 'https://github.com/wakatime/vim-wakatime'
 
@@ -291,16 +294,6 @@ map <space> <leader>
 noremap <silent> <C-t> :tabnew<Return>
 noremap <silent> <S-e> gT
 noremap <silent> <S-r> gt
-
-noremap <silent> <leader>1 1gt
-noremap <silent> <leader>2 2gt
-noremap <silent> <leader>3 3gt
-noremap <silent> <leader>4 4gt
-noremap <silent> <leader>5 5gt
-noremap <silent> <leader>6 6gt
-noremap <silent> <leader>7 7gt
-noremap <silent> <leader>8 8gt
-noremap <silent> <leader>9 9gt
 
 set spellfile=~/dotfiles/nvim/spell/en.utf-8.add
 
