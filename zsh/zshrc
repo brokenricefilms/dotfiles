@@ -215,7 +215,6 @@ functions importDefaultEditorConfig() {
   max_line_length = off" > .editorconfig
 }
 
-
 functions createJsTestProject() {
   cd /tmp
   mkdir js_test
