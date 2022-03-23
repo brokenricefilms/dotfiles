@@ -2,72 +2,14 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
   exec tmux
 fi
 
-set -U EDITOR nvim
-export EDITOR='nvim'
-export VISUAL='nvim'
-export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
-export PATH="$HOME/.npm/bin:$PATH"
-export DENO_INSTALL="/home/master/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
-export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
-export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
-export PATH="$HOME/gems/bin:$PATH"
-export PATH="$PATH:/opt/mssql-tools/bin"
-export PATH=$PATH:~/.local/bin
-export PATH=$PATH:~/bin
-export PATH=$PATH:~/.cargo/bin
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:~/go/bin
-export GEM_HOME="$HOME/gems"
+autoload -U colors && colors
+eval "$(starship init zsh)"
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' rehash true
 zstyle ':completion:*' accept-exact '*(N)'
 WORDCHARS=${WORDCHARS//\/[&.;]}
-
-autoload -U colors && colors
-eval "$(starship init zsh)"
-
-setopt histignorealldups sharehistory
-setopt EXTENDED_HISTORY
-setopt HIST_EXPIRE_DUPS_FIRST
-setopt HIST_IGNORE_DUPS
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_IGNORE_SPACE
-setopt HIST_FIND_NO_DUPS
-setopt HIST_SAVE_NO_DUPS
-setopt HIST_BEEP
-HISTSIZE=10000
-SAVEHIST=10000
-HISTFILE=~/.zsh_history
-
-bindkey -v
-
-function zle_keymap_select {
-  if [[ ${KEYMAP} == vicmd ]] ||
-    [[ $1 = 'block' ]]; then
-      echo -ne '\e[1 q'
-    elif [[ ${KEYMAP} == main ]] ||
-      [[ ${KEYMAP} == viins ]] ||
-      [[ ${KEYMAP} = '' ]] ||
-      [[ $1 = 'beam' ]]; then
-          echo -ne '\e[5 q'
-  fi
-}
-
-zle -N zle_keymap_select
-
-function zle_line_init() {
-  zle -K viins
-  echo -ne "\e[5 q"
-}
-
-zle -N zle_line_init
-
-echo -ne '\e[5 q'
-
-preexec() { echo -ne '\e[5 q' ;}
 
 autoload -Uz compinit
 compinit
@@ -78,60 +20,12 @@ function downloadFile () {
   ls -lah ~/Downloads
   cd -
 }
-
-function cppProject () {
-  cp -r ~/.config/nvim/stuff/cpppro/* .
-  nvim main.cpp source.cpp header.h input
-}
-
-formatCpp () { clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp') }
-
-formatCs () { clang-format --style=Google -i $(find -name '*.cs') }
-
-function repeatIn1s () {
-  while true
-  do
-    $argv
-    sleep 1
-  done
-}
-
-function makeDir () {
-  if [ ! -n "$1" ]; then
-    echo "Enter a directory name"
-  elif [ -d $1 ]; then
-    echo "\`$1' already exists"
-    cd $1
-  else
-    mkdir -p $1 && cd $1
-  fi
-}
-alias mk="makeDir"
-
-SERVER_IP () { hostname -I }
-
-se () { browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000 }
-
-function diskFree () {
-  echo ""
-  df -h | awk 'NR==1' | rg Avail
-  df -h | awk 'NR==4'
-}
+alias dl="downloadFile"
 
 function wifiDriverEnable() {
   sudo sh -c "modprobe mt7921e ; echo 14c3 0608 > /sys/bus/pci/drivers/mt7921e/new_id"
 }
 alias wf='wifiDriverEnable'
-
-
-alias l='exa -al --color=always --group-directories-first --icons'
-alias ls='l'
-alias sl='l'
-alias la='exa -a --color=always --group-directories-first --icons'
-alias al='exa -a --color=always --group-directories-first --icons'
-alias ll='l'
-alias l.='exa -a| egrep "^\."'
-alias lt='exa -aT --color=always --group-directories-first --icons'
 
 alias cpf='wl-copy'
 # alias cpf='xclip -sel clip'
@@ -144,49 +38,9 @@ alias 777='chmod -R 777'
 alias x='chmod +x'
 alias colorPicker='zenity --color-selection'
 alias cat='bat'
-alias dud='du -d 1 -h'
 alias updateApplications='sudo ln -sf ~/dotfiles/applications/* /usr/share/applications/'
 alias fak='git stash &>/dev/null; git stash clear'
-alias changeDirToUsbFolder='cd /run/media/master/ ; ls'
-alias m='mpv --shuffle --loop-playlist ~/Music/*'
-
-alias ..='cd .. ; l'
-alias ...='cd .. ; cd .. ; l'
-alias dow='cd ~/Downloads ; l'
-alias doc='cd ~/Documents ; l'
-alias tmp='cd /tmp ; l'
-
-alias yt='yt-dlp -f bestvideo+bestaudio'
-alias yta='yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"'
-
-function syncMusic() {
-  cd ~/Music/
-  trash *
-  yta "https://thuanpham2311.github.io/l/music"
-}
-
 alias t='trash'
-alias tdl='trash ~/Downloads/*'
-
-function nvm() {
-  echo "🚨 NVM not loaded! Loading now..."
-  unset -f nvm
-  export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  nvm "$@"
-}
-
-function updateDns() {
-  sudo curl https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling/hosts --output /etc/hosts
-  echo "sometimes if you not lazy try to clear host cache: chrome://net-internals/#dns"
-  sudo systemctl restart NetworkManager.service
-}
-
-function updateDnsNoMessage() {
-  sudo curl https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling/hosts --output /etc/hosts
-  echo "sometimes if you not lazy try to clear host cache: chrome://net-internals/#dns"
-  sudo systemctl restart NetworkManager.service
-}
 
 function update() {
   topgrade
@@ -200,42 +54,28 @@ function hi () {
   neofetch
 }
 
-functions importDefaultEditorConfig() {
-  touch .editorconfig
-  echo "root = true
-
-  [*]
-  indent_style = space
-  indent_size = 2
-  charset = utf-8
-  trim_trailing_whitespace = true
-  insert_final_newline = true
-  end_of_line = lf
-  # editorconfig-tools is unable to ignore longs strings or urls
-  max_line_length = off" > .editorconfig
-}
-
-functions createJsTestProject() {
-  cd /tmp
-  mkdir js_test
-  cd js_test
-  yarn init --yes
-  yarn add eslint-config-airbnb
-  importDefaultEditorConfig
-  nvim js_test.js
-}
-
 source ~/dotfiles/zsh/functions/arch.zsh
 source ~/dotfiles/zsh/functions/debian.zsh
 source ~/dotfiles/zsh/functions/fedora.zsh
-source ~/dotfiles/zsh/functions/gnome.zsh
-source ~/dotfiles/zsh/functions/browserConfig.zsh
+
 source ~/dotfiles/zsh/functions/gitConfig.zsh
-source ~/dotfiles/zsh/functions/completion.zsh
 source ~/dotfiles/zsh/functions/fzfConfig.zsh
 source ~/dotfiles/zsh/functions/fzfKeyBindings.zsh
-source ~/dotfiles/zsh/functions/tmux.zsh
+
+source ~/dotfiles/zsh/functions/browserConfig.zsh
+source ~/dotfiles/zsh/functions/dev.zsh
+source ~/dotfiles/zsh/functions/dir.zsh
+source ~/dotfiles/zsh/functions/dns.zsh
+source ~/dotfiles/zsh/functions/gnome.zsh
+source ~/dotfiles/zsh/functions/history.zsh
+source ~/dotfiles/zsh/functions/media.zsh
 source ~/dotfiles/zsh/functions/note.zsh
+source ~/dotfiles/zsh/functions/path.zsh
+source ~/dotfiles/zsh/functions/tmux.zsh
+source ~/dotfiles/zsh/functions/vimMode.zsh
+
+source ~/dotfiles/zsh/functions/completion.zsh
 source ~/dotfiles/zsh/functions/zshAutoSuggestions.zsh
 source ~/dotfiles/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 source ~/dotfiles/zsh/functions/commandStartupShell.zsh
