@@ -11,7 +11,7 @@ require("lualine").setup({
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = { "branch", "diff", "diagnostics" },
-		lualine_c = { { "filename", path = 2 } },
+		lualine_c = { { "filename", path = 2 }, "%{zoom#statusline()}" },
 		lualine_x = { "encoding" },
 		lualine_y = { "fileformat" },
 		lualine_z = { { "filetype", colored = true, icon_only = false } },
