@@ -1,2 +1,2 @@
-0 * * * * zsh /home/master/dotfiles/zsh/functions/crontabHourly.zsh
+@hourly zsh /home/master/dotfiles/zsh/functions/crontabHourly.zsh
 */15 * * * * zsh /home/master/dotfiles/zsh/functions/crontab15m.zsh
