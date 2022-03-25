@@ -74,6 +74,7 @@ source ~/dotfiles/zsh/functions/note.zsh
 source ~/dotfiles/zsh/functions/path.zsh
 source ~/dotfiles/zsh/functions/tmux.zsh
 source ~/dotfiles/zsh/functions/vimMode.zsh
+source ~/dotfiles/zsh/functions/virt.zsh
 
 source ~/dotfiles/zsh/functions/zshAutoSuggestions.zsh
 source ~/dotfiles/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
