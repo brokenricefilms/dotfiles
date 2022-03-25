@@ -54,6 +54,8 @@ function hi () {
   neofetch
 }
 
+source ~/dotfiles/zsh/functions/dir.zsh
+
 source ~/dotfiles/zsh/functions/arch.zsh
 source ~/dotfiles/zsh/functions/debian.zsh
 source ~/dotfiles/zsh/functions/fedora.zsh
@@ -65,7 +67,6 @@ source ~/dotfiles/zsh/functions/completion.zsh
 
 source ~/dotfiles/zsh/functions/browserConfig.zsh
 source ~/dotfiles/zsh/functions/dev.zsh
-source ~/dotfiles/zsh/functions/dir.zsh
 source ~/dotfiles/zsh/functions/dns.zsh
 source ~/dotfiles/zsh/functions/gnome.zsh
 source ~/dotfiles/zsh/functions/history.zsh
