@@ -61,6 +61,7 @@ source ~/dotfiles/zsh/functions/fedora.zsh
 source ~/dotfiles/zsh/functions/gitConfig.zsh
 source ~/dotfiles/zsh/functions/fzfConfig.zsh
 source ~/dotfiles/zsh/functions/fzfKeyBindings.zsh
+source ~/dotfiles/zsh/functions/completion.zsh
 
 source ~/dotfiles/zsh/functions/browserConfig.zsh
 source ~/dotfiles/zsh/functions/dev.zsh
@@ -74,7 +75,6 @@ source ~/dotfiles/zsh/functions/path.zsh
 source ~/dotfiles/zsh/functions/tmux.zsh
 source ~/dotfiles/zsh/functions/vimMode.zsh
 
-source ~/dotfiles/zsh/functions/completion.zsh
 source ~/dotfiles/zsh/functions/zshAutoSuggestions.zsh
 source ~/dotfiles/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
