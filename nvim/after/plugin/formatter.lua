@@ -48,6 +48,24 @@ local filetype_configs = {
 			}
 		end,
 	},
+	bash = {
+		function()
+			return {
+				exe = "shfmt",
+				args = { "-i", 2 },
+				stdin = true,
+			}
+		end,
+	},
+	zsh = {
+		function()
+			return {
+				exe = "shfmt",
+				args = { "-i", 2 },
+				stdin = true,
+			}
+		end,
+	},
 	lua = {
 		function()
 			return {
@@ -103,19 +121,21 @@ local prettier_config = {
 	end,
 }
 
-for _, ft in pairs({
-	"javascript",
-	"javascriptreact",
-	"typescript",
-	"typescriptreact",
-	"svelte",
-	"vue",
-	"html",
-	"css",
-	"markdown",
-	"json",
-	"astro",
-}) do
+for _, ft in
+	pairs({
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"svelte",
+		"vue",
+		"html",
+		"css",
+		"markdown",
+		"json",
+		"astro",
+	})
+do
 	filetype_configs[ft] = prettier_config
 end
 
