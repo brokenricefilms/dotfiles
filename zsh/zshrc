@@ -65,7 +65,7 @@ function updateZshPlugin() {
 function update() {
   topgrade
 
-  updateDnsNoMessage
+  updateDns
 
   nvim -c "PlugUpdate | qa"
 
