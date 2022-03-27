@@ -42,10 +42,26 @@ alias updateApplications='sudo ln -sf ~/dotfiles/applications/* /usr/share/appli
 alias fak='git stash &>/dev/null; git stash clear'
 alias t='trash'
 
+function updateZshPlugin() {
+  cd ~/dotfiles/zsh/functions/fzf-zsh-completions/
+  git pull --force
+  cd -
+  cd ~/dotfiles/zsh/functions/fzf-tab/
+  git pull --force
+  cd -
+  cd ~/dotfiles/zsh/functions/zsh-syntax-highlighting/
+  git pull --force
+  cd -
+}
+
 function update() {
   topgrade
+
   updateDnsNoMessage
+
   nvim -c "PlugUpdate | qa"
+
+  updateZshPlugin
 }
 
 function hi () {
