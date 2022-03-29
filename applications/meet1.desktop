@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=google meet 1
-Exec=google-chrome --app="https://meet.google.com/landing?authuser=1"
+Exec=sh -c 'wmctrl -s 8 ;google-chrome --app="https://meet.google.com/landing?authuser=1" ; sleep 0.1 ; wmctrl -r "meet" -b add,maximized_vert,maximized_horz'
 Icon=/home/master/dotfiles/applications/icons/google-meet.png

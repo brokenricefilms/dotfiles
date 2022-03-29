@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=zoom browser
-Exec=google-chrome --app="https://zoom.us/join"
+Exec=sh -c 'wmctrl -s 8 ;google-chrome --app="https://zoom.us/join" ; sleep 0.1 ; wmctrl -r "google meet" -b add,maximized_vert,maximized_horz'
 Icon=/home/master/dotfiles/applications/icons/zoom.png
