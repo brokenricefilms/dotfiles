@@ -242,7 +242,7 @@ autocmd InsertEnter,WinLeave * set nocursorline
 
 set number relativenumber
 command! NumberLine execute "set number relativenumber"
-command! NumberLineOff execute "set number! relativenumber!"
+command! NumberLineOff execute "set nonumber norelativenumber"
 
 set statusline=[\ %F\ %m]\ %{zoom#statusline()}\ %r%h%w%=\ %{fugitive#statusline()}
 
