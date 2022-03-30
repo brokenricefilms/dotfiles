@@ -92,7 +92,7 @@ source ~/dotfiles/zsh/functions/completion.zsh
 source ~/dotfiles/zsh/functions/browserConfig.zsh
 source ~/dotfiles/zsh/functions/cowsay.zsh
 source ~/dotfiles/zsh/functions/dev.zsh
-source ~/dotfiles/zsh/functions/dns.zsh
+source ~/dotfiles/zsh/functions/internet.zsh
 source ~/dotfiles/zsh/functions/gnome.zsh
 source ~/dotfiles/zsh/functions/history.zsh
 source ~/dotfiles/zsh/functions/media.zsh
