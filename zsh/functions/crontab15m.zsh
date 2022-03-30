@@ -2,4 +2,4 @@
 
 source ~/dotfiles/zsh/zshrc
 
-syncNote
+syncNote &>/dev/null

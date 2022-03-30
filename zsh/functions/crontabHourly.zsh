@@ -2,5 +2,5 @@
 
 source ~/dotfiles/zsh/zshrc
 
-autoSync
-updateAllRepo
+autoSync &>/dev/null
+updateAllRepo &>/dev/null
