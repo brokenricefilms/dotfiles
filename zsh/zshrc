@@ -80,7 +80,7 @@ function hi () {
 
 function cowsayRandom() {
   if hash lolcat 2>/dev/null; then
-    cowsay -f "$(\ls /usr/share/cows/*.cow | sort -R | head -1)" $1 | lolcat
+    cowsay -f "$(\ls /usr/share/cows/*.cow | sort -R | head -1)" $1 | lolcat -t
   else
     cowsay -f "$(\ls /usr/share/cows/*.cow | sort -R | head -1)" $1
   fi
