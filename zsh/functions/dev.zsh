@@ -20,6 +20,16 @@ functions createJsTestProject() {
   nvim js_test.js
 }
 
+functions createTsTestProject() {
+  cd /tmp
+  mkdir ts_test
+  cd ts_test
+  yarn init --yes
+  yarn add eslint-config-airbnb
+  importDefaultEditorConfig
+  nvim ts_test.ts
+}
+
 functions importDefaultEditorConfig() {
   touch .editorconfig
   echo "root = true
