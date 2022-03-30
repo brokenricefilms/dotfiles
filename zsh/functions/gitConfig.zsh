@@ -124,3 +124,34 @@ function updateAllRepo() {
     cd - > /dev/null
   done
 }
+
+function switchBranch() {
+  isInGitRepo || return
+  git branch -a | fzfDown | xargs git switch
+}
+alias sb='switchBranch'
+
+function gitHubIssueList() { gh issue list | fzf | cut -f1 | wl-copy}
+# function gitHubIssueList() { gh issue list | fzf | cut -f1 | xclip -sel clip}
+alias gil='gitHubIssueList'
+
+function gitHubIssueClose() {
+  id="$(gh issue list | fzf | cut -f1)"
+  [ -n "$id" ]
+  gh issue close "$id"
+}
+alias gic='gitHubIssueClose'
+
+function gitHubIssueViewWeb() {
+  id="$(gh issue list | fzf | cut -f1)"
+  [ -n "$id" ]
+  gh issue view "$id" --web &> /dev/null
+}
+alias iv='gitHubIssueViewWeb'
+
+function gitHubIssueComment() {
+  id="$(gh issue list | fzf | cut -f1)"
+  [ -n "$id" ]
+  gh issue comment "$id"
+}
+alias gim='gitHubIssueComment'

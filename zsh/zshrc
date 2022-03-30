@@ -14,19 +14,6 @@ WORDCHARS=${WORDCHARS//\/[&.;]}
 autoload -Uz compinit
 compinit
 
-function downloadFile () {
-  cd ~/Downloads
-  aria2c $argv
-  ls -lah ~/Downloads
-  cd -
-}
-alias dl="downloadFile"
-
-function wifiDriverEnable() {
-  sudo sh -c "modprobe mt7921e ; echo 14c3 0608 > /sys/bus/pci/drivers/mt7921e/new_id"
-}
-alias wf='wifiDriverEnable'
-
 alias cpf='wl-copy'
 # alias cpf='xclip -sel clip'
 alias reload='source ~/.zshrc ; tmux source-file ~/.tmux.conf'
@@ -78,6 +65,19 @@ function hi () {
   neofetch
 }
 
+function downloadFile () {
+  cd ~/Downloads
+  aria2c $argv
+  ls -lah ~/Downloads
+  cd -
+}
+alias dl="downloadFile"
+
+function wifiDriverEnable() {
+  sudo sh -c "modprobe mt7921e ; echo 14c3 0608 > /sys/bus/pci/drivers/mt7921e/new_id"
+}
+alias wf='wifiDriverEnable'
+
 source ~/dotfiles/zsh/functions/dir.zsh
 
 source ~/dotfiles/zsh/functions/arch.zsh
@@ -99,7 +99,7 @@ source ~/dotfiles/zsh/functions/media.zsh
 source ~/dotfiles/zsh/functions/note.zsh
 source ~/dotfiles/zsh/functions/path.zsh
 source ~/dotfiles/zsh/functions/tmux.zsh
-source ~/dotfiles/zsh/functions/vimMode.zsh
+source ~/dotfiles/zsh/functions/vim.zsh
 source ~/dotfiles/zsh/functions/virt.zsh
 
 source ~/dotfiles/zsh/functions/zshAutoSuggestions.zsh

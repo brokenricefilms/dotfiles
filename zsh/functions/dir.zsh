@@ -14,13 +14,13 @@ alias ll='l'
 alias l.='exa -a| egrep "^\."'
 alias lt='exa -aT --color=always --group-directories-first --icons'
 
-function diskFree () {
+function diskFree() {
   echo ""
   df -h | awk 'NR==1' | rg Avail
   df -h | awk 'NR==4'
 }
 
-function makeDir () {
+function makeDir() {
   if [ ! -n "$1" ]; then
     echo "Enter a directory name"
   elif [ -d $1 ]; then
@@ -31,3 +31,39 @@ function makeDir () {
   fi
 }
 alias mk="makeDir"
+
+function changeDir() {
+  local dir
+  dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
+  cd "$dir"
+  ls
+  cowsayGitStatus
+}
+alias c='changeDir'
+
+function changeDirInHome() {
+  local dir
+  dir=$(fd -t d . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
+  cd "$dir"
+  ls
+  cowsayGitStatus
+}
+alias C='changeDirInHome'
+
+function changeHiddenDir() {
+  local dir
+  dir=$(fd -t d --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
+  cd "$dir"
+  ls
+  cowsayGitStatus
+}
+alias ch='changeHiddenDir'
+
+function changeHiddenDirInHome() {
+  local dir
+  dir=$(fd -t d . $HOME --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
+  cd "$dir"
+  ls
+  cowsayGitStatus
+}
+alias Ch='changeHiddenDirInHome'
