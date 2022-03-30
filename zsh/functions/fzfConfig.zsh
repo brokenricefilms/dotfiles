@@ -9,10 +9,10 @@ alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \ $1 }' | wl-copy
 # alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \ $1 }' | xclip -sel clip"
 
 function findFileEditInNvim () {
-  if [ ! -n " $1" ]; then
+  if [ ! -n "$1" ]; then
     findFile
   else
-    nvim " $1"
+    nvim "$1"
   fi
 }
 alias e='findFileEditInNvim'
