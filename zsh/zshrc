@@ -78,14 +78,6 @@ function hi () {
   neofetch
 }
 
-function cowsayRandom() {
-  if hash lolcat 2>/dev/null; then
-    cowsay -f "$(\ls /usr/share/cows/*.cow | sort -R | head -1)" $1 | lolcat -t
-  else
-    cowsay -f "$(\ls /usr/share/cows/*.cow | sort -R | head -1)" $1
-  fi
-}
-
 source ~/dotfiles/zsh/functions/dir.zsh
 
 source ~/dotfiles/zsh/functions/arch.zsh
@@ -98,6 +90,7 @@ source ~/dotfiles/zsh/functions/fzfKeyBindings.zsh
 source ~/dotfiles/zsh/functions/completion.zsh
 
 source ~/dotfiles/zsh/functions/browserConfig.zsh
+source ~/dotfiles/zsh/functions/cowsay.zsh
 source ~/dotfiles/zsh/functions/dev.zsh
 source ~/dotfiles/zsh/functions/dns.zsh
 source ~/dotfiles/zsh/functions/gnome.zsh
