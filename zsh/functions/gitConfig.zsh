@@ -7,7 +7,7 @@ alias pull="git pull"
 alias dv='git difftool'
 alias gl='git log --oneline | head -n 5'
 
-isInGitRepo() { git rev-parse HEAD > /dev/null 2>&1 }
+isInGitRepo() { git rev-parse HEAD &>/dev/null }
 
 function autoCommit () {
   isInGitRepo || return
@@ -102,20 +102,19 @@ function autoSync {
 }
 
 function updateAllRepo() {
-  repoNotInDefaultDir=(
-    ~/dotfiles
-    ~/repos/youtube_live_chat/client
-    ~/repos/youtube_live_chat/server
-  )
-
   for dir in ~/repos/*
   do
     cd "$dir"
     cowsayPwd
     repoSync
     cd - > /dev/null
-    echo "---"
   done
+
+  repoNotInDefaultDir=(
+    ~/dotfiles
+    ~/repos/youtube_live_chat/client
+    ~/repos/youtube_live_chat/server
+  )
 
   for i in ${repoNotInDefaultDir[*]}
   do
@@ -123,6 +122,5 @@ function updateAllRepo() {
     cowsayPwd
     repoSync
     cd - > /dev/null
-    echo "---"
   done
 }

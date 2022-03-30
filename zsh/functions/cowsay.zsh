@@ -17,8 +17,10 @@ function cowsayPwd() {
 }
 
 function cowsayGitStatus() {
+  isInGitRepo || return
   if hash cowsay 2>/dev/null; then
-    cowsayRandom "git status"
+    cowsayRandom "# git status
+    $(git status -sb)"
   else
     echo "\033[0;32m❯\033[0m git status"
   fi
