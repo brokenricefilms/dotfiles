@@ -45,16 +45,16 @@ let g:floaterm_keymap_toggle = '<c-s>'
 noremap <silent> gp :FloatermSend! cd %:p:h ; git pull ; git push ; cd -<enter>
 noremap <silent> gP :FloatermSend! cd %:p:h ; git pull ; git push -f ; cd -<enter>
 
-command! GitHubIssueList execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/fzfConfig.zsh ; cd %:h:p ; gitHubIssueList"
+command! GitHubIssueList execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/gitConfig.zsh ; cd %:h:p ; gitHubIssueList"
 noremap <silent> gil :GitHubIssueList<enter>
 
-command! GitHubIssueClose execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/fzfConfig.zsh ; cd %:h:p ; gitHubIssueClose"
+command! GitHubIssueClose execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/gitConfig.zsh ; cd %:h:p ; gitHubIssueClose"
 noremap <silent> gic :GitHubIssueClose<enter>
 
-command! GitHubIssueViewWeb execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/fzfConfig.zsh ; cd %:h:p ; gitHubIssueViewWeb"
+command! GitHubIssueViewWeb execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/gitConfig.zsh ; cd %:h:p ; gitHubIssueViewWeb"
 noremap <silent> giv :GitHubIssueViewWeb<enter>
 
-command! GitHubIssueComment execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/fzfConfig.zsh ; cd %:h:p ; gitHubIssueComment"
+command! GitHubIssueComment execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/gitConfig.zsh ; cd %:h:p ; gitHubIssueComment"
 noremap <silent> gim :GitHubIssueComment<enter>
 
 command! GithubRepoViewWeb execute "FloatermSend cd %:h:p ; gh browse ; cd -"
