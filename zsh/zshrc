@@ -68,7 +68,7 @@ alias t='trash'
 
 function updateZshPlugin() {
   if hash cowsay 2>/dev/null; then
-    cowsay "update zsh plugin"
+    cowsayRandom "update zsh plugin"
   else
     echo "update zsh plugin"
   fi
