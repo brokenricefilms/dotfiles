@@ -6,18 +6,43 @@ autoload -U colors && colors
 
 eval "$(starship init zsh)"
 
-command_not_found_handler () {
-    TF_SHELL_ALIASES=$(alias);
-    TF_CMD=$(
-        export TF_SHELL_ALIASES;
-        export TF_SHELL=zsh;
-        export TF_ALIAS=fuck;
-        export TF_HISTORY="$@";
-        export PYTHONIOENCODING=utf-8;
-        thefuck THEFUCK_ARGUMENT_PLACEHOLDER
-    ) && eval $TF_CMD;
-    test -n "$TF_CMD" && print -s $TF_CMD;
-}
+if hash thefuck 2>/dev/null; then
+  command_not_found_handler () {
+      TF_SHELL_ALIASES=$(alias);
+      TF_CMD=$(
+          export TF_SHELL_ALIASES;
+          export TF_SHELL=zsh;
+          export TF_ALIAS=fuck;
+          export TF_HISTORY="$@";
+          export PYTHONIOENCODING=utf-8;
+          thefuck THEFUCK_ARGUMENT_PLACEHOLDER
+      ) && eval $TF_CMD;
+      test -n "$TF_CMD" && print -s $TF_CMD;
+  }
+else
+  if hash apt 2>/dev/null; then
+    sudo apt install thefuck -y
+  fi
+  if hash dnf 2>/dev/null; then
+    sudo dnf -y install thefuck
+  fi
+  if hash pacman 2>/dev/null; then
+    sudo pacman -S --noconfirm thefuck
+  fi
+
+  command_not_found_handler () {
+      TF_SHELL_ALIASES=$(alias);
+      TF_CMD=$(
+          export TF_SHELL_ALIASES;
+          export TF_SHELL=zsh;
+          export TF_ALIAS=fuck;
+          export TF_HISTORY="$@";
+          export PYTHONIOENCODING=utf-8;
+          thefuck THEFUCK_ARGUMENT_PLACEHOLDER
+      ) && eval $TF_CMD;
+      test -n "$TF_CMD" && print -s $TF_CMD;
+  }
+fi
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
