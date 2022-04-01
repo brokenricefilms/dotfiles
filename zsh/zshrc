@@ -3,7 +3,21 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 fi
 
 autoload -U colors && colors
+
 eval "$(starship init zsh)"
+
+command_not_found_handler () {
+    TF_SHELL_ALIASES=$(alias);
+    TF_CMD=$(
+        export TF_SHELL_ALIASES;
+        export TF_SHELL=zsh;
+        export TF_ALIAS=fuck;
+        export TF_HISTORY="$@";
+        export PYTHONIOENCODING=utf-8;
+        thefuck THEFUCK_ARGUMENT_PLACEHOLDER
+    ) && eval $TF_CMD;
+    test -n "$TF_CMD" && print -s $TF_CMD;
+}
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
