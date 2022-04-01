@@ -131,8 +131,7 @@ function switchBranch() {
 }
 alias sb='switchBranch'
 
-function gitHubIssueList() { gh issue list | fzf | cut -f1 | wl-copy}
-# function gitHubIssueList() { gh issue list | fzf | cut -f1 | xclip -sel clip}
+function gitHubIssueList() { gh issue list | fzf | cut -f1 | cpf}
 alias gil='gitHubIssueList'
 
 function gitHubIssueClose() {

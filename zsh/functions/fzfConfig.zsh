@@ -5,8 +5,9 @@ export FZF_DEFAULT_COMMAND='fd --type f --follow --exclude .git --exclude undodi
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d"
 
-alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \ $1 }' | wl-copy"
-# alias ej="emoji-fzf preview --prepend | fzfDown | awk '{ print \ $1 }' | xclip -sel clip"
+function ej() {
+  emoji-fzf preview --prepend | fzfDown | awk '{ print $1 }' | cpf
+}
 
 fzfDown() { fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse }
 

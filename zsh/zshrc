@@ -53,8 +53,6 @@ WORDCHARS=${WORDCHARS//\/[&.;]}
 autoload -Uz compinit
 compinit
 
-alias cpf='wl-copy'
-# alias cpf='xclip -sel clip'
 alias reload='source ~/.zshrc ; tmux source-file ~/.tmux.conf'
 alias h='htop'
 alias q='exit'
@@ -152,6 +150,12 @@ if hash pacman 2>/dev/null; then
     sudo archlinux-java set java-17-openjdk
     archlinux-java status
   }
+fi
+
+if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
+  alias cpf='wl-copy'
+else
+  alias cpf='xclip -sel clip'
 fi
 
 source ~/dotfiles/zsh/functions/dir.zsh
