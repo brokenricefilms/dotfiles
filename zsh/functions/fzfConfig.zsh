@@ -6,7 +6,12 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d"
 
 function ej() {
-  emoji-fzf preview --prepend | fzfDown | awk '{ print $1 }' | cpf
+  if hash emoji-fzf 2>/dev/null; then
+    emoji-fzf preview --prepend | fzfDown | awk '{ print $1 }' | cpf
+  else
+    pip install emoji-fzf
+    emoji-fzf preview --prepend | fzfDown | awk '{ print $1 }' | cpf
+  fi
 }
 
 fzfDown() { fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse }
