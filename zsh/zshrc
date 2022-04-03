@@ -66,36 +66,6 @@ alias updateApplications='sudo ln -sf ~/dotfiles/applications/* /usr/share/appli
 alias fak='git stash &>/dev/null; git stash clear'
 alias t='trash'
 
-function updateZshPlugin() {
-  if hash cowsay 2>/dev/null; then
-    cowsayRandom "update zsh plugin"
-  else
-    echo "update zsh plugin"
-  fi
-
-  cd ~/dotfiles/zsh/functions/fzf-zsh-completions/
-  git pull --force
-  cd -
-
-  cd ~/dotfiles/zsh/functions/fzf-tab/
-  git pull --force
-  cd -
-
-  cd ~/dotfiles/zsh/functions/zsh-syntax-highlighting/
-  git pull --force
-  cd -
-}
-
-function update() {
-  topgrade
-
-  updateDns
-
-  nvim -c "PlugUpdate | qa"
-
-  updateZshPlugin
-}
-
 function hi () {
   browserDaily
   update
@@ -168,7 +138,7 @@ source ~/dotfiles/zsh/functions/completion.zsh
 source ~/dotfiles/zsh/functions/browserConfig.zsh
 source ~/dotfiles/zsh/functions/cowsay.zsh
 source ~/dotfiles/zsh/functions/dev.zsh
-source ~/dotfiles/zsh/functions/internet.zsh
+source ~/dotfiles/zsh/functions/update.zsh
 source ~/dotfiles/zsh/functions/gnome.zsh
 source ~/dotfiles/zsh/functions/history.zsh
 source ~/dotfiles/zsh/functions/media.zsh
