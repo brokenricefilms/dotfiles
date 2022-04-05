@@ -124,18 +124,18 @@ function getEnvironment() {
   echo $(echo $out | cut -d= -f2)
 }
 
-function listAllCommand() {
+function listAllCommands() {
     COMMANDS=`echo -n $PATH | xargs -d : -I {} find {} -maxdepth 1 \
         -executable -type f -printf '%P\n'  2>/dev/null`
     ALIASES=`alias | cut -d '=' -f 1`
     FUNCTIONS=`print -l ${(ok)functions}`
     RESULT=`echo "$COMMANDS"$'\n'"$ALIASES"$'\n'"$FUNCTIONS" | sort -u | fzfDown`
     SPACE=" "
-    cpf $RESULT$SPACE
+    copy $RESULT$SPACE
 
     eval $RESULT
 }
-alias a='listAllCommand'
+alias a='listAllCommands'
 
 source ~/dotfiles/zsh/functions/fzf-tab/fzf-tab.plugin.zsh
 source ~/dotfiles/zsh/functions/fzf-zsh-completions/fzf-zsh-completions.plugin.zsh

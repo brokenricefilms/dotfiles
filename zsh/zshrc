@@ -127,6 +127,7 @@ if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
 else
   alias cpf='xclip -sel clip'
 fi
+alias copy="cpf"
 
 source ~/dotfiles/zsh/functions/dir.zsh
 
