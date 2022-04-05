@@ -49,3 +49,6 @@ function browserDaily () {
   browserAnime
   browserDiscord
 }
+
+alias google-chrome-master="google-chrome --profile-directory=Default"
+alias google-chrome-school="google-chrome --profile-directory=\"Profile 1\""
