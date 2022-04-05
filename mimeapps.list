@@ -1,0 +1,16 @@
+[Added Associations]
+text/plain=nvim.desktop;org.gnome.gedit.desktop;
+application/pdf=file_chrome.desktop;org.gnome.Evince.desktop;
+image/png=file_chrome.desktop
+image/jpeg=file_chrome.desktop
+image/jpg=file_chrome.desktop
+video/mp4=file_chrome.desktop
+
+[Default Applications]
+text/html=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+x-scheme-handler/mailto=google-chrome.desktop
+x-scheme-handler/webcal=google-chrome.desktop
