@@ -123,11 +123,10 @@ if hash pacman 2>/dev/null; then
 fi
 
 if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
-  alias cpf='wl-copy'
+  alias copy='wl-copy'
 else
-  alias cpf='xclip -sel clip'
+  alias copy='xclip -sel clip'
 fi
-alias copy="cpf"
 
 source ~/dotfiles/zsh/functions/dir.zsh
 
