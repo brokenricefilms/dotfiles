@@ -6,15 +6,15 @@ function updateZshPlugin() {
   fi
 
   cd ~/dotfiles/zsh/functions/fzf-zsh-completions/
-  git pull --force
+  git pull
   cd -
 
   cd ~/dotfiles/zsh/functions/fzf-tab/
-  git pull --force
+  git pull
   cd -
 
   cd ~/dotfiles/zsh/functions/zsh-syntax-highlighting/
-  git pull --force
+  git pull
   cd -
 }
 
