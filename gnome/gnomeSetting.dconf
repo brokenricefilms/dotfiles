@@ -605,7 +605,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='wifi'
+last-panel='power'
 
 [org/gnome/desktop/app-folders]
 folder-children=['accessories', 'system-tools']
@@ -631,6 +631,9 @@ picture-uri='file:///home/master/.local/share/backgrounds/2022-03-19-15-47-35-ee
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
+[org/gnome/desktop/calendar]
+show-weekdate=false
+
 [org/gnome/desktop/input-sources]
 mru-sources=[('xkb', 'us'), ('ibus', 'Bamboo')]
 per-window=false
@@ -639,6 +642,9 @@ xkb-options=['lv3:menu_switch', 'shift:both_capslock_cancel', 'caps:escape']
 
 [org/gnome/desktop/interface]
 clock-format='12h'
+clock-show-date=true
+clock-show-seconds=false
+clock-show-weekday=false
 cursor-theme='GoogleDot-Blue'
 document-font-name='DejaVu Sans 11'
 enable-animations=true
@@ -650,10 +656,10 @@ gtk-im-module='ibus'
 gtk-theme='Adwaita'
 icon-theme='Adwaita'
 monospace-font-name='JetBrains Mono NL 10'
-show-battery-percentage=false
+show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
-application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel', 'ca-desrt-dconf-editor', 'ryzen-controller', 'org-gnome-extensions-desktop']
+application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel', 'ca-desrt-dconf-editor', 'ryzen-controller', 'org-gnome-extensions-desktop', 'org-kde-kdenlive']
 show-in-lock-screen=false
 
 [org/gnome/desktop/notifications/application/ca-desrt-dconf-editor]
@@ -679,6 +685,9 @@ application-id='org.gnome.Extensions.desktop.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-nautilus]
 application-id='org.gnome.Nautilus.desktop'
+
+[org/gnome/desktop/notifications/application/org-kde-kdenlive]
+application-id='org.kde.kdenlive.desktop'
 
 [org/gnome/desktop/notifications/application/org-manjaro-pamac-manager]
 application-id='org.manjaro.pamac.manager.desktop'
@@ -971,7 +980,7 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.823600719942403, 106.6581)
+night-light-last-coordinates=(10.841599280057595, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
@@ -1024,7 +1033,7 @@ app-picker-layout=[{'accessories': <{'position': <0>}>, 'org.manjaro.pamac.manag
 command-history=['gnome-session-properties', 'r', 'ibus-deamon', 'ibus-daemon -vxr']
 disable-user-extensions=false
 disabled-extensions=['dash-to-dock@micxgx.gmail.com', 'material-shell@papyelgringo', 'gnome-ui-tune@itstime.tech', 'pamac-updates@manjaro.org', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'x11gestures@joseexposito.github.io', 'focus@scaryrawr.github.io', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'appindicatorsupport@rgcjonas.gmail.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['gnome-shell-Google-search-provider@MrNinso', 'ssh-search-provider@extensions.gnome-shell.fifi.org', 'escape-overview@raelgc', 'blur-my-shell@aunetx', 'clipboard-indicator@tudmotu.com', 'sound-output-device-chooser@kgshank.net', 'smart-auto-move@khimaros.com', 'fildemGMenu@gonza.com', 'worksets@blipk.xyz', 'workspaces-bar@fthx', 'just-perfection-desktop@just-perfection', 'gtktitlebar@velitasali.github.io', 'transparent-top-bar@zhanghai.me', 'gnome-fuzzy-app-search@gnome-shell-extensions.Czarlie.gitlab.com', 'gnome-shell-go-to-last-workspace@github.com']
+enabled-extensions=['gnome-shell-Google-search-provider@MrNinso', 'ssh-search-provider@extensions.gnome-shell.fifi.org', 'escape-overview@raelgc', 'blur-my-shell@aunetx', 'sound-output-device-chooser@kgshank.net', 'smart-auto-move@khimaros.com', 'fildemGMenu@gonza.com', 'worksets@blipk.xyz', 'workspaces-bar@fthx', 'just-perfection-desktop@just-perfection', 'gtktitlebar@velitasali.github.io', 'transparent-top-bar@zhanghai.me', 'gnome-fuzzy-app-search@gnome-shell-extensions.Czarlie.gitlab.com', 'gnome-shell-go-to-last-workspace@github.com', 'clipboard-indicator@tudmotu.com']
 favorite-apps=@as []
 had-bluetooth-devices-setup=false
 welcome-dialog-last-shown-version='41.2'
@@ -1036,10 +1045,14 @@ current-workspace-only=false
 application-list=@as []
 
 [org/gnome/shell/extensions/clipboard-indicator]
+display-mode=0
 history-size=200
 move-item-first=true
+preview-size=30
+strip-text=false
 support-png=true
 toggle-menu=['<Alt>v']
+topbar-preview-size=100
 
 [org/gnome/shell/extensions/dash-to-dock]
 isolate-workspaces=false
