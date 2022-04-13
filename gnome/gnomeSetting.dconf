@@ -605,7 +605,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='power'
+last-panel='sound'
 
 [org/gnome/desktop/app-folders]
 folder-children=['accessories', 'system-tools']
@@ -656,7 +656,7 @@ gtk-im-module='ibus'
 gtk-theme='Adwaita'
 icon-theme='Adwaita'
 monospace-font-name='JetBrains Mono NL 10'
-show-battery-percentage=true
+show-battery-percentage=false
 
 [org/gnome/desktop/notifications]
 application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel', 'ca-desrt-dconf-editor', 'ryzen-controller', 'org-gnome-extensions-desktop', 'org-kde-kdenlive']
@@ -727,7 +727,7 @@ disabled=['org.manjaro.pamac.manager.desktop', 'org.gnome.Terminal.desktop']
 sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Nautilus.desktop', 'org.manjaro.pamac.manager.desktop']
 
 [org/gnome/desktop/session]
-idle-delay=uint32 0
+idle-delay=uint32 300
 
 [org/gnome/desktop/sound]
 allow-volume-above-100-percent=true
@@ -980,7 +980,7 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.823600719942403, 106.6581)
+night-light-last-coordinates=(10.85059856011519, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
@@ -1033,7 +1033,7 @@ app-picker-layout=[{'accessories': <{'position': <0>}>, 'org.manjaro.pamac.manag
 command-history=['gnome-session-properties', 'r', 'ibus-deamon', 'ibus-daemon -vxr']
 disable-user-extensions=false
 disabled-extensions=['dash-to-dock@micxgx.gmail.com', 'material-shell@papyelgringo', 'gnome-ui-tune@itstime.tech', 'pamac-updates@manjaro.org', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'x11gestures@joseexposito.github.io', 'focus@scaryrawr.github.io', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'appindicatorsupport@rgcjonas.gmail.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['gnome-shell-Google-search-provider@MrNinso', 'ssh-search-provider@extensions.gnome-shell.fifi.org', 'escape-overview@raelgc', 'blur-my-shell@aunetx', 'sound-output-device-chooser@kgshank.net', 'smart-auto-move@khimaros.com', 'fildemGMenu@gonza.com', 'worksets@blipk.xyz', 'workspaces-bar@fthx', 'just-perfection-desktop@just-perfection', 'gtktitlebar@velitasali.github.io', 'transparent-top-bar@zhanghai.me', 'gnome-fuzzy-app-search@gnome-shell-extensions.Czarlie.gitlab.com', 'gnome-shell-go-to-last-workspace@github.com', 'clipboard-indicator@tudmotu.com', 'github.notifications@alexandre.dufournet.gmail.com']
+enabled-extensions=['gnome-shell-Google-search-provider@MrNinso', 'ssh-search-provider@extensions.gnome-shell.fifi.org', 'escape-overview@raelgc', 'blur-my-shell@aunetx', 'sound-output-device-chooser@kgshank.net', 'smart-auto-move@khimaros.com', 'fildemGMenu@gonza.com', 'worksets@blipk.xyz', 'workspaces-bar@fthx', 'just-perfection-desktop@just-perfection', 'gtktitlebar@velitasali.github.io', 'transparent-top-bar@zhanghai.me', 'gnome-fuzzy-app-search@gnome-shell-extensions.Czarlie.gitlab.com', 'gnome-shell-go-to-last-workspace@github.com', 'clipboard-indicator@tudmotu.com', 'github.notifications@alexandre.dufournet.gmail.com', 'hidetopbar@mathieu.bidon.ca']
 favorite-apps=@as []
 had-bluetooth-devices-setup=false
 welcome-dialog-last-shown-version='41.2'
@@ -1081,13 +1081,18 @@ shortcut-key=['<Alt>Escape']
 [org/gnome/shell/extensions/gtktitlebar]
 hide-window-titlebars='always'
 
+[org/gnome/shell/extensions/hidetopbar]
+enable-active-window=false
+enable-intellihide=false
+mouse-sensitive=true
+
 [org/gnome/shell/extensions/just-perfection]
 accessibility-menu=false
 activities-button=false
 animation=1
 app-menu=false
 app-menu-icon=true
-background-menu=true
+background-menu=false
 clock-menu=true
 clock-menu-position=0
 dash=false
@@ -1096,9 +1101,9 @@ double-super-to-appgrid=true
 gesture=false
 hot-corner=true
 keyboard-layout=true
-notification-banner-position=1
+notification-banner-position=2
 osd=true
-panel=true
+panel=false
 panel-arrow=true
 panel-corner-size=0
 panel-in-overview=true
@@ -1106,7 +1111,7 @@ panel-notification-icon=false
 ripple-box=false
 search=true
 show-apps-button=true
-startup-status=0
+startup-status=1
 theme=true
 top-panel-position=0
 weather=false
@@ -1256,7 +1261,7 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(359, 80)
+window-position=(359, 66)
 window-size=(1203, 902)
 
 [org/virt-manager/virt-manager]
