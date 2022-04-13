@@ -190,15 +190,11 @@ vimls
 
 #### Extension
 
-- AppIndicator and KStatus Notifieritem Support (ubuntu don't need this)
 - Clipboard Indicator (using folk support img, maybe in the feature can be merge)
 - Gnome Fuzzy App Search
 - GTK Title Bar (rip off some title bar support wayland)
 - Just Perfection (UI, UX in gnome)
-- Workspaces Bar (show the number workspace like titling window manager dwm, i3,...)
-- [Smart auto move](https://github.com/khimaros/smart-auto-move)
 - [go to last workspace](https://extensions.gnome.org/extension/1089/go-to-last-workspace/) "custom shortcut to `Alt + ESC`
-- [github notification](https://github.com/alexduf/gnome-github-notifications)
 
 #### Applications
 
