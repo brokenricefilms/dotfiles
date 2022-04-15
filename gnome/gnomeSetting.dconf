@@ -1,6 +1,6 @@
 [ca/desrt/dconf-editor]
-saved-pathbar-path='battery'
-saved-view='/org/gnome/settings-daemon/plugins/media-keys/keyboard-brightness-down-static'
+saved-pathbar-path='/org/gnome/settings-daemon/plugins/media-keys/screen-brightness-up-static'
+saved-view='/org/gnome/settings-daemon/plugins/media-keys/screen-brightness-up-static'
 show-warning=false
 window-height=500
 window-is-maximized=true
@@ -605,7 +605,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='sound'
+last-panel='power'
 
 [org/gnome/desktop/app-folders]
 folder-children=['accessories', 'system-tools']
@@ -727,7 +727,7 @@ disabled=['org.manjaro.pamac.manager.desktop', 'org.gnome.Terminal.desktop']
 sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Nautilus.desktop', 'org.manjaro.pamac.manager.desktop']
 
 [org/gnome/desktop/session]
-idle-delay=uint32 300
+idle-delay=uint32 0
 
 [org/gnome/desktop/sound]
 allow-volume-above-100-percent=true
@@ -980,16 +980,12 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.814601439884809, 106.6581)
+night-light-last-coordinates=(10.85059856011519, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
 area-screenshot-clip=['Print']
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
-keyboard-brightness-down-static=['']
-keyboard-brightness-up-static=['']
-screen-brightness-down-static=['']
-screen-brightness-up-static=['']
 screensaver=@as []
 screenshot=@as []
 www=['<Alt>w']
