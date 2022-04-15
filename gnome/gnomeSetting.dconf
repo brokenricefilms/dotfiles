@@ -1,6 +1,6 @@
 [ca/desrt/dconf-editor]
-saved-pathbar-path='/org/gnome/settings-daemon/plugins/media-keys/screen-brightness-up-static'
-saved-view='/org/gnome/settings-daemon/plugins/media-keys/screen-brightness-up-static'
+saved-pathbar-path='/org/gnome/settings-daemon/plugins/media-keys/screen-brightness-down-static'
+saved-view='/org/gnome/settings-daemon/plugins/media-keys/screen-brightness-down-static'
 show-warning=false
 window-height=500
 window-is-maximized=true
@@ -980,12 +980,14 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.85059856011519, 106.6581)
+night-light-last-coordinates=(10.823600719942403, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
 area-screenshot-clip=['Print']
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
+screen-brightness-down-static=['']
+screen-brightness-up-static=['']
 screensaver=@as []
 screenshot=@as []
 www=['<Alt>w']
