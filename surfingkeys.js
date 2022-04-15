@@ -1,3 +1,8 @@
+settings.modeAfterYank = "Normal";
+
+// Disable emoji
+api.iunmap(":");
+
 api.Hints.characters = "asdghklqwertyuiopzxcvbnmfj1234567890;/.,][-=`";
 
 const hintsCss =
