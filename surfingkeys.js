@@ -1,4 +1,3 @@
-settings.focusFirstCandidate = false;
 settings.modeAfterYank = "Normal";
 
 // Disable emoji
