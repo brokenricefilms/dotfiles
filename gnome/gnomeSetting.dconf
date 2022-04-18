@@ -605,7 +605,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='power'
+last-panel='sound'
 
 [org/gnome/desktop/app-folders]
 folder-children=['accessories', 'system-tools']
@@ -980,7 +980,7 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.823600719942403, 106.6581)
+night-light-last-coordinates=(10.814601439884809, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
@@ -1250,7 +1250,7 @@ selected-color=(true, 0.61960784313725492, 0.55294117647058827, 0.47450980392156
 [org/gtk/settings/file-chooser]
 clock-format='12h'
 date-format='regular'
-location-mode='filename-entry'
+location-mode='path-bar'
 show-hidden=false
 show-size-column=true
 show-type-column=true
