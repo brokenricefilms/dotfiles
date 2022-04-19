@@ -605,7 +605,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='sound'
+last-panel='power'
 
 [org/gnome/desktop/app-folders]
 folder-children=['accessories', 'system-tools']
