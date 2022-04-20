@@ -574,6 +574,9 @@ unicode-hotkey=@as []
 [org/freedesktop/tracker/miner/files]
 index-recursive-directories=['&DESKTOP', '&DOCUMENTS', '&MUSIC', '&PICTURES', '&VIDEOS', '&DOWNLOAD']
 
+[org/gnome/Disks]
+image-dir-uri='file:///home/master/Downloads'
+
 [org/gnome/Disks/benchmark]
 do-write=false
 num-access-samples=1000
@@ -605,7 +608,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='power'
+last-panel='sound'
 
 [org/gnome/desktop/app-folders]
 folder-children=['accessories', 'system-tools']
@@ -980,7 +983,7 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.814601439884809, 106.6581)
+night-light-last-coordinates=(10.841599280057595, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
@@ -1033,7 +1036,7 @@ disable-user-extensions=false
 disabled-extensions=['dash-to-dock@micxgx.gmail.com', 'material-shell@papyelgringo', 'gnome-ui-tune@itstime.tech', 'pamac-updates@manjaro.org', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'x11gestures@joseexposito.github.io', 'focus@scaryrawr.github.io', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'appindicatorsupport@rgcjonas.gmail.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com']
 enabled-extensions=['gnome-shell-Google-search-provider@MrNinso', 'ssh-search-provider@extensions.gnome-shell.fifi.org', 'escape-overview@raelgc', 'blur-my-shell@aunetx', 'sound-output-device-chooser@kgshank.net', 'smart-auto-move@khimaros.com', 'fildemGMenu@gonza.com', 'worksets@blipk.xyz', 'workspaces-bar@fthx', 'just-perfection-desktop@just-perfection', 'gtktitlebar@velitasali.github.io', 'transparent-top-bar@zhanghai.me', 'gnome-fuzzy-app-search@gnome-shell-extensions.Czarlie.gitlab.com', 'gnome-shell-go-to-last-workspace@github.com', 'clipboard-indicator@tudmotu.com', 'github.notifications@alexandre.dufournet.gmail.com', 'hidetopbar@mathieu.bidon.ca']
 favorite-apps=@as []
-had-bluetooth-devices-setup=false
+had-bluetooth-devices-setup=true
 welcome-dialog-last-shown-version='41.2'
 
 [org/gnome/shell/app-switcher]
