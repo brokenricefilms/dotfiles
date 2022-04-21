@@ -983,7 +983,7 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.841599280057595, 106.6581)
+night-light-last-coordinates=(10.823600719942403, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
@@ -1262,7 +1262,7 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(359, 66)
+window-position=(358, 65)
 window-size=(1203, 902)
 
 [org/virt-manager/virt-manager]
