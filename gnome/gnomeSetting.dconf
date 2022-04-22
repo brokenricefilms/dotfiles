@@ -608,7 +608,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='sound'
+last-panel='datetime'
 
 [org/gnome/desktop/app-folders]
 folder-children=['accessories', 'system-tools']
@@ -983,7 +983,7 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.823600719942403, 106.6581)
+night-light-last-coordinates=(10.85059856011519, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
