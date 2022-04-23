@@ -608,7 +608,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='datetime'
+last-panel='sound'
 
 [org/gnome/desktop/app-folders]
 folder-children=['accessories', 'system-tools']
@@ -846,7 +846,7 @@ state=87168
 [org/gnome/gnome-screenshot]
 delay=0
 include-pointer=false
-last-save-directory='file:///home/master/Pictures'
+last-save-directory='file:///home/master/Downloads'
 
 [org/gnome/gnome-system-log]
 height=1051
@@ -983,7 +983,7 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.85059856011519, 106.6581)
+night-light-last-coordinates=(10.841599280057595, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
@@ -1262,7 +1262,7 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(358, 65)
+window-position=(359, 66)
 window-size=(1203, 902)
 
 [org/virt-manager/virt-manager]
