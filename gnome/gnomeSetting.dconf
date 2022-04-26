@@ -610,6 +610,9 @@ video-y-resolution=720
 [org/gnome/control-center]
 last-panel='sound'
 
+[org/gnome/desktop/a11y/applications]
+screen-reader-enabled=true
+
 [org/gnome/desktop/app-folders]
 folder-children=['accessories', 'system-tools']
 
@@ -660,6 +663,7 @@ gtk-theme='Adwaita'
 icon-theme='Adwaita'
 monospace-font-name='JetBrains Mono NL 10'
 show-battery-percentage=false
+toolkit-accessibility=true
 
 [org/gnome/desktop/notifications]
 application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel', 'ca-desrt-dconf-editor', 'ryzen-controller', 'org-gnome-extensions-desktop', 'org-kde-kdenlive']
@@ -983,7 +987,7 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.841599280057595, 106.6581)
+night-light-last-coordinates=(10.823600719942403, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
