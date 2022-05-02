@@ -608,7 +608,8 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='bluetooth'
+last-panel='background'
+window-state=(980, 640, false)
 
 [org/gnome/desktop/a11y/applications]
 screen-reader-enabled=true
@@ -634,6 +635,7 @@ translate=true
 color-shading-type='solid'
 picture-options='zoom'
 picture-uri='file:///home/master/.local/share/backgrounds/2022-03-19-15-47-35-eeeeee.jpg'
+picture-uri-dark='file:///home/master/.local/share/backgrounds/2022-03-19-15-47-35-eeeeee.jpg'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -651,6 +653,7 @@ clock-format='12h'
 clock-show-date=true
 clock-show-seconds=false
 clock-show-weekday=false
+color-scheme='default'
 cursor-theme='GoogleDot-Blue'
 document-font-name='DejaVu Sans 11'
 enable-animations=true
@@ -658,7 +661,6 @@ enable-hot-corners=false
 font-antialiasing='grayscale'
 font-hinting='slight'
 font-name='DejaVu Sans 11'
-gtk-im-module='ibus'
 gtk-theme='Adwaita'
 icon-theme='Adwaita'
 monospace-font-name='JetBrains Mono NL 10'
@@ -666,11 +668,14 @@ show-battery-percentage=false
 toolkit-accessibility=true
 
 [org/gnome/desktop/notifications]
-application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel', 'ca-desrt-dconf-editor', 'ryzen-controller', 'org-gnome-extensions-desktop', 'org-kde-kdenlive']
+application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel', 'ca-desrt-dconf-editor', 'ryzen-controller', 'org-gnome-extensions-desktop', 'org-kde-kdenlive', 'firefox-developer-edition']
 show-in-lock-screen=false
 
 [org/gnome/desktop/notifications/application/ca-desrt-dconf-editor]
 application-id='ca.desrt.dconf-editor.desktop'
+
+[org/gnome/desktop/notifications/application/firefox-developer-edition]
+application-id='firefox-developer-edition.desktop'
 
 [org/gnome/desktop/notifications/application/gnome-network-panel]
 application-id='gnome-network-panel.desktop'
@@ -987,7 +992,7 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.841599280057595, 106.6581)
+night-light-last-coordinates=(10.814601439884809, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
@@ -1266,7 +1271,7 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(359, 66)
+window-position=(26, 23)
 window-size=(1203, 902)
 
 [org/virt-manager/virt-manager]
