@@ -608,11 +608,11 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='background'
+last-panel='info-overview'
 window-state=(980, 640, false)
 
 [org/gnome/desktop/a11y/applications]
-screen-reader-enabled=true
+screen-reader-enabled=false
 
 [org/gnome/desktop/app-folders]
 folder-children=['accessories', 'system-tools']
@@ -665,7 +665,7 @@ gtk-theme='Adwaita'
 icon-theme='Adwaita'
 monospace-font-name='JetBrains Mono NL 10'
 show-battery-percentage=false
-toolkit-accessibility=true
+toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
 application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel', 'ca-desrt-dconf-editor', 'ryzen-controller', 'org-gnome-extensions-desktop', 'org-kde-kdenlive', 'firefox-developer-edition']
@@ -956,6 +956,12 @@ quality=75
 [org/gnome/gthumb/slideshow]
 transition='none'
 
+[org/gnome/libgnomekbd/preview]
+height=648
+width=1464
+x=240
+y=135
+
 [org/gnome/mutter]
 center-new-windows=true
 dynamic-workspaces=false
@@ -992,12 +998,12 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.814601439884809, 106.6581)
+night-light-last-coordinates=(10.823600719942403, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
 area-screenshot-clip=['Print']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
 screen-brightness-down-static=['']
 screen-brightness-up-static=['']
 screensaver=@as []
@@ -1015,9 +1021,9 @@ command='flameshot gui'
 name='flameshot'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
-binding='<Alt>w'
-command='google-chrome'
-name='google-chrome'
+binding='Print'
+command='flameshot gui'
+name='flameshot'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3]
 binding='F4'
@@ -1172,6 +1178,7 @@ swipe-fingers=3
 
 [org/gnome/shell/keybindings]
 focus-active-notification=@as []
+show-screenshot-ui=@as []
 switch-to-application-1=['<Super>1']
 switch-to-application-2=['<Super>2']
 switch-to-application-3=['<Super>3']
@@ -1271,7 +1278,7 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(26, 23)
+window-position=(359, 66)
 window-size=(1203, 902)
 
 [org/virt-manager/virt-manager]
