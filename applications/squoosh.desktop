@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=squoosh
-Exec=google-chrome --app="https://squoosh.app/"
+Exec=firefox-developer-edition --new-window "https://squoosh.app/"
 Icon=/home/master/dotfiles/applications/icons/squoosh.png

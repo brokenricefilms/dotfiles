@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=file browser
+Icon=firefox-developer-edition --new-window
+Exec=firefox-developer-edition --new-window %U

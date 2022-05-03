@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=ublock
-Exec=google-chrome --app="chrome-extension://cjpalhdlnbpafiamejdnhcphjbkeiagm/dashboard.html#settings.html"
+Exec=firefox-developer-edition --new-window "chrome-extension://cjpalhdlnbpafiamejdnhcphjbkeiagm/dashboard.html#settings.html"
 Icon=/home/master/dotfiles/applications/icons/ads-block.svg

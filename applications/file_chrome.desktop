@@ -1,7 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Terminal=false
-Type=Application
-Name=file chrome
-Icon=google-chrome
-Exec=google-chrome-stable --app=file:%U

@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=Gmail 0
-Exec=google-chrome-stable --app="https://mail.google.com/mail/u/0/#inbox"
+Exec=firefox-developer-edition --new-window "https://mail.google.com/mail/u/0/#inbox"
 Icon=/home/master/dotfiles/applications/icons/gmail.svg

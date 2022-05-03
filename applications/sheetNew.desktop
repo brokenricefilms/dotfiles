@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=new sheet
-Exec=/usr/bin/google-chrome --app="https://sheet.new"
+Exec=/usr/bin/firefox-developer-edition --new-window "https://sheet.new"
 Icon=/home/master/dotfiles/applications/icons/google-sheets.png

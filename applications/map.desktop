@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=map
-Exec=google-chrome --app="https://maps.google.com/"
+Exec=firefox-developer-edition --new-window "https://maps.google.com/"
 Icon=/home/master/dotfiles/applications/icons/google-maps.png

@@ -1,7 +1,7 @@
 #! /usr/bin/env zsh
 
 alias browser='xdg-open'
-alias defaultBrowser='google-chrome'
+alias defaultBrowser='firefox'
 alias browserNewTab='defaultBrowser --new-window'
 alias github='defaultBrowser --new-window "https://github.com/thuanpham2311"'
 alias browserFb='browser https://facebook.com'
