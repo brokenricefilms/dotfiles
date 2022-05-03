@@ -57,18 +57,6 @@ function ghi() {
   gh issue view $item --web
 }
 
-function syncNote () {
-  cd ~/sync/note
-  autoCommit
-  repoSync
-
-  cp -r ~/sync/note/publish ~/.local/share/garden/
-  cp ~/sync/note/README.md ~/.local/share/garden/
-  cd ~/.local/share/garden/
-  autoCommit
-  repoSync
-}
-
 function autoSync {
   repo=(
     /home/master/sync/ok
