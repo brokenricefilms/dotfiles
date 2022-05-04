@@ -608,7 +608,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='info-overview'
+last-panel='keyboard'
 window-state=(980, 640, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -800,6 +800,13 @@ button-layout=':close'
 num-workspaces=10
 titlebar-font='DejaVu Sans Bold 11'
 workspace-names=@as []
+
+[org/gnome/eog/ui]
+sidebar=false
+
+[org/gnome/eog/view]
+background-color='rgb(0,0,0)'
+use-background-color=true
 
 [org/gnome/evince/default]
 continuous=true
@@ -998,12 +1005,12 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.823600719942403, 106.6581)
+night-light-last-coordinates=(10.841599280057595, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
 area-screenshot-clip=['Print']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
 screen-brightness-down-static=['']
 screen-brightness-up-static=['']
 screensaver=@as []
@@ -1026,9 +1033,9 @@ command='flameshot gui'
 name='flameshot'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3]
-binding='F4'
-command='google-chrome --incognito'
-name='google-chrome --incognito'
+binding='<Super>n'
+command='firefox-developer-edition --new-window "https://notion.new"'
+name='new note'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4]
 binding='F6'
@@ -1278,7 +1285,7 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(359, 66)
+window-position=(26, 23)
 window-size=(1203, 902)
 
 [org/virt-manager/virt-manager]
