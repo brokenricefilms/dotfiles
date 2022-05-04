@@ -119,6 +119,8 @@ else
   alias copy='xclip -sel clip'
 fi
 
+alias delete_all_symbolic_links_current_dir='find -type l -delete'
+
 source ~/dotfiles/zsh/functions/dir.zsh
 
 source ~/dotfiles/zsh/functions/gitConfig.zsh
