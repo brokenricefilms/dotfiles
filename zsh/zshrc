@@ -135,7 +135,6 @@ source ~/dotfiles/zsh/functions/update.zsh
 source ~/dotfiles/zsh/functions/gnome.zsh
 source ~/dotfiles/zsh/functions/history.zsh
 source ~/dotfiles/zsh/functions/media.zsh
-source ~/dotfiles/zsh/functions/note.zsh
 source ~/dotfiles/zsh/functions/path.zsh
 source ~/dotfiles/zsh/functions/tmux.zsh
 source ~/dotfiles/zsh/functions/vim.zsh
