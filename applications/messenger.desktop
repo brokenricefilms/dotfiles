@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=messenger
-Exec=sh -c 'wmctrl -s 4 ; firefox-developer-edition --new-window "https://www.messenger.com/t/thuanpham2311" ; sleep 0.1 ; wmctrl -r "messenger" -b add,maximized_vert,maximized_horz'
+Exec=sh -c 'wmctrl -s 4 ; firefox --new-window "https://www.messenger.com/t/thuanpham2311" ; sleep 0.1 ; wmctrl -r "messenger" -b add,maximized_vert,maximized_horz'
 Icon=/home/master/dotfiles/applications/icons/facebook-messenger.png
