@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=new repo
-Exec=firefox-developer-edition --new-window "https://repo.new"
+Exec=firefox -edition --new-window "https://repo.new"
 Icon=/home/master/dotfiles/applications/icons/github.png

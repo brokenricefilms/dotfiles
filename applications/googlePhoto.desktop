@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=google photos
-Exec=firefox-developer-edition --new-window "https://photos.google.com"
+Exec=firefox --new-window "https://photos.google.com"
 Icon=/home/master/dotfiles/applications/icons/google-photos.png

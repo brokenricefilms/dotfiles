@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=keep
-Exec=firefox-developer-edition --new-window "https://keep.google.com/u/0/"
+Exec=firefox --new-window "https://keep.google.com/u/0/"
 Icon=/home/master/dotfiles/applications/icons/google-keep.png
