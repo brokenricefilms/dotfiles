@@ -119,7 +119,7 @@ else
   alias copy='xclip -sel clip'
 fi
 
-alias delete_all_symbolic_links_current_dir='find -type l -delete'
+alias delete_all_symbolic_links_current_dir='sudo find -type l -delete'
 
 source ~/dotfiles/zsh/functions/dir.zsh
 
