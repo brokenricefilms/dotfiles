@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Icon=/home/master/dotfiles/applications/icons/notion.png
+Name=notion
+Exec=firefox --new-window "https://notion.so"
+Keywords=note;
