@@ -10,7 +10,7 @@ Plug 'https://github.com/williamboman/nvim-lsp-installer'
 
 Plug 'https://github.com/mhartington/formatter.nvim'
 
-Plug 'https://github.com/editorconfig/editorconfig-vim'
+Plug 'https://github.com/n/editorconfig-vim'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 Plug 'https://github.com/github/copilot.vim'
@@ -375,5 +375,12 @@ command! DeleteDosLineEngdingChar execute "%s/\r$/ /g"
 command! PlugCleanWithReloadConfigFile execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf" | execute "PlugClean"
 command! PlugInstallWithReloadConfigFile execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf" | execute "PlugInstall"
 command! ShowFileType execute "set filetype?"
+
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+command! TrimWhitespace call TrimWhitespace()
 
 let g:coq_settings = { 'auto_start': 'shut-up' }
