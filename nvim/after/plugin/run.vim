@@ -12,6 +12,9 @@ autocmd BufEnter *.cpp nnoremap <leader>r
 autocmd BufEnter *.java nnoremap <leader>r
     \ :w<enter>:FloatermSend cd %:p:h ; javac %:t ; java %:t:r ; rm %:t:r.class<enter>:FloatermToggle<enter>
 
+autocmd BufEnter *.kt nnoremap <leader>r
+    \ :w<enter>:FloatermSend cd %:p:h ; kotlinc %:t -include-runtime -d %:t:r.jar ; java -jar %:t:r.jar ; rm %:t:r.jar<enter>:FloatermToggle<enter>
+
 autocmd BufEnter *.cpp nnoremap <leader>R
     \ :w<enter>:FloatermSend cd %:p:h ; ./run<enter>:FloatermToggle<enter>
 
