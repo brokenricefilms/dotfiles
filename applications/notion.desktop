@@ -4,5 +4,5 @@ Terminal=false
 Type=Application
 Icon=/home/master/dotfiles/applications/icons/notion.png
 Name=notion
-Exec=firefox --new-window "https://notion.so"
+Exec=sh -c 'wmctrl -s 4 ; firefox --new-window "https://notion.so" ; sleep 0.1 ; wmctrl -r "calendar" -b add,maximized_vert,maximized_horz'
 Keywords=note;
