@@ -2,8 +2,8 @@
     "version": "1.4.2",
     "autoload": {
         "SONiX USB DEVICE": "thuan fly keys",
-        "AT Translated Set 2 keyboard": "thuan fly keys",
-        "2.4G Mouse": "new preset copy"
+        "2.4G Mouse": "new preset copy",
+        "AT Translated Set 2 keyboard": "thuan fly keys"
     },
     "macros": {
         "keystroke_sleep_ms": 10
