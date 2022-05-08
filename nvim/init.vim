@@ -10,7 +10,7 @@ Plug 'https://github.com/williamboman/nvim-lsp-installer'
 
 Plug 'https://github.com/mhartington/formatter.nvim'
 
-Plug 'https://github.com/n/editorconfig-vim'
+Plug 'https://github.com/editorconfig/editorconfig-vim'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 Plug 'https://github.com/github/copilot.vim'
