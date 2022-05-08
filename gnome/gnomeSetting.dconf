@@ -608,7 +608,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='sound'
+last-panel='background'
 window-state=(980, 640, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -634,8 +634,8 @@ translate=true
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///home/master/.local/share/backgrounds/2022-03-19-15-47-35-eeeeee.jpg'
-picture-uri-dark='file:///home/master/.local/share/backgrounds/2022-03-19-15-47-35-eeeeee.jpg'
+picture-uri='file:///home/master/.local/share/backgrounds/2022-05-08-20-11-52-393939.png'
+picture-uri-dark='file:///home/master/.local/share/backgrounds/2022-05-08-20-11-52-393939.png'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -643,9 +643,9 @@ secondary-color='#000000000000'
 show-weekdate=false
 
 [org/gnome/desktop/input-sources]
-mru-sources=[('xkb', 'us'), ('ibus', 'Bamboo')]
+mru-sources=[('xkb', 'us'), ('ibus', 'Bamboo::Us')]
 per-window=false
-sources=[('xkb', 'us'), ('ibus', 'Bamboo')]
+sources=[('xkb', 'us'), ('ibus', 'Bamboo::Us')]
 xkb-options=['lv3:menu_switch', 'shift:both_capslock_cancel', 'caps:escape']
 
 [org/gnome/desktop/interface]
@@ -733,7 +733,7 @@ color-shading-type='solid'
 lock-delay=uint32 0
 lock-enabled=false
 picture-options='zoom'
-picture-uri='file:///home/master/.local/share/backgrounds/2022-03-19-15-47-35-eeeeee.jpg'
+picture-uri='file:///home/master/.local/share/backgrounds/2022-05-08-20-11-52-393939.png'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -1008,7 +1008,7 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.823600719942403, 106.6581)
+night-light-last-coordinates=(10.85059856011519, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
@@ -1273,8 +1273,8 @@ type-format='category'
 window-size=(1167, 618)
 
 [org/gtk/settings/color-chooser]
-custom-colors=[(0.93725490196078431, 0.92549019607843142, 0.90588235294117647, 1.0)]
-selected-color=(true, 0.61960784313725492, 0.55294117647058827, 0.47450980392156861, 1.0)
+custom-colors=[(0.61960784313725492, 0.55294117647058827, 0.47450980392156861, 1.0), (0.93725490196078431, 0.92549019607843142, 0.90588235294117647, 1.0)]
+selected-color=(true, 1.0, 1.0, 1.0, 1.0)
 
 [org/gtk/settings/file-chooser]
 clock-format='12h'
