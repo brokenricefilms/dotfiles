@@ -608,7 +608,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='background'
+last-panel='region'
 window-state=(980, 640, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -668,11 +668,14 @@ show-battery-percentage=false
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel', 'ca-desrt-dconf-editor', 'ryzen-controller', 'org-gnome-extensions-desktop', 'org-kde-kdenlive', 'firefox-developer-edition', 'firefox']
+application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel', 'ca-desrt-dconf-editor', 'ryzen-controller', 'org-gnome-extensions-desktop', 'org-kde-kdenlive', 'firefox-developer-edition', 'firefox', 'ffpwa-01g2kq6xtkbex4080qh0acspcd']
 show-in-lock-screen=false
 
 [org/gnome/desktop/notifications/application/ca-desrt-dconf-editor]
 application-id='ca.desrt.dconf-editor.desktop'
+
+[org/gnome/desktop/notifications/application/ffpwa-01g2kq6xtkbex4080qh0acspcd]
+application-id='FFPWA-01G2KQ6XTKBEX4080QH0ACSPCD.desktop'
 
 [org/gnome/desktop/notifications/application/firefox-developer-edition]
 application-id='firefox-developer-edition.desktop'
@@ -1008,7 +1011,7 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.85059856011519, 106.6581)
+night-light-last-coordinates=(10.841599280057595, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
@@ -1055,7 +1058,7 @@ sleep-inactive-ac-type='nothing'
 sleep-inactive-battery-type='suspend'
 
 [org/gnome/shell]
-app-picker-layout=[{'accessories': <{'position': <0>}>, 'org.manjaro.pamac.manager.desktop': <{'position': <1>}>, 'org.gnome.gThumb.desktop': <{'position': <2>}>, 'office': <{'position': <3>}>, 'system-tools': <{'position': <4>}>, 'org.gnome.Nautilus.desktop': <{'position': <5>}>, 'firefox.desktop': <{'position': <6>}>, 'org.gnome.Totem.desktop': <{'position': <7>}>, 'org.gnome.Cheese.desktop': <{'position': <8>}>}]
+app-picker-layout=[{'accessories': <{'position': <0>}>, 'org.manjaro.pamac.manager.desktop': <{'position': <1>}>, 'android-studio.desktop': <{'position': <2>}>, 'system-tools': <{'position': <3>}>, 'org.gnome.Nautilus.desktop': <{'position': <4>}>, 'netbeans.desktop': <{'position': <5>}>, 'firefox.desktop': <{'position': <6>}>, 'audacity.desktop': <{'position': <7>}>, 'org.gnome.Cheese.desktop': <{'position': <8>}>, 'blackmagicraw-player.desktop': <{'position': <9>}>, 'blackmagicraw-speedtest.desktop': <{'position': <10>}>, 'calendar.desktop': <{'position': <11>}>, 'cmake-gui.desktop': <{'position': <12>}>, 'contacts.desktop': <{'position': <13>}>, 'com.blackmagicdesign.resolve-Panels-Setup.desktop': <{'position': <14>}>, 'com.blackmagicdesign.resolve.desktop': <{'position': <15>}>, 'com.blackmagicdesign.resolve-CaptureLogs.desktop': <{'position': <16>}>, 'discord.desktop': <{'position': <17>}>, 'org.gnome.Evince.desktop': <{'position': <18>}>, 'drive.desktop': <{'position': <19>}>, 'electron12.desktop': <{'position': <20>}>, 'excalidraw.desktop': <{'position': <21>}>, 'file_browser.desktop': <{'position': <22>}>, 'org.flameshot.Flameshot.desktop': <{'position': <23>}>}, {'com.github.johnfactotum.Foliate.desktop': <{'position': <0>}>, 'foot_main.desktop': <{'position': <1>}>, 'foot_note.desktop': <{'position': <2>}>, 'gmail_0.desktop': <{'position': <3>}>, 'gmail_1.desktop': <{'position': <4>}>, 'gmail_2.desktop': <{'position': <5>}>, 'google-chrome.desktop': <{'position': <6>}>, 'meet.desktop': <{'position': <7>}>, 'meet1.desktop': <{'position': <8>}>, 'googlePhoto.desktop': <{'position': <9>}>, 'org.gnome.eog.desktop': <{'position': <10>}>, 'org.kde.kdenlive.desktop': <{'position': <11>}>, 'keep.desktop': <{'position': <12>}>, 'map.desktop': <{'position': <13>}>, 'messenger.desktop': <{'position': <14>}>, 'mpv.desktop': <{'position': <15>}>, 'docNew.desktop': <{'position': <16>}>, 'eventNew.desktop': <{'position': <17>}>, 'figjamNew.desktop': <{'position': <18>}>, 'newFigma.desktop': <{'position': <19>}>, 'formNew.desktop': <{'position': <20>}>, 'keepNew.desktop': <{'position': <21>}>, 'meetNew.desktop': <{'position': <22>}>, 'notionNew.desktop': <{'position': <23>}>}, {'repoNew.desktop': <{'position': <0>}>, 'sheetNew.desktop': <{'position': <1>}>, 'slideNew.desktop': <{'position': <2>}>, 'notion.desktop': <{'position': <3>}>, 'com.obsproject.Studio.desktop': <{'position': <4>}>, 'org.onlyoffice.desktopeditors.desktop': <{'position': <5>}>, 'assistant.desktop': <{'position': <6>}>, 'designer.desktop': <{'position': <7>}>, 'linguist.desktop': <{'position': <8>}>, 'qdbusviewer.desktop': <{'position': <9>}>, 'remote-viewer.desktop': <{'position': <10>}>, 'chrome-eikjhbkpemdappjfcmdeeeamdpkgabmk-Default.desktop': <{'position': <11>}>, 'squoosh.desktop': <{'position': <12>}>, 'telegram.desktop': <{'position': <13>}>, 'com.blackmagicdesign.resolve-Installer.desktop': <{'position': <14>}>, 'zalo.desktop': <{'position': <15>}>, 'zoomBrowser.desktop': <{'position': <16>}>}]
 command-history=['gnome-session-properties', 'r', 'ibus-deamon', 'ibus-daemon -vxr']
 disable-user-extensions=false
 disabled-extensions=['dash-to-dock@micxgx.gmail.com', 'material-shell@papyelgringo', 'gnome-ui-tune@itstime.tech', 'pamac-updates@manjaro.org', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'x11gestures@joseexposito.github.io', 'focus@scaryrawr.github.io', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'appindicatorsupport@rgcjonas.gmail.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com']
@@ -1115,41 +1118,46 @@ mouse-sensitive=true
 [org/gnome/shell/extensions/just-perfection]
 accessibility-menu=false
 activities-button=false
+activities-button-icon-monochrome=true
+activities-button-label=true
 animation=1
 app-menu=false
-app-menu-icon=true
-background-menu=false
+app-menu-icon=false
+background-menu=true
 clock-menu=true
 clock-menu-position=0
 dash=false
 dash-icon-size=0
 double-super-to-appgrid=true
-gesture=false
+gesture=true
 hot-corner=true
 keyboard-layout=true
 notification-banner-position=1
 osd=true
 panel=false
-panel-arrow=true
-panel-corner-size=0
+panel-arrow=false
+panel-corner-size=1
 panel-in-overview=true
-panel-notification-icon=false
+panel-notification-icon=true
 ripple-box=false
-search=true
-show-apps-button=true
-startup-status=1
+search=false
+show-apps-button=false
+show-prefs-intro=false
+startup-status=0
 theme=true
 top-panel-position=0
-weather=false
+weather=true
 window-demands-attention-focus=true
-window-picker-icon=true
+window-picker-icon=false
 window-preview-caption=true
 workspace=true
 workspace-background-corner-size=0
-workspace-popup=false
+workspace-popup=true
+workspace-switcher-should-show=false
 workspace-switcher-size=0
+workspace-wrap-around=false
 workspaces-in-app-grid=false
-world-clock=false
+world-clock=true
 
 [org/gnome/shell/extensions/smart-auto-move]
 debug-logging=false
@@ -1270,7 +1278,7 @@ sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
 type-format='category'
-window-size=(1167, 618)
+window-size=(1681, 1080)
 
 [org/gtk/settings/color-chooser]
 custom-colors=[(0.61960784313725492, 0.55294117647058827, 0.47450980392156861, 1.0), (0.93725490196078431, 0.92549019607843142, 0.90588235294117647, 1.0)]
