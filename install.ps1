@@ -1,18 +1,42 @@
-Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+winget install go -s winget --accept-package-agreements --accept-source-agreements
+winget install obs -s winget --accept-package-agreements --accept-source-agreements
+winget install onlyoffice --accept-package-agreements --accept-source-agreements
+winget install powershell -s msstore --accept-package-agreements --accept-source-agreements
+winget install powertoys -s msstore --accept-package-agreements --accept-source-agreements
+winget install vscode --accept-package-agreements --accept-source-agreements
+winget install startallback -s winget --accept-package-agreements --accept-source-agreements
 
-scoop bucket add extras
+Invoke-WebRequest https://deno.land/x/install/install.ps1 -useb | Invoke-Expression
 
-scoop install fd
-scoop install ripgrep
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-WebRequest get.scoop.sh | Invoke-Expression
+
 scoop install git
-scoop install fzf
-scoop install starship
-scoop install neovim
-scoop install sudo
+scoop bucket add extras
+scoop bucket add main
+
+scoop bucket add github-gh https://github.com/cli/scoop-gh.git
+scoop install gh sudo openssh neovim fd ripgrep fzf starship delta python clangd cowsay
+
+scoop install ruby msys2
+ridk install
+
+Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
+Install-Module -Name PSFzf -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
+Install-Module -Name Recycle -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
+Install-Module -Name Terminal-Icons -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
+
+sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" -Target "C:\Users\master\dotfiles\powershell\Microsoft.PowerShell_profile.ps1" -Force
 
 sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\.gitconfig" -Target "C:\Users\master\dotfiles\git\gitconfig" -Force
 sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\.ssh\config" -Target "C:\Users\master\dotfiles\ssh\config" -Force
+
+sudo mkdir $env:appdata\alacritty\ 
+sudo New-Item -ItemType SymbolicLink -Path "$env:appdata\alacritty\alacritty.yml" -Target "$env:USERPROFILE\dotfiles\alacritty.yml" -Force
+
 sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" -Target "C:\Users\master\dotfiles\windows_terminal_config.json" -Force
+
+sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\AppData\Local\nvim\init.vim" -Target "C:\Users\master\dotfiles\nvim\init.vim" -Force
 
 sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\AppData\Local\Microsoft\PowerToys\settings.json" -Target "C:\Users\master\dotfiles\PowerToys\settings.json" -Force
 sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\AppData\Local\Microsoft\PowerToys\Keyboard Manager\settings.json" -Target "C:\Users\master\dotfiles\PowerToys\Keyboard Manager\settings.json" -Force
@@ -20,6 +44,3 @@ sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\AppData\Local\Micros
 
 sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\AppData\Roaming\TouchCursor\settings.cfg" -Target "C:\Users\master\dotfiles\TouchCursor\settings.cfg" -Force
 sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\AppData\Roaming\TouchCursor\pre-1.7.1-settings.cfg" -Target "C:\Users\master\dotfiles\TouchCursor\pre-1.7.1-settings.cfg" -Force
-
-
-sudo New-Item -ItemType SymbolicLink -Path  "C:\Program Files (x86)\Common Files\Oracle\Java\javapath_target_1828171\bin\" -Target "C:\Program Files\Java\jdk1.8.0_321\bin\" -Force
