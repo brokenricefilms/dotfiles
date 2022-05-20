@@ -11,7 +11,6 @@
 
 ## Demo
 
-- [Live stream config powershell May 20, 2022](https://www.youtube.com/watch?v=j3Ui8XF2Ilg)
 - [live stream playlist](https://www.youtube.com/playlist?list=PLiK7Zu7FR9jXXRToBRaOxpYsPAxy06xsi)
 
 ## Feature
