@@ -21,6 +21,8 @@ scoop install gh sudo openssh neovim fd ripgrep fzf starship delta python clangd
 scoop install ruby msys2
 ridk install
 
+gh config set editor nvim
+
 Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
 Install-Module -Name PSFzf -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
 Install-Module -Name Recycle -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
@@ -31,7 +33,7 @@ sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\Documents\PowerShell
 sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\.gitconfig" -Target "C:\Users\master\dotfiles\git\gitconfig" -Force
 sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\.ssh\config" -Target "C:\Users\master\dotfiles\ssh\config" -Force
 
-sudo mkdir $env:appdata\alacritty\ 
+sudo mkdir $env:appdata\alacritty\
 sudo New-Item -ItemType SymbolicLink -Path "$env:appdata\alacritty\alacritty.yml" -Target "$env:USERPROFILE\dotfiles\alacritty.yml" -Force
 
 sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" -Target "C:\Users\master\dotfiles\windows_terminal_config.json" -Force
