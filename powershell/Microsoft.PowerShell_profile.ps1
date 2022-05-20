@@ -20,8 +20,6 @@ Set-PSReadLineOption -Colors @{
   "Variable"           = [ConsoleColor]::"Red"
 }
 
-Set-Alias lg lazygit
-
 Import-Module -Name Terminal-Icons
 # Terminal icons theme don't support light theme
 # issue here: https://github.com/devblackops/Terminal-Icons/issues/69
@@ -66,6 +64,8 @@ function clr() { Clear-Host }
 
 function q() { Exit }
 
+Set-Alias lg lazygit
+
 function push() { git push }
 
 function pull() { git pull }
@@ -75,6 +75,17 @@ function st() { git status --short --branch }
 function dv() { git difftool }
 
 function gl() { git log --oneline | head -n 5 }
+
+function ghi() {
+  $issue = gh issue list | fzf
+  $issue = $issue -split "\t" | Select-Object -First 1
+  gh issue view $issue --web
+}
+
+function gs() {
+  $branch = git branch --all | fzf
+  git switch $branch.replace(" ", "")
+}
 
 function autoCommit() {
   git add .
