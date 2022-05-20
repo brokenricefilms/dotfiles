@@ -121,7 +121,7 @@ function yo {
   git status --short --branch
   git diff
   git add .
-  $commit_message = Read-Host -Prompt "Commit message"
+  $commit_message = Read-Host -Prompt "👉 Commit message"
   git commit --message "$commit_message"
   git push
 }
