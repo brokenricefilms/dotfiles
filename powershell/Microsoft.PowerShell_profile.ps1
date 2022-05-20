@@ -76,11 +76,12 @@ function dv() { git difftool }
 
 function gl() { git log --oneline | head -n 5 }
 
-function ghi() {
+function githubIssueViewWeb() {
   $issue = gh issue list | fzf
   $issue = $issue -split "\t" | Select-Object -First 1
   gh issue view $issue --web
 }
+Set-Alias ghi githubIssueViewWeb
 
 function gs() {
   $branch = git branch --all | fzf
