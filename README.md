@@ -9,6 +9,11 @@
 - For me, dotfiles is very personal, but you can find some tips, tricks, functions i used in this repos (i copy a lot on the internet, if not have i created once cuz am a programmer)
 - Right now git commit tree is the mess, don't read that. Hopefully i will clean up soon
 
+## Demo
+
+- [Live stream config powershell May 20, 2022](https://www.youtube.com/watch?v=j3Ui8XF2Ilg)
+- [live stream playlist](https://www.youtube.com/playlist?list=PLiK7Zu7FR9jXXRToBRaOxpYsPAxy06xsi)
+
 ## Feature
 
 ### UI
@@ -44,7 +49,7 @@
 ### Nvim
 
 - Minimal, no plugin
-- For fast editing 
+- For fast editing
 
 ## Install
 
