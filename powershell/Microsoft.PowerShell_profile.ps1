@@ -209,3 +209,13 @@ function hi() {
   browserDaily
   update
 }
+
+function youtubeDownload( ) {
+  yt-dlp -f bestvideo+bestaudio
+}
+Set-Alias yt youtubeDownload
+
+function youtubeDownloadAudio() {
+  yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"
+}
+Set-Alias yta youtubeDownloadAudio
