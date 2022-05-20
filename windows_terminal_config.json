@@ -256,7 +256,7 @@
                 "size": 13
             },
             "intenseTextStyle": "bold",
-            "opacity": 80,
+            "opacity": 100,
             "padding": "1",
             "scrollbarState": "hidden",
             "suppressApplicationTitle": false,
@@ -281,14 +281,14 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "commandline": "pwsh",
+                "commandline": "pwsh -NoExit -Nologo  -Command \"cowsay Yo!\"",
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
                 "source": "Windows.Terminal.PowershellCore"
             },
             {
-                "commandline": "mingw64.cmd",
+                "commandline": "mingw",
                 "guid": "{0de679d3-7620-4d25-9b4a-f35c71ca55c0}",
                 "hidden": false,
                 "name": "mingw64",
