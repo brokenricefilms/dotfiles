@@ -31,11 +31,18 @@ Set-TerminalIconsTheme -DisableColorTheme
 Import-Module -Name PSFzf
 function c() {
   Invoke-FuzzySetLocation
+  la
 }
 
 function v() {
-  Invoke-FuzzyEdit
+  if (!$args) {
+    Invoke-FuzzyEdit
+  }
+  else {
+    nvim "$args"
+  }
 }
+
 function f() {
   Invoke-FuzzyEdit
 }
@@ -105,6 +112,7 @@ function .. { Set-location .. ; la }
 
 function ... { Set-location .. ; Set-location .. ; la }
 
+Remove-Alias cd
 function cd() {
   $path = $args[0]
   Set-location -Path $path
