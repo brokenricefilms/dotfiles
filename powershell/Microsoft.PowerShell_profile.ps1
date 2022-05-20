@@ -20,8 +20,7 @@ Set-PSReadLineOption -Colors @{
   "Variable"           = [ConsoleColor]::"Red"
 }
 
-Set-Alias vi nvim
-Set-Alias vim nvim
+Set-Alias lg lazygit
 
 Import-Module -Name Terminal-Icons
 # Terminal icons theme don't support light theme
@@ -43,6 +42,10 @@ function v() {
   }
 }
 
+Set-Alias e v
+Set-Alias vi v
+Set-Alias vim v
+
 function f() {
   Invoke-FuzzyEdit
 }
@@ -61,7 +64,6 @@ function cler() { Clear-Host }
 function clar() { Clear-Host }
 function clr() { Clear-Host }
 
-function e() { Exit }
 function q() { Exit }
 
 function push() { git push }
