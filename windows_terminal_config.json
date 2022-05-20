@@ -4,22 +4,6 @@
     "actions": 
     [
         {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 7
-            },
-            "keys": "ctrl+8"
-        },
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+c"
-        },
-        {
             "command": "unbound",
             "keys": "ctrl+v"
         },
@@ -106,6 +90,22 @@
         {
             "command": 
             {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+c"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 7
+            },
+            "keys": "ctrl+8"
+        },
+        {
+            "command": 
+            {
                 "action": "newTab"
             },
             "keys": "ctrl+t"
@@ -176,16 +176,16 @@
             "keys": "ctrl+4"
         },
         {
+            "command": "closePane",
+            "keys": "ctrl+shift+w"
+        },
+        {
             "command": 
             {
                 "action": "switchToTab",
                 "index": 5
             },
             "keys": "ctrl+6"
-        },
-        {
-            "command": "closePane",
-            "keys": "ctrl+shift+w"
         },
         {
             "command": 
@@ -647,7 +647,7 @@
     "showTabsInTitlebar": true,
     "showTerminalTitleInTitlebar": true,
     "snapToGridOnResize": true,
-    "startOnUserLogin": false,
+    "startOnUserLogin": true,
     "tabSwitcherMode": "disabled",
     "tabWidthMode": "titleLength",
     "useAcrylicInTabRow": true,
