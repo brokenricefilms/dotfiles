@@ -11,6 +11,10 @@
 
 ## Feature
 
+### UI
+
+- Using github light theme
+
 ### Powershell
 
 - UI:
