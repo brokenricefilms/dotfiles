@@ -83,6 +83,27 @@ function githubIssueViewWeb() {
 }
 Set-Alias ghi githubIssueViewWeb
 
+function gitHubIssueEdit() {
+  $issue = gh issue list | fzf
+  $issue = $issue -split "\t" | Select-Object -First 1
+  gh issue edit $issue
+}
+Set-Alias ghie gitHubIssueEdit
+
+function gitHubIssueClose() {
+  $issue = gh issue list | fzf
+  $issue = $issue -split "\t" | Select-Object -First 1
+  gh issue close $issue
+}
+Set-Alias ghic gitHubIssueClose
+
+function gitHubIssueComment() {
+  $issue = gh issue list | fzf
+  $issue = $issue -split "\t" | Select-Object -First 1
+  gh issue comment $issue
+}
+Set-Alias ghim gitHubIssueComment
+
 function gs() {
   $branch = git branch --all | fzf
   git switch $branch.replace(" ", "")
