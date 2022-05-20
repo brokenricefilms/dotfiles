@@ -68,7 +68,7 @@ function push() { git push }
 
 function pull() { git pull }
 
-function st() { git status -sb }
+function st() { git status --short --branch }
 
 function dv() { git difftool }
 
@@ -81,6 +81,15 @@ function autoCommit() {
   git push
 }
 Set-Alias ok autoCommit
+
+function yo {
+  git status --short --branch
+  git diff
+  git add .
+  $commit_message = Read-Host -Prompt "Commit message"
+  git commit --message "$commit_message"
+  git push
+}
 
 function ins() {
   $app = $args[0]
