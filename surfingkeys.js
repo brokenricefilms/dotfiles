@@ -6,7 +6,7 @@ api.iunmap(":");
 api.Hints.characters = "asdghklqwertyuiopzxcvbnmfj1234567890;/.,][-=`";
 
 const hintsCss =
-  "font-size: 12pt; font-family: Cascadia Code, JetBrains Mono NL,SauceCodePro Nerd Font, Consolas, Menlo, monospace; border: 0px; color: #353535; background: initial; background-color: #eeeeee";
+  "font-size: 12pt; font-family: JetBrains Mono NL, Cascadia Code, SauceCodePro Nerd Font, Consolas, Menlo, monospace; border: 0px; color: #353535; background: initial; background-color: #eeeeee";
 
 api.Hints.style(hintsCss);
 api.Hints.style(hintsCss, "text");
