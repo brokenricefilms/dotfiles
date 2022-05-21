@@ -26,27 +26,36 @@ Import-Module -Name Terminal-Icons
 Set-TerminalIconsTheme -DisableColorTheme
 
 Import-Module -Name PSFzf
+
+Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
+
 function c() {
-  Invoke-FuzzySetLocation
+  $folder = fd --type directory --exclude scoop --exclude go --exclude .vscode --exclude bundle --exclude .git --exclude gems --exclude node_modules | fzf --height 50% --min-height 20 --reverse
+  Set-Location $folder
   la
 }
 
-function v() {
+function fzfEditFile() {
   if (!$args) {
-    Invoke-FuzzyEdit
+    $file = fd --type file --follow --exclude scoop --exclude go --exclude node_modules | fzf --height 50% --min-height 20 --reverse --preview 'bat --theme=GitHub --style=numbers --color=always --line-range :500 {}'
+    nvim $file
   }
   else {
     nvim "$args"
   }
 }
 
-Set-Alias e v
-Set-Alias vi v
-Set-Alias vim v
+Set-Alias v fzfEditFile
+Set-Alias e fzfEditFile
+Set-Alias vi fzfEditFile
+Set-Alias vim fzfEditFile
+Set-Alias f fzfEditFile
 
-function f() {
-  Invoke-FuzzyEdit
+function openFile() {
+  $file = fd --type file --follow --exclude scoop --exclude go --exclude node_modules | fzf --height 50% --min-height 20 --reverse
+  Invoke-Item $file
 }
+Set-Alias o openFile
 
 Import-Module PSReadLine
 Set-PSReadLineOption -PredictionViewStyle ListView
