@@ -28,21 +28,21 @@ Install-Module -Name PSFzf -AllowPrerelease -Scope CurrentUser -Force -SkipPubli
 Install-Module -Name Recycle -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
 Install-Module -Name Terminal-Icons -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
 
-sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" -Target "C:\Users\master\dotfiles\powershell\Microsoft.PowerShell_profile.ps1" -Force
+sudo New-Item -ItemType SymbolicLink -Path "$env:HOMEPATH\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" -Target "$env:HOMEPATH\dotfiles\powershell\Microsoft.PowerShell_profile.ps1" -Force
 
-sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\.gitconfig" -Target "C:\Users\master\dotfiles\git\gitconfig" -Force
-sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\.ssh\config" -Target "C:\Users\master\dotfiles\ssh\config" -Force
+sudo New-Item -ItemType SymbolicLink -Path "$env:HOMEPATH\.gitconfig" -Target "$env:HOMEPATH\dotfiles\git\gitconfig" -Force
+sudo New-Item -ItemType SymbolicLink -Path "$env:HOMEPATH\.ssh\config" -Target "$env:HOMEPATH\dotfiles\ssh\config" -Force
 
 sudo mkdir $env:appdata\alacritty\
 sudo New-Item -ItemType SymbolicLink -Path "$env:appdata\alacritty\alacritty.yml" -Target "$env:USERPROFILE\dotfiles\alacritty.yml" -Force
 
-sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" -Target "C:\Users\master\dotfiles\windows_terminal_config.json" -Force
+sudo New-Item -ItemType SymbolicLink -Path "$env:HOMEPATH\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" -Target "$env:HOMEPATH\dotfiles\windows_terminal_config.json" -Force
 
-sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\AppData\Local\nvim\init.vim" -Target "C:\Users\master\dotfiles\nvim\init.vim" -Force
+sudo New-Item -ItemType SymbolicLink -Path "$env:HOMEPATH\AppData\Local\nvim\init.vim" -Target "$env:HOMEPATH\dotfiles\nvim\init.vim" -Force
 
-sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\AppData\Local\Microsoft\PowerToys\settings.json" -Target "C:\Users\master\dotfiles\PowerToys\settings.json" -Force
-sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\AppData\Local\Microsoft\PowerToys\Keyboard Manager\settings.json" -Target "C:\Users\master\dotfiles\PowerToys\Keyboard Manager\settings.json" -Force
-sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\AppData\Local\Microsoft\PowerToys\Keyboard Manager\default.json" -Target "C:\Users\master\dotfiles\PowerToys\Keyboard Manager\default.json" -Force
+sudo New-Item -ItemType SymbolicLink -Path "$env:HOMEPATH\AppData\Local\Microsoft\PowerToys\settings.json" -Target "$env:HOMEPATH\dotfiles\PowerToys\settings.json" -Force
+sudo New-Item -ItemType SymbolicLink -Path "$env:HOMEPATH\AppData\Local\Microsoft\PowerToys\Keyboard Manager\settings.json" -Target "$env:HOMEPATH\dotfiles\PowerToys\Keyboard Manager\settings.json" -Force
+sudo New-Item -ItemType SymbolicLink -Path "$env:HOMEPATH\AppData\Local\Microsoft\PowerToys\Keyboard Manager\default.json" -Target "$env:HOMEPATH\dotfiles\PowerToys\Keyboard Manager\default.json" -Force
 
-sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\AppData\Roaming\TouchCursor\settings.cfg" -Target "C:\Users\master\dotfiles\TouchCursor\settings.cfg" -Force
-sudo New-Item -ItemType SymbolicLink -Path "C:\Users\master\AppData\Roaming\TouchCursor\pre-1.7.1-settings.cfg" -Target "C:\Users\master\dotfiles\TouchCursor\pre-1.7.1-settings.cfg" -Force
+sudo New-Item -ItemType SymbolicLink -Path "$env:HOMEPATH\AppData\Roaming\TouchCursor\settings.cfg" -Target "$env:HOMEPATH\dotfiles\TouchCursor\settings.cfg" -Force
+sudo New-Item -ItemType SymbolicLink -Path "$env:HOMEPATH\AppData\Roaming\TouchCursor\pre-1.7.1-settings.cfg" -Target "$env:HOMEPATH\dotfiles\TouchCursor\pre-1.7.1-settings.cfg" -Force
