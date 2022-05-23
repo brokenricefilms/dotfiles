@@ -13,6 +13,7 @@ Invoke-WebRequest get.scoop.sh | Invoke-Expression
 scoop install git
 scoop bucket add extras
 scoop bucket add main
+scoop bucket add nerd-fonts
 
 scoop bucket add github-gh https://github.com/cli/scoop-gh.git
 scoop install gh sudo openssh neovim fd ripgrep fzf starship delta python clangd cowsay aria2
