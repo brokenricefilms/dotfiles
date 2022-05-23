@@ -52,3 +52,5 @@ sudo New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\AppData\Local\Micro
 
 sudo New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\AppData\Roaming\TouchCursor\settings.cfg" -Target "$env:HOMEPATH\dotfiles\TouchCursor\settings.cfg" -Force
 sudo New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\AppData\Roaming\TouchCursor\pre-1.7.1-settings.cfg" -Target "$env:HOMEPATH\dotfiles\TouchCursor\pre-1.7.1-settings.cfg" -Force
+
+sudo New-Item -ItemType SymbolicLink -Path "$env:LOCALAPPDATA\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\settings.json" -Target "$env:HOMEPATH\dotfiles\winget\settings.json" -Force
