@@ -1,5 +1,4 @@
 winget install go -s winget --accept-package-agreements --accept-source-agreements
-winget install obs -s winget --accept-package-agreements --accept-source-agreements
 winget install onlyoffice --accept-package-agreements --accept-source-agreements
 winget install powershell -s msstore --accept-package-agreements --accept-source-agreements
 winget install powertoys -s msstore --accept-package-agreements --accept-source-agreements
@@ -16,7 +15,7 @@ scoop bucket add extras
 scoop bucket add main
 
 scoop bucket add github-gh https://github.com/cli/scoop-gh.git
-scoop install gh sudo openssh neovim fd ripgrep fzf starship delta python clangd cowsay
+scoop install gh sudo openssh neovim fd ripgrep fzf starship delta python clangd cowsay aria2
 
 scoop install ruby msys2
 ridk install
