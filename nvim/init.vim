@@ -87,9 +87,6 @@ noremap <silent> <C-k> <C-W>k
 noremap <silent> <C-h> <C-W>h
 noremap <silent> <C-l> <C-W>l
 
-vnoremap <silent> <C-j> :m '>+1<enter>gv=gv
-vnoremap <silent> <C-k> :m '<-2<enter>gv=gv
-
 nnoremap j gj
 nnoremap k gk
 vnoremap j gj
