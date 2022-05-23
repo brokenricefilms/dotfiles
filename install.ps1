@@ -10,16 +10,22 @@ Invoke-WebRequest https://deno.land/x/install/install.ps1 -useb | Invoke-Express
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 Invoke-WebRequest get.scoop.sh | Invoke-Expression
 
-scoop install git aria2 
+scoop install aria2 
+scoop config aria2-warning-enabled false
+
+scoop install git 
 scoop bucket add extras
 scoop bucket add main
 scoop bucket add nerd-fonts
+scoop bucket add nonportable
 
 scoop bucket add github-gh https://github.com/cli/scoop-gh.git
-scoop install gh sudo openssh neovim fd ripgrep fzf starship delta python clangd cowsay rust
+scoop install gh gsudo openssh neovim fd ripgrep fzf starship delta python clangd cowsay rust
 
 scoop install ruby msys2
 ridk install
+
+gsudo config CacheMode auto
 
 gh config set editor nvim
 
