@@ -132,7 +132,7 @@ function yo {
   git add .
   $commit_message = Read-Host -Prompt "👉 Commit message"
   git commit --message "$commit_message"
-  git push
+  Start-Job {git push}
 }
 
 function ins() {

@@ -20,7 +20,7 @@ scoop bucket add nerd-fonts
 scoop bucket add nonportable
 
 scoop bucket add github-gh https://github.com/cli/scoop-gh.git
-scoop install gh gsudo openssh neovim fd ripgrep fzf starship delta python clangd cowsay rust
+scoop install gh gsudo openssh neovim fd ripgrep fzf starship delta python clangd cowsay rust unrar 
 
 scoop install ruby msys2
 ridk install
