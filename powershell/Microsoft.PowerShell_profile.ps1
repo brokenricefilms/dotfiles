@@ -75,9 +75,9 @@ function q() { Exit }
 
 Set-Alias lg lazygit
 
-function push() { git push }
+function push() { Start-Job { git push } }
 
-function pull() { git pull }
+function pull() { Start-Job { git pull } }
 
 function st() { git status --short --branch }
 
@@ -119,10 +119,12 @@ function gs() {
 }
 
 function autoCommit() {
-  git add .
-  git commit -m "[👌Auto commit] $(curl -s whatthecommit.com/index.txt)"
-  git pull
-  git push
+  Start-Job {
+    git add .
+    git commit -m "[👌Auto commit] $(curl -s whatthecommit.com/index.txt)"
+    git pull
+    git push
+  }
 }
 Set-Alias ok autoCommit
 
@@ -132,7 +134,7 @@ function yo {
   git add .
   $commit_message = Read-Host -Prompt "👉 Commit message"
   git commit --message "$commit_message"
-  Start-Job {git push}
+  Start-Job { git push }
 }
 
 function ins() {
