@@ -4,6 +4,7 @@ winget install powershell -s msstore --accept-package-agreements --accept-source
 winget install powertoys -s msstore --accept-package-agreements --accept-source-agreements
 winget install vscode --accept-package-agreements --accept-source-agreements
 winget install startallback -s winget --accept-package-agreements --accept-source-agreements
+winget install --id=Google.Chrome -e --accept-package-agreements --accept-source-agreements
 
 Invoke-WebRequest https://deno.land/x/install/install.ps1 -useb | Invoke-Expression
 
