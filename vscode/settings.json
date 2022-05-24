@@ -1,0 +1,363 @@
+{
+  "breadcrumbs.enabled": false,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.executorMap": {
+    "javascript": "deno run",
+    "typescript": "deno run",
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.cursorSurroundingLines": 5,
+  "editor.fontFamily": "'JetBrainsMono NF','JetBrains Mono NL','Cascadia Code',Hack,'Droid Sans Mono', monospace, 'Droid Sans Fallback'",
+  "editor.fontSize": 16,
+  "editor.formatOnSave": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.renderFinalNewline": false,
+  "editor.renderLineHighlight": "gutter",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.smoothScrolling": true,
+  "editor.snippetSuggestions": "top",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "files.autoSave": "afterDelay",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+  },
+  "git.enableSmartCommit": true,
+  "indentRainbow.indicatorStyle": "light",
+  "powershell.integratedConsole.showOnStartup": false,
+  "redhat.telemetry.enabled": false,
+  "security.workspace.trust.enabled": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "vim.easymotion": true,
+  "vim.highlightedyank.enable": true,
+  "vim.smartRelativeLine": true,
+  "vim.useSystemClipboard": true,
+  "vim.smartcase": true,
+  "vim.leader": "<space>",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "m",
+      ],
+      "after": [
+        "g",
+        "c"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "j",
+      ],
+      "after": [
+        "g",
+        "j"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "k",
+      ],
+      "after": [
+        "g",
+        "k"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        ";"
+      ],
+      "commands": [
+        ":vsc workbench.action.quickOpen"
+      ],
+      "silent": true
+    },
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "after": [
+        ":",
+        "w",
+        "<CR>"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "R"
+      ],
+      "after": [
+        "g",
+        "t"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "E"
+      ],
+      "after": [
+        "g",
+        "T"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
+        "q"
+      ],
+      "after": [
+        ":",
+        "q",
+        "<CR>"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
+        "q"
+      ],
+      "after": [
+        ":",
+        "q",
+        "<CR>"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "Q",
+      ],
+      "after": [
+        ":",
+        "q",
+        "!",
+        "<CR>"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "m",
+        "m"
+      ],
+      "after": [
+        "g",
+        "c",
+        "c"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "f"
+      ],
+      "after": [
+        "space",
+        "space",
+        "s"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "Y"
+      ],
+      "after": [
+        "y",
+        "$"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
+        "r"
+      ],
+      "commands": [
+        ":vsc code-runner.run"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
+        "i"
+      ],
+      "after": [
+        ":",
+        "%",
+        "s",
+        "/",
+        "<C-r>",
+        "<C-w>",
+        "/",
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<C-w>"
+      ],
+      "commands": [
+        ":vsc workbench.action.closeActiveEditor"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        ";"
+      ],
+      "commands": [
+        ":vsc workbench.action.quickOpen"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "s",
+        "s"
+      ],
+      "commands": [
+        ":split"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "s",
+        "v"
+      ],
+      "commands": [
+        ":vsplit"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "n",
+      ],
+      "after": [
+        "n",
+        "z",
+        "z",
+        "z",
+        "v",
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "N",
+      ],
+      "after": [
+        "N",
+        "z",
+        "z",
+        "z",
+        "v",
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "*",
+      ],
+      "after": [
+        "*",
+        "z",
+        "z",
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "#",
+      ],
+      "after": [
+        "#",
+        "z",
+        "z",
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "+",
+      ],
+      "after": [
+        "<C-a>"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "-",
+      ],
+      "after": [
+        "<C-x>"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "j",
+      ],
+      "after": [
+        "g",
+        "j"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "k",
+      ],
+      "after": [
+        "g",
+        "k"
+      ],
+      "silent": true
+    },
+  ],
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-n>": false,
+    "<C-t>": false,
+    "<C-b>": false,
+  },
+  "window.customMenuBarAltFocus": false,
+  "window.enableMenuBarMnemonics": false,
+  "window.menuBarVisibility": "hidden",
+  "workbench.startupEditor": "none",
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.sideBar.location": "right",
+  "workbench.colorTheme": "GitHub Light Default",
+  "workbench.activityBar.visible": false,
+}
