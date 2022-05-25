@@ -21,9 +21,6 @@ Set-PSReadLineOption -Colors @{
 }
 
 Import-Module -Name Terminal-Icons
-# Terminal icons theme don't support light theme
-# issue here: https://github.com/devblackops/Terminal-Icons/issues/69
-Set-TerminalIconsTheme -DisableColorTheme
 
 Import-Module -Name PSFzf
 
