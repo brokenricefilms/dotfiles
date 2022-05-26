@@ -6,6 +6,7 @@ alias push="git push"
 alias pull="git pull"
 alias dv='git difftool'
 alias gl='git log --oneline | head -n 5'
+alias lg='lazygit'
 
 isInGitRepo() { git rev-parse HEAD &>/dev/null }
 
