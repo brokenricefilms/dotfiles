@@ -4,5 +4,5 @@ Terminal=false
 Type=Application
 Icon=/home/master/dotfiles/applications/icons/notion.png
 Name=new note
-Exec=firefox --new-window "https://notion.new"
+Exec=google-chrome --app="https://notion.new"
 Keywords=notion;

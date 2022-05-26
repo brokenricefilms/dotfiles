@@ -20,8 +20,6 @@ Plug 'https://github.com/AndrewRadev/splitjoin.vim'
 let g:splitjoin_split_mapping = 'gj'
 let g:splitjoin_join_mapping  = 'gk'
 
-Plug 'https://github.com/wakatime/vim-wakatime'
-
 Plug 'https://github.com/Krafi2/jeskape.nvim'
 
 Plug 'https://github.com/dhruvasagar/vim-zoom'

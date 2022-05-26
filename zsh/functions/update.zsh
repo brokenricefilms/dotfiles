@@ -34,7 +34,8 @@ function updateDnsNoMessage() {
 }
 
 function update() {
-  topgrade
+  # @todo: support other distro
+  sudo dnf upgrade
 
   nvim -c "PlugUpdate | qa"
 

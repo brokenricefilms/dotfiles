@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=file browser
-Icon=firefox --new-window
-Exec=firefox --new-window %U
+Icon=google-chrome
+Exec=google-chrome --app=%U

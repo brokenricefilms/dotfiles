@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=discord
-Exec=sh -c 'wmctrl -s 5 ; firefox --new-window "https://discord.com/channels/@me" ; sleep 0.1 ; wmctrl -r "discord" -b add,maximized_vert,maximized_horz'
+Exec=sh -c 'wmctrl -s 5 ; google-chrome --app="https://discord.com/channels/@me" ; sleep 0.1 ; wmctrl -r "discord" -b add,maximized_vert,maximized_horz'
 Icon=/home/master/dotfiles/applications/icons/discord.png

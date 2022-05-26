@@ -8,7 +8,6 @@ highlight markdownH1 guifg=#2C363C guibg=NONE guisp=NONE gui=bold
 echo "include ./light_theme.conf
 " >~/dotfiles/kitty/theme.conf
 
-cp ~/dotfiles/alacritty/light_theme.yml ~/dotfiles/alacritty/alacritty.yml
 cp ~/dotfiles/foot/light.ini ~/dotfiles/foot/foot.ini
 
 mkdir ~/dotfiles/bat/
