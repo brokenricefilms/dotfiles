@@ -84,7 +84,7 @@ function autoSync {
   for i in ${repo[*]}
   do
     cd "$i"
-    cowsayPwd
+    pwd
     autoCommit
     repoSync
   done
@@ -94,7 +94,7 @@ function updateAllRepo() {
   for dir in ~/repos/*
   do
     cd "$dir"
-    cowsayPwd
+    pwd
     repoSync
     cd - > /dev/null
   done
@@ -108,7 +108,7 @@ function updateAllRepo() {
   for i in ${repoNotInDefaultDir[*]}
   do
     cd "$i"
-    cowsayPwd
+    pwd
     repoSync
     cd - > /dev/null
   done

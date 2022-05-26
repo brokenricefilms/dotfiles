@@ -37,7 +37,6 @@ function changeDir() {
   dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
   cd "$dir"
   ls
-  cowsayGitStatus
 }
 alias c='changeDir'
 
@@ -46,7 +45,6 @@ function changeDirInHome() {
   dir=$(fd -t d . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
   cd "$dir"
   ls
-  cowsayGitStatus
 }
 alias C='changeDirInHome'
 
@@ -55,7 +53,6 @@ function changeHiddenDir() {
   dir=$(fd -t d --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
   cd "$dir"
   ls
-  cowsayGitStatus
 }
 alias ch='changeHiddenDir'
 
@@ -64,6 +61,5 @@ function changeHiddenDirInHome() {
   dir=$(fd -t d . $HOME --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
   cd "$dir"
   ls
-  cowsayGitStatus
 }
 alias Ch='changeHiddenDirInHome'
