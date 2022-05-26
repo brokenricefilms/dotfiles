@@ -616,7 +616,7 @@ video-y-resolution=720
 
 [org/gnome/control-center]
 last-panel='keyboard'
-window-state=(980, 640, true)
+window-state=(960, 639, false)
 
 [org/gnome/desktop/a11y/applications]
 screen-reader-enabled=false
@@ -782,7 +782,9 @@ theme-name='__custom'
 close=['<Alt>q']
 cycle-windows=['<Alt>Tab']
 cycle-windows-backward=['<Shift><Alt>Tab']
-maximize=['<Super>k']
+maximize=@as []
+maximize-horizontally=['<Super>k']
+maximize-vertically=['<Super>j']
 minimize=['<Alt>comma']
 move-to-monitor-down=@as []
 move-to-monitor-left=@as []
@@ -800,8 +802,6 @@ move-to-workspace-7=['<Shift><Alt>ampersand']
 move-to-workspace-8=['<Shift><Alt>asterisk']
 move-to-workspace-9=['<Shift><Alt>parenleft']
 move-to-workspace-down=@as []
-move-to-workspace-left=['<Shift><Super>h']
-move-to-workspace-right=['<Shift><Super>l']
 move-to-workspace-up=@as []
 switch-applications=['<Alt>grave']
 switch-applications-backward=['<Shift><Alt>grave']
@@ -821,8 +821,6 @@ switch-to-workspace-7=['<Alt>7']
 switch-to-workspace-8=['<Alt>8']
 switch-to-workspace-9=['<Alt>9']
 switch-to-workspace-down=['<Primary><Super>Down', '<Primary><Super>j']
-switch-to-workspace-left=['<Super>h']
-switch-to-workspace-right=['<Super>l']
 switch-to-workspace-up=['<Primary><Super>Up', '<Primary><Super>k']
 toggle-maximized=['<Alt>z']
 unmaximize=@as []
@@ -1013,8 +1011,8 @@ edge-tiling=true
 
 [org/gnome/mutter/keybindings]
 rotate-monitor=['XF86Launch2']
-toggle-tiled-left=@as []
-toggle-tiled-right=@as []
+toggle-tiled-left=['<Super>h']
+toggle-tiled-right=['<Super>l']
 
 [org/gnome/mutter/wayland/keybindings]
 restore-shortcuts=['<Super>Escape']
