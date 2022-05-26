@@ -1311,7 +1311,7 @@ sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
 type-format='category'
-window-size=(1681, 1080)
+window-size=(1920, 1080)
 
 [org/gtk/settings/color-chooser]
 custom-colors=[(0.61960784313725492, 0.55294117647058827, 0.47450980392156861, 1.0), (0.93725490196078431, 0.92549019607843142, 0.90588235294117647, 1.0)]
