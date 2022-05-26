@@ -124,27 +124,27 @@ ExtractAppTitle(FullTitle)
 ; F9:: OpenOrShowAppBasedOnAppModelUserID("Calculator", "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App")
 ; Alt + ` -  Activate NEXT Window of same type (title checking) of the current APP
 
-; $F3::
-;   WinGet, ActiveProcess, ProcessName, A
-;   WinGet, OpenWindowsAmount, Count, ahk_exe %ActiveProcess%
-;   If OpenWindowsAmount = 1 ; If only one Window exist, do nothing
+$F5::
+  WinGet, ActiveProcess, ProcessName, A
+  WinGet, OpenWindowsAmount, Count, ahk_exe %ActiveProcess%
+  If OpenWindowsAmount = 1 ; If only one Window exist, do nothing
 
-; Return
+Return
 
-; Else
-; {
-;   WinGetTitle, FullTitle, A
-;   AppTitle := ExtractAppTitle(FullTitle)
-;   SetTitleMatchMode, 2
-;   WinGet, WindowsWithSameTitleList, List, %AppTitle%
+Else
+{
+  WinGetTitle, FullTitle, A
+  AppTitle := ExtractAppTitle(FullTitle)
+  SetTitleMatchMode, 2
+  WinGet, WindowsWithSameTitleList, List, %AppTitle%
 
-;   If WindowsWithSameTitleList > 1 ; If several Window of same type (title checking) exist
-;   {
-;     WinActivate, % "ahk_id " WindowsWithSameTitleList%WindowsWithSameTitleList%	; Activate next Window
-;   }
-; }
+  If WindowsWithSameTitleList > 1 ; If several Window of same type (title checking) exist
+  {
+    WinActivate, % "ahk_id " WindowsWithSameTitleList%WindowsWithSameTitleList%	; Activate next Window
+  }
+}
 
-; Return
+Return
 
 toggleMaxWindow()
 {
@@ -164,3 +164,40 @@ $F8::OpenOrShowAppBasedOnExeName("chrome.exe")
 $F9::OpenOrShowAppBasedOnWindowTitle("PowerShell", "wt.exe")
 $F10::OpenOrShowAppBasedOnExeName("Mem.exe")
 $F3::toggleMaxWindow()
+
+;; source https://autohotkey.com/board/topic/44064-copy-on-select-implementation/
+cos_mousedrag_treshold := 20 ; pixels
+
+    
+#IfWinNotActive ahk_class ConsoleWindowClass
+
+~lButton::
+  MouseGetPos, cos_mousedrag_x, cos_mousedrag_y
+  keywait lbutton
+  mousegetpos, cos_mousedrag_x2, cos_mousedrag_y2
+  if (abs(cos_mousedrag_x2 - cos_mousedrag_x) > cos_mousedrag_treshold
+    or abs(cos_mousedrag_y2 - cos_mousedrag_y) > cos_mousedrag_treshold)
+  {
+    wingetclass cos_class, A
+    if (cos_class == "Emacs")
+      sendinput !w
+    else
+      sendinput ^c
+  }
+  return
+  
+~mbutton::
+  WinGetClass cos_class, A
+  if (cos_class == "Emacs")
+    SendInput ^y
+  else
+    SendInput ^v
+  return
+  
+#IfWinNotActive
+
+
+;; clipx
+^mbutton::
+  sendinput ^+{insert}
+  return
