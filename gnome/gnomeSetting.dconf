@@ -583,6 +583,13 @@ num-access-samples=1000
 num-samples=1000
 sample-size-mib=100
 
+[org/gnome/TextEditor]
+indent-style='space'
+
+[org/gnome/baobab/ui]
+is-maximized=false
+window-size=(960, 600)
+
 [org/gnome/calculator]
 accuracy=9
 angle-units='degrees'
@@ -608,14 +615,25 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='region'
-window-state=(980, 640, false)
+last-panel='keyboard'
+window-state=(980, 640, true)
 
 [org/gnome/desktop/a11y/applications]
 screen-reader-enabled=false
 
 [org/gnome/desktop/app-folders]
 folder-children=['accessories', 'system-tools']
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+apps=['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop']
+categories=['X-GNOME-Utilities']
+name='X-GNOME-Utilities.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+translate=true
 
 [org/gnome/desktop/app-folders/folders/accessories]
 apps=['yad-icon-browser.desktop', 'uget-gtk.desktop', 'de.haeckerfelix.Fragments.desktop']
@@ -634,8 +652,8 @@ translate=true
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///home/master/.local/share/backgrounds/2022-05-08-20-11-52-393939.png'
-picture-uri-dark='file:///home/master/.local/share/backgrounds/2022-05-08-20-11-52-393939.png'
+picture-uri='file:///usr/share/backgrounds/fedora-workstation/calm.jpg'
+picture-uri-dark='file:///usr/share/backgrounds/fedora-workstation/calm_dark.jpg'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -643,6 +661,7 @@ secondary-color='#000000000000'
 show-weekdate=false
 
 [org/gnome/desktop/input-sources]
+current=uint32 0
 mru-sources=[('xkb', 'us'), ('ibus', 'Bamboo::Us')]
 per-window=false
 sources=[('xkb', 'us'), ('ibus', 'Bamboo::Us')]
@@ -655,20 +674,20 @@ clock-show-seconds=false
 clock-show-weekday=false
 color-scheme='default'
 cursor-theme='GoogleDot-Blue'
-document-font-name='DejaVu Sans 11'
+document-font-name='JetBrains Mono 11'
 enable-animations=true
 enable-hot-corners=false
 font-antialiasing='grayscale'
 font-hinting='slight'
-font-name='DejaVu Sans 11'
+font-name='JetBrains Mono 11'
 gtk-theme='Adwaita'
 icon-theme='Adwaita'
-monospace-font-name='JetBrains Mono NL 10'
+monospace-font-name='JetBrains Mono 10'
 show-battery-percentage=false
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel', 'ca-desrt-dconf-editor', 'ryzen-controller', 'org-gnome-extensions-desktop', 'org-kde-kdenlive', 'firefox-developer-edition', 'firefox', 'ffpwa-01g2kq6xtkbex4080qh0acspcd']
+application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel', 'ca-desrt-dconf-editor', 'ryzen-controller', 'org-gnome-extensions-desktop', 'org-kde-kdenlive', 'firefox-developer-edition', 'firefox', 'ffpwa-01g2kq6xtkbex4080qh0acspcd', 'org-gnome-terminal', 'org-gnome-software']
 show-in-lock-screen=false
 
 [org/gnome/desktop/notifications/application/ca-desrt-dconf-editor]
@@ -704,6 +723,12 @@ application-id='org.gnome.Extensions.desktop.desktop'
 [org/gnome/desktop/notifications/application/org-gnome-nautilus]
 application-id='org.gnome.Nautilus.desktop'
 
+[org/gnome/desktop/notifications/application/org-gnome-software]
+application-id='org.gnome.Software.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-terminal]
+application-id='org.gnome.Terminal.desktop'
+
 [org/gnome/desktop/notifications/application/org-kde-kdenlive]
 application-id='org.kde.kdenlive.desktop'
 
@@ -730,13 +755,14 @@ two-finger-scrolling-enabled=true
 [org/gnome/desktop/privacy]
 disable-camera=false
 disable-microphone=false
+report-technical-problems=false
 
 [org/gnome/desktop/screensaver]
 color-shading-type='solid'
 lock-delay=uint32 0
 lock-enabled=false
 picture-options='zoom'
-picture-uri='file:///home/master/.local/share/backgrounds/2022-05-08-20-11-52-393939.png'
+picture-uri='file:///usr/share/backgrounds/fedora-workstation/calm.jpg'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -774,8 +800,8 @@ move-to-workspace-7=['<Shift><Alt>ampersand']
 move-to-workspace-8=['<Shift><Alt>asterisk']
 move-to-workspace-9=['<Shift><Alt>parenleft']
 move-to-workspace-down=@as []
-move-to-workspace-left=['<Shift><Alt>h']
-move-to-workspace-right=['<Shift><Alt>l']
+move-to-workspace-left=['<Shift><Super>h']
+move-to-workspace-right=['<Shift><Super>l']
 move-to-workspace-up=@as []
 switch-applications=['<Alt>grave']
 switch-applications-backward=['<Shift><Alt>grave']
@@ -795,8 +821,8 @@ switch-to-workspace-7=['<Alt>7']
 switch-to-workspace-8=['<Alt>8']
 switch-to-workspace-9=['<Alt>9']
 switch-to-workspace-down=['<Primary><Super>Down', '<Primary><Super>j']
-switch-to-workspace-left=['<Alt>h']
-switch-to-workspace-right=['<Alt>l']
+switch-to-workspace-left=['<Super>h']
+switch-to-workspace-right=['<Super>l']
 switch-to-workspace-up=['<Primary><Super>Up', '<Primary><Super>k']
 toggle-maximized=['<Alt>z']
 unmaximize=@as []
@@ -804,7 +830,7 @@ unmaximize=@as []
 [org/gnome/desktop/wm/preferences]
 button-layout=':close'
 num-workspaces=10
-titlebar-font='DejaVu Sans Bold 11'
+titlebar-font='JetBrains Mono Bold 11'
 workspace-names=@as []
 
 [org/gnome/eog/ui]
@@ -975,6 +1001,11 @@ width=1464
 x=240
 y=135
 
+[org/gnome/login-screen]
+enable-fingerprint-authentication=true
+enable-password-authentication=true
+enable-smartcard-authentication=false
+
 [org/gnome/mutter]
 center-new-windows=true
 dynamic-workspaces=false
@@ -982,8 +1013,8 @@ edge-tiling=true
 
 [org/gnome/mutter/keybindings]
 rotate-monitor=['XF86Launch2']
-toggle-tiled-left=['<Super>h']
-toggle-tiled-right=['<Super>l']
+toggle-tiled-left=@as []
+toggle-tiled-right=@as []
 
 [org/gnome/mutter/wayland/keybindings]
 restore-shortcuts=['<Super>Escape']
@@ -1011,12 +1042,12 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.841599280057595, 106.6581)
+night-light-last-coordinates=(10.85059856011519, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
 area-screenshot-clip=['Print']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
 screen-brightness-down-static=['']
 screen-brightness-up-static=['']
 screensaver=@as []
@@ -1028,20 +1059,10 @@ binding='<Super>Return'
 command='foot'
 name='terminal'
 
-[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
-binding=''
-command='flameshot gui'
-name='flameshot'
-
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
 binding='Print'
 command='flameshot gui'
 name='flameshot'
-
-[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3]
-binding='<Super>n'
-command='firefox --new-window "https://notion.new"'
-name='jnew note'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4]
 binding='F6'
@@ -1054,6 +1075,7 @@ idle-brightness=100
 idle-dim=false
 power-button-action='interactive'
 power-saver-profile-on-low-battery=false
+sleep-inactive-ac-timeout=3600
 sleep-inactive-ac-type='nothing'
 sleep-inactive-battery-type='suspend'
 
@@ -1210,6 +1232,16 @@ toggle-application-view=['<Super>a']
 toggle-message-tray=@as []
 toggle-overview=['<Super>s']
 
+[org/gnome/shell/world-clocks]
+locations=@av []
+
+[org/gnome/software]
+check-timestamp=int64 1653571129
+first-run=false
+install-timestamp=int64 1653574325
+security-timestamp=int64 385363573
+update-notification-timestamp=int64 1653574387
+
 [org/gnome/system/location]
 enabled=true
 
@@ -1217,6 +1249,7 @@ enabled=true
 default-show-menubar=false
 headerbar=@mb false
 menu-accelerator-enabled=false
+theme-variant='system'
 
 [org/gnome/terminal/legacy/keybindings]
 close-tab='disabled'
@@ -1254,7 +1287,7 @@ audible-bell=false
 background-color='rgb(238,238,238)'
 bold-color-same-as-fg=true
 bold-is-bright=false
-font='JetBrains Mono NL 13'
+font='Source Code Pro 13'
 foreground-color='rgb(53,53,53)'
 palette=['rgb(238,238,238)', 'rgb(168,51,76)', 'rgb(79,108,49)', 'rgb(148,73,39)', 'rgb(40,100,134)', 'rgb(136,80,125)', 'rgb(42,161,179)', 'rgb(53,53,53)', 'rgb(198,195,195)', 'rgb(148,37,62)', 'rgb(63,90,34)', 'rgb(128,61,28)', 'rgb(29,85,115)', 'rgb(59,137,146)', 'rgb(43,116,124)', 'rgb(92,92,92)']
 scroll-on-keystroke=false
