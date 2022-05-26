@@ -1,8 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Terminal=false
-Type=Application
-Icon=/home/master/dotfiles/applications/icons/notion.png
-Name=notion
-Exec=sh -c 'wmctrl -s 3 ; google-chrome --app="https://notion.so" ; sleep 0.1 ; wmctrl -r "calendar" -b add,maximized_vert,maximized_horz'
-Keywords=note;

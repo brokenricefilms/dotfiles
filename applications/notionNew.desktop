@@ -1,8 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Terminal=false
-Type=Application
-Icon=/home/master/dotfiles/applications/icons/notion.png
-Name=new note
-Exec=google-chrome --app="https://notion.new"
-Keywords=notion;
