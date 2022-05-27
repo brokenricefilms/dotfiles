@@ -1,6 +1,6 @@
 SERVER_IP () { hostname -I }
 
-se () { browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000 }
+ser () { browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000 }
 
 function nvm() {
   echo "🚨 NVM not loaded! Loading now..."

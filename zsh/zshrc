@@ -26,6 +26,7 @@ alias colorPicker='zenity --color-selection'
 alias cat='bat'
 alias fak='git stash &>/dev/null; git stash clear'
 alias t='trash'
+alias se='sudoedit'
 
 function hi () {
   browserDaily
@@ -118,5 +119,3 @@ source ~/dotfiles/zsh/functions/virt.zsh
 
 source ~/dotfiles/zsh/functions/zshAutoSuggestions.zsh
 source ~/dotfiles/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-source ~/dotfiles/zsh/functions/commandStartupShell.zsh
