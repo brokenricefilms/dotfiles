@@ -364,8 +364,7 @@ nmap <leader>i :%s/\<<C-r><C-w>\>/
 
 command! OpenFileInBraveBrowser execute "silent !brave-browser '%'"
 command! CopyFileName execute "silent !echo %:p:t | wl-copy"
-" command! CopyFileName execute "silent !echo %:p:t | xclip -sel clip"
-command! CopyFilePath execute "silent !echo %:p | xclip -sel clip"
+command! CopyFilePath execute "silent !echo %:p | wl-copy"
 command! Reload execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
 command! Light execute "silent !light" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
 command! Dark execute "silent !dark" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
