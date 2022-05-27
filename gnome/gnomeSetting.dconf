@@ -574,6 +574,9 @@ unicode-hotkey=@as []
 [org/freedesktop/tracker/miner/files]
 index-recursive-directories=['&DESKTOP', '&DOCUMENTS', '&MUSIC', '&PICTURES', '&VIDEOS', '&DOWNLOAD']
 
+[org/gnome/Console]
+theme='auto'
+
 [org/gnome/Disks]
 image-dir-uri='file:///home/master/Downloads'
 
@@ -652,8 +655,8 @@ translate=true
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/fedora-workstation/calm.jpg'
-picture-uri-dark='file:///usr/share/backgrounds/fedora-workstation/calm_dark.jpg'
+picture-uri='file:///home/master/.local/share/backgrounds/2022-05-27-17-42-16-0000000.png'
+picture-uri-dark='file:///home/master/.local/share/backgrounds/2022-05-27-17-42-16-0000000.png'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -674,15 +677,16 @@ clock-show-seconds=false
 clock-show-weekday=false
 color-scheme='default'
 cursor-theme='GoogleDot-Blue'
-document-font-name='JetBrains Mono 11'
+document-font-name='JetBrains Mono NL 11'
 enable-animations=true
 enable-hot-corners=false
 font-antialiasing='grayscale'
 font-hinting='slight'
-font-name='JetBrains Mono 11'
+font-name='JetBrains Mono NL 11'
 gtk-theme='Adwaita'
 icon-theme='Adwaita'
-monospace-font-name='JetBrains Mono 10'
+locate-pointer=false
+monospace-font-name='JetBrains Mono NL 10'
 show-battery-percentage=false
 toolkit-accessibility=false
 
@@ -762,7 +766,7 @@ color-shading-type='solid'
 lock-delay=uint32 0
 lock-enabled=false
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/fedora-workstation/calm.jpg'
+picture-uri='file:///home/master/.local/share/backgrounds/2022-05-27-17-42-16-0000000.png'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -776,6 +780,7 @@ idle-delay=uint32 0
 [org/gnome/desktop/sound]
 allow-volume-above-100-percent=true
 event-sounds=true
+input-feedback-sounds=true
 theme-name='__custom'
 
 [org/gnome/desktop/wm/keybindings]
@@ -792,19 +797,21 @@ move-to-monitor-right=@as []
 move-to-monitor-up=@as []
 move-to-workspace-0=['<Shift><Alt>parenright']
 move-to-workspace-1=['<Shift><Alt>exclam']
-move-to-workspace-10=['<Shift><Super>0']
+move-to-workspace-10=['<Shift><Alt>0']
 move-to-workspace-2=['<Shift><Alt>at']
 move-to-workspace-3=['<Shift><Alt>numbersign']
 move-to-workspace-4=['<Shift><Alt>dollar']
 move-to-workspace-5=['<Shift><Alt>percent']
-move-to-workspace-6=['<Shift><Alt>and']
+move-to-workspace-6=['<Shift><Alt>asciicircum']
 move-to-workspace-7=['<Shift><Alt>ampersand']
 move-to-workspace-8=['<Shift><Alt>asterisk']
 move-to-workspace-9=['<Shift><Alt>parenleft']
 move-to-workspace-down=@as []
+move-to-workspace-left=['<Shift><Alt>h']
+move-to-workspace-right=['<Shift><Alt>l']
 move-to-workspace-up=@as []
-switch-applications=['<Alt>grave']
-switch-applications-backward=['<Shift><Alt>grave']
+switch-applications=['<Super>Tab']
+switch-applications-backward=['<Shift><Super>Tab']
 switch-input-source=['<Primary>space']
 switch-input-source-backward=['<Primary><Shift>space']
 switch-panels=@as []
@@ -828,7 +835,7 @@ unmaximize=@as []
 [org/gnome/desktop/wm/preferences]
 button-layout=':close'
 num-workspaces=10
-titlebar-font='JetBrains Mono Bold 11'
+titlebar-font='JetBrains Mono NL Bold 11'
 workspace-names=@as []
 
 [org/gnome/eog/ui]
@@ -1040,7 +1047,7 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.85059856011519, 106.6581)
+night-light-last-coordinates=(10.814601439884809, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
@@ -1082,7 +1089,7 @@ app-picker-layout=[{'accessories': <{'position': <0>}>, 'org.manjaro.pamac.manag
 command-history=['gnome-session-properties', 'r', 'ibus-deamon', 'ibus-daemon -vxr']
 disable-user-extensions=false
 disabled-extensions=['dash-to-dock@micxgx.gmail.com', 'material-shell@papyelgringo', 'gnome-ui-tune@itstime.tech', 'pamac-updates@manjaro.org', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'x11gestures@joseexposito.github.io', 'focus@scaryrawr.github.io', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'appindicatorsupport@rgcjonas.gmail.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['gnome-shell-Google-search-provider@MrNinso', 'ssh-search-provider@extensions.gnome-shell.fifi.org', 'escape-overview@raelgc', 'blur-my-shell@aunetx', 'sound-output-device-chooser@kgshank.net', 'smart-auto-move@khimaros.com', 'fildemGMenu@gonza.com', 'worksets@blipk.xyz', 'workspaces-bar@fthx', 'just-perfection-desktop@just-perfection', 'gtktitlebar@velitasali.github.io', 'transparent-top-bar@zhanghai.me', 'gnome-fuzzy-app-search@gnome-shell-extensions.Czarlie.gitlab.com', 'gnome-shell-go-to-last-workspace@github.com', 'clipboard-indicator@tudmotu.com', 'github.notifications@alexandre.dufournet.gmail.com', 'hidetopbar@mathieu.bidon.ca']
+enabled-extensions=['gnome-shell-Google-search-provider@MrNinso', 'ssh-search-provider@extensions.gnome-shell.fifi.org', 'escape-overview@raelgc', 'blur-my-shell@aunetx', 'sound-output-device-chooser@kgshank.net', 'smart-auto-move@khimaros.com', 'fildemGMenu@gonza.com', 'worksets@blipk.xyz', 'workspaces-bar@fthx', 'just-perfection-desktop@just-perfection', 'transparent-top-bar@zhanghai.me', 'gnome-fuzzy-app-search@gnome-shell-extensions.Czarlie.gitlab.com', 'gnome-shell-go-to-last-workspace@github.com', 'clipboard-indicator@tudmotu.com', 'github.notifications@alexandre.dufournet.gmail.com', 'hidetopbar@mathieu.bidon.ca', 'gtktitlebar@velitasali.github.io']
 favorite-apps=@as []
 had-bluetooth-devices-setup=true
 welcome-dialog-last-shown-version='41.2'
@@ -1129,6 +1136,7 @@ shortcut-key=['<Alt>Escape']
 
 [org/gnome/shell/extensions/gtktitlebar]
 hide-window-titlebars='always'
+restrict-to-primary-screen=true
 
 [org/gnome/shell/extensions/hidetopbar]
 enable-active-window=false
@@ -1234,7 +1242,7 @@ toggle-overview=['<Super>s']
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1653571129
+check-timestamp=int64 1653619597
 first-run=false
 install-timestamp=int64 1653574325
 security-timestamp=int64 385363573
