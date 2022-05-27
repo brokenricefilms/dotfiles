@@ -96,10 +96,6 @@
             "KEY_LEFTCTRL + a + c",
             "keyboard"
         ],
-        "1,57,1+1,58,1": [
-            "Alt_L+Escape",
-            "keyboard"
-        ],
         "1,57,1+1,17,1": [
             "KEY_LEFTCTRL+BackSpace",
             "keyboard"
@@ -142,6 +138,10 @@
         ],
         "1,57,1+1,11,1": [
             "0",
+            "keyboard"
+        ],
+        "1,57,1+1,31,1": [
+            "Alt_L+Escape",
             "keyboard"
         ]
     }
