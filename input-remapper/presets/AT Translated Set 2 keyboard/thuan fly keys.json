@@ -76,46 +76,6 @@
             "KEY_BACKSPACE",
             "keyboard"
         ],
-        "1,57,1+1,2,1": [
-            "KEY_F1",
-            "keyboard"
-        ],
-        "1,57,1+1,3,1": [
-            "KEY_F2",
-            "keyboard"
-        ],
-        "1,57,1+1,4,1": [
-            "KEY_F3",
-            "keyboard"
-        ],
-        "1,57,1+1,5,1": [
-            "KEY_F4",
-            "keyboard"
-        ],
-        "1,57,1+1,6,1": [
-            "KEY_F5",
-            "keyboard"
-        ],
-        "1,57,1+1,7,1": [
-            "KEY_F6",
-            "keyboard"
-        ],
-        "1,57,1+1,8,1": [
-            "KEY_F7",
-            "keyboard"
-        ],
-        "1,57,1+1,9,1": [
-            "KEY_F8",
-            "keyboard"
-        ],
-        "1,57,1+1,10,1": [
-            "KEY_F9",
-            "keyboard"
-        ],
-        "1,57,1+1,11,1": [
-            "KEY_F10",
-            "keyboard"
-        ],
         "1,57,1+1,12,1": [
             "KEY_F11",
             "keyboard"
@@ -142,6 +102,46 @@
         ],
         "1,57,1+1,17,1": [
             "KEY_LEFTCTRL+BackSpace",
+            "keyboard"
+        ],
+        "1,57,1+1,2,1": [
+            "Alt_L+1",
+            "keyboard"
+        ],
+        "1,57,1+1,3,1": [
+            "Alt_L+2",
+            "keyboard"
+        ],
+        "1,57,1+1,4,1": [
+            "Alt_L+3",
+            "keyboard"
+        ],
+        "1,57,1+1,5,1": [
+            "Alt_L+4",
+            "keyboard"
+        ],
+        "1,57,1+1,6,1": [
+            "Alt_L+5",
+            "keyboard"
+        ],
+        "1,57,1+1,7,1": [
+            "Alt_L+6",
+            "keyboard"
+        ],
+        "1,57,1+1,8,1": [
+            "Alt_L+7",
+            "keyboard"
+        ],
+        "1,57,1+1,9,1": [
+            "Alt_L+8",
+            "keyboard"
+        ],
+        "1,57,1+1,10,1": [
+            "Alt_L+9",
+            "keyboard"
+        ],
+        "1,57,1+1,11,1": [
+            "0",
             "keyboard"
         ]
     }
