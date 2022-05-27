@@ -1,7 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Terminal=false
-Type=Application
-Name=ublacklist
-Exec=google-chrome --app="chrome-extension://pncfbmialoiaghdehhbnbhkkgmjanfhe/pages/options.html"
-Icon=/home/master/dotfiles/applications/icons/ublacklist.jpg

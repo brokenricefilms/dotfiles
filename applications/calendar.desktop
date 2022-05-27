@@ -1,7 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Terminal=false
-Type=Application
-Name=calendar
-Exec=sh -c 'wmctrl -s 2 ; google-chrome --app="https://calendar.google.com/calendar/u/0/r" ; sleep 0.1 ; wmctrl -r "calendar" -b add,maximized_vert,maximized_horz'
-Icon=/home/master/dotfiles/applications/icons/google-calendar.png

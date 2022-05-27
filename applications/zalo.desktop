@@ -1,7 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Terminal=false
-Type=Application
-Name=zalo
-Exec=sh -c 'wmctrl -s 6 ;google-chrome --app="https://chat.zalo.me/" ; sleep 0.1 ; wmctrl -r "zalo" -b add,maximized_vert,maximized_horz'
-Icon=/home/master/dotfiles/applications/icons/zalo.png

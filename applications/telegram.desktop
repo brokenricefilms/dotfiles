@@ -1,7 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Terminal=false
-Type=Application
-Name=telegram
-Icon=/home/master/dotfiles/applications/icons/telegram.png
-Exec=google-chrome --app="https://web.telegram.org/z/"
