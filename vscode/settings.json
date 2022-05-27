@@ -3,7 +3,7 @@
   "code-runner.saveFileBeforeRun": true,
   "code-runner.executorMap": {
     "javascript": "deno run",
-    "typescript": "deno run",
+    "typescript": "deno run"
   },
   "editor.bracketPairColorization.enabled": true,
   "editor.cursorSurroundingLines": 5,
@@ -26,7 +26,7 @@
   "files.autoSave": "afterDelay",
   "files.exclude": {
     "**/.classpath": true,
-    "**/.project": true,
+    "**/.project": true
   },
   "git.enableSmartCommit": true,
   "indentRainbow.indicatorStyle": "light",
@@ -42,315 +42,155 @@
   "vim.leader": "<space>",
   "vim.insertModeKeyBindings": [
     {
-      "before": [
-        "j",
-        "j"
-      ],
-      "after": [
-        "<Esc>"
-      ]
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "m",
-      ],
-      "after": [
-        "g",
-        "c"
-      ],
+      "before": ["m"],
+      "after": ["g", "c"],
       "silent": true
     },
     {
-      "before": [
-        "j",
-      ],
-      "after": [
-        "g",
-        "j"
-      ],
+      "before": ["j"],
+      "after": ["g", "j"],
       "silent": true
     },
     {
-      "before": [
-        "k",
-      ],
-      "after": [
-        "g",
-        "k"
-      ],
+      "before": ["k"],
+      "after": ["g", "k"],
       "silent": true
     },
     {
-      "before": [
-        ";"
-      ],
-      "commands": [
-        ":vsc workbench.action.quickOpen"
-      ],
+      "before": [";"],
+      "commands": [":vsc workbench.action.quickOpen"],
       "silent": true
-    },
+    }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "<leader>",
-        "w"
-      ],
-      "after": [
-        ":",
-        "w",
-        "<CR>"
-      ],
+      "before": ["<leader>", "w"],
+      "after": [":", "w", "<CR>"],
       "silent": true
     },
     {
-      "before": [
-        "R"
-      ],
-      "after": [
-        "g",
-        "t"
-      ],
+      "before": ["R"],
+      "after": ["g", "t"],
       "silent": true
     },
     {
-      "before": [
-        "E"
-      ],
-      "after": [
-        "g",
-        "T"
-      ],
+      "before": ["E"],
+      "after": ["g", "T"],
       "silent": true
     },
     {
-      "before": [
-        "<leader>",
-        "q"
-      ],
-      "after": [
-        ":",
-        "q",
-        "<CR>"
-      ],
+      "before": ["<leader>", "q"],
+      "after": [":", "q", "<CR>"],
       "silent": true
     },
     {
-      "before": [
-        "<leader>",
-        "q"
-      ],
-      "after": [
-        ":",
-        "q",
-        "<CR>"
-      ],
+      "before": ["<leader>", "q"],
+      "after": [":", "q", "<CR>"],
       "silent": true
     },
     {
-      "before": [
-        "Q",
-      ],
-      "after": [
-        ":",
-        "q",
-        "!",
-        "<CR>"
-      ],
+      "before": ["Q"],
+      "after": [":", "q", "!", "<CR>"],
       "silent": true
     },
     {
-      "before": [
-        "m",
-        "m"
-      ],
-      "after": [
-        "g",
-        "c",
-        "c"
-      ],
+      "before": ["m", "m"],
+      "after": ["g", "c", "c"],
       "silent": true
     },
     {
-      "before": [
-        "f"
-      ],
-      "after": [
-        "space",
-        "space",
-        "s"
-      ],
+      "before": ["f"],
+      "after": ["space", "space", "s"],
       "silent": true
     },
     {
-      "before": [
-        "Y"
-      ],
-      "after": [
-        "y",
-        "$"
-      ],
+      "before": ["Y"],
+      "after": ["y", "$"],
       "silent": true
     },
     {
-      "before": [
-        "<leader>",
-        "r"
-      ],
-      "commands": [
-        ":vsc code-runner.run"
-      ],
+      "before": ["<leader>", "r"],
+      "commands": [":vsc code-runner.run"],
       "silent": true
     },
     {
-      "before": [
-        "<leader>",
-        "i"
-      ],
-      "after": [
-        ":",
-        "%",
-        "s",
-        "/",
-        "<C-r>",
-        "<C-w>",
-        "/",
-      ],
+      "before": ["<leader>", "i"],
+      "after": [":", "%", "s", "/", "<C-r>", "<C-w>", "/"],
       "silent": true
     },
     {
-      "before": [
-        "<C-w>"
-      ],
-      "commands": [
-        ":vsc workbench.action.closeActiveEditor"
-      ],
+      "before": ["<C-w>"],
+      "commands": [":vsc workbench.action.closeActiveEditor"],
       "silent": true
     },
     {
-      "before": [
-        ";"
-      ],
-      "commands": [
-        ":vsc workbench.action.quickOpen"
-      ],
+      "before": [";"],
+      "commands": [":vsc workbench.action.quickOpen"],
       "silent": true
     },
     {
-      "before": [
-        "s",
-        "s"
-      ],
-      "commands": [
-        ":split"
-      ],
+      "before": ["s", "s"],
+      "commands": [":split"],
       "silent": true
     },
     {
-      "before": [
-        "s",
-        "v"
-      ],
-      "commands": [
-        ":vsplit"
-      ],
+      "before": ["s", "v"],
+      "commands": [":vsplit"],
       "silent": true
     },
     {
-      "before": [
-        "n",
-      ],
-      "after": [
-        "n",
-        "z",
-        "z",
-        "z",
-        "v",
-      ],
+      "before": ["n"],
+      "after": ["n", "z", "z", "z", "v"],
       "silent": true
     },
     {
-      "before": [
-        "N",
-      ],
-      "after": [
-        "N",
-        "z",
-        "z",
-        "z",
-        "v",
-      ],
+      "before": ["N"],
+      "after": ["N", "z", "z", "z", "v"],
       "silent": true
     },
     {
-      "before": [
-        "*",
-      ],
-      "after": [
-        "*",
-        "z",
-        "z",
-      ],
+      "before": ["*"],
+      "after": ["*", "z", "z"],
       "silent": true
     },
     {
-      "before": [
-        "#",
-      ],
-      "after": [
-        "#",
-        "z",
-        "z",
-      ],
+      "before": ["#"],
+      "after": ["#", "z", "z"],
       "silent": true
     },
     {
-      "before": [
-        "+",
-      ],
-      "after": [
-        "<C-a>"
-      ],
+      "before": ["+"],
+      "after": ["<C-a>"],
       "silent": true
     },
     {
-      "before": [
-        "-",
-      ],
-      "after": [
-        "<C-x>"
-      ],
+      "before": ["-"],
+      "after": ["<C-x>"],
       "silent": true
     },
     {
-      "before": [
-        "j",
-      ],
-      "after": [
-        "g",
-        "j"
-      ],
+      "before": ["j"],
+      "after": ["g", "j"],
       "silent": true
     },
     {
-      "before": [
-        "k",
-      ],
-      "after": [
-        "g",
-        "k"
-      ],
+      "before": ["k"],
+      "after": ["g", "k"],
       "silent": true
-    },
+    }
   ],
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-f>": false,
     "<C-n>": false,
     "<C-t>": false,
-    "<C-b>": false,
+    "<C-b>": false
   },
   "window.customMenuBarAltFocus": false,
   "window.enableMenuBarMnemonics": false,
@@ -359,5 +199,5 @@
   "workbench.tree.renderIndentGuides": "none",
   "workbench.sideBar.location": "right",
   "workbench.colorTheme": "GitHub Light Default",
-  "workbench.activityBar.visible": false,
+  "workbench.activityBar.visible": false
 }
