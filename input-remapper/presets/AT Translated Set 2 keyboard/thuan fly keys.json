@@ -16,22 +16,6 @@
             "KEY_LEFTCTRL",
             "keyboard"
         ],
-        "1,59,1": [
-            "KEY_MUTE",
-            "keyboard"
-        ],
-        "1,60,1": [
-            "KEY_VOLUMEDOWN",
-            "keyboard"
-        ],
-        "1,61,1": [
-            "KEY_VOLUMEUP",
-            "keyboard"
-        ],
-        "1,62,1": [
-            "XF86AudioMicMute",
-            "keyboard"
-        ],
         "1,57,1+1,50,1": [
             "KEY_LEFTCTRL + Shift_L + KEY_RIGHT",
             "keyboard"
