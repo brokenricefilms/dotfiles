@@ -2,7 +2,7 @@ vim.g.coq_settings = {
 	keymap = {
 		recommended = false,
 		jump_to_mark = "<c-e>",
-		manual_complete = ";;",
+    -- manual_complete = ";;",
 	},
 	clients = {
 		buffers = {
