@@ -1,3 +1,7 @@
+-- install missing formatter
+-- cargo install stylua
+-- ins shfmt
+-- pip install --upgrade autopep8
 local filetype_configs = {
 	cs = {
 		function()
@@ -88,13 +92,6 @@ local filetype_configs = {
 		end,
 	},
 	python = {
-		function()
-			return {
-				exe = "black",
-				args = { "_" },
-				stdin = true,
-			}
-		end,
 		function()
 			return {
 				exe = "python3 -m autopep8",
