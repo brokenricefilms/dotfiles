@@ -143,6 +143,14 @@
         "1,57,1+1,31,1": [
             "Alt_L+Escape",
             "keyboard"
+        ],
+        "1,57,1+1,58,1": [
+            "Alt_L+Tab",
+            "keyboard"
+        ],
+        "1,57,1+1,16,1": [
+            "Alt_L+q",
+            "keyboard"
         ]
     }
 }
