@@ -618,7 +618,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='keyboard'
+last-panel='power'
 window-state=(960, 639, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -687,7 +687,7 @@ gtk-theme='Adwaita'
 icon-theme='Adwaita'
 locate-pointer=false
 monospace-font-name='JetBrains Mono NL 10'
-show-battery-percentage=false
+show-battery-percentage=true
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
@@ -1047,7 +1047,7 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.814601439884809, 106.6581)
+night-light-last-coordinates=(10.841599280057595, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
