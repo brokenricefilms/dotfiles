@@ -201,18 +201,17 @@ vimls
 
 > For my daily use, i develop this dotfiles repos on this, for several months maybe i will change my daily combo (Linux distro hopping)
 
-- Manjaro
-- Gnome 41.4 (wayland)
-- Neovim v0.6.1
-- kitty terminal
+- Fedora 36
+- Gnome 42.1 (wayland)
+- Neovim v0.7
+- Foot terminal
+- Jetbrains mono NL
 
 ### Distro Supported
 
-- Ubuntu (\*)
-- Fedora (\*)
-- Arch
-
-> (\*): required edit uncomment stuff in zsh config file
+- Fedora
+- Debian base
+- Arch base
 
 ## Requirements
 
