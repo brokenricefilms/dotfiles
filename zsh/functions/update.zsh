@@ -16,7 +16,7 @@ function updateZshPlugin() {
 
 function update() {
   # @todo: support other distro
-  sudo dnf upgrade
+  sudo dnf upgrade -y
 
   nvim -c "PlugUpdate | qa"
 
