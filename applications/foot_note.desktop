@@ -1,7 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Terminal=false
-Type=Application
-Name=foot note
-Exec=sh -c 'wmctrl -s 3 ; foot --maximized --title=note'
-Icon=foot
