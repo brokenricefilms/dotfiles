@@ -135,6 +135,14 @@
         "1,57,1+1,16,1": [
             "Alt_L+q",
             "keyboard"
+        ],
+        "1,57,1+1,26,1": [
+            "Alt_L+KEY_LEFT",
+            "keyboard"
+        ],
+        "1,57,1+1,27,1": [
+            "Alt_L+KEY_RIGHT",
+            "keyboard"
         ]
     }
 }
