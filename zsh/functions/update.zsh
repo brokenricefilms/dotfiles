@@ -60,6 +60,7 @@ function update() {
   # for fedora
   if hash dnf 2>/dev/null; then
     sudo dnf upgrade -y
+    dnf makecache
   fi
 
   # for arch base
