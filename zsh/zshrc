@@ -27,6 +27,7 @@ alias cat='bat'
 alias fak='git stash &>/dev/null; git stash clear'
 alias t='trash'
 alias se='sudoedit'
+alias show_webcam='mpv av://v4l2:/dev/video0 --profile=low-latency --untimed'
 
 function hi () {
   browserDaily
