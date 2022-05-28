@@ -2,8 +2,8 @@
 
 alias st='git status -sb'
 alias add='git add'
-alias push="git push"
-alias pull="git pull"
+alias push="git push &"
+alias pull="git pull &"
 alias dv='git difftool'
 alias gl='git log --oneline | head -n 5'
 alias lg='lazygit'
@@ -17,8 +17,8 @@ function autoCommit () {
 }
 
 function repoSync () {
-  git pull --all
-  git push
+  git pull --all &
+  push
 }
 
 function ok () {
@@ -49,7 +49,7 @@ function yo () {
   echo "👉 What is commmit message?"
   read commitMessage
   git commit -m $commitMessage
-  git push
+  git push &
 }
 
 function ghi() {
