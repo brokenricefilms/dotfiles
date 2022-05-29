@@ -1,5 +1,11 @@
 #! /usr/bin/env zsh
 
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+    --color=fg:#24292f,bg:#ffffff,hl:#d73a49
+    --color=fg+:#24292f,bg+:#ffffff,hl+:#d73a49
+    --color=info:#0366d6,prompt:#005cc5,pointer:#d73a49
+    --color=marker:#0366d6,spinner:#044289,header:#044289'
+
 export FZF_DEFAULT_COMMAND='fd --type f --follow --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems'
 
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
