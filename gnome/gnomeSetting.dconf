@@ -587,7 +587,11 @@ num-samples=1000
 sample-size-mib=100
 
 [org/gnome/TextEditor]
+custom-font='JetBrains Mono NL 11'
+highlight-current-line=true
 indent-style='space'
+style-scheme='Adwaita'
+use-system-font=false
 
 [org/gnome/baobab/ui]
 is-maximized=false
@@ -609,17 +613,18 @@ window-position=(26, 23)
 word-size=64
 
 [org/gnome/cheese]
+brightness=0.14478114478114468
 burst-delay=1000
-camera='HD Webcam'
+camera='HD Webcam: HD Webcam'
 photo-x-resolution=1280
 photo-y-resolution=720
-selected-effect='No Effect'
+selected-effect='Bulge'
 video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='power'
-window-state=(960, 639, false)
+last-panel='notifications'
+window-state=(903, 639, false)
 
 [org/gnome/desktop/a11y/applications]
 screen-reader-enabled=false
@@ -678,7 +683,7 @@ clock-show-weekday=false
 color-scheme='default'
 cursor-theme='GoogleDot-Blue'
 document-font-name='JetBrains Mono NL 11'
-enable-animations=true
+enable-animations=false
 enable-hot-corners=false
 font-antialiasing='grayscale'
 font-hinting='slight'
@@ -692,6 +697,7 @@ toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
 application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel', 'ca-desrt-dconf-editor', 'ryzen-controller', 'org-gnome-extensions-desktop', 'org-kde-kdenlive', 'firefox-developer-edition', 'firefox', 'ffpwa-01g2kq6xtkbex4080qh0acspcd', 'org-gnome-terminal', 'org-gnome-software']
+show-banners=true
 show-in-lock-screen=false
 
 [org/gnome/desktop/notifications/application/ca-desrt-dconf-editor]
@@ -771,8 +777,8 @@ primary-color='#000000000000'
 secondary-color='#000000000000'
 
 [org/gnome/desktop/search-providers]
-disabled=['org.manjaro.pamac.manager.desktop', 'org.gnome.Terminal.desktop']
-sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Nautilus.desktop', 'org.manjaro.pamac.manager.desktop']
+disabled=['org.manjaro.pamac.manager.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Software.desktop', 'firefox.desktop']
+sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.manjaro.pamac.manager.desktop', 'org.gnome.Settings.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Nautilus.desktop', 'firefox.desktop']
 
 [org/gnome/desktop/session]
 idle-delay=uint32 0
@@ -1047,7 +1053,7 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.841599280057595, 106.6581)
+night-light-last-coordinates=(10.823600719942403, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
@@ -1061,7 +1067,7 @@ www=['<Alt>w']
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Super>Return'
-command='foot'
+command='kitty'
 name='terminal'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
@@ -1148,7 +1154,7 @@ accessibility-menu=false
 activities-button=false
 activities-button-icon-monochrome=true
 activities-button-label=true
-animation=1
+animation=0
 app-menu=false
 app-menu-icon=false
 background-menu=true
@@ -1242,10 +1248,10 @@ toggle-overview=['<Super>s']
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1653619597
+check-timestamp=int64 1653792238
 first-run=false
 install-timestamp=int64 1653574325
-security-timestamp=int64 385363573
+security-timestamp=int64 0
 update-notification-timestamp=int64 1653574387
 
 [org/gnome/system/location]
@@ -1309,7 +1315,7 @@ show-extensions-notice=false
 [org/gtk/gtk4/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=false
+show-hidden=true
 show-size-column=true
 show-type-column=true
 sidebar-width=182
@@ -1327,7 +1333,7 @@ selected-color=(true, 1.0, 1.0, 1.0, 1.0)
 clock-format='12h'
 date-format='regular'
 location-mode='path-bar'
-show-hidden=false
+show-hidden=true
 show-size-column=true
 show-type-column=true
 sidebar-width=197
@@ -1335,7 +1341,7 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(26, 23)
+window-position=(359, 66)
 window-size=(1203, 902)
 
 [org/virt-manager/virt-manager]
@@ -1377,3 +1383,6 @@ vm-window-size=(1920, 1014)
 
 [re/sonny/Junction]
 show-app-names=false
+
+[system/proxy]
+mode='none'
