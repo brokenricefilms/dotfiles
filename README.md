@@ -57,8 +57,8 @@
   - `killAllUnnameTmuxSession`/`qa`: kill all sessions does not have a name just a number session like 23,11,12,... Keep tmux session clean
 - Auto switch dark\light theme
   - Using `dark` \ `light` in the command line
-  - Change Nvim & Kitty & Alacritty & Bat cat theme
-  - Supported [zenbones](https://github.com/mcchrish/zenbones.nvim) of light theme, [Gruvbox with Material Palette](https://github.com/sainnhe/gruvbox-material) for dark theme
+  - Change Nvim & Kitty & Bat cat theme
+  - Supported [github theme](https://github.com/projekt0n/github-nvim-theme) by default
 - `u`: unzip/rar/tar,...
 - `cppProject`: create cpp multi file template
 
@@ -151,28 +151,8 @@
 
 #### nvim lsp
 
-- using [coq_nvim](https://github.com/ms-jpq/coq_nvim), [nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer)
-
-```
-# lsp list
-emmet_ls
-bashls
-clangd (c, c++)
-csharp_ls (c#)
-cssls
-cssmodules_ls
-denols
-diagnosticls
-eslint (javascript, typescript)
-gopls (go)
-html
-jdtls (java)
-jsonls
-sqlls
-sumneko_lua (lua)
-tsserver (typescript, javascript)
-vimls
-```
+- Using [coq_nvim](https://github.com/ms-jpq/coq_nvim), [nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer)
+- Easy install lsp, with [nvim lsp installer](https://github.com/williamboman/nvim-lsp-installer)
 
 ### Gnome
 
