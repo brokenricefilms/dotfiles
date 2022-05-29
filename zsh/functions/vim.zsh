@@ -11,5 +11,3 @@ function findFileEditInNvim() {
 }
 alias e='findFileEditInNvim'
 alias v='findFileEditInNvim'
-alias vi='findFileEditInNvim'
-alias vim='findFileEditInNvim'

@@ -270,6 +270,7 @@ set nowritebackup
 set inccommand=split
 set scrolloff=5
 set shortmess+=I
+set laststatus=3
 
 nnoremap + <C-a>
 nnoremap - <C-x>
