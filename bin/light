@@ -1,14 +1,11 @@
 #! /usr/bin/env sh
 
 echo "set background=light
-colorscheme zenwritten
-highlight markdownH1 guifg=#2C363C guibg=NONE guisp=NONE gui=bold
+colorscheme github_light
 " >~/dotfiles/nvim/themeControl.vim
 
 echo "include ./light_theme.conf
 " >~/dotfiles/kitty/theme.conf
-
-cp ~/dotfiles/foot/light.ini ~/dotfiles/foot/foot.ini
 
 mkdir ~/dotfiles/bat/
 echo "--theme=\"GitHub\"" >~/dotfiles/bat/config
