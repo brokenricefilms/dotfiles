@@ -102,7 +102,6 @@
 - Auto-create bullet point, number list
 - `fw` in insert mode: fzf with directory, find the word you forget very useful for me when writing English
 - `space + r`: to review the markdown file
-- `space + R`: to review the mindmap (require [markmap-cli](https://github.com/gera2ld/markmap/tree/master/packages/markmap-cli))
 - `z=`: Suggesting replacing the wrong word.
 
 ##### Spell check

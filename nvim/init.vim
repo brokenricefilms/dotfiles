@@ -154,12 +154,6 @@ let g:bullets_enabled_file_types = [
 
 Plug 'https://github.com/iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
 
-Plug 'https://github.com/ferrine/md-img-paste.vim'
-
-autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<enter>
-let g:mdip_imgdir = 'img'
-let g:mdip_imgname = 'image'
-
 Plug 'https://github.com/phaazon/hop.nvim'
 map f :HopChar1<enter>
 noremap f :HopChar1<enter>

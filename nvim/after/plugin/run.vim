@@ -30,9 +30,6 @@ autocmd BufEnter *.py nnoremap <leader>r
 autocmd BufEnter *.md nnoremap <leader>r
     \ :w<enter>:MarkdownPreview<enter>
 
-autocmd BufEnter *.md nnoremap <leader>R
-    \ :w<enter>:FloatermSend! cd %:p:h ; markmap -w %:t<enter>
-
 autocmd BufEnter *.js nnoremap <leader>r
     \ :w<enter>:FloatermSend cd %:p:h ; deno run %:t<enter>:FloatermToggle<enter>
 
