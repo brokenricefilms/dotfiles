@@ -2,6 +2,9 @@ set -U EDITOR nvim
 export EDITOR='nvim'
 export VISUAL='nvim'
 
+alias vi="nvim"
+alias vim="nvim"
+
 function findFileEditInNvim() {
   if [ ! -n "$1" ]; then
     findFile
