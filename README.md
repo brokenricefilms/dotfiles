@@ -113,9 +113,7 @@
 
 #### Vim everywhere
 
-- I use [touchcursor](https://github.com/donniebreve/touchcursor-linux) for config my keyboard, older is used xmodmap but i have some issue with this then i switch to touchcursor, and this work well
-  - <https://github.com/thuanpham2311/touchcursor-vim>
-  - My touchcursor nightly config [here](https://github.com/thuanpham2311/dotfiles/blob/master/touchcursor/touchcursor.conf)
+- Input remapper: hold space for vim mode editing in everywhere, check my config to known how to use
 - Browser ❤️ vim with touchcursor, see my config file [here](https://github.com/thuanpham2311/dotfiles/blob/master/surfingkeys.js)
 
 #### Fzf
