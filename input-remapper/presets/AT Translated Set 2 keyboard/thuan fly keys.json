@@ -52,14 +52,6 @@
             "KEY_END",
             "keyboard"
         ],
-        "1,57,1+1,34,1": [
-            "KEY_DELETE",
-            "keyboard"
-        ],
-        "1,57,1+1,32,1": [
-            "KEY_BACKSPACE",
-            "keyboard"
-        ],
         "1,57,1+1,12,1": [
             "KEY_F11",
             "keyboard"
@@ -142,6 +134,14 @@
         ],
         "1,57,1+1,27,1": [
             "Alt_L+KEY_RIGHT",
+            "keyboard"
+        ],
+        "1,57,1+1,32,1": [
+            "KEY_LEFTCTRL+BackSpace",
+            "keyboard"
+        ],
+        "1,57,1+1,34,1": [
+            "KEY_LEFTCTRL + KEY_DELETE",
             "keyboard"
         ]
     }

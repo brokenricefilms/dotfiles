@@ -2,7 +2,7 @@
 
 alias st='git status -sb'
 alias add='git add'
-alias push="git push &"
+alias push="git pull & ; git push &"
 alias pull="git pull &"
 alias dv='git difftool'
 alias gl='git log --oneline | head -n 5'
