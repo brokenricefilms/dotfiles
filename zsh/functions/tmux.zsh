@@ -22,10 +22,10 @@ function killAllUnnameTmuxSessionNoMessage() {
   cd -
 }
 
-alias clear='killAllUnnameTmuxSessionNoMessage ; clear'
-alias cler='killAllUnnameTmuxSessionNoMessage ; clear'
-alias clea='killAllUnnameTmuxSessionNoMessage ; clear'
-alias cl='killAllUnnameTmuxSessionNoMessage ; clear'
+alias clear='killAllUnnameTmuxSessionNoMessage ; clear -x'
+alias cler='clear'
+alias clea='clear'
+alias cl='clear'
 
 function tmuxSessionSwitch() {
   local session
