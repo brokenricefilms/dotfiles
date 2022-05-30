@@ -226,9 +226,7 @@ set termguicolors
 runtime ./themeControl.vim
 
 set cursorline
-
-autocmd InsertLeave,WinEnter * set cursorline
-autocmd InsertEnter,WinLeave * set nocursorline
+set cursorlineopt=number
 
 set number relativenumber
 command! NumberLine execute "set number relativenumber"
