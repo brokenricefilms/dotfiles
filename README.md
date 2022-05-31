@@ -12,9 +12,6 @@
 
 ## Feature
 
-<!-- @todo write the table format | mode | map | note | ... -->
-<!-- @body @thuanpham2311 -->
-
 ### Zsh
 
 - Fzf, moving fast.
