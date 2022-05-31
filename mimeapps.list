@@ -1,10 +1,13 @@
 [Added Associations]
 text/plain=nvim.desktop;org.gnome.gedit.desktop;
-application/pdf=file_chrome.desktop;org.gnome.Evince.desktop;
-image/png=file_chrome.desktop
-image/jpeg=file_chrome.desktop
-image/jpg=file_chrome.desktop
-video/mp4=file_chrome.desktop
+application/pdf=file_browser.desktop
+application/epub=file_browser.desktop
+image/png=file_browser.desktop
+image/jpeg=file_browser.desktop
+image/jpg=file_browser.desktop
+video/mp4=file_browser.desktop
+application/x-mobipocket-ebook=com.github.johnfactotum.Foliate.desktop;google-chrome.desktop;
+application/epub+zip=com.github.johnfactotum.Foliate.desktop;file_browser.desktop;
 
 [Default Applications]
 text/html=google-chrome.desktop
@@ -14,3 +17,4 @@ x-scheme-handler/about=google-chrome.desktop
 x-scheme-handler/unknown=google-chrome.desktop
 x-scheme-handler/mailto=google-chrome.desktop
 x-scheme-handler/webcal=google-chrome.desktop
+inode/directory=org.kde.dolphin.desktop
