@@ -2,6 +2,8 @@ set -U EDITOR nvim
 export EDITOR='nvim'
 export VISUAL='nvim'
 
+set -o vi
+
 alias vi="nvim"
 alias vim="nvim"
 
