@@ -9,7 +9,7 @@ window-width=540
 [com/github/johnfactotum/Foliate/window-state]
 fullscreen=false
 height=640
-last-file='/home/master/Documents/Book/vuive.pdf'
+last-file='/home/master/Documents/Book/cu-di-de-loi-thanh-duong-phoenix-ho.epub'
 maximized=false
 width=960
 
@@ -623,7 +623,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='sound'
+last-panel='notifications'
 window-state=(903, 639, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -697,7 +697,7 @@ toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
 application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel', 'ca-desrt-dconf-editor', 'ryzen-controller', 'org-gnome-extensions-desktop', 'org-kde-kdenlive', 'firefox-developer-edition', 'firefox', 'ffpwa-01g2kq6xtkbex4080qh0acspcd', 'org-gnome-terminal', 'org-gnome-software']
-show-banners=true
+show-banners=false
 show-in-lock-screen=false
 
 [org/gnome/desktop/notifications/application/ca-desrt-dconf-editor]
@@ -1053,7 +1053,7 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.814601439884809, 106.6581)
+night-light-last-coordinates=(10.85059856011519, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
@@ -1067,7 +1067,7 @@ www=['<Alt>w']
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Super>Return'
-command='kitty'
+command='foot'
 name='terminal'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
@@ -1113,7 +1113,7 @@ move-item-first=true
 preview-size=30
 strip-text=false
 support-png=true
-toggle-menu=['<Alt>v']
+toggle-menu=['<Shift><Alt>v']
 topbar-preview-size=100
 
 [org/gnome/shell/extensions/dash-to-dock]
@@ -1252,11 +1252,11 @@ toggle-overview=['<Super>s']
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1653877963
+check-timestamp=int64 1653961000
 first-run=false
 install-timestamp=int64 1653574325
 security-timestamp=int64 0
-update-notification-timestamp=int64 1653574387
+update-notification-timestamp=int64 1653960997
 
 [org/gnome/system/location]
 enabled=true
