@@ -1,6 +1,4 @@
-alias ide='tmux split-window -v -p 20 ; tmux split-window -h -p 50 ; tmux last-pane ; nvim'
-# alias ide='tmux split-window -v -p 8 ; tmux last-pane ; nvim'
-# alias ide='tmux split-window -h -p 30 ; tmux split-window -v -p 75 ; tmux last-pane ; nvim'
+alias ide='tmux split-window -h -p 30 ; tmux split-window -v -p 75 ; tmux last-pane ; nvim'
 
 function killAllUnnameTmuxSession() {
   echo "kill all unname tmux session"
