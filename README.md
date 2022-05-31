@@ -22,7 +22,7 @@
   - `killAllUnnameTmuxSession`/`qa`: kill all sessions does not have a name just a number session like 23,11,12,... Keep tmux session clean
 - Auto switch dark\light theme
   - Using `dark` \ `light` in the command line
-  - Change Nvim & Kitty & Bat cat theme
+  - Change Nvim & foot terminal & Bat cat theme
   - Supported [github theme](https://github.com/projekt0n/github-nvim-theme) by default
 - `u`: unzip/rar/tar,...
 - `cppProject`: create cpp multi file template
