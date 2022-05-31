@@ -24,10 +24,6 @@
             "KEY_LEFTCTRL + Shift_L + KEY_LEFT",
             "keyboard"
         ],
-        "1,57,1+1,47,1": [
-            "Alt_L+v",
-            "keyboard"
-        ],
         "1,57,1": [
             "if_single(key(KEY_SPACE),  ,timeout=10000)",
             "keyboard"
@@ -142,6 +138,10 @@
         ],
         "1,57,1+1,11,1": [
             "Alt_L+0",
+            "keyboard"
+        ],
+        "1,57,1+1,47,1": [
+            "Alt_L+Shift_L+v",
             "keyboard"
         ]
     }
