@@ -4,7 +4,9 @@ echo "set background=dark
 colorscheme github_dark
 " >~/dotfiles/nvim/themeControl.vim
 
-echo "include ./dark_theme.conf" >~/dotfiles/kitty/theme.conf
+DIRECTORY=~/dotfiles/bat
 
-mkdir ~/dotfiles/bat/
+if [ -d "$DIRECTORY" ]; then
+  mkdir $DIRECTORY
+fi
 echo "--theme=\"base16\"" >~/dotfiles/bat/config

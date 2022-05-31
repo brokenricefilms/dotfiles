@@ -4,8 +4,5 @@ echo "set background=light
 colorscheme github_light
 " >~/dotfiles/nvim/themeControl.vim
 
-echo "include ./light_theme.conf
-" >~/dotfiles/kitty/theme.conf
-
 mkdir ~/dotfiles/bat/
 echo "--theme=\"GitHub\"" >~/dotfiles/bat/config
