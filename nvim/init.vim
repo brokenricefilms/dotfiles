@@ -186,16 +186,6 @@ let g:undotree_WindowLayout = 3
 
 Plug 'https://github.com/romainl/vim-cool'
 
-set hlsearch
-set ignorecase
-set incsearch
-set smartcase
-set magic
-nnoremap n nzzzv
-nnoremap N Nzzzv
-nnoremap * *zz
-nnoremap # #zz
-
 Plug 'https://github.com/norcalli/nvim-colorizer.lua'
 autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
 
@@ -264,6 +254,16 @@ set inccommand=split
 set scrolloff=5
 set shortmess+=I
 set laststatus=3
+set hlsearch
+set ignorecase
+set incsearch
+set smartcase
+set magic
+
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap * *zz
+nnoremap # #zz
 
 nnoremap + <C-a>
 nnoremap - <C-x>
