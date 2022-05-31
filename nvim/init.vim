@@ -132,11 +132,6 @@ noremap ; :Commands<enter>
 noremap / :BLines<enter>
 noremap // /
 
-command! -bang -nargs=* GGrep
-            \ call fzf#vim#grep(
-            \   'git grep --line-number -- '.shellescape(<q-args>), 0,
-            \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0)
-
 Plug 'https://github.com/tpope/vim-fugitive'
 
 noremap <silent> gs :G<enter>gg5j2ly$k0
