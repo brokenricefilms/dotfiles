@@ -155,8 +155,6 @@ Plug 'https://github.com/phaazon/hop.nvim'
 map f :HopChar1<enter>
 noremap f :HopChar1<enter>
 
-Plug 'https://github.com/wellle/tmux-complete.vim'
-
 Plug 'https://github.com/christoomey/vim-tmux-navigator'
 
 Plug 'https://github.com/mattn/emmet-vim'
