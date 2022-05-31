@@ -1,6 +1,5 @@
 # !/usr/bin/env zsh
 
-alias st='git status -sb'
 alias add='git add'
 alias push="git pull & ; git push &"
 alias pull="git pull &"
@@ -9,6 +8,12 @@ alias gl='git log --oneline | head -n 5'
 alias lg='lazygit'
 
 isInGitRepo() { git rev-parse HEAD &>/dev/null }
+
+function gitStatus() {
+  isInGitRepo || return
+  git status -sb
+}
+alias st='gitStatus'
 
 function autoCommit () {
   isInGitRepo || return
