@@ -1,38 +1,6 @@
+↖️ (Feeling lost? Use the GitHub TOC!)
+
 # Thuan's Linux dotfiles
-
-**↓↓Table of Contents↓↓**
-
-<details>
-<summary>Click here to show.</summary>
-
-- [Thuan's Linux dotfiles](#thuans-linux-dotfiles)
-  - [About](#about)
-  - [Feature](#feature)
-    - [Zsh](#zsh)
-    - [Tmux](#tmux)
-    - [Vim](#vim)
-      - [Thuan fly keys](#thuan-fly-keys)
-      - [Writing](#writing)
-      - [Note-taking](#note-taking)
-        - [Spell check](#spell-check)
-      - [Vim everywhere](#vim-everywhere)
-      - [Fzf](#fzf)
-      - [Git](#git)
-      - [Emmet:](#emmet)
-      - [vim stuff](#vim-stuff)
-    - [Gnome](#gnome)
-      - [Extension](#extension)
-      - [Applications](#applications)
-  - [Install](#install)
-  - [Supported](#supported)
-    - [My daily combo](#my-daily-combo)
-    - [Distro Supported](#distro-supported)
-  - [Requirements](#requirements)
-  - [Demo](#demo)
-
----
-
-</details>
 
 > For Windows [change the branch to windows](https://github.com/thuanpham2311/dotfiles/tree/windows)
 
