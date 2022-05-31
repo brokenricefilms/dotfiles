@@ -4,4 +4,4 @@ Terminal=false
 Type=Application
 Name=file browser
 Icon=google-chrome
-Exec=google-chrome --app=%U
+Exec=google-chrome --app=file://%U
