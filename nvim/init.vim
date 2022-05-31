@@ -94,6 +94,8 @@ nmap <silent> mt :lua require("harpoon.ui").nav_file(10)<enter>
 
 Plug 'https://github.com/nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+Plug 'https://github.com/nvim-treesitter/nvim-treesitter-textobjects',
+
 Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
 
 Plug 'https://github.com/junegunn/fzf.vim'
