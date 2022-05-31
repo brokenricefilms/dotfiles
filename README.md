@@ -132,6 +132,16 @@
 - I use brave for default application, recommend is chromium base but you can change whatever you want
 - In nowaday we have `.new` domain name, i use this a lot
 - You can see all the application is custom [in `applications/`](https://github.com/thuanpham2311/dotfiles/tree/master/applications)
+- use updateApplications in zsh to update the applications
+
+```bash
+updateApplications() {
+  cd /usr/share/applications/
+  sudo find -type l -delete
+  cd -
+  sudo ln -sf ~/dotfiles/applications/* /usr/share/applications/
+}
+```
 
 ## Install
 
