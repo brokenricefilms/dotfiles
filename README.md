@@ -54,7 +54,7 @@
 - `space + space`: is `Ctrl + ^`, switch between the previous file.
 - `Shift + up` normal/insert mode: new line on bottom
 - `Shift + down` normal/insert mode: new line on top
-  > i use [touchcursor linux](https://github.com/donniebreve/touchcursor-linux) to map hold space to [vim mode](https://github.com/thuanpham2311/touchcursor-vim), in this case this easy to me
+  > i use [touchcursor linux](https://github.com/donniebreve/touchcursor-linux) to map hold space to [vim mode](https://github.com/thuanpham2311/touchcursor-vim), in this case this easy to me. Also you can use the input-remapper, this is the easy way than touchcursor in linux
 - 'gJ': splitjoin split mapping
 - 'gK': splitjoin join mapping
 

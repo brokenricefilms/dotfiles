@@ -3,8 +3,7 @@
     "autoload": {
         "SONiX USB DEVICE": "thuan fly keys",
         "2.4G Mouse": "new preset copy",
-        "AT Translated Set 2 keyboard": "thuan fly keys",
-        "PNP0C50:0e 06CB:7E7E Mouse": "new preset"
+        "AT Translated Set 2 keyboard": "thuan fly keys"
     },
     "macros": {
         "keystroke_sleep_ms": 10
