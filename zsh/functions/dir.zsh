@@ -5,14 +5,14 @@ alias doc='cd ~/Documents ; clear -x ; l'
 alias tmp='cd /tmp ; clear -x ;  la'
 alias changeDirToUsbFolder='cd /run/media/master/ ; clear -x ; ls'
 
-alias l='exa -al --color=always --group-directories-first --icons'
+alias l='clear -x ; exa -al --color=always --group-directories-first --icons'
 alias ls='l'
 alias sl='l'
-alias la='exa -a --color=always --group-directories-first --icons'
-alias al='exa -a --color=always --group-directories-first --icons'
 alias ll='l'
-alias l.='exa -a| egrep "^\."'
-alias lt='exa -aT --color=always --group-directories-first --icons'
+alias la='clear -x ; exa -a --color=always --group-directories-first --icons'
+alias al='la'
+alias l.='clear -x ; exa -a| egrep "^\."'
+alias lt='clear -x ; exa -aT --color=always --group-directories-first --icons'
 
 function diskFree() {
   clear -x
