@@ -623,7 +623,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='mouse'
+last-panel='sound'
 window-state=(903, 639, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -758,7 +758,7 @@ speed=1.0
 
 [org/gnome/desktop/peripherals/touchpad]
 send-events='enabled'
-speed=0.44705882352941173
+speed=0.78823529411764715
 tap-to-click=true
 two-finger-scrolling-enabled=true
 
@@ -1259,11 +1259,11 @@ toggle-overview=['<Super>s']
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1654133277
+check-timestamp=int64 1654307785
 first-run=false
 install-timestamp=int64 1653574325
 security-timestamp=int64 0
-update-notification-timestamp=int64 1653960997
+update-notification-timestamp=int64 1654307785
 
 [org/gnome/system/location]
 enabled=true
