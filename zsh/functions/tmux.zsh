@@ -1,7 +1,7 @@
 alias ide='tmux split-window -h -p 30 ; tmux split-window -v -p 75 ; tmux last-pane ; nvim'
 
 function killAllUnnameTmuxSession() {
-  echo "kill all unname tmux session"
+  echo "\n👉 kill all unname tmux session"
   cd /tmp/
   tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >/tmp/killAllUnnameTmuxSessionOutput.sh
   sed -i 's/^/tmux kill-session -t /' killAllUnnameTmuxSessionOutput.sh

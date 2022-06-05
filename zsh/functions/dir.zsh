@@ -23,9 +23,11 @@ function diskFree() {
 
 function makeDir() {
   if [ ! -n "$1" ]; then
-    echo "Enter a directory name"
+    echo -n "\n👉 Enter a directory name"
+    read dirName
+    mkdir -p $dirName && cd $dirName
   elif [ -d $1 ]; then
-    echo "\`$1' already exists"
+    echo "\n👉 \`$1' already exists"
     cd $1
   else
     mkdir -p $1 && cd $1

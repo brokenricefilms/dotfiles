@@ -36,7 +36,7 @@ if hash pacman 2>/dev/null; then
 fi
 
 function updateZshPlugin() {
-  echo "update zsh plugin"
+  echo "\n👉 update zsh plugin"
 
   cd ~/dotfiles/zsh/functions/fzf-zsh-completions/
   git pull
@@ -52,6 +52,8 @@ function updateZshPlugin() {
 }
 
 function update() {
+  echo "\n👉 update system"
+
   # for debian base
   if hash apt 2>/dev/null; then
     sudo apt update -y

@@ -3,7 +3,7 @@ SERVER_IP () { hostname -I }
 ser () { browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000 }
 
 function nvm() {
-  echo "🚨 NVM not loaded! Loading now..."
+  echo "\n👉 NVM not loaded! Loading now..."
   unset -f nvm
   export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
