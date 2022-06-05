@@ -39,14 +39,17 @@ function updateZshPlugin() {
   echo "\n👉 update zsh plugin"
 
   cd ~/dotfiles/zsh/functions/fzf-zsh-completions/
+  pwd
   git pull
   cd -
 
   cd ~/dotfiles/zsh/functions/fzf-tab/
+  pwd
   git pull
   cd -
 
   cd ~/dotfiles/zsh/functions/zsh-syntax-highlighting/
+  pwd
   git pull
   cd -
 }
