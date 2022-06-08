@@ -101,26 +101,26 @@ Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'https://github.com/junegunn/fzf.vim'
 
 let g:fzf_layout = { 'window': {
-            \ 'width': 0.9,
-            \ 'height': 0.9,
-            \ 'highlight': 'Comment',
-            \ 'rounded': v:true } }
+      \ 'width': 0.9,
+      \ 'height': 0.9,
+      \ 'highlight': 'Comment',
+      \ 'rounded': v:true } }
 let $FZF_DEFAULT_OPTS='--reverse'
 let g:fzf_preview_window = ['down:80%', 'ctrl-/']
 let g:fzf_colors =
-            \ { 'fg':      ['fg', 'Normal'],
-            \ 'bg':      ['bg', 'Normal'],
-            \ 'hl':      ['fg', 'Comment'],
-            \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-            \ 'bg+':     ['bg', 'Normal', 'CursorColumn'],
-            \ 'hl+':     ['fg', 'Statement'],
-            \ 'info':    ['fg', 'PreProc'],
-            \ 'border':  ['fg', 'Ignore'],
-            \ 'prompt':  ['fg', 'Conditional'],
-            \ 'pointer': ['fg', 'Exception'],
-            \ 'marker':  ['fg', 'Keyword'],
-            \ 'spinner': ['fg', 'Label'],
-            \ 'header':  ['fg', 'Comment'] }
+      \ { 'fg':      ['fg', 'Normal'],
+      \ 'bg':      ['bg', 'Normal'],
+      \ 'hl':      ['fg', 'Comment'],
+      \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+      \ 'bg+':     ['bg', 'Normal', 'CursorColumn'],
+      \ 'hl+':     ['fg', 'Statement'],
+      \ 'info':    ['fg', 'PreProc'],
+      \ 'border':  ['fg', 'Ignore'],
+      \ 'prompt':  ['fg', 'Conditional'],
+      \ 'pointer': ['fg', 'Exception'],
+      \ 'marker':  ['fg', 'Keyword'],
+      \ 'spinner': ['fg', 'Label'],
+      \ 'header':  ['fg', 'Comment'] }
 
 noremap <leader>F :Files ~<enter>
 noremap <leader>f :Files<enter>
@@ -143,11 +143,11 @@ Plug 'https://github.com/tpope/vim-eunuch'
 
 Plug 'https://github.com/dkarter/bullets.vim'
 let g:bullets_enabled_file_types = [
-            \ 'markdown',
-            \ 'text',
-            \ 'gitcommit',
-            \ 'scratch'
-            \]
+      \ 'markdown',
+      \ 'text',
+      \ 'gitcommit',
+      \ 'scratch'
+      \]
 
 Plug 'https://github.com/iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
 
@@ -191,12 +191,12 @@ autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
 
 Plug 'https://github.com/lukas-reineke/indent-blankline.nvim'
 if &diff
-    let g:indent_blankline_enabled = v:false
+  let g:indent_blankline_enabled = v:false
 endif
 let g:indent_blankline_char = '▏'
 let g:indent_blankline_filetype_exclude = [
-            \ 'help', 'yaml'
-            \]
+      \ 'help', 'yaml'
+      \]
 
 Plug 'https://github.com/nvim-lua/plenary.nvim'
 
@@ -284,12 +284,12 @@ noremap <silent> <space>s :setlocal spell! spell?<enter>
 set spelllang=en_us,vi
 
 function! FzfSpellSink(word)
-    exe 'normal! "_ciw'.a:word
+  exe 'normal! "_ciw'.a:word
 endfunction
 
 function! FzfSpell()
-    let suggestions = spellsuggest(expand("<cword>"))
-    return fzf#run(fzf#wrap({'source': suggestions, 'sink': function("FzfSpellSink"), 'window': { 'width': 0.2, 'height': 0.9, 'xoffset': 1 }}))
+  let suggestions = spellsuggest(expand("<cword>"))
+  return fzf#run(fzf#wrap({'source': suggestions, 'sink': function("FzfSpellSink"), 'window': { 'width': 0.2, 'height': 0.9, 'xoffset': 1 }}))
 endfunction
 
 nnoremap z= :call FzfSpell()<enter>
@@ -360,9 +360,9 @@ command! PlugInstallWithReloadConfigFile execute "silent source ~/.config/nvim/i
 command! ShowFileType execute "set filetype?"
 
 fun! TrimWhitespace()
-    let l:save = winsaveview()
-    keeppatterns %s/\s\+$//e
-    call winrestview(l:save)
+  let l:save = winsaveview()
+  keeppatterns %s/\s\+$//e
+  call winrestview(l:save)
 endfun
 command! TrimWhitespace call TrimWhitespace()
 
