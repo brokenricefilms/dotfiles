@@ -670,7 +670,7 @@ show-weekdate=false
 
 [org/gnome/desktop/input-sources]
 current=uint32 0
-mru-sources=[('ibus', 'Bamboo::Us'), ('xkb', 'us')]
+mru-sources=[('xkb', 'us'), ('ibus', 'Bamboo::Us')]
 per-window=false
 sources=[('xkb', 'us'), ('ibus', 'Bamboo::Us')]
 xkb-options=['lv3:menu_switch', 'shift:both_capslock_cancel', 'caps:escape']
@@ -696,12 +696,15 @@ show-battery-percentage=true
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel', 'ca-desrt-dconf-editor', 'ryzen-controller', 'org-gnome-extensions-desktop', 'org-kde-kdenlive', 'firefox-developer-edition', 'firefox', 'ffpwa-01g2kq6xtkbex4080qh0acspcd', 'org-gnome-terminal', 'org-gnome-software']
+application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel', 'ca-desrt-dconf-editor', 'ryzen-controller', 'org-gnome-extensions-desktop', 'org-kde-kdenlive', 'firefox-developer-edition', 'firefox', 'ffpwa-01g2kq6xtkbex4080qh0acspcd', 'org-gnome-terminal', 'org-gnome-software', 'chrome-hhnnljnilmcemljhmhidbloflgjbandm-default']
 show-banners=true
 show-in-lock-screen=false
 
 [org/gnome/desktop/notifications/application/ca-desrt-dconf-editor]
 application-id='ca.desrt.dconf-editor.desktop'
+
+[org/gnome/desktop/notifications/application/chrome-hhnnljnilmcemljhmhidbloflgjbandm-default]
+application-id='chrome-hhnnljnilmcemljhmhidbloflgjbandm-Default.desktop'
 
 [org/gnome/desktop/notifications/application/ffpwa-01g2kq6xtkbex4080qh0acspcd]
 application-id='FFPWA-01G2KQ6XTKBEX4080QH0ACSPCD.desktop'
@@ -1259,11 +1262,11 @@ toggle-overview=['<Super>s']
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1654564817
+check-timestamp=int64 1654746056
 first-run=false
 install-timestamp=int64 1653574325
 security-timestamp=int64 0
-update-notification-timestamp=int64 1654307785
+update-notification-timestamp=int64 1654642948
 
 [org/gnome/system/location]
 enabled=true
