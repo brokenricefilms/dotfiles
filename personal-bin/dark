@@ -4,6 +4,8 @@ echo "set background=dark
 colorscheme github_dark
 " >~/dotfiles/nvim/themeControl.vim
 
+cat ~/dotfiles/foot/foot_dark.ini > ~/dotfiles/foot/foot.ini
+
 DIRECTORY=~/dotfiles/bat
 
 if [ -d "$DIRECTORY" ]; then

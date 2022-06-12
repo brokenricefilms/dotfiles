@@ -4,5 +4,11 @@ echo "set background=light
 colorscheme github_light
 " >~/dotfiles/nvim/themeControl.vim
 
-mkdir ~/dotfiles/bat/
+cat ~/dotfiles/foot/foot_light.ini > ~/dotfiles/foot/foot.ini
+
+DIRECTORY=~/dotfiles/bat
+
+if [ -d "$DIRECTORY" ]; then
+  mkdir $DIRECTORY
+fi
 echo "--theme=\"GitHub\"" >~/dotfiles/bat/config
