@@ -7,6 +7,7 @@ alias pull="git pull &"
 alias dv='git difftool'
 alias gl='git log --oneline | head -n 5'
 alias lg='lazygit'
+alias grt='cd "$(git rev-parse --show-toplevel)"'
 
 isInGitRepo() { git rev-parse HEAD &>/dev/null }
 
