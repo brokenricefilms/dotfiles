@@ -1,6 +1,4 @@
 call plug#begin()
-Plug 'https://github.com/nvim-lualine/lualine.nvim'
-
 Plug 'https://github.com/ms-jpq/coq_nvim'
 Plug 'https://github.com/ms-jpq/coq.thirdparty', {'branch': '3p'}
 
@@ -217,7 +215,7 @@ set number relativenumber
 command! NumberLine execute "set number relativenumber"
 command! NumberLineOff execute "set nonumber norelativenumber"
 
-set statusline=[\ %F\ %m]\ %{zoom#statusline()}\ %r%h%w%=\ %{fugitive#statusline()}
+set statusline=[\ %F\ %m]\ %{zoom#statusline()}\ %r%h%w%=\ [\ %{FugitiveHead()}\ ]
 
 set list
 let &listchars = 'tab:▸ ,trail:·,nbsp:±,extends:❯,precedes:❮'
