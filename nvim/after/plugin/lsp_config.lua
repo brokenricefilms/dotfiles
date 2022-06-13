@@ -76,3 +76,21 @@ vim.api.nvim_set_keymap("n", "<space>6", "<cmd>lua vim.lsp.buf.formatting()<CR>"
 vim.api.nvim_set_keymap("n", "<space>7", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 vim.api.nvim_set_keymap("n", "<space>8", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 vim.api.nvim_set_keymap("n", "<space>9", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+
+local border = {
+	{ "╭", "FloatBorder" },
+	{ "─", "FloatBorder" },
+	{ "╮", "FloatBorder" },
+	{ "│", "FloatBorder" },
+	{ "╯", "FloatBorder" },
+	{ "─", "FloatBorder" },
+	{ "╰", "FloatBorder" },
+	{ "│", "FloatBorder" },
+}
+
+local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+	opts = opts or {}
+	opts.border = opts.border or border
+	return orig_util_open_floating_preview(contents, syntax, opts, ...)
+end
