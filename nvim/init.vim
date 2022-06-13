@@ -57,7 +57,6 @@ command! GithubRepoViewWeb execute "FloatermSend cd %:h:p ; gh browse ; cd -"
 
 command! LazyGit execute "FloatermNew --autoclose=1 cd %:h:p ; lazygit ; cd -"
 noremap <silent> gl :LazyGit<enter>
-command! InsectCalculator execute "FloatermNew --autoclose=1 insect"
 
 Plug 'https://github.com/wellle/targets.vim'
 
@@ -135,7 +134,6 @@ Plug 'https://github.com/tpope/vim-fugitive'
 noremap <silent> gs :G<enter>gg5j2ly$k0
 noremap <silent> gc :silent cd %:h<enter>:BCommits<enter>
 noremap <silent> gb :G blame<enter>
-noremap <silent> gd :vsplit<Return><C-w>w:Gdiff<enter>
 
 Plug 'https://github.com/tpope/vim-eunuch'
 
