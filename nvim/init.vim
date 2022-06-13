@@ -210,8 +210,6 @@ set cursorline
 set cursorlineopt=number
 
 set number relativenumber
-command! NumberLine execute "set number relativenumber"
-command! NumberLineOff execute "set nonumber norelativenumber"
 
 set statusline=[\ \ %{FugitiveHead()}\ ]\ [\ %F\ %m]\ %{zoom#statusline()}\ %r%h%w%=[\ %{expand(&filetype)}\ ]
 
