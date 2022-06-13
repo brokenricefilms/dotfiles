@@ -213,7 +213,7 @@ set number relativenumber
 command! NumberLine execute "set number relativenumber"
 command! NumberLineOff execute "set nonumber norelativenumber"
 
-set statusline=[\ %F\ %m]\ %{zoom#statusline()}\ %r%h%w%=\ [\ %{FugitiveHead()}\ ]
+set statusline=[\ \ %{FugitiveHead()}\ ]\ [\ %F\ %m]\ %{zoom#statusline()}\ %r%h%w%=[\ %{expand(&filetype)}\ ]
 
 set list
 let &listchars = 'tab:▸ ,trail:·,nbsp:±,extends:❯,precedes:❮'
@@ -298,8 +298,9 @@ map <silent> <Down> <C-W>-
 map <silent> <Up> <C-W>+
 map <silent> <Left> <C-w>>
 
-noremap <silent> cd. :cd %:h<enter>
-noremap <silent> cd :cd<enter>
+noremap cd. :cd %:h<enter>:pwd<enter>
+noremap cd :cd<enter>:pwd<enter>
+noremap cdr :cd %:h<enter>:cd `git rev-parse --show-toplevel`<enter>:pwd<enter>
 
 vnoremap <silent> <C-j> :m '>+1<enter>gv=gv
 vnoremap <silent> <C-k> :m '<-2<enter>gv=gv
