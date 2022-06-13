@@ -354,6 +354,7 @@ command! DeleteDosLineEngdingChar execute "%s/\r$/ /g"
 command! PlugCleanWithReloadConfigFile execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf" | execute "PlugClean"
 command! PlugInstallWithReloadConfigFile execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf" | execute "PlugInstall"
 command! ShowFileType execute "set filetype?"
+command! RemoveSymbolMAkaWindowsEndline execute "%s/\r//g"
 
 fun! TrimWhitespace()
   let l:save = winsaveview()
