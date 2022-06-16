@@ -19,18 +19,8 @@ if [ -f "$1" ]; then
   *.rar) unrar x "$1" ;;
   *.Z) uncompress "$1" ;;
   *.7z) 7z x $1 ;;
-  *)
-    if hash cowsay 2>/dev/null; then
-      cowsay "'"$1"' cannot be extracted/mounted via extract()"
-    else
-      echo "'"$1"' cannot be extracted/mounted via extract()"
-    fi
-    ;;
+  *) echo "'"$1"' cannot be extracted/mounted via extract()" ;;
   esac
 else
-  if hash cowsay 2>/dev/null; then
-    cowthink -d "'$1' is not a valid file"
-  else
-    echo "'$1' is not a valid file"
-  fi
+  echo "'$1' is not a valid file"
 fi
