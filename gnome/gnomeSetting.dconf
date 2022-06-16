@@ -9,7 +9,7 @@ window-width=540
 [com/github/johnfactotum/Foliate/window-state]
 fullscreen=false
 height=640
-last-file='/home/master/Documents/Book/cu-di-de-loi-thanh-duong-phoenix-ho.epub'
+last-file='/home/master/Documents/Book/how_not_to_die.epub'
 maximized=false
 width=960
 
@@ -623,7 +623,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='power'
+last-panel='wifi'
 window-state=(903, 639, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -1056,7 +1056,7 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.85059856011519, 106.6581)
+night-light-last-coordinates=(10.823600719942403, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
@@ -1094,7 +1094,7 @@ sleep-inactive-ac-type='nothing'
 sleep-inactive-battery-type='suspend'
 
 [org/gnome/shell]
-app-picker-layout=[{'accessories': <{'position': <0>}>, 'system-tools': <{'position': <1>}>, 'org.gnome.Nautilus.desktop': <{'position': <2>}>, 'firefox.desktop': <{'position': <3>}>, 'audacity.desktop': <{'position': <4>}>, 'file_browser.desktop': <{'position': <5>}>, 'org.flameshot.Flameshot.desktop': <{'position': <6>}>}, {'com.github.johnfactotum.Foliate.desktop': <{'position': <0>}>, 'chrome-nfeflepgbdmcjnkfdjbfhojakpjijcii-Default.desktop': <{'position': <1>}>, 'colorPicker.desktop': <{'position': <2>}>, 'chrome-magkoliahgffibhgfkmoealggombgknl-Default.desktop': <{'position': <3>}>, 'chrome-aghbiahbpaijignceidepookljebhfak-Default.desktop': <{'position': <4>}>, 'chrome-kmcnjdcipmgchfndpapkoecbidofdpbc-Default.desktop': <{'position': <5>}>, 'google-chrome.desktop': <{'position': <6>}>, 'chrome-celnaknmndcdcjcagffhbhciignkeokb-Default.desktop': <{'position': <7>}>, 'chrome-fmgjjmmmlfnkbppncabfkddbjimcfncm-Default.desktop': <{'position': <8>}>, 'chrome-kjbdgfilnfhdoflbpgamdcdgpehopbep-Default.desktop': <{'position': <9>}>, 'chrome-mnhkaebcjjhencmpkapnbdaogjamfbcj-Default.desktop': <{'position': <10>}>, 'chrome-kjgfgldnnfoeklkmfkjfagphfepbbdan-Default.desktop': <{'position': <11>}>, 'chrome-ncmjhecbjeaamljdfahankockkkdmedg-Default.desktop': <{'position': <12>}>, 'chrome-aldkillipapfonlifpkkkbfgbhijnbli-Default.desktop': <{'position': <13>}>, 'mpv.desktop': <{'position': <14>}>, 'docNew.desktop': <{'position': <15>}>, 'chrome-gmnlgbejgaafknnfeedboaibiambmcpi-Default.desktop': <{'position': <16>}>, 'eventNew.desktop': <{'position': <17>}>, 'figjamNew.desktop': <{'position': <18>}>, 'newFigma.desktop': <{'position': <19>}>, 'formNew.desktop': <{'position': <20>}>, 'keepNew.desktop': <{'position': <21>}>, 'meetNew.desktop': <{'position': <22>}>, 'chrome-hhnnljnilmcemljhmhidbloflgjbandm-Default.desktop': <{'position': <23>}>}, {'repoNew.desktop': <{'position': <0>}>, 'sheetNew.desktop': <{'position': <1>}>, 'slideNew.desktop': <{'position': <2>}>, 'onlyoffice-desktopeditors.desktop': <{'position': <3>}>, 'com.obsproject.Studio.desktop': <{'position': <4>}>, 'chrome-fklnhlgfamfeknafaldenkmoeccpkmmf-Default.desktop': <{'position': <5>}>, 'chrome-aeejceomnhmjmeacdckmmopfaigimnkl-Default.desktop': <{'position': <6>}>, 'chrome-mclfkjlppdpojfbpcmdnpdblnfpohghl-Default.desktop': <{'position': <7>}>, 'gtk-v4l.desktop': <{'position': <8>}>, 'chrome-ahfgeienlihckogmohjhadlkjgocpleb-Default.desktop': <{'position': <9>}>, 'chrome-kampcpecfanbfbpociedinkcljkblgil-Default.desktop': <{'position': <10>}>, 'chrome-eikjhbkpemdappjfcmdeeeamdpkgabmk-Default.desktop': <{'position': <11>}>, 'chrome-mndalcnfgefmppbnmmbgphoojgjccbli-Default.desktop': <{'position': <12>}>, 'chrome-gbmplfifepjenigdepeahbecfkcalfhg-Default.desktop': <{'position': <13>}>}]
+app-picker-layout=[{'accessories': <{'position': <0>}>, 'system-tools': <{'position': <1>}>, 'org.gnome.Nautilus.desktop': <{'position': <2>}>, 'firefox.desktop': <{'position': <3>}>, 'audacity.desktop': <{'position': <4>}>, 'file_browser.desktop': <{'position': <5>}>, 'org.flameshot.Flameshot.desktop': <{'position': <6>}>}, {'com.github.johnfactotum.Foliate.desktop': <{'position': <0>}>, 'chrome-nfeflepgbdmcjnkfdjbfhojakpjijcii-Default.desktop': <{'position': <1>}>, 'colorPicker.desktop': <{'position': <2>}>, 'chrome-magkoliahgffibhgfkmoealggombgknl-Default.desktop': <{'position': <3>}>, 'chrome-aghbiahbpaijignceidepookljebhfak-Default.desktop': <{'position': <4>}>, 'chrome-kmcnjdcipmgchfndpapkoecbidofdpbc-Default.desktop': <{'position': <5>}>, 'google-chrome.desktop': <{'position': <6>}>, 'chrome-celnaknmndcdcjcagffhbhciignkeokb-Default.desktop': <{'position': <7>}>, 'chrome-fmgjjmmmlfnkbppncabfkddbjimcfncm-Default.desktop': <{'position': <8>}>, 'chrome-kjbdgfilnfhdoflbpgamdcdgpehopbep-Default.desktop': <{'position': <9>}>, 'chrome-mnhkaebcjjhencmpkapnbdaogjamfbcj-Default.desktop': <{'position': <10>}>, 'chrome-kjgfgldnnfoeklkmfkjfagphfepbbdan-Default.desktop': <{'position': <11>}>, 'chrome-ncmjhecbjeaamljdfahankockkkdmedg-Default.desktop': <{'position': <12>}>, 'chrome-aldkillipapfonlifpkkkbfgbhijnbli-Default.desktop': <{'position': <13>}>, 'mpv.desktop': <{'position': <14>}>, 'docNew.desktop': <{'position': <15>}>, 'chrome-gmnlgbejgaafknnfeedboaibiambmcpi-Default.desktop': <{'position': <16>}>, 'eventNew.desktop': <{'position': <17>}>, 'figjamNew.desktop': <{'position': <18>}>, 'newFigma.desktop': <{'position': <19>}>, 'formNew.desktop': <{'position': <20>}>, 'keepNew.desktop': <{'position': <21>}>, 'meetNew.desktop': <{'position': <22>}>, 'chrome-hhnnljnilmcemljhmhidbloflgjbandm-Default.desktop': <{'position': <23>}>}, {'repoNew.desktop': <{'position': <0>}>, 'sheetNew.desktop': <{'position': <1>}>, 'slideNew.desktop': <{'position': <2>}>, 'onlyoffice-desktopeditors.desktop': <{'position': <3>}>, 'com.obsproject.Studio.desktop': <{'position': <4>}>, 'chrome-fklnhlgfamfeknafaldenkmoeccpkmmf-Default.desktop': <{'position': <5>}>, 'chrome-aeejceomnhmjmeacdckmmopfaigimnkl-Default.desktop': <{'position': <6>}>, 'chrome-mclfkjlppdpojfbpcmdnpdblnfpohghl-Default.desktop': <{'position': <7>}>, 'gtk-v4l.desktop': <{'position': <8>}>, 'chrome-ahfgeienlihckogmohjhadlkjgocpleb-Default.desktop': <{'position': <9>}>, 'chrome-kampcpecfanbfbpociedinkcljkblgil-Default.desktop': <{'position': <10>}>, 'chrome-eikjhbkpemdappjfcmdeeeamdpkgabmk-Default.desktop': <{'position': <11>}>, 'chrome-mndalcnfgefmppbnmmbgphoojgjccbli-Default.desktop': <{'position': <12>}>, 'chrome-gbmplfifepjenigdepeahbecfkcalfhg-Default.desktop': <{'position': <13>}>, 'webcam.desktop': <{'position': <14>}>}]
 command-history=['gnome-session-properties', 'ibus-deamon', 'ibus-daemon -vxr', 'r']
 disable-user-extensions=false
 disabled-extensions=['dash-to-dock@micxgx.gmail.com', 'material-shell@papyelgringo', 'gnome-ui-tune@itstime.tech', 'pamac-updates@manjaro.org', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'x11gestures@joseexposito.github.io', 'focus@scaryrawr.github.io', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'appindicatorsupport@rgcjonas.gmail.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'pop-shell@system76.com']
@@ -1262,7 +1262,7 @@ toggle-overview=['<Super>s']
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1655267371
+check-timestamp=int64 1655355498
 first-run=false
 install-timestamp=int64 1653574325
 online-updates-timestamp=int64 1654912374
