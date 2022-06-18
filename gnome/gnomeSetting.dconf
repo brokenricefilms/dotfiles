@@ -6,9 +6,15 @@ window-height=500
 window-is-maximized=true
 window-width=540
 
+[com/github/johnfactotum/Foliate]
+autohide-headerbar=false
+
+[com/github/johnfactotum/Foliate/view]
+zoom-level=1.4000000000000004
+
 [com/github/johnfactotum/Foliate/window-state]
 fullscreen=false
-height=640
+height=1033
 last-file='/home/master/Documents/Book/how_not_to_die.epub'
 maximized=false
 width=960
@@ -1262,12 +1268,12 @@ toggle-overview=['<Super>s']
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1655421491
+check-timestamp=int64 1655525915
 first-run=false
 install-timestamp=int64 1653574325
 online-updates-timestamp=int64 1654912374
 security-timestamp=int64 0
-update-notification-timestamp=int64 1654912374
+update-notification-timestamp=int64 1655525982
 
 [org/gnome/system/location]
 enabled=true
