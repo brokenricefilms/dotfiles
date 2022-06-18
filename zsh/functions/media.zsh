@@ -13,4 +13,5 @@ function update_music() {
   cd ~/Music/
   trash *
   yta "https://thuanpham2311.github.io/l/music"
+  cd -
 }
