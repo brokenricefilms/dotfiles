@@ -4,7 +4,7 @@ echo "set background=light
 colorscheme github_light
 " >~/dotfiles/nvim/themeControl.vim
 
-cat ~/dotfiles/foot/foot_light.ini > ~/dotfiles/foot/foot.ini
+echo "include=~/dotfiles/foot/foot_light.ini" > ~/dotfiles/foot/themeControl.ini
 
 DIRECTORY=~/dotfiles/bat
 
