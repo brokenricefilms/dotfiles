@@ -2,6 +2,15 @@ call plug#begin()
 Plug 'https://github.com/ms-jpq/coq_nvim'
 Plug 'https://github.com/ms-jpq/coq.thirdparty', {'branch': '3p'}
 
+let g:coq_settings = { "keymap.recommended": v:false }
+
+ino <silent><expr> <Esc>   pumvisible() ? "\<C-e><Esc>" : "\<Esc>"
+ino <silent><expr> <C-c>   pumvisible() ? "\<C-e><C-c>" : "\<C-c>"
+ino <silent><expr> <BS>    pumvisible() ? "\<C-e><BS>"  : "\<BS>"
+ino <silent><expr> <CR>    pumvisible() ? (complete_info().selected == -1 ? "\<C-e><CR>" : "\<C-y>") : "\<CR>"
+ino <silent><expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+ino <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<BS>"
+
 Plug 'https://github.com/neovim/nvim-lspconfig'
 
 Plug 'https://github.com/williamboman/nvim-lsp-installer'
@@ -10,9 +19,6 @@ Plug 'https://github.com/mhartington/formatter.nvim'
 
 Plug 'https://github.com/editorconfig/editorconfig-vim'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
-
-Plug 'https://github.com/github/copilot.vim'
-let b:copilot_enabled=1
 
 Plug 'https://github.com/AndrewRadev/splitjoin.vim'
 let g:splitjoin_split_mapping = 'gj'
@@ -25,7 +31,6 @@ Plug 'https://github.com/dhruvasagar/vim-zoom'
 nmap <leader>z <Plug>(zoom-toggle)
 let g:zoom#statustext = '[ zoomed ]'
 
-" don't recommend use this for the long long like log command (yarn dev,...)
 Plug 'https://github.com/voldikss/vim-floaterm'
 
 let g:floaterm_width=0.9
