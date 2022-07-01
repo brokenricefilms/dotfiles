@@ -1268,11 +1268,11 @@ toggle-overview=['<Super>s']
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1656571470
+check-timestamp=int64 1656647397
 first-run=false
 install-timestamp=int64 1653574325
 online-updates-timestamp=int64 1654912374
-security-timestamp=int64 28116943071
+security-timestamp=int64 0
 update-notification-timestamp=int64 1656571591
 
 [org/gnome/system/location]
