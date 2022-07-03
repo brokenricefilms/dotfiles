@@ -629,7 +629,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='wifi'
+last-panel='sound'
 window-state=(903, 639, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -1062,7 +1062,7 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.85059856011519, 106.6581)
+night-light-last-coordinates=(10.841599280057595, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
@@ -1268,7 +1268,7 @@ toggle-overview=['<Super>s']
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1656738063
+check-timestamp=int64 1656818706
 first-run=false
 install-timestamp=int64 1656737892
 online-updates-timestamp=int64 1654912374
