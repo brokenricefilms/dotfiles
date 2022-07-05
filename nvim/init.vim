@@ -295,8 +295,8 @@ map <silent> <Down> <C-W>-
 map <silent> <Up> <C-W>+
 map <silent> <Left> <C-w>>
 
-noremap cd. :cd %:h<enter>:pwd<enter>
-noremap cd :cd<enter>:pwd<enter>
+noremap cd. :cd %:h<enter>
+noremap cd :cd<enter>
 noremap cdr :cd %:h<enter>:cd `git rev-parse --show-toplevel`<enter>:pwd<enter>
 
 vnoremap <silent> <C-j> :m '>+1<enter>gv=gv
