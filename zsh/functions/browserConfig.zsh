@@ -7,7 +7,6 @@ alias browserMail1='xdg-open "https://mail.google.com/mail/u/1/#inbox"'
 alias browserYoutubeSubsriptions='xdg-open "https://www.youtube.com/feed/subscriptions"'
 alias browserFeeder='xdg-open "https://feeder.co/reader"'
 alias browserDiscord='xdg-open "https://discord.com/channels/@me"'
-alias browserAnime='xdg-open "http://animevietsub.tv/"'
 
 function browserDaily() {
   browserYoutubeSubsriptions
@@ -15,6 +14,5 @@ function browserDaily() {
   browserMail0
   browserMail1
   browserFb
-  browserAnime
   browserDiscord
 }
