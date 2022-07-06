@@ -131,7 +131,7 @@ noremap // /
 Plug 'https://github.com/tpope/vim-fugitive'
 
 noremap <silent> gs :G<enter>gg5j$vT/y
-noremap <silent> gc :silent cd %:h<enter>:BCommits<enter>
+noremap <silent> gc :cd `git rev-parse --show-toplevel`<enter>:BCommits<enter>
 noremap <silent> gb :G blame<enter>
 
 Plug 'https://github.com/tpope/vim-eunuch'
@@ -297,7 +297,7 @@ map <silent> <Left> <C-w>>
 
 noremap <silent> cd. :cd %:h<enter>
 noremap <silent> cd :cd<enter>
-noremap <silent> cdr :cd %:h<enter>:cd `git rev-parse --show-toplevel`<enter>:pwd<enter>
+noremap <silent> cdr :cd %:h<enter>:cd `git rev-parse --show-toplevel`<enter>
 
 vnoremap <silent> <C-j> :m '>+1<enter>gv=gv
 vnoremap <silent> <C-k> :m '<-2<enter>gv=gv
