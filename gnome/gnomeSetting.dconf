@@ -6,6 +6,12 @@ window-height=500
 window-is-maximized=true
 window-width=540
 
+[com/github/hugolabe/Wike]
+last-uri='https://en.wikipedia.org/wiki/Main_Page'
+window-height=700
+window-max=false
+window-width=900
+
 [com/github/johnfactotum/Foliate]
 autohide-headerbar=false
 
@@ -603,6 +609,13 @@ use-system-font=false
 is-maximized=false
 window-size=(960, 600)
 
+[org/gnome/boxes]
+first-run=false
+view='icon-view'
+window-maximized=true
+window-position=[26, 23]
+window-size=[768, 600]
+
 [org/gnome/calculator]
 accuracy=9
 angle-units='degrees'
@@ -629,7 +642,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='sound'
+last-panel='wifi'
 window-state=(903, 639, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -689,7 +702,7 @@ clock-show-weekday=false
 color-scheme='default'
 cursor-theme='GoogleDot-Blue'
 document-font-name='JetBrains Mono NL 11'
-enable-animations=false
+enable-animations=true
 enable-hot-corners=false
 font-antialiasing='grayscale'
 font-hinting='slight'
@@ -702,7 +715,7 @@ show-battery-percentage=true
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel', 'ca-desrt-dconf-editor', 'ryzen-controller', 'org-gnome-extensions-desktop', 'org-kde-kdenlive', 'firefox-developer-edition', 'firefox', 'ffpwa-01g2kq6xtkbex4080qh0acspcd', 'org-gnome-terminal', 'org-gnome-software', 'chrome-hhnnljnilmcemljhmhidbloflgjbandm-default']
+application-children=['org-manjaro-pamac-manager', 'manjaro-settings-manager', 'org-gnome-nautilus', 'google-chrome', 'org-gnome-chromegnomeshell', 'gnome-network-panel', 'gnome-power-panel', 'ca-desrt-dconf-editor', 'ryzen-controller', 'org-gnome-extensions-desktop', 'org-kde-kdenlive', 'firefox-developer-edition', 'firefox', 'ffpwa-01g2kq6xtkbex4080qh0acspcd', 'org-gnome-terminal', 'org-gnome-software', 'chrome-hhnnljnilmcemljhmhidbloflgjbandm-default', 'org-gnome-boxes']
 show-banners=true
 show-in-lock-screen=false
 
@@ -732,6 +745,9 @@ application-id='google-chrome.desktop'
 
 [org/gnome/desktop/notifications/application/manjaro-settings-manager]
 application-id='manjaro-settings-manager.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-boxes]
+application-id='org.gnome.Boxes.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-chromegnomeshell]
 application-id='org.gnome.ChromeGnomeShell.desktop'
@@ -1062,7 +1078,7 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.841599280057595, 106.6581)
+night-light-last-coordinates=(10.823600719942403, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
@@ -1163,7 +1179,7 @@ accessibility-menu=false
 activities-button=false
 activities-button-icon-monochrome=true
 activities-button-label=true
-animation=0
+animation=1
 app-menu=false
 app-menu-icon=false
 background-menu=true
@@ -1268,12 +1284,12 @@ toggle-overview=['<Super>s']
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1656890659
+check-timestamp=int64 1657071812
 first-run=false
 install-timestamp=int64 1656737892
 online-updates-timestamp=int64 1654912374
 security-timestamp=int64 0
-update-notification-timestamp=int64 1656737953
+update-notification-timestamp=int64 1657071811
 
 [org/gnome/system/location]
 enabled=true
@@ -1362,7 +1378,7 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(359, 66)
+window-position=(26, 23)
 window-size=(1203, 902)
 
 [org/virt-manager/virt-manager]
