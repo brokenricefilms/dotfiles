@@ -97,7 +97,7 @@ function openHiddenFileInHome() {
 }
 alias Oh='openHiddenFileInHome'
 
-function fzfMan() {
+function manFzf() {
   if [ -z  $1 ]
   then
     man -k . | fzf -q " $1" --prompt='man> '  --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r man | col -bx | bat -l man -p --color always' | tr -d '()' | awk '{printf "%s ",  $2} {print  $1}' | xargs -r man
@@ -105,8 +105,20 @@ function fzfMan() {
     man  $1
   fi
 }
-alias M='fzfMan'
-alias help="fzfMan"
+alias M='manFzf'
+alias help="manFzf"
+
+function whichFzf() {
+  CMD=$(
+  (
+  (alias)
+  (functions | grep "()" | cut -d ' ' -f1 | grep -v "^_" )
+  ) | fzf | cut -d '=' -f1
+  );
+
+  eval $CMD
+}
+alias W='whichFzf'
 
 function getAlias() {
   CMD=$(
@@ -120,10 +132,12 @@ function getAlias() {
 }
 
 function getEnvironment() {
-  local out
-  out=$(env | fzf)
-  echo $(echo $out | cut -d= -f2)
+  local ENV_FZF
+  ENV_FZF=$(env | fzfDown)
+  echo $(echo $ENV_FZF | cut -d= -f2)
+  copy $(echo $ENV_FZF | cut -d= -f2)
 }
+alias listEnvironment='getEnvironment'
 
 function listAllCommands() {
     COMMANDS=`echo -n $PATH | xargs -d : -I {} find {} -maxdepth 1 \
