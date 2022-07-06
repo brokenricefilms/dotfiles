@@ -109,14 +109,13 @@ alias M='manFzf'
 alias help="manFzf"
 
 function whichFzf() {
-  CMD=$(
-  (
-  (alias)
-  (functions | grep "()" | cut -d ' ' -f1 | grep -v "^_" )
-  ) | fzf | cut -d '=' -f1
-  );
+  COMMANDS=`echo -n $PATH | xargs -d : -I {} find {} -maxdepth 1 \
+      -executable -type f -printf '%P\n'  2>/dev/null`
+  ALIASES=`alias | cut -d '=' -f 1`
+  FUNCTIONS=`print -l ${(ok)functions}`
+  RESULT=`echo "$COMMANDS"$'\n'"$ALIASES"$'\n'"$FUNCTIONS" | sort -u | fzfDown`
 
-  eval $CMD
+  eval which $RESULT
 }
 alias W='whichFzf'
 
