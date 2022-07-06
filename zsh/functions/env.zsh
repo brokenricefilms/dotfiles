@@ -13,3 +13,6 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin
 export PATH=$PATH:~/dotfiles/personal-bin
 export GEM_HOME="$HOME/gems"
+export VISUAL='nvim'
+export EDITOR=$VISUAL
+export MANPAGER='nvim +Man!'
