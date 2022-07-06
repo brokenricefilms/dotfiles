@@ -14,6 +14,11 @@ alias al='la'
 alias l.='clear -x ; exa -a| egrep "^\."'
 alias lt='clear -x ; exa -aT --color=always --group-directories-first --icons'
 
+function changeDirToGitRoot() {
+  cd $(git rev-parse --show-toplevel)
+}
+alias cdr='changeDirToGitRoot'
+
 function diskFree() {
   clear -x
   echo ""
