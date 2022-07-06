@@ -130,7 +130,7 @@ noremap // /
 
 Plug 'https://github.com/tpope/vim-fugitive'
 
-noremap <silent> gs :G<enter>gg5j2ly$k0
+noremap <silent> gs :G<enter>gg5j$vT/y
 noremap <silent> gc :silent cd %:h<enter>:BCommits<enter>
 noremap <silent> gb :G blame<enter>
 
