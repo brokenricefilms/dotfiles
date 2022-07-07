@@ -228,8 +228,8 @@ set expandtab
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd FileType *.md setlocal formatoptions+=tcqj
 
-set nocompatible
 filetype plugin indent on
+set nocompatible
 set encoding=UTF-8
 set fileformat=unix
 set mouse=a
