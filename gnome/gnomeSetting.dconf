@@ -642,7 +642,7 @@ video-x-resolution=1280
 video-y-resolution=720
 
 [org/gnome/control-center]
-last-panel='wifi'
+last-panel='mouse'
 window-state=(903, 639, false)
 
 [org/gnome/desktop/a11y/applications]
@@ -783,7 +783,7 @@ speed=1.0
 
 [org/gnome/desktop/peripherals/touchpad]
 send-events='enabled'
-speed=0.78823529411764715
+speed=0.43529411764705883
 tap-to-click=true
 two-finger-scrolling-enabled=true
 
@@ -1078,7 +1078,7 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
-night-light-last-coordinates=(10.823600719942403, 106.6581)
+night-light-last-coordinates=(10.814601439884809, 106.6581)
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
@@ -1179,15 +1179,18 @@ accessibility-menu=false
 activities-button=false
 activities-button-icon-monochrome=true
 activities-button-label=true
+aggregate-menu=true
 animation=1
 app-menu=false
 app-menu-icon=false
-background-menu=true
+background-menu=false
+calendar=true
 clock-menu=true
 clock-menu-position=0
 dash=false
 dash-icon-size=0
 double-super-to-appgrid=true
+events-button=false
 gesture=true
 hot-corner=true
 keyboard-layout=true
@@ -1203,13 +1206,13 @@ panel-indicator-padding-size=0
 panel-notification-icon=true
 panel-size=0
 ripple-box=false
-search=false
+search=true
 show-apps-button=false
 show-prefs-intro=false
-startup-status=0
+startup-status=1
 theme=true
 top-panel-position=0
-weather=true
+weather=false
 window-demands-attention-focus=true
 window-picker-icon=false
 window-preview-caption=true
@@ -1220,7 +1223,7 @@ workspace-switcher-should-show=false
 workspace-switcher-size=0
 workspace-wrap-around=false
 workspaces-in-app-grid=false
-world-clock=true
+world-clock=false
 
 [org/gnome/shell/extensions/pop-shell]
 active-hint=false
@@ -1284,7 +1287,7 @@ toggle-overview=['<Super>s']
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1657071812
+check-timestamp=int64 1657151266
 first-run=false
 install-timestamp=int64 1656737892
 online-updates-timestamp=int64 1654912374
