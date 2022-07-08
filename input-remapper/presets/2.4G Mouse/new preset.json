@@ -1,11 +1,7 @@
 {
     "mapping": {
-        "1,273,1+1,272,1": [
-            "Super_R",
-            "keyboard"
-        ],
         "1,272,1+1,273,1": [
-            "Alt_R+Escape",
+            "Super_L",
             "keyboard"
         ]
     }
