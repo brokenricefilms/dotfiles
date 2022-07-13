@@ -84,10 +84,6 @@
             "Alt_L+4",
             "keyboard"
         ],
-        "1,57,1+1,34,1": [
-            "KEY_RIGHTCTRL+a+f",
-            "keyboard"
-        ],
         "1,57,1+1,2,1": [
             "KEY_F1",
             "keyboard"
@@ -126,6 +122,14 @@
         ],
         "1,57,1+1,11,1": [
             "KEY_F10",
+            "keyboard"
+        ],
+        "1,57,1+1,39,1": [
+            "KEY_RIGHTCTRL+a+f",
+            "keyboard"
+        ],
+        "1,149,1": [
+            "XF86RotateWindows",
             "keyboard"
         ]
     }
