@@ -4,7 +4,7 @@ window-maximized=true
 window-size=(768, 600)
 
 [org/gnome/control-center]
-last-panel='info-overview'
+last-panel='keyboard'
 window-state=(980, 640, false)
 
 [org/gnome/desktop/app-folders]
@@ -23,8 +23,8 @@ translate=true
 
 [org/gnome/desktop/input-sources]
 current=uint32 0
-sources=[('xkb', 'us')]
-xkb-options=@as []
+sources=[('xkb', 'us'), ('ibus', 'Bamboo::Us')]
+xkb-options=['lv3:menu_switch']
 
 [org/gnome/desktop/interface]
 enable-animations=true
@@ -79,12 +79,61 @@ ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
-night-light-last-coordinates=(10.823600719942403, 106.6581)
+night-light-last-coordinates=(10.85059856011519, 106.6581)
 
 [org/gnome/shell]
 app-picker-layout=[{'org.fedoraproject.MediaWriter.desktop': <{'position': <0>}>, 'org.gnome.Contacts.desktop': <{'position': <1>}>, 'org.gnome.Weather.desktop': <{'position': <2>}>, 'org.gnome.clocks.desktop': <{'position': <3>}>, 'org.gnome.Maps.desktop': <{'position': <4>}>, 'libreoffice-calc.desktop': <{'position': <5>}>, 'org.gnome.Photos.desktop': <{'position': <6>}>, 'org.gnome.Totem.desktop': <{'position': <7>}>, 'org.gnome.Calculator.desktop': <{'position': <8>}>, 'libreoffice-impress.desktop': <{'position': <9>}>, 'simple-scan.desktop': <{'position': <10>}>, 'org.gnome.Settings.desktop': <{'position': <11>}>, 'gnome-system-monitor.desktop': <{'position': <12>}>, 'org.gnome.Boxes.desktop': <{'position': <13>}>, 'org.gnome.Terminal.desktop': <{'position': <14>}>, 'Utilities': <{'position': <15>}>, 'libreoffice-writer.desktop': <{'position': <16>}>, 'yelp.desktop': <{'position': <17>}>, 'org.gnome.TextEditor.desktop': <{'position': <18>}>, 'org.gnome.Cheese.desktop': <{'position': <19>}>, 'org.gnome.Tour.desktop': <{'position': <20>}>, 'kitty.desktop': <{'position': <21>}>, 'mpv.desktop': <{'position': <22>}>}, {'nvim.desktop': <{'position': <0>}>, 'org.flameshot.Flameshot.desktop': <{'position': <1>}>, 'com.github.johnfactotum.Foliate.desktop': <{'position': <2>}>, 'htop.desktop': <{'position': <3>}>, 'java-17-openjdk-17.0.3.0.7-2.fc36.x86_64-jconsole.desktop': <{'position': <4>}>, 'gtk-v4l.desktop': <{'position': <5>}>, 'google-chrome.desktop': <{'position': <6>}>, 'org.gnome.Rhythmbox3.desktop': <{'position': <7>}>}]
 enabled-extensions=['background-logo@fedorahosted.org', 'clipboard-indicator@tudmotu.com', 'gnome-fuzzy-app-search@gnome-shell-extensions.Czarlie.gitlab.com', 'just-perfection-desktop@just-perfection', 'gnome-shell-go-to-last-workspace@github.com']
 welcome-dialog-last-shown-version='42.0'
+
+[org/gnome/shell/keybindings]
+close=['<Alt>q']
+cycle-windows=@as []
+cycle-windows-backward=@as []
+minimize=['<Alt>comma']
+move-to-monitor-down=@as []
+move-to-monitor-left=@as []
+move-to-monitor-right=@as []
+move-to-monitor-up=@as []
+move-to-workspace-0=['<Shift><Alt>parenright']
+move-to-workspace-1=['<Shift><Alt>exclam']
+move-to-workspace-10=['<Shift><Super>0']
+move-to-workspace-2=['<Shift><Alt>at']
+move-to-workspace-3=['<Shift><Alt>numbersign']
+move-to-workspace-4=['<Shift><Alt>dollar']
+move-to-workspace-5=['<Shift><Alt>percent']
+move-to-workspace-6=['<Shift><Alt>and']
+move-to-workspace-7=['<Shift><Alt>ampersand']
+move-to-workspace-8=['<Shift><Alt>asterisk']
+move-to-workspace-9=['<Shift><Alt>parenleft']
+move-to-workspace-down=@as []
+move-to-workspace-left=['<Shift><Alt>h']
+move-to-workspace-right=['<Shift><Alt>l']
+move-to-workspace-up=@as []
+show-desktop=['<Alt>d']
+switch-applications=['<Alt>Tab']
+switch-applications-backward=['<Shift><Alt>Tab']
+switch-input-source=['<Primary>space']
+switch-input-source-backward=['<Primary><Shift>space']
+switch-panels=@as []
+switch-panels-backward=@as []
+switch-to-workspace-0=['<Alt>0']
+switch-to-workspace-1=['<Alt>1']
+switch-to-workspace-10=['<Alt>0']
+switch-to-workspace-2=['<Alt>2']
+switch-to-workspace-3=['<Alt>3']
+switch-to-workspace-4=['<Alt>4']
+switch-to-workspace-5=['<Alt>5']
+switch-to-workspace-6=['<Alt>6']
+switch-to-workspace-7=['<Alt>7']
+switch-to-workspace-8=['<Alt>8']
+switch-to-workspace-9=['<Alt>9']
+switch-to-workspace-down=['<Primary><Super>Down', '<Primary><Super>j']
+switch-to-workspace-left=['<Alt>h']
+switch-to-workspace-right=['<Alt>l']
+switch-to-workspace-up=['<Primary><Super>Up', '<Primary><Super>k']
+toggle-maximized=['<Alt>z']
+unmaximize=@as []
 
 [org/gnome/shell/world-clocks]
 locations=@av []
