@@ -5,7 +5,6 @@
 /zsh/functions/fzf-zsh-completions/
 /nvim/themeControl.vim
 /kitty/theme.conf
-/bat/config
 /.fonts/.uuid
 
 # Created by https://www.toptal.com/developers/gitignore/api/vim,linux,zsh
