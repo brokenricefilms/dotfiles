@@ -60,6 +60,9 @@ function update() {
   # for debian base
   if hash apt 2>/dev/null; then
     sudo apt update -y
+    sudo apt upgrade -y
+    sudo apt autoremove -y
+    flatpak update
   fi
 
   # for fedora
