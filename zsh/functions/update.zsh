@@ -62,7 +62,7 @@ function update() {
     sudo apt update -y
     sudo apt upgrade -y
     sudo apt autoremove -y
-    flatpak update
+    flatpak update -y
   fi
 
   # for fedora
