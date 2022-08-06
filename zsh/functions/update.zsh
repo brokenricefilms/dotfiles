@@ -1,8 +1,14 @@
 # for debian base
 if hash apt 2>/dev/null; then
-  alias ins='sudo apt install -y'
-  alias inss='apt search'
-  alias uins='sudo apt remove -y'
+  if hash nala 2>/dev/null; then
+    alias ins='sudo nala install -y'
+    alias inss='nala search'
+    alias uins='sudo nala remove -y'
+  else
+    alias ins='sudo apt install -y'
+    alias inss='apt search'
+    alias uins='sudo apt remove -y'
+  fi
 fi
 
 # for fedora
@@ -59,9 +65,17 @@ function update() {
 
   # for debian base
   if hash apt 2>/dev/null; then
-    sudo apt update -y
-    sudo apt upgrade -y
-    sudo apt autoremove -y
+
+    if nala 2>/dev/null; then
+      sudo nala update
+      sudo nala upgrade -y
+      sudo nala autoremove -y
+    else
+      sudo apt update -y
+      sudo apt upgrade -y
+      sudo apt autoremove -y
+    fi
+
     flatpak update -y
   fi
 
