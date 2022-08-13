@@ -14,5 +14,4 @@ function browserDaily() {
   browserMail0
   browserMail1
   browserFb
-  browserDiscord
 }

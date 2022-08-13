@@ -1,13 +1,8 @@
 # for debian base
-if hash nala 2>/dev/null; then
-  alias ins='sudo nala install -y'
-  alias inss='nala search'
-  alias uins='sudo nala remove -y'
-else
-  sudo apt update && sudo apt install nala -y
-  alias ins='sudo nala install -y'
-  alias inss='nala search'
-  alias uins='sudo nala remove -y'
+if hash apt 2>/dev/null; then
+  alias ins='sudo apt install -y'
+  alias inss='apt search'
+  alias uins='sudo apt remove -y'
 fi
 
 # for fedora
@@ -63,17 +58,16 @@ function update() {
   echo "\n👉 update system"
 
   # for debian base
-  if hash nala 2>/dev/null; then
-    sudo nala update
-    sudo nala upgrade -y
-    sudo nala autoremove -y
+  if hash apt 2>/dev/null; then
+    sudo apt update
+    sudo apt upgrade -y
+    sudo apt autoremove -y
 
     flatpak update -y
   fi
 
   # for fedora
   if hash dnf 2>/dev/null; then
-    sudo dnf upgrade -y
     dnf makecache
   fi
 
