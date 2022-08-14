@@ -5,14 +5,14 @@ alias doc='cd ~/Documents ; clear -x ; l'
 alias tmp='cd /tmp ; clear -x ;  la'
 alias changeDirToUsbFolder='cd /run/media/master/ ; clear -x ; ls'
 
-alias l='clear -x ; exa -al --color=always --group-directories-first --icons'
+alias l='clear -x ; exa -al --color=never --group-directories-first --icons'
 alias ls='l'
 alias sl='l'
 alias ll='l'
-alias la='clear -x ; exa -a --color=always --group-directories-first --icons'
+alias la='clear -x ; exa -a --color=never --group-directories-first --icons'
 alias al='la'
 alias l.='clear -x ; exa -a| egrep "^\."'
-alias lt='clear -x ; exa -aT --color=always --group-directories-first --icons'
+alias lt='clear -x ; exa -aT --color=never --group-directories-first --icons'
 
 function changeDirToGitRoot() {
   cd $(git rev-parse --show-toplevel)
@@ -42,7 +42,7 @@ alias mk="makeDir"
 
 function changeDir() {
   local dir
-  dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
+  dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=never --group-directories-first --icons -L 1')
   cd "$dir"
   clear -x
   ls
@@ -51,7 +51,7 @@ alias c='changeDir'
 
 function changeDirInHome() {
   local dir
-  dir=$(fd -t d . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
+  dir=$(fd -t d . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=never --group-directories-first --icons -L 1')
   cd "$dir"
   clear -x
   ls
@@ -60,7 +60,7 @@ alias C='changeDirInHome'
 
 function changeHiddenDir() {
   local dir
-  dir=$(fd -t d --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
+  dir=$(fd -t d --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=never --group-directories-first --icons -L 1')
   cd "$dir"
   clear -x
   ls
@@ -69,7 +69,7 @@ alias ch='changeHiddenDir'
 
 function changeHiddenDirInHome() {
   local dir
-  dir=$(fd -t d . $HOME --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
+  dir=$(fd -t d . $HOME --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=never --group-directories-first --icons -L 1')
   cd "$dir"
   clear -x
   ls
