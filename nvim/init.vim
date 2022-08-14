@@ -197,7 +197,8 @@ Plug 'https://github.com/nvim-lua/plenary.nvim'
 
 Plug 'https://github.com/lewis6991/gitsigns.nvim'
 
-Plug 'https://github.com/projekt0n/github-nvim-theme'
+Plug 'https://github.com/mcchrish/zenbones.nvim'
+Plug 'https://github.com/rktjmp/lush.nvim'
 call plug#end()
 
 syntax enable

@@ -1,7 +1,7 @@
 #! /usr/bin/env sh
 
 echo "set background=dark
-colorscheme github_dark
+colorscheme zenbones
 " >~/dotfiles/nvim/themeControl.vim
 
 echo "include=~/dotfiles/foot/foot_dark.ini" > ~/dotfiles/foot/themeControl.ini

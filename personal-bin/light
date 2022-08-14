@@ -1,7 +1,7 @@
 #! /usr/bin/env sh
 
 echo "set background=light
-colorscheme github_light
+colorscheme zenbones
 " >~/dotfiles/nvim/themeControl.vim
 
 echo "include=~/dotfiles/foot/foot_light.ini" > ~/dotfiles/foot/themeControl.ini
