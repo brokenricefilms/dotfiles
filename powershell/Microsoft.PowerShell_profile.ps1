@@ -21,6 +21,7 @@ Set-PSReadLineOption -Colors @{
 }
 
 Import-Module -Name Terminal-Icons
+Set-TerminalIconsTheme -DisableColorTheme
 
 Import-Module -Name PSFzf
 
