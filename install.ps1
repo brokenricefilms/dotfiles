@@ -1,9 +1,7 @@
 winget install go -s winget --accept-package-agreements --accept-source-agreements
 winget install onlyoffice --accept-package-agreements --accept-source-agreements
-winget install powershell -s msstore --accept-package-agreements --accept-source-agreements
 winget install powertoys -s msstore --accept-package-agreements --accept-source-agreements
 winget install vscode --accept-package-agreements --accept-source-agreements
-winget install startallback -s winget --accept-package-agreements --accept-source-agreements
 winget install --id=Google.Chrome -e --accept-package-agreements --accept-source-agreements
 
 Invoke-WebRequest https://deno.land/x/install/install.ps1 -useb | Invoke-Expression
@@ -39,9 +37,6 @@ sudo New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\Documents\PowerShel
 
 sudo New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\.gitconfig" -Target "$env:USERPROFILE\dotfiles\git\gitconfig" -Force
 sudo New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\.ssh\config" -Target "$env:USERPROFILE\dotfiles\ssh\config" -Force
-
-sudo mkdir $env:appdata\alacritty\
-sudo New-Item -ItemType SymbolicLink -Path "$env:appdata\alacritty\alacritty.yml" -Target "$env:USERPROFILE\dotfiles\alacritty.yml" -Force
 
 sudo New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" -Target "$env:USERPROFILE\dotfiles\windows_terminal_config.json" -Force
 
