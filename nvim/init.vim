@@ -1,63 +1,6 @@
 call plug#begin()
-Plug 'https://github.com/ms-jpq/coq_nvim'
-Plug 'https://github.com/ms-jpq/coq.thirdparty', {'branch': '3p'}
-
-ino <silent><expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-ino <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<BS>"
-
-Plug 'https://github.com/neovim/nvim-lspconfig'
-
-Plug 'https://github.com/williamboman/nvim-lsp-installer'
-
-Plug 'https://github.com/mhartington/formatter.nvim'
-
 Plug 'https://github.com/editorconfig/editorconfig-vim'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
-
-Plug 'https://github.com/AndrewRadev/splitjoin.vim'
-let g:splitjoin_split_mapping = 'gj'
-let g:splitjoin_join_mapping  = 'gk'
-
-Plug 'https://github.com/Krafi2/jeskape.nvim'
-
-Plug 'https://github.com/dhruvasagar/vim-zoom'
-
-nmap <leader>z <Plug>(zoom-toggle)
-let g:zoom#statustext = '[ zoomed ]'
-
-Plug 'https://github.com/voldikss/vim-floaterm'
-
-let g:floaterm_width=0.9
-let g:floaterm_height=0.9
-let g:floaterm_title=""
-let g:floaterm_borderchars="─│─│╭╮╯╰"
-hi FloatermBorder guibg=Normal guifg=#5c5c5c
-
-autocmd VimEnter * FloatermNew --silent
-
-let g:floaterm_keymap_toggle = '<c-s>'
-
-noremap <silent> gp :FloatermSend! cd %:p:h ; git pull ; git push ; cd -<enter>
-noremap <silent> gP :FloatermSend! cd %:p:h ; git pull ; git push -f ; cd -<enter>
-
-command! GitHubIssueList execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/gitConfig.zsh ; cd %:h:p ; gitHubIssueList"
-noremap <silent> gil :GitHubIssueList<enter>
-
-command! GitHubIssueClose execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/gitConfig.zsh ; cd %:h:p ; gitHubIssueClose"
-noremap <silent> gic :GitHubIssueClose<enter>
-
-command! GitHubIssueViewWeb execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/gitConfig.zsh ; cd %:h:p ; gitHubIssueViewWeb"
-noremap <silent> giv :GitHubIssueViewWeb<enter>
-
-command! GitHubIssueComment execute "FloatermNew --autoclose=1 source ~/dotfiles/zsh/functions/gitConfig.zsh ; cd %:h:p ; gitHubIssueComment"
-noremap <silent> gim :GitHubIssueComment<enter>
-
-command! GithubRepoViewWeb execute "FloatermSend cd %:h:p ; gh browse ; cd -"
-
-command! LazyGit execute "FloatermNew --autoclose=1 cd %:h:p ; lazygit ; cd -"
-noremap <silent> gl :LazyGit<enter>
-
-Plug 'https://github.com/wellle/targets.vim'
 
 Plug 'liuchengxu/vista.vim'
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
@@ -66,31 +9,6 @@ let g:vista#renderer#enable_icon = 1
 let g:vista_keep_fzf_colors = 1
 noremap <leader>l :Vista finder fzf<enter>
 noremap <leader>v :Vista!!<enter>
-
-Plug 'https://github.com/nvim-lua/popup.nvim'
-Plug 'https://github.com/ThePrimeagen/harpoon'
-nmap <silent> mi :lua require("harpoon.mark").add_file()<enter>
-nmap <silent> mo :lua require("harpoon.ui").toggle_quick_menu()<enter>
-" moving less, thinking like hjkl, now with number qwert|asdfg
-" 6|7|8|9|10
-" q|w|e|r|t
-" ----------
-" 1|2|3|4|5
-" a|s|d|f|g
-nmap <silent> ma :lua require("harpoon.ui").nav_file(1)<enter>
-nmap <silent> ms :lua require("harpoon.ui").nav_file(2)<enter>
-nmap <silent> md :lua require("harpoon.ui").nav_file(3)<enter>
-nmap <silent> mf :lua require("harpoon.ui").nav_file(4)<enter>
-nmap <silent> mg :lua require("harpoon.ui").nav_file(5)<enter>
-nmap <silent> mq :lua require("harpoon.ui").nav_file(6)<enter>
-nmap <silent> mw :lua require("harpoon.ui").nav_file(7)<enter>
-nmap <silent> me :lua require("harpoon.ui").nav_file(8)<enter>
-nmap <silent> mr :lua require("harpoon.ui").nav_file(9)<enter>
-nmap <silent> mt :lua require("harpoon.ui").nav_file(10)<enter>
-
-Plug 'https://github.com/nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-Plug 'https://github.com/nvim-treesitter/nvim-treesitter-textobjects',
 
 Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
 
@@ -136,37 +54,9 @@ noremap <silent> gb :G blame<enter>
 
 Plug 'https://github.com/tpope/vim-eunuch'
 
-Plug 'https://github.com/dkarter/bullets.vim'
-let g:bullets_enabled_file_types = [
-      \ 'markdown',
-      \ 'text',
-      \ 'gitcommit',
-      \ 'scratch'
-      \]
-
-Plug 'https://github.com/iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
-
-Plug 'https://github.com/phaazon/hop.nvim'
-map f :HopChar1<enter>
-noremap f :HopChar1<enter>
-
 Plug 'https://github.com/christoomey/vim-tmux-navigator'
 
-Plug 'https://github.com/mattn/emmet-vim'
-let g:user_emmet_leader_key=','
-let g:user_emmet_install_global = 0
-autocmd FileType xhtml,html,css,markdown EmmetInstall
-
-Plug 'https://github.com/AndrewRadev/tagalong.vim'
-let g:tagalong_filetypes = ['eco', 'eelixir', 'ejs', 'eruby', 'html', 'xhtml', 'htmldjango', 'javascriptreact', 'jsx', 'php', 'typescriptreact', 'xml']
-
-Plug 'https://github.com/leafOfTree/vim-matchtag'
-
 Plug 'https://github.com/tpope/vim-surround'
-
-Plug 'https://github.com/windwp/nvim-autopairs'
-
-Plug 'https://github.com/windwp/nvim-ts-autotag'
 
 Plug 'https://github.com/preservim/nerdcommenter'
 
@@ -181,37 +71,19 @@ let g:undotree_WindowLayout = 3
 
 Plug 'https://github.com/romainl/vim-cool'
 
-Plug 'https://github.com/norcalli/nvim-colorizer.lua'
-autocmd BufRead,BufNewFile * :ColorizerAttachToBuffer
-
-Plug 'https://github.com/lukas-reineke/indent-blankline.nvim'
-if &diff
-  let g:indent_blankline_enabled = v:false
-endif
-let g:indent_blankline_char = '▏'
-let g:indent_blankline_filetype_exclude = [
-      \ 'help', 'yaml'
-      \]
-
-Plug 'https://github.com/nvim-lua/plenary.nvim'
-
-Plug 'https://github.com/lewis6991/gitsigns.nvim'
-
-Plug 'https://github.com/mcchrish/zenbones.nvim'
-Plug 'https://github.com/rktjmp/lush.nvim'
 call plug#end()
 
 syntax enable
 set termguicolors
 
-runtime ./themeControl.vim
+set background=light
 
 set cursorline
 set cursorlineopt=number
 
 set number relativenumber
 
-set statusline=[\ %F\ %m]\ %y\ %{zoom#statusline()}\ %r%h%w%=[\ %<%{getcwd()}\ on\ \ %{FugitiveHead()}\ ]
+set statusline=[\ %F\ %m]\ %y\ %r%h%w
 
 set list
 let &listchars = 'tab:▸ ,trail:·,nbsp:±,extends:❯,precedes:❮'
@@ -235,6 +107,20 @@ set encoding=UTF-8
 set fileformat=unix
 set mouse=a
 set clipboard=unnamedplus
+
+let g:clipboard = {
+      \'name': 'wsl-clip',
+      \'copy': {
+        \'+': 'clip.exe',
+        \'*': 'clip.exe',
+        \},
+        \'paste': {
+          \'+': "pwsh.exe Get-Clipboard",
+          \'*': "pwsh.exe Get-Clipboard",
+          \},
+          \'cache_enabled': 0,
+          \}
+
 set autoindent
 set smartindent
 set autoread
@@ -267,27 +153,6 @@ xnoremap > >gv
 
 map <space> <leader>
 
-noremap <silent> <C-t> :tabnew<Return>
-noremap <silent> <S-e> gT
-noremap <silent> <S-r> gt
-
-set spellfile=~/dotfiles/nvim/spell/en.utf-8.add
-
-noremap <silent> <space>s :setlocal spell! spell?<enter>
-
-set spelllang=en_us,vi
-
-function! FzfSpellSink(word)
-  exe 'normal! "_ciw'.a:word
-endfunction
-
-function! FzfSpell()
-  let suggestions = spellsuggest(expand("<cword>"))
-  return fzf#run(fzf#wrap({'source': suggestions, 'sink': function("FzfSpellSink"), 'window': { 'width': 0.2, 'height': 0.9, 'xoffset': 1 }}))
-endfunction
-
-nnoremap z= :call FzfSpell()<enter>
-
 noremap ss :split<Return><C-w>w
 noremap sv :vsplit<Return><C-w>w
 
@@ -310,50 +175,19 @@ vnoremap k gk
 nnoremap gj j
 nnoremap gk k
 
-noremap <silent> gx :silent execute "!xdg-open " . "<cfile>"<enter>
-
 nnoremap <leader>w :w<enter>
 nnoremap <leader>W :SudoWrite<enter>
 nnoremap <leader>q :q<enter>
 nnoremap <leader>o :wq<enter>
 nnoremap Q :qa!<enter>
 
-noremap H :cprevious<enter>
-noremap L :cnext<enter>
-noremap J :bnext<enter>
-noremap K :bprevious<enter>
-
-imap , ,<c-g>u
-imap . .<c-g>u
-imap ! !<c-g>u
-imap ? ?<c-g>u
-imap [ [<c-g>u
-
-nmap <silent> <leader>x :!xdg-open '%'<enter><enter>
-
 nmap gf :cd %:h<enter>:edit <cfile><enter>
-
-imap <S-down> <esc>o
-imap <S-up> <esc>O
-nnoremap <silent> <S-down> o<esc>
-nnoremap <silent> <S-up> O<esc>
-nnoremap đ dd<s>
 
 xnoremap <silent> p p:let @+=@0<enter>:let @"=@0<enter>
 nnoremap <leader><space> <c-^>
 
 nmap <leader>i :%s/\<<C-r><C-w>\>/
 
-command! OpenFileInBraveBrowser execute "silent !brave-browser '%'"
-command! CopyFileName execute "silent !echo %:p:t | wl-copy"
-command! CopyFilePath execute "silent !echo %:p | wl-copy"
-command! Reload execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
-command! Light execute "silent !light" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
-command! Dark execute "silent !dark" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
-command! DeleteDosLineEngdingChar execute "%s/\r$/ /g"
-command! PlugCleanWithReloadConfigFile execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf" | execute "PlugClean"
-command! PlugInstallWithReloadConfigFile execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf" | execute "PlugInstall"
-command! ShowFileType execute "set filetype?"
 command! RemoveSymbolMAkaWindowsEndline execute "%s/\r//g"
 
 fun! TrimWhitespace()
@@ -362,5 +196,3 @@ fun! TrimWhitespace()
   call winrestview(l:save)
 endfun
 command! TrimWhitespace call TrimWhitespace()
-
-let g:coq_settings = { 'auto_start': 'shut-up' }
