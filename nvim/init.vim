@@ -1,15 +1,4 @@
 call plug#begin()
-Plug 'https://github.com/editorconfig/editorconfig-vim'
-let g:EditorConfig_exclude_patterns = ['fugitive://.*']
-
-Plug 'liuchengxu/vista.vim'
-let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
-let g:vista_fzf_preview = ['right:50%']
-let g:vista#renderer#enable_icon = 1
-let g:vista_keep_fzf_colors = 1
-noremap <leader>l :Vista finder fzf<enter>
-noremap <leader>v :Vista!!<enter>
-
 Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
 
 Plug 'https://github.com/junegunn/fzf.vim'
@@ -48,7 +37,7 @@ noremap // /
 
 Plug 'https://github.com/tpope/vim-fugitive'
 
-noremap <silent> gs :G<enter>gg5j2ly$k0
+noremap <silent> gs :G<enter>4j
 noremap <silent> gc :cd `git rev-parse --show-toplevel`<enter>:BCommits<enter>
 noremap <silent> gb :G blame<enter>
 
