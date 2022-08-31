@@ -77,7 +77,6 @@ source ~/dotfiles/zsh/functions/completion.zsh
 source ~/dotfiles/zsh/functions/dev.zsh
 source ~/dotfiles/zsh/functions/update.zsh
 source ~/dotfiles/zsh/functions/history.zsh
-source ~/dotfiles/zsh/functions/media.zsh
 source ~/dotfiles/zsh/functions/env.zsh
 source ~/dotfiles/zsh/functions/tmux.zsh
 source ~/dotfiles/zsh/functions/vim.zsh
