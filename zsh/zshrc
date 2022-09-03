@@ -30,9 +30,6 @@ alias trash_download='trash ~/Downloads/*'
 alias se='sudoedit'
 alias show_webcam='mpv av://v4l2:/dev/video0 --profile=low-latency --untimed'
 alias create_random_strong_password='</dev/urandom tr -dc '12345!@#$%qwertQWERTasdfgASDFGzxcvbZXCVB' | head -c 28 | copy'
-alias pwsh='pwsh.exe'
-alias notepad='notepad.exe'
-alias winget='winget.exe'
 
 function hi () {
   browserDaily
@@ -74,6 +71,7 @@ source ~/dotfiles/zsh/functions/gitConfig.zsh
 source ~/dotfiles/zsh/functions/fzfConfig.zsh
 source ~/dotfiles/zsh/functions/fzfKeyBindings.zsh
 source ~/dotfiles/zsh/functions/completion.zsh
+source ~/dotfiles/zsh/functions/windows.zsh
 
 source ~/dotfiles/zsh/functions/dev.zsh
 source ~/dotfiles/zsh/functions/update.zsh
