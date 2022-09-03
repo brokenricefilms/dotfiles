@@ -1,4 +1,6 @@
 call plug#begin()
+Plug 'https://github.com/b0o/incline.nvim'
+
 Plug 'https://github.com/ms-jpq/coq_nvim'
 Plug 'https://github.com/ms-jpq/coq.thirdparty', {'branch': '3p'}
 
