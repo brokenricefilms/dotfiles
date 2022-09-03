@@ -1,0 +1,14 @@
+#! /usr/bin/env sh
+
+echo "set background=light
+colorscheme zenbones
+" >~/dotfiles/nvim/themeControl.vim
+
+echo "include=~/dotfiles/foot/foot_light.ini" > ~/dotfiles/foot/themeControl.ini
+
+DIRECTORY=~/dotfiles/bat
+
+if [ -d "$DIRECTORY" ]; then
+  mkdir $DIRECTORY
+fi
+echo "--theme=\"GitHub\"" >~/dotfiles/bat/config
