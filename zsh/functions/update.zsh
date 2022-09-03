@@ -27,8 +27,8 @@ function update() {
   sudo apt update
   sudo apt upgrade -y
   sudo apt autoremove -y
-  tldr --update
 
+  tldr --update
   nvim -c "PlugUpdate | qa"
 
   updateZshPlugin
