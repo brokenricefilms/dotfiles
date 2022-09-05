@@ -15,14 +15,17 @@ curl https://bun.sh/install | bash
 export BUN_INSTALL="/home/master/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-bun install --global prettier
-bun install --global tinypng-cli
-bun install --global browser-sync
-bun install --global yarn
-bun install --global neovim
-bun install --global typescript
-bun install --global mathjs
-bun install --global bash-language-server
+npm config set prefix ~/.npm/
+
+npm install --global prettier
+npm install --global tinypng-cli
+npm install --global browser-sync
+npm install --global yarn
+npm install --global neovim
+npm install --global typescript
+npm install --global mathjs
+npm install --global bash-language-server
+npm install --global prettier @prettier/plugin-php
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
@@ -36,8 +39,6 @@ cargo install stylua
 # nvim setup
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-npm config set prefix ~/.npm/
 
 curl -fsSL https://starship.rs/install.sh | bash
 
