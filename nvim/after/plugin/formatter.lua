@@ -130,6 +130,7 @@ for _, ft in pairs({
 	"markdown",
 	"json",
 	"astro",
+	"php",
 }) do
 	filetype_configs[ft] = prettier_config
 end

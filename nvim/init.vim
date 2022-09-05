@@ -157,7 +157,7 @@ Plug 'https://github.com/christoomey/vim-tmux-navigator'
 Plug 'https://github.com/mattn/emmet-vim'
 let g:user_emmet_leader_key=','
 let g:user_emmet_install_global = 0
-autocmd FileType xhtml,html,css,markdown EmmetInstall
+autocmd FileType xhtml,html,css,markdown,php EmmetInstall
 
 Plug 'https://github.com/AndrewRadev/tagalong.vim'
 let g:tagalong_filetypes = ['eco', 'eelixir', 'ejs', 'eruby', 'html', 'xhtml', 'htmldjango', 'javascriptreact', 'jsx', 'php', 'typescriptreact', 'xml']
