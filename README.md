@@ -144,7 +144,7 @@ updateApplications() {
 
 ## Install
 
-- [Here is install guide, just read the README.md](https://github.com/thuanpham2311/linux_setup)
+- [Here is install script](./install.sh)
 
 ## Supported
 
