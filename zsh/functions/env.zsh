@@ -16,7 +16,3 @@ export GEM_HOME="$HOME/gems"
 export VISUAL='nvim'
 export EDITOR=$VISUAL
 export MANPAGER='nvim +Man!'
-
-[ -s "/home/master/.bun/_bun" ] && source "/home/master/.bun/_bun"
-export BUN_INSTALL="/home/master/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
