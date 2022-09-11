@@ -52,36 +52,12 @@
             "KEY_UP",
             "keyboard"
         ],
-        "1,57,1+1,58,1": [
-            "Alt_L+Tab",
-            "keyboard"
-        ],
-        "1,57,1+1,16,1": [
-            "Alt_L+q",
-            "keyboard"
-        ],
         "1,57,1+1,26,1": [
             "Alt_L+KEY_LEFT",
             "keyboard"
         ],
         "1,57,1+1,27,1": [
             "Alt_L+KEY_RIGHT",
-            "keyboard"
-        ],
-        "1,57,1+1,30,1": [
-            "Alt_L+1",
-            "keyboard"
-        ],
-        "1,57,1+1,31,1": [
-            "Alt_L+2",
-            "keyboard"
-        ],
-        "1,57,1+1,32,1": [
-            "Alt_L+3",
-            "keyboard"
-        ],
-        "1,57,1+1,33,1": [
-            "Alt_L+4",
             "keyboard"
         ],
         "1,57,1+1,2,1": [
@@ -130,6 +106,50 @@
         ],
         "1,149,1": [
             "XF86RotateWindows",
+            "keyboard"
+        ],
+        "1,57,1+1,30,1": [
+            "Control_L+Super_L+1",
+            "keyboard"
+        ],
+        "1,57,1+1,31,1": [
+            "Control_L+Super_L+2",
+            "keyboard"
+        ],
+        "1,57,1+1,32,1": [
+            "Control_L+Super_L+3",
+            "keyboard"
+        ],
+        "1,57,1+1,33,1": [
+            "Control_L+Super_L+4",
+            "keyboard"
+        ],
+        "1,57,1+1,16,1": [
+            "Control_L+Super_L+6",
+            "keyboard"
+        ],
+        "1,57,1+1,34,1": [
+            "Control_L+Super_L+5",
+            "keyboard"
+        ],
+        "1,57,1+1,17,1": [
+            "Control_L+Super_L+7",
+            "keyboard"
+        ],
+        "1,57,1+1,18,1": [
+            "Control_L+Super_L+8",
+            "keyboard"
+        ],
+        "1,57,1+1,19,1": [
+            "Control_L+Super_L+9",
+            "keyboard"
+        ],
+        "1,57,1+1,20,1": [
+            "Control_L+Super_L+0",
+            "keyboard"
+        ],
+        "1,57,1+1,58,1": [
+            "Alt_L+Escape",
             "keyboard"
         ]
     }
