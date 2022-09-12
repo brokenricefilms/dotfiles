@@ -54,6 +54,9 @@ autocmd BufEnter *.wls nnoremap <leader>r
 autocmd BufEnter *.wl nnoremap <leader>r
     \ :w<enter>:FloatermSend cd %:p:h ; wolframscript -file %:t<enter>:FloatermToggle<enter>
 
+autocmd BufEnter *.php nnoremap <leader>r
+    \ :w<enter>:FloatermSend cd %:p:h ; xdg-open "http://localhost:8000" ; php -S localhost:8000 %:t<enter>:FloatermToggle<enter>
+
 autocmd BufEnter *.png nnoremap <leader>r  :silent !xdg-open '%:p'<enter>
 autocmd BufEnter *.gif nnoremap <leader>r  :silent !xdg-open '%:p'<enter>
 autocmd BufEnter *.html nnoremap <leader>r :silent !xdg-open '%:p'<enter>
