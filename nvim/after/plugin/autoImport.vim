@@ -11,3 +11,5 @@ autocmd BufNewFile *.cpp 0r ~/.config/nvim/stuff/cppTemplate.cpp | normal!3j
 autocmd BufNewFile *.go 0r ~/.config/nvim/stuff/goTemplate.go | normal!3j
 
 autocmd BufNewFile *.html 0r ~/.config/nvim/stuff/htmlTemplate.html | normal!6j
+
+autocmd BufNewFile *.php 0r ~/.config/nvim/stuff/phpTemplate.php | normal!6j
