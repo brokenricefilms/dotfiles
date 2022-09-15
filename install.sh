@@ -111,6 +111,7 @@ cd ~/dotfiles/zsh/functions/
 git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/Aloxaf/fzf-tab
 git clone --depth=1 https://github.com/chitoku-k/fzf-zsh-completions
+git clone --depth=1 https://github.com/sunlei/zsh-ssh
 cd
 
 ln -sf ~/sync/ok/.fonts ~/.fonts

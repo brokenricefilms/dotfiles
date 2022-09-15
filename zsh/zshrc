@@ -81,6 +81,7 @@ source ~/dotfiles/zsh/functions/env.zsh
 source ~/dotfiles/zsh/functions/tmux.zsh
 source ~/dotfiles/zsh/functions/vim.zsh
 source ~/dotfiles/zsh/functions/virt.zsh
+source ~/dotfiles/zsh/functions/zsh-ssh/zsh-ssh.zsh
 
 source ~/dotfiles/zsh/functions/zshAutoSuggestions.zsh
 source ~/dotfiles/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

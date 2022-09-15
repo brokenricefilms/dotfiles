@@ -52,6 +52,11 @@ function updateZshPlugin() {
   pwd
   git pull
   cd -
+
+  cd ~/dotfiles/zsh/functions/zsh-ssh/
+  pwd
+  git pull
+  cd -
 }
 
 function update() {
