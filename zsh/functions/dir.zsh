@@ -23,7 +23,7 @@ function diskFree() {
   clear -x
   echo ""
   df -h | awk 'NR==1' | rg Avail
-  df -h | awk 'NR==4'
+  df -h | awk 'NR==5'
 }
 
 function makeDir() {
