@@ -21,5 +21,6 @@ vim.g.coq_settings = {
 			enabled = true,
 			weight_adjust = 1.9,
 		},
+		tabnine = { enabled = true },
 	},
 }
