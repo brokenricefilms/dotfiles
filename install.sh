@@ -120,7 +120,7 @@ fc-cache -v
 ln -sf ~/sync/ok/.tinypng ~/.tinypng
 ln -sf ~/dotfiles/zsh/zshrc ~/.zshrc
 ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
-ln -sf ~/dotfiles/ssh/config ~/.ssh/config/
+ln -sf ~/dotfiles/ssh/config ~/.ssh/config
 ln -sf ~/dotfiles/nvim ~/.config/
 ln -sf ~/dotfiles/kitty/ ~/.config/
 ln -sf ~/dotfiles/bat/ ~/.config/

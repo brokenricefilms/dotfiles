@@ -1,13 +1,17 @@
 # !/usr/bin/env zsh
 
 alias add='git add'
-alias push="git pull & ; git push &"
-alias pushf="git pull & ; git push -f &"
+alias push="git pull --all & ; git push &"
+alias pushf="git pull --all & ; git push -f &"
 alias pull="git pull &"
 alias dv='git difftool'
 alias gl='git log --oneline | head -n 5'
 alias lg='lazygit'
-alias grt='cd "$(git rev-parse --show-toplevel)"'
+
+function changeDirToGitRoot() {
+  cd $(git rev-parse --show-toplevel)
+}
+alias cdr='changeDirToGitRoot'
 
 isInGitRepo() { git rev-parse HEAD &>/dev/null }
 
