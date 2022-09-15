@@ -1,4 +1,6 @@
 alias ide='tmux split-window -h -p 30 ; tmux split-window -v -p 75 ; tmux last-pane ; nvim'
+alias dot='tmux switch-client -t "dotfiles"'
+alias in='tmux switch-client -t "inbox"'
 
 function killAllUnnameTmuxSession() {
   echo "\n👉 kill all unname tmux session"
