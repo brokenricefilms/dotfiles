@@ -93,6 +93,7 @@ function autoSync {
     /home/master/repos/img
     /home/master/repos/lap_trinh_cho_thiet_bi_di_dong/
     /home/master/repos/lap_trinh_web/
+    /home/master/repos/phat_trien_phan_mem_nguon_mo/
   )
 
   for i in ${repo[*]}
