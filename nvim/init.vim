@@ -1,4 +1,8 @@
 call plug#begin()
+Plug 'https://github.com/anuvyklack/windows.nvim'
+Plug 'https://github.com/anuvyklack/middleclass'
+" Plug 'https://github.com/anuvyklack/animation.nvim'
+
 Plug 'https://github.com/ms-jpq/coq_nvim'
 Plug 'https://github.com/ms-jpq/coq.thirdparty', {'branch': '3p'}
 
