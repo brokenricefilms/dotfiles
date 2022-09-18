@@ -151,6 +151,10 @@
         "1,57,1+1,58,1": [
             "Alt_L+Escape",
             "keyboard"
+        ],
+        "1,58,1": [
+            "Escape",
+            "keyboard"
         ]
     }
 }
