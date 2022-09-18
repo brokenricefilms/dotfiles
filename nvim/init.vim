@@ -147,8 +147,10 @@ let g:bullets_enabled_file_types = [
 Plug 'https://github.com/iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install'}
 
 Plug 'https://github.com/phaazon/hop.nvim'
-map f :HopChar1<enter>
-noremap f :HopChar1<enter>
+map f :HopChar1AC<enter>
+noremap f :HopChar1AC<enter>
+map F :HopChar1BC<enter>
+noremap F :HopChar1BC<enter>
 
 Plug 'https://github.com/christoomey/vim-tmux-navigator'
 
