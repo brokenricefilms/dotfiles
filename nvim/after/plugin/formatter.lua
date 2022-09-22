@@ -131,6 +131,7 @@ for _, ft in pairs({
 	"json",
 	"astro",
 	"php",
+	"yaml",
 }) do
 	filetype_configs[ft] = prettier_config
 end
