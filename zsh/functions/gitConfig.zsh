@@ -73,27 +73,27 @@ function autoSync {
   repo=(
     /home/master/sync/ok
     /home/master/sync/obs-studio
-    /home/master/repos/co_so_du_lieu
-    /home/master/repos/dataLab
-    /home/master/repos/ky_thuat_lap_trinh
-    /home/master/repos/lap_trinh_huong_doi_tuong
-    /home/master/repos/nhap_mon_cau_truc_du_lieu
-    /home/master/repos/nhap_mon_web_va_ung_dung
-    /home/master/repos/thuc-hanh-ky-thuat-lap-trinh
-    /home/master/repos/thuc-hanh-lap-trinh-huong-doi-tuong
-    /home/master/repos/thuc-hanh-nhap-mon-cau-truc-du-lieu
-    /home/master/repos/thuc-hanh-nhap-mon-web-va-ung-dung
-    /home/master/repos/thuc_thanh_nhap_mon_lap_trinh
-    /home/master/repos/ublock_adblock_list
-    /home/master/repos/cong_nghe_phan_mem
-    /home/master/repos/thuan_ublacklist
-    /home/master/repos/lap_trinh_ung_dung_co_so_du_lieu
-    /home/master/repos/quan_tri_co_so_du_lieu
-    /home/master/repos/ma_hoa_ung_dung
-    /home/master/repos/img
-    /home/master/repos/lap_trinh_cho_thiet_bi_di_dong/
-    /home/master/repos/lap_trinh_web/
-    /home/master/repos/phat_trien_phan_mem_nguon_mo/
+    /home/master/repos/thuanpham2311/co_so_du_lieu
+    /home/master/repos/thuanpham2311/dataLab
+    /home/master/repos/thuanpham2311/ky_thuat_lap_trinh
+    /home/master/repos/thuanpham2311/lap_trinh_huong_doi_tuong
+    /home/master/repos/thuanpham2311/nhap_mon_cau_truc_du_lieu
+    /home/master/repos/thuanpham2311/nhap_mon_web_va_ung_dung
+    /home/master/repos/thuanpham2311/thuc-hanh-ky-thuat-lap-trinh
+    /home/master/repos/thuanpham2311/thuc-hanh-lap-trinh-huong-doi-tuong
+    /home/master/repos/thuanpham2311/thuc-hanh-nhap-mon-cau-truc-du-lieu
+    /home/master/repos/thuanpham2311/thuc-hanh-nhap-mon-web-va-ung-dung
+    /home/master/repos/thuanpham2311/thuc_thanh_nhap_mon_lap_trinh
+    /home/master/repos/thuanpham2311/ublock_adblock_list
+    /home/master/repos/thuanpham2311/cong_nghe_phan_mem
+    /home/master/repos/thuanpham2311/thuan_ublacklist
+    /home/master/repos/thuanpham2311/lap_trinh_ung_dung_co_so_du_lieu
+    /home/master/repos/thuanpham2311/quan_tri_co_so_du_lieu
+    /home/master/repos/thuanpham2311/ma_hoa_ung_dung
+    /home/master/repos/thuanpham2311/img
+    /home/master/repos/thuanpham2311/lap_trinh_cho_thiet_bi_di_dong/
+    /home/master/repos/thuanpham2311/lap_trinh_web/
+    /home/master/repos/thuanpham2311/phat_trien_phan_mem_nguon_mo/
   )
 
   for i in ${repo[*]}
@@ -106,7 +106,23 @@ function autoSync {
 }
 
 function updateAllRepo() {
-  for dir in ~/repos/*
+  for dir in ~/repos/thuanpham2311/*
+  do
+    cd "$dir"
+    pwd
+    repoSync
+    cd - > /dev/null
+  done
+
+  for dir in ~/repos/ongdev/*
+  do
+    cd "$dir"
+    pwd
+    repoSync
+    cd - > /dev/null
+  done
+
+  for dir in ~/repos/isekaiSystem/*
   do
     cd "$dir"
     pwd
@@ -115,9 +131,6 @@ function updateAllRepo() {
   done
 
   repoNotInDefaultDir=(
-    ~/dotfiles
-    ~/repos/youtube_live_chat/client
-    ~/repos/youtube_live_chat/server
   )
 
   for i in ${repoNotInDefaultDir[*]}
