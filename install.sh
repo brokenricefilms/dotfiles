@@ -145,4 +145,4 @@ cd ~/repos/
 git clone git@github.com:thuanpham2311/viet_eng_words_vim_dict
 cd -
 
-sudo ln -sf ~/repos/viet_eng_words_vim_dict/words /usr/share/dict/words
+sudo ln -sf ~/repos/thuanpham2311/viet_eng_words_vim_dict/words /usr/share/dict/words

@@ -131,6 +131,7 @@ function updateAllRepo() {
   done
 
   repoNotInDefaultDir=(
+    ~/dotfiles/
   )
 
   for i in ${repoNotInDefaultDir[*]}
