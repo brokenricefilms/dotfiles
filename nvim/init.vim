@@ -1,4 +1,6 @@
 call plug#begin()
+Plug 'https://github.com/p00f/nvim-ts-rainbow'
+
 Plug 'https://github.com/anuvyklack/windows.nvim'
 Plug 'https://github.com/anuvyklack/middleclass'
 " Plug 'https://github.com/anuvyklack/animation.nvim'
