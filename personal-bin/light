@@ -1,9 +1,8 @@
 #! /usr/bin/env sh
 
-echo "set background=light
-colorscheme zenbones
+echo "colorscheme github_light
 
-highlight HopNextKey guifg=#2C363C guibg=NONE guisp=NONE gui=bold cterm=bold
+highlight HopNextKey guifg=#24292f guibg=NONE guisp=NONE gui=bold cterm=bold
 " >~/dotfiles/nvim/themeControl.vim
 
 echo "include=~/dotfiles/foot/foot_light.ini" > ~/dotfiles/foot/themeControl.ini
