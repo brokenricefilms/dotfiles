@@ -121,9 +121,9 @@
 #### Extension
 
 - Clipboard Indicator (using folk support img, maybe in the feature can be merge)
+- [gnome clipboard history](https://github.com/SUPERCILEX/gnome-clipboard-history)
 - Gnome Fuzzy App Search
 - Just Perfection (UI, UX in gnome)
-- [go to last workspace](https://extensions.gnome.org/extension/1089/go-to-last-workspace/) "custom shortcut to `Alt + ESC`
 
 #### Applications
 
