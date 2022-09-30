@@ -1,8 +1,8 @@
 # !/usr/bin/env zsh
 
 alias add='git add'
-alias push="git pull --all & ; git push &"
-alias pushf="git pull --all & ; git push -f &"
+alias push="git pull; git push"
+alias pushf="git pull; git push -f"
 alias pull="git pull &"
 alias dv='git difftool'
 alias gl='git log --oneline | head -n 5'
@@ -27,16 +27,11 @@ function autoCommit () {
   git commit -m "[👌Auto commit] $(curl -s whatthecommit.com/index.txt)"
 }
 
-function repoSync () {
-  git pull --all &
-  push
-}
-
 function ok () {
   isInGitRepo || return
   st
   autoCommit
-  repoSync
+  push
 }
 
 function okp () {
@@ -44,7 +39,7 @@ function okp () {
   prettier --write *
   st
   autoCommit
-  repoSync
+  push
 }
 
 function goToGitCloneRepoDir () {
@@ -101,7 +96,7 @@ function autoSync {
     cd "$i"
     pwd
     autoCommit
-    repoSync
+    push
   done
 }
 
@@ -110,7 +105,7 @@ function updateAllRepo() {
   do
     cd "$dir"
     pwd
-    repoSync
+    push
     cd - > /dev/null
   done
 
@@ -118,7 +113,7 @@ function updateAllRepo() {
   do
     cd "$dir"
     pwd
-    repoSync
+    push
     cd - > /dev/null
   done
 
@@ -126,7 +121,7 @@ function updateAllRepo() {
   do
     cd "$dir"
     pwd
-    repoSync
+    push
     cd - > /dev/null
   done
 
@@ -138,7 +133,7 @@ function updateAllRepo() {
   do
     cd "$i"
     pwd
-    repoSync
+    push
     cd - > /dev/null
   done
 }
