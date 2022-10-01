@@ -73,6 +73,7 @@ function update() {
 
   # for fedora
   if hash dnf 2>/dev/null; then
+    sudo dnf updateinfo
     dnf makecache
   fi
 
