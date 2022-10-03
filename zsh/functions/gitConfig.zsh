@@ -1,9 +1,9 @@
 # !/usr/bin/env zsh
 
 alias add='git add'
-alias push="git pull; git push"
-alias pushf="git pull; git push -f"
-alias pull="git pull &"
+alias push="git push"
+alias pushf="git push -f"
+alias pull="git pull"
 alias dv='git difftool'
 alias gl='git log --oneline | head -n 5'
 alias lg='lazygit'
