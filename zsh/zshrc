@@ -73,6 +73,7 @@ source ~/dotfiles/zsh/functions/fzfKeyBindings.zsh
 source ~/dotfiles/zsh/functions/completion.zsh
 
 source ~/dotfiles/zsh/functions/browserConfig.zsh
+source ~/dotfiles/zsh/functions/network.zsh
 source ~/dotfiles/zsh/functions/dev.zsh
 source ~/dotfiles/zsh/functions/update.zsh
 source ~/dotfiles/zsh/functions/history.zsh
