@@ -105,6 +105,7 @@ function updateAllRepo() {
   do
     cd "$dir"
     pwd
+    pull
     push
     cd - > /dev/null
   done
@@ -113,6 +114,7 @@ function updateAllRepo() {
   do
     cd "$dir"
     pwd
+    pull
     push
     cd - > /dev/null
   done
@@ -121,6 +123,7 @@ function updateAllRepo() {
   do
     cd "$dir"
     pwd
+    pull
     push
     cd - > /dev/null
   done
@@ -133,6 +136,7 @@ function updateAllRepo() {
   do
     cd "$i"
     pwd
+    pull
     push
     cd - > /dev/null
   done
