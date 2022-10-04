@@ -1,0 +1,6 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=dual monitor
+Exec=cat ~/dotfiles/gnome/monitors_dual.xml > ~/.config/monitors.xml

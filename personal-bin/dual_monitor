@@ -1,0 +1,3 @@
+#! /usr/bin/env sh
+
+cat ~/dotfiles/gnome/monitors_dual.xml > ~/.config/monitors.xml
