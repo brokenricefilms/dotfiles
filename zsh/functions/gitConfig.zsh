@@ -130,6 +130,7 @@ function updateAllRepo() {
 
   repoNotInDefaultDir=(
     ~/dotfiles/
+    ~/repos/ongdev/.github/
   )
 
   for i in ${repoNotInDefaultDir[*]}
