@@ -140,8 +140,8 @@ ln -sf ~/sync/obs-studio/ ~/.config/
 ln -sf ~/dotfiles/foot ~/.config/
 ln -sf ~/sync/ok/ibus-bamboo.macro.text ~/.config/ibus-bamboo/
 
-mkdir ~/repos/
-cd ~/repos/
+mkdir -p ~/repos/thuanpham2311
+cd ~/repos/thuanpham2311
 git clone git@github.com:thuanpham2311/viet_eng_words_vim_dict
 cd -
 

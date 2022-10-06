@@ -1,4 +1,3 @@
-export PATH="$DENO_INSTALL/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 export PATH="$HOME/gems/bin:$PATH"
@@ -14,6 +13,7 @@ export PATH="$HOME/.npm/bin:$PATH"
 export GEM_HOME="$HOME/gems"
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 export DENO_INSTALL="$HOME/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 export VISUAL='nvim'
 export EDITOR=$VISUAL
