@@ -12,9 +12,6 @@ zstyle ':completion:*' rehash true
 zstyle ':completion:*' accept-exact '*(N)'
 WORDCHARS=${WORDCHARS//\/[&.;]}
 
-autoload -Uz compinit
-compinit
-
 alias reload='source ~/.zshrc ; tmux source-file ~/.tmux.conf'
 alias h='htop'
 alias q='exit'
@@ -86,3 +83,8 @@ source ~/dotfiles/zsh/functions/zsh-ssh/zsh-ssh.zsh
 
 source ~/dotfiles/zsh/functions/zshAutoSuggestions.zsh
 source ~/dotfiles/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+fpath=(~/dotfiles/zsh $fpath)
+
+autoload -Uz compinit
+compinit -u
