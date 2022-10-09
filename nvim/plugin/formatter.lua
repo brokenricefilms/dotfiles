@@ -1,7 +1,3 @@
--- install missing formatter
--- cargo install stylua
--- ins shfmt
--- pip install --upgrade autopep8
 local filetype_configs = {
 	cs = {
 		function()
@@ -143,7 +139,7 @@ require("formatter").setup({
 
 vim.cmd([[
 augroup AutoFormatting
-  autocmd!
-  autocmd BufWritePost *.* FormatWrite | TrimWhitespace
+autocmd!
+autocmd BufWritePost *.* FormatWrite | TrimWhitespace
 augroup END
 ]])

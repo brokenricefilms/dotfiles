@@ -7,18 +7,13 @@ Plug 'https://github.com/ms-jpq/coq.thirdparty', {'branch': '3p'}
 ino <silent><expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 ino <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<BS>"
 
+Plug 'https://github.com/mfussenegger/nvim-lint'
 Plug 'https://github.com/neovim/nvim-lspconfig'
-
-Plug 'https://github.com/williamboman/nvim-lsp-installer'
 
 Plug 'https://github.com/mhartington/formatter.nvim'
 
 Plug 'https://github.com/editorconfig/editorconfig-vim'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
-
-Plug 'https://github.com/AndrewRadev/splitjoin.vim'
-let g:splitjoin_split_mapping = 'gj'
-let g:splitjoin_join_mapping  = 'gk'
 
 Plug 'https://github.com/Krafi2/jeskape.nvim'
 
@@ -320,11 +315,6 @@ nnoremap <leader>W :SudoWrite<enter>
 nnoremap <leader>q :q<enter>
 nnoremap <leader>o :wq<enter>
 nnoremap Q :qa!<enter>
-
-noremap H :cprevious<enter>
-noremap L :cnext<enter>
-noremap J :bnext<enter>
-noremap K :bprevious<enter>
 
 imap , ,<c-g>u
 imap . .<c-g>u

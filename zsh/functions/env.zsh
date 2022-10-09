@@ -9,6 +9,7 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:$HOME/dotfiles/personal-bin
 export PATH="$HOME/.npm/bin:$PATH"
+export PATH="$(yarn global bin):$PATH"
 
 export GEM_HOME="$HOME/gems"
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
