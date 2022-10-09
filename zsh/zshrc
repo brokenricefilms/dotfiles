@@ -63,7 +63,7 @@ function updateApplications() {
 }
 
 function nvimSetup() {
-  for package in 'dockerfile-language-server-nodejs' 'pyright' 'typescript' 'neovim' 'bash-language-server' 'jsonlint' 'jshint' 'vscode-langservers-extracted' 'cssmodules-language-server' 'emmet-ls' 'vim-language-server'; do
+  for package in 'dockerfile-language-server-nodejs' 'pyright' 'typescript' 'neovim' 'bash-language-server' 'jsonlint' 'jshint' 'vscode-langservers-extracted' 'cssmodules-language-server' 'emmet-ls' 'vim-language-server' 'markdownlint'; do
   npm install --install --global "$package"
   done
 
