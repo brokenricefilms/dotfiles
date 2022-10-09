@@ -9,6 +9,7 @@ ino <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<BS>"
 
 Plug 'https://github.com/mfussenegger/nvim-lint'
 Plug 'https://github.com/neovim/nvim-lspconfig'
+Plug 'https://github.com/glepnir/lspsaga.nvim', { 'branch': 'main' }
 
 Plug 'https://github.com/mhartington/formatter.nvim'
 
