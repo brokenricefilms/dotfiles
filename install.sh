@@ -78,6 +78,10 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 npm config set prefix ~/.npm/
 
+cd /tmp
+wget https://github.com/xo/usql/releases/download/v0.12.13/usql-0.12.13-linux-amd64.tar.bz2
+mv usql ~/.local/bin/
+
 ssh-keygen
 
 if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
@@ -97,13 +101,11 @@ mkdir ~/sync/
 cd ~/sync/
 git clone git@github.com:thuanpham2311/ok.git
 git clone git@github.com:thuanpham2311/obs-studio.git
-cd
 
 cd /tmp
 wget https://github.com/ful1e5/Google_Cursor/releases/download/v1.1.3/GoogleDot-Blue.tar.gz
 tar -xvf GoogleDot-Blue.tar.gz
 sudo mv GoogleDot-Blue/ /usr/share/icons/
-cd -
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
@@ -112,7 +114,6 @@ git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/Aloxaf/fzf-tab
 git clone --depth=1 https://github.com/chitoku-k/fzf-zsh-completions
 git clone --depth=1 https://github.com/sunlei/zsh-ssh
-cd
 
 ln -sf ~/sync/ok/.fonts ~/.fonts
 cd ~/dotfiles/.fonts
@@ -143,6 +144,7 @@ ln -sf ~/sync/ok/ibus-bamboo.macro.text ~/.config/ibus-bamboo/
 mkdir -p ~/repos/thuanpham2311
 cd ~/repos/thuanpham2311
 git clone git@github.com:thuanpham2311/viet_eng_words_vim_dict
-cd -
 
 sudo ln -sf ~/repos/thuanpham2311/viet_eng_words_vim_dict/words /usr/share/dict/words
+
+usql -c '\set SYNTAX_HL_STYLE github'

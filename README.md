@@ -171,10 +171,6 @@ updateApplications() {
 - [Tmux plugin manager](https://github.com/tmux-plugins/tpm)
 - [Delta](https://github.com/dandavison/delta) fancy git diff
 
-## note
-
-- usql: `usql -c '\set SYNTAX_HL_STYLE github'`
-
 ## Demo
 
 **You can watch my livestream playlist here**
