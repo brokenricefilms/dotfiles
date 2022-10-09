@@ -31,7 +31,7 @@ autocmd BufEnter *.md nnoremap <leader>r
     \ :w<enter>:MarkdownPreview<enter>
 
 autocmd BufEnter *.js nnoremap <leader>r
-    \ :w<enter>:FloatermSend cd %:p:h ; deno run --allow-run %:t <enter>:FloatermToggle<enter>
+    \ :w<enter>:FloatermSend cd %:p:h ; node %:t <enter>:FloatermToggle<enter>
 
 autocmd BufEnter *.ts nnoremap <leader>r
     \ :w<enter>:FloatermSend cd %:p:h ; deno run --allow-run %:t <enter>:FloatermToggle<enter>
