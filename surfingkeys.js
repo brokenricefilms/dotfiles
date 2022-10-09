@@ -1,4 +1,24 @@
+// #ffffff
+// #24292f
+// #24292e
+// #d73a49
+// #28a745
+// #dbab09
+// #0366d6
+// #5a32a3
+// #0598bc
+// #6a737d
+// #959da5
+// #cb2431
+// #22863a
+// #b08800
+// #005cc5
+// #5a32a3
+// #3192aa
+// #d1d5da
+
 settings.modeAfterYank = "Normal";
+settings.scrollStepSize = 100;
 
 // Disable emoji
 api.iunmap(":");
@@ -44,22 +64,3 @@ settings.theme = `
   font-size: 10pt;
 }
 `;
-
-// #ffffff
-// #24292f
-// #24292e
-// #d73a49
-// #28a745
-// #dbab09
-// #0366d6
-// #5a32a3
-// #0598bc
-// #6a737d
-// #959da5
-// #cb2431
-// #22863a
-// #b08800
-// #005cc5
-// #5a32a3
-// #3192aa
-// #d1d5da
