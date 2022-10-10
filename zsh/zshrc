@@ -46,7 +46,7 @@ alias trash_download='trash ~/Downloads/*'
 alias se='sudoedit'
 alias show_webcam='mpv av://v4l2:/dev/video0 --profile=low-latency --untimed'
 
-function createRandomPassword() {
+function create_random_password() {
   length="${1:-16}"
   openssl rand -base64 $length | rev | cut -b 2- | rev | wl-copy
   wl-paste
@@ -58,18 +58,18 @@ function hi () {
   neofetch
 }
 
-function downloadFile () {
+function download_file () {
   cd ~/Downloads
   aria2c $argv
   ls -lah ~/Downloads
   cd -
 }
-alias dl="downloadFile"
+alias dl="download_file"
 
-function wifiDriverEnable() {
+function wifi_dirver_enable() {
   sudo sh -c "modprobe mt7921e ; echo 14c3 0608 > /sys/bus/pci/drivers/mt7921e/new_id"
 }
-alias wf='wifiDriverEnable'
+alias wf='wifi_dirver_enable'
 
 if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
   alias copy='wl-copy'
@@ -79,14 +79,14 @@ fi
 
 alias delete_all_symbolic_links_current_dir='sudo find -type l -delete'
 
-function updateApplications() {
+function update_applications() {
   cd /usr/share/applications/
   sudo find -type l -delete
   cd -
   sudo ln -sf ~/dotfiles/applications/* /usr/share/applications/
 }
 
-function nvimSetup() {
+function nvim_setup() {
   for package in 'dockerfile-language-server-nodejs' 'pyright' 'typescript' 'neovim' 'bash-language-server' 'jsonlint' 'jshint' 'vscode-langservers-extracted' 'cssmodules-language-server' 'emmet-ls' 'vim-language-server' 'markdownlint' 'markdownlint-cli'; do
   npm install --install --global "$package"
   done
@@ -125,7 +125,6 @@ source ~/dotfiles/zsh/functions/media.zsh
 source ~/dotfiles/zsh/functions/env.zsh
 source ~/dotfiles/zsh/functions/tmux.zsh
 source ~/dotfiles/zsh/functions/vim.zsh
-source ~/dotfiles/zsh/functions/virt.zsh
 source ~/dotfiles/zsh/functions/zsh-ssh/zsh-ssh.zsh
 
 source ~/dotfiles/zsh/functions/zshAutoSuggestions.zsh

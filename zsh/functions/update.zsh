@@ -19,23 +19,23 @@ if hash pacman 2>/dev/null; then
   alias ya='yay --noconfirm'
   alias uins='sudo pacman -Rs --noconfirm'
 
-  function switchToJava8() {
+  function switch_to_java_8() {
     sudo archlinux-java set java-8-openjdk
     archlinux-java status
   }
 
-  function switchToJava11() {
+  function switch_to_java_11() {
     sudo archlinux-java set java-8-openjdk
     archlinux-java status
   }
 
-  function switchToJava17() {
+  function switch_to_java_17() {
     sudo archlinux-java set java-17-openjdk
     archlinux-java status
   }
 fi
 
-function updateZshPlugin() {
+function update_zsh_plugin() {
   echo "\n👉 update zsh plugin"
 
   cd ~/dotfiles/zsh/functions/fzf-zsh-completions/
@@ -84,5 +84,5 @@ function update() {
 
   nvim -c "PlugUpdate | qa"
 
-  updateZshPlugin
+  update_zsh_plugin
 }

@@ -1,6 +1,10 @@
-SERVER_IP () { hostname -I }
+function SERVER_IP () {
+  hostname -I
+}
 
-ser () { browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000 }
+function ser () {
+  browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000
+}
 
 function nvm() {
   echo "\n👉 NVM not loaded! Loading now..."
@@ -10,27 +14,7 @@ function nvm() {
   nvm "$@"
 }
 
-functions createJsTestProject() {
-  cd /tmp
-  mkdir js_test
-  cd js_test
-  yarn init --yes
-  yarn add eslint-config-airbnb
-  importDefaultEditorConfig
-  nvim js_test.js
-}
-
-functions createTsTestProject() {
-  cd /tmp
-  mkdir ts_test
-  cd ts_test
-  yarn init --yes
-  yarn add eslint-config-airbnb
-  importDefaultEditorConfig
-  nvim ts_test.ts
-}
-
-functions importDefaultEditorConfig() {
+functions import_default_editor_config() {
   touch .editorconfig
   echo "root = true
 
@@ -45,11 +29,31 @@ functions importDefaultEditorConfig() {
   max_line_length = off" > .editorconfig
 }
 
-function cppProject () {
+functions create_javascript_test_project() {
+  cd /tmp
+  mkdir js_test
+  cd js_test
+  yarn init --yes
+  yarn add eslint-config-airbnb
+  import_default_editor_config
+  nvim js_test.js
+}
+
+functions create_typescript_test_project() {
+  cd /tmp
+  mkdir ts_test
+  cd ts_test
+  yarn init --yes
+  yarn add eslint-config-airbnb
+  import_default_editor_config
+  nvim ts_test.ts
+}
+
+function cpp_project () {
   cp -r ~/.config/nvim/stuff/cpppro/* .
   nvim main.cpp source.cpp header.h input
 }
 
-formatCpp () { clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp') }
+format_cpp () { clang-format --style=Google -i $(find -name '*.h' && find -name '*.cpp') }
 
-formatCs () { clang-format --style=Google -i $(find -name '*.cs') }
+format_cs () { clang-format --style=Google -i $(find -name '*.cs') }

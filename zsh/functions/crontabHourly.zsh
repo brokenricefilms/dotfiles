@@ -2,6 +2,6 @@
 
 source ~/dotfiles/zsh/functions/gitConfig.zsh
 
-updateAllRepo
+update_all_repo
 
-autoSync
+auto_sync

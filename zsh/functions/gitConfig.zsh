@@ -8,46 +8,46 @@ alias dv='git difftool'
 alias gl='git log --oneline | head -n 5'
 alias lg='lazygit'
 
-function changeDirToGitRoot() {
+function change_dir_to_git_root() {
   cd $(git rev-parse --show-toplevel)
 }
-alias cdr='changeDirToGitRoot'
+alias cdr='change_dir_to_git_root'
 
-isInGitRepo() { git rev-parse HEAD &>/dev/null }
+is_in_git_repo() { git rev-parse HEAD &>/dev/null }
 
-function gitStatus() {
-  isInGitRepo || return
+function git_status() {
+  is_in_git_repo || return
   git status -sb
 }
-alias st='gitStatus'
+alias st='git_status'
 
-function autoCommit () {
-  isInGitRepo || return
+function auto_commit () {
+  is_in_git_repo || return
   git add -A
   git commit -m "[👌Auto commit] $(curl -s whatthecommit.com/index.txt)"
 }
 
 function ok () {
-  isInGitRepo || return
+  is_in_git_repo || return
   st
-  autoCommit
+  auto_commit
   push
 }
 
 function okp () {
-  isInGitRepo || return
+  is_in_git_repo || return
   prettier --write *
   st
-  autoCommit
+  auto_commit
   push
 }
 
-function goToGitCloneRepoDir () {
+function go_to_git_clone_repo_dir () {
   gitDir="$(basename "$1" .git)"
   gitDirResolved=${2:-$gitDir}
   git clone "$@" && cd "$gitDirResolved";
 }
-alias gc='goToGitCloneRepoDir'
+alias gc='go_to_git_clone_repo_dir'
 
 function yo () {
   git diff
@@ -64,7 +64,7 @@ function ghi() {
   gh issue view $item --web
 }
 
-function autoSync {
+function auto_sync {
   repo=(
     /home/master/sync/ok
     /home/master/sync/obs-studio
@@ -95,12 +95,12 @@ function autoSync {
   do
     cd "$i"
     pwd
-    autoCommit
+    auto_commit
     push
   done
 }
 
-function updateAllRepo() {
+function update_all_repo() {
   for dir in ~/repos/thuanpham2311/*
   do
     cd "$dir"
@@ -143,32 +143,32 @@ function updateAllRepo() {
   done
 }
 
-function switchBranch() {
-  isInGitRepo || return
+function swich_branch() {
+  is_in_git_repo || return
   git branch -a | fzfDown | xargs git switch
 }
-alias sb='switchBranch'
+alias sb='swich_branch'
 
-function gitHubIssueList() { gh issue list | fzf | cut -f1 | copy}
-alias gil='gitHubIssueList'
+function github_issue_list() { gh issue list | fzf | cut -f1 | copy}
+alias gil='github_issue_list'
 
-function gitHubIssueClose() {
+function github_issue_close() {
   id="$(gh issue list | fzf | cut -f1)"
   [ -n "$id" ]
   gh issue close "$id"
 }
-alias gic='gitHubIssueClose'
+alias gic='github_issue_close'
 
-function gitHubIssueViewWeb() {
+function github_issue_view_web() {
   id="$(gh issue list | fzf | cut -f1)"
   [ -n "$id" ]
   gh issue view "$id" --web &> /dev/null
 }
-alias iv='gitHubIssueViewWeb'
+alias iv='github_issue_view_web'
 
-function gitHubIssueComment() {
+function github_issue_comment() {
   id="$(gh issue list | fzf | cut -f1)"
   [ -n "$id" ]
   gh issue comment "$id"
 }
-alias gim='gitHubIssueComment'
+alias gim='github_issue_comment'

@@ -7,97 +7,97 @@ export FZF_ALT_C_COMMAND="fd -t d"
 
 function emoji() {
   if hash emoji-fzf 2>/dev/null; then
-    emoji-fzf preview --prepend | fzfDown | awk '{ print $1 }' | tr -d "\n" | copy
+    emoji-fzf preview --prepend | fzf_down | awk '{ print $1 }' | tr -d "\n" | copy
   else
     pip install emoji-fzf
-    emoji-fzf preview --prepend | fzfDown | awk '{ print $1 }' | tr -d "\n" | copy
+    emoji-fzf preview --prepend | fzf_down | awk '{ print $1 }' | tr -d "\n" | copy
   fi
 }
 alias ej="emoji"
 
-fzfDown() { fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse }
+fzf_down() { fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse }
 
-function findFile() {
+function find_file() {
   local file
-  file=$(fd . -t f --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
+  file=$(fd . -t f --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'bat --style=numbers --color=always --line-range :500 {}')
   if [ ! -z "$file" ]
   then
     nvim "$file"
   fi
 }
-alias f='findFile'
+alias f='find_file'
 
-function findFileInHome() {
+function find_file_in_home() {
   local file
-  file=$(fd . $HOME -t f --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
+  file=$(fd . $HOME -t f --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'bat --style=numbers --color=always --line-range :500 {}')
   if [ ! -z "$file" ]
   then
     nvim "$file"
   fi
 }
-alias F='findFileInHome'
+alias F='find_file_in_home'
 
-function findHiddenFile() {
+function find_hidden_file() {
   local file
-  file=$(fd . -t f --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
+  file=$(fd . -t f --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'bat --style=numbers --color=always --line-range :500 {}')
   if [ ! -z "$file" ]
   then
     nvim "$file"
   fi
 }
-alias fh='findHiddenFile'
+alias fh='find_hidden_file'
 
-function findHiddenFileInHome() {
+function find_hidden_file_home() {
   local file
-  file=$(fd . $HOME -t f --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
+  file=$(fd . $HOME -t f --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'bat --style=numbers --color=always --line-range :500 {}')
   if [ ! -z "$file" ]
   then
     nvim "$file"
   fi
 }
-alias Fh='findHiddenFileInHome'
+alias Fh='find_hidden_file_home'
 
-function openFile() {
+function open_file() {
   local object
-  object=$(fd . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
+  object=$(fd . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'bat --style=numbers --color=always --line-range :500 {}')
   if [ ! -z "$object" ]
   then
     xdg-open "$object"
   fi
 }
-alias o='openFile'
+alias o='open_file'
 
-function openFileInHome() {
+function open_file_in_home() {
   local object
-  object=$(fd . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
+  object=$(fd . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'bat --style=numbers --color=always --line-range :500 {}')
   if [ ! -z '$object' ]
   then
     xdg-open '$object'
   fi
 }
-alias O='openFileInHome'
+alias O='open_file_in_home'
 
-function openHiddenFile() {
+function open_hidden_file() {
   local object
-  object=$(fd . --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
+  object=$(fd . --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'bat --style=numbers --color=always --line-range :500 {}')
   if [ ! -z "$object" ]
   then
     xdg-open "$object"
   fi
 }
-alias oh='openHiddenFile'
+alias oh='open_hidden_file'
 
-function openHiddenFileInHome() {
+function open_hidden_file_in_home() {
   local object
-  object=$(fd . $HOME --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview 'bat --style=numbers --color=always --line-range :500 {}')
+  object=$(fd . $HOME --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'bat --style=numbers --color=always --line-range :500 {}')
   if [ ! -z "$object" ]
   then
     xdg-open "$object"
   fi
 }
-alias Oh='openHiddenFileInHome'
+alias Oh='open_hidden_file_in_home'
 
-function manFzf() {
+function man_fzf() {
   if [ -z  $1 ]
   then
     man -k . | fzf -q " $1" --prompt='man> '  --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r man | col -bx | bat -l man -p --color always' | tr -d '()' | awk '{printf "%s ",  $2} {print  $1}' | xargs -r man
@@ -105,21 +105,21 @@ function manFzf() {
     man  $1
   fi
 }
-alias M='manFzf'
-alias help="manFzf"
+alias M='man_fzf'
+alias help="man_fzf"
 
-function whichFzf() {
+function which_fzf() {
   COMMANDS=`echo -n $PATH | xargs -d : -I {} find {} -maxdepth 1 \
       -executable -type f -printf '%P\n'  2>/dev/null`
   ALIASES=`alias | cut -d '=' -f 1`
   FUNCTIONS=`print -l ${(ok)functions}`
-  RESULT=`echo "$COMMANDS"$'\n'"$ALIASES"$'\n'"$FUNCTIONS" | sort -u | fzfDown`
+  RESULT=`echo "$COMMANDS"$'\n'"$ALIASES"$'\n'"$FUNCTIONS" | sort -u | fzf_down`
 
   eval which $RESULT
 }
-alias W='whichFzf'
+alias W='which_fzf'
 
-function getAlias() {
+function get_alias() {
   CMD=$(
   (
   (alias)
@@ -130,62 +130,62 @@ function getAlias() {
   eval $CMD
 }
 
-function getEnvironment() {
+function get_environment() {
   local ENV_FZF
-  ENV_FZF=$(env | fzfDown)
+  ENV_FZF=$(env | fzf_down)
   echo $(echo $ENV_FZF | cut -d= -f2)
   copy $(echo $ENV_FZF | cut -d= -f2)
 }
-alias listEnvironment='getEnvironment'
+alias listEnvironment='get_environment'
 
-function listAllCommands() {
+function list_all_commands() {
     COMMANDS=`echo -n $PATH | xargs -d : -I {} find {} -maxdepth 1 \
         -executable -type f -printf '%P\n'  2>/dev/null`
     ALIASES=`alias | cut -d '=' -f 1`
     FUNCTIONS=`print -l ${(ok)functions}`
-    RESULT=`echo "$COMMANDS"$'\n'"$ALIASES"$'\n'"$FUNCTIONS" | sort -u | fzfDown`
+    RESULT=`echo "$COMMANDS"$'\n'"$ALIASES"$'\n'"$FUNCTIONS" | sort -u | fzf_down`
     SPACE=" "
     copy $RESULT$SPACE
 
     eval $RESULT
 }
-alias a='listAllCommands'
+alias a='list_all_commands'
 
-function changeDir() {
+function change_dir() {
   local dir
-  dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
+  dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
   cd "$dir"
 
   ls
 }
-alias c='changeDir'
+alias c='change_dir'
 
-function changeDirInHome() {
+function change_dir_in_home() {
   local dir
-  dir=$(fd -t d . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
+  dir=$(fd -t d . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
   cd "$dir"
 
   ls
 }
-alias C='changeDirInHome'
+alias C='change_dir_in_home'
 
-function changeHiddenDir() {
+function change_hidden_dir() {
   local dir
-  dir=$(fd -t d --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
+  dir=$(fd -t d --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
   cd "$dir"
 
   ls
 }
-alias ch='changeHiddenDir'
+alias ch='change_hidden_dir'
 
-function changeHiddenDirInHome() {
+function change_hidden_dir_in_home() {
   local dir
-  dir=$(fd -t d . $HOME --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzfDown --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
+  dir=$(fd -t d . $HOME --hidden --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
   cd "$dir"
 
   ls
 }
-alias Ch='changeHiddenDirInHome'
+alias Ch='change_hidden_dir_in_home'
 
 source ~/dotfiles/zsh/functions/fzf-tab/fzf-tab.plugin.zsh
 source ~/dotfiles/zsh/functions/fzf-zsh-completions/fzf-zsh-completions.plugin.zsh

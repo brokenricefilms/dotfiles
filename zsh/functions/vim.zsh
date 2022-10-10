@@ -7,12 +7,12 @@ set -o vi
 alias vi="nvim"
 alias vim="nvim"
 
-function findFileEditInNvim() {
+function find_file_edit_in_nvim() {
   if [ ! -n "$1" ]; then
     findFile
   else
     nvim "$1"
   fi
 }
-alias e='findFileEditInNvim'
-alias v='findFileEditInNvim'
+alias e='find_file_edit_in_nvim'
+alias v='find_file_edit_in_nvim'

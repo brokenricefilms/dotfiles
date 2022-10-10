@@ -2,7 +2,7 @@ alias ide='tmux split-window -h -p 30 ; tmux split-window -v -p 75 ; tmux last-p
 alias dot='tmux switch-client -t "dotfiles"'
 alias in='tmux switch-client -t "inbox"'
 
-function killAllUnnameTmuxSession() {
+function kill_all_unname_tmux_session() {
   echo "\n👉 kill all unname tmux session"
   cd /tmp/
   tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >/tmp/killAllUnnameTmuxSessionOutput.sh
@@ -13,7 +13,7 @@ function killAllUnnameTmuxSession() {
   tmux ls
 }
 
-function killAllUnnameTmuxSessionNoMessage() {
+function kill_all_unname_tmux_session_no_message() {
   cd /tmp/
   tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >/tmp/killAllUnnameTmuxSessionOutput.sh
   sed -i 's/^/tmux kill-session -t /' killAllUnnameTmuxSessionOutput.sh
@@ -22,14 +22,14 @@ function killAllUnnameTmuxSessionNoMessage() {
   cd -
 }
 
-alias clear='killAllUnnameTmuxSessionNoMessage ; clear -x'
+alias clear='kill_all_unname_tmux_session_no_message ; clear -x'
 alias cler='clear'
 alias clea='clear'
 alias cl='clear'
 
-function tmuxSessionSwitch() {
+function tmux_session_switch() {
   local session
   session=$(tmux list-sessions -F "#{session_name}" | fzfDown)
   tmux switch-client -t "$session"
 }
-alias af='tmuxSessionSwitch'
+alias af='tmux_session_switch'
