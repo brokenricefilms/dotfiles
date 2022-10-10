@@ -106,10 +106,11 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require("lspconfig").html.setup({
 	capabilities = capabilities,
+	filetypes = { "html", "php" },
 })
 
 require("lspconfig").cssls.setup({
-	capabilities = capabilities,
+	filetypes = { "html", "php", "css", "scss", "less" },
 })
 
 require("lspconfig").cssmodules_ls.setup({})
@@ -124,7 +125,9 @@ require("lspconfig").eslint.setup({})
 
 require("lspconfig").diagnosticls.setup({})
 
-require("lspconfig").emmet_ls.setup({})
+require("lspconfig").emmet_ls.setup({
+	filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less" },
+})
 
 require("lspconfig").csharp_ls.setup({})
 
@@ -133,6 +136,8 @@ require("lspconfig").sqls.setup({})
 require("lspconfig").vimls.setup({})
 
 require("lspconfig").phan.setup({})
+
+require("lspconfig").sumneko_lua.setup({})
 
 require("lint").linters_by_ft = {
 	markdown = { "markdownlint" },
