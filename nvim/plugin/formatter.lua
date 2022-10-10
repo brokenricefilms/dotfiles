@@ -140,6 +140,5 @@ require("formatter").setup({
 vim.cmd([[
 augroup AutoFormatting
 autocmd!
-autocmd BufWritePost *.* FormatWrite | TrimWhitespace
 augroup END
 ]])

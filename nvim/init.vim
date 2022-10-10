@@ -350,11 +350,16 @@ command! PlugInstallWithReloadConfigFile execute "silent source ~/.config/nvim/i
 command! ShowFileType execute "set filetype?"
 command! RemoveSymbolMAkaWindowsEndline execute "%s/\r//g"
 
-fun! TrimWhitespace()
-  let l:save = winsaveview()
-  keeppatterns %s/\s\+$//e
-  call winrestview(l:save)
-endfun
-command! TrimWhitespace call TrimWhitespace()
+function! Trim()
+  let pwd = getcwd()
+  let file = expand('%:p:h')
+  if stridx(file, pwd) >= 0
+    silent! %s#\($\n\s*\)\+\%$## " trim end newlines
+    silent! %s/\s\+$//e " trim whitespace
+    silent! g/^\_$\n\_^$/d " single blank line
+  endif
+endfunction
+
+autocmd BufWritePre * call Trim()
 
 let g:coq_settings = { 'auto_start': 'shut-up' }
