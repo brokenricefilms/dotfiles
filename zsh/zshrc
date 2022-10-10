@@ -2,6 +2,25 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
   exec tmux
 fi
 
+e='\033'
+RESET="${e}[0m"
+BOLD="${e}[1m"
+CYAN="${e}[0;96m"
+RED="${e}[0;91m"
+YELLOW="${e}[0;93m"
+GREEN="${e}[0;92m"
+
+echo
+echo -en "$RED"'-_-_-_-_-_-_-_'
+echo -e "$RESET"$BOLD',------,'"$RESET"
+echo -en "$YELLOW"'_-_-_-_-_-_-_-'
+echo -e "$RESET"$BOLD'|   /\_/\\'"$RESET"
+echo -en "$GREEN"'-_-_-_-_-_-_-'
+echo -e "$RESET"$BOLD'~|__( ^ .^)'"$RESET"
+echo -en "$CYAN"'-_-_-_-_-_-_-_-'
+echo -e "$RESET"$BOLD'""  ""'"$RESET"
+echo
+
 autoload -U colors && colors
 
 eval "$(starship init zsh)"
@@ -26,7 +45,12 @@ alias t='trash'
 alias trash_download='trash ~/Downloads/*'
 alias se='sudoedit'
 alias show_webcam='mpv av://v4l2:/dev/video0 --profile=low-latency --untimed'
-alias create_random_strong_password='</dev/urandom tr -dc '12345!@#$%qwertQWERTasdfgASDFGzxcvbZXCVB' | head -c 28 | copy'
+
+function createRandomPassword() {
+  length="${1:-16}"
+  openssl rand -base64 $length | rev | cut -b 2- | rev | wl-copy
+  wl-paste
+}
 
 function hi () {
   browserDaily
