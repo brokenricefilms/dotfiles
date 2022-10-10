@@ -1,0 +1,17 @@
+theme = "papercolor-light"
+
+[editor]
+line-number = "relative"
+auto-completion = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "file-type"]
+separator = "│"
