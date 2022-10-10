@@ -148,3 +148,8 @@ git clone git@github.com:thuanpham2311/viet_eng_words_vim_dict
 sudo ln -sf ~/repos/thuanpham2311/viet_eng_words_vim_dict/words /usr/share/dict/words
 
 usql -c '\set SYNTAX_HL_STYLE github'
+
+cd /usr/share/applications/
+sudo find -type l -delete
+cd -
+sudo ln -sf ~/dotfiles/applications/* /usr/share/applications/
