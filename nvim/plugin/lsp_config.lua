@@ -87,6 +87,7 @@ require("lspconfig")["rust_analyzer"].setup({
 require("lspconfig")["bashls"].setup({
 	on_attach = on_attach,
 	flags = lsp_flags,
+	filetypes = { "sh", "zsh", "bash" },
 })
 
 require("lspconfig")["clangd"].setup({
