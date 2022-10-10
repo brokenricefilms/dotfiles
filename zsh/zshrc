@@ -89,7 +89,6 @@ source ~/dotfiles/zsh/functions/fzfKeyBindings.zsh
 source ~/dotfiles/zsh/functions/completion.zsh
 
 source ~/dotfiles/zsh/functions/browserConfig.zsh
-source ~/dotfiles/zsh/functions/network.zsh
 source ~/dotfiles/zsh/functions/dev.zsh
 source ~/dotfiles/zsh/functions/update.zsh
 source ~/dotfiles/zsh/functions/history.zsh
@@ -102,8 +101,6 @@ source ~/dotfiles/zsh/functions/zsh-ssh/zsh-ssh.zsh
 
 source ~/dotfiles/zsh/functions/zshAutoSuggestions.zsh
 source ~/dotfiles/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-fpath=(~/dotfiles/zsh $fpath)
 
 autoload -Uz compinit
 compinit -u
