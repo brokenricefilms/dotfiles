@@ -289,16 +289,13 @@ nnoremap <leader><space> <c-^>
 
 nmap <leader>i :%s/\<<C-r><C-w>\>/
 
-command! OpenFileInBraveBrowser execute "silent !brave-browser '%'"
 command! CopyFileName execute "silent !echo %:p:t | wl-copy"
 command! CopyFilePath execute "silent !echo %:p | wl-copy"
 command! Reload execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
 command! Light execute "silent !light" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
 command! Dark execute "silent !dark" | execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf"
-command! DeleteDosLineEngdingChar execute "%s/\r$/ /g"
 command! PlugCleanWithReloadConfigFile execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf" | execute "PlugClean"
 command! PlugInstallWithReloadConfigFile execute "silent source ~/.config/nvim/init.vim | silent !tmux source-file ~/.tmux.conf" | execute "PlugInstall"
-command! ShowFileType execute "set filetype?"
 command! RemoveSymbolMAkaWindowsEndline execute "%s/\r//g"
 
 function! Trim()
