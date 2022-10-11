@@ -172,7 +172,7 @@ set cursorlineopt=number
 
 set number relativenumber
 
-set statusline=[\ %F\ %m]\ %y\ %{zoom#statusline()}\ %r%h%w%=[\ %<%{getcwd()}\ on\ \ %{FugitiveHead()}\ ]
+set statusline=[\ %F\ %m]\ %y\ %r%h%w%=[\ %<%{getcwd()}\ on\ \ %{FugitiveHead()}\ ]
 
 set list
 let &listchars = 'tab:▸ ,trail:·,nbsp:±,extends:❯,precedes:❮'
