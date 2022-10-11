@@ -18,11 +18,6 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 Plug 'https://github.com/Krafi2/jeskape.nvim'
 
-Plug 'https://github.com/dhruvasagar/vim-zoom'
-
-nmap <leader>z <Plug>(zoom-toggle)
-let g:zoom#statustext = '[ zoomed ]'
-
 Plug 'https://github.com/voldikss/vim-floaterm'
 
 let g:floaterm_width=0.9
