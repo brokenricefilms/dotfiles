@@ -94,7 +94,7 @@ function nvim_setup() {
   yarn global add diagnostic-languageserver
 
   cargo install stylua
-  sudo dnf install -y shfmt rust-analyzer ShellCheck ninja-build libstdc++ libstdc++-static libstdc++-devel dotnet composer
+  sudo dnf install -y shfmt rust-analyzer ShellCheck ninja-build libstdc++ libstdc++-static libstdc++-devel dotnet composer libsqlite3x-devel-20071018-31.fc36.x86_64
   pip install --upgrade autopep8 cpplint flake8 cmake-language-server
   go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.50.0
   go install golang.org/x/tools/gopls@latest

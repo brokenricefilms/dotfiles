@@ -9,7 +9,7 @@ alias vim="nvim"
 
 function find_file_edit_in_nvim() {
   if [ ! -n "$1" ]; then
-    findFile
+    find_file
   else
     nvim "$1"
   fi

@@ -138,7 +138,8 @@ require("formatter").setup({
 })
 
 vim.cmd([[
-augroup AutoFormatting
-autocmd!
+augroup FormatAutogroup
+  autocmd!
+  autocmd BufWritePost * FormatWrite
 augroup END
 ]])
