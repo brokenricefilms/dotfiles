@@ -139,6 +139,8 @@ require("lspconfig").phan.setup({})
 
 require("lspconfig").sumneko_lua.setup({})
 
+require("lspconfig").vuels.setup({})
+
 require("lint").linters_by_ft = {
 	markdown = { "markdownlint" },
 }
