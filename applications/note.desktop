@@ -1,7 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Terminal=false
-Type=Application
-Name=note
-Exec=google-chrome --app="https://docs.google.com/document/d/1zE1XH5JoKAKWXunOk_r2lzgiHnpbruHKtoG4yfBKcCA"
-Icon=/home/master/dotfiles/applications/icons/note.png
