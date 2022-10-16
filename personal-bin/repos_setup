@@ -1,46 +1,27 @@
 #! /usr/bin/env sh
 
 mkdir ~/repos
-cd repos
+cd ~/repos
 
 mkdir thuanpham2311
 cd thuanpham2311
 
-gh repo clone thuanpham2311/dotfiles
-gh repo clone thuanpham2311/thuanpham2311
-gh repo clone thuanpham2311/svn_demo
-gh repo clone thuanpham2311/phat_trien_phan_mem_nguon_mo
-gh repo clone thuanpham2311/lap_trinh_web
-gh repo clone thuanpham2311/lap_trinh_cho_thiet_bi_di_dong
-gh repo clone thuanpham2311/tmux-fzf-session-switch
-gh repo clone thuanpham2311/deno_blog
-gh repo clone thuanpham2311/l
-gh repo clone thuanpham2311/javascript-cli
-gh repo clone thuanpham2311/whatiuse
-gh repo clone thuanpham2311/thuanpham2311.github.io
-gh repo clone thuanpham2311/payme
-gh repo clone thuanpham2311/noteLinkTut
-gh repo clone thuanpham2311/linux_setup
-gh repo clone thuanpham2311/archives
-gh repo clone thuanpham2311/img
-gh repo clone thuanpham2311/viet_eng_words_vim_dict
-gh repo clone thuanpham2311/list
-gh repo clone thuanpham2311/youtube_zen_ublock
-gh repo clone thuanpham2311/rust-gang
-gh repo clone thuanpham2311/ong_dev_night_bot
-gh repo clone thuanpham2311/windowsApp
+gh repo list thuanpham2311 --limit 1000 | while read -r repo _; do
+  gh repo clone "$repo" "$repo"
+done
 
 cd ..
-mkdir ongdev
-cd ongdev
+mkdir OngDev
+cd OngDev
 
-gh reo clone ongdev/client
-gh reo clone ongdev/server
-gh reo clone ongdev/.github
+gh repo list ongdev --limit 1000 | while read -r repo _; do
+  gh repo clone "$repo" "$repo"
+done
 
 cd ..
 mkdir isekaiSystem
 cd isekaiSystem
 
-gh repo clone isekaiSystem/.github
-gh repo clone isekaiSystem/isekaiSystem
+gh repo list isekaiSystem --limit 1000 | while read -r repo _; do
+  gh repo clone "$repo" "$repo"
+done

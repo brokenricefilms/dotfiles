@@ -110,7 +110,7 @@ function update_all_repo() {
     cd - > /dev/null
   done
 
-  for dir in ~/repos/ongdev/*
+  for dir in ~/repos/OngDev/*
   do
     cd "$dir"
     pwd
@@ -130,7 +130,7 @@ function update_all_repo() {
 
   repoNotInDefaultDir=(
     ~/dotfiles/
-    ~/repos/ongdev/.github/
+    ~/repos/OngDev/.github/
   )
 
   for i in ${repoNotInDefaultDir[*]}
