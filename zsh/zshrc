@@ -224,7 +224,7 @@ alias cl='clear'
 
 function tmux_session_switch() {
   local session
-  session=$(tmux list-sessions -F "#{session_name}" | fzfDown)
+  session=$(tmux list-sessions -F "#{session_name}" | fzf_down)
   tmux switch-client -t "$session"
 }
 alias af='tmux_session_switch'
@@ -452,7 +452,7 @@ function update_all_repo() {
 
 function swich_branch() {
   is_in_git_repo || return
-  git branch -a | fzfDown | xargs git switch
+  git branch -a | fzf_down | xargs git switch
 }
 alias sb='swich_branch'
 
