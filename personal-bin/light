@@ -5,7 +5,9 @@ echo "colorscheme github_light
 highlight HopNextKey guifg=#24292f guibg=NONE guisp=NONE gui=bold cterm=bold
 " >~/dotfiles/nvim/themeControl.vim
 
-echo "include=~/dotfiles/foot/foot_light.ini" > ~/dotfiles/foot/themeControl.ini
+echo "include=~/dotfiles/foot/foot_light.ini" >~/dotfiles/foot/themeControl.ini
+
+echo "include=./light_theme.conf" >~/dotfiles/kitty/theme.conf
 
 DIRECTORY=~/dotfiles/bat
 
