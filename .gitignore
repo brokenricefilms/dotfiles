@@ -1,10 +1,6 @@
-/nvim/plugged/*
-/nvim/plugged/*
 /zsh/functions/zsh-syntax-highlighting
 /zsh/functions/fzf-tab/
 /zsh/functions/fzf-zsh-completions/
-/nvim/themeControl.vim
-/kitty/theme.conf
 /.fonts/.uuid
 
 # Created by https://www.toptal.com/developers/gitignore/api/vim,linux,zsh

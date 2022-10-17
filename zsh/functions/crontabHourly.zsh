@@ -1,6 +1,6 @@
 #! /usr/bin/zsh
 
-source ~/dotfiles/zsh/functions/gitConfig.zsh
+source ~/dotfiles/zsh/zshrc
 
 update_all_repo
 

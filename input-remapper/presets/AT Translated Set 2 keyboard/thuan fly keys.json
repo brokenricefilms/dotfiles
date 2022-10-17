@@ -108,6 +108,10 @@
             "XF86RotateWindows",
             "keyboard"
         ],
+        "1,57,1+1,30,1": [
+            "Control_L+Super_L+1",
+            "keyboard"
+        ],
         "1,57,1+1,31,1": [
             "Control_L+Super_L+2",
             "keyboard"
@@ -148,6 +152,10 @@
             "Alt_L+Escape",
             "keyboard"
         ],
+        "1,58,1": [
+            "Escape",
+            "keyboard"
+        ],
         "1,57,1+1,47,1": [
             "Shift_L+Super_L+v",
             "keyboard"
@@ -158,10 +166,6 @@
         ],
         "1,57,1+1,44,1": [
             "Alt_L+z",
-            "keyboard"
-        ],
-        "1,57,1+1,30,1": [
-            "Control_L+Super_L+1",
             "keyboard"
         ]
     }
