@@ -77,21 +77,54 @@ Plug 'https://github.com/nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 Plug 'https://github.com/nvim-treesitter/nvim-treesitter-textobjects',
 
-Plug 'https://github.com/nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
-Plug 'nvim-telescope/telescope-frecency.nvim',
-Plug 'kkharji/sqlite.lua'
+Plug 'liuchengxu/vista.vim'
+let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+let g:vista_fzf_preview = ['right:50%']
+let g:vista#renderer#enable_icon = 1
+let g:vista_keep_fzf_colors = 1
+noremap <leader>l :Vista finder fzf<enter>
+noremap <leader>v :Vista!!<enter>
 
-nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <leader>j <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <leader>k <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap ; <cmd>lua require('telescope.builtin').commands()<cr>
-nnoremap <leader>h <cmd>lua require('telescope.builtin').oldfiles()<cr>
+Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
+
+Plug 'https://github.com/junegunn/fzf.vim'
+
+let g:fzf_layout = { 'window': {
+      \ 'width': 0.9,
+      \ 'height': 0.9,
+      \ 'highlight': 'Comment',
+      \ 'rounded': v:true } }
+let $FZF_DEFAULT_OPTS='--reverse'
+let g:fzf_preview_window = ['down:80%', 'ctrl-/']
+let g:fzf_colors =
+      \ { 'fg':      ['fg', 'Normal'],
+      \ 'bg':      ['bg', 'Normal'],
+      \ 'hl':      ['fg', 'Comment'],
+      \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+      \ 'bg+':     ['bg', 'Normal', 'CursorColumn'],
+      \ 'hl+':     ['fg', 'Statement'],
+      \ 'info':    ['fg', 'PreProc'],
+      \ 'border':  ['fg', 'Ignore'],
+      \ 'prompt':  ['fg', 'Conditional'],
+      \ 'pointer': ['fg', 'Exception'],
+      \ 'marker':  ['fg', 'Keyword'],
+      \ 'spinner': ['fg', 'Label'],
+      \ 'header':  ['fg', 'Comment'] }
+
+noremap <leader>F :Files ~<enter>
+noremap <leader>f :Files<enter>
+noremap <expr> <leader>gf fugitive#head() != '' ? ':GFiles?<enter>' : ':Files<enter>'
+noremap <leader>j :Rg<enter>
+noremap <leader>k :Buffers<enter>
+noremap <leader>h :History<enter>
+noremap ; :Commands<enter>
+noremap / :BLines<enter>
+noremap // /
 
 Plug 'https://github.com/tpope/vim-fugitive'
 
 noremap <silent> gs :G<enter>gg5j2ly$k0
-nnoremap gc <cmd>lua require('telescope.builtin').git_commits()<cr>
+noremap <silent> gc :cd `git rev-parse --show-toplevel`<enter>:BCommits<enter>
 noremap <silent> gb :G blame<enter>
 
 Plug 'https://github.com/tpope/vim-eunuch'
