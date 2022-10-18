@@ -31,7 +31,6 @@ noremap <leader>F :Files ~<enter>
 noremap <leader>f :Files<enter>
 noremap <leader>j :Rg<enter>
 noremap ; :Commands<enter>
-noremap / :BLines<enter>
 
 Plug 'https://github.com/tpope/vim-eunuch'
 
