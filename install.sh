@@ -48,12 +48,12 @@ mv usql ~/.local/bin/
 usql -c '\set SYNTAX_HL_STYLE github'
 
 cd ~/
-git clone git@github.com:thuanpham2311/dotfiles.git
+git clone git@github.com:thuanOwa/dotfiles.git
 
 mkdir ~/sync/
 cd ~/sync/
-git clone git@github.com:thuanpham2311/ok.git
-git clone git@github.com:thuanpham2311/obs-studio.git
+git clone git@github.com:thuanOwa/ok.git
+git clone git@github.com:thuanOwa/obs-studio.git
 
 cd /tmp
 wget https://github.com/ful1e5/Google_Cursor/releases/download/v1.1.3/GoogleDot-Blue.tar.gz
@@ -94,27 +94,20 @@ sudo find -type l -delete
 cd -
 sudo ln -sf ~/dotfiles/applications/* /usr/share/applications/
 
-mkdir ~/repos
-cd ~/repos
+mkdir ~/repos/
+cd ~/repos/
 
-mkdir thuanpham2311
-cd thuanpham2311
-
-gh repo list thuanpham2311 --limit 1000 | while read -r repo _; do
+gh repo list thuanOwa --limit 1000 | while read -r repo _; do
   gh repo clone "$repo" "$repo"
 done
 
-cd ..
-mkdir OngDev
-cd OngDev
+cd ~/repos/
 
 gh repo list ongdev --limit 1000 | while read -r repo _; do
   gh repo clone "$repo" "$repo"
 done
 
-cd ..
-mkdir isekaiSystem
-cd isekaiSystem
+cd ~/repos/
 
 gh repo list isekaiSystem --limit 1000 | while read -r repo _; do
   gh repo clone "$repo" "$repo"
