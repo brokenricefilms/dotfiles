@@ -3,4 +3,4 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=chat bubbles
-Exec=google-chrome --app="https://chat-bubbles.craftz.dog/"
+Exec=google-chrome "https://chat-bubbles.craftz.dog/"
