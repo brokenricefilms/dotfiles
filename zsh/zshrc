@@ -221,7 +221,7 @@ function kill_all_unname_tmux_session_no_message() {
 alias clear='kill_all_unname_tmux_session_no_message ; clear -x'
 alias cler='clear'
 alias clea='clear'
-alias cl='clear'
+alias c890961l='clear'
 
 function tmux_session_switch() {
   local session
@@ -373,9 +373,15 @@ function yo () {
 }
 
 function auto_sync {
+  for dir in ~/sync/*
+  do
+    cd "$i"
+    pwd
+    auto_commit
+    push
+  done
+
   repo=(
-    /home/master/sync/ok
-    /home/master/sync/obs-studio
     /home/master/repos/thuanOwa/co_so_du_lieu
     /home/master/repos/thuanOwa/dataLab
     /home/master/repos/thuanOwa/ky_thuat_lap_trinh
