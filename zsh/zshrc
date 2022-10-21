@@ -191,7 +191,7 @@ alias m='mpv --shuffle --loop-playlist ~/Music/*'
 function update_music() {
   cd ~/Music/
   trash *
-  yta "https://thuanOwa.github.io/l/music"
+  yta "https://www.youtube.com/playlist?list=PLcazFfFZIFPld2xu_nAgmbgj5QldQOpUB"
   cd -
 }
 
