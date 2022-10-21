@@ -189,7 +189,7 @@ alias yta='yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --ex
 alias m='mpv --shuffle --loop-playlist ~/Music/*'
 
 function update_music() {
-  cd ~/Music/
+  mk ~/Music/music_i_like/
   trash *
   yta "https://www.youtube.com/playlist?list=PLcazFfFZIFPld2xu_nAgmbgj5QldQOpUB"
   cd -
