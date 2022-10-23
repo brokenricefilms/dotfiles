@@ -6,4 +6,4 @@ pager: delta -s
 aliases:
     co: pr checkout
 http_unix_socket:
-browser: google-chrome
+browser: xdg-open

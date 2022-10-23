@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=new sheet
-Exec=google-chrome "https://sheet.new"
+Exec=xdg-open "https://sheet.new"
 Icon=/home/master/dotfiles/applications/icons/google-sheets.png
