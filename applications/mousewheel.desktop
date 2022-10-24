@@ -1,6 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Terminal=false
-Type=Application
-Name=mouse wheel speed
-Exec=bash -c "~/dotfiles/personal-bin/mouseWheel"

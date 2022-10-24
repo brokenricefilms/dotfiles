@@ -346,7 +346,7 @@ alias st='git_status'
 function auto_commit () {
   is_in_git_repo || return
   git add .
-  git commit -a "[👌Auto commit] $(curl -s whatthecommit.com/index.txt)"
+  git commit -m "[👌Auto commit] $(curl -s whatthecommit.com/index.txt)"
 }
 
 function ok () {
@@ -368,7 +368,7 @@ function yo () {
   echo -n "👉 Commmit message: "
   read commitMessage
   git add .
-  git commit -a $commitMessage
+  git commit -m $commitMessage
   git push &
 }
 
