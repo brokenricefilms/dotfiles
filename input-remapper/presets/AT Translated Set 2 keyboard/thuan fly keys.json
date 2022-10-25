@@ -116,14 +116,6 @@
             "Escape",
             "keyboard"
         ],
-        "1,57,1+1,47,1": [
-            "Shift_L+Super_L+v",
-            "keyboard"
-        ],
-        "1,57,1+1,49,1": [
-            "Shift_L+Super_L+n",
-            "keyboard"
-        ],
         "1,57,1+1,44,1": [
             "Alt_L+z",
             "keyboard"
@@ -166,6 +158,14 @@
         ],
         "1,57,1+1,20,1": [
             "Super_L+0",
+            "keyboard"
+        ],
+        "1,57,1+1,49,1": [
+            "Shift_L+Super_L+KEY_DOWN",
+            "keyboard"
+        ],
+        "1,57,1+1,47,1": [
+            "Shift_L+Super_L+KEY_UP",
             "keyboard"
         ]
     }
