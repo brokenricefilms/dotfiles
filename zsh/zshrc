@@ -150,9 +150,9 @@ function nvm() {
   nvm "$@"
 }
 
-alias ins='sudo dnf -y install'
-alias inss='dnf search'
-alias uins='sudo dnf -y remove'
+alias ins='sudo apt install -y'
+alias inss='apt search'
+alias uins='sudo apt remove -y'
 
 function update_zsh_plugin() {
   echo "\n👉 update zsh plugin"
@@ -175,8 +175,6 @@ function update_zsh_plugin() {
 
 function update() {
   echo "\n👉 update system"
-
-  dnf makecache
 
   nvim -c "PlugUpdate | qa"
 
