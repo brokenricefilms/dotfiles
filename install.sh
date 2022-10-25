@@ -15,7 +15,7 @@ sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/ho
 sudo dnf copr enable sunwire/input-remapper -y
 sudo dnf install python3-input-remapper -y
 
-sudo dnf install -y tmux curl wget git neofetch htop gnome-tweaks trash-cli flameshot python3-pip tldr net-tools xclip speedtest-cli neovim python3-neovim fd-find aria2 tree cowsay fzf npm ffmpeg youtube-dl mpv tig kitty ripgrep unrar exa moreutils foliate bat util-linux-user zsh cronie git-delta wl-clipboard java-devel git-clang-format rust cargo go gtk-v4l ruby ruby-devel xdg-open-stable gcc-c++ ibus-bamboo gnome-extensions-app collectd-sensors olive obs-studio dconf-editor sqlite shfmt v4l-utils google-noto-emoji-color-fonts cmake imwheel
+sudo dnf install -y tmux curl wget git neofetch htop gnome-tweaks trash-cli flameshot python3-pip tldr net-tools xclip speedtest-cli neovim python3-neovim fd-find aria2 tree cowsay fzf npm ffmpeg youtube-dl mpv ripgrep unrar exa moreutils foliate bat util-linux-user zsh cronie git-delta wl-clipboard java-devel git-clang-format rust cargo go gtk-v4l ruby ruby-devel xdg-open-stable gcc-c++ ibus-bamboo gnome-extensions-app collectd-sensors  obs-studio dconf-editor sqlite shfmt v4l-utils google-noto-emoji-color-fonts cmake kdenlive
 
 curl -fsSL https://deno.land/install.sh | sh
 
