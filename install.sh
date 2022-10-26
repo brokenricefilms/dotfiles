@@ -7,7 +7,9 @@ sudo add-apt-repository ppa:apandada1/foliate -y
 
 sudo apt update -y
 
-sudo apt install copyq zsh tmux curl wget git neofetch htop mpv gnome-tweaks trash-cli flameshot ipython3 python3-pip tldr net-tools speedtest-cli neovim fd-find aria2 tree cowsay fzf clangd golang fonts-noto-mono ripgrep foliate zsh ibus-bamboo unrar moreutils exa universal-ctags lua5.4 node-typescript bat python3-venv shfmt unzip cargo gem ruby-full build-essential zlib1g-dev php adb delta npm libsqlite3-dev kdenlive -y
+sudo apt install tmux curl wget git neofetch htop mpv gnome-tweaks trash-cli flameshot ipython3 python3-pip tldr net-tools speedtest-cli neovim fd-find aria2 tree cowsay fzf clangd golang fonts-noto-mono ripgrep foliate ibus-bamboo unrar moreutils exa universal-ctags lua5.4 node-typescript bat python3-venv shfmt unzip cargo gem ruby-full build-essential zlib1g-dev php adb delta npm libsqlite3-dev kdenlive -y
+
+snap install starship
 
 curl -fsSL https://deno.land/install.sh | sh
 
@@ -29,6 +31,12 @@ pip install --upgrade pynvim
 gem install neovim jekyll bundler
 cargo install stylua
 
+mkdir ~/app/
+cd ~/app
+git clone --recursive https://github.com/akinomyoga/ble.sh.git
+make -C ble.sh install PREFIX=~/.local
+cd -
+
 # nvim setup
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -45,17 +53,12 @@ git clone git@github.com:thuanOwa/obs-studio.git
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-cd ~/dotfiles/zsh/functions/
-git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting
-git clone --depth=1 https://github.com/Aloxaf/fzf-tab
-git clone --depth=1 https://github.com/chitoku-k/fzf-zsh-completions
-
 ln -sf ~/sync/ok/.fonts ~/.fonts
 cd ~/dotfiles/.fonts
 fc-cache -v
 
 ln -sf ~/sync/ok/.tinypng ~/.tinypng
-ln -sf ~/dotfiles/zsh/zshrc ~/.zshrc
+ln -sf ~/dotfiles/bash/bashrc ~/.bashrc
 ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/ssh/config ~/.ssh/config
 ln -sf ~/dotfiles/nvim ~/.config/

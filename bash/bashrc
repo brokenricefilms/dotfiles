@@ -1,34 +1,42 @@
-e='\033'
-RESET="${e}[0m"
-BOLD="${e}[1m"
-CYAN="${e}[0;96m"
-RED="${e}[0;91m"
-YELLOW="${e}[0;93m"
-GREEN="${e}[0;92m"
+#!/usr/bin/bash
 
-echo
-echo -en "$RED"'-_-_-_-_-_-_-_'
-echo -e "$RESET"$BOLD',------,'"$RESET"
-echo -en "$YELLOW"'_-_-_-_-_-_-_-'
-echo -e "$RESET"$BOLD'|   /\_/\\'"$RESET"
-echo -en "$GREEN"'-_-_-_-_-_-_-'
-echo -e "$RESET"$BOLD'~|__( ^ .^)'"$RESET"
-echo -en "$CYAN"'-_-_-_-_-_-_-_-'
-echo -e "$RESET"$BOLD'""  ""'"$RESET"
-echo
+case $- in
+*i*) ;; # interactive
+*) return ;;
+esac
 
-autoload -U colors && colors
+echo_cat_rainbow() {
+  e='\033'
+  RESET="${e}[0m"
+  BOLD="${e}[1m"
+  CYAN="${e}[0;96m"
+  RED="${e}[0;91m"
+  YELLOW="${e}[0;93m"
+  GREEN="${e}[0;92m"
 
-eval "$(starship init zsh)"
+  echo
+  echo -en "$RED"'-_-_-_-_-_-_-_'
+  echo -e "$RESET"$BOLD',------,'"$RESET"
+  echo -en "$YELLOW"'_-_-_-_-_-_-_-'
+  echo -e "$RESET"$BOLD'|   /\_/\\'"$RESET"
+  echo -en "$GREEN"'-_-_-_-_-_-_-'
+  echo -e "$RESET"$BOLD'~|__( ^ .^)'"$RESET"
+  echo -en "$CYAN"'-_-_-_-_-_-_-_-'
+  echo -e "$RESET"$BOLD'""  ""'"$RESET"
+  echo
+}
 
-autoload -Uz compinit
-compinit -u
+echo_cat_rainbow
 
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' rehash true
-zstyle ':completion:*' accept-exact '*(N)'
-WORDCHARS=${WORDCHARS//\/[&.;]}
+eval "$(starship init bash)"
+
+HISTCONTROL=ignoreboth
+HISTSIZE=1000
+HISTFILESIZE=2000
+shopt -s histappend
+shopt -s checkwinsize
+
+bind 'set completion-ignore-case on'
 
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
@@ -39,46 +47,41 @@ export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin
-export PATH=$PATH:$HOME/dotfiles/personal-bin
 export PATH="$HOME/.npm/bin:$PATH"
 export PATH="$(yarn global bin):$PATH"
-
 export GEM_HOME="$HOME/gems"
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
-
-export VISUAL='nvim'
+export VISUAL="nvim"
 export EDITOR=$VISUAL
-export MANPAGER='nvim +Man!'
-export EDITOR='nvim'
+export MANPAGER="nvim +Man!"
+export EDITOR="nvim"
+export FZF_DEFAULT_COMMAND="fd --type f --follow --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd -t d"
 
-set -U EDITOR nvim
 set -o vi
 
-setopt HISTIGNOREALLDUPS SHAREHISTORY
-setopt EXTENDED_HISTORY
-setopt HIST_EXPIRE_DUPS_FIRST
-setopt HIST_IGNORE_DUPS
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_IGNORE_SPACE
-setopt HIST_FIND_NO_DUPS
-setopt HIST_SAVE_NO_DUPS
-setopt HIST_BEEP
-setopt HIST_REDUCE_BLANKS
-HISTSIZE=10000
-SAVEHIST=10000
-HISTFILE=~/.zsh_history
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] &&
+  . /usr/share/bash-completion/bash_completion
 
-alias reload='source ~/.zshrc ; tmux source-file ~/.tmux.conf'
+source ~/dotfiles/bash/fzf_tab_completion.sh
+bind -x '"\t": fzf_bash_completion'
+
+source ~/dotfiles/bash/gh_completion.sh
+source ~/.local/share/blesh/ble.sh
+
+alias reload='source ~/.bashrc ; tmux source-file ~/.tmux.conf'
 alias ka='killall'
 alias cat='bat'
 alias t='trash'
 alias q='exit'
 alias owa='code .'
 alias se='sudoedit'
+alias x='chmod +x'
 
-function browserDaily() {
+browserDaily() {
   xdg-open "https://facebook.com"
   xdg-open "https://www.facebook.com/messages/t/thuanOwa"
   xdg-open "https://mail.google.com/mail/u/0/#inbox"
@@ -88,18 +91,25 @@ function browserDaily() {
   xdg-open "https://discord.com/channels/@me"
 }
 
-function hi () {
+update_bash_functions() {
+  curl https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh >~/dotfiles/bash/fzf_tab_completion.sh
+  gh completion -s bash >~/dotfiles/bash/gh_completion.sh
+  ble-update
+}
+
+hi() {
   browserDaily
-  update
+  nvim -c "PlugUpdate | qa"
+  update_bash_functions
   neofetch
 }
 
-function wifi_dirver_enable() {
+wifi_dirver_enable() {
   sudo sh -c "modprobe mt7921e ; echo 14c3 0608 > /sys/bus/pci/drivers/mt7921e/new_id"
 }
 alias wf='wifi_dirver_enable'
 
-function update_applications() {
+update_applications() {
   cd /usr/share/applications/
   sudo find -type l -delete
   cd -
@@ -121,13 +131,13 @@ alias la='exa -a --color=auto --group-directories-first'
 alias al='la'
 alias lt='exa -aT --color=auto --group-directories-first'
 
-function make_dir() {
+make_dir() {
   if [ ! -n "$1" ]; then
-    echo -n "\n👉 Enter a directory name"
+    echo -n "👉 Enter a directory name"
     read dirName
     mkdir -p $dirName && cd $dirName
   elif [ -d $1 ]; then
-    echo "\n👉 \`$1' already exists"
+    echo -e "👉 $1 already exists"
     cd $1
   else
     mkdir -p $1 && cd $1
@@ -135,15 +145,15 @@ function make_dir() {
 }
 alias mk="make_dir"
 
-function SERVER_IP () {
+SERVER_IP() {
   hostname -I
 }
 
-function ser () {
+ser() {
   browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000
 }
 
-function nvm() {
+nvm() {
   echo "\n👉 NVM not loaded! Loading now..."
   unset -f nvm
   export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -155,39 +165,15 @@ alias ins='sudo apt install -y'
 alias inss='apt search'
 alias uins='sudo apt remove -y'
 
-function update_zsh_plugin() {
-  echo "\n👉 update zsh plugin"
+alias yt="yt-dlp -f bestvideo+bestaudio"
 
-  cd ~/dotfiles/zsh/functions/fzf-zsh-completions/
-  pwd
-  git pull
-  cd -
-
-  cd ~/dotfiles/zsh/functions/fzf-tab/
-  pwd
-  git pull
-  cd -
-
-  cd ~/dotfiles/zsh/functions/zsh-syntax-highlighting/
-  pwd
-  git pull
-  cd -
+yta() {
+  yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"
 }
-
-function update() {
-  echo "\n👉 update system"
-
-  nvim -c "PlugUpdate | qa"
-
-  update_zsh_plugin
-}
-
-alias yt='yt-dlp -f bestvideo+bestaudio'
-alias yta='yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"'
 
 alias m='mpv --shuffle --loop-playlist ~/Music/*'
 
-function update_music() {
+update_music() {
   mk ~/Music/music_i_like/
   trash *
   yta "https://www.youtube.com/playlist?list=PLcazFfFZIFPld2xu_nAgmbgj5QldQOpUB"
@@ -197,7 +183,7 @@ function update_music() {
 alias dot='tmux switch-client -t "dotfiles"'
 alias in='tmux switch-client -t "inbox"'
 
-function kill_all_unname_tmux_session() {
+kill_all_unname_tmux_session() {
   echo "\n👉 kill all unname tmux session"
   cd /tmp/
   tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >/tmp/killAllUnnameTmuxSessionOutput.sh
@@ -208,7 +194,7 @@ function kill_all_unname_tmux_session() {
   tmux ls
 }
 
-function kill_all_unname_tmux_session_no_message() {
+kill_all_unname_tmux_session_no_message() {
   cd /tmp/
   tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >/tmp/killAllUnnameTmuxSessionOutput.sh
   sed -i 's/^/tmux kill-session -t /' killAllUnnameTmuxSessionOutput.sh
@@ -222,7 +208,7 @@ alias cler='clear'
 alias clea='clear'
 alias c890961l='clear'
 
-function tmux_session_switch() {
+tmux_session_switch() {
   local session
   session=$(tmux list-sessions -F "#{session_name}" | fzf_down)
   tmux switch-client -t "$session"
@@ -232,7 +218,7 @@ alias af='tmux_session_switch'
 alias vi="nvim"
 alias vim="nvim"
 
-function find_file_edit_in_nvim() {
+find_file_edit_in_nvim() {
   if [ ! -n "$1" ]; then
     find_file
   else
@@ -242,12 +228,7 @@ function find_file_edit_in_nvim() {
 alias e='find_file_edit_in_nvim'
 alias v='find_file_edit_in_nvim'
 
-export FZF_DEFAULT_COMMAND='fd --type f --follow --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems'
-
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd -t d"
-
-function emoji() {
+emoji() {
   if hash emoji-fzf 2>/dev/null; then
     emoji-fzf preview --prepend | fzf_down | awk '{ print $1 }' | tr -d "\n" | wl-copy
   else
@@ -257,53 +238,45 @@ function emoji() {
 }
 alias ej="emoji"
 
-fzf_down() { fzf --height 50% --min-height 20 --bind ctrl-/:toggle-preview "$@" --reverse }
+fzf_down() {
+  fzf --height 50% --min-height 20 --reverse
+}
 
-function find_file() {
+h() {
+  local command
+  command=$(\cat ~/.bash_history | fzf_down)
+  $command
+}
+
+find_file() {
   local file
   file=$(fd . -t f --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'bat --style=numbers --color=always --line-range :500 {}')
-  if [ ! -z "$file" ]
-  then
+  if [ ! -z "$file" ]; then
     nvim "$file"
   fi
 }
 alias f='find_file'
 
-function open_file() {
+open_file() {
   local object
   object=$(fd . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'bat --style=numbers --color=always --line-range :500 {}')
-  if [ ! -z "$object" ]
-  then
+  if [ ! -z "$object" ]; then
     xdg-open "$object"
   fi
 }
 alias o='open_file'
 
-function man_fzf() {
-  if [ -z  $1 ]
-  then
-    man -k . | fzf -q " $1" --prompt='man> '  --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r man | col -bx | bat -l man -p --color always' | tr -d '()' | awk '{printf "%s ",  $2} {print  $1}' | xargs -r man
+man_fzf() {
+  if [ -z $1 ]; then
+    man -k . | fzf -q " $1" --prompt='man> ' --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r man | col -bx | bat -l man -p --color always' | tr -d '()' | awk '{printf "%s ",  $2} {print  $1}' | xargs -r man
   else
-    man  $1
+    man $1
   fi
 }
-alias M='man_fzf'
+alias M="man_fzf"
 alias help="man_fzf"
 
-function list_all_commands() {
-    COMMANDS=`echo -n $PATH | xargs -d : -I {} find {} -maxdepth 1 \
-        -executable -type f -printf '%P\n'  2>/dev/null`
-    ALIASES=`alias | cut -d '=' -f 1`
-    FUNCTIONS=`print -l ${(ok)functions}`
-    RESULT=`echo "$COMMANDS"$'\n'"$ALIASES"$'\n'"$FUNCTIONS" | sort -u | fzf_down`
-    SPACE=" "
-    wl-copy $RESULT$SPACE
-
-    eval $RESULT
-}
-alias a='list_all_commands'
-
-function change_dir() {
+change_dir() {
   local dir
   dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
   cd "$dir"
@@ -312,7 +285,7 @@ function change_dir() {
 }
 alias c='change_dir'
 
-function change_dir_in_home() {
+change_dir_in_home() {
   local dir
   dir=$(fd -t d . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
   cd "$dir"
@@ -329,40 +302,35 @@ alias dv='git difftool'
 alias gl='git log --oneline | head -n 5'
 alias lg='lazygit'
 
-function change_dir_to_git_root() {
+change_dir_to_git_root() {
   cd $(git rev-parse --show-toplevel)
 }
 alias cdr='change_dir_to_git_root'
 
-is_in_git_repo() { git rev-parse HEAD &>/dev/null }
-
-function git_status() {
-  is_in_git_repo || return
+git_status() {
   git status -sb
 }
 alias st='git_status'
 
-function auto_commit () {
-  is_in_git_repo || return
+auto_commit() {
   git add .
   git commit -m "[👌Auto commit] $(curl -s whatthecommit.com/index.txt)"
 }
 
-function ok () {
-  is_in_git_repo || return
+ok() {
   st
   auto_commit
   push
 }
 
-function go_to_git_clone_repo_dir () {
+go_to_git_clone_repo_dir() {
   gitDir="$(basename "$1" .git)"
   gitDirResolved=${2:-$gitDir}
-  git clone "$@" && cd "$gitDirResolved";
+  git clone "$@" && cd "$gitDirResolved"
 }
 alias gc='go_to_git_clone_repo_dir'
 
-function yo () {
+yo() {
   git diff
   echo -n "👉 Commmit message: "
   read commitMessage
@@ -371,9 +339,8 @@ function yo () {
   git push &
 }
 
-function auto_sync {
-  for dir in ~/sync/*
-  do
+auto_sync() {
+  for dir in ~/sync/*; do
     cd "$i"
     pwd
     auto_commit
@@ -404,8 +371,7 @@ function auto_sync {
     /home/master/repos/thuanOwa/phat_trien_phan_mem_nguon_mo/
   )
 
-  for i in ${repo[*]}
-  do
+  for i in ${repo[*]}; do
     cd "$i"
     pwd
     auto_commit
@@ -413,32 +379,29 @@ function auto_sync {
   done
 }
 
-function update_all_repo() {
-  for dir in ~/repos/thuanOwa/*
-  do
+update_all_repo() {
+  for dir in ~/repos/thuanOwa/*; do
     cd "$dir"
     pwd
     pull
     push
-    cd - > /dev/null
+    cd - >/dev/null
   done
 
-  for dir in ~/repos/OngDev/*
-  do
+  for dir in ~/repos/OngDev/*; do
     cd "$dir"
     pwd
     pull
     push
-    cd - > /dev/null
+    cd - >/dev/null
   done
 
-  for dir in ~/repos/isekaiSystem/*
-  do
+  for dir in ~/repos/isekaiSystem/*; do
     cd "$dir"
     pwd
     pull
     push
-    cd - > /dev/null
+    cd - >/dev/null
   done
 
   repoNotInDefaultDir=(
@@ -446,25 +409,109 @@ function update_all_repo() {
     ~/repos/OngDev/.github/
   )
 
-  for i in ${repoNotInDefaultDir[*]}
-  do
-    cd "$i"
+  for i in ${repoNotInDefaultDir[*]}; do
+    cd '$i'
     pwd
     pull
     push
-    cd - > /dev/null
+    cd - >/dev/null
   done
 }
 
-function swich_branch() {
-  is_in_git_repo || return
+swich_branch() {
   git branch -a | fzf_down | xargs git switch
 }
 alias sb='swich_branch'
 
-source ~/dotfiles/zsh/functions/fzf-tab/fzf-tab.plugin.zsh
-source ~/dotfiles/zsh/functions/fzf-zsh-completions/fzf-zsh-completions.plugin.zsh
-source ~/dotfiles/zsh/functions/fzfKeyBindings.zsh
-source ~/dotfiles/zsh/functions/completion.zsh
-source ~/dotfiles/zsh/functions/zshAutoSuggestions.zsh
-source ~/dotfiles/zsh/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+crontab_hourly() {
+  update_all_repo
+  auto_sync
+}
+
+crontab_daily() {
+  update_all_repo
+  auto_sync
+}
+
+u() {
+
+  if [ -f "$1" ]; then
+    case "$1" in
+    *.tar.bz2) tar -jxvf "$1" ;;
+    *.tar.gz) tar -zxvf "$1" ;;
+    *.bz2) bunzip2 "$1" ;;
+    *.dmg) hdiutil mount "$1" ;;
+    *.gz) gunzip "$1" ;;
+    *.tar) tar -xvf "$1" ;;
+    *.tar.xz) tar -xvf "$1" ;;
+    *.tbz2) tar -jxvf "$1" ;;
+    *.tgz) tar -zxvf "$1" ;;
+    *.txz) tar -zxvf "$1" ;;
+    *.zip) unzip "$1" ;;
+    *.ZIP) unzip "$1" ;;
+    *.pax) cat "$1" | pax -r ;;
+    *.pax.Z) uncompress "$1" --stdout | pax -r ;;
+    *.rar) unrar x "$1" ;;
+    *.Z) uncompress "$1" ;;
+    *.7z) 7z x $1 ;;
+    *) echo "'"$1"' cannot be extracted/mounted via extract()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+run() {
+  file_name=$1
+  file_name_without_extension=$(echo "$file_name" | cut -f 1 -d '.')
+
+  if [ -f $file_name ]; then
+    if hash cowsay 2>/dev/null; then
+      cowsay "👋Hey, I will run $file_name for you."
+      cowsay "Result"
+    else
+      echo "👋Hey, I will run $file_name for you."
+      echo "=========="
+      echo "==Result=="
+      echo "=========="
+    fi
+    echo ""
+    case $file_name in
+    *.cpp)
+      g++ $file_name
+      ./a.out
+      rm a.out
+      ;;
+    *.c)
+      gcc $file_name
+      ./a.out
+      rm a.out
+      ;;
+    *.html) brave-browser --new-window $file_name ;;
+    *.js) node $file_name ;;
+    *.ts) deno $file_name ;;
+    *.py) python $file_name ;;
+    *.go) go run $file_name ;;
+    *.cs)
+      csc $file_name
+      mono "${file_name_without_extension}.exe"
+      rm -rf "${file_name_without_extension}.exe"
+      ;;
+    *.java)
+      javac $file_name
+      java $file_name_without_extension
+      rm -rf "${file_name_without_extension}.class"
+      ;;
+    *.php) php $file_name ;;
+    *.sh)
+      chmod +x $file_name
+      ./$file_name
+      ;;
+    *) if hash cowsay 2>/dev/null; then
+      cowthink -d "I guess, you don't type right the file name. 🤣 Try again."
+    else
+      echo "I guess, you don't type right the file name. 🤣 Try again."
+    fi ;;
+    esac
+  fi
+}
