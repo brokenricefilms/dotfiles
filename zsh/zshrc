@@ -76,6 +76,7 @@ alias cat='bat'
 alias t='trash'
 alias q='exit'
 alias owa='code .'
+alias se='sudoedit'
 
 function browserDaily() {
   xdg-open "https://facebook.com"
