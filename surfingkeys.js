@@ -1,7 +1,6 @@
 settings.modeAfterYank = "Normal";
 settings.scrollStepSize = 100;
 
-// Disable emoji
 api.iunmap(":");
 
 api.Hints.characters = "asdghklqwertyuiopzxcvbnmfj1234567890";
