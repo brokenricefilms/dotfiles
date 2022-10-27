@@ -1,6 +1,5 @@
 call plug#begin()
 Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
-
 Plug 'https://github.com/junegunn/fzf.vim'
 
 let g:fzf_layout = { 'window': {
