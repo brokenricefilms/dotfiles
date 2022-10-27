@@ -9,6 +9,7 @@ const hintsCss =
   "font-size: 12pt; font-family: JetBrains Mono NL, Cascadia Code, SauceCodePro Nerd Font, Consolas, Menlo, monospace; border: 0px; color: #0366d6; background: initial; background-color: #ffffff";
 
 api.Hints.style(hintsCss);
+api.Hints.style(hintsCss, "text");
 
 settings.theme = `
 .sk_theme {
