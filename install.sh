@@ -7,7 +7,7 @@ sudo add-apt-repository ppa:apandada1/foliate -y
 
 sudo apt update -y
 
-sudo apt install tmux curl wget git neofetch htop mpv gnome-tweaks trash-cli flameshot ipython3 python3-pip tldr net-tools speedtest-cli neovim fd-find aria2 tree cowsay fzf clangd golang fonts-noto-mono ripgrep foliate ibus-bamboo unrar moreutils exa universal-ctags lua5.4 node-typescript bat python3-venv shfmt unzip cargo gem ruby-full build-essential zlib1g-dev php adb delta npm libsqlite3-dev kdenlive -y
+sudo apt install tmux curl wget git neofetch htop mpv gnome-tweaks trash-cli flameshot ipython3 python3-pip tldr net-tools speedtest-cli neovim fd-find aria2 tree cowsay fzf clangd golang fonts-noto-mono ripgrep foliate ibus-bamboo unrar moreutils exa universal-ctags lua5.4 node-typescript bat python3-venv shfmt unzip cargo gem ruby-full build-essential zlib1g-dev php adb npm libsqlite3-dev kdenlive git-extras -y
 
 snap install starship
 

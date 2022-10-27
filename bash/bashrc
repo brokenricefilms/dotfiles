@@ -63,6 +63,8 @@ export FZF_ALT_C_COMMAND="fd -t d"
 
 set -o vi
 
+stty time 0
+
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] &&
   . /usr/share/bash-completion/bash_completion
 
@@ -70,7 +72,6 @@ source ~/dotfiles/bash/fzf_tab_completion.sh
 bind -x '"\t": fzf_bash_completion'
 
 source ~/dotfiles/bash/gh_completion.sh
-source ~/.local/share/blesh/ble.sh
 
 alias reload='source ~/.bashrc ; tmux source-file ~/.tmux.conf'
 alias ka='killall'
@@ -333,9 +334,9 @@ alias gc='go_to_git_clone_repo_dir'
 yo() {
   git diff
   echo -n "👉 Commmit message: "
-  read commitMessage
+  read "commitMessage"
   git add .
-  git commit -m $commitMessage
+  git commit -m "$commitMessage"
   git push &
 }
 
