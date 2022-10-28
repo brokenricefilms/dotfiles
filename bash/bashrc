@@ -1,10 +1,5 @@
 #!/usr/bin/bash
 
-case $- in
-*i*) ;; # interactive
-*) return ;;
-esac
-
 echo_cat_rainbow() {
   e='\033'
   RESET="${e}[0m"
