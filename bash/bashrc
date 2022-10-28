@@ -100,11 +100,6 @@ hi() {
   neofetch
 }
 
-wifi_dirver_enable() {
-  sudo sh -c "modprobe mt7921e ; echo 14c3 0608 > /sys/bus/pci/drivers/mt7921e/new_id"
-}
-alias wf='wifi_dirver_enable'
-
 update_applications() {
   cd /usr/share/applications/
   sudo find -type l -delete
@@ -202,7 +197,6 @@ kill_all_unname_tmux_session_no_message() {
 alias clear='kill_all_unname_tmux_session_no_message ; clear -x'
 alias cler='clear'
 alias clea='clear'
-alias c890961l='clear'
 
 tmux_session_switch() {
   local session

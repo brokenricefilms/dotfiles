@@ -31,12 +31,6 @@ pip install --upgrade pynvim
 gem install neovim jekyll bundler
 cargo install stylua
 
-mkdir ~/app/
-cd ~/app
-git clone --recursive https://github.com/akinomyoga/ble.sh.git
-make -C ble.sh install PREFIX=~/.local
-cd -
-
 # nvim setup
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
