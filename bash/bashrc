@@ -238,7 +238,7 @@ fzf_down() {
   fzf --height 50% --min-height 20 --reverse
 }
 
-h() {
+a() {
   local command
   command=$(\cat ~/.bash_history | fzf_down)
   $command
