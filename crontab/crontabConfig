@@ -1,2 +1,0 @@
-@hourly zsh /home/master/dotfiles/zsh/functions/crontabHourly.zsh
-@daily zsh /home/master/dotfiles/zsh/functions/crontabDaily.zsh
