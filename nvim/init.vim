@@ -82,7 +82,7 @@ set nowritebackup
 set inccommand=split
 set scrolloff=5
 set shortmess+=I
-set laststatus=3
+set laststatus=2
 set hlsearch
 set ignorecase
 set incsearch
