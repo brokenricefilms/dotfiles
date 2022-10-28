@@ -1,15 +1,12 @@
 #! /usr/bin/env sh
 
-sudo apt install apt-transport-https curl gnupg -y
-
-sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo -y
-sudo add-apt-repository ppa:apandada1/foliate -y
-
 sudo apt update -y
 
-sudo apt install tmux curl wget git neofetch htop mpv gnome-tweaks trash-cli flameshot ipython3 python3-pip tldr net-tools speedtest-cli neovim fd-find aria2 tree cowsay fzf clangd golang fonts-noto-mono ripgrep foliate ibus-bamboo unrar moreutils exa universal-ctags lua5.4 node-typescript bat python3-venv shfmt unzip cargo gem ruby-full build-essential zlib1g-dev php adb npm libsqlite3-dev kdenlive git-extras -y
+sudo apt install curl -y
 
-snap install starship
+curl -sS https://starship.rs/install.sh | sh
+
+sudo apt install apt-transport-https tmux curl wget git neofetch htop mpv trash-cli ipython3 python3-pip tldr net-tools speedtest-cli neovim fd-find aria2 tree cowsay fzf clangd golang ripgrep unrar moreutils exa universal-ctags lua5.4 node-typescript bat python3-venv shfmt unzip cargo gem ruby-full build-essential zlib1g-dev php adb npm libsqlite3-dev git-extras -y
 
 curl -fsSL https://deno.land/install.sh | sh
 
@@ -56,23 +53,20 @@ ln -sf ~/dotfiles/bash/bashrc ~/.bashrc
 ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/ssh/config ~/.ssh/config
 ln -sf ~/dotfiles/nvim ~/.config/
-ln -sf ~/dotfiles/kitty/ ~/.config/
 ln -sf ~/dotfiles/bat/ ~/.config/
 ln -sf ~/dotfiles/git/gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/git/gh_config.yml ~/.config/gh/config.yml
 ln -sf ~/dotfiles/git/lazygit_config.yml ~/.config/lazygit/config.yml
 ln -sf ~/dotfiles/.selected_editor ~/.selected_editor
-ln -sf ~/dotfiles/touchcursor ~/.config/
 ln -sf ~/dotfiles/starship.toml ~/.config/
 ln -sf ~/dotfiles/.ripgreprc ~/
-ln -sf ~/dotfiles/input-remapper/ ~/.config/
-ln -sf ~/sync/obs-studio/ ~/.config/
-ln -sf ~/dotfiles/.ideavimrc ~/
 
-cd /usr/share/applications/
-sudo find -type l -delete
-cd -
-sudo ln -sf ~/dotfiles/applications/* /usr/share/applications/
+# wsl sync folder home with windows, user in windows is {thuan}
+ln -sf /mnt/c/Users/thuan/Downloads ~/Downloads
+ln -sf /mnt/c/Users/thuan/Documents ~/Documents
+ln -sf /mnt/c/Users/thuan/Music ~/Music
+ln -sf /mnt/c/Users/thuan/Videos ~/Videos
+ln -sf /mnt/c/Users/thuan/OneDrive/Pictures ~/Pictures
 
 mkdir ~/repos/
 cd ~/repos/
