@@ -68,9 +68,6 @@ stty time 0
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] &&
   . /usr/share/bash-completion/bash_completion
 
-source ~/dotfiles/bash/fzf_tab_completion.sh
-bind -x '"\t": fzf_bash_completion'
-
 source ~/dotfiles/bash/gh_completion.sh
 
 alias reload='source ~/.bashrc ; tmux source-file ~/.tmux.conf'
@@ -93,9 +90,7 @@ browserDaily() {
 }
 
 update_bash_functions() {
-  curl https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh >~/dotfiles/bash/fzf_tab_completion.sh
   gh completion -s bash >~/dotfiles/bash/gh_completion.sh
-  ble-update
 }
 
 hi() {
