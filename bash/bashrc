@@ -79,7 +79,19 @@ alias owa='code .'
 alias se='sudoedit'
 alias x='chmod +x'
 
-browserDaily() {
+alias pwsh='pwsh.exe'
+alias notepad='notepad.exe'
+alias winget='winget.exe'
+alias explorer='explorer.exe'
+alias wsl='wsl.exe'
+
+windows_task_kill() {
+  task=$(tasklist.exe | fzf | awk '{print $1}')
+  taskkill.exe /f /im $task
+}
+alias tk="windows_task_kill"
+
+browser_daily() {
   xdg-open "https://facebook.com"
   xdg-open "https://www.facebook.com/messages/t/thuanOwa"
   xdg-open "https://mail.google.com/mail/u/0/#inbox"
@@ -94,7 +106,7 @@ update_bash_functions() {
 }
 
 hi() {
-  browserDaily
+  browser_daily
   nvim -c "PlugUpdate | qa"
   update_bash_functions
   neofetch
