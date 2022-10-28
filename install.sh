@@ -28,6 +28,9 @@ pip install --upgrade pynvim
 gem install neovim jekyll bundler
 cargo install stylua
 
+go install github.com/jesseduffield/lazygit@latest
+go install github.com/jesseduffield/lazydocker@latest
+
 # nvim setup
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
