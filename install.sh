@@ -48,7 +48,7 @@ ln -sf ~/sync/ok/.fonts ~/.fonts
 cd ~/dotfiles/.fonts
 fc-cache -v
 
-ln -sf ~/sync/ok/.tinypng ~/.tinypng
+ln -sf ~/repos/thuanOwa/ok/.tinypng ~/.tinypng
 ln -sf ~/dotfiles/bash/bashrc ~/.bashrc
 ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/ssh/config ~/.ssh/config
