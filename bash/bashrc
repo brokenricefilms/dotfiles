@@ -170,8 +170,8 @@ alias m='mpv --shuffle --loop-playlist ~/Music/*'
 
 update_music() {
   mk ~/Music/music_i_like/
-  trash *
-  yta "https://www.youtube.com/playlist?list=PLcazFfFZIFPld2xu_nAgmbgj5QldQOpUB"
+  trash * 
+  yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/playlist?list=PLcazFfFZIFPld2xu_nAgmbgj5QldQOpUB"
   cd -
 }
 
