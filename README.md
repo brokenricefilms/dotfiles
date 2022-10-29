@@ -20,6 +20,8 @@ _-_-_-_-_-_-_-|   /\_/\
 - Windows 11
 - WSL2 runs Ubuntu by default, VScode backend, and all my coding stuff will be
   in the WSL folder
+- Windows terminal with the setting "Redraw entire screen when display updates"
+  is the essential
 
 ## Demo
 
