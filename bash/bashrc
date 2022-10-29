@@ -293,7 +293,8 @@ alias push="git push"
 alias pushf="git push -f"
 alias pull="git pull"
 alias dv='git difftool'
-alias gl='git log --oneline | head -n 5'
+alias gl='git log --oneline --decorate --all --graph -n 10'
+alias gla='git log --oneline --decorate --all --graph'
 alias lg='lazygit'
 
 change_dir_to_git_root() {
