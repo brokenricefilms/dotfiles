@@ -15,7 +15,7 @@ _-_-_-_-_-_-_-|   /\_/\
 - If you want to see the fancy dotfile, go to v2.1:
   https://github.com/thuanOwa/dotfiles/releases/tag/v2.1
 
-## Current setup:
+## Current setup
 
 - Windows 11
 - WSL2 runs Ubuntu by default, VScode backend, and all my coding stuff will be
