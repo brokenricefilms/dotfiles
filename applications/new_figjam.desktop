@@ -1,7 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Terminal=false
-Type=Application
-Name=new figjam
-Exec=sh -c 'wmctrl -s 7 ;xdg-open "https://figjam.new" ; sleep 0.1 ; wmctrl -r "figjam" -b add,maximized_vert,maximized_horz'
-Icon=/home/master/dotfiles/applications/icons/figma.png

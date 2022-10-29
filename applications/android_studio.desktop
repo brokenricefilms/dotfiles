@@ -1,7 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Terminal=false
-Type=Application
-Name=android studio
-Exec=/home/master/android-studio/bin/studio.sh
-Icon=/home/master/android-studio/bin/studio.svg
