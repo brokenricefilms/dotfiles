@@ -18,7 +18,7 @@ _-_-_-_-_-_-_-|   /\_/\
 ## Current setup:
 
 - Windows 11
-- WSL2 runs Ubuntu by default, vscode backend, and all my coding stuff will be
+- WSL2 runs Ubuntu by default, VScode backend, and all my coding stuff will be
   in the WSL folder
 
 ## Demo
