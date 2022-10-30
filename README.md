@@ -12,9 +12,10 @@ _-_-_-_-_-_-_-|   /\_/\
 
 ## Current setup
 
-- Windows 11
-- WSL2 runs Ubuntu by default, VScode backend, and all my coding stuff will be in the WSL folder
-- Windows terminal with the setting "Redraw entire screen when display updates" is the essential
+- Fedora 37
+- Gnome console terminal
+- Google Chrome stable
+- VScode: [Gnome search](https://github.com/lunaryorn/gnome-search-providers-vscode)
 
 ## Demo
 

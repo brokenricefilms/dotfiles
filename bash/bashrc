@@ -73,17 +73,12 @@ alias owa='code .'
 alias se='sudoedit'
 alias x='chmod +x'
 
-alias pwsh='pwsh.exe'
-alias notepad='notepad.exe'
-alias winget='winget.exe'
-alias explorer='explorer.exe'
-alias wsl='wsl.exe'
-
-windows_task_kill() {
-  task=$(tasklist.exe | fzf | awk '{print $1}')
-  taskkill.exe /f /im $task
+alias ins='sudo dnf install -y'
+alias uins='sudo dnf remove -y'
+inss() {
+  dnf search $1
+  flatpak search $1
 }
-alias tk="windows_task_kill"
 
 browser_daily() {
   xdg-open "https://facebook.com"
@@ -101,6 +96,7 @@ hi() {
   browser_daily
   nvim -c "PlugUpdate | qa"
   update_bash_functions
+  dnf makecache
   neofetch
 }
 
@@ -156,10 +152,6 @@ nvm() {
   nvm "$@"
 }
 
-alias ins='sudo apt install -y'
-alias inss='apt search'
-alias uins='sudo apt remove -y'
-
 alias yt="yt-dlp -f bestvideo+bestaudio"
 
 yta() {
@@ -201,13 +193,6 @@ kill_all_unname_tmux_session_no_message() {
 alias clear='kill_all_unname_tmux_session_no_message ; clear -x'
 alias cler='clear'
 alias clea='clear'
-
-tmux_session_switch() {
-  local session
-  session=$(tmux list-sessions -F "#{session_name}" | fzf_down)
-  tmux switch-client -t "$session"
-}
-alias af='tmux_session_switch'
 
 alias vi="nvim"
 alias vim="nvim"
@@ -260,16 +245,6 @@ open_file() {
 }
 alias o='open_file'
 
-man_fzf() {
-  if [ -z $1 ]; then
-    man -k . | fzf -q " $1" --prompt='man> ' --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r man | col -bx | bat -l man -p --color always' | tr -d '()' | awk '{printf "%s ",  $2} {print  $1}' | xargs -r man
-  else
-    man $1
-  fi
-}
-alias M="man_fzf"
-alias help="man_fzf"
-
 change_dir() {
   local dir
   dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
@@ -279,23 +254,7 @@ change_dir() {
 }
 alias c='change_dir'
 
-change_dir_in_home() {
-  local dir
-  dir=$(fd -t d . $HOME --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
-  cd "$dir"
-
-  ls
-}
-alias C='change_dir_in_home'
-
-alias add='git add'
-alias push="git push"
-alias pushf="git push -f"
-alias pull="git pull"
-alias dv='git difftool'
 alias gl='git log --oneline --decorate --all --graph -n 10'
-alias gla='git log --oneline --decorate --all --graph'
-alias lg='lazygit'
 
 change_dir_to_git_root() {
   cd $(git rev-parse --show-toplevel)
@@ -332,100 +291,6 @@ yo() {
   git add .
   git commit -m "$commitMessage"
   git push
-}
-
-auto_sync() {
-  for dir in ~/sync/*; do
-    cd "$i"
-    pwd
-    auto_commit
-    push
-  done
-
-  repo=(
-    /home/master/repos/thuanOwa/co_so_du_lieu
-    /home/master/repos/thuanOwa/dataLab
-    /home/master/repos/thuanOwa/ky_thuat_lap_trinh
-    /home/master/repos/thuanOwa/lap_trinh_huong_doi_tuong
-    /home/master/repos/thuanOwa/nhap_mon_cau_truc_du_lieu
-    /home/master/repos/thuanOwa/nhap_mon_web_va_ung_dung
-    /home/master/repos/thuanOwa/thuc-hanh-ky-thuat-lap-trinh
-    /home/master/repos/thuanOwa/thuc-hanh-lap-trinh-huong-doi-tuong
-    /home/master/repos/thuanOwa/thuc-hanh-nhap-mon-cau-truc-du-lieu
-    /home/master/repos/thuanOwa/thuc-hanh-nhap-mon-web-va-ung-dung
-    /home/master/repos/thuanOwa/thuc_thanh_nhap_mon_lap_trinh
-    /home/master/repos/thuanOwa/ublock_adblock_list
-    /home/master/repos/thuanOwa/cong_nghe_phan_mem
-    /home/master/repos/thuanOwa/thuan_ublacklist
-    /home/master/repos/thuanOwa/lap_trinh_ung_dung_co_so_du_lieu
-    /home/master/repos/thuanOwa/quan_tri_co_so_du_lieu
-    /home/master/repos/thuanOwa/ma_hoa_ung_dung
-    /home/master/repos/thuanOwa/img
-    /home/master/repos/thuanOwa/lap_trinh_cho_thiet_bi_di_dong/
-    /home/master/repos/thuanOwa/lap_trinh_web/
-    /home/master/repos/thuanOwa/phat_trien_phan_mem_nguon_mo/
-  )
-
-  for i in ${repo[*]}; do
-    cd "$i"
-    pwd
-    auto_commit
-    push
-  done
-}
-
-update_all_repo() {
-  for dir in ~/repos/thuanOwa/*; do
-    cd "$dir"
-    pwd
-    pull
-    push
-    cd - >/dev/null
-  done
-
-  for dir in ~/repos/OngDev/*; do
-    cd "$dir"
-    pwd
-    pull
-    push
-    cd - >/dev/null
-  done
-
-  for dir in ~/repos/isekaiSystem/*; do
-    cd "$dir"
-    pwd
-    pull
-    push
-    cd - >/dev/null
-  done
-
-  repoNotInDefaultDir=(
-    ~/dotfiles/
-    ~/repos/OngDev/.github/
-  )
-
-  for i in ${repoNotInDefaultDir[*]}; do
-    cd '$i'
-    pwd
-    pull
-    push
-    cd - >/dev/null
-  done
-}
-
-swich_branch() {
-  git branch -a | fzf_down | xargs git switch
-}
-alias sb='swich_branch'
-
-crontab_hourly() {
-  update_all_repo
-  auto_sync
-}
-
-crontab_daily() {
-  update_all_repo
-  auto_sync
 }
 
 u() {
