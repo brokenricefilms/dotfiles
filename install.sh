@@ -72,7 +72,7 @@ ln -sf ~/dotfiles/.ripgreprc ~/
 
 # wsl sync folder home with windows, user in windows is {thuan}
 ln -sf /mnt/c/Users/thuan/Downloads ~/Downloads
-ln -sf /mnt/c/Users/thuan/Documents ~/Documents
+ln -sf /mnt/c/Users/thuan/OneDrive/Documents ~/Documents
 ln -sf /mnt/c/Users/thuan/Music ~/Music
 ln -sf /mnt/c/Users/thuan/Videos ~/Videos
 ln -sf /mnt/c/Users/thuan/OneDrive/Pictures ~/Pictures
