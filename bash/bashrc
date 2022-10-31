@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 echo_cat_rainbow() {
   e='\033'
@@ -26,8 +26,8 @@ echo_cat_rainbow
 eval "$(starship init bash)"
 
 HISTCONTROL=ignoreboth
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=
+HISTFILESIZE=
 shopt -s histappend
 shopt -s checkwinsize
 
@@ -51,7 +51,15 @@ export VISUAL="nvim"
 export EDITOR=$VISUAL
 export MANPAGER="nvim +Man!"
 export EDITOR="nvim"
-export FZF_DEFAULT_COMMAND="fd --type f --follow --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems"
+export FZF_DEFAULT_COMMAND="fd --type f
+\ --follow
+\ --exclude .git
+\ --exclude undodir
+\ --exclude gems
+\ --exclude node_modules
+\ --exclude go
+\ --exclude app
+\ --exclude gems"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d"
 
@@ -100,13 +108,6 @@ hi() {
   neofetch
 }
 
-update_applications() {
-  cd /usr/share/applications/
-  sudo find -type l -delete
-  cd -
-  sudo ln -sf ~/dotfiles/applications/* /usr/share/applications/
-}
-
 alias ..='cd .. ; l'
 alias ...='cd .. ; cd .. ; l'
 alias dow='cd ~/Downloads ; l'
@@ -114,13 +115,12 @@ alias doc='cd ~/Documents ; l'
 alias tmp='cd /tmp'
 alias changeDirToUsbFolder='cd /run/media/master/ ; ls'
 
-alias l='exa -al --color=auto --group-directories-first'
-alias ls='l'
-alias sl='l'
-alias ll='l'
-alias la='exa -a --color=auto --group-directories-first'
+alias ls='ls -ahl --color=auto'
+alias l='ls'
+alias sl='ls'
+alias ll='ls'
+alias la='\ls -ah --color=auto'
 alias al='la'
-alias lt='exa -aT --color=auto --group-directories-first'
 
 make_dir() {
   if [ ! -n "$1" ]; then
@@ -155,7 +155,11 @@ nvm() {
 alias yt="yt-dlp -f bestvideo+bestaudio"
 
 yta() {
-  yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"
+  yt-dlp -f "bestaudio" --continue
+  \  --no-overwrites
+  \  --ignore-errors
+  \  --extract-audio
+  \  --audio-format mp3 -o "%(title)s.%(ext)s"
 }
 
 alias m='mpv --shuffle --loop-playlist ~/Music/*'
@@ -163,7 +167,11 @@ alias m='mpv --shuffle --loop-playlist ~/Music/*'
 update_music() {
   mk ~/Music/music_i_like/
   trash *
-  yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/playlist?list=PLcazFfFZIFPld2xu_nAgmbgj5QldQOpUB"
+  yt-dlp -f "bestaudio" --continue
+  \  --no-overwrites
+  \  --ignore-errors
+  \  --extract-audio
+  \  --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/playlist?list=PLcazFfFZIFPld2xu_nAgmbgj5QldQOpUB"
   cd -
 }
 
@@ -209,10 +217,16 @@ alias v='find_file_edit_in_nvim'
 
 emoji() {
   if hash emoji-fzf 2>/dev/null; then
-    emoji-fzf preview --prepend | fzf_down | awk '{ print $1 }' | tr -d "\n" | wl-copy
+    emoji-fzf preview --prepend |
+      fzf_down |
+      awk '{ print $1 }' | tr -d "\n" | wl-copy
   else
     pip install emoji-fzf
-    emoji-fzf preview --prepend | fzf_down | awk '{ print $1 }' | tr -d "\n" | wl-copy
+    emoji-fzf preview --prepend |
+      fzf_down |
+      awk '{ print $1 }' |
+      tr -d "\n" |
+      wl-copy
   fi
 }
 alias ej="emoji"
