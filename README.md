@@ -7,7 +7,8 @@ _-_-_-_-_-_-_-|   /\_/\
 
 ## About
 
-- For me, Dotfiles are very personal, but you can find some tips, tricks, and functions I used in this repo Since I spend too much time config the perfect setup, I didn't code, the speed time to build better software. -> So I just delete all fancy stuff, and don't give a shit about my setup, these I keep for my own make me feel at home, and cozy.
+- For me, Dotfiles are very personal, but you can find some tips, tricks, and functions I used in this repo.
+- Since I spend too much time config the perfect setup -> So I just delete all fancy stuff and don't give a shit about my setup, these I keep for my own make me feel at home, and cozy.
 - If you want to see the fancy dotfile, go to v2.1: https://github.com/thuanOwa/dotfiles/releases/tag/v2.1
 
 ## Current setup
@@ -15,7 +16,7 @@ _-_-_-_-_-_-_-|   /\_/\
 - Fedora 37
 - Gnome console terminal
 - Google Chrome stable
-- VScode: [Gnome search](https://github.com/lunaryorn/gnome-search-providers-vscode)
+- VSCode: [Gnome search](https://github.com/lunaryorn/gnome-search-providers-vscode)
 
 ## Demo
 
