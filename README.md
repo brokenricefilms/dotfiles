@@ -13,6 +13,8 @@ _-_-_-_-_-_-_-|   /\_/\
 ## Current setup
 
 - Fedora 37
-- Gnome console terminal
-- Google Chrome stable
-- VSCode: [Gnome search](https://github.com/lunaryorn/gnome-search-providers-vscode)
+- Brave browser stable
+- Kitty terminal
+- VSCode: main editor
+  > 💡Tips: [Gnome search](https://github.com/lunaryorn/gnome-search-providers-vscode)
+- Neovim + Tmux: second option, quick edit stuff or just don't want open vscode cuz I ❤️ neovim
