@@ -8,6 +8,7 @@ alias q='exit'
 alias owa='code .'
 alias se='sudoedit'
 alias x='chmod +x'
+alias h='htop'
 
 alias ins='sudo dnf install -y'
 alias uins='sudo dnf remove -y'
