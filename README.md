@@ -15,5 +15,3 @@ _-_-_-_-_-_-_-|   /\_/\
 - Fedora 37
 - Brave browser stable
 - Kitty terminal + tmux + neovim
-- VSCode
-  > 💡Tips: [Gnome search](https://github.com/lunaryorn/gnome-search-providers-vscode)

@@ -5,7 +5,6 @@ alias ka='killall'
 alias cat='bat'
 alias t='trash'
 alias q='exit'
-alias owa='code .'
 alias se='sudoedit'
 alias x='chmod +x'
 
