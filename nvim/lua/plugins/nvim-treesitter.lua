@@ -18,6 +18,10 @@ nvim_treesitter.setup {
     max_file_lines = nil,
   },
 
+  autotag = {
+    enable = true,
+  },
+
   textobjects = {
     select = {
       enable = true,
