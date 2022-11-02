@@ -14,4 +14,6 @@ _-_-_-_-_-_-_-|   /\_/\
 
 - Fedora 37
 - Brave browser stable
-- Kitty terminal + tmux + neovim
+- Kitty terminal + tmux
+- VSCode: main editor
+- Neovim: for quick edit stuff
