@@ -112,8 +112,7 @@ _G.packer_plugins = {
   },
   ["emmet-vim"] = {
     loaded = true,
-    needs_bufread = false,
-    path = "/home/master/.local/share/nvim/site/pack/packer/opt/emmet-vim",
+    path = "/home/master/.local/share/nvim/site/pack/packer/start/emmet-vim",
     url = "https://github.com/mattn/emmet-vim"
   },
   ["fuzzy.nvim"] = {
@@ -136,6 +135,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/master/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
+  },
+  ["hop.nvim"] = {
+    loaded = true,
+    path = "/home/master/.local/share/nvim/site/pack/packer/start/hop.nvim",
+    url = "https://github.com/phaazon/hop.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
@@ -256,17 +260,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Setup for: emmet-vim
-time([[Setup for emmet-vim]], true)
-try_loadstring("\27LJ\2\n«\2\0\0\5\0\14\0\0236\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0)\1\0\0=\1\4\0006\0\0\0009\0\5\0009\0\6\0'\2\a\0005\3\b\0B\0\3\0016\0\0\0009\0\5\0009\0\t\0'\2\n\0005\3\v\0005\4\f\0=\4\r\3B\0\3\1K\0\1\0\fpattern\1\a\0\0\bcss\thtml\nxhtml\15javascript\15typescript\bphp\1\0\2\fcommand\17EmmetInstall\ngroup\17emmetInstall\rFiletype\24nvim_create_autocmd\1\0\1\nclear\2\17emmetInstall\24nvim_create_augroup\bapi\30user_emmet_install_global\6,\26user_emmet_leader_key\6g\bvim\0", "setup", "emmet-vim")
-time([[Setup for emmet-vim]], false)
-time([[packadd for emmet-vim]], true)
-vim.cmd [[packadd emmet-vim]]
-time([[packadd for emmet-vim]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
-time([[Config for gitsigns.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
@@ -275,6 +268,10 @@ time([[Config for nvim-autopairs]], false)
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
