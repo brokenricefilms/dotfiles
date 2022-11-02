@@ -38,11 +38,11 @@ alias doc='cd ~/Documents ; l'
 alias tmp='cd /tmp'
 alias changeDirToUsbFolder='cd /run/media/master/ ; ls'
 
-alias ls='ls -ahl --color=auto'
+alias ls='exa --long --all --header --icons --git'
 alias l='ls'
 alias sl='ls'
 alias ll='ls'
-alias la='\ls -ah --color=auto'
+alias la='exa --all --icons'
 alias al='la'
 
 alias mk="make_dir"
