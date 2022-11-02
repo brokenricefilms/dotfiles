@@ -14,11 +14,6 @@ require('telescope').setup {
       prompt_position = "top",
     },
   },
-  pickers = {
-    find_files = {
-      theme = "dropdown",
-    }
-  },
   extensions = {
     fzf = {
       fuzzy = true,
