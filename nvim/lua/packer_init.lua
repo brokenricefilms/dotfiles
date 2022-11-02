@@ -52,7 +52,9 @@ return packer.startup(function(use)
 
   use 'projekt0n/github-nvim-theme'
 
-  use 'neovim/nvim-lspconfig'
+  use {'neovim/nvim-lspconfig'}
+
+  use {'lukas-reineke/lsp-format.nvim'}
 
   use {
     "hoob3rt/lualine.nvim",

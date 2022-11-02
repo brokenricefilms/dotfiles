@@ -31,3 +31,9 @@ map('', '<Left>', '<C-w>>')
 
 map('x', '<', '<gv')
 map('x', '>', '>gv')
+
+map('n', 'gf', ':cd %:h<enter>:edit <cfile><enter>')
+
+map('n', 'cd.', ':cd %:h<enter>')
+map('n', 'cd', ':cd<enter>')
+map('n', 'cdr', ':cd %:h<enter>:cd `git rev-parse --show-toplevel`<enter>')

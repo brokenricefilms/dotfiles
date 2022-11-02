@@ -32,6 +32,7 @@ npm install --global neovim
 npm install --global typescript
 npm install --global mathjs
 npm install --global bash-language-server
+npm install --global vscode-langservers-extracted
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 

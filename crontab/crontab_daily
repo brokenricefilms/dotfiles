@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source ~/dotfiles/bash/media
+
+update_music

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+HISTCONTROL=ignoreboth
+HISTSIZE=
+HISTFILESIZE=
+shopt -s histappend
+shopt -s checkwinsize
+
+bind 'set completion-ignore-case on'
+
+set -o vi
+
+stty time 0

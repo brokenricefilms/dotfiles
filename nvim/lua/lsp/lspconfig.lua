@@ -58,7 +58,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
-  buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+  buf_set_keymap('n', '<space>=', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
 --[[
@@ -82,7 +82,7 @@ local root_dir = function()
   return vim.fn.getcwd()
 end
 
-local servers = { 'bashls', 'pyright', 'clangd', 'html', 'cssls', 'tsserver' }
+local servers = { 'bashls', 'pyright', 'clangd', 'html', 'cssls', 'tsserver',}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -95,3 +95,11 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
+
+require("lsp-format").setup {}
+require("lspconfig").bashls.setup { on_attach = require("lsp-format").on_attach }
+require("lspconfig").pyright.setup { on_attach = require("lsp-format").on_attach }
+require("lspconfig").clangd.setup { on_attach = require("lsp-format").on_attach }
+require("lspconfig").html.setup { on_attach = require("lsp-format").on_attach }
+require("lspconfig").cssls.setup { on_attach = require("lsp-format").on_attach }
+require("lspconfig").tsserver.setup { on_attach = require("lsp-format").on_attach }
