@@ -107,13 +107,6 @@ return packer.startup(function(use)
   }
 
   use {
-    'tpope/vim-fugitive',
-    config = function()
-      vim.keymap.set('n', 'gs', ':G<enter>gg5j2ly$k0')
-    end
-  }
-
-  use {
     'norcalli/nvim-colorizer.lua'
   }
 
