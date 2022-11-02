@@ -14,7 +14,6 @@ _-_-_-_-_-_-_-|   /\_/\
 
 - Fedora 37
 - Brave browser stable
-- Kitty terminal
-- VSCode: main editor
+- Kitty terminal + tmux + neovim
+- VSCode
   > 💡Tips: [Gnome search](https://github.com/lunaryorn/gnome-search-providers-vscode)
-- Neovim + Tmux: second option, quick edit stuff or just don't want open vscode cuz I ❤️ neovim
