@@ -1,5 +1,10 @@
 #!/bin/bash
 
 source ~/dotfiles/bash/media
+source ~/dotfiles/bash/completion
 
 update_music
+
+update_bash_functions
+
+dnf makecache

@@ -26,9 +26,6 @@ browser_daily() {
 
 hi() {
   browser_daily
-  update_bash_functions
-  dnf makecache
-  neofetch
 }
 
 alias ..='cd .. ; l'
