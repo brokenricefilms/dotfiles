@@ -38,7 +38,7 @@ alias doc='cd ~/Documents ; l'
 alias tmp='cd /tmp'
 alias changeDirToUsbFolder='cd /run/media/master/ ; ls'
 
-alias ls='exa --long --all --header --icons --git'
+alias ls='exa --long --all --icons --git'
 alias l='ls'
 alias sl='ls'
 alias ll='ls'
