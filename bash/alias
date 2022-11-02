@@ -5,6 +5,7 @@ alias ka='killall'
 alias cat='bat'
 alias t='trash'
 alias q='exit'
+alias owa='code .'
 alias se='sudoedit'
 alias x='chmod +x'
 
@@ -25,6 +26,7 @@ browser_daily() {
 
 hi() {
   browser_daily
+  neofetch
 }
 
 alias ..='cd .. ; l'
