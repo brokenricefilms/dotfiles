@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 emoji() {
   if hash emoji-fzf 2>/dev/null; then

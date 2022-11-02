@@ -1,12 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ ! -n "$1" ]; then
-    echo -n "👉 Enter a directory name"
-    read dirName
-    mkdir -p $dirName && cd $dirName
+  echo -n "👉 Enter a directory name"
+  read dirName
+  mkdir -p $dirName
+  cd $dirName
 elif [ -d $1 ]; then
-    echo -e "👉 $1 already exists"
-    cd $1
+  echo -e "👉 $1 already exists"
+  cd $1
 else
-    mkdir -p $1 && cd $1
+  mkdir -p $1
+  cd $1
 fi

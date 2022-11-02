@@ -1,4 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+set -o errexit
+set -o nounset
+set -o pipefail
 
 file_name=$1
 file_name_without_extension=$(echo "$file_name" | cut -f 1 -d '.')

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 alias yt="yt-dlp -f bestvideo+bestaudio"
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 alias dot='tmux switch-client -t "dotfiles"'
 alias in='tmux switch-client -t "inbox"'
