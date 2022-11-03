@@ -14,6 +14,6 @@ _-_-_-_-_-_-_-|   /\_/\
 
 - Windows 11
 - Brave browser stable
-- Windows terminal + Focus startup mode + WSL 2 + tmux
+- Windows terminal + Focus startup mode + WSL 2 + Tmux
 - VSCode: main editor
 - Neovim: for quick edit stuff
