@@ -12,8 +12,8 @@ _-_-_-_-_-_-_-|   /\_/\
 
 ## Current setup
 
-- Fedora 37
+- Windows 11
 - Brave browser stable
-- Kitty terminal + tmux
+- Windows terminal + Focus startup mode + WSL 2 + tmux
 - VSCode: main editor
 - Neovim: for quick edit stuff
