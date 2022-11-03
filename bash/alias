@@ -9,6 +9,8 @@ alias owa='code .'
 alias se='sudoedit'
 alias x='chmod +x'
 alias h='htop'
+alias winget='winget.exe'
+alias pwsh='pwsh.exe'
 
 alias ins='sudo dnf install -y'
 alias uins='sudo dnf remove -y'
