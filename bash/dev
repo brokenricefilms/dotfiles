@@ -36,7 +36,7 @@ auto_commit() {
 ok() {
   st
   auto_commit
-  push
+  git push
 }
 
 go_to_git_clone_repo_dir() {
@@ -82,8 +82,7 @@ function auto_sync {
     /home/master/repos/thuanOwa/phat_trien_phan_mem_nguon_mo/
   )
 
-  for i in ${repo[*]}
-  do
+  for i in ${repo[*]}; do
     cd "$i"
     pwd
     auto_commit
@@ -92,31 +91,28 @@ function auto_sync {
 }
 
 function update_all_repo() {
-  for dir in ~/repos/thuanOwa/*
-  do
+  for dir in ~/repos/thuanOwa/*; do
     cd "$dir"
     pwd
     git pull
     git push
-    cd - > /dev/null
+    cd - >/dev/null
   done
 
-  for dir in ~/repos/OngDev/*
-  do
+  for dir in ~/repos/OngDev/*; do
     cd "$dir"
     pwd
     git pull
     git push
-    cd - > /dev/null
+    cd - >/dev/null
   done
 
-  for dir in ~/repos/isekaiSystem/*
-  do
+  for dir in ~/repos/isekaiSystem/*; do
     cd "$dir"
     pwd
     git pull
     git push
-    cd - > /dev/null
+    cd - >/dev/null
   done
 
   repoNotInDefaultDir=(
@@ -124,12 +120,11 @@ function update_all_repo() {
     ~/repos/OngDev/.github/
   )
 
-  for i in ${repoNotInDefaultDir[*]}
-  do
+  for i in ${repoNotInDefaultDir[*]}; do
     cd "$i"
     pwd
     git pull
     git push
-    cd - > /dev/null
+    cd - >/dev/null
   done
 }
