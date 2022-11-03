@@ -4,14 +4,14 @@ emoji() {
   if hash emoji-fzf 2>/dev/null; then
     emoji-fzf preview --prepend |
       fzf_down |
-      awk '{ print $1 }' | tr -d "\n" | wl-copy
+      awk '{ print $1 }' | tr -d "\n" | clip.exe
   else
     pip install emoji-fzf
     emoji-fzf preview --prepend |
       fzf_down |
       awk '{ print $1 }' |
       tr -d "\n" |
-      wl-copy
+      clip.exe
   fi
 }
 alias ej="emoji"
