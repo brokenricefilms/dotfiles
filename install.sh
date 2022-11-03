@@ -35,7 +35,7 @@ go install github.com/jesseduffield/lazygit@latest
 go install github.com/jesseduffield/lazydocker@latest
 
 curl -sLo/tmp/win32yank.zip https://github.com/equalsraf/win32yank/releases/download/v0.0.4/win32yank-x64.zip
-unzip -p /tmp/win32yank.zip win32yank.exe > /tmp/win32yank.exe
+unzip -p /tmp/win32yank.zip win32yank.exe >/tmp/win32yank.exe
 chmod +x /tmp/win32yank.exe
 sudo mv /tmp/win32yank.exe /usr/local/bin/
 
@@ -54,6 +54,12 @@ ln -sf ~/dotfiles/git/lazygit_config.yml ~/.config/lazygit/config.yml
 ln -sf ~/dotfiles/.selected_editor ~/.selected_editor
 ln -sf ~/dotfiles/starship.toml ~/.config/
 ln -sf ~/dotfiles/.ripgreprc ~/
+
+ln -sf /mnt/c/Users/master/Downloads ~/Downloads
+ln -sf /mnt/c/Users/master/Documents ~/Documents
+ln -sf /mnt/c/Users/master/Pictures ~/Pictures
+ln -sf /mnt/c/Users/master/Videos ~/Videos
+ln -sf /mnt/c/Users/master/Music ~/Music
 
 mkdir ~/repos/
 cd ~/repos/
