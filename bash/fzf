@@ -25,6 +25,7 @@ a() {
   command=$(\cat ~/.bash_history | fzf_down)
   $command
 }
+bind "\C-r":a
 
 find_file() {
   local file
