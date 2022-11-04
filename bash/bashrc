@@ -3,7 +3,6 @@
 source ~/dotfiles/bash/start
 source ~/dotfiles/bash/env
 source ~/dotfiles/bash/option
-source ~/dotfiles/bash/completion
 source ~/dotfiles/bash/prompt
 source ~/dotfiles/bash/alias
 source ~/dotfiles/bash/dev

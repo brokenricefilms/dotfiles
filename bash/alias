@@ -11,6 +11,7 @@ alias x='chmod +x'
 alias h='htop'
 alias winget='winget.exe'
 alias pwsh='pwsh.exe'
+alias wsl='wsl.exe'
 
 alias ins='sudo apt install -y'
 alias uins='sudo apt remove -y'
