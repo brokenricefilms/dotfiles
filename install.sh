@@ -18,18 +18,10 @@ npm install --global browser-sync
 npm install --global yarn
 npm install --global neovim
 npm install --global typescript
-npm install --global mathjs
-npm install --global bash-language-server
-npm install --global vscode-langservers-extracted
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
-pip install --upgrade pylint
-pip install --upgrade autopep8
 pip install --upgrade pynvim
-
-gem install neovim jekyll bundler
-cargo install stylua
 
 go install github.com/jesseduffield/lazygit@latest
 go install github.com/jesseduffield/lazydocker@latest
@@ -38,8 +30,6 @@ curl -sLo/tmp/win32yank.zip https://github.com/equalsraf/win32yank/releases/down
 unzip -p /tmp/win32yank.zip win32yank.exe >/tmp/win32yank.exe
 chmod +x /tmp/win32yank.exe
 sudo mv /tmp/win32yank.exe /usr/local/bin/
-
-npm config set prefix ~/.npm/
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
