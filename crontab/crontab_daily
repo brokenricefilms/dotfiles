@@ -7,8 +7,6 @@ update_music
 
 update_bash_functions
 
-dnf makecache
-
 tldr --update
 
 sudo apt update -y
