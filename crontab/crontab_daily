@@ -9,5 +9,6 @@ update_bash_functions
 
 tldr --update
 
-sudo apt update -y
-sudo apt upgrade -y
+sudo dnf update -y
+sudo dnf upgrade -y
+dnf makecache

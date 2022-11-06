@@ -1,12 +1,24 @@
 #! /usr/bin/env sh
+sudo dnf install dnf-plugins-core -y
 
-sudo apt update -y
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf groupupdate core -y
 
-sudo apt install curl -y
+sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
+sudo dnf groupupdate sound-and-video -y
 
-curl -sS https://starship.rs/install.sh | sh
+sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:lamlng/Fedora_33/home:lamlng.repo
 
-sudo apt install apt-transport-https tmux curl wget git neofetch htop mpv trash-cli ipython3 python3-pip tldr net-tools speedtest-cli neovim fd-find aria2 tree cowsay fzf clangd golang ripgrep unrar moreutils exa universal-ctags lua5.4 node-typescript bat python3-venv shfmt unzip cargo gem ruby-full build-essential zlib1g-dev php adb npm libsqlite3-dev git-extras wlsu -y
+sudo dnf copr enable sunwire/input-remapper -y
+sudo dnf install python3-input-remapper -y
+
+sudo dnf copr enable atim/starship -y
+sudo dnf install starship -y
+
+sudo dnf install -y tmux curl wget git neofetch htop gnome-tweaks trash-cli python3-pip tldr net-tools speedtest-cli neovim python3-neovim fd-find aria2 tree cowsay fzf npm ffmpeg youtube-dl mpv ripgrep unrar moreutils foliate bat util-linux-user zsh cronie git-delta wl-clipboard java-devel git-clang-format rust cargo go gtk-v4l ruby ruby-devel google-chrome-stable gcc-c++ ibus-bamboo collectd-sensors obs-studio dconf-editor sqlite shfmt v4l-utils google-noto-emoji-color-fonts cmake kdenlive starship glib2-static libgda libgda-sqlite exa
+
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub org.onlyoffice.desktopeditors
 
 curl -fsSL https://deno.land/install.sh | sh
 
@@ -18,20 +30,24 @@ npm install --global browser-sync
 npm install --global yarn
 npm install --global neovim
 npm install --global typescript
+npm install --global mathjs
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
+pip install --upgrade pylint
+pip install --upgrade autopep8
 pip install --upgrade pynvim
+
+gem install neovim jekyll bundler
+cargo install stylua
 
 go install github.com/jesseduffield/lazygit@latest
 go install github.com/jesseduffield/lazydocker@latest
 
-curl -sLo/tmp/win32yank.zip https://github.com/equalsraf/win32yank/releases/download/v0.0.4/win32yank-x64.zip
-unzip -p /tmp/win32yank.zip win32yank.exe >/tmp/win32yank.exe
-chmod +x /tmp/win32yank.exe
-sudo mv /tmp/win32yank.exe /usr/local/bin/
-
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+ln -sf ~/repos/thuanOwa/ok/.fonts ~/.fonts
+fc-cache -v
 
 ln -sf ~/repos/thuanOwa/ok/.tinypng ~/.tinypng
 ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
@@ -44,12 +60,8 @@ ln -sf ~/dotfiles/git/lazygit_config.yml ~/.config/lazygit/config.yml
 ln -sf ~/dotfiles/.selected_editor ~/.selected_editor
 ln -sf ~/dotfiles/starship.toml ~/.config/
 ln -sf ~/dotfiles/.ripgreprc ~/
-
-ln -sf /mnt/c/Users/master/Downloads ~/Downloads
-ln -sf /mnt/c/Users/master/Documents ~/Documents
-ln -sf /mnt/c/Users/master/Pictures ~/Pictures
-ln -sf /mnt/c/Users/master/Videos ~/Videos
-ln -sf /mnt/c/Users/master/Music ~/Music
+ln -sf ~/dotfiles/input-remapper/ ~/.config/
+ln -sf ~/repos/thuanOwa/obs-studio/ ~/.config/
 
 mkdir ~/repos/
 cd ~/repos/

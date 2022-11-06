@@ -13,11 +13,11 @@ alias winget='winget.exe'
 alias pwsh='pwsh.exe'
 alias wsl='wsl.exe'
 
-alias ins='sudo apt install -y'
-alias uins='sudo apt remove -y'
+alias ins='sudo dnf install -y'
+alias uins='sudo dnf remove -y'
 inss() {
-  apt search $1
-  winget search $1
+  dnf search $1
+  flatpak search $1
 }
 
 browser_daily() {
