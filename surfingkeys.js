@@ -1,3 +1,5 @@
+api.unmapAllExcept(['E','R'], /mail.google.com|calendar.google.com/);
+
 settings.modeAfterYank = "Normal";
 settings.scrollStepSize = 100;
 
