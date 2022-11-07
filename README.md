@@ -15,5 +15,5 @@ _-_-_-_-_-_-_-|   /\_/\
 - Fedora 37 beta
 - Firefox (chrome, brave,... for testing)
 - Gnome terminal + run Tmux at startup, bash shell, Fzf, alias stuff
-- Neovim: for quick edit stuff
+- Neovim: quick edit stuff
 - VSCode: main editor
