@@ -13,8 +13,74 @@ alias winget='winget.exe'
 alias pwsh='pwsh.exe'
 alias wsl='wsl.exe'
 
-alias ins='sudo dnf install -y'
-alias uins='sudo dnf remove -y'
+fzf_dnf_install() {
+  local package
+  package=$1
+
+  dnf_fzf() {
+    local cache=$HOME/.cache/dnf_list.txt
+
+    if test -f "$cache"; then
+      package=$(\cat $cache | fzf_down)
+    else
+      dnf list | awk '{print $1}' | tail -n +4 >$cache
+      package=$(\cat $cache | fzf_down)
+    fi
+
+    if [[ -n $package ]]; then
+      sudo dnf install -y $package
+    fi
+  }
+
+  if [[ -n $package ]]; then
+    sudo dnf install -y $package
+    ERROR=$?
+
+    if [[ ERROR -eq 1 ]]; then
+      dnf_fzf
+    fi
+  else
+    dnf_fzf
+  fi
+}
+alias ins='fzf_dnf_install'
+
+dnf_fzf_remove() {
+  local package
+  package=$1
+
+  dnf_fzf() {
+    # cron job daily to update cache
+    local cache=$HOME/.cache/dnf_list_installed.txt
+
+    if test -f "$cache"; then
+      package=$(\cat $cache | fzf_down)
+    else
+      dnf list --installed | awk '{print $1}' | tail -n +4 >$cache
+      package=$(\cat $cache | fzf_down)
+    fi
+
+    if [[ -n $package ]]; then
+      sudo dnf remove -y $package
+    fi
+  }
+
+  if [[ -n $package ]]; then
+    # TODO: don't use `rg` echo check issue for some case `rg` is not available by default -> use command system had default
+    sudo dnf remove -y $package | rg "no match" &>/dev/null
+    ERROR=$?
+
+    if [[ ERROR -eq 0 ]]; then
+      dnf_fzf
+    else
+      echo "removed $package"
+    fi
+  else
+    dnf_fzf
+  fi
+}
+alias uins='dnf_fzf_remove'
+
 inss() {
   dnf search $1
   flatpak search $1

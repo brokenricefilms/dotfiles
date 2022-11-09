@@ -8,6 +8,8 @@ tldr --update
 
 sudo dnf update -y
 sudo dnf upgrade -y
+dnf list | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list.txt
+dnf list --installed | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list_installed.txt
 dnf makecache
 
 echo $(date) >>~/.local/share/test/crontab_daily.txt

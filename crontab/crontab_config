@@ -1,2 +1,3 @@
 @hourly bash /home/master/dotfiles/crontab/crontab_hourly
-@daily bash /home/master/dotfiles/crontab/crontab_daily
+# daily 7pm
+0 19 * * * bash /home/master/dotfiles/crontab/crontab_daily
