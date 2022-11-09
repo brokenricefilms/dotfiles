@@ -9,3 +9,5 @@ tldr --update
 sudo dnf update -y
 sudo dnf upgrade -y
 dnf makecache
+
+echo $(date) >>~/.local/share/test/crontab_daily.txt
