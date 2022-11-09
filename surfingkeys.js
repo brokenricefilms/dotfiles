@@ -1,4 +1,4 @@
-api.unmapAllExcept(['E','R'], /mail.google.com|calendar.google.com/);
+api.unmapAllExcept(['E','R'], /mail.google.com|calendar.google.com|photos.google.com|docs.google.com|monkeytype.com|discord.com|chat.zalo.me|messenger.com/);
 
 settings.modeAfterYank = "Normal";
 settings.scrollStepSize = 100;
