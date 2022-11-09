@@ -9,8 +9,14 @@ yta() {
 alias m='mpv --shuffle --loop-playlist ~/Music/*'
 
 update_music() {
-  mk ~/Music/music_i_like/
-  trash *
+  local music_dir
+  music_dir=$HOME/Music/music_i_like/
+
+  trash $music_dir
+  mkdir -p $music_dir
+  cd $music_dir
+
   yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/playlist?list=PLcazFfFZIFPld2xu_nAgmbgj5QldQOpUB"
+
   cd -
 }
