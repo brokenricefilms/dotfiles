@@ -96,6 +96,8 @@ browser_daily() {
 
 hi() {
   browser_daily
+  sudo dnf update -y
+  sudo dnf upgrade -y
   neofetch
 }
 
