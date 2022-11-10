@@ -1,42 +1,57 @@
+[alias]
+a = !git commit --all --amend --no-edit
+l = !git log --oneline --decorate --all --graph -n 10
+
 [user]
-    name = Thuan Pham
-    email = thuanOwa@gmail.com
+name = Thuan Pham
+email = thuanOwa@gmail.com
 
 [core]
-    editor = nvim
+editor = $EDITOR
+whitespace = fix
 
 [merge]
-    tool = vimdiff
+tool = vimdiff
 
 [mergetool]
-    prompt = true
+prompt = true
 
 [mergetool "vimdiff"]
-    cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 
 [difftool]
-    prompt = false
+prompt = false
 
 [diff]
-    tool = vimdiff
-    colorMoved = zebra
+tool = vimdiff
+colorMoved = zebra
 
 [credential "https://github.com"]
-    helper = !/usr/bin/gh auth git-credential
+helper = !/usr/bin/gh auth git-credential
 
 [pull]
-    rebase = true
+rebase = true
 
 [fetch]
-    prune = true
+prune = true
 
 [pager]
-    diff = delta
-    log = delta
-    reflog = delta
-    show = delta
+diff = delta
+log = delta
+reflog = delta
+show = delta
 
 [delta]
-    light = true
-    side-by-side = true
-    line-numbers = true
+light = true
+side-by-side = true
+line-numbers = true
+
+[apply]
+whitespace = fix
+
+[color]
+ui = true
+diff = true
+status = true
+branch = true
+interactive = true
