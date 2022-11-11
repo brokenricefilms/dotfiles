@@ -20,12 +20,11 @@ fzf_down() {
   fzf --height 50% --min-height 20 --reverse
 }
 
-a() {
+h() {
   local command
   command=$(\cat ~/.bash_history | fzf_down)
   $command
 }
-bind "\C-r":a
 
 find_file() {
   local file

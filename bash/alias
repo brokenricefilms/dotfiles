@@ -12,6 +12,7 @@ alias h='htop'
 alias winget='winget.exe'
 alias pwsh='pwsh.exe'
 alias wsl='wsl.exe'
+alias dv='git diff'
 
 fzf_dnf_install() {
   local package
