@@ -32,7 +32,7 @@ npm install --global neovim
 npm install --global typescript
 npm install --global mathjs
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
 
 pip install --upgrade pylint
 pip install --upgrade autopep8
@@ -46,6 +46,14 @@ go install github.com/jesseduffield/lazydocker@latest
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+. $HOME/.asdf/asdf.sh
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf plugin add rust
+asdf plugin add deno
+asdf install nodejs latest
+asdf install rust latest
+asdf install deno latest
+
 ln -sf ~/repos/thuanOwa/ok/.fonts ~/.fonts
 fc-cache -v
 
@@ -53,6 +61,7 @@ ln -sf ~/repos/thuanOwa/ok/.tinypng ~/.tinypng
 ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/ssh/config ~/.ssh/config
 ln -sf ~/dotfiles/nvim ~/.config/
+ln -sf ~/dotfiles/.tool-versions ~/
 ln -sf ~/dotfiles/bat/ ~/.config/
 ln -sf ~/dotfiles/git/gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/git/gh_config.yml ~/.config/gh/config.yml

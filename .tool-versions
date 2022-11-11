@@ -1,0 +1,4 @@
+legacy_version_file = yes
+nodejs 19.0.1
+deno 1.27.2
+rust 1.65.0

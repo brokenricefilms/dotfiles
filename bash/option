@@ -15,4 +15,9 @@ stty time 0
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] &&
   . /usr/share/bash-completion/bash_completion
 
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
+eval "$(gh completion -s bash)"
+
 eval "$(starship init bash)"
