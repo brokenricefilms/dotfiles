@@ -9,3 +9,5 @@ tldr --update
 dnf list | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list.txt
 dnf list --installed | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list_installed.txt
 dnf makecache
+
+curl -O https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh ~/.local/share/

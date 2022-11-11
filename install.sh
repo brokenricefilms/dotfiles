@@ -53,6 +53,7 @@ asdf plugin add deno
 asdf install nodejs latest
 asdf install rust latest
 asdf install deno latest
+asdf install rust-analyzer latest
 
 ln -sf ~/repos/thuanOwa/ok/.fonts ~/.fonts
 fc-cache -v

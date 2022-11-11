@@ -20,4 +20,7 @@ stty time 0
 
 eval "$(gh completion -s bash)"
 
+source $HOME/.local/share/fzf-bash-completion.sh
+bind -x '"\t": fzf_bash_completion'
+
 eval "$(starship init bash)"
