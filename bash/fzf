@@ -26,14 +26,22 @@ h() {
   $command
 }
 
-find_file() {
-  local file
-  file=$(fd . -t f --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'bat --style=numbers --color=always --line-range :500 {}')
-  if [ ! -z "$file" ]; then
-    nvim "$file"
+find_file_edit_in_nvim() {
+  if [ ! -n "$1" ]; then
+    local file
+    file=$(fd . -t f --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'bat --style=numbers --color=always --line-range :500 {}')
+
+    if [ ! -z "$file" ]; then
+      nvim "$file"
+    fi
+  else
+    nvim "$1"
   fi
 }
-alias f='find_file'
+alias e='find_file_edit_in_nvim'
+alias v='find_file_edit_in_nvim'
+alias vi='find_file_edit_in_nvim'
+alias vim='find_file_edit_in_nvim'
 
 open_file() {
   local object
@@ -46,22 +54,26 @@ alias o='open_file'
 
 change_dir() {
   local dir
-  dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
-  cd "$dir"
+  dir=$1
+
+  fzf_dir() {
+    dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa -aT --color=always --group-directories-first --icons -L 1')
+    cd "$dir"
+  }
+
+  if [[ -n $dir ]]; then
+    cd $dir &>/dev/null
+    ERROR=$?
+
+    if [[ ERROR -eq 1 ]]; then
+      echo "\"$1\" directory does not exist"
+      fzf_dir
+    fi
+  else
+    fzf_dir
+  fi
 
   ls
 }
 alias c='change_dir'
 
-alias vi="nvim"
-alias vim="nvim"
-
-find_file_edit_in_nvim() {
-  if [ ! -n "$1" ]; then
-    find_file
-  else
-    nvim "$1"
-  fi
-}
-alias e='find_file_edit_in_nvim'
-alias v='find_file_edit_in_nvim'
