@@ -38,6 +38,7 @@ find_file_edit_in_nvim() {
     nvim "$1"
   fi
 }
+alias f='find_file_edit_in_nvim'
 alias e='find_file_edit_in_nvim'
 alias v='find_file_edit_in_nvim'
 alias vi='find_file_edit_in_nvim'
@@ -76,4 +77,3 @@ change_dir() {
   ls
 }
 alias c='change_dir'
-
