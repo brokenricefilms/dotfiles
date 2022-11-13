@@ -13,7 +13,7 @@ _-_-_-_-_-_-_-|   /\_/\
 ## Current setup
 
 - Fedora 37 beta
-- Firefox (chrome, brave,... for testing)
+- Chrome
 - Gnome terminal + run Tmux at startup, bash shell, Fzf, alias stuff
 - Neovim: quick edit stuff
 - VSCode: main editor
