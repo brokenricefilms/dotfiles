@@ -21,7 +21,7 @@ alias st='git_status'
 
 auto_commit() {
   git add --all
-  git commit -m "[👌Auto commit] $(curl -s whatthecommit.com/index.txt)"
+  git commit -m "[👌Auto commit]"
 }
 
 ok() {
