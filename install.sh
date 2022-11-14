@@ -30,7 +30,6 @@ npm install --global browser-sync
 npm install --global yarn
 npm install --global neovim
 npm install --global typescript
-npm install --global mathjs
 
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
 
@@ -70,6 +69,7 @@ ln -sf ~/dotfiles/git/lazygit_config.yml ~/.config/lazygit/config.yml
 ln -sf ~/dotfiles/.selected_editor ~/.selected_editor
 ln -sf ~/dotfiles/starship.toml ~/.config/
 ln -sf ~/dotfiles/.ripgreprc ~/
+ln -sf ~/dotfiles/.asdf ~/
 ln -sf ~/dotfiles/input-remapper/ ~/.config/
 ln -sf ~/repos/thuanOwa/obs-studio/ ~/.config/
 
