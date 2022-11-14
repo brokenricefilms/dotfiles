@@ -58,8 +58,6 @@ map('n', 'N', 'Nzzzv')
 map('n', '*', '*zz')
 map('n', '#', '#zz')
 
-map('n', '<leader><space>', '<c-^>')
-
 map('n', 'ss', ':split<Return><C-w>w')
 map('n', 'sv', ':vsplit<Return><C-w>w')
 
