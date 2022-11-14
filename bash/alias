@@ -2,7 +2,6 @@
 
 alias reload='source ~/.bashrc ; tmux source-file ~/.tmux.conf'
 alias ka='killall'
-alias cat='bat'
 alias t='trash'
 alias q='exit'
 alias owa='code .'
@@ -109,11 +108,11 @@ alias doc='cd ~/Documents ; l'
 alias tmp='cd /tmp'
 alias changeDirToUsbFolder='cd /run/media/master/ ; ls'
 
-alias ls='exa --long --all --icons'
+alias ls='ls -l --all --color --human-readable'
 alias l='ls'
 alias sl='ls'
 alias ll='ls'
-alias la='exa --all --icons'
+alias la='ls --all --color --human-readable'
 alias al='la'
 
 make_dir() {
