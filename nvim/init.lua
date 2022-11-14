@@ -15,7 +15,8 @@ opt.wrap = true
 opt.linebreak = true
 opt.scrolloff = 5
 opt.termguicolors = true
-opt.laststatus = 3
+opt.laststatus = 0
+opt.cmdheight = 0
 opt.cursorline = true
 opt.cursorlineopt = 'number'
 
