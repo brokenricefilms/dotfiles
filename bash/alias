@@ -7,7 +7,6 @@ alias q='exit'
 alias owa='code .'
 alias se='sudoedit'
 alias x='chmod +x'
-alias h='htop'
 alias dv='git diff'
 
 fzf_dnf_install() {
