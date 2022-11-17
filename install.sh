@@ -60,7 +60,9 @@ fc-cache -v
 ln -sf ~/repos/thuanOwa/ok/.tinypng ~/.tinypng
 ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/ssh/config ~/.ssh/config
-ln -sf ~/dotfiles/nvim ~/.config/
+rm -rf ~/.config/nvim
+mkdir ~/.config/nvim
+ln -sf ~/dotfiles/init.lua ~/.config/nvim/init.lua
 ln -sf ~/dotfiles/.tool-versions ~/
 ln -sf ~/dotfiles/git/gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/git/gh_config.yml ~/.config/gh/config.yml
@@ -69,6 +71,7 @@ ln -sf ~/dotfiles/.selected_editor ~/.selected_editor
 ln -sf ~/dotfiles/starship.toml ~/.config/
 ln -sf ~/dotfiles/.ripgreprc ~/
 ln -sf ~/dotfiles/.asdf ~/
+ln -sf ~/dotfiles/bashrc ~/.bashrc
 ln -sf ~/dotfiles/input-remapper/ ~/.config/
 ln -sf ~/repos/thuanOwa/obs-studio/ ~/.config/
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/dotfiles/bash/media
+source ~/dotfiles/bashrc
 
 update_music
 

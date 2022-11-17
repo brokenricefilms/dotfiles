@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/dotfiles/bash/dev
+source ~/dotfiles/bashrc
 
 update_all_repo
 
