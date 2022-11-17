@@ -271,6 +271,7 @@ function auto_sync {
     /home/master/repos/thuanOwa/lap_trinh_cho_thiet_bi_di_dong/
     /home/master/repos/thuanOwa/lap_trinh_web/
     /home/master/repos/thuanOwa/phat_trien_phan_mem_nguon_mo/
+    /home/master/repos/thuanOwa/javascript-cli/
   )
 
   for i in ${repo[*]}; do
