@@ -46,6 +46,8 @@ export FZF_DEFAULT_COMMAND="fd --type f --follow --exclude .git --exclude undodi
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d"
 
+alias fzf_down='fzf --height 50% --min-height 20 --reverse'
+
 HISTCONTROL=ignoreboth
 HISTSIZE=
 HISTFILESIZE=
@@ -322,19 +324,17 @@ emoji() {
   if hash emoji-fzf 2>/dev/null; then
     emoji-fzf preview --prepend |
       fzf_down |
-      awk '{ print $1 }' | tr -d "\n" | clip.exe
+      awk '{ print $1 }' | tr -d "\n" | wl-copy
   else
     pip install emoji-fzf
     emoji-fzf preview --prepend |
       fzf_down |
       awk '{ print $1 }' |
       tr -d "\n" |
-      clip.exe
+      wl-copy
   fi
 }
 alias ej="emoji"
-
-alias fzf_down='fzf --height 50% --min-height 20 --reverse'
 
 h() {
   local command
@@ -345,7 +345,7 @@ h() {
 find_file_edit_in_nvim() {
   if [ ! -n "$1" ]; then
     local file
-    file=$(fd . -t f --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'cat {}')
+    file=$(fd . -t f --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems |fzf_down --preview 'cat {}')
 
     if [ ! -z "$file" ]; then
       nvim "$file"
