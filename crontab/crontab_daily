@@ -2,12 +2,7 @@
 
 source ~/dotfiles/bashrc
 
-update_music
-
-tldr --update
-
-dnf list | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list.txt
-dnf list --installed | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list_installed.txt
-dnf makecache
-
-curl -O https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh ~/.local/share/
+echo_cat_rainbow >> /tmp/update.log
+date >> /tmp/update.log
+update_music &>> /tmp/update.log
+update &>> /tmp/update.log

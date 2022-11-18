@@ -15,7 +15,7 @@ sudo dnf install python3-input-remapper -y
 sudo dnf copr enable atim/starship -y
 sudo dnf install starship -y
 
-sudo dnf install -y tmux curl wget git neofetch htop gnome-tweaks trash-cli python3-pip tldr net-tools speedtest-cli neovim python3-neovim fd-find aria2 tree cowsay fzf npm ffmpeg youtube-dl mpv ripgrep unrar moreutils foliate util-linux-user zsh cronie git-delta wl-clipboard java-devel git-clang-format rust cargo go gtk-v4l ruby ruby-devel google-chrome-stable gcc-c++ ibus-bamboo collectd-sensors obs-studio dconf-editor sqlite shfmt v4l-utils google-noto-emoji-color-fonts cmake kdenlive starship glib2-static libgda libgda-sqlite exa
+sudo dnf install -y tmux curl wget git neofetch htop gnome-tweaks trash-cli python3-pip tldr net-tools speedtest-cli neovim python3-neovim fd-find aria2 tree cowsay fzf npm ffmpeg youtube-dl mpv ripgrep unrar moreutils foliate util-linux-user zsh cronie git-delta wl-clipboard java-devel git-clang-format rust cargo go gtk-v4l ruby ruby-devel google-chrome-stable gcc-c++ ibus-bamboo collectd-sensors obs-studio dconf-editor sqlite shfmt v4l-utils google-noto-emoji-color-fonts cmake kdenlive starship glib2-static libgda libgda-sqlite exa bat
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub org.onlyoffice.desktopeditors
@@ -32,8 +32,6 @@ npm install --global neovim
 npm install --global typescript
 npm install --global ijavascript
 
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
-
 pip install --upgrade pylint
 pip install --upgrade autopep8
 pip install --upgrade pynvim
@@ -46,6 +44,7 @@ go install github.com/jesseduffield/lazydocker@latest
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
 . $HOME/.asdf/asdf.sh
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf plugin add rust
@@ -71,7 +70,6 @@ ln -sf ~/dotfiles/git/lazygit_config.yml ~/.config/lazygit/config.yml
 ln -sf ~/dotfiles/.selected_editor ~/.selected_editor
 ln -sf ~/dotfiles/starship.toml ~/.config/
 ln -sf ~/dotfiles/.ripgreprc ~/
-ln -sf ~/dotfiles/.asdf ~/
 ln -sf ~/dotfiles/bashrc ~/.bashrc
 ln -sf ~/dotfiles/input-remapper/ ~/.config/
 ln -sf ~/repos/thuanOwa/obs-studio/ ~/.config/

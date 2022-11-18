@@ -46,8 +46,6 @@ export FZF_DEFAULT_COMMAND="fd --type f --follow --exclude .git --exclude undodi
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d"
 
-alias fzf_down='fzf --height 50% --min-height 20 --reverse'
-
 HISTCONTROL=ignoreboth
 HISTSIZE=
 HISTFILESIZE=
@@ -73,6 +71,21 @@ bind -x '"\t": fzf_bash_completion'
 
 eval "$(starship init bash)"
 
+network_status() {
+  ping -c 1 google.com
+  local NETWORK_STATUS=$?
+  local NETWORK_ERROR_CODE=2
+
+  if [[ "$NETWORK_STATUS" == "$NETWORK_ERROR_CODE" ]]; then
+    NETWORK="offline"
+  else
+    NETWORK="online"
+  fi
+}
+
+# using alias because can add flag like:"fzf_down --preview 'cat {}'"
+alias fzf_down='fzf --height 50% --min-height 20 --reverse'
+
 alias reload='source ~/.bashrc ; tmux source-file ~/.tmux.conf'
 alias ka='killall'
 alias t='trash'
@@ -81,28 +94,28 @@ alias owa='code .'
 alias se='sudoedit'
 alias x='chmod +x'
 alias dv='git diff'
+alias bat='bat --theme=GitHub --color=always --style=numbers'
 
 fzf_dnf_install() {
-  local package
-  package=$1
+  local package_name=$1
 
   dnf_fzf() {
     local cache=$HOME/.cache/dnf_list.txt
 
     if test -f "$cache"; then
-      package=$(\cat $cache | fzf_down)
+      package_name=$(\cat $cache | fzf_down)
     else
       dnf list | awk '{print $1}' | tail -n +4 >$cache
-      package=$(\cat $cache | fzf_down)
+      package_name=$(\cat $cache | fzf_down)
     fi
 
-    if [[ -n $package ]]; then
-      sudo dnf install -y $package
+    if [[ -n $package_name ]]; then
+      sudo dnf install -y $package_name
     fi
   }
 
-  if [[ -n $package ]]; then
-    sudo dnf install -y $package
+  if [[ -n $package_name ]]; then
+    sudo dnf install -y $package_name
     ERROR=$?
 
     if [[ ERROR -eq 1 ]]; then
@@ -115,34 +128,34 @@ fzf_dnf_install() {
 alias ins='fzf_dnf_install'
 
 dnf_fzf_remove() {
-  local package
-  package=$1
+  local package_name
+  package_name=$1
 
   dnf_fzf() {
     # cron job daily to update cache
     local cache=$HOME/.cache/dnf_list_installed.txt
 
     if test -f "$cache"; then
-      package=$(\cat $cache | fzf_down)
+      package_name=$(\cat $cache | fzf_down)
     else
       dnf list --installed | awk '{print $1}' | tail -n +4 >$cache
-      package=$(\cat $cache | fzf_down)
+      package_name=$(\cat $cache | fzf_down)
     fi
 
-    if [[ -n $package ]]; then
-      sudo dnf remove -y $package
+    if [[ -n $package_name ]]; then
+      sudo dnf remove -y $package_name
     fi
   }
 
-  if [[ -n $package ]]; then
+  if [[ -n $package_name ]]; then
     # TODO: don't use `rg` echo check issue for some case `rg` is not available by default -> use command system had default
-    sudo dnf remove -y $package | rg "no match" &>/dev/null
+    sudo dnf remove -y $package_name | rg "no match" &>/dev/null
     ERROR=$?
 
     if [[ ERROR -eq 0 ]]; then
       dnf_fzf
     else
-      echo "removed $package"
+      echo "removed $package_name"
     fi
   else
     dnf_fzf
@@ -161,13 +174,53 @@ browser_daily() {
   xdg-open "https://feeder.co/reader"
 }
 
+update_music() {
+  network_status &>/dev/null
+
+  if [[ "$NETWORK" == "online" ]]; then
+    local music_dir
+    music_dir=$HOME/Music/music_i_like/
+
+    trash $music_dir
+    mkdir -p $music_dir
+    cd $music_dir
+
+    yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/playlist?list=PLcazFfFZIFPld2xu_nAgmbgj5QldQOpUB"
+
+    cd -
+  else
+    echo "Check your internet connection and try again"
+  fi
+}
+
+update() {
+  network_status &>/dev/null
+
+  if [[ "$NETWORK" == "online" ]]; then
+    dnf makecache
+    sudo dnf update -y
+    sudo dnf upgrade -y
+
+    dnf list | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list.txt
+    dnf list --installed | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list_installed.txt
+
+    asdf update
+    asdf plugin update --all
+
+    tldr --update
+
+    curl -O https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh ~/.local/share/
+  else
+    echo "Check your internet connection for online update and try again"
+    echo "Doing offline update cache"
+    dnf list | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list.txt
+    dnf list --installed | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list_installed.txt
+  fi
+}
+
 hi() {
   browser_daily
-  sudo dnf update -y
-  sudo dnf upgrade -y
-  asdf update
-  asdf plugin update --all
-  neofetch
+  update
 }
 
 alias ..='cd .. ; l'
@@ -177,11 +230,11 @@ alias doc='cd ~/Documents ; l'
 alias tmp='cd /tmp'
 alias changeDirToUsbFolder='cd /run/media/master/ ; ls'
 
-alias ls='ls -l --all --color --human-readable'
+alias ls='exa --long --all --icons'
 alias l='ls'
 alias sl='ls'
 alias ll='ls'
-alias la='ls --all --color --human-readable'
+alias la='exa --all --icons'
 alias al='la'
 
 make_dir() {
@@ -214,18 +267,12 @@ change_dir_to_git_root() {
 }
 alias cdr='change_dir_to_git_root'
 
-git_status() {
-  git status -sb
-}
-alias st='git_status'
-
 auto_commit() {
   git add --all
   git commit -m "[👌Auto commit]"
 }
 
 ok() {
-  st
   auto_commit
   git push
 }
@@ -237,16 +284,7 @@ go_to_git_clone_repo_dir() {
 }
 alias gc='go_to_git_clone_repo_dir'
 
-yo() {
-  git diff
-  echo -n "👉 Commmit message: "
-  read "commitMessage"
-  git add --all
-  git commit -m "$commitMessage"
-  git push
-}
-
-function auto_sync {
+auto_sync() {
   repo=(
     /home/master/repos/thuanOwa/ok
     /home/master/repos/thuanOwa/obs-studio
@@ -282,7 +320,7 @@ function auto_sync {
   done
 }
 
-function update_all_repo() {
+update_all_repo() {
   for dir in ~/repos/thuanOwa/*; do
     cd "$dir"
     pwd
@@ -346,7 +384,7 @@ h() {
 find_file_edit_in_nvim() {
   if [ ! -n "$1" ]; then
     local file
-    file=$(fd . -t f --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems |fzf_down --preview 'cat {}')
+    file=$(fd . -t f --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:500 {}')
 
     if [ ! -z "$file" ]; then
       nvim "$file"
@@ -363,7 +401,7 @@ alias vim='find_file_edit_in_nvim'
 
 open_file() {
   local object
-  object=$(fd . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'cat {}')
+  object=$(fd . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:500 {}')
   if [ ! -z "$object" ]; then
     xdg-open "$object"
   fi
@@ -428,17 +466,5 @@ yta() {
   yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"
 }
 
-alias m='mpv --shuffle --loop-playlist ~/Music/*'
-
-update_music() {
-  local music_dir
-  music_dir=$HOME/Music/music_i_like/
-
-  trash $music_dir
-  mkdir -p $music_dir
-  cd $music_dir
-
-  yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/playlist?list=PLcazFfFZIFPld2xu_nAgmbgj5QldQOpUB"
-
-  cd -
-}
+alias play_music='mpv --shuffle --loop-playlist ~/Music/*'
+alias m='play_music'
