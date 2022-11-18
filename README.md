@@ -14,6 +14,7 @@ _-_-_-_-_-_-_-|   /\_/\
 
 - Fedora 37 beta
 - Chrome
-- Gnome terminal + run Tmux at startup, bash shell, Fzf
-- Neovim: quick edit stuff
-- VSCode: main editor
+- Gnome console v43
+- [Bash shell](./bashrc)
+- [Neovim](./init.lua): quick edit stuff
+- [VSCode](./profile.code-profile): main editor
