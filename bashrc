@@ -187,7 +187,7 @@ update_music() {
     local music_dir
     music_dir=$HOME/Music/music_i_like/
 
-    trash $music_dir
+    rm -rf $music_dir
     mkdir -p $music_dir
     cd $music_dir
 
