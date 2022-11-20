@@ -207,6 +207,8 @@ update() {
     sudo apt autoremove -y
     sudo apt autoclean -y
 
+    deno upgrade
+
     apt list | awk '{print $1}' | tail -n +4 >$HOME/.cache/apt_list.txt
     apt list --installed | awk '{print $1}' | tail -n +4 >$HOME/.cache/apt_list_installed.txt
 
