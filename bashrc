@@ -96,75 +96,79 @@ alias x='chmod +x'
 alias dv='git diff'
 alias bat='bat --theme=GitHub --color=always --style=numbers'
 
-fzf_dnf_install() {
+alias winget='winget.exe'
+alias pwsh='pwsh.exe'
+alias wsl='wsl.exe'
+
+apt_fzf_install() {
   local package_name=$1
 
-  dnf_fzf() {
-    local cache=$HOME/.cache/dnf_list.txt
+  apt_fzf() {
+    local cache=$HOME/.cache/apt_list.txt
 
     if test -f "$cache"; then
       package_name=$(\cat $cache | fzf_down)
     else
-      dnf list | awk '{print $1}' | tail -n +4 >$cache
+      apt list | awk '{print $1}' | tail -n +4 >$cache
       package_name=$(\cat $cache | fzf_down)
     fi
 
     if [[ -n $package_name ]]; then
-      sudo dnf install -y $package_name
+      sudo apt install -y $package_name
     fi
   }
 
   if [[ -n $package_name ]]; then
-    sudo dnf install -y $package_name
+    sudo apt install -y $package_name
     ERROR=$?
 
     if [[ ERROR -eq 1 ]]; then
-      dnf_fzf
+      apt_fzf
     fi
   else
-    dnf_fzf
+    apt_fzf
   fi
 }
-alias ins='fzf_dnf_install'
+alias ins='apt_fzf_install'
 
-dnf_fzf_remove() {
+apt_fzf_remove() {
   local package_name
   package_name=$1
 
-  dnf_fzf() {
+  apt_fzf() {
     # cron job daily to update cache
-    local cache=$HOME/.cache/dnf_list_installed.txt
+    local cache=$HOME/.cache/apt_list_installed.txt
 
     if test -f "$cache"; then
       package_name=$(\cat $cache | fzf_down)
     else
-      dnf list --installed | awk '{print $1}' | tail -n +4 >$cache
+      apt list --installed | awk '{print $1}' | tail -n +4 >$cache
       package_name=$(\cat $cache | fzf_down)
     fi
 
     if [[ -n $package_name ]]; then
-      sudo dnf remove -y $package_name
+      sudo apt remove -y $package_name
     fi
   }
 
   if [[ -n $package_name ]]; then
     # TODO: don't use `rg` echo check issue for some case `rg` is not available by default -> use command system had default
-    sudo dnf remove -y $package_name | rg "no match" &>/dev/null
+    sudo apt remove -y $package_name | rg "no match" &>/dev/null
     ERROR=$?
 
     if [[ ERROR -eq 0 ]]; then
-      dnf_fzf
+      apt_fzf
     else
       echo "removed $package_name"
     fi
   else
-    dnf_fzf
+    apt_fzf
   fi
 }
-alias uins='dnf_fzf_remove'
+alias uins='apt_fzf_remove'
 
 inss() {
-  dnf search $1
+  apt search $1
   flatpak search $1
 }
 
@@ -197,24 +201,25 @@ update() {
   network_status &>/dev/null
 
   if [[ "$NETWORK" == "online" ]]; then
-    dnf makecache
-    sudo dnf update -y
-    sudo dnf upgrade -y
+    sudo apt update -y
+    sudo apt upgrade -y
+    sudo apt autoremove -y
+    sudo apt autoclean -y
 
-    dnf list | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list.txt
-    dnf list --installed | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list_installed.txt
+    apt list | awk '{print $1}' | tail -n +4 >$HOME/.cache/apt_list.txt
+    apt list --installed | awk '{print $1}' | tail -n +4 >$HOME/.cache/apt_list_installed.txt
 
     asdf update
     asdf plugin update --all
 
     tldr --update
 
-    curl -O https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh ~/.local/share/
+    wget https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh ~/.local/share/
   else
     echo "Check your internet connection for online update and try again"
     echo "Doing offline update cache"
-    dnf list | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list.txt
-    dnf list --installed | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list_installed.txt
+    apt list | awk '{print $1}' | tail -n +4 >$HOME/.cache/apt_list.txt
+    apt list --installed | awk '{print $1}' | tail -n +4 >$HOME/.cache/apt_list_installed.txt
   fi
 }
 
@@ -363,14 +368,14 @@ emoji() {
   if hash emoji-fzf 2>/dev/null; then
     emoji-fzf preview --prepend |
       fzf_down |
-      awk '{ print $1 }' | tr -d "\n" | wl-copy
+      awk '{ print $1 }' | tr -d "\n" | clip.exe
   else
     pip install emoji-fzf
     emoji-fzf preview --prepend |
       fzf_down |
       awk '{ print $1 }' |
       tr -d "\n" |
-      wl-copy
+      clip.exe
   fi
 }
 alias ej="emoji"

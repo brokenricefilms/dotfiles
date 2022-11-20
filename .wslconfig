@@ -1,0 +1,6 @@
+[wsl2]
+memory=2GB
+guiApplications=false
+
+[boot]
+command="service cron start"

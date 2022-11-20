@@ -12,9 +12,9 @@ _-_-_-_-_-_-_-|   /\_/\
 
 ## Current setup
 
-- Fedora 37 beta
-- Chrome
-- Gnome console v43
+- Windows 11
+- Edge (Chrome for test stuff)
+- Windows terminal + wsl2 (Ubuntu)
 - [Bash shell](./bashrc)
 - [Neovim](./init.lua): quick edit stuff
 - [VSCode](./profile.code-profile): main editor
