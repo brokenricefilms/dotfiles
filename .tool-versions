@@ -1,5 +1,5 @@
 legacy_version_file = yes
-nodejs 19.0.1
-deno 1.27.2
+nodejs 19.1.0
+deno 1.28.1
 rust 1.65.0
 rust-analyzer 2022-11-07

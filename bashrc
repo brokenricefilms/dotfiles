@@ -99,6 +99,7 @@ alias bat='bat --theme=GitHub --color=always --style=numbers'
 alias winget='winget.exe'
 alias pwsh='pwsh.exe'
 alias wsl='wsl.exe'
+alias explorer='explorer.exe'
 
 apt_fzf_install() {
   local package_name=$1
