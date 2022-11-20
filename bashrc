@@ -104,6 +104,7 @@ alias explorer='explorer.exe'
 apt_fzf_install() {
   local package_name=$1
 
+  # TODO: better function naming
   apt_fzf() {
     local cache=$HOME/.cache/apt_list.txt
 
