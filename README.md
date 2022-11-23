@@ -12,9 +12,8 @@ _-_-_-_-_-_-_-|   /\_/\
 
 ## Current setup
 
-- Windows 11
-- Edge (Chrome for test stuff)
-- Windows terminal + wsl2 (Ubuntu)
+- Ubuntu 22.10
+- Gnome console + tmux
 - [Bash shell](./bashrc)
 - [Neovim](./init.lua): quick edit stuff
 - [VSCode](./profile.code-profile): main editor

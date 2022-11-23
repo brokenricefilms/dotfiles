@@ -96,82 +96,11 @@ alias x='chmod +x'
 alias dv='git diff'
 alias bat='bat --theme=GitHub --color=always --style=numbers'
 
-alias winget='winget.exe'
-alias pwsh='pwsh.exe'
-alias wsl='wsl.exe'
-alias explorer='explorer.exe'
-
-apt_fzf_install() {
-  local package_name=$1
-
-  # TODO: better function naming
-  apt_fzf() {
-    local cache=$HOME/.cache/apt_list.txt
-
-    if test -f "$cache"; then
-      package_name=$(\cat $cache | fzf_down)
-    else
-      apt list | awk '{print $1}' | tail -n +4 >$cache
-      package_name=$(\cat $cache | fzf_down)
-    fi
-
-    if [[ -n $package_name ]]; then
-      sudo apt install -y $package_name
-    fi
-  }
-
-  if [[ -n $package_name ]]; then
-    sudo apt install -y $package_name
-    ERROR=$?
-
-    if [[ ERROR -eq 1 ]]; then
-      apt_fzf
-    fi
-  else
-    apt_fzf
-  fi
-}
-alias ins='apt_fzf_install'
-
-apt_fzf_remove() {
-  local package_name
-  package_name=$1
-
-  apt_fzf() {
-    # cron job daily to update cache
-    local cache=$HOME/.cache/apt_list_installed.txt
-
-    if test -f "$cache"; then
-      package_name=$(\cat $cache | fzf_down)
-    else
-      apt list --installed | awk '{print $1}' | tail -n +4 >$cache
-      package_name=$(\cat $cache | fzf_down)
-    fi
-
-    if [[ -n $package_name ]]; then
-      sudo apt remove -y $package_name
-    fi
-  }
-
-  if [[ -n $package_name ]]; then
-    # TODO: don't use `rg` echo check issue for some case `rg` is not available by default -> use command system had default
-    sudo apt remove -y $package_name | rg "no match" &>/dev/null
-    ERROR=$?
-
-    if [[ ERROR -eq 0 ]]; then
-      apt_fzf
-    else
-      echo "removed $package_name"
-    fi
-  else
-    apt_fzf
-  fi
-}
-alias uins='apt_fzf_remove'
-
+alias ins='sudo apt install -y'
+alias uins='sudo apt remove -y'
 inss() {
   apt search $1
-  flatpak search $1
+  snap search $1
 }
 
 browser_daily() {
@@ -210,15 +139,14 @@ update() {
 
     deno upgrade
 
-    apt list | awk '{print $1}' | tail -n +4 >$HOME/.cache/apt_list.txt
-    apt list --installed | awk '{print $1}' | tail -n +4 >$HOME/.cache/apt_list_installed.txt
-
     asdf update
     asdf plugin update --all
 
     tldr --update
 
-    wget https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh ~/.local/share/
+    cd ~/.local/share/
+    wget https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh
+    cd -
   else
     echo "Check your internet connection for online update and try again"
     echo "Doing offline update cache"
@@ -372,14 +300,14 @@ emoji() {
   if hash emoji-fzf 2>/dev/null; then
     emoji-fzf preview --prepend |
       fzf_down |
-      awk '{ print $1 }' | tr -d "\n" | clip.exe
+      awk '{ print $1 }' | tr -d "\n" | wl-clipboard
   else
     pip install emoji-fzf
     emoji-fzf preview --prepend |
       fzf_down |
       awk '{ print $1 }' |
       tr -d "\n" |
-      clip.exe
+      wl-clipboard
   fi
 }
 alias ej="emoji"
