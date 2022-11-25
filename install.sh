@@ -41,9 +41,9 @@ asdf install rust latest
 asdf install rust-analyzer latest
 
 cd
-gh repo clone thuanOwa/dotfiles
+gh repo clone thuanowa/dotfiles
 
-ln -sf ~/repos/thuanOwa/ok/.tinypng ~/.tinypng
+ln -sf ~/repos/thuanowa/ok/.tinypng ~/.tinypng
 ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/ssh/config ~/.ssh/config
 rm -rf ~/.config/nvim
@@ -58,12 +58,12 @@ ln -sf ~/dotfiles/starship.toml ~/.config/
 ln -sf ~/dotfiles/.ripgreprc ~/
 ln -sf ~/dotfiles/bashrc ~/.bashrc
 ln -sf ~/dotfiles/input-remapper/ ~/.config/
-ln -sf ~/sync/obs-studio/ ~/.config/
+ln -sf ~/repos/thuanowa/obs-studio/ ~/.config/
 
 sudo ln -sf /usr/bin/fdfind /usr/bin/fd
 sudo ln -sf /usr/bin/batcat /usr/bin/bat
 
-ln -sf ~/repos/thuanOwa/ok/.fonts ~/.fonts
+ln -sf ~/repos/thuanowa/ok/.fonts ~/.fonts
 cd ~/.fonts
 fc-cache -v
 cd -
@@ -77,7 +77,7 @@ ln -sf /mnt/c/Users/master/Music ~/Musi
 mkdir ~/repos/
 cd ~/repos/
 
-gh repo list thuanOwa --limit 1000 | while read -r repo _; do
+gh repo list thuanowa --limit 1000 | while read -r repo _; do
   gh repo clone "$repo" "$repo"
 done
 

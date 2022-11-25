@@ -223,30 +223,30 @@ alias gc='go_to_git_clone_repo_dir'
 
 auto_sync() {
   repo=(
-    /home/master/repos/thuanOwa/ok
-    /home/master/repos/thuanOwa/obs-studio
-    /home/master/repos/thuanOwa/co_so_du_lieu
-    /home/master/repos/thuanOwa/dataLab
-    /home/master/repos/thuanOwa/ky_thuat_lap_trinh
-    /home/master/repos/thuanOwa/lap_trinh_huong_doi_tuong
-    /home/master/repos/thuanOwa/nhap_mon_cau_truc_du_lieu
-    /home/master/repos/thuanOwa/nhap_mon_web_va_ung_dung
-    /home/master/repos/thuanOwa/thuc-hanh-ky-thuat-lap-trinh
-    /home/master/repos/thuanOwa/thuc-hanh-lap-trinh-huong-doi-tuong
-    /home/master/repos/thuanOwa/thuc-hanh-nhap-mon-cau-truc-du-lieu
-    /home/master/repos/thuanOwa/thuc-hanh-nhap-mon-web-va-ung-dung
-    /home/master/repos/thuanOwa/thuc_thanh_nhap_mon_lap_trinh
-    /home/master/repos/thuanOwa/ublock_adblock_list
-    /home/master/repos/thuanOwa/cong_nghe_phan_mem
-    /home/master/repos/thuanOwa/thuan_ublacklist
-    /home/master/repos/thuanOwa/lap_trinh_ung_dung_co_so_du_lieu
-    /home/master/repos/thuanOwa/quan_tri_co_so_du_lieu
-    /home/master/repos/thuanOwa/ma_hoa_ung_dung
-    /home/master/repos/thuanOwa/img
-    /home/master/repos/thuanOwa/lap_trinh_cho_thiet_bi_di_dong/
-    /home/master/repos/thuanOwa/lap_trinh_web/
-    /home/master/repos/thuanOwa/phat_trien_phan_mem_nguon_mo/
-    /home/master/repos/thuanOwa/javascript-cli/
+    /home/master/repos/thuanowa/ok
+    /home/master/repos/thuanowa/obs-studio
+    /home/master/repos/thuanowa/co_so_du_lieu
+    /home/master/repos/thuanowa/dataLab
+    /home/master/repos/thuanowa/ky_thuat_lap_trinh
+    /home/master/repos/thuanowa/lap_trinh_huong_doi_tuong
+    /home/master/repos/thuanowa/nhap_mon_cau_truc_du_lieu
+    /home/master/repos/thuanowa/nhap_mon_web_va_ung_dung
+    /home/master/repos/thuanowa/thuc-hanh-ky-thuat-lap-trinh
+    /home/master/repos/thuanowa/thuc-hanh-lap-trinh-huong-doi-tuong
+    /home/master/repos/thuanowa/thuc-hanh-nhap-mon-cau-truc-du-lieu
+    /home/master/repos/thuanowa/thuc-hanh-nhap-mon-web-va-ung-dung
+    /home/master/repos/thuanowa/thuc_thanh_nhap_mon_lap_trinh
+    /home/master/repos/thuanowa/ublock_adblock_list
+    /home/master/repos/thuanowa/cong_nghe_phan_mem
+    /home/master/repos/thuanowa/thuan_ublacklist
+    /home/master/repos/thuanowa/lap_trinh_ung_dung_co_so_du_lieu
+    /home/master/repos/thuanowa/quan_tri_co_so_du_lieu
+    /home/master/repos/thuanowa/ma_hoa_ung_dung
+    /home/master/repos/thuanowa/img
+    /home/master/repos/thuanowa/lap_trinh_cho_thiet_bi_di_dong/
+    /home/master/repos/thuanowa/lap_trinh_web/
+    /home/master/repos/thuanowa/phat_trien_phan_mem_nguon_mo/
+    /home/master/repos/thuanowa/javascript-cli/
   )
 
   for i in ${repo[*]}; do
@@ -258,7 +258,7 @@ auto_sync() {
 }
 
 update_all_repo() {
-  for dir in ~/repos/thuanOwa/*; do
+  for dir in ~/repos/thuanowa/*; do
     cd "$dir"
     pwd
     git pull

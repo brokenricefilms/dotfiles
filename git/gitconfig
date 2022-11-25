@@ -10,7 +10,7 @@ todo = "!git_auto_commit() { git add --all; git commit -m 'chore: TODO list'; gi
 
 [user]
 name = Thuan Pham
-email = thuanOwa@gmail.com
+email = thuanowa@gmail.com
 
 [core]
 editor = $EDITOR
