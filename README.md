@@ -16,4 +16,4 @@ _-_-_-_-_-_-_-|   /\_/\
 - Gnome console + tmux
 - [Bash shell](./bashrc)
 - [Neovim](./init.lua): quick edit stuff
-- [VSCode](./profile.code-profile): main editor
+- [VSCode](./profile.code-profile): main editor ([gnome-search-providers-vscode](https://github.com/lunaryorn/gnome-search-providers-vscode))
