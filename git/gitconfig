@@ -7,6 +7,7 @@ d = "!git diff"
 ok = "!git_auto_commit() { git add --all; git commit -m '[👌Auto commit]'; git push; } ; git_auto_commit "
 yo = "!git_commit_change() { git diff; echo -n '👉 Commmit message: '; read commit_message; git add --all; git commit -m \"$commit_message\"; git push ;} ; git_commit_change "
 todo = "!git_auto_commit() { git add --all; git commit -m 'chore: TODO list'; git push; } ; git_auto_commit "
+fak = "!git reset --hard HEAD; git clean -df"
 
 [user]
 name = Thuan Pham
