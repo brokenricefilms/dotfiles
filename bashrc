@@ -157,7 +157,6 @@ update() {
 
 hi() {
   browser_daily
-  update
 }
 
 alias ..='cd .. ; l'

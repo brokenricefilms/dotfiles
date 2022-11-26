@@ -8,6 +8,12 @@ curl -sS https://starship.rs/install.sh | sh
 
 sudo apt install apt-transport-https tmux curl wget git neofetch htop mpv trash-cli ipython3 python3-pip tldr net-tools speedtest-cli neovim fd-find aria2 tree cowsay fzf clangd golang ripgrep unrar moreutils exa universal-ctags lua5.4 node-typescript bat python3-venv shfmt unzip cargo gem ruby-full build-essential zlib1g-dev php adb npm libsqlite3-dev git-extras gnome-tweaks wl-clipboard input-remapper -y
 
+# ubuntu install git delta
+cd ~/Downloads
+wget https://github.com/dandavison/delta/releases/download/0.14.0/git-delta_0.14.0_amd64.deb
+sudo dpkg -i git-delta_0.14.0_amd64.deb
+cd -
+
 curl -fsSL https://deno.land/install.sh | sh
 
 npm config set prefix ~/.npm/
