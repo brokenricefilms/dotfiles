@@ -4,6 +4,6 @@ editor: nvim
 prompt: enabled
 pager: delta -s
 aliases:
-    co: pr checkout
+  co: pr checkout
 http_unix_socket:
 browser: xdg-open

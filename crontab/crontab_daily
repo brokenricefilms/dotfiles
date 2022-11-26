@@ -2,7 +2,7 @@
 
 source ~/dotfiles/bashrc
 
-echo_cat_rainbow >> /tmp/update.log
-date >> /tmp/update.log
-update_music &>> /tmp/update.log
-update &>> /tmp/update.log
+echo_cat_rainbow >>/tmp/update.log
+date >>/tmp/update.log
+update_music &>>/tmp/update.log
+update &>>/tmp/update.log
