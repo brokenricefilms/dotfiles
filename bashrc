@@ -1,24 +1,24 @@
 #!/usr/bin/env bash
 
 echo_cat_rainbow() {
-    e='\033'
-    RESET="${e}[0m"
-    BOLD="${e}[1m"
-    CYAN="${e}[0;96m"
-    RED="${e}[0;91m"
-    YELLOW="${e}[0;93m"
-    GREEN="${e}[0;92m"
+  e='\033'
+  RESET="${e}[0m"
+  BOLD="${e}[1m"
+  CYAN="${e}[0;96m"
+  RED="${e}[0;91m"
+  YELLOW="${e}[0;93m"
+  GREEN="${e}[0;92m"
 
-    echo
-    echo -en "$RED"'-_-_-_-_-_-_-_'
-    echo -e "$RESET"$BOLD',------,'"$RESET"
-    echo -en "$YELLOW"'_-_-_-_-_-_-_-'
-    echo -e "$RESET"$BOLD'|   /\_/\\'"$RESET"
-    echo -en "$GREEN"'-_-_-_-_-_-_-'
-    echo -e "$RESET"$BOLD'~|__( ^ .^)'"$RESET"
-    echo -en "$CYAN"'-_-_-_-_-_-_-_-'
-    echo -e "$RESET"$BOLD'""  ""'"$RESET"
-    echo
+  echo
+  echo -en "$RED"'-_-_-_-_-_-_-_'
+  echo -e "$RESET"$BOLD',------,'"$RESET"
+  echo -en "$YELLOW"'_-_-_-_-_-_-_-'
+  echo -e "$RESET"$BOLD'|   /\_/\\'"$RESET"
+  echo -en "$GREEN"'-_-_-_-_-_-_-'
+  echo -e "$RESET"$BOLD'~|__( ^ .^)'"$RESET"
+  echo -en "$CYAN"'-_-_-_-_-_-_-_-'
+  echo -e "$RESET"$BOLD'""  ""'"$RESET"
+  echo
 }
 
 echo_cat_rainbow
@@ -59,7 +59,7 @@ set -o vi
 stty time 0
 
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] &&
-    . /usr/share/bash-completion/bash_completion
+  . /usr/share/bash-completion/bash_completion
 
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
@@ -72,15 +72,15 @@ bind -x '"\t": fzf_bash_completion'
 eval "$(starship init bash)"
 
 network_status() {
-    ping -c 1 google.com
-    local NETWORK_STATUS=$?
-    local NETWORK_ERROR_CODE=2
+  ping -c 1 google.com
+  local NETWORK_STATUS=$?
+  local NETWORK_ERROR_CODE=2
 
-    if [[ "$NETWORK_STATUS" == "$NETWORK_ERROR_CODE" ]]; then
-        NETWORK="offline"
-    else
-        NETWORK="online"
-    fi
+  if [[ "$NETWORK_STATUS" == "$NETWORK_ERROR_CODE" ]]; then
+    NETWORK="offline"
+  else
+    NETWORK="online"
+  fi
 }
 
 # using alias because can add flag like:"fzf_down --preview 'cat {}'"
@@ -99,64 +99,64 @@ alias bat='bat --theme=GitHub --color=always --style=numbers'
 alias ins='sudo apt install -y'
 alias uins='sudo apt remove -y'
 inss() {
-    apt search $1
-    snap search $1
+  apt search $1
+  snap search $1
 }
 
 browser_daily() {
-    xdg-open "https://facebook.com"
-    xdg-open "https://www.youtube.com/feed/subscriptions"
-    xdg-open "https://feeder.co/reader"
+  xdg-open "https://facebook.com"
+  xdg-open "https://www.youtube.com/feed/subscriptions"
+  xdg-open "https://feeder.co/reader"
 }
 
 update_music() {
-    network_status &>/dev/null
+  network_status &>/dev/null
 
-    if [[ "$NETWORK" == "online" ]]; then
-        local music_dir
-        music_dir=$HOME/Music/music_i_like/
+  if [[ "$NETWORK" == "online" ]]; then
+    local music_dir
+    music_dir=$HOME/Music/music_i_like/
 
-        rm -rf $music_dir
-        mkdir -p $music_dir
-        cd $music_dir
+    rm -rf $music_dir
+    mkdir -p $music_dir
+    cd $music_dir
 
-        yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/playlist?list=PLcazFfFZIFPld2xu_nAgmbgj5QldQOpUB"
+    yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/playlist?list=PLcazFfFZIFPld2xu_nAgmbgj5QldQOpUB"
 
-        cd -
-    else
-        echo "Check your internet connection and try again"
-    fi
+    cd -
+  else
+    echo "Check your internet connection and try again"
+  fi
 }
 
 update() {
-    network_status &>/dev/null
+  network_status &>/dev/null
 
-    if [[ "$NETWORK" == "online" ]]; then
-        sudo apt update -y
-        sudo apt upgrade -y
-        sudo apt autoremove -y
-        sudo apt autoclean -y
+  if [[ "$NETWORK" == "online" ]]; then
+    sudo apt update -y
+    sudo apt upgrade -y
+    sudo apt autoremove -y
+    sudo apt autoclean -y
 
-        deno upgrade
+    deno upgrade
 
-        asdf update
-        asdf plugin update --all
+    asdf update
+    asdf plugin update --all
 
-        tldr --update
+    tldr --update
 
-        cd ~/.local/share/
-        wget https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh
-        cd -
-    else
-        echo "Check your internet connection for online update and try again"
-        echo "Doing offline update cache"
-        apt list | awk '{print $1}' | tail -n +4 >$HOME/.cache/apt_list.txt
-        apt list --installed | awk '{print $1}' | tail -n +4 >$HOME/.cache/apt_list_installed.txt
-    fi
+    cd ~/.local/share/
+    wget https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh
+    cd -
+  else
+    echo "Check your internet connection for online update and try again"
+    echo "Doing offline update cache"
+    apt list | awk '{print $1}' | tail -n +4 >$HOME/.cache/apt_list.txt
+    apt list --installed | awk '{print $1}' | tail -n +4 >$HOME/.cache/apt_list_installed.txt
+  fi
 }
 
 hi() {
-    browser_daily
+  browser_daily
 }
 
 alias ..='cd .. ; l'
@@ -174,160 +174,160 @@ alias la='exa --all --icons'
 alias al='la'
 
 make_dir() {
-    if [ ! -n "$1" ]; then
-        echo -n "👉 Enter a directory name"
-        read dirName
-        mkdir -p $dirName
-        cd $dirName
-    elif [ -d $1 ]; then
-        echo -e "👉 $1 already exists"
-        cd $1
-    else
-        mkdir -p $1
-        cd $1
-    fi
+  if [ ! -n "$1" ]; then
+    echo -n "👉 Enter a directory name"
+    read dirName
+    mkdir -p $dirName
+    cd $dirName
+  elif [ -d $1 ]; then
+    echo -e "👉 $1 already exists"
+    cd $1
+  else
+    mkdir -p $1
+    cd $1
+  fi
 }
 alias mk="make_dir"
 
 SERVER_IP() {
-    hostname -I
+  hostname -I
 }
 
 ser() {
-    browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000
+  browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000
 }
 
 change_dir_to_git_root() {
-    cd $(git rev-parse --show-toplevel)
-    ls
+  cd $(git rev-parse --show-toplevel)
+  ls
 }
 alias cdr='change_dir_to_git_root'
 
 auto_commit() {
-    git add --all
-    git commit -m "[👌Auto commit]"
+  git add --all
+  git commit -m "[👌Auto commit]"
 }
 
 ok() {
-    auto_commit
-    git push
+  auto_commit
+  git push
 }
 
 go_to_git_clone_repo_dir() {
-    gitDir="$(basename "$1" .git)"
-    gitDirResolved=${2:-$gitDir}
-    git clone "$@" && cd "$gitDirResolved"
+  gitDir="$(basename "$1" .git)"
+  gitDirResolved=${2:-$gitDir}
+  git clone "$@" && cd "$gitDirResolved"
 }
 alias gc='go_to_git_clone_repo_dir'
 
 auto_sync() {
-    repo=(
-        /home/master/repos/thuanowa/ok
-        /home/master/repos/thuanowa/obs-studio
-        /home/master/repos/thuanowa/co_so_du_lieu
-        /home/master/repos/thuanowa/dataLab
-        /home/master/repos/thuanowa/ky_thuat_lap_trinh
-        /home/master/repos/thuanowa/lap_trinh_huong_doi_tuong
-        /home/master/repos/thuanowa/nhap_mon_cau_truc_du_lieu
-        /home/master/repos/thuanowa/nhap_mon_web_va_ung_dung
-        /home/master/repos/thuanowa/thuc-hanh-ky-thuat-lap-trinh
-        /home/master/repos/thuanowa/thuc-hanh-lap-trinh-huong-doi-tuong
-        /home/master/repos/thuanowa/thuc-hanh-nhap-mon-cau-truc-du-lieu
-        /home/master/repos/thuanowa/thuc-hanh-nhap-mon-web-va-ung-dung
-        /home/master/repos/thuanowa/thuc_thanh_nhap_mon_lap_trinh
-        /home/master/repos/thuanowa/ublock_adblock_list
-        /home/master/repos/thuanowa/cong_nghe_phan_mem
-        /home/master/repos/thuanowa/thuan_ublacklist
-        /home/master/repos/thuanowa/lap_trinh_ung_dung_co_so_du_lieu
-        /home/master/repos/thuanowa/quan_tri_co_so_du_lieu
-        /home/master/repos/thuanowa/ma_hoa_ung_dung
-        /home/master/repos/thuanowa/img
-        /home/master/repos/thuanowa/lap_trinh_cho_thiet_bi_di_dong/
-        /home/master/repos/thuanowa/lap_trinh_web/
-        /home/master/repos/thuanowa/phat_trien_phan_mem_nguon_mo/
-        /home/master/repos/thuanowa/javascript-cli/
-    )
+  repo=(
+    /home/master/repos/thuanowa/ok
+    /home/master/repos/thuanowa/obs-studio
+    /home/master/repos/thuanowa/co_so_du_lieu
+    /home/master/repos/thuanowa/dataLab
+    /home/master/repos/thuanowa/ky_thuat_lap_trinh
+    /home/master/repos/thuanowa/lap_trinh_huong_doi_tuong
+    /home/master/repos/thuanowa/nhap_mon_cau_truc_du_lieu
+    /home/master/repos/thuanowa/nhap_mon_web_va_ung_dung
+    /home/master/repos/thuanowa/thuc-hanh-ky-thuat-lap-trinh
+    /home/master/repos/thuanowa/thuc-hanh-lap-trinh-huong-doi-tuong
+    /home/master/repos/thuanowa/thuc-hanh-nhap-mon-cau-truc-du-lieu
+    /home/master/repos/thuanowa/thuc-hanh-nhap-mon-web-va-ung-dung
+    /home/master/repos/thuanowa/thuc_thanh_nhap_mon_lap_trinh
+    /home/master/repos/thuanowa/ublock_adblock_list
+    /home/master/repos/thuanowa/cong_nghe_phan_mem
+    /home/master/repos/thuanowa/thuan_ublacklist
+    /home/master/repos/thuanowa/lap_trinh_ung_dung_co_so_du_lieu
+    /home/master/repos/thuanowa/quan_tri_co_so_du_lieu
+    /home/master/repos/thuanowa/ma_hoa_ung_dung
+    /home/master/repos/thuanowa/img
+    /home/master/repos/thuanowa/lap_trinh_cho_thiet_bi_di_dong/
+    /home/master/repos/thuanowa/lap_trinh_web/
+    /home/master/repos/thuanowa/phat_trien_phan_mem_nguon_mo/
+    /home/master/repos/thuanowa/javascript-cli/
+  )
 
-    for i in ${repo[*]}; do
-        cd "$i"
-        pwd
-        auto_commit
-        git push
-    done
+  for i in ${repo[*]}; do
+    cd "$i"
+    pwd
+    auto_commit
+    git push
+  done
 }
 
 update_all_repo() {
-    for dir in ~/repos/thuanowa/*; do
-        cd "$dir"
-        pwd
-        git pull
-        git push
-        cd - >/dev/null
-    done
+  for dir in ~/repos/thuanowa/*; do
+    cd "$dir"
+    pwd
+    git pull
+    git push
+    cd - >/dev/null
+  done
 
-    for dir in ~/repos/OngDev/*; do
-        cd "$dir"
-        pwd
-        git pull
-        git push
-        cd - >/dev/null
-    done
+  for dir in ~/repos/OngDev/*; do
+    cd "$dir"
+    pwd
+    git pull
+    git push
+    cd - >/dev/null
+  done
 
-    for dir in ~/repos/isekaiSystem/*; do
-        cd "$dir"
-        pwd
-        git pull
-        git push
-        cd - >/dev/null
-    done
+  for dir in ~/repos/isekaiSystem/*; do
+    cd "$dir"
+    pwd
+    git pull
+    git push
+    cd - >/dev/null
+  done
 
-    repoNotInDefaultDir=(
-        ~/dotfiles/
-        ~/repos/OngDev/.github/
-    )
+  repoNotInDefaultDir=(
+    ~/dotfiles/
+    ~/repos/OngDev/.github/
+  )
 
-    for i in ${repoNotInDefaultDir[*]}; do
-        cd "$i"
-        pwd
-        git pull
-        git push
-        cd - >/dev/null
-    done
+  for i in ${repoNotInDefaultDir[*]}; do
+    cd "$i"
+    pwd
+    git pull
+    git push
+    cd - >/dev/null
+  done
 }
 
 emoji() {
-    if hash emoji-fzf 2>/dev/null; then
-        emoji-fzf preview --prepend |
-            fzf_down |
-            awk '{ print $1 }' | tr -d "\n" | wl-clipboard
-    else
-        pip install emoji-fzf
-        emoji-fzf preview --prepend |
-            fzf_down |
-            awk '{ print $1 }' |
-            tr -d "\n" |
-            wl-clipboard
-    fi
+  if hash emoji-fzf 2>/dev/null; then
+    emoji-fzf preview --prepend |
+      fzf_down |
+      awk '{ print $1 }' | tr -d "\n" | wl-clipboard
+  else
+    pip install emoji-fzf
+    emoji-fzf preview --prepend |
+      fzf_down |
+      awk '{ print $1 }' |
+      tr -d "\n" |
+      wl-clipboard
+  fi
 }
 alias ej="emoji"
 
 h() {
-    local command
-    command=$(\cat ~/.bash_history | fzf_down)
-    $command
+  local command
+  command=$(\cat ~/.bash_history | fzf_down)
+  $command
 }
 
 find_file_edit_in_nvim() {
-    if [ ! -n "$1" ]; then
-        local file
-        file=$(fd . -t f --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:500 {}')
+  if [ ! -n "$1" ]; then
+    local file
+    file=$(fd . -t f --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:500 {}')
 
-        if [ ! -z "$file" ]; then
-            nvim "$file"
-        fi
-    else
-        nvim "$1"
+    if [ ! -z "$file" ]; then
+      nvim "$file"
     fi
+  else
+    nvim "$1"
+  fi
 }
 alias f='find_file_edit_in_nvim'
 alias e='find_file_edit_in_nvim'
@@ -336,36 +336,36 @@ alias vi='find_file_edit_in_nvim'
 alias vim='find_file_edit_in_nvim'
 
 open_file() {
-    local object
-    object=$(fd . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:500 {}')
-    if [ ! -z "$object" ]; then
-        xdg-open "$object"
-    fi
+  local object
+  object=$(fd . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:500 {}')
+  if [ ! -z "$object" ]; then
+    xdg-open "$object"
+  fi
 }
 alias o='open_file'
 
 change_dir() {
-    local dir
-    dir=$1
+  local dir
+  dir=$1
 
-    fzf_dir() {
-        dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r tree -C -L 2')
-        cd "$dir"
-    }
+  fzf_dir() {
+    dir=$(fd -t d . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r tree -C -L 2')
+    cd "$dir"
+  }
 
-    if [[ -n $dir ]]; then
-        cd $dir &>/dev/null
-        ERROR=$?
+  if [[ -n $dir ]]; then
+    cd $dir &>/dev/null
+    ERROR=$?
 
-        if [[ ERROR -eq 1 ]]; then
-            echo "\"$1\" directory does not exist"
-            fzf_dir
-        fi
-    else
-        fzf_dir
+    if [[ ERROR -eq 1 ]]; then
+      echo "\"$1\" directory does not exist"
+      fzf_dir
     fi
+  else
+    fzf_dir
+  fi
 
-    ls
+  ls
 }
 alias c='change_dir'
 
@@ -373,23 +373,23 @@ alias dot='tmux switch-client -t "dotfiles"'
 alias in='tmux switch-client -t "inbox"'
 
 kill_all_unname_tmux_session() {
-    echo "\n👉 kill all unname tmux session"
-    cd /tmp/
-    tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >/tmp/killAllUnnameTmuxSessionOutput.sh
-    sed -i 's/^/tmux kill-session -t /' killAllUnnameTmuxSessionOutput.sh
-    chmod +x killAllUnnameTmuxSessionOutput.sh
-    ./killAllUnnameTmuxSessionOutput.sh
-    cd -
-    tmux ls
+  echo "\n👉 kill all unname tmux session"
+  cd /tmp/
+  tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >/tmp/killAllUnnameTmuxSessionOutput.sh
+  sed -i 's/^/tmux kill-session -t /' killAllUnnameTmuxSessionOutput.sh
+  chmod +x killAllUnnameTmuxSessionOutput.sh
+  ./killAllUnnameTmuxSessionOutput.sh
+  cd -
+  tmux ls
 }
 
 kill_all_unname_tmux_session_no_message() {
-    cd /tmp/
-    tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >/tmp/killAllUnnameTmuxSessionOutput.sh
-    sed -i 's/^/tmux kill-session -t /' killAllUnnameTmuxSessionOutput.sh
-    chmod +x killAllUnnameTmuxSessionOutput.sh
-    ./killAllUnnameTmuxSessionOutput.sh
-    cd -
+  cd /tmp/
+  tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >/tmp/killAllUnnameTmuxSessionOutput.sh
+  sed -i 's/^/tmux kill-session -t /' killAllUnnameTmuxSessionOutput.sh
+  chmod +x killAllUnnameTmuxSessionOutput.sh
+  ./killAllUnnameTmuxSessionOutput.sh
+  cd -
 }
 
 alias clear='kill_all_unname_tmux_session_no_message ; clear -x'
@@ -399,7 +399,7 @@ alias clea='clear'
 alias yt="yt-dlp -f bestvideo+bestaudio"
 
 yta() {
-    yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"
+  yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"
 }
 
 alias play_music='mpv --shuffle --loop-playlist ~/Music/*'
