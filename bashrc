@@ -402,5 +402,5 @@ yta() {
   yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"
 }
 
-alias play_music='mpv --shuffle --loop-playlist ~/Music/*'
+alias play_music='mpv --shuffle --loop-playlist *'
 alias m='play_music'
