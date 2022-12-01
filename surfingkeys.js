@@ -20,11 +20,11 @@ settings.theme = `
 .sk_theme {
   font-family: JetBrains Mono NL, Cascadia Code, SauceCodePro Nerd Font, Consolas, Menlo, monospace;
   font-size: 10pt;
-  background: #0000000;
+  background: #000000;
   color: #ffffff;
 }
 .sk_theme tbody {
-  color: #0000000;
+  color: #000000;
 }
 .sk_theme input {
   color: #ffffff;
@@ -39,7 +39,7 @@ settings.theme = `
   color: #ffffff;
 }
 .sk_theme #sk_omnibarSearchResult ul li:nth-child(odd) {
-  background: #0000000;
+  background: #000000;
 }
 .sk_theme #sk_omnibarSearchResult ul li.focused {
   background: #0598bc;
