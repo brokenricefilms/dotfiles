@@ -31,7 +31,7 @@ opt.history = 100
 opt.lazyredraw = true
 opt.updatetime = 100
 
-vim.cmd [[colorscheme zellner]]
+vim.cmd [[colorscheme default]]
 
 opt.shortmess:append "sI"
 
