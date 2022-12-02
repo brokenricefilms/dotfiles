@@ -42,7 +42,7 @@ settings.theme = `
   background: #000000;
 }
 .sk_theme #sk_omnibarSearchResult ul li.focused {
-  background: #0598bc;
+  background: #238636;
 }
 #sk_status,
 #sk_find {
