@@ -2,4 +2,8 @@
 
 # daily 7pm
 
-0 19 \* \* \* bash /home/master/dotfiles/crontab/crontab_daily
+0 19 * * * bash /home/master/dotfiles/crontab/crontab_daily
+
+# weekly at 7pm sunday
+
+0 19 * * 0 /home/master/dotfiles/crontab/crontab_weekly
