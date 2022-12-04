@@ -94,7 +94,7 @@ alias owa='code .'
 alias se='sudoedit'
 alias x='chmod +x'
 alias dv='git diff'
-alias bat='bat --color=always --style=numbers'
+alias bat='bat --theme=GitHub --color=always --style=numbers'
 
 alias ins='sudo apt install -y'
 alias uins='sudo apt remove -y'

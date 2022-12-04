@@ -49,7 +49,7 @@ reflog = delta
 show = delta
 
 [delta]
-light = false
+light = true
 side-by-side = true
 line-numbers = true
 
