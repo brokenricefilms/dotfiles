@@ -138,14 +138,14 @@ update() {
     sudo apt autoremove -y
     sudo apt autoclean -y
 
+    sudo snap refresh
+
     deno upgrade
 
     asdf update
     asdf plugin update --all
 
     tldr --update
-
-    cd ~/.local/share/
     wget https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh
     cd -
   else
