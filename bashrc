@@ -95,7 +95,6 @@ alias se='sudoedit'
 alias x='chmod +x'
 alias dv='git diff'
 alias bat='bat --color=always --style=numbers'
-alias docker='sudo docker'
 
 alias ins='sudo apt install -y'
 alias uins='sudo apt remove -y'
