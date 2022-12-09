@@ -1,18 +1,24 @@
 #! /usr/bin/env sh
+sudo dnf install dnf-plugins-core -y
 
-sudo apt update -y
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf groupupdate core -y
 
-sudo apt install curl -y
+sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
+sudo dnf groupupdate sound-and-video -y
 
-curl -sS https://starship.rs/install.sh | sh
+sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:lamlng/Fedora_33/home:lamlng.repo
 
-sudo apt install apt-transport-https tmux curl wget git neofetch htop mpv mpv-mpris trash-cli ipython3 python3-pip tldr net-tools speedtest-cli neovim fd-find aria2 tree cowsay fzf clangd golang ripgrep unrar moreutils exa universal-ctags lua5.4 node-typescript bat python3-venv shfmt unzip cargo gem ruby-full build-essential zlib1g-dev php adb npm libsqlite3-dev git-extras gnome-tweaks wl-clipboard input-remapper -y
+sudo dnf copr enable sunwire/input-remapper -y
+sudo dnf install python3-input-remapper -y
 
-# ubuntu install git delta
-cd ~/Downloads
-wget https://github.com/dandavison/delta/releases/download/0.14.0/git-delta_0.14.0_amd64.deb
-sudo dpkg -i git-delta_0.14.0_amd64.deb
-cd -
+sudo dnf copr enable atim/starship -y
+sudo dnf install starship -y
+
+sudo dnf install -y tmux curl wget git neofetch htop gnome-tweaks trash-cli python3-pip tldr net-tools speedtest-cli neovim python3-neovim fd-find aria2 tree cowsay fzf npm ffmpeg youtube-dl mpv ripgrep unrar moreutils foliate util-linux-user zsh cronie git-delta wl-clipboard java-devel git-clang-format rust cargo go gtk-v4l ruby ruby-devel google-chrome-stable gcc-c++ ibus-bamboo collectd-sensors obs-studio dconf-editor sqlite shfmt v4l-utils google-noto-emoji-color-fonts cmake kdenlive starship glib2-static libgda libgda-sqlite exa bat
+
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub org.onlyoffice.desktopeditors
 
 curl -fsSL https://deno.land/install.sh | sh
 
@@ -65,9 +71,6 @@ ln -sf ~/dotfiles/.ripgreprc ~/
 ln -sf ~/dotfiles/bashrc ~/.bashrc
 ln -sf ~/dotfiles/input-remapper/ ~/.config/
 ln -sf ~/repos/thuanowa/obs-studio/ ~/.config/
-
-sudo ln -sf /usr/bin/fdfind /usr/bin/fd
-sudo ln -sf /usr/bin/batcat /usr/bin/bat
 
 ln -sf ~/repos/thuanowa/ok/.fonts ~/.fonts
 cd ~/.fonts

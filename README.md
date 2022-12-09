@@ -12,8 +12,8 @@ _-_-_-_-_-_-_-|   /\_/\
 
 ## Current setup
 
-- Ubuntu 22.10
-- Gnome console + tmux
+- Fedora 37
+- Gnome terminal + tmux
 - [Bash shell](./bashrc)
 - [Neovim](./init.lua): quick edit stuff
 - [VSCode](./profile.code-profile): main editor ([gnome-search-providers-vscode](https://github.com/lunaryorn/gnome-search-providers-vscode))

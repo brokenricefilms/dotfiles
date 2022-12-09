@@ -96,11 +96,77 @@ alias x='chmod +x'
 alias dv='git diff'
 alias bat='bat --theme=GitHub --color=always --style=numbers'
 
-alias ins='sudo apt install -y'
-alias uins='sudo apt remove -y'
+
+fzf_dnf_install() {
+  local package_name=$1
+
+  dnf_fzf() {
+    local cache=$HOME/.cache/dnf_list.txt
+
+    if test -f "$cache"; then
+      package_name=$(\cat $cache | fzf_down)
+    else
+      dnf list | awk '{print $1}' | tail -n +4 >$cache
+      package_name=$(\cat $cache | fzf_down)
+    fi
+
+    if [[ -n $package_name ]]; then
+      sudo dnf install -y $package_name
+    fi
+  }
+
+  if [[ -n $package_name ]]; then
+    sudo dnf install -y $package_name
+    ERROR=$?
+
+    if [[ ERROR -eq 1 ]]; then
+      dnf_fzf
+    fi
+  else
+    dnf_fzf
+  fi
+}
+alias ins='fzf_dnf_install'
+
+dnf_fzf_remove() {
+  local package_name
+  package_name=$1
+
+  dnf_fzf() {
+    # cron job daily to update cache
+    local cache=$HOME/.cache/dnf_list_installed.txt
+
+    if test -f "$cache"; then
+      package_name=$(\cat $cache | fzf_down)
+    else
+      dnf list --installed | awk '{print $1}' | tail -n +4 >$cache
+      package_name=$(\cat $cache | fzf_down)
+    fi
+
+    if [[ -n $package_name ]]; then
+      sudo dnf remove -y $package_name
+    fi
+  }
+
+  if [[ -n $package_name ]]; then
+    # TODO: don't use `rg` echo check issue for some case `rg` is not available by default -> use command system had default
+    sudo dnf remove -y $package_name | rg "no match" &>/dev/null
+    ERROR=$?
+
+    if [[ ERROR -eq 0 ]]; then
+      dnf_fzf
+    else
+      echo "removed $package_name"
+    fi
+  else
+    dnf_fzf
+  fi
+}
+alias uins='dnf_fzf_remove'
+
 inss() {
-  apt search $1
-  snap search $1
+  dnf search $1
+  flatpak search $1
 }
 
 browser_daily() {
@@ -128,16 +194,20 @@ update_music() {
   fi
 }
 
+update_dnf_package() {
+    dnf list | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list.txt
+    dnf list --installed | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list_installed.txt
+}
+
 update() {
   network_status &>/dev/null
 
   if [[ "$NETWORK" == "online" ]]; then
-    sudo apt update -y
-    sudo apt upgrade -y
-    sudo apt autoremove -y
-    sudo apt autoclean -y
+    dnf makecache
+    sudo dnf update -y
+    sudo dnf upgrade -y
 
-    sudo snap refresh
+    update_dnf_package
 
     deno upgrade
 
@@ -150,8 +220,7 @@ update() {
   else
     echo "Check your internet connection for online update and try again"
     echo "Doing offline update cache"
-    apt list | awk '{print $1}' | tail -n +4 >$HOME/.cache/apt_list.txt
-    apt list --installed | awk '{print $1}' | tail -n +4 >$HOME/.cache/apt_list_installed.txt
+    update_dnf_package
   fi
 }
 
