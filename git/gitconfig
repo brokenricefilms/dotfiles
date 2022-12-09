@@ -6,7 +6,7 @@ st = "!git status -sb"
 d = "!git diff"
 ok = "!git add --all; git commit -m '[👌Auto commit]'; git push"
 yo = "!git diff; echo -n '👉 Commmit message: '; read commit_message; git add --all; git commit -m \"$commit_message\""
-todo = "!git add --all; git commit -m 'chore: TODO list'; git push"
+todo = "!git add --all; git commit -m 'chore: TODO list'"
 fak = "!git reset --hard HEAD; git clean -df"
 
 [user]
