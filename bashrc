@@ -149,7 +149,6 @@ dnf_fzf_remove() {
   }
 
   if [[ -n $package_name ]]; then
-    # TODO: don't use `rg` echo check issue for some case `rg` is not available by default -> use command system had default
     sudo dnf remove -y $package_name | rg "no match" &>/dev/null
     ERROR=$?
 
