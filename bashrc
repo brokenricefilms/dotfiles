@@ -96,7 +96,6 @@ alias x='chmod +x'
 alias dv='git diff'
 alias bat='bat --theme=GitHub --color=always --style=numbers'
 
-
 fzf_dnf_install() {
   local package_name=$1
 
@@ -194,8 +193,8 @@ update_music() {
 }
 
 update_dnf_package() {
-    dnf list | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list.txt
-    dnf list --installed | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list_installed.txt
+  dnf list | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list.txt
+  dnf list --installed | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list_installed.txt
 }
 
 update() {
@@ -367,14 +366,14 @@ emoji() {
   if hash emoji-fzf 2>/dev/null; then
     emoji-fzf preview --prepend |
       fzf_down |
-      awk '{ print $1 }' | tr -d "\n" | wl-clipboard
+      awk '{ print $1 }' | tr -d "\n" | wl-copy
   else
     pip install emoji-fzf
     emoji-fzf preview --prepend |
       fzf_down |
       awk '{ print $1 }' |
       tr -d "\n" |
-      wl-clipboard
+      wl-copy
   fi
 }
 alias ej="emoji"
