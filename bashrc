@@ -204,9 +204,9 @@ update() {
   network_status &>/dev/null
 
   if [[ "$NETWORK" == "online" ]]; then
-    dnf makecache
-    sudo dnf update -y
-    sudo dnf upgrade -y
+    # dnf makecache
+    # sudo dnf update -y
+    # sudo dnf upgrade -y
 
     update_dnf_package
 
