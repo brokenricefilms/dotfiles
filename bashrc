@@ -171,9 +171,6 @@ browser_daily() {
   xdg-open "https://facebook.com"
   xdg-open "https://www.youtube.com/feed/subscriptions"
   xdg-open "https://feeder.co/reader"
-  xdg-open "https://mail.google.com/mail/u/0/#inbox"
-  xdg-open "https://mail.google.com/mail/u/1/#inbox"
-  xdg-open "https://discord.com/channels/822464808666005504/853091661031014461"
 }
 
 update_music() {
