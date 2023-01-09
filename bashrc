@@ -161,6 +161,11 @@ update() {
   fi
 }
 
+function update_applications() {
+  sudo find /usr/share/applications/ -type l -delete
+  sudo ln -sf ~/dotfiles/applications/* /usr/share/applications/
+}
+
 hi() {
   browser_daily
 }
