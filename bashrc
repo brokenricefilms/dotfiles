@@ -96,71 +96,8 @@ alias x='chmod +x'
 alias dv='git diff'
 alias bat='bat --theme=GitHub --color=always --style=numbers'
 
-fzf_dnf_install() {
-  local package_name=$1
-
-  dnf_fzf() {
-    local cache=$HOME/.cache/dnf_list.txt
-
-    if test -f "$cache"; then
-      package_name=$(\cat $cache | fzf_down)
-    else
-      dnf list | awk '{print $1}' | tail -n +4 >$cache
-      package_name=$(\cat $cache | fzf_down)
-    fi
-
-    if [[ -n $package_name ]]; then
-      sudo dnf install -y $package_name
-    fi
-  }
-
-  if [[ -n $package_name ]]; then
-    sudo dnf install -y $package_name
-    ERROR=$?
-
-    if [[ ERROR -eq 1 ]]; then
-      dnf_fzf
-    fi
-  else
-    dnf_fzf
-  fi
-}
-alias ins='fzf_dnf_install'
-
-dnf_fzf_remove() {
-  local package_name
-  package_name=$1
-
-  dnf_fzf() {
-    # cron job daily to update cache
-    local cache=$HOME/.cache/dnf_list_installed.txt
-
-    if test -f "$cache"; then
-      package_name=$(\cat $cache | fzf_down)
-    else
-      dnf list --installed | awk '{print $1}' | tail -n +4 >$cache
-      package_name=$(\cat $cache | fzf_down)
-    fi
-
-    if [[ -n $package_name ]]; then
-      sudo dnf remove -y $package_name
-    fi
-  }
-
-  if [[ -n $package_name ]]; then
-    sudo dnf remove -y $package_name | rg "no match" &>/dev/null
-    ERROR=$?
-
-    if [[ ERROR -eq 0 ]]; then
-      dnf_fzf
-    else
-      echo "removed $package_name"
-    fi
-  else
-    dnf_fzf
-  fi
-}
-alias uins='dnf_fzf_remove'
+alias ins='sudo dnf install'
+alias uins='sudo dnf remove'
 
 inss() {
   dnf search $1
@@ -173,6 +110,7 @@ browser_daily() {
   xdg-open "https://feeder.co/reader"
 }
 
+# TODO: check changed before download
 update_music() {
   network_status &>/dev/null
 
