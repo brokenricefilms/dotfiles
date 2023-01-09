@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=new figma
+Exec=sh -c 'wmctrl -s 7 ;google-chrome --new-window "https://figma.new"'
+Icon=/home/master/dotfiles/applications/icons/figma.png
