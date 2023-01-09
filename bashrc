@@ -96,8 +96,8 @@ alias x='chmod +x'
 alias dv='git diff'
 alias bat='bat --theme=GitHub --color=always --style=numbers'
 
-alias ins='sudo dnf install'
-alias uins='sudo dnf remove'
+alias ins='sudo dnf install -y'
+alias uins='sudo dnf remove -y'
 
 inss() {
   dnf search $1
@@ -321,12 +321,6 @@ emoji() {
   fi
 }
 alias ej="emoji"
-
-h() {
-  local command
-  command=$(\cat ~/.bash_history | fzf_down)
-  $command
-}
 
 find_file_edit_in_nvim() {
   if [ ! -n "$1" ]; then
