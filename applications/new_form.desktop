@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=new form
-Exec=google-chrome --new-window "https://form.new"
+Exec=firefox --new-window "https://form.new"
 Icon=/home/master/dotfiles/applications/icons/forms.png
