@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=new event
-Exec=firefox --new-window "https://cal.new"
+Exec=google-chrome --app="https://cal.new"
 Icon=/home/master/dotfiles/applications/icons/google-calendar.png
