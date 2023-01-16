@@ -1,27 +1,28 @@
 #!/usr/bin/env bash
 
-echo_cat_rainbow() {
+echo_nyan_cat() {
   e='\033'
   RESET="${e}[0m"
   BOLD="${e}[1m"
   CYAN="${e}[0;96m"
   RED="${e}[0;91m"
   YELLOW="${e}[0;93m"
-  GREEN="${e}[0;92m"
+  LIGHT_GREEN="${e}[0;92m"
+  GREEN="${e}[0;32m"
 
   echo
   echo -en "$RED"'-_-_-_-_-_-_-_'
   echo -e "$RESET"$BOLD',------,'"$RESET"
   echo -en "$YELLOW"'_-_-_-_-_-_-_-'
   echo -e "$RESET"$BOLD'|   /\_/\\'"$RESET"
-  echo -en "$GREEN"'-_-_-_-_-_-_-'
-  echo -e "$RESET"$BOLD'~|__( ^ .^)'"$RESET"
+  echo -en "$LIGHT_GREEN"'-_-_-_-_-_-_-'
+  echo -e "$RESET"$BOLD'~|__( '"$GREEN"'$ '"$RESET"$BOLD'.'"$GREEN"'$'"$RESET"$BOLD')'"$RESET"
   echo -en "$CYAN"'-_-_-_-_-_-_-_-'
   echo -e "$RESET"$BOLD'""  ""'"$RESET"
   echo
 }
 
-echo_cat_rainbow
+echo_nyan_cat
 
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
