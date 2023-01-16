@@ -1,7 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Terminal=false
-Type=Application
-Name=new figjam
-Exec=google-chrome --new-window "figjam.new"
-Icon=/home/master/dotfiles/applications/icons/figma.png
