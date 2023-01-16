@@ -1,13 +1,3 @@
-[alias]
-a = "!git commit --all --amend --no-edit"
-l = "!git log --oneline --decorate --all --graph -n 10"
-i = "!curl -sL https://www.toptal.com/developers/gitignore/api/$@gi"
-st = "!git status -sb"
-d = "!git diff"
-ok = "!git add --all; git commit -m '[👌Auto commit]'; git push"
-yo = "!git diff; echo -n '👉 Commmit message: '; read commit_message; git add --all; git commit -m \"$commit_message\""
-fak = "!git reset --hard HEAD; git clean -df"
-
 [user]
 name = Thuan Pham
 email = thuanowa@gmail.com

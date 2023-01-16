@@ -94,7 +94,9 @@ alias q='exit'
 alias owa='code .'
 alias se='sudoedit'
 alias x='chmod +x'
-alias dv='git diff'
+alias gd='git diff'
+alias st='git status -sb'
+alias gl='git log --oneline --decorate --all --graph -n 10'
 alias bat='bat --theme=GitHub --color=always --style=numbers'
 
 alias ins='sudo dnf install -y'
@@ -195,6 +197,14 @@ change_dir_to_git_root() {
   ls
 }
 alias cdr='change_dir_to_git_root'
+
+yo() {
+    git diff
+    echo -n '👉 Commmit message: '
+    read commit_message
+    git add --all
+    git commit -m "$commit_message"
+}
 
 auto_commit() {
   git add --all
