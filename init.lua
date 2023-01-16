@@ -16,6 +16,8 @@ opt.scrolloff = 5
 opt.termguicolors = true
 opt.cursorline = true
 opt.cursorlineopt = 'number'
+opt.ls = 0
+opt.ch = 0
 
 opt.undofile = true
 opt.undodir = os.getenv('HOME') .. '/.cache/nvim'
@@ -71,7 +73,3 @@ map('x', '<', '<gv')
 map('x', '>', '>gv')
 
 map('n', 'gf', ':cd %:h<enter>:edit <cfile><enter>')
-
-map('n', 'cd.', ':cd %:h<enter>')
-map('n', 'cd', ':cd<enter>')
-map('n', 'cdr', ':cd %:h<enter>:cd `git rev-parse --show-toplevel`<enter>')
