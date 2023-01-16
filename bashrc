@@ -111,7 +111,6 @@ browser_daily() {
   xdg-open "https://feeder.co/reader"
 }
 
-# TODO: check changed before download
 update_music() {
   network_status &>/dev/null
 
