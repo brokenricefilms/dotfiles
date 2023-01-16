@@ -23,27 +23,35 @@ settings.theme = `
   background: #ffffff;
   color: #000000;
 }
+
 .sk_theme tbody {
   color: #ffffff;
 }
+
 .sk_theme input {
   color: #000000;
 }
+
 .sk_theme .url {
   color: #000000;
 }
+
 .sk_theme .annotation {
   color: #000000;
 }
+
 .sk_theme .omnibar_highlight {
   color: #000000;
 }
+
 .sk_theme #sk_omnibarSearchResult ul li:nth-child(odd) {
   background: #fffff;
 }
+
 .sk_theme #sk_omnibarSearchResult ul li.focused {
   background: #238636;
 }
+
 #sk_status,
 #sk_find {
   font-size: 10pt;
