@@ -3,5 +3,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=new doc
-Exec=google-chrome --app="https://doc.new"
+Exec=google-chrome --new-window "doc.new"
 Icon=/home/master/dotfiles/applications/icons/docs.png
