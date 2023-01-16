@@ -100,11 +100,6 @@ alias bat='bat --theme=GitHub --color=always --style=numbers'
 alias ins='sudo dnf install -y'
 alias uins='sudo dnf remove -y'
 
-inss() {
-  dnf search $1
-  flatpak search $1
-}
-
 browser_daily() {
   xdg-open "https://facebook.com"
   xdg-open "https://www.youtube.com/feed/subscriptions"
@@ -130,21 +125,10 @@ update_music() {
   fi
 }
 
-update_dnf_package() {
-  dnf list | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list.txt
-  dnf list --installed | awk '{print $1}' | tail -n +4 >$HOME/.cache/dnf_list_installed.txt
-}
-
 update() {
   network_status &>/dev/null
 
   if [[ "$NETWORK" == "online" ]]; then
-    # dnf makecache
-    # sudo dnf update -y
-    # sudo dnf upgrade -y
-
-    update_dnf_package
-
     deno upgrade
 
     asdf update
@@ -156,8 +140,6 @@ update() {
     cd -
   else
     echo "Check your internet connection for online update and try again"
-    echo "Doing offline update cache"
-    update_dnf_package
   fi
 }
 
