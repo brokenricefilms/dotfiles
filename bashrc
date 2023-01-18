@@ -133,6 +133,8 @@ update() {
   network_status &>/dev/null
 
   if [[ "$NETWORK" == "online" ]]; then
+    dnf makecache
+
     deno upgrade
 
     asdf update
