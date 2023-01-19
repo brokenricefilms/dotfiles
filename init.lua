@@ -50,7 +50,6 @@ end
 
 vim.g.mapleader = ' '
 
-map('n', '<leader>r', ':so % | silent source ~/.config/nvim/init.lua | silent !tmux source-file ~/.tmux.conf<enter>')
 map('n', '<leader>w', ':w<CR>')
 map('n', '<leader>q', ':q<CR>')
 map('n', 'Q', ':qa!<CR>')
