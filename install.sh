@@ -97,3 +97,10 @@ cd ~/repos/
 gh repo list isekaiSystem --limit 1000 | while read -r repo _; do
   gh repo clone "$repo" "$repo"
 done
+
+mkdir ~/app/
+cd ~/app/
+git clone https://github.com/swsnr/gnome-search-providers-vscode
+cd gnome-search-providers-vscode
+make build
+sudo make build install
