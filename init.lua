@@ -1,41 +1,39 @@
-local opt = vim.opt
+vim.opt.mouse = 'a'
+vim.opt.clipboard = 'unnamedplus'
+vim.opt.swapfile = false
+vim.opt.completeopt = 'menuone,noinsert,noselect'
 
-opt.mouse = 'a'
-opt.clipboard = 'unnamedplus'
-opt.swapfile = false
-opt.completeopt = 'menuone,noinsert,noselect'
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.showmatch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.scrolloff = 5
+vim.opt.termguicolors = true
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = 'number'
+vim.opt.ls = 0
+vim.opt.ch = 0
 
-opt.number = true
-opt.relativenumber = true
-opt.showmatch = true
-opt.ignorecase = true
-opt.smartcase = true
-opt.wrap = true
-opt.linebreak = true
-opt.scrolloff = 5
-opt.termguicolors = true
-opt.cursorline = true
-opt.cursorlineopt = 'number'
-opt.ls = 0
-opt.ch = 0
+vim.opt.undofile = true
+vim.opt.undodir = os.getenv('HOME') .. '/.cache/nvim'
+vim.opt.undolevels = 10000
 
-opt.undofile = true
-opt.undodir = os.getenv('HOME') .. '/.cache/nvim'
-opt.undolevels = 10000
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.smartindent = true
 
-opt.expandtab = true
-opt.shiftwidth = 4
-opt.tabstop = 4
-opt.smartindent = true
-
-opt.hidden = true
-opt.history = 100
-opt.lazyredraw = true
-opt.updatetime = 100
+vim.opt.hidden = true
+vim.opt.history = 100
+vim.opt.lazyredraw = true
+vim.opt.updatetime = 100
 
 vim.cmd [[colorscheme shine]]
 
-opt.shortmess:append "sI"
+vim.opt.shortmess:append "sI"
 
 local function map(mode, lhs, rhs, opts)
     local options = {
@@ -50,25 +48,20 @@ end
 
 vim.g.mapleader = ' '
 
-map('n', '<leader>w', ':w<CR>')
-map('n', '<leader>q', ':q<CR>')
-map('n', 'Q', ':qa!<CR>')
-map('n', '<leader>o', ':wq<CR>')
-
-map('n', 'n', 'nzzzv')
-map('n', 'N', 'Nzzzv')
-map('n', '*', '*zz')
-map('n', '#', '#zz')
-
-map('n', 'ss', ':split<Return><C-w>w')
-map('n', 'sv', ':vsplit<Return><C-w>w')
-
-map('', '<Right>', '<C-w><')
-map('', '<Down>', '<C-w>-')
-map('', '<Up>', '<C-w>+')
-map('', '<Left>', '<C-w>>')
-
-map('x', '<', '<gv')
-map('x', '>', '>gv')
-
-map('n', 'gf', ':cd %:h<enter>:edit <cfile><enter>')
+vim.keymap.set('n', '<leader>w', ':w<CR>')
+vim.keymap.set('n', '<leader>q', ':q<CR>')
+vim.keymap.set('n', 'Q', ':qa!<CR>')
+vim.keymap.set('n', '<leader>o', ':wq<CR>')
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
+vim.keymap.set('n', '*', '*zz')
+vim.keymap.set('n', '#', '#zz')
+vim.keymap.set('n', 'ss', ':split<Return><C-w>w')
+vim.keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
+vim.keymap.set('', '<Right>', '<C-w><')
+vim.keymap.set('', '<Down>', '<C-w>-')
+vim.keymap.set('', '<Up>', '<C-w>+')
+vim.keymap.set('', '<Left>', '<C-w>>')
+vim.keymap.set('x', '<', '<gv')
+vim.keymap.set('x', '>', '>gv')
+vim.keymap.set('n', 'gf', ':cd %:h<enter>:edit <cfile><enter>')
