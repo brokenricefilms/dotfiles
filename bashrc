@@ -84,7 +84,6 @@ network_status() {
   fi
 }
 
-# using alias because can add flag like:"fzf_down --preview 'cat {}'"
 alias fzf_down='fzf --height 50% --min-height 20 --reverse'
 
 alias reload='source ~/.bashrc ; tmux source-file ~/.tmux.conf'
