@@ -88,17 +88,11 @@ network_status() {
 alias fzf_down='fzf --height 50% --min-height 20 --reverse'
 
 alias reload='source ~/.bashrc ; tmux source-file ~/.tmux.conf'
-alias ka='killall'
 alias t='trash'
 alias q='exit'
 alias owa='code .'
-alias se='sudoedit'
 alias x='chmod +x'
-alias push='git push'
-alias pull='git pull'
-alias gd='git diff'
 alias st='git status -sb'
-alias gl='git log --oneline --decorate --all --graph -n 10'
 alias bat='bat --theme=GitHub --color=always --style=numbers'
 
 alias ins='sudo dnf install -y'
