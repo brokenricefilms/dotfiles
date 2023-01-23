@@ -46,16 +46,10 @@ end
 
 vim.g.mapleader = ' '
 
-vim.keymap.set('n', '<leader>w', ':w<CR>')
-vim.keymap.set('n', '<leader>q', ':q<CR>')
-vim.keymap.set('n', 'Q', ':qa!<CR>')
-vim.keymap.set('n', '<leader>o', ':wq<CR>')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 vim.keymap.set('n', '*', '*zz')
 vim.keymap.set('n', '#', '#zz')
-vim.keymap.set('n', 'ss', ':split<Return><C-w>w')
-vim.keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
 vim.keymap.set('', '<Right>', '<C-w><')
 vim.keymap.set('', '<Down>', '<C-w>-')
 vim.keymap.set('', '<Up>', '<C-w>+')
