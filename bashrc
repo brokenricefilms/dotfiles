@@ -388,10 +388,12 @@ alias clear='kill_all_unname_tmux_session_no_message ; clear -x'
 alias cler='clear'
 alias clea='clear'
 
-alias yt="yt-dlp -f bestvideo+bestaudio"
+yt() {
+    yt-dlp -f bestvideo+bestaudio -o "%(title)s.%(ext)s" $1
+}   
 
 yta() {
-  yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"
+  yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" $1
 }
 
 alias play_music='mpv --shuffle --loop-playlist *'
