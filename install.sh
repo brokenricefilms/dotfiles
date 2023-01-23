@@ -84,6 +84,12 @@ gh repo list isekaiSystem --limit 1000 | while read -r repo _; do
   gh repo clone "$repo" "$repo"
 done
 
+cd ~/repos/
+
+gh repo list from-design-to-website --limit 1000 | while read -r repo _; do
+  gh repo clone "$repo" "$repo"
+done
+
 ln -sf ~/repos/thuanowa/ok/.fonts ~/.fonts
 cd ~/.fonts
 fc-cache -v
