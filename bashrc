@@ -136,6 +136,9 @@ update() {
     asdf plugin update --all
 
     tldr --update
+
+    ~/.tmux/plugins/tpm/bin/update_plugins all
+
     cd ~/.local/share/
     wget https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh
     cd -
