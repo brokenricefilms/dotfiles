@@ -337,8 +337,6 @@ find_file_edit_in_nvim() {
 alias f='find_file_edit_in_nvim'
 alias e='find_file_edit_in_nvim'
 alias v='find_file_edit_in_nvim'
-alias vi='find_file_edit_in_nvim'
-alias vim='find_file_edit_in_nvim'
 
 open_file() {
   local object
