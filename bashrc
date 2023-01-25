@@ -166,6 +166,8 @@ alias sl='ls'
 alias ll='ls'
 alias la='exa --all --icons'
 alias al='la'
+alias vi='nvim'
+alias vim='nvim'
 
 make_dir() {
   if [ -z "$1" ]; then
