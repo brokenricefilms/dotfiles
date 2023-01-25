@@ -33,6 +33,7 @@ npm install --global yarn
 npm install --global neovim
 npm install --global typescript
 npm install --global ijavascript
+npm install --global pnpm
 
 pip install --upgrade pylint
 pip install --upgrade autopep8
