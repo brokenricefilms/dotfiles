@@ -1,6 +1,6 @@
 #! /usr/bin/env sh
 
-sudo dnf remove gnome-characters gnome-contacts gnome-weather libreoffice-core gnome-maps gnome-tour rhythmbox gnome-calendar -y
+sudo dnf remove gnome-connections gnome-abrt yelp totem gnome-photos gnome-characters gnome-contacts gnome-weather libreoffice-core gnome-maps gnome-tour rhythmbox gnome-calendar -y
 
 sudo dnf install dnf-plugins-core -y
 sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm

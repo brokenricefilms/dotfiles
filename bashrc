@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
-
 echo_nyan_cat() {
   e='\033'
   RESET="${e}[0m"
