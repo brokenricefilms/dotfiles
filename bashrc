@@ -281,9 +281,18 @@ update_all_repo() {
     cd - >/dev/null
   done
 
+  for dir in ~/repos/from-design-to-website/*; do
+    cd "$dir"
+    pwd
+    git pull
+    git push
+    cd - >/dev/null
+  done
+
   repoNotInDefaultDir=(
     ~/dotfiles/
     ~/repos/OngDev/.github/
+    ~/repos/isekaiSystem/.github/
   )
 
   for i in ${repoNotInDefaultDir[*]}; do
