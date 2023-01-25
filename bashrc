@@ -168,7 +168,7 @@ alias la='exa --all --icons'
 alias al='la'
 
 make_dir() {
-  if [ ! -n "$1" ]; then
+  if [ -z "$1" ]; then
     echo -n "👉 Enter a directory name"
     read dirName
     mkdir -p $dirName
