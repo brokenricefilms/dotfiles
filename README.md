@@ -13,7 +13,4 @@ _-_-_-_-_-_-_-|   /\_/\
 ## Current setup
 
 - Fedora 37
-- Gnome terminal + tmux
-- [Bash shell](./bashrc)
-- [Neovim](./init.lua): quick edit stuff
-- [VSCode](./profile.code-profile): main editor ([gnome-search-providers-vscode](https://github.com/lunaryorn/gnome-search-providers-vscode))
+- Kitty terminal + Tmux + [Bash shell](./bashrc) + [Neovim](./init.lua): quick edit stuff 

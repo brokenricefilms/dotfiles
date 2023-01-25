@@ -52,9 +52,7 @@ asdf install nodejs latest
 ln -sf ~/repos/thuanowa/ok/.tinypng ~/.tinypng
 ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/ssh/config ~/.ssh/config
-rm -rf ~/.config/nvim
-mkdir ~/.config/nvim
-ln -sf ~/dotfiles/init.lua ~/.config/nvim/init.lua
+ln -sf ~/dotfiles/nvim ~/.config/
 ln -sf ~/dotfiles/.tool-versions ~/
 ln -sf ~/dotfiles/git/gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/git/gh_config.yml ~/.config/gh/config.yml
