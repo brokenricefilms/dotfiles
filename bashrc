@@ -327,11 +327,11 @@ emoji() {
 alias ej="emoji"
 
 find_file_edit_in_nvim() {
-  if [ ! -n "$1" ]; then
+  if [ -z "$1" ]; then
     local file
     file=$(fd . -t f --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:500 {}')
 
-    if [ ! -z "$file" ]; then
+    if [ -n "$file" ]; then
       nvim "$file"
     fi
   else
