@@ -109,6 +109,7 @@ browser_daily() {
   xdg-open "https://mail.google.com/mail/u/1/#inbox"
 }
 
+# TODO: update_music checking playlist to update change 
 update_music() {
   network_status &>/dev/null
 
