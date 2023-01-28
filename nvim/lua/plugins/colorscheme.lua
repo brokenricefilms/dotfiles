@@ -1,10 +1,15 @@
 return {
-  { "projekt0n/github-nvim-theme" },
+  {
+    "rose-pine/neovim",
+    config = function()
+      vim.o.background = "light"
+    end,
+  },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "github_light",
+      colorscheme = "rose-pine",
     },
   },
 }

@@ -3,3 +3,5 @@
 -- Add any additional options here
 
 vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.showbreak = "↪"
