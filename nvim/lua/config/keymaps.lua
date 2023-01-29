@@ -6,3 +6,8 @@ vim.keymap.set("", "<Right>", "<C-w><")
 vim.keymap.set("", "<Down>", "<C-w>-")
 vim.keymap.set("", "<Up>", "<C-w>+")
 vim.keymap.set("", "<Left>", "<C-w>>")
+
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "*", "*zz")
+vim.keymap.set("n", "#", "#zz")
