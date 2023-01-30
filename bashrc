@@ -96,7 +96,7 @@ alias q='exit'
 alias owa='code .'
 alias x='chmod +x'
 alias st='git status -sb'
-alias bat='bat --theme=GitHub --color=always --style=numbers'
+alias cat='bat --theme=GitHub'
 
 alias ins='sudo dnf install -y'
 alias uins='sudo dnf remove -y'
