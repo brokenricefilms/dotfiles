@@ -353,9 +353,6 @@ change_dir() {
 }
 alias c='change_dir'
 
-alias dot='tmux switch-client -t "dotfiles"'
-alias in='tmux switch-client -t "inbox"'
-
 kill_all_unname_tmux_session() {
   echo "\n👉 kill all unname tmux session"
   cd /tmp/
