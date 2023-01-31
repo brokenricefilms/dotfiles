@@ -9,4 +9,4 @@
 - [Kitty terminal](./kitty/kitty.conf)
 - [Tmux](./tmux/tmux.conf)
 - [Bash shell](./bashrc)
-- [Neovim](./init.lua): [LazyVim](https://github.com/LazyVim/LazyVim) + [GitHub light theme](https://github.com/projekt0n/github-nvim-theme) + [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) `Seamless navigation between tmux panes and vim splits` + wrap code 
+- [Neovim](./init.lua): [LazyVim](https://github.com/LazyVim/LazyVim) + [Rose Pine Dawn theme](https://rosepinetheme.com/) + [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) `Seamless navigation between tmux panes and vim splits` + wrap code 
