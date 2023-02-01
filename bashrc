@@ -178,7 +178,7 @@ alias cdr='change_dir_to_git_root'
 
 yo() {
     git diff
-    echo -n '👉 Commmit message: '
+    echo -n ' Commmit message: '
     read commit_message
     git add --all
     git commit -m "$commit_message"
