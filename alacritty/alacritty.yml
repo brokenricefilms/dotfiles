@@ -26,7 +26,7 @@ colors:
     foreground: "0x575279"
   cursor:
     text: "0x575279"
-    cursor: "0xcecacd"
+    cursor: "0xd7827e"
   vi_mode_cursor:
     text: "0x575279"
     cursor: "0xcecacd"
