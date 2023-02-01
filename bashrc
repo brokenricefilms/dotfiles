@@ -49,6 +49,8 @@ eval "$(gh completion -s bash)"
 
 source $HOME/.local/share/fzf-bash-completion.sh
 bind -x '"\t": fzf_bash_completion'
+source $HOME/.local/share/completion.bash
+source $HOME/.local/share/key-bindings.bash
 
 eval "$(starship init bash)"
 
@@ -120,6 +122,8 @@ update() {
 
     cd ~/.local/share/
     wget https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh
+    wget https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.bash
+    wget https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.bash
     cd -
   else
     echo "Check your internet connection for online update and try again"
