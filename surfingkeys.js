@@ -10,14 +10,8 @@ api.iunmap(":");
 
 api.Hints.characters = "asdghklqwertyuiopzxcvbnmfj1234567890";
 
-// name: Rosé Pine Dawn
-// author: thuanowa
-// license: unlicense
-// upstream: https://github.com/rose-pine/surfingkeys/blob/main/dist/rose-pine-dawn.conf
-// blurb: All natural pine, faux fur and a bit of soho vibes for the classy minimalist
-
 const hintsCss =
-  "font-size: 12pt; font-family: 'JetBrains Mono NL', 'Cascadia Code', 'Helvetica Neue', Helvetica, Arial, sans-serif; border: 0px; color: #000000; background: #ffffff; background-color: #ffffff";
+  "font-size: 2vb; font-family: 'JetBrains Mono NL', 'Cascadia Code', 'Helvetica Neue', Helvetica, Arial, sans-serif; border: 0px; color: #000000; background: #ffffff; background-color: #ffffff";
 
 api.Hints.style(hintsCss);
 api.Hints.style(hintsCss, "text");
