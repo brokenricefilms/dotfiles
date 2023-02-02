@@ -7,6 +7,7 @@
 
 - Fedora 37
 - Gnome terminal
-- [Tmux](./tmux/tmux.conf)
+- [Tmux](./tmux/tmux.conf
 - [Bash shell](./bashrc)
-- [Neovim](./init.lua)
+- [Neovim](./init.lua): no plugin, no lsp, just Neovim with some config
+- VSCode: Vim plugin, github light theme, no fancy AI, and some stuff for a front-end developer
