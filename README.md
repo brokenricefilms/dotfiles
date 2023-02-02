@@ -6,7 +6,7 @@
 ## Current setup
 
 - Fedora 37
-- [Alacritty][./alacritty/alacritty.yml]
+- Gnome terminal
 - [Tmux](./tmux/tmux.conf)
 - [Bash shell](./bashrc)
-- [Neovim](./init.lua): [LazyVim](https://github.com/LazyVim/LazyVim) + [Rose Pine Dawn theme](https://rosepinetheme.com/) + [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) `Seamless navigation between tmux panes and vim splits` + wrap code 
+- [Neovim](./init.lua)
