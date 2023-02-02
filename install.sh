@@ -109,6 +109,13 @@ ln -sf ~/repos/thuanowa/ok/.fonts ~/.fonts
 cd ~/.fonts
 fc-cache -rf
 
+mkdir ~/app
+cd ~/app
+git clone https://github.com/swsnr/gnome-search-providers-vscode
+cd gnome-search-providers-vscode
+make build
+sudo make install
+
 sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
