@@ -231,6 +231,7 @@ auto_sync() {
     /home/master/repos/thuanowa/lap_trinh_web/
     /home/master/repos/thuanowa/phat_trien_phan_mem_nguon_mo/
     /home/master/repos/thuanowa/javascript-cli/
+    /home/master/repos/thuanowa/note
   )
 
   for i in ${repo[*]}; do
