@@ -14,6 +14,7 @@ vim.opt.scrolloff = 5
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
+vim.opt.ch = 0
 
 vim.opt.undofile = true
 vim.opt.undodir = os.getenv('HOME') .. '/.cache/nvim'
