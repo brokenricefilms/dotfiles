@@ -26,6 +26,8 @@ export EDITOR="nvim"
 export FZF_DEFAULT_COMMAND="fd --type f --follow --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d"
+export PNPM_HOME="/home/master/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
 
 HISTCONTROL=ignoreboth
 HISTSIZE=
