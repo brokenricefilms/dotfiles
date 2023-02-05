@@ -13,15 +13,12 @@ vim.keymap.set("n", "*", "*zz")
 vim.keymap.set("n", "#", "#zz")
 
 local ls = require("luasnip")
-local s = ls.snippet
-local t = ls.text_node
-local i = ls.insert_node
 
 ls.add_snippets("all", {
-  s("todo", {
-    i(0),
+  ls.snippet("todo", {
+    ls.insert_node(0),
     -- TODO: comment syntax
-    t("TODO: "),
-    i(1),
+    ls.text_node("TODO: "),
+    ls.insert_node(1),
   }),
 })
