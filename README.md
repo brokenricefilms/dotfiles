@@ -7,7 +7,7 @@
 
 - Fedora 37
 - Gnome terminal
-- [Tmux](./tmux/tmux.conf
+- [Tmux](./tmux/tmux.conf)
 - [Bash shell](./bashrc)
 - [Neovim](./nvim/)
   - init.lua.minimal: no plugin, no LSP.
