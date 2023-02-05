@@ -6,7 +6,7 @@
 ## Current setup
 
 - Fedora 37
-- Gnome terminal
+- [Kitty](./kitty/kitty.conf)
 - [Tmux](./tmux/tmux.conf)
 - [Bash shell](./bashrc)
 - [Neovim](./nvim/)
