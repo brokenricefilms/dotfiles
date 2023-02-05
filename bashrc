@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+if command -v tmux &>/dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux
 fi
 
@@ -87,7 +87,7 @@ browser_daily() {
   xdg-open "https://mail.google.com/mail/u/1/#inbox"
 }
 
-# TODO: update_music checking playlist to update change 
+# TODO: update_music checking playlist to update change
 update_music() {
   network_status &>/dev/null
 
@@ -183,11 +183,11 @@ change_dir_to_git_root() {
 alias cdr='change_dir_to_git_root'
 
 yo() {
-    git diff
-    echo -n ' Commmit message: '
-    read commit_message
-    git add --all
-    git commit -m "$commit_message"
+  git diff
+  echo -n ' Commmit message: '
+  read commit_message
+  git add --all
+  git commit -m "$commit_message"
 }
 
 auto_commit() {
@@ -383,8 +383,8 @@ alias cler='clear'
 alias clea='clear'
 
 yt() {
-    yt-dlp -f bestvideo+bestaudio -o "%(title)s.%(ext)s" $1
-}   
+  yt-dlp -f bestvideo+bestaudio -o "%(title)s.%(ext)s" $1
+}
 
 yta() {
   yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" $1

@@ -22,10 +22,10 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 dnf check-update
 
 sudo dnf config-manager \
-    --add-repo \
-    https://download.docker.com/linux/fedora/docker-ce.repo
+  --add-repo \
+  https://download.docker.com/linux/fedora/docker-ce.repo
 
-sudo dnf install -y tmux curl wget git neofetch htop gnome-tweaks trash-cli python3-pip tldr net-tools speedtest-cli neovim python3-neovim fd-find aria2 tree cowsay fzf npm ffmpeg youtube-dl mpv ripgrep unrar moreutils foliate util-linux-user zsh cronie git-delta wl-clipboard java-devel git-clang-format rust cargo go gtk-v4l ruby ruby-devel gcc-c++ ibus-bamboo collectd-sensors obs-studio dconf-editor sqlite shfmt v4l-utils google-noto-emoji-color-fonts cmake kdenlive starship glib2-static libgda libgda-sqlite exa bat libsqlite3x-devel yt-dlp ddcutil code docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo dnf install -y tmux curl wget git neofetch htop gnome-tweaks trash-cli python3-pip tldr net-tools speedtest-cli neovim python3-neovim fd-find aria2 tree cowsay fzf npm ffmpeg youtube-dl mpv ripgrep unrar moreutils foliate util-linux-user zsh cronie git-delta wl-clipboard java-devel git-clang-format rust cargo go gtk-v4l ruby ruby-devel gcc-c++ ibus-bamboo collectd-sensors obs-studio dconf-editor sqlite shfmt v4l-utils google-noto-emoji-color-fonts cmake kdenlive starship glib2-static libgda libgda-sqlite exa bat libsqlite3x-devel yt-dlp ddcutil code docker-ce docker-ce-cli containerd.io docker-compose-plugin kitty
 
 sudo systemctl start docker
 
@@ -73,14 +73,17 @@ ln -sf ~/dotfiles/init.lua ~/.config/nvim/
 ln -sf ~/dotfiles/.tool-versions ~/
 ln -sf ~/dotfiles/git/gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/git/gh_config.yml ~/.config/gh/config.yml
-rm -rf ~/.config/lazygit ; mkdir ~/.config/lazygit ; ln -sf ~/dotfiles/git/lazygit_config.yml ~/.config/lazygit/config.yml
+rm -rf ~/.config/lazygit
+mkdir ~/.config/lazygit
+ln -sf ~/dotfiles/git/lazygit_config.yml ~/.config/lazygit/config.yml
 ln -sf ~/dotfiles/.selected_editor ~/.selected_editor
 ln -sf ~/dotfiles/.ripgreprc ~/
 ln -sf ~/dotfiles/bashrc ~/.bashrc
-rm -rf ~/.config/input-remapper/ ; ln -sf ~/dotfiles/input-remapper/ ~/.config/
+rm -rf ~/.config/input-remapper/
+ln -sf ~/dotfiles/input-remapper/ ~/.config/
 ln -sf ~/repos/thuanowa/obs-studio/ ~/.config/
-rm -rf ~/.config/foot
-ln -sf ~/dotfiles/foot ~/.config/
+rm -rf ~/.config/kitty
+ln -sf ~/dotfiles/kitty ~/.config/
 
 mkdir ~/repos/
 
