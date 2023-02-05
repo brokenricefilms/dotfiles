@@ -1,3 +1,10 @@
+```python
+-_-_-_-_-_-_-_,------,
+_-_-_-_-_-_-_-|   /\_/\
+-_-_-_-_-_-_-~|__( $ .$)
+-_-_-_-_-_-_-_-""  ""
+```
+
 ## About
 
 - For me, Dotfiles are very personal, but you can find some tips, tricks, and functions I used in this repo.
