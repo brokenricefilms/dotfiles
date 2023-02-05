@@ -9,5 +9,7 @@
 - Gnome terminal
 - [Tmux](./tmux/tmux.conf
 - [Bash shell](./bashrc)
-- [Neovim](./init.lua): no plugin, no lsp, just Neovim with some config
-- VSCode: Vim plugin, github light theme, no fancy AI, and some stuff for a front-end developer
+- [Neovim](./nvim/)
+  - init.lua.minimal: no plugin, no LSP.
+  - init.lua: the main one using [LazyVim](https://www.lazyvim.org/), plugin add-ons([vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator), [nvim-highlight-colors](https://github.com/brenoprata10/nvim-highlight-colors), [GitHub light theme](https://github.com/projekt0n/github-nvim-theme))
+- [ VS code ](./profile.code-profile): Vim plugin, GitHub light theme, no fancy AI, and some stuff for a front-end developer
