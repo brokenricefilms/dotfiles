@@ -210,7 +210,7 @@ alias cdr='change_dir_to_git_root'
 yo() {
   git diff
   echo -e '\n\e[1m\e[36mCommmit message\e[0m'
-  echo -en '\e[1m\e[31m❯\e[0m '
+  echo -en '\e[1m\e[32m❯\e[0m '
   read commit_message
   git add --all
   git commit -m "$commit_message"
