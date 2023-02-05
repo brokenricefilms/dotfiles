@@ -79,6 +79,8 @@ ln -sf ~/dotfiles/.ripgreprc ~/
 ln -sf ~/dotfiles/bashrc ~/.bashrc
 rm -rf ~/.config/input-remapper/ ; ln -sf ~/dotfiles/input-remapper/ ~/.config/
 ln -sf ~/repos/thuanowa/obs-studio/ ~/.config/
+rm -rf ~/.config/foot
+ln -sf ~/dotfiles/foot ~/.config/
 
 mkdir ~/repos/
 
