@@ -48,6 +48,7 @@ npm install --global pnpm
 pip install --upgrade pylint
 pip install --upgrade autopep8
 pip install --upgrade pynvim
+python3 -m pip install --user libtmux==0.16.1
 
 gem install neovim jekyll bundler
 cargo install stylua
