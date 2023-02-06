@@ -211,7 +211,7 @@ yo() {
   git diff
   echo -e '\n\e[1m\e[36mCommmit message\e[0m'
   echo -en '\e[1m\e[32m❯\e[0m '
-  read commit_message
+  read -r commit_message
   git add --all
   git commit -m "$commit_message"
 }
