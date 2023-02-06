@@ -353,7 +353,7 @@ alias v='find_file_edit_in_nvim'
 open_file() {
   local object
   object=$(fd . --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems | fzf_down --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:500 {}')
-  if [ ! -z "$object" ]; then
+  if [ -n "$object" ]; then
     xdg-open "$object"
   fi
 }
@@ -385,17 +385,6 @@ change_dir() {
 alias c='change_dir'
 
 kill_all_unname_tmux_session() {
-  echo "\n👉 kill all unname tmux session"
-  cd /tmp/
-  tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >/tmp/killAllUnnameTmuxSessionOutput.sh
-  sed -i 's/^/tmux kill-session -t /' killAllUnnameTmuxSessionOutput.sh
-  chmod +x killAllUnnameTmuxSessionOutput.sh
-  ./killAllUnnameTmuxSessionOutput.sh
-  cd -
-  tmux ls
-}
-
-kill_all_unname_tmux_session_no_message() {
   cd /tmp/
   tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >/tmp/killAllUnnameTmuxSessionOutput.sh
   sed -i 's/^/tmux kill-session -t /' killAllUnnameTmuxSessionOutput.sh
@@ -404,7 +393,7 @@ kill_all_unname_tmux_session_no_message() {
   cd -
 }
 
-alias clear='kill_all_unname_tmux_session_no_message ; clear -x'
+alias clear='kill_all_unname_tmux_session ; clear -x'
 alias cler='clear'
 alias clea='clear'
 
