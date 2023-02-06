@@ -398,7 +398,7 @@ alias cler='clear'
 alias clea='clear'
 
 yt() {
-  yt-dlp -f bestvideo+bestaudio -o "%(title)s.%(ext)s" $1
+  yt-dlp -f bestvideo+bestaudio -o "%(title)s.%(ext)s" "$1"
 }
 
 yta() {
