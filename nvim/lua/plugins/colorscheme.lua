@@ -1,12 +1,13 @@
 return {
   {
-    "projekt0n/github-nvim-theme",
-    lazy = true,
+    "rose-pine/neovim",
+    name = 'rose-pine',
   },
+
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "github_light",
+      colorscheme = "rose-pine",
     },
   },
 }
