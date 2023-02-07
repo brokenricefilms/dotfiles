@@ -200,10 +200,6 @@
             "BTN_LEFT",
             "mouse"
         ],
-        "1,15,1": [
-            "if_single(key(KEY_TAB), ,)",
-            "keyboard"
-        ],
         "1,57,1": [
             "if_single(key(KEY_SPACE),,)",
             "keyboard"
@@ -271,6 +267,10 @@
         "1,15,1+1,18,1": [
             "BTN_MIDDLE",
             "mouse"
+        ],
+        "1,15,1": [
+            "if_single(key(KEY_TAB), ,)",
+            "keyboard"
         ]
     }
 }
