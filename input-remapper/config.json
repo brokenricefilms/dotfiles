@@ -3,8 +3,8 @@
     "autoload": {
         "SONiX USB DEVICE": "thuan fly keys",
         "2.4G Mouse": "new preset",
-        "AT Translated Set 2 keyboard": "thuan fly keys",
-        "SEMICO   USB Gaming Keyboard ": "thuan fly keys for mechanical keyboard"
+        "AT Translated Set 2 keyboard": "thuan_fly_key",
+        "SEMICO   USB Gaming Keyboard ": "thuan_fly_key"
     },
     "macros": {
         "keystroke_sleep_ms": 10
