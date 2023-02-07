@@ -196,10 +196,6 @@
             "BTN_RIGHT",
             "mouse"
         ],
-        "1,15,1+1,18,1": [
-            "BTN_MIDDLE",
-            "mouse"
-        ],
         "1,15,1+1,17,1": [
             "BTN_LEFT",
             "mouse"
@@ -270,6 +266,10 @@
         ],
         "1,15,1+1,38,1": [
             "mouse(right,7)",
+            "mouse"
+        ],
+        "1,15,1+1,18,1": [
+            "BTN_MIDDLE",
             "mouse"
         ]
     }
