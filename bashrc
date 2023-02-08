@@ -228,22 +228,13 @@ auto_commit() {
     if [[ $(git status --porcelain) ]]; then
       git add --all
       git commit -m "[👌Auto commit]"
-    else
-      echo "😏 No change"
-    fi
-  fi
-}
-
-ok() {
-  if [[ $(git rev-parse --is-inside-work-tree 2>/dev/null) ]]; then
-    if [[ $(git status --porcelain) ]]; then
-      auto_commit
       git push
     else
       echo "😏 No change"
     fi
   fi
 }
+alias ok='auto_commit'
 
 clone_change_dir_to_repo() {
   gitDir="$(basename "$1" .git)"
@@ -261,34 +252,12 @@ sync_repo() {
     repo=(
       ~/repos/thuanowa/ok
       ~/repos/thuanowa/obs-studio
-      ~/repos/thuanowa/co_so_du_lieu
-      ~/repos/thuanowa/dataLab
-      ~/repos/thuanowa/ky_thuat_lap_trinh
-      ~/repos/thuanowa/lap_trinh_huong_doi_tuong
-      ~/repos/thuanowa/nhap_mon_cau_truc_du_lieu
-      ~/repos/thuanowa/nhap_mon_web_va_ung_dung
-      ~/repos/thuanowa/thuc-hanh-ky-thuat-lap-trinh
-      ~/repos/thuanowa/thuc-hanh-lap-trinh-huong-doi-tuong
-      ~/repos/thuanowa/thuc-hanh-nhap-mon-cau-truc-du-lieu
-      ~/repos/thuanowa/thuc-hanh-nhap-mon-web-va-ung-dung
-      ~/repos/thuanowa/thuc_thanh_nhap_mon_lap_trinh
-      ~/repos/thuanowa/ublock_adblock_list
-      ~/repos/thuanowa/cong_nghe_phan_mem
-      ~/repos/thuanowa/thuan_ublacklist
-      ~/repos/thuanowa/lap_trinh_ung_dung_co_so_du_lieu
-      ~/repos/thuanowa/quan_tri_co_so_du_lieu
-      ~/repos/thuanowa/ma_hoa_ung_dung
-      ~/repos/thuanowa/img
-      ~/repos/thuanowa/lap_trinh_cho_thiet_bi_di_dong
-      ~/repos/thuanowa/lap_trinh_web
-      ~/repos/thuanowa/phat_trien_phan_mem_nguon_mo
-      ~/repos/thuanowa/javascript-cli
       ~/repos/thuanowa/note
     )
 
     for i in ${repo[*]}; do
       cd "$i"
-      echo -e "\e[1m\e[36m$(pwd)"
+      echo -e "\e[1m\e[36m$(pwd)\e[0m"
       ok
     done
 
@@ -304,15 +273,22 @@ update_repo() {
   if [[ "$NETWORK" == "online" ]]; then
     CURRENT_DIR=$(pwd)
 
-    repos=(
+    repo_main=(
       ~/repos/thuanowa/*
       ~/repos/OngDev/*
       ~/repos/isekaiSystem/*
       ~/repos/from-design-to-website/*
-      ~/repos/OngDev/.github/
-      ~/dotfiles/
-      ~/repos/isekaiSystem/.github/
+      ~/repos/when-will-i-die/*
     )
+
+    repo_extra=(
+      ~/repos/rose-pine/surfingkeys/
+      ~/repos/OngDev/.github/
+      ~/repos/isekaiSystem/.github/
+      ~/dotfiles/
+    )
+
+    repos=("${repo_main[@]}" "${repo_extra[@]}")
 
     for i in ${repos[*]}; do
       cd "$i"

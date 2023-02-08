@@ -88,6 +88,20 @@ ln -sf ~/dotfiles/kitty ~/.config/
 rm -rf ~/.config/foot
 ln -sf ~/dotfiles/foot ~/.config/
 
+mkdir ~/repos/thuanowa/
+cd ~/repos/thuanowa/
+gh repo clone thuanowa/ok
+ln -sf ~/repos/thuanowa/ok/.fonts ~/.fonts
+cd ~/.fonts
+fc-cache -rf
+
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+docker run hello-world
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+
 REPOS_PATH=~/repos/
 mkdir $REPOS_PATH
 cd $REPOS_PATH
@@ -110,14 +124,3 @@ for i in ${github_username[*]}; do
 
   cd $REPOS_PATH
 done
-
-ln -sf ~/repos/thuanowa/ok/.fonts ~/.fonts
-cd ~/.fonts
-fc-cache -rf
-
-sudo groupadd docker
-sudo usermod -aG docker $USER
-newgrp docker
-docker run hello-world
-sudo systemctl enable docker.service
-sudo systemctl enable containerd.service
