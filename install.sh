@@ -85,6 +85,8 @@ ln -sf ~/dotfiles/input-remapper/ ~/.config/
 ln -sf ~/repos/thuanowa/obs-studio/ ~/.config/
 rm -rf ~/.config/kitty
 ln -sf ~/dotfiles/kitty ~/.config/
+rm -rf ~/.config/foot
+ln -sf ~/dotfiles/foot ~/.config/
 
 mkdir ~/repos/
 
