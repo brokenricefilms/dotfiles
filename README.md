@@ -13,7 +13,7 @@ _-_-_-_-_-_-_-|   /\_/\
 ## Current setup
 
 - Fedora 37
-- [foot](./foot/foot.ini)
+- [Foot](./foot/foot.ini)
 - [Tmux](./tmux/tmux.conf)
 - [Bash shell](./bashrc)
 - [Neovim](./nvim/)
