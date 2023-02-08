@@ -103,10 +103,11 @@ github_username=(
 for i in ${github_username[*]}; do
   mkdir "$i"
   cd "$i"
-  gh repo list "$i" --limit 10000 | awk '{print $1}' | while read -r repo; do
 
+  gh repo list "$i" --limit 10000 | awk '{print $1}' | while read -r repo; do
     gh repo clone "$repo"
   done
+
   cd $REPOS_PATH
 done
 
