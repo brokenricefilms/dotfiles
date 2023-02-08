@@ -88,41 +88,31 @@ ln -sf ~/dotfiles/kitty ~/.config/
 rm -rf ~/.config/foot
 ln -sf ~/dotfiles/foot ~/.config/
 
-mkdir ~/repos/
+REPOS_PATH=~/repos/
+mkdir $REPOS_PATH
+cd $REPOS_PATH
 
-cd ~/repos/
-gh repo list thuanowa --limit 1000 | while read -r repo _; do
-  gh repo clone "$repo" "$repo"
-done
+github_username=(
+  thuanowa
+  ongdev
+  isekaiSystem
+  from-design-to-website
+  when-will-i-die
+)
 
-cd ~/repos/
+for i in ${github_username[*]}; do
+  mkdir "$i"
+  cd "$i"
+  gh repo list "$i" --limit 10000 | awk '{print $1}' | while read -r repo; do
 
-gh repo list ongdev --limit 1000 | while read -r repo _; do
-  gh repo clone "$repo" "$repo"
-done
-
-cd ~/repos/
-
-gh repo list isekaiSystem --limit 1000 | while read -r repo _; do
-  gh repo clone "$repo" "$repo"
-done
-
-cd ~/repos/
-
-gh repo list from-design-to-website --limit 1000 | while read -r repo _; do
-  gh repo clone "$repo" "$repo"
+    gh repo clone "$repo"
+  done
+  cd $REPOS_PATH
 done
 
 ln -sf ~/repos/thuanowa/ok/.fonts ~/.fonts
 cd ~/.fonts
 fc-cache -rf
-
-mkdir ~/app
-cd ~/app
-git clone https://github.com/swsnr/gnome-search-providers-vscode
-cd gnome-search-providers-vscode
-make build
-sudo make install
 
 sudo groupadd docker
 sudo usermod -aG docker $USER

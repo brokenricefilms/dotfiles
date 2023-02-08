@@ -101,6 +101,22 @@ alias owa='code .'
 alias x='chmod +x'
 alias st='git status -sb'
 alias cat='bat --theme=GitHub'
+alias vi='nvim'
+alias vim='nvim'
+
+alias ..='cd .. ; l'
+alias ...='cd .. ; cd .. ; l'
+alias dow='cd ~/Downloads ; l'
+alias doc='cd ~/Documents ; l'
+alias tmp='cd /tmp'
+alias changeDirToUsbFolder='cd /run/media/master/ ; ls'
+
+alias ls='exa --long --all --icons'
+alias l='ls'
+alias sl='ls'
+alias ll='ls'
+alias la='exa --all --icons'
+alias al='la'
 
 alias ins='sudo dnf install -y'
 alias uins='sudo dnf remove -y'
@@ -161,22 +177,6 @@ hi() {
   browser_daily
 }
 
-alias ..='cd .. ; l'
-alias ...='cd .. ; cd .. ; l'
-alias dow='cd ~/Downloads ; l'
-alias doc='cd ~/Documents ; l'
-alias tmp='cd /tmp'
-alias changeDirToUsbFolder='cd /run/media/master/ ; ls'
-
-alias ls='exa --long --all --icons'
-alias l='ls'
-alias sl='ls'
-alias ll='ls'
-alias la='exa --all --icons'
-alias al='la'
-alias vi='nvim'
-alias vim='nvim'
-
 make_dir() {
   if [ -z "$1" ]; then
     echo -n "👉 Enter a directory name"
@@ -218,110 +218,136 @@ yo() {
       git add --all
       git commit -m "$commit_message"
     else
-      echo "No change"
+      echo "😏 No change"
     fi
   fi
 }
 
 auto_commit() {
-  git add --all
-  git commit -m "[👌Auto commit]"
+  if [[ $(git rev-parse --is-inside-work-tree 2>/dev/null) ]]; then
+    if [[ $(git status --porcelain) ]]; then
+      git add --all
+      git commit -m "[👌Auto commit]"
+    else
+      echo "😏 No change"
+    fi
+  fi
 }
 
 ok() {
-  auto_commit
-  git push
+  if [[ $(git rev-parse --is-inside-work-tree 2>/dev/null) ]]; then
+    if [[ $(git status --porcelain) ]]; then
+      auto_commit
+      git push
+    else
+      echo "😏 No change"
+    fi
+  fi
 }
 
-go_to_git_clone_repo_dir() {
+clone_change_dir_to_repo() {
   gitDir="$(basename "$1" .git)"
   gitDirResolved=${2:-$gitDir}
   git clone "$@" && cd "$gitDirResolved"
 }
-alias gc='go_to_git_clone_repo_dir'
+alias gc='clone_change_dir_to_repo'
 
 auto_sync() {
-  repo=(
-    /home/master/repos/thuanowa/ok
-    /home/master/repos/thuanowa/obs-studio
-    /home/master/repos/thuanowa/co_so_du_lieu
-    /home/master/repos/thuanowa/dataLab
-    /home/master/repos/thuanowa/ky_thuat_lap_trinh
-    /home/master/repos/thuanowa/lap_trinh_huong_doi_tuong
-    /home/master/repos/thuanowa/nhap_mon_cau_truc_du_lieu
-    /home/master/repos/thuanowa/nhap_mon_web_va_ung_dung
-    /home/master/repos/thuanowa/thuc-hanh-ky-thuat-lap-trinh
-    /home/master/repos/thuanowa/thuc-hanh-lap-trinh-huong-doi-tuong
-    /home/master/repos/thuanowa/thuc-hanh-nhap-mon-cau-truc-du-lieu
-    /home/master/repos/thuanowa/thuc-hanh-nhap-mon-web-va-ung-dung
-    /home/master/repos/thuanowa/thuc_thanh_nhap_mon_lap_trinh
-    /home/master/repos/thuanowa/ublock_adblock_list
-    /home/master/repos/thuanowa/cong_nghe_phan_mem
-    /home/master/repos/thuanowa/thuan_ublacklist
-    /home/master/repos/thuanowa/lap_trinh_ung_dung_co_so_du_lieu
-    /home/master/repos/thuanowa/quan_tri_co_so_du_lieu
-    /home/master/repos/thuanowa/ma_hoa_ung_dung
-    /home/master/repos/thuanowa/img
-    /home/master/repos/thuanowa/lap_trinh_cho_thiet_bi_di_dong/
-    /home/master/repos/thuanowa/lap_trinh_web/
-    /home/master/repos/thuanowa/phat_trien_phan_mem_nguon_mo/
-    /home/master/repos/thuanowa/javascript-cli/
-    /home/master/repos/thuanowa/note
-  )
+  network_status &>/dev/null
 
-  for i in ${repo[*]}; do
-    cd "$i"
-    pwd
-    auto_commit
-    git push
-  done
+  if [[ "$NETWORK" == "online" ]]; then
+    CURRENT_DIR=$(pwd)
+
+    repo=(
+      ~/repos/thuanowa/ok
+      ~/repos/thuanowa/obs-studio
+      ~/repos/thuanowa/co_so_du_lieu
+      ~/repos/thuanowa/dataLab
+      ~/repos/thuanowa/ky_thuat_lap_trinh
+      ~/repos/thuanowa/lap_trinh_huong_doi_tuong
+      ~/repos/thuanowa/nhap_mon_cau_truc_du_lieu
+      ~/repos/thuanowa/nhap_mon_web_va_ung_dung
+      ~/repos/thuanowa/thuc-hanh-ky-thuat-lap-trinh
+      ~/repos/thuanowa/thuc-hanh-lap-trinh-huong-doi-tuong
+      ~/repos/thuanowa/thuc-hanh-nhap-mon-cau-truc-du-lieu
+      ~/repos/thuanowa/thuc-hanh-nhap-mon-web-va-ung-dung
+      ~/repos/thuanowa/thuc_thanh_nhap_mon_lap_trinh
+      ~/repos/thuanowa/ublock_adblock_list
+      ~/repos/thuanowa/cong_nghe_phan_mem
+      ~/repos/thuanowa/thuan_ublacklist
+      ~/repos/thuanowa/lap_trinh_ung_dung_co_so_du_lieu
+      ~/repos/thuanowa/quan_tri_co_so_du_lieu
+      ~/repos/thuanowa/ma_hoa_ung_dung
+      ~/repos/thuanowa/img
+      ~/repos/thuanowa/lap_trinh_cho_thiet_bi_di_dong
+      ~/repos/thuanowa/lap_trinh_web
+      ~/repos/thuanowa/phat_trien_phan_mem_nguon_mo
+      ~/repos/thuanowa/javascript-cli
+      ~/repos/thuanowa/note
+    )
+
+    for i in ${repo[*]}; do
+      cd "$i"
+      echo -e "\e[1m\e[36m$(pwd)"
+      ok
+    done
+
+    cd $CURRENT_DIR
+  else
+    echo "Check your internet connection and try again"
+  fi
 }
 
 update_all_repo() {
-  for dir in ~/repos/thuanowa/*; do
-    cd "$dir"
-    pwd
-    git pull
-    git push
-    cd - >/dev/null
-  done
+  network_status &>/dev/null
 
-  for dir in ~/repos/OngDev/*; do
-    cd "$dir"
-    pwd
-    git pull
-    git push
-    cd - >/dev/null
-  done
+  if [[ "$NETWORK" == "online" ]]; then
+    CURRENT_DIR=$(pwd)
 
-  for dir in ~/repos/isekaiSystem/*; do
-    cd "$dir"
-    pwd
-    git pull
-    git push
-    cd - >/dev/null
-  done
+    repos=(
+      ~/repos/thuanowa/*
+      ~/repos/OngDev/*
+      ~/repos/isekaiSystem/*
+      ~/repos/from-design-to-website/*
+      ~/repos/OngDev/.github/
+      ~/dotfiles/
+      ~/repos/isekaiSystem/.github/
+    )
 
-  for dir in ~/repos/from-design-to-website/*; do
-    cd "$dir"
-    pwd
-    git pull
-    git push
-    cd - >/dev/null
-  done
+    for i in ${repos[*]}; do
+      cd "$i"
+      echo -e "\e[1m\e[36m$(pwd)"
+      git pull
+      git push
+    done
 
-  repoNotInDefaultDir=(
-    ~/dotfiles/
-    ~/repos/OngDev/.github/
-    ~/repos/isekaiSystem/.github/
+    cd $CURRENT_DIR
+  else
+    echo "Check your internet connection and try again"
+  fi
+}
+
+sync_repos() {
+  REPOS_PATH=~/repos/
+  mkdir $REPOS_PATH
+  cd $REPOS_PATH
+
+  github_username=(
+    thuanowa
+    ongdev
+    isekaiSystem
+    from-design-to-website
+    when-will-i-die
   )
 
-  for i in ${repoNotInDefaultDir[*]}; do
+  for i in ${github_username[*]}; do
+    mkdir "$i"
     cd "$i"
-    pwd
-    git pull
-    git push
-    cd - >/dev/null
+    gh repo list "$i" --limit 10000 | awk '{print $1}' | while read -r repo; do
+
+      gh repo clone "$repo"
+    done
+    cd $REPOS_PATH
   done
 }
 
