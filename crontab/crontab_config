@@ -1,9 +1,9 @@
 @hourly bash /home/master/dotfiles/crontab/crontab_hourly
 
-# daily 7pm
+# daily 5pm
 
-0 19 * * * bash /home/master/dotfiles/crontab/crontab_daily
+0 17 * * * bash /home/master/dotfiles/crontab/crontab_daily
 
-# weekly at 7pm sunday
+# weekly at 5pm sunday
 
-0 19 * * 0 /home/master/dotfiles/crontab/crontab_weekly
+0 17 * * 0 /home/master/dotfiles/crontab/crontab_weekly
