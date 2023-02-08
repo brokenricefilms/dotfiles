@@ -1,4 +1,4 @@
-@hourly bash /home/master/dotfiles/crontab/crontab_hourly
+# @hourly bash /home/master/dotfiles/crontab/crontab_hourly
 
 # daily 5pm
 

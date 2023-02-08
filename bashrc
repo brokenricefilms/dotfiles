@@ -56,30 +56,6 @@ source $HOME/.local/share/key-bindings.bash
 
 eval "$(starship init bash)"
 
-echo_nyan_cat() {
-  e='\033'
-  RESET="${e}[0m"
-  BOLD="${e}[1m"
-  CYAN="${e}[0;96m"
-  RED="${e}[0;91m"
-  YELLOW="${e}[0;93m"
-  LIGHT_GREEN="${e}[0;92m"
-  GREEN="${e}[0;32m"
-
-  echo
-  echo -en "$RED"'-_-_-_-_-_-_-_'
-  echo -e "$RESET"$BOLD',------,'"$RESET"
-  echo -en "$YELLOW"'_-_-_-_-_-_-_-'
-  echo -e "$RESET"$BOLD'|   /\_/\\'"$RESET"
-  echo -en "$LIGHT_GREEN"'-_-_-_-_-_-_-'
-  echo -e "$RESET"$BOLD'~|__( '"$GREEN"'$ '"$RESET"$BOLD'.'"$GREEN"'$'"$RESET"$BOLD')'"$RESET"
-  echo -en "$CYAN"'-_-_-_-_-_-_-_-'
-  echo -e "$RESET"$BOLD'""  ""'"$RESET"
-  echo
-}
-
-echo_nyan_cat
-
 network_status() {
   ping -c 1 google.com
   local NETWORK_STATUS=$?
@@ -152,22 +128,21 @@ update() {
   network_status &>/dev/null
 
   if [[ "$NETWORK" == "online" ]]; then
+    CURRENT_DIR=$(pwd)
+
     dnf makecache
-
     deno upgrade
-
     asdf update
     asdf plugin update --all
-
     tldr --update
-
     ~/.tmux/plugins/tpm/bin/update_plugins all
 
     cd ~/.local/share/
     wget https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh
     wget https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.bash
     wget https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.bash
-    cd -
+
+    cd $CURRENT_DIR
   else
     echo "Check your internet connection for online update and try again"
   fi

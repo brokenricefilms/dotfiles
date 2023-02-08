@@ -4,4 +4,8 @@ source ~/dotfiles/bashrc
 
 update
 
+update_repo
+
+sync_repo
+
 clone_all_users_repo
