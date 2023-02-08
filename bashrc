@@ -102,6 +102,7 @@ browser_daily() {
   xdg-open "https://mail.google.com/mail/u/0/#inbox"
   xdg-open "https://mail.google.com/mail/u/1/#inbox"
   xdg-open "https://www.youtube.com/feed/subscriptions"
+  xdg-open "https://github.com"
 }
 
 # TODO: update_music checking playlist to update change
