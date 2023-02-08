@@ -139,6 +139,7 @@ update() {
     deno upgrade
     asdf update
     asdf plugin update --all
+    asdf install nodejs latest
     tldr --update
     ~/.tmux/plugins/tpm/bin/update_plugins all
 

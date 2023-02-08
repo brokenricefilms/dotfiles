@@ -1,4 +1,2 @@
 legacy_version_file = yes
-nodejs 19.5.0
-rust 1.65.0
-rust-analyzer 2022-11-07
+nodejs 19.6.0
