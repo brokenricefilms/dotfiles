@@ -209,6 +209,7 @@ auto_commit() {
     if [[ $(git status --porcelain) ]]; then
       git add --all
       git commit -m "[👌Auto commit]"
+      git pull
       git push
     else
       echo "😏 No change"
