@@ -130,6 +130,11 @@ update() {
   if [[ "$NETWORK" == "online" ]]; then
     CURRENT_DIR=$(pwd)
 
+    cd ~/dotfiles/
+    nvim --headless "+Lazy! sync" +qa
+    git add nvim/lazy-lock.json
+    git commit -m "chore: lazy.nvim"
+
     dnf makecache
     deno upgrade
     asdf update
