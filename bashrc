@@ -208,12 +208,19 @@ change_dir_to_git_root() {
 alias cdr='change_dir_to_git_root'
 
 yo() {
-  git diff
-  echo -e '\n\e[1m\e[36mCommmit message\e[0m'
-  echo -en '\e[1m\e[32m❯\e[0m '
-  read -r commit_message
-  git add --all
-  git commit -m "$commit_message"
+  if [[ $(git rev-parse --is-inside-work-tree 2>/dev/null) ]]; then
+    if [[ $(git status --porcelain) ]]; then
+      git diff
+      git status -sb
+      echo -e '\n\e[1m\e[36mCommmit message\e[0m'
+      echo -en '\e[1m\e[32m❯\e[0m '
+      read -r commit_message
+      git add --all
+      git commit -m "$commit_message"
+    else
+      echo "No change"
+    fi
+  fi
 }
 
 auto_commit() {

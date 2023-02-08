@@ -6,6 +6,7 @@ return {
       return {
         sources = {
           nls.builtins.formatting.prettierd,
+          nls.builtins.formatting.shfmt,
           nls.builtins.diagnostics.eslint,
         },
       }
