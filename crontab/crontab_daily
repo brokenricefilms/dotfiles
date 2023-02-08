@@ -3,3 +3,5 @@
 source ~/dotfiles/bashrc
 
 update
+
+clone_all_users_repo

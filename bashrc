@@ -129,7 +129,7 @@ browser_daily() {
 }
 
 # TODO: update_music checking playlist to update change
-update_music() {
+sync_music() {
   network_status &>/dev/null
 
   if [[ "$NETWORK" == "online" ]]; then
@@ -252,7 +252,7 @@ clone_change_dir_to_repo() {
 }
 alias gc='clone_change_dir_to_repo'
 
-auto_sync() {
+sync_repo() {
   network_status &>/dev/null
 
   if [[ "$NETWORK" == "online" ]]; then
@@ -298,7 +298,7 @@ auto_sync() {
   fi
 }
 
-update_all_repo() {
+update_repo() {
   network_status &>/dev/null
 
   if [[ "$NETWORK" == "online" ]]; then
@@ -316,7 +316,7 @@ update_all_repo() {
 
     for i in ${repos[*]}; do
       cd "$i"
-      echo -e "\e[1m\e[36m$(pwd)"
+      echo -e "\e[1m\e[36m$(pwd)\e[0m"
       git pull
       git push
     done
@@ -327,28 +327,34 @@ update_all_repo() {
   fi
 }
 
-sync_repos() {
+clone_all_users_repo() {
+  CURRENT_DIR=$(pwd)
+
   REPOS_PATH=~/repos/
-  mkdir $REPOS_PATH
+  mkdir $REPOS_PATH 2>/dev/null
   cd $REPOS_PATH
 
   github_username=(
     thuanowa
-    ongdev
+    OngDev
     isekaiSystem
     from-design-to-website
     when-will-i-die
   )
 
   for i in ${github_username[*]}; do
-    mkdir "$i"
+    mkdir "$i" 2>/dev/null
     cd "$i"
-    gh repo list "$i" --limit 10000 | awk '{print $1}' | while read -r repo; do
+    echo -e "\e[1m\e[36m$i\e[0m"
 
+    gh repo list "$i" --limit 10000 | awk '{print $1}' | while read -r repo; do
       gh repo clone "$repo"
     done
+
     cd $REPOS_PATH
   done
+
+  cd $CURRENT_DIR
 }
 
 emoji() {

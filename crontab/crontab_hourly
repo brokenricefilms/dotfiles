@@ -2,6 +2,6 @@
 
 source ~/dotfiles/bashrc
 
-update_all_repo
+update_repo
 
-auto_sync
+sync_repo

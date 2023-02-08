@@ -2,4 +2,4 @@
 
 source ~/dotfiles/bashrc
 
-update_music
+sync_music
