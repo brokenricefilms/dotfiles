@@ -194,7 +194,7 @@ yo() {
     if [[ $(git status --porcelain) ]]; then
       git diff
       git status -sb
-      echo -e '\n\e[1m\e[36mCommmit message\e[0m'
+      echo -e '\n\e[1m\e[34mCommmit message\e[0m'
       echo -en '\e[1m\e[32m❯\e[0m '
       read -r commit_message
       git add --all
