@@ -103,6 +103,7 @@ sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 
 # setup gnome-display-brightness-ddcutil: https://github.com/daitj/gnome-display-brightness-ddcutil
+# change shortcut to `alt + brightness up/down`
 modprobe i2c-dev
 ddcutil capabilities | grep "Feature: 10"
 sudo cp /usr/share/ddcutil/data/45-ddcutil-i2c.rules /etc/udev/rules.d
