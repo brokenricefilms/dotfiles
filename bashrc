@@ -113,8 +113,8 @@ sync_music() {
     local music_dir
     music_dir=$HOME/Music/music_i_like/
 
-    rm -rf $music_dir
-    mkdir -p $music_dir
+    rm -rf "$music_dir"
+    mkdir -p "$music_dir"
     cd $music_dir
 
     yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/playlist?list=PLcazFfFZIFPld2xu_nAgmbgj5QldQOpUB"
@@ -162,14 +162,14 @@ hi() {
 make_dir() {
   if [ -z "$1" ]; then
     echo -n "👉 Enter a directory name"
-    read dirName
-    mkdir -p $dirName
+    read -r dirName
+    mkdir -p "$dirName"
     cd $dirName
-  elif [ -d $1 ]; then
+  elif [ -d "$1" ]; then
     echo -e "👉 $1 already exists"
     cd $1
   else
-    mkdir -p $1
+    mkdir -p "$1"
     cd $1
   fi
 }
@@ -400,7 +400,7 @@ yt() {
 }
 
 yta() {
-  yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" $1
+  yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "$1"
 }
 
 alias play_music='mpv --shuffle --loop-playlist *'
