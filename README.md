@@ -6,7 +6,7 @@
 ## Current setup
 
 - Fedora 37, Gnome Wayland
-  - Extensions:
+  - Extensions: [Display Brightness Slider for Gnome Shell](https://github.com/daitj/gnome-display-brightness-ddcutil), [bluetooth quick connect](https://github.com/bjarosze/gnome-bluetooth-quick-connect), [Pano - Next-gen Clipboard Manager](https://github.com/oae/gnome-shell-pano), [Rounded Window Corners](https://github.com/yilozt/rounded-window-corners)
 - [Foot terminal](./foot/foot.ini)
 - [Tmux](./tmux/tmux.conf)
 - [Bash shell](./bashrc)
