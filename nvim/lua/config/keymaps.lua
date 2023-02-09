@@ -12,6 +12,8 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "*", "*zz")
 vim.keymap.set("n", "#", "#zz")
 
+vim.keymap.set("n", ";", ":Telescope commands<CR>")
+
 local ls = require("luasnip")
 
 ls.add_snippets("all", {

@@ -8,6 +8,7 @@ return {
           nls.builtins.formatting.prettierd,
           nls.builtins.formatting.shfmt,
           nls.builtins.diagnostics.eslint,
+          nls.builtins.diagnostics.write_good,
         },
       }
     end,
