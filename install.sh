@@ -17,6 +17,9 @@ sudo dnf install python3-input-remapper -y
 sudo dnf copr enable atim/starship -y
 sudo dnf install starship -y
 
+sudo dnf copr enable peterwu/rendezvous -y
+sudo dnf install bibata-cursor-themes -y
+
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 dnf check-update
@@ -31,6 +34,9 @@ sudo systemctl start docker
 
 flatpak remote-add --authenticator-install --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install --noninteractive flathub org.onlyoffice.desktopeditors
+flatpak install --noninteractive flathub io.github.celluloid_player.Celluloid
+flatpak install --noninteractive flathub com.belmoussaoui.Authenticator
+flatpak install --noninteractive flathub com.belmoussaoui.Decoder
 
 curl -fsSL https://deno.land/install.sh | sh
 

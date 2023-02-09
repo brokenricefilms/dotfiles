@@ -268,12 +268,12 @@
             "Alt_L+Shift_L+a",
             "keyboard"
         ],
-        "1,68,1": [
-            "Alt_L+XF86MonBrightnessUp",
+        "1,67,1": [
+            "KEY_LEFTCTRL+XF86MonBrightnessDown",
             "keyboard"
         ],
-        "1,67,1": [
-            "Alt_L+XF86MonBrightnessDown",
+        "1,68,1": [
+            "KEY_LEFTCTRL+XF86MonBrightnessUp",
             "keyboard"
         ]
     }
