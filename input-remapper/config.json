@@ -1,8 +1,6 @@
 {
     "version": "1.5.0",
     "autoload": {
-        "SONiX USB DEVICE": "thuan fly keys",
-        "2.4G Mouse": "new preset",
         "AT Translated Set 2 keyboard": "thuan_fly_key",
         "SEMICO   USB Gaming Keyboard ": "thuan_fly_key"
     },

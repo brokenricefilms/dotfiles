@@ -271,6 +271,10 @@
         "1,15,1": [
             "if_single(key(KEY_TAB), ,)",
             "keyboard"
+        ],
+        "1,57,1+1,58,1": [
+            "Alt_L+Shift_L+a",
+            "keyboard"
         ]
     }
 }
