@@ -6,6 +6,7 @@
 ## Current setup
 
 - Fedora 37, Gnome Wayland
+  - Extensions:
 - [Foot terminal](./foot/foot.ini)
 - [Tmux](./tmux/tmux.conf)
 - [Bash shell](./bashrc)

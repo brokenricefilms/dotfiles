@@ -25,7 +25,7 @@ sudo dnf config-manager \
   --add-repo \
   https://download.docker.com/linux/fedora/docker-ce.repo
 
-sudo dnf install -y tmux curl wget git neofetch htop gnome-tweaks trash-cli python3-pip tldr net-tools speedtest-cli neovim python3-neovim fd-find aria2 tree cowsay fzf npm ffmpeg youtube-dl mpv ripgrep unrar moreutils foliate util-linux-user zsh cronie git-delta wl-clipboard java-devel git-clang-format rust cargo go gtk-v4l ruby ruby-devel gcc-c++ ibus-bamboo collectd-sensors obs-studio dconf-editor sqlite shfmt v4l-utils google-noto-emoji-color-fonts cmake kdenlive starship glib2-static libgda libgda-sqlite exa bat libsqlite3x-devel yt-dlp ddcutil code docker-ce docker-ce-cli containerd.io docker-compose-plugin kitty
+sudo dnf install -y tmux curl wget git neofetch htop gnome-tweaks trash-cli python3-pip tldr net-tools speedtest-cli neovim python3-neovim fd-find aria2 tree cowsay fzf npm ffmpeg youtube-dl mpv ripgrep unrar moreutils foliate util-linux-user zsh cronie git-delta wl-clipboard java-devel git-clang-format rust cargo go gtk-v4l ruby ruby-devel gcc-c++ ibus-bamboo collectd-sensors obs-studio dconf-editor sqlite shfmt v4l-utils google-noto-emoji-color-fonts cmake kdenlive starship glib2-static libgda libgda-sqlite exa bat libsqlite3x-devel yt-dlp ddcutil code docker-ce docker-ce-cli containerd.io docker-compose-plugin foot
 
 sudo systemctl start docker
 
@@ -96,11 +96,20 @@ cd ~/.fonts
 fc-cache -rf
 
 sudo groupadd docker
-sudo usermod -aG docker $USER
+sudo usermod -aG docker "$USER"
 newgrp docker
 docker run hello-world
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
+
+# setup gnome-display-brightness-ddcutil: https://github.com/daitj/gnome-display-brightness-ddcutil
+modprobe i2c-dev
+ddcutil capabilities | grep "Feature: 10"
+sudo cp /usr/share/ddcutil/data/45-ddcutil-i2c.rules /etc/udev/rules.d
+sudo groupadd --system i2c
+sudo usermod "$USER" -aG i2c
+touch /etc/modules-load.d/i2c.conf
+sudo sh -c "echo 'i2c-dev' >> /etc/modules-load.d/i2c.conf"
 
 REPOS_PATH=~/repos/
 mkdir $REPOS_PATH
