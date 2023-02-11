@@ -6,7 +6,7 @@
 ## Current setup
 
 - Fedora 37, Gnome Wayland
-  - Extensions: [bluetooth quick connect](https://github.com/bjarosze/gnome-bluetooth-quick-connect), [Pano - Next-gen Clipboard Manager](https://github.com/oae/gnome-shell-pano), [Rounded Window Corners](https://github.com/yilozt/rounded-window-corners)
+  - Extensions: [Bluetooth quick connect](https://github.com/bjarosze/gnome-bluetooth-quick-connect), [Pano - Next-gen Clipboard Manager](https://github.com/oae/gnome-shell-pano), [Rounded Window Corners](https://github.com/yilozt/rounded-window-corners)
 - [Foot terminal](./foot/foot.ini)
 - [Tmux](./tmux/tmux.conf)
 - [Bash shell](./bashrc)
