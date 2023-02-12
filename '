@@ -79,6 +79,8 @@ alias st='git status -sb'
 alias cat='bat --theme=GitHub'
 alias vi='nvim'
 alias vim='nvim'
+alias push='git push'
+alias pull='git pull'
 
 alias ls='exa --long --all --icons'
 alias l='ls'
