@@ -1,14 +1,3 @@
-// https://github.com/brookhong/Surfingkeys/issues/63
-settings.blacklistPattern =
-  /.*docs.google.com.*|mail.google.com|calendar.google.com|photos.google.com|monkeytype.com|discord.com|chat.zalo.me|messenger.com|/i;
-
-settings.modeAfterYank = "Normal";
-settings.scrollStepSize = 200;
-
-api.iunmap(":");
-
-api.Hints.characters = "asdghklqwertyuiopzxcvbnmfj1234567890";
-
 // name: Rosé Pine Dawn
 // author: thuanowa
 // license: unlicense
@@ -16,7 +5,7 @@ api.Hints.characters = "asdghklqwertyuiopzxcvbnmfj1234567890";
 // blurb: All natural pine, faux fur and a bit of soho vibes for the classy minimalist
 
 const hintsCss =
-  "font-size: 13pt; font-family: 'JetBrains Mono NL', 'Cascadia Code', 'Helvetica Neue', Helvetica, Arial, sans-serif; border: 0px; color: #575279; background: #faf4ed; background-color: #faf4ed";
+  "font-size: 13pt; font-family: 'JetBrains Mono NL', 'Cascadia Code', 'Helvetica Neue', Helvetica, Arial, sans-serif; border: 0px; color: #575279 !important; background: #faf4ed; background-color: #faf4ed";
 
 api.Hints.style(hintsCss);
 api.Hints.style(hintsCss, "text");
