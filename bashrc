@@ -110,16 +110,16 @@ sync_music() {
   network_status &>/dev/null
 
   if [[ "$NETWORK" == "online" ]]; then
-    local music_dir
-    music_dir=$HOME/Music/music_i_like/
+    CURRENT_DIR=$(pwd)
+    MUSIC_DIR=$HOME/Music/music_i_like/
 
-    rm -rf "$music_dir"
-    mkdir -p "$music_dir"
-    cd $music_dir
+    rm -rf "$MUSIC_DIR"
+    mkdir -p "$MUSIC_DIR"
+    cd $MUSIC_DIR
 
     yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/playlist?list=PLcazFfFZIFPld2xu_nAgmbgj5QldQOpUB"
 
-    cd -
+    cd CURRENT_DIR
   else
     echo "Check your internet connection and try again"
   fi
@@ -162,9 +162,9 @@ hi() {
 make_dir() {
   if [ -z "$1" ]; then
     echo -n "👉 Enter a directory name"
-    read -r dirName
-    mkdir -p "$dirName"
-    cd $dirName
+    read -r DIR_NAME
+    mkdir -p "$DIR_NAME"
+    cd $DIR_NAME
   elif [ -d "$1" ]; then
     echo -e "👉 $1 already exists"
     cd $1
@@ -175,13 +175,11 @@ make_dir() {
 }
 alias mk="make_dir"
 
-SERVER_IP() {
-  hostname -I
+start_browser_sync() {
+  SERVER_IP=$(hostname -I)
+  browser-sync start --server --files . --no-notify --host "$SERVER_IP" --port 9000
 }
-
-ser() {
-  browser-sync start --server --files . --no-notify --host SERVER_IP --port 9000
-}
+alias ser='start_browser_sync'
 
 change_dir_to_git_root() {
   cd $(git rev-parse --show-toplevel)
