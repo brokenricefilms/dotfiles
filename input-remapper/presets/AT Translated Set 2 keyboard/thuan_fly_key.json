@@ -175,6 +175,10 @@
         "1,57,1+1,51,1": [
             "Shift_L+Super_L+KEY_LEFT",
             "keyboard"
+        ],
+        "1,57,1+1,58,1": [
+            "Alt_L+Shift_L+a",
+            "keyboard"
         ]
     }
 }
