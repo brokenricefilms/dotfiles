@@ -8,6 +8,7 @@ function hi --description 'daily jobs'
     set -l current_dir (pwd)
 
     pnpm add -g pnpm
+    sudo dnf update -y
     dnf makecache
     deno upgrade
     tldr --update
