@@ -44,9 +44,6 @@ stty time 0
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] &&
   . /usr/share/bash-completion/bash_completion
 
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-
 eval "$(gh completion -s bash)"
 
 source $HOME/.local/share/fzf-bash-completion.sh
@@ -130,11 +127,9 @@ update() {
   if [[ "$NETWORK" == "online" ]]; then
     CURRENT_DIR=$(pwd)
 
+    pnpm add -g pnpm &
     dnf makecache &
     deno upgrade &
-    asdf update &
-    asdf plugin update --all &
-    asdf install nodejs latest &
     tldr --update &
     ~/.tmux/plugins/tpm/bin/update_plugins all &
 
