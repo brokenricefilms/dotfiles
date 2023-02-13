@@ -1,5 +1,0 @@
-#!/bin/bash
-
-source ~/dotfiles/bashrc
-
-sync_music

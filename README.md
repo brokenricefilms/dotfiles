@@ -9,7 +9,7 @@
   - Extensions: [Bluetooth quick connect](https://github.com/bjarosze/gnome-bluetooth-quick-connect), [Pano - Next-gen Clipboard Manager](https://github.com/oae/gnome-shell-pano), [Rounded Window Corners](https://github.com/yilozt/rounded-window-corners)
 - [Foot terminal](./foot/foot.ini)
 - [Tmux](./tmux/tmux.conf)
-- [Bash shell](./bashrc)
+- [Fish shell](./fish/config.fish)
 - [Neovim](./nvim/)
   - init.lua.minimal: no plugin, no LSP.
   - init.lua: the main one using [LazyVim](https://www.lazyvim.org/), plugin add-ons([vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator), [nvim-highlight-colors](https://github.com/brenoprata10/nvim-highlight-colors), [Rose pine](https://github.com/rose-pine/neovim))

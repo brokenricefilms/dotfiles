@@ -28,7 +28,7 @@ sudo dnf config-manager \
   --add-repo \
   https://download.docker.com/linux/fedora/docker-ce.repo
 
-sudo dnf install -y tmux curl wget git neofetch htop gnome-tweaks trash-cli python3-pip tldr net-tools speedtest-cli neovim python3-neovim fd-find aria2 tree cowsay fzf npm ffmpeg youtube-dl mpv ripgrep unrar moreutils foliate util-linux-user zsh cronie git-delta wl-clipboard java-devel git-clang-format rust cargo go gtk-v4l ruby ruby-devel gcc-c++ ibus-bamboo collectd-sensors obs-studio dconf-editor sqlite shfmt v4l-utils google-noto-emoji-color-fonts cmake kdenlive starship glib2-static libgda libgda-sqlite exa bat libsqlite3x-devel yt-dlp ddcutil code docker-ce docker-ce-cli containerd.io docker-compose-plugin foot celluloid
+sudo dnf install -y tmux curl wget git neofetch htop gnome-tweaks trash-cli python3-pip tldr net-tools speedtest-cli neovim python3-neovim fd-find aria2 tree cowsay fzf npm ffmpeg youtube-dl mpv ripgrep unrar moreutils foliate util-linux-user zsh cronie git-delta wl-clipboard java-devel git-clang-format rust cargo go gtk-v4l ruby ruby-devel gcc-c++ ibus-bamboo collectd-sensors obs-studio dconf-editor sqlite shfmt v4l-utils google-noto-emoji-color-fonts cmake kdenlive starship glib2-static libgda libgda-sqlite bat libsqlite3x-devel yt-dlp ddcutil code docker-ce docker-ce-cli containerd.io docker-compose-plugin foot celluloid zoxide
 
 sudo systemctl start docker
 
@@ -84,14 +84,12 @@ mkdir ~/.config/lazygit
 ln -sf ~/dotfiles/git/lazygit_config.yml ~/.config/lazygit/config.yml
 ln -sf ~/dotfiles/.selected_editor ~/.selected_editor
 ln -sf ~/dotfiles/.ripgreprc ~/
-ln -sf ~/dotfiles/bashrc ~/.bashrc
 rm -rf ~/.config/input-remapper/
 ln -sf ~/dotfiles/input-remapper/ ~/.config/
 ln -sf ~/repos/thuanowa/obs-studio/ ~/.config/
-rm -rf ~/.config/kitty
-ln -sf ~/dotfiles/kitty ~/.config/
 rm -rf ~/.config/foot
 ln -sf ~/dotfiles/foot ~/.config/
+ln -sf ~/dotfiles/fish ~/.config/
 
 mkdir ~/repos/thuanowa/
 cd ~/repos/thuanowa/
@@ -107,34 +105,25 @@ docker run hello-world
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 
-# setup gnome-display-brightness-ddcutil: https://github.com/daitj/gnome-display-brightness-ddcutil
-# change shortcut to `alt + brightness up/down`
-modprobe i2c-dev
-ddcutil capabilities | grep "Feature: 10"
-sudo cp /usr/share/ddcutil/data/45-ddcutil-i2c.rules /etc/udev/rules.d
-sudo groupadd --system i2c
-sudo usermod "$USER" -aG i2c
-touch /etc/modules-load.d/i2c.conf
-sudo sh -c "echo 'i2c-dev' >> /etc/modules-load.d/i2c.conf"
-
 REPOS_PATH=~/repos/
-mkdir $REPOS_PATH
+mkdir $REPOS_PATH 2>/dev/null
 cd $REPOS_PATH
 
-github_username=(
+github_usernames=(
   thuanowa
-  ongdev
+  OngDev
   isekaiSystem
   from-design-to-website
   when-will-i-die
 )
 
-for i in ${github_username[*]}; do
-  mkdir "$i"
-  cd "$i"
+for user in ${github_usernames[*]}; do
+  mkdir "$user" 2>/dev/null
+  cd "$user"
+  echo -e "\e[1m\e[36m$user\e[0m"
 
-  gh repo list "$i" --limit 10000 | awk '{print $1}' | while read -r repo; do
-    gh repo clone "$repo"
+  gh repo list "$user" --limit 10000 | awk '{print $1}' | while read -r repo_name; do
+    gh repo clone "$repo_name"
   done
 
   cd $REPOS_PATH
