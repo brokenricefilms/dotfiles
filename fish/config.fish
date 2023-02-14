@@ -33,6 +33,7 @@ set fish_cursor_visual block
 alias clear='clear -x'
 alias q='exit'
 alias e='nvim'
+alias d='z'
 
 zoxide init fish | source
 starship init fish | source
