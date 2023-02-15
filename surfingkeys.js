@@ -1,3 +1,14 @@
+// https://github.com/brookhong/Surfingkeys/issues/63
+settings.blacklistPattern =
+  /.*docs.google.com.*|mail.google.com|calendar.google.com|photos.google.com|monkeytype.com|discord.com|chat.zalo.me|messenger.com|/i;
+
+settings.modeAfterYank = "Normal";
+settings.scrollStepSize = 200;
+
+api.iunmap(":");
+
+api.Hints.characters = "asdghklqwertyuiopzxcvbnmfj1234567890";
+
 // name: Rosé Pine Dawn
 // author: thuanowa
 // license: unlicense
