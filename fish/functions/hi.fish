@@ -5,6 +5,5 @@ function hi --description 'daily jobs'
     xdg-open "https://www.youtube.com/feed/subscriptions"
     xdg-open "https://github.com"
 
-    fish_command
     update
 end

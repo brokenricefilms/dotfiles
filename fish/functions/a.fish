@@ -5,6 +5,4 @@ function a --description "git commit"
     read -P "❯ " -t commit_message
     git add --all
     git commit -m "$commit_message"
-    fish --command "git pull"
-    fish --command "git push"
 end
