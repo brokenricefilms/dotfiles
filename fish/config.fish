@@ -33,7 +33,7 @@ set fish_cursor_visual block
 alias c='clear -x'
 alias q='exit'
 alias s='git status -sb'
-alias ff='cd $HOME; f'
+alias ee='cd $HOME; e'
 alias dd='cd $HOME; d'
 
 starship init fish | source

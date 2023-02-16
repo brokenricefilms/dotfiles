@@ -1,4 +1,4 @@
-function f --description "fzf edit file with nvim"
+function e --description "fzf edit file with nvim"
     if [ ! -n "$argv" ]
         set -l file (fd --hidden --type file . --exclude .git --exclude node_modules | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:500 {}')
 
