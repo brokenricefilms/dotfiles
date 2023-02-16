@@ -30,10 +30,10 @@ set fish_cursor_insert line
 set fish_cursor_replace_one underscore
 set fish_cursor_visual block
 
-alias clear='clear -x'
+alias c='clear -x'
 alias q='exit'
-alias e='nvim'
-alias d='z'
+alias s='git status -sb'
+alias ff='cd $HOME; f'
+alias dd='cd $HOME; d'
 
-zoxide init fish | source
 starship init fish | source
