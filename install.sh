@@ -9,7 +9,7 @@ sudo dnf groupupdate core -y
 sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
 sudo dnf groupupdate sound-and-video -y
 
-sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:lamlng/Fedora_33/home:lamlng.repo
+sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:lamlng/Fedora_37/home:lamlng.repo
 
 sudo dnf copr enable sunwire/input-remapper -y
 sudo dnf install python3-input-remapper -y
