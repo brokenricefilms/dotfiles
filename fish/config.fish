@@ -30,6 +30,10 @@ set fish_cursor_insert line
 set fish_cursor_replace_one underscore
 set fish_cursor_visual block
 
+# rule for alias:
+# 1. Single/double char
+# 2. No shift -> double char
+# 3. Usually used
 alias c='clear -x'
 alias q='exit'
 alias t='trash'
