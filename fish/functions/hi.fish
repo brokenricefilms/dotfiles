@@ -1,9 +1,9 @@
 function hi --description 'daily jobs'
-    xdg-open "https://feeder.co/reader"
-    xdg-open "https://mail.google.com/mail/u/0/#inbox"
-    xdg-open "https://mail.google.com/mail/u/1/#inbox"
-    xdg-open "https://www.youtube.com/feed/subscriptions"
-    xdg-open "https://github.com"
+    open "https://www.inoreader.com/all_articles"
+    open "https://mail.google.com/mail/u/0/#inbox"
+    open "https://mail.google.com/mail/u/1/#inbox"
+    open "https://www.youtube.com/feed/subscriptions"
+    open "https://github.com"
 
     update
 end
