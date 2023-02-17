@@ -32,6 +32,7 @@ set fish_cursor_visual block
 
 alias c='clear -x'
 alias q='exit'
+alias t='trash'
 alias s='git status -sb'
 alias ee='cd $HOME; e'
 alias dd='cd $HOME; d'
