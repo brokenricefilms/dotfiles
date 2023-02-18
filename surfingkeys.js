@@ -7,7 +7,7 @@ settings.scrollStepSize = 200;
 
 api.iunmap(":");
 
-api.Hints.characters = "asdghklqwertyuiopzxcvbnmfj1234567890";
+api.Hints.setCharacters("asdghklqwertyuiopzxcvbnmfj1234567890/.,`-=[]\\';");
 
 const hintsCss =
   "font-size: 13pt; font-family: 'JetBrains Mono NL', 'Cascadia Code', 'Helvetica Neue', Helvetica, Arial, sans-serif; border: 0px; color: #575279 !important; background: #faf4ed; background-color: #faf4ed";
