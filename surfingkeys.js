@@ -25,7 +25,7 @@ api.addSearchAlias(
 
 api.iunmap(":");
 
-api.Hints.setCharacters("asdghklqwertyuiopzxcvbnmfj/.,';");
+api.Hints.setCharacters("asdghklqwertyuiopzxcvbnmfj/.,;");
 
 const hintsCss =
   "font-size: 13pt; font-family: 'JetBrains Mono NL', 'Cascadia Code', 'Helvetica Neue', Helvetica, Arial, sans-serif; border: 0px; color: #575279 !important; background: #faf4ed; background-color: #faf4ed";
