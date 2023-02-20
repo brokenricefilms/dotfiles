@@ -45,5 +45,6 @@ alias a='git add -A; git commit'
 alias s='git status -sb'
 alias ee='cd $HOME; e'
 alias dd='cd $HOME; d'
+alias n='nohup nautilus .'
 
 starship init fish | source
