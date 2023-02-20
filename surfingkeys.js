@@ -5,6 +5,24 @@ settings.blacklistPattern =
 settings.modeAfterYank = "Normal";
 settings.scrollStepSize = 200;
 
+api.removeSearchAlias("b");
+api.removeSearchAlias("w");
+api.removeSearchAlias("s");
+
+api.addSearchAlias(
+  "t",
+  "translate",
+  "https://translate.google.com/?sl=en&tl=vi&text=",
+  "s",
+  "https://translate.google.com/?sl=en&tl=vi&text=",
+  function (response) {
+    const res = JSON.parse(response.text);
+    return res.map(function (r) {
+      return r.phrase;
+    });
+  }
+);
+
 api.iunmap(":");
 
 api.Hints.setCharacters("asdghklqwertyuiopzxcvbnmfj/.,';");
