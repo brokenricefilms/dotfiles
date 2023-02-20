@@ -37,6 +37,7 @@ set fish_cursor_visual block
 alias c='clear -x'
 alias q='exit'
 alias t='trash'
+alias r='rm -rf'
 alias p='git push'
 alias pp='git push -f'
 alias l='git pull'
