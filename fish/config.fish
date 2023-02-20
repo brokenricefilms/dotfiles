@@ -46,5 +46,6 @@ alias s='git status -sb'
 alias ee='cd $HOME; e'
 alias dd='cd $HOME; d'
 alias n='nohup nautilus .'
+alias x='chmod +x'
 
 starship init fish | source
