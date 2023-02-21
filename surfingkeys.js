@@ -1,6 +1,6 @@
 // https://github.com/brookhong/Surfingkeys/issues/63
 settings.blacklistPattern =
-  /.*docs.google.com.*|mail.google.com|calendar.google.com|photos.google.com|monkeytype.com|discord.com|chat.zalo.me|messenger.com|/i;
+  /.*docs.google.com.*|mail.google.com|calendar.google.com|photos.google.com|monkeytype.com|discord.com|chat.zalo.me|mem.ai|messenger.com|/i;
 
 settings.modeAfterYank = "Normal";
 settings.scrollStepSize = 200;
