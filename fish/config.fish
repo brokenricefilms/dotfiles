@@ -34,20 +34,22 @@ set fish_cursor_visual block
 # 1. Single/double char
 # 2. No shift -> double char
 # 3. Usually used
-alias c='clear -x'
-alias q='exit'
-alias t='trash'
-alias r='rm -rf'
-alias p='git push'
-alias pp='git push -f'
-alias l='git pull'
-alias ll='git pull -f'
 alias a='git add -A; git commit'
 alias aa='git add -A; git commit -m "auto commit"'
-alias s='git status -sb'
-alias ee='cd $HOME; e'
+alias c='clear -x'
 alias dd='cd $HOME; d'
+alias ee='cd $HOME; e'
+alias i='sudo dnf install -y'
+alias l='git pull'
+alias ll='git pull -f'
 alias n='nohup nautilus .'
+alias p='git push'
+alias pp='git push -f'
+alias q='exit'
+alias r='rm -rf'
+alias s='git status -sb'
+alias t='trash'
+alias u='sudo dnf remove -y'
 alias x='chmod +x'
 
 starship init fish | source
