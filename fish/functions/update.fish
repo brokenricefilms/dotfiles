@@ -12,6 +12,7 @@ function update --description 'update all'
     nvim --headless "+Lazy! sync" +qa
     git add nvim/lazy-lock.json
     git commit -m "chore: lazy.nvim"
+    git push
 
     cd $current_dir
 end
