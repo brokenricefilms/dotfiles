@@ -192,10 +192,6 @@
             "BTN_LEFT",
             "mouse"
         ],
-        "1,57,1": [
-            "if_single(key(KEY_SPACE),,)",
-            "keyboard"
-        ],
         "1,57,1+1,52,1": [
             "Shift_L+Super_L+KEY_RIGHT",
             "keyboard"
@@ -260,16 +256,20 @@
             "BTN_MIDDLE",
             "mouse"
         ],
-        "1,15,1": [
-            "if_single(key(KEY_TAB), ,)",
-            "keyboard"
-        ],
         "1,67,1": [
             "KEY_LEFTCTRL+XF86MonBrightnessDown",
             "keyboard"
         ],
         "1,68,1": [
             "KEY_LEFTCTRL+XF86MonBrightnessUp",
+            "keyboard"
+        ],
+        "1,15,1": [
+            "if_single(key(KEY_TAB), ,10000)",
+            "keyboard"
+        ],
+        "1,57,1": [
+            "if_single(key(KEY_SPACE),,10000)",
             "keyboard"
         ]
     }
