@@ -1,10 +1,9 @@
 function update --description 'update all'
     set -l current_dir (pwd)
 
+    sudo pacman -Syu
+    yay -Sua
     pnpm add -g pnpm
-    sudo dnf update -y
-    dnf makecache
-    deno upgrade
     tldr --update
     $HOME/.tmux/plugins/tpm/bin/update_plugins all
 
