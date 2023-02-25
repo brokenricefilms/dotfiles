@@ -1,50 +1,14 @@
 #! /usr/bin/env sh
 
-sudo dnf remove gnome-connections gnome-abrt yelp totem gnome-photos gnome-characters gnome-contacts gnome-weather libreoffice-core gnome-maps gnome-tour rhythmbox gnome-calendar -y
+sudo pacman -S --noconfirm tmux neofetch htop trash-cli python-pip tldr net-tools speedtest-cli neovim python-neovim fd tree cowsay fzf npm ffmpeg mpv ripgrep unrar moreutils cronie git-delta wl-clipboard rust cargo go v6l-utils ruby gcc obs-studio dconf-editor sqlite shfmt cmake kdenlive starship bat yt-dlp ddcutil kitty celluloid fish docker deno yarn libgda6
 
-sudo dnf install dnf-plugins-core -y
-sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf groupupdate core -y
-
-sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
-sudo dnf groupupdate sound-and-video -y
-
-sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:lamlng/Fedora_37/home:lamlng.repo
-
-sudo dnf copr enable sunwire/input-remapper -y
-sudo dnf install python3-input-remapper -y
-
-sudo dnf copr enable atim/starship -y
-sudo dnf install starship -y
-
-sudo dnf copr enable peterwu/rendezvous -y
-sudo dnf install bibata-cursor-themes -y
-
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
-dnf check-update
-
-sudo dnf config-manager \
-  --add-repo \
-  https://download.docker.com/linux/fedora/docker-ce.repo
-
-sudo dnf install -y tmux curl wget git neofetch htop gnome-tweaks trash-cli python3-pip tldr net-tools speedtest-cli neovim python3-neovim fd-find aria2 tree cowsay fzf npm ffmpeg youtube-dl mpv ripgrep unrar moreutils foliate util-linux-user zsh cronie git-delta wl-clipboard java-devel git-clang-format rust cargo go gtk-v4l ruby ruby-devel gcc-c++ ibus-bamboo collectd-sensors obs-studio dconf-editor sqlite shfmt v4l-utils google-noto-emoji-color-fonts cmake kdenlive starship glib2-static libgda libgda-sqlite bat libsqlite3x-devel yt-dlp ddcutil code docker-ce docker-ce-cli containerd.io docker-compose-plugin foot celluloid fish bibata-cursor-themes
-
-sudo systemctl start docker
-
-flatpak remote-add --authenticator-install --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install --noninteractive flathub org.onlyoffice.desktopeditors
-flatpak install --noninteractive flathub com.belmoussaoui.Authenticator
-flatpak install --noninteractive flathub com.belmoussaoui.Decoder
-
-curl -fsSL https://deno.land/install.sh | sh
+yay -S --noconfirm noto-fonts-emoji ibus-bamboo input-remapper onlyoffice-bin gnome-browser-connector
 
 npm config set prefix ~/.npm/
 
 npm install --global prettier
 npm install --global tinypng-cli
 npm install --global browser-sync
-npm install --global yarn
 npm install --global neovim
 npm install --global typescript
 npm install --global ijavascript
@@ -63,20 +27,14 @@ go install github.com/jesseduffield/lazydocker@latest
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
-. $HOME/.asdf/asdf.sh
-asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-asdf install nodejs latest
-
 ln -sf ~/repos/thuanowa/ok/.tinypng ~/.tinypng
 ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/ssh/config ~/.ssh/config
 
 rm -rf ~/.config/nvim
 mkdir ~/.config/nvim
-ln -sf ~/dotfiles/init.lua ~/.config/nvim/
+ln -sf ~/dotfiles/nvim ~/.config/
 
-ln -sf ~/dotfiles/.tool-versions ~/
 ln -sf ~/dotfiles/git/gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/git/gh_config.yml ~/.config/gh/config.yml
 rm -rf ~/.config/lazygit
@@ -87,44 +45,13 @@ ln -sf ~/dotfiles/.ripgreprc ~/
 rm -rf ~/.config/input-remapper/
 ln -sf ~/dotfiles/input-remapper/ ~/.config/
 ln -sf ~/repos/thuanowa/obs-studio/ ~/.config/
-rm -rf ~/.config/foot
-ln -sf ~/dotfiles/foot ~/.config/
+rm -rf ~/.config/kitty
+ln -sf ~/dotfiles/kitty ~/.config/
 ln -sf ~/dotfiles/fish ~/.config/
 
-mkdir ~/repos/thuanowa/
+mkdir -p ~/repos/thuanowa/
 cd ~/repos/thuanowa/
 gh repo clone thuanowa/ok
 ln -sf ~/repos/thuanowa/ok/.fonts ~/.fonts
 cd ~/.fonts
 fc-cache -rf
-
-sudo groupadd docker
-sudo usermod -aG docker "$USER"
-newgrp docker
-docker run hello-world
-sudo systemctl enable docker.service
-sudo systemctl enable containerd.service
-
-REPOS_PATH=~/repos/
-mkdir $REPOS_PATH 2>/dev/null
-cd $REPOS_PATH
-
-github_usernames=(
-  thuanowa
-  OngDev
-  isekaiSystem
-  from-design-to-website
-  when-will-i-die
-)
-
-for user in ${github_usernames[*]}; do
-  mkdir "$user" 2>/dev/null
-  cd "$user"
-  echo -e "\e[1m\e[36m$user\e[0m"
-
-  gh repo list "$user" --limit 10000 | awk '{print $1}' | while read -r repo_name; do
-    gh repo clone "$repo_name"
-  done
-
-  cd $REPOS_PATH
-done

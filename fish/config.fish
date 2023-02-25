@@ -18,7 +18,7 @@ set -gx EDITOR nvim
 set -gx VISUAL $EDITOR
 set -gx MANPAGER $EDITOR +Man!
 
-set -gx PATH $(yarn global bin) $DENO_INSTALL/bin $PNPM_HOME $HOME/.npm/bin $HOME/.cargo/bin $HOME/go/bin /usr/local/go/bin $HOME/.local/bin $HOME/bin $HOME/dotfiles/personal_bin $HOME/.local/share/gem/ruby/2.7/bin $HOME/gems/bin $PATH
+set -gx PATH $DENO_INSTALL/bin $PNPM_HOME $HOME/.npm/bin $HOME/.cargo/bin $HOME/go/bin /usr/local/go/bin $HOME/.local/bin $HOME/bin $HOME/dotfiles/personal_bin $HOME/.local/share/gem/ruby/3.0.0/bin $HOME/gems/bin $(yarn global bin) $PATH
 
 function fish_user_key_bindings
     fish_default_key_bindings -M insert
@@ -40,7 +40,8 @@ alias c='clear -x'
 alias dd='cd $HOME; d'
 alias ee='cd $HOME; e'
 alias h='htop'
-alias i='sudo dnf install -y'
+alias i='sudo pacman -S --noconfirm'
+alias ii='yay -S --noconfirm'
 alias l='git pull'
 alias ll='git pull -f'
 alias n='nohup nautilus .'
@@ -51,7 +52,8 @@ alias r='rm -rf'
 alias rr='sudo rm -rf'
 alias s='git status -sb'
 alias t='trash'
-alias u='sudo dnf remove -y'
+alias u='sudo pacman -R --noconfirm'
+alias uu='yay -R --noconfirm'
 alias x='chmod +x'
 
 starship init fish | source

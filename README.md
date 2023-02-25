@@ -5,9 +5,9 @@
 
 ## Current setup
 
-- Fedora 37, Gnome Wayland
-  - Extensions: [Bluetooth quick connect](https://github.com/bjarosze/gnome-bluetooth-quick-connect), [Pano - Next-gen Clipboard Manager](https://github.com/oae/gnome-shell-pano), [Rounded Window Corners](https://github.com/yilozt/rounded-window-corners)
-- [Foot terminal](./foot/foot.ini)
+- EndeavourOS(arch base), Gnome Wayland
+  - Extensions: [Pano - Next-gen Clipboard Manager](https://github.com/oae/gnome-shell-pano), [Rounded Window Corners](https://github.com/yilozt/rounded-window-corners)
+- [kitty terminal](./kitty/kitty.ini)
 - [Tmux](./tmux/tmux.conf)
 - [Fish shell](./fish/)
 - [Neovim](./nvim/)
