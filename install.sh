@@ -1,6 +1,6 @@
 #! /usr/bin/env sh
 
-sudo pacman -S --noconfirm tmux neofetch htop trash-cli python-pip tldr net-tools speedtest-cli neovim python-neovim fd tree cowsay fzf npm ffmpeg mpv ripgrep unrar moreutils cronie git-delta wl-clipboard rust cargo go v6l-utils ruby gcc obs-studio dconf-editor sqlite shfmt cmake kdenlive starship bat yt-dlp ddcutil kitty celluloid fish docker deno yarn libgda6 easyeffects
+sudo pacman -S --noconfirm tmux neofetch htop trash-cli python-pip tldr net-tools speedtest-cli neovim python-neovim fd tree cowsay fzf npm ffmpeg mpv ripgrep unrar moreutils cronie git-delta wl-clipboard rust cargo go v6l-utils ruby gcc obs-studio dconf-editor sqlite shfmt cmake kdenlive starship bat yt-dlp ddcutil kitty celluloid fish docker deno yarn libgda6 easyeffects xdg-desktop-portal-gnome xdg-desktop-portal
 
 yay -S --noconfirm noto-fonts-emoji ibus-bamboo input-remapper onlyoffice-bin gnome-browser-connector
 
@@ -44,14 +44,17 @@ ln -sf ~/dotfiles/.selected_editor ~/.selected_editor
 ln -sf ~/dotfiles/.ripgreprc ~/
 rm -rf ~/.config/input-remapper/
 ln -sf ~/dotfiles/input-remapper/ ~/.config/
-ln -sf ~/repos/thuanowa/obs-studio/ ~/.config/
 rm -rf ~/.config/kitty
 ln -sf ~/dotfiles/kitty ~/.config/
 ln -sf ~/dotfiles/fish ~/.config/
 
 mkdir -p ~/repos/thuanowa/
 cd ~/repos/thuanowa/
+
 gh repo clone thuanowa/ok
 ln -sf ~/repos/thuanowa/ok/.fonts ~/.fonts
 cd ~/.fonts
 fc-cache -rf
+
+gh repo clone thuanowa/obs-studio
+ln -sf ~/repos/thuanowa/obs-studio/ ~/.config/
