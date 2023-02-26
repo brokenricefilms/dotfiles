@@ -271,6 +271,10 @@
         "1,57,1+1,20,1": [
             "Super_L+0+Super_L+h",
             "keyboard"
+        ],
+        "1,57,1+1,58,1": [
+            "Super_L+s",
+            "keyboard"
         ]
     }
 }

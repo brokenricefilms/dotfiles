@@ -47,6 +47,7 @@ ln -sf ~/dotfiles/input-remapper/ ~/.config/
 rm -rf ~/.config/kitty
 ln -sf ~/dotfiles/kitty ~/.config/
 ln -sf ~/dotfiles/fish ~/.config/
+ln -sf ~/dotfiles/pipewire/ ~/.config/
 
 mkdir -p ~/repos/thuanowa/
 cd ~/repos/thuanowa/
