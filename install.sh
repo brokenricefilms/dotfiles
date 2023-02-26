@@ -1,6 +1,6 @@
 #! /usr/bin/env sh
 
-sudo pacman -S --noconfirm tmux neofetch htop trash-cli python-pip tldr net-tools speedtest-cli neovim python-neovim fd tree cowsay fzf npm ffmpeg mpv ripgrep unrar moreutils cronie git-delta wl-clipboard rust cargo go v6l-utils ruby gcc obs-studio dconf-editor sqlite shfmt cmake kdenlive starship bat yt-dlp ddcutil kitty celluloid fish docker deno yarn libgda6 easyeffects xdg-desktop-portal-gnome xdg-desktop-portal qt6-wayland
+sudo pacman -S --noconfirm tmux neofetch htop trash-cli python-pip tldr net-tools speedtest-cli neovim python-neovim fd tree cowsay fzf npm ffmpeg mpv ripgrep unrar moreutils cronie git-delta wl-clipboard rust cargo go v6l-utils ruby gcc obs-studio dconf-editor sqlite shfmt cmake kdenlive starship bat yt-dlp ddcutil kitty celluloid fish docker deno yarn libgda6 easyeffects xdg-desktop-portal-gnome xdg-desktop-portal qt6-wayland wofi
 
 yay -S --noconfirm noto-fonts-emoji ibus-bamboo input-remapper onlyoffice-bin gnome-browser-connector
 
@@ -32,7 +32,6 @@ ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/ssh/config ~/.ssh/config
 
 rm -rf ~/.config/nvim
-mkdir ~/.config/nvim
 ln -sf ~/dotfiles/nvim ~/.config/
 
 ln -sf ~/dotfiles/git/gitconfig ~/.gitconfig
@@ -46,7 +45,10 @@ rm -rf ~/.config/input-remapper/
 ln -sf ~/dotfiles/input-remapper/ ~/.config/
 rm -rf ~/.config/kitty
 ln -sf ~/dotfiles/kitty ~/.config/
+rm -rf ~/.config/fish
 ln -sf ~/dotfiles/fish ~/.config/
+rm -rf ~/.config/hypr
+ln -sf ~/dotfiles/hypr ~/.config/
 
 mkdir -p ~/repos/thuanowa/
 cd ~/repos/thuanowa/
