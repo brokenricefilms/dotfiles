@@ -2,7 +2,7 @@
 
 sudo pacman -S --noconfirm tmux neofetch htop trash-cli python-pip tldr net-tools speedtest-cli neovim python-neovim fd tree cowsay fzf npm ffmpeg mpv ripgrep unrar moreutils cronie git-delta wl-clipboard rust cargo go v6l-utils ruby gcc obs-studio dconf-editor sqlite shfmt cmake kdenlive starship bat yt-dlp ddcutil kitty celluloid fish docker deno yarn libgda6 easyeffects xdg-desktop-portal-gnome xdg-desktop-portal qt6-wayland mpv-mpris sdl2 networkmanager
 
-yay -S --noconfirm noto-fonts-emoji ibus-bamboo input-remapper onlyoffice-bin gnome-browser-connector
+yay -S --noconfirm noto-fonts-emoji ibus-bamboo input-remapper onlyoffice-bin gnome-browser-connector bluetuith-bin googledot-cursor-theme
 
 npm config set prefix ~/.npm/
 
