@@ -34,11 +34,13 @@ set fish_cursor_visual block
 # 1. Single/double char
 # 2. No shift -> double char
 # 3. Usually used
+
 alias a='git add -A; git commit'
 alias aa='git add -A; git commit -m "auto commit"'
 alias c='clear -x'
 alias dd='cd $HOME; d'
 alias ee='cd $HOME; e'
+alias f='yay -Ss'
 alias h='htop'
 alias i='sudo pacman -S --noconfirm'
 alias ii='yay -S --noconfirm'
