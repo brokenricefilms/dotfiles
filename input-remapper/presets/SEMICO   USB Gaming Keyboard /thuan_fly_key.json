@@ -271,6 +271,10 @@
         "1,57,1": [
             "if_single(key(KEY_SPACE),,10000)",
             "keyboard"
+        ],
+        "1,57,1+1,46,1": [
+            "Alt_L+KEY_F8",
+            "keyboard"
         ]
     }
 }

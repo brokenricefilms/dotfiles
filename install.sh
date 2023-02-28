@@ -1,6 +1,6 @@
 #! /usr/bin/env sh
 
-sudo pacman -S --noconfirm tmux neofetch htop trash-cli python-pip tldr net-tools speedtest-cli neovim python-neovim fd tree cowsay fzf npm ffmpeg mpv ripgrep unrar moreutils cronie git-delta wl-clipboard rust cargo go v6l-utils ruby gcc obs-studio dconf-editor sqlite shfmt cmake kdenlive starship bat yt-dlp ddcutil kitty celluloid fish docker deno yarn libgda6 easyeffects xdg-desktop-portal-gnome xdg-desktop-portal qt6-wayland mpv-mpris sdl2 networkmanager kiwix-desktop
+sudo pacman -S --noconfirm tmux neofetch htop trash-cli python-pip tldr net-tools speedtest-cli neovim python-neovim fd tree cowsay fzf npm ffmpeg mpv ripgrep unrar moreutils cronie git-delta wl-clipboard rust cargo go v6l-utils ruby gcc obs-studio dconf-editor sqlite shfmt cmake kdenlive starship bat yt-dlp ddcutil foot celluloid fish docker deno yarn libgda6 easyeffects xdg-desktop-portal-gnome xdg-desktop-portal qt6-wayland mpv-mpris sdl2 networkmanager kiwix-desktop
 
 yay -S --noconfirm noto-fonts-emoji ibus-bamboo input-remapper onlyoffice-bin gnome-browser-connector bluetuith-bin googledot-cursor-theme
 
@@ -44,8 +44,8 @@ ln -sf ~/dotfiles/.selected_editor ~/.selected_editor
 ln -sf ~/dotfiles/.ripgreprc ~/
 rm -rf ~/.config/input-remapper/
 ln -sf ~/dotfiles/input-remapper/ ~/.config/
-rm -rf ~/.config/kitty
-ln -sf ~/dotfiles/kitty ~/.config/
+rm -rf ~/.config/foot
+ln -sf ~/dotfiles/foot ~/.config/
 ln -sf ~/dotfiles/fish ~/.config/
 ln -sf ~/dotfiles/pipewire/ ~/.config/
 
