@@ -248,14 +248,6 @@
             "BTN_MIDDLE",
             "mouse"
         ],
-        "1,67,1": [
-            "KEY_LEFTCTRL+XF86MonBrightnessDown",
-            "keyboard"
-        ],
-        "1,68,1": [
-            "KEY_LEFTCTRL+XF86MonBrightnessUp",
-            "keyboard"
-        ],
         "1,15,1": [
             "if_single(key(KEY_TAB), ,10000)",
             "keyboard"
@@ -266,14 +258,6 @@
         ],
         "1,57,1+1,46,1": [
             "Alt_L+KEY_F8",
-            "keyboard"
-        ],
-        "1,57,1+1,26,1": [
-            "KEY_LEFTCTRL+KEY_PAGEUP",
-            "keyboard"
-        ],
-        "1,57,1+1,27,1": [
-            "KEY_LEFTCTRL+KEY_PAGEDOWN",
             "keyboard"
         ]
     }
