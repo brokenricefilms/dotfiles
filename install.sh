@@ -1,8 +1,6 @@
 #! /usr/bin/env sh
 
-sudo pacman -S --noconfirm tmux neofetch htop trash-cli python-pip tldr net-tools speedtest-cli neovim python-neovim fd tree cowsay fzf npm ffmpeg mpv ripgrep unrar moreutils cronie git-delta wl-clipboard rust cargo go v6l-utils ruby gcc obs-studio dconf-editor sqlite shfmt cmake kdenlive starship bat yt-dlp ddcutil foot celluloid fish docker deno yarn libgda6 xdg-desktop-portal-gnome xdg-desktop-portal qt6-wayland mpv-mpris sdl2 networkmanager kiwix-desktop easyeffects calf lsp-plugins zam-plugins-lv2 mda.lv2 vidir
-
-yay -S --noconfirm noto-fonts-emoji ibus-bamboo input-remapper onlyoffice-bin gnome-browser-connector bluetuith-bin googledot-cursor-theme
+yay -S --noconfirm tmux neofetch htop trash-cli python-pip tldr net-tools speedtest-cli neovim python-neovim fd tree cowsay fzf npm ffmpeg mpv ripgrep unrar moreutils cronie git-delta wl-clipboard rust cargo go v4l-utils ruby gcc obs-studio dconf-editor sqlite shfmt cmake kdenlive starship bat yt-dlp ddcutil foot celluloid fish docker deno yarn libgda6 xdg-desktop-portal-gnome xdg-desktop-portal qt6-wayland mpv-mpris sdl2 networkmanager kiwix-desktop easyeffects calf lsp-plugins zam-plugins-lv2 mda.lv2 noto-fonts-emoji ibus-bamboo input-remapper-git onlyoffice-bin gnome-browser-connector googledot-cursor-theme vidir
 
 npm config set prefix ~/.npm/
 
@@ -26,13 +24,13 @@ go install github.com/jesseduffield/lazygit@latest
 go install github.com/jesseduffield/lazydocker@latest
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+$HOME/.tmux/plugins/tpm/bin/install_plugins
 
 ln -sf ~/repos/thuanowa/ok/.tinypng ~/.tinypng
 ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/ssh/config ~/.ssh/config
 
 rm -rf ~/.config/nvim
-mkdir ~/.config/nvim
 ln -sf ~/dotfiles/nvim ~/.config/
 
 ln -sf ~/dotfiles/git/gitconfig ~/.gitconfig
@@ -47,7 +45,6 @@ ln -sf ~/dotfiles/input-remapper/ ~/.config/
 rm -rf ~/.config/foot
 ln -sf ~/dotfiles/foot ~/.config/
 ln -sf ~/dotfiles/fish ~/.config/
-ln -sf ~/dotfiles/pipewire/ ~/.config/
 
 mkdir -p ~/repos/thuanowa/
 cd ~/repos/thuanowa/
@@ -57,5 +54,6 @@ ln -sf ~/repos/thuanowa/ok/.fonts ~/.fonts
 cd ~/.fonts
 fc-cache -rf
 
+cd ~/repos/thuanowa/
 gh repo clone thuanowa/obs-studio
 ln -sf ~/repos/thuanowa/obs-studio/ ~/.config/
