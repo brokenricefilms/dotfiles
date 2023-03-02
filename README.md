@@ -6,7 +6,7 @@
 ## Current setup
 
 - EndeavourOS(arch base), Gnome Wayland
-  - Extensions: [Pano - Next-gen Clipboard Manager](https://github.com/oae/gnome-shell-pano), [Rounded Window Corners](https://github.com/yilozt/rounded-window-corners)
+  - Extensions: [Pano](https://github.com/oae/gnome-shell-pano)
 - [foot terminal](./foot/foot.ini)
 - [Tmux](./tmux/tmux.conf)
 - [Fish shell](./fish/)

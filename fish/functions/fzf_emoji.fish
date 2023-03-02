@@ -1,4 +1,4 @@
-function ej --description 'emoji selection'
+function fzf_emoji
     if type -q emoji-fzf
         emoji-fzf preview --prepend | fzf | awk '{ print $1 }' | tr -d "\n" | wl-copy
     else
