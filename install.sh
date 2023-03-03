@@ -1,6 +1,6 @@
 #! /usr/bin/env sh
 
-yay -S --noconfirm tmux neofetch htop trash-cli python-pip tldr net-tools speedtest-cli neovim python-neovim fd tree cowsay fzf npm ffmpeg mpv ripgrep unrar moreutils cronie git-delta wl-clipboard rust cargo go v4l-utils ruby gcc obs-studio dconf-editor sqlite shfmt cmake kdenlive starship bat yt-dlp ddcutil foot celluloid fish docker deno yarn libgda6 xdg-desktop-portal-gnome xdg-desktop-portal qt6-wayland mpv-mpris sdl2 networkmanager kiwix-desktop easyeffects calf lsp-plugins zam-plugins-lv2 mda.lv2 noto-fonts-emoji ibus-bamboo input-remapper-git onlyoffice-bin gnome-browser-connector googledot-cursor-theme vidir
+yay -S --noconfirm tmux neofetch htop trash-cli python-pip tldr net-tools speedtest-cli neovim python-neovim fd tree cowsay fzf npm ffmpeg mpv ripgrep unrar moreutils cronie git-delta wl-clipboard rust cargo go v4l-utils ruby gcc obs-studio dconf-editor sqlite shfmt cmake kdenlive starship bat yt-dlp ddcutil foot celluloid docker deno yarn libgda6 xdg-desktop-portal-gnome xdg-desktop-portal qt6-wayland mpv-mpris sdl2 networkmanager kiwix-desktop easyeffects calf lsp-plugins zam-plugins-lv2 mda.lv2 noto-fonts-emoji ibus-bamboo input-remapper-git onlyoffice-bin gnome-browser-connector googledot-cursor-theme vidir exa
 
 npm config set prefix ~/.npm/
 
@@ -44,7 +44,7 @@ rm -rf ~/.config/input-remapper/
 ln -sf ~/dotfiles/input-remapper/ ~/.config/
 rm -rf ~/.config/foot
 ln -sf ~/dotfiles/foot ~/.config/
-ln -sf ~/dotfiles/fish ~/.config/
+ln -sf ~/dotfiles/bashrc ~/.bashrc
 
 mkdir -p ~/repos/thuanowa/
 cd ~/repos/thuanowa/

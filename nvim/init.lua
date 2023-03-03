@@ -52,6 +52,9 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 vim.keymap.set('n', '*', '*zz')
 vim.keymap.set('n', '#', '#zz')
 
+vim.keymap.set('n', 'j', 'gj')
+vim.keymap.set('n', 'k', 'gk')
+
 vim.keymap.set('', '<Right>', '<C-w><')
 vim.keymap.set('', '<Down>', '<C-w>-')
 vim.keymap.set('', '<Up>', '<C-w>+')
