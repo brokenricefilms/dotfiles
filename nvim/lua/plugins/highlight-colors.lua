@@ -1,10 +1,12 @@
 return {
   {
-    "brenoprata10/nvim-highlight-colors",
+    "NvChad/nvim-colorizer.lua",
     opts = {
-      enable_named_colors = true,
-      render = "background",
-      enable_tailwind = false,
+      user_default_options = {
+        css = true,
+        enable_tailwind = true,
+        mode = 'virtualtext'
+      }
     },
   },
 }
