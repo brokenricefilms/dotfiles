@@ -104,6 +104,7 @@ alias uu='yay -R --noconfirm'
 alias v='fzf_sudo_edit'
 alias x='chmod +x'
 alias cat='bat --theme=GitHub'
+alias tree='exa --tree --icons'
 
 browser_daily() {
   xdg-open "https://www.inoreader.com/all_articles"
@@ -219,10 +220,10 @@ fzf_change_directory() {
     DIR=$1
 
     fzf_dir() {
-      DIR=$(fd --hidden --type directory . --exclude node_modules --exclude go | fzf_down --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r tree -C -L 2')
+      DIR=$(fd --hidden --type directory . --exclude node_modules --exclude go | fzf_down --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --tree --level=2')
 
       cd "$DIR"
-      tree -C -L 2
+      exa --tree --level=2
     }
 
     if [[ -n $DIR ]]; then
