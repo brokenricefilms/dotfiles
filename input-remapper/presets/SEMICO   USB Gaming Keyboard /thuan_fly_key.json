@@ -259,6 +259,18 @@
         "1,57,1+1,46,1": [
             "Alt_L+KEY_F8",
             "keyboard"
+        ],
+        "1,57,1+1,58,1": [
+            "Alt_L+A",
+            "keyboard"
+        ],
+        "1,88,1": [
+            "KEY_LEFTCTRL+KEY_PAGEDOWN",
+            "keyboard"
+        ],
+        "1,87,1": [
+            "KEY_LEFTCTRL+KEY_PAGEUP",
+            "keyboard"
         ]
     }
 }
