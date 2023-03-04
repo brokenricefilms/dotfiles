@@ -44,8 +44,6 @@ stty time 0
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] &&
   . /usr/share/bash-completion/bash_completion
 
-eval "$(gh completion -s bash)"
-
 source $HOME/.local/share/fzf-bash-completion.sh
 bind -x '"\t": fzf_bash_completion'
 source $HOME/.local/share/completion.bash
@@ -252,4 +250,5 @@ kill_all_unname_tmux_session() {
   cd -
 }
 
+eval "$(fnm env --use-on-cd)"
 eval "$(starship init bash)"
