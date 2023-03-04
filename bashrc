@@ -147,6 +147,12 @@ update() {
     wget https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.bash
     wget https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.bash
 
+    cd ~/dotfiles/
+    nvim --headless "+Lazy! sync" +qa
+    git add nvim/lazy-lock.json
+    git commit -m "chore: lazy.nvim"
+    git push
+
     cd $CURRENT_DIR
   else
     echo "Check your internet connection for online update and try again"
