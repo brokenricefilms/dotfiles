@@ -86,7 +86,6 @@ alias ll='git pull -f'
 alias ls='exa --long --all --icons'
 alias la='exa --all --icons'
 alias o='fzf_open'
-alias owa='code .'
 alias p='git push'
 alias pp='git push -f'
 alias q='exit'
@@ -110,21 +109,71 @@ browser_daily() {
   xdg-open "https://github.com"
 }
 
+download_audio() {
+  yt-dlp -f bestaudio --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "$1"
+}
+
 # TODO: update_music checking playlist to update change
 sync_music() {
   network_status &>/dev/null
 
   if [[ "$NETWORK" == "online" ]]; then
     CURRENT_DIR=$(pwd)
-    MUSIC_DIR=$HOME/Music/music_i_like/
+    MUSIC_DIR=$HOME/Music/
 
-    rm -rf "$MUSIC_DIR"
-    mkdir -p "$MUSIC_DIR"
     cd $MUSIC_DIR
+    trash *
 
-    yt-dlp -f "bestaudio" --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "https://www.youtube.com/playlist?list=PLcazFfFZIFPld2xu_nAgmbgj5QldQOpUB"
+    mkdir joji
+    cd joji
+    download_audio "https://l.thuanowa.com/music-joji"
 
-    cd CURRENT_DIR
+    cd $MUSIC_DIR
+    mkdir billie_eilish
+    cd billie_eilish
+    download_audio "https://l.thuanowa.com/music-billie-eilish"
+
+    cd $MUSIC_DIR
+    mkdir lil_wuyn
+    cd lil_wuyn
+    download_audio "https://l.thuanowa.com/music-lil-wuyn"
+
+    cd $MUSIC_DIR
+    mkdir b_ray
+    cd b_ray
+    download_audio "https://l.thuanowa.com/music-b-ray"
+
+    cd $MUSIC_DIR
+    mkdir den_vau
+    cd den_vau
+    download_audio "https://l.thuanowa.com/music-den-vau"
+
+    cd $MUSIC_DIR
+    mkdir English
+    cd English
+    download_audio "https://l.thuanowa.com/music-en"
+
+    cd $MUSIC_DIR
+    mkdir Vietnamese
+    cd Vietnamese
+    download_audio "https://l.thuanowa.com/music-vi"
+
+    cd $MUSIC_DIR
+    mkdir Korean
+    cd Korean
+    download_audio "https://l.thuanowa.com/music-ko"
+
+    cd $MUSIC_DIR
+    mkdir Japanese
+    cd Japanese
+    download_audio "https://l.thuanowa.com/music-ja"
+
+    cd $MUSIC_DIR
+    mkdir chill_hop
+    cd chill_hop
+    download_audio "https://l.thuanowa.com/music-chill-hop"
+
+    cd $CURRENT_DIR
   else
     echo "Check your internet connection and try again"
   fi
@@ -254,6 +303,15 @@ kill_all_unname_tmux_session() {
   chmod +x killAllUnnameTmuxSessionOutput.sh
   ./killAllUnnameTmuxSessionOutput.sh
   cd -
+}
+
+reload() {
+  cp ~/dotfiles/touchcursor.conf ~/.config/touchcursor/
+  systemctl --user restart touchcursor.service
+
+  source ~/.bashrc
+
+  tmux source ~/.tmux.conf
 }
 
 eval "$(fnm env --use-on-cd)"
