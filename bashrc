@@ -276,7 +276,7 @@ fzf_change_directory() {
       DIR=$(fd --hidden --type directory . --exclude node_modules --exclude go | fzf_down --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --tree --level=2')
 
       cd "$DIR"
-      exa --tree --level=2
+      la
     }
 
     if [[ -n $DIR ]]; then
