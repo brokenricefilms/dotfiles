@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if command -v tmux &>/dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
+  tmux attach || tmux new-session && exit
 fi
 
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
@@ -65,8 +65,7 @@ alias ...='cd .. ; cd .. ; ls'
 alias ..='cd .. ; ls'
 alias a='git add -A; git commit'
 alias aa='git add -A; git commit -m "auto commit"'
-alias al='la'
-alias c='kill_all_unname_tmux_session; clear -x'
+alias c='clear -x'
 alias cdr='change_directory_to_git_root'
 alias changeDirToUsbFolder='cd /run/media/master/ ; ls'
 alias d='fzf_change_directory'
@@ -296,22 +295,15 @@ fzf_change_directory() {
   fi
 }
 
-kill_all_unname_tmux_session() {
-  cd /tmp/
-  tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >/tmp/killAllUnnameTmuxSessionOutput.sh
-  sed -i 's/^/tmux kill-session -t /' killAllUnnameTmuxSessionOutput.sh
-  chmod +x killAllUnnameTmuxSessionOutput.sh
-  ./killAllUnnameTmuxSessionOutput.sh
-  cd -
-}
-
 reload() {
-  cp ~/dotfiles/touchcursor.conf ~/.config/touchcursor/
-  systemctl --user restart touchcursor.service
-
   source ~/.bashrc
 
   tmux source ~/.tmux.conf
+}
+
+reload_touchcursor() {
+  cp ~/dotfiles/touchcursor.conf ~/.config/touchcursor/
+  systemctl --user restart touchcursor.service
 }
 
 eval "$(fnm env --use-on-cd)"
