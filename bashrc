@@ -14,7 +14,6 @@ export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin
 export PATH="$HOME/.npm/bin:$PATH"
-export PATH="$(yarn global bin):$PATH"
 export GEM_HOME="$HOME/gems"
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 export DENO_INSTALL="$HOME/.deno"
@@ -49,6 +48,51 @@ bind -x '"\t": fzf_bash_completion'
 source $HOME/.local/share/completion.bash
 source $HOME/.local/share/key-bindings.bash
 
+alias bat='bat --theme=GitHub'
+alias m='mpv --loop-playlist --shuffle *'
+alias ser='browser_sync_start_server'
+alias tree='exa --tree --icons'
+alias x='chmod +x'
+
+alias c='clear -x'
+alias q='exit'
+
+alias r='rm -rf'
+alias rr='sudo rm -rf'
+alias t='trash'
+
+alias d='fzf_change_directory'
+alias dd='cd $HOME; fzf_change_directory'
+alias e='fzf_edit_file'
+alias ee='cd $HOME; fzf_edit_file'
+alias ej='fzf_emoji'
+alias fzf_down='fzf --height 50% --min-height 20 --reverse'
+alias o='fzf_open'
+alias v='fzf_sudo_edit'
+
+alias f='yay -Ss'
+alias i='yay -S --noconfirm'
+alias u='yay -R --noconfirm'
+alias uu='yay -R --noconfirm'
+
+alias a='git add -A; git commit'
+alias aa='git add -A; git commit -m "auto commit"'
+alias cdr='change_directory_to_git_root'
+alias gc='clone_change_dir_to_repo'
+alias l='git pull'
+alias ll='git pull -f'
+alias p='git push'
+alias pp='git push -f'
+alias s='git status -sb'
+
+alias ...='cd .. ; cd .. ; ls'
+alias ..='cd .. ; ls'
+alias doc='cd ~/Documents ; ls'
+alias dow='cd ~/Downloads ; ls'
+alias la='exa --all --icons'
+alias ls='exa --long --all --icons'
+alias tmp='cd /tmp'
+
 network_status() {
   ping -c 1 google.com
   local NETWORK_STATUS=$?
@@ -60,48 +104,6 @@ network_status() {
     NETWORK="online"
   fi
 }
-
-alias ...='cd .. ; cd .. ; ls'
-alias ..='cd .. ; ls'
-alias a='git add -A; git commit'
-alias aa='git add -A; git commit -m "auto commit"'
-alias c='clear -x'
-alias cdr='change_directory_to_git_root'
-alias changeDirToUsbFolder='cd /run/media/master/ ; ls'
-alias d='fzf_change_directory'
-alias dd='cd $HOME; fzf_change_directory'
-alias doc='cd ~/Documents ; ls'
-alias dow='cd ~/Downloads ; ls'
-alias e='fzf_edit_file'
-alias ee='cd $HOME; fzf_edit_file'
-alias ej='fzf_emoji'
-alias f='yay -Ss'
-alias fzf_down='fzf --height 50% --min-height 20 --reverse'
-alias gc='clone_change_dir_to_repo'
-alias h='htop'
-alias i='yay -S --noconfirm'
-alias l='git pull'
-alias ll='git pull -f'
-alias ls='exa --long --all --icons'
-alias la='exa --all --icons'
-alias o='fzf_open'
-alias p='git push'
-alias pp='git push -f'
-alias q='exit'
-alias r='rm -rf'
-alias rr='sudo rm -rf'
-alias s='git status -sb'
-alias ser='browser_sync_start_server'
-alias sl='ls'
-alias t='trash'
-alias tmp='cd /tmp'
-alias u='sudo pacman -R --noconfirm'
-alias uu='yay -R --noconfirm'
-alias v='fzf_sudo_edit'
-alias x='chmod +x'
-alias bat='bat --theme=GitHub'
-alias tree='exa --tree --icons'
-alias m='mpv --loop-playlist --shuffle *'
 
 browser_daily() {
   xdg-open "https://www.inoreader.com/all_articles"
