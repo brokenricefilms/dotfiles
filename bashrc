@@ -7,26 +7,35 @@ fi
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 export PATH="$HOME/gems/bin:$PATH"
+
+export PATH=$PATH:$HOME/dotfiles/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/bin
-export PATH=$PATH:$HOME/dotfiles/personal_bin/
+
 export PATH=$PATH:$HOME/.cargo/bin
+
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin
+
 export PATH="$HOME/.npm/bin:$PATH"
+export PNPM_HOME="/home/master/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
 export GEM_HOME="$HOME/gems"
+
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+
 export VISUAL="nvim"
 export EDITOR=$VISUAL
 export MANPAGER="nvim +Man!"
 export EDITOR="nvim"
+
 export FZF_DEFAULT_COMMAND="fd --type f --follow --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d"
-export PNPM_HOME="/home/master/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
 
 HISTCONTROL=ignoreboth
 HISTSIZE=
@@ -53,6 +62,7 @@ alias m='mpv --loop-playlist --shuffle *'
 alias ser='browser_sync_start_server'
 alias tree='exa --tree --icons'
 alias x='chmod +x'
+alias hi='browser_daily ; update'
 
 alias c='clear -x'
 alias q='exit'
@@ -208,11 +218,6 @@ update() {
   else
     echo "Check your internet connection for online update and try again"
   fi
-}
-
-hi() {
-  browser_daily
-  update
 }
 
 browser_sync_start_server() {
