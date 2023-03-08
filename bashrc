@@ -101,6 +101,7 @@ alias v='fzf_sudo_edit'
 alias x='chmod +x'
 alias cat='bat --theme=GitHub'
 alias tree='exa --tree --icons'
+alias m='mpv --loop-playlist --shuffle *'
 
 browser_daily() {
   xdg-open "https://www.inoreader.com/all_articles"
