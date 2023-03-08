@@ -7,8 +7,12 @@ return {
         sources = {
           nls.builtins.formatting.prettierd,
           nls.builtins.formatting.shfmt,
+
           nls.builtins.diagnostics.eslint,
           nls.builtins.diagnostics.write_good,
+          nls.builtins.diagnostics.shellcheck,
+
+          nls.builtins.hover.printenv,
         },
       }
     end,
