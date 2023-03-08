@@ -75,10 +75,10 @@ alias d='fzf_change_directory'
 alias dd='cd $HOME; fzf_change_directory'
 alias e='fzf_edit_file'
 alias ee='cd $HOME; fzf_edit_file'
+alias E='fzf_edit_file_sudo'
 alias ej='fzf_emoji'
 alias fzf_down='fzf --height 50% --min-height 20 --reverse'
 alias o='fzf_open'
-alias v='fzf_sudo_edit'
 
 alias f='yay -Ss'
 alias i='yay -S --noconfirm'
@@ -260,6 +260,18 @@ fzf_edit_file() {
     fi
   else
     nvim "$1"
+  fi
+}
+
+fzf_edit_file_sudo() {
+  if [ -z "$1" ]; then
+    FILE=$(fd --hidden --type file . --exclude .git --exclude node_modules | fzf_down --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}')
+
+    if [ -n "$FILE" ]; then
+      sudoedit "$FILE"
+    fi
+  else
+    sudoedit "$1"
   fi
 }
 
