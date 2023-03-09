@@ -24,6 +24,7 @@ return {
       "unocss-language-server",
       "vue-language-server",
       "write-good",
+      "stylelint-lsp",
     }
   },
 }

@@ -49,14 +49,6 @@ set -o vi
 
 stty time 0
 
-[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] &&
-  . /usr/share/bash-completion/bash_completion
-
-source $HOME/.local/share/fzf-bash-completion.sh
-bind -x '"\t": fzf_bash_completion'
-source $HOME/.local/share/completion.bash
-source $HOME/.local/share/key-bindings.bash
-
 alias bat='bat --theme=GitHub'
 alias m='mpv --loop-playlist --shuffle *'
 alias ser='browser_sync_start_server'
@@ -77,8 +69,9 @@ alias e='fzf_edit_file'
 alias ee='cd $HOME; fzf_edit_file'
 alias E='fzf_edit_file_sudo'
 alias ej='fzf_emoji'
-alias fzf_down='fzf --height 50% --min-height 20 --reverse'
+alias fzf_down='fzf --reverse --preview-window=top'
 alias o='fzf_open'
+alias g='fzf_rg'
 
 alias f='yay -Ss'
 alias i='yay -S --noconfirm'
@@ -315,8 +308,13 @@ fzf_change_directory() {
   fi
 }
 
+fzf_rg() {
+  rg --color=always --line-number --no-heading --smart-case "${*:-}" |
+    fzf_down --ansi --color "hl:-1:underline,hl+:-1:underline:reverse" --delimiter : --preview 'bat --theme=GitHub --color=always {1} --highlight-line {2}' --bind 'enter:become($EDITOR {1} +{2})'
+}
+
 fzf_tldr() {
-  tldr --list | sed "s/'//g" | sed "s/,//g" | sed "s/ /\n/g" | sed "s/]//g" | sed "s/\[//g" | fzf --preview "tldr {1}" --preview-window=top,80%
+  tldr --list | sed "s/'//g" | sed "s/,//g" | sed "s/ /\n/g" | sed "s/]//g" | sed "s/\[//g" | fzf_down --preview "tldr {1}"
 }
 
 tl() {
@@ -338,6 +336,11 @@ reload_touchcursor() {
   cp ~/dotfiles/touchcursor.conf ~/.config/touchcursor/
   systemctl --user restart touchcursor.service
 }
+
+source $HOME/.local/share/fzf-bash-completion.sh
+bind -x '"\t": fzf_bash_completion'
+source $HOME/.local/share/completion.bash
+source $HOME/.local/share/key-bindings.bash
 
 eval "$(fnm env --use-on-cd)"
 eval "$(starship init bash)"

@@ -11,6 +11,7 @@ return {
           nls.builtins.diagnostics.eslint,
           nls.builtins.diagnostics.write_good,
           nls.builtins.diagnostics.shellcheck,
+          nls.builtins.diagnostics.stylelint,
 
           nls.builtins.hover.printenv,
         },
