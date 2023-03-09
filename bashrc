@@ -96,140 +96,116 @@ alias la='exa --all --icons'
 alias ls='exa --long --all --icons'
 alias tmp='cd /tmp'
 
-network_status() {
-  ping -c 1 google.com
-  local NETWORK_STATUS=$?
-  local NETWORK_ERROR_CODE=2
-
-  if [[ "$NETWORK_STATUS" == "$NETWORK_ERROR_CODE" ]]; then
-    NETWORK="offline"
-  else
-    NETWORK="online"
-  fi
-}
-
-browser_daily() {
+function browser_daily() {
   xdg-open "https://www.inoreader.com/all_articles"
   xdg-open "https://www.youtube.com/feed/subscriptions"
   xdg-open "https://github.com"
 }
 
-download_audio() {
+function download_audio() {
   yt-dlp -f bestaudio --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "$1"
 }
 
 # TODO: update_music checking playlist to update change
-sync_music() {
-  network_status &>/dev/null
+function sync_music() {
+  CURRENT_DIR=$(pwd)
+  MUSIC_DIR=$HOME/Music/
 
-  if [[ "$NETWORK" == "online" ]]; then
-    CURRENT_DIR=$(pwd)
-    MUSIC_DIR=$HOME/Music/
+  cd $MUSIC_DIR
+  trash *
 
-    cd $MUSIC_DIR
-    trash *
+  mkdir joji
+  cd joji
+  download_audio "https://l.thuanowa.com/music-joji"
 
-    mkdir joji
-    cd joji
-    download_audio "https://l.thuanowa.com/music-joji"
+  cd $MUSIC_DIR
+  mkdir billie_eilish
+  cd billie_eilish
+  download_audio "https://l.thuanowa.com/music-billie-eilish"
 
-    cd $MUSIC_DIR
-    mkdir billie_eilish
-    cd billie_eilish
-    download_audio "https://l.thuanowa.com/music-billie-eilish"
+  cd $MUSIC_DIR
+  mkdir lil_wuyn
+  cd lil_wuyn
+  download_audio "https://l.thuanowa.com/music-lil-wuyn"
 
-    cd $MUSIC_DIR
-    mkdir lil_wuyn
-    cd lil_wuyn
-    download_audio "https://l.thuanowa.com/music-lil-wuyn"
+  cd $MUSIC_DIR
+  mkdir b_ray
+  cd b_ray
+  download_audio "https://l.thuanowa.com/music-b-ray"
 
-    cd $MUSIC_DIR
-    mkdir b_ray
-    cd b_ray
-    download_audio "https://l.thuanowa.com/music-b-ray"
+  cd $MUSIC_DIR
+  mkdir den_vau
+  cd den_vau
+  download_audio "https://l.thuanowa.com/music-den-vau"
 
-    cd $MUSIC_DIR
-    mkdir den_vau
-    cd den_vau
-    download_audio "https://l.thuanowa.com/music-den-vau"
+  cd $MUSIC_DIR
+  mkdir English
+  cd English
+  download_audio "https://l.thuanowa.com/music-en"
 
-    cd $MUSIC_DIR
-    mkdir English
-    cd English
-    download_audio "https://l.thuanowa.com/music-en"
+  cd $MUSIC_DIR
+  mkdir Vietnamese
+  cd Vietnamese
+  download_audio "https://l.thuanowa.com/music-vi"
 
-    cd $MUSIC_DIR
-    mkdir Vietnamese
-    cd Vietnamese
-    download_audio "https://l.thuanowa.com/music-vi"
+  cd $MUSIC_DIR
+  mkdir Korean
+  cd Korean
+  download_audio "https://l.thuanowa.com/music-ko"
 
-    cd $MUSIC_DIR
-    mkdir Korean
-    cd Korean
-    download_audio "https://l.thuanowa.com/music-ko"
+  cd $MUSIC_DIR
+  mkdir Japanese
+  cd Japanese
+  download_audio "https://l.thuanowa.com/music-ja"
 
-    cd $MUSIC_DIR
-    mkdir Japanese
-    cd Japanese
-    download_audio "https://l.thuanowa.com/music-ja"
+  cd $MUSIC_DIR
+  mkdir chill_hop
+  cd chill_hop
+  download_audio "https://l.thuanowa.com/music-chill-hop"
 
-    cd $MUSIC_DIR
-    mkdir chill_hop
-    cd chill_hop
-    download_audio "https://l.thuanowa.com/music-chill-hop"
-
-    cd $CURRENT_DIR
-  else
-    echo "Check your internet connection and try again"
-  fi
+  cd $CURRENT_DIR
 }
 
-update() {
-  network_status &>/dev/null
+function update() {
+  CURRENT_DIR=$(pwd)
 
-  if [[ "$NETWORK" == "online" ]]; then
-    CURRENT_DIR=$(pwd)
+  sudo pacman -Syu --noconfirm
+  yay -Sua --noconfirm
+  pnpm add -g pnpm
+  tldr --update
+  ~/.tmux/plugins/tpm/bin/update_plugins all
 
-    sudo pacman -Syu --noconfirm
-    yay -Sua --noconfirm
-    pnpm add -g pnpm
-    tldr --update
-    ~/.tmux/plugins/tpm/bin/update_plugins all
+  cd ~/.local/share/
+  wget https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh
+  wget https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.bash
+  wget https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.bash
 
-    cd ~/.local/share/
-    wget https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh
-    wget https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.bash
-    wget https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.bash
+  cd ~/dotfiles/
+  nvim --headless "+Lazy! sync" +qa
+  git add nvim/lazy-lock.json
+  git commit -m "chore: lazy.nvim"
+  git push
 
-    cd ~/dotfiles/
-    nvim --headless "+Lazy! sync" +qa
-    git add nvim/lazy-lock.json
-    git commit -m "chore: lazy.nvim"
-    git push
-
-    cd $CURRENT_DIR
-  else
-    echo "Check your internet connection for online update and try again"
-  fi
+  cd $CURRENT_DIR
 }
 
-browser_sync_start_server() {
+function browser_sync_start_server() {
   SERVER_IP=$(hostname -I)
   browser-sync start --server --files . --no-notify --host "$SERVER_IP" --port 9000
 }
 
-change_directory_to_git_root() {
+function change_directory_to_git_root() {
   cd $(git rev-parse --show-toplevel)
   ls
 }
 
-clone_change_dir_to_repo() {
+function clone_change_dir_to_repo() {
   GIT_DIR="$(basename "$1" .git)"
   GIT_DIR_RESOLVED=${2:-$GIT_DIR}
   git clone "$@" && cd "$GIT_DIR_RESOLVED"
 }
 
-fzf_emoji() {
+function fzf_emoji() {
   if hash emoji-fzf 2>/dev/null; then
     emoji-fzf preview --prepend |
       fzf_down |
@@ -244,7 +220,7 @@ fzf_emoji() {
   fi
 }
 
-fzf_edit_file() {
+function fzf_edit_file() {
   if [ -z "$1" ]; then
     FILE=$(fd --hidden --type file . --exclude .git --exclude node_modules | fzf_down --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}')
 
@@ -256,7 +232,7 @@ fzf_edit_file() {
   fi
 }
 
-fzf_edit_file_sudo() {
+function fzf_edit_file_sudo() {
   if [ -z "$1" ]; then
     FILE=$(fd --hidden --type file . --exclude .git --exclude node_modules | fzf_down --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}')
 
@@ -268,7 +244,7 @@ fzf_edit_file_sudo() {
   fi
 }
 
-fzf_open() {
+function fzf_open() {
   if [ -z "$1" ]; then
     FILE=$(fd --hidden --type file . --exclude .git --exclude node_modules | fzf_down --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:500 {}')
 
@@ -280,7 +256,7 @@ fzf_open() {
   fi
 }
 
-fzf_change_directory() {
+function fzf_change_directory() {
   if [ -z "$1" ]; then
     DIR=$1
 
@@ -308,16 +284,16 @@ fzf_change_directory() {
   fi
 }
 
-fzf_rg() {
+function fzf_rg() {
   rg --color=always --line-number --no-heading --smart-case "${*:-}" |
     fzf_down --ansi --color "hl:-1:underline,hl+:-1:underline:reverse" --delimiter : --preview 'bat --theme=GitHub --color=always {1} --highlight-line {2}' --bind 'enter:become($EDITOR {1} +{2})'
 }
 
-fzf_tldr() {
+function fzf_tldr() {
   tldr --list | sed "s/'//g" | sed "s/,//g" | sed "s/ /\n/g" | sed "s/]//g" | sed "s/\[//g" | fzf_down --preview "tldr {1}"
 }
 
-tl() {
+function tl() {
   if [ -z "$1" ]; then
     command=$(fzf_tldr)
     tldr $command
@@ -326,13 +302,13 @@ tl() {
   fi
 }
 
-reload() {
+function reload() {
   source ~/.bashrc
 
   tmux source ~/.tmux.conf
 }
 
-reload_touchcursor() {
+function reload_touchcursor() {
   cp ~/dotfiles/touchcursor.conf ~/.config/touchcursor/
   systemctl --user restart touchcursor.service
 }
