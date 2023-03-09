@@ -315,6 +315,19 @@ fzf_change_directory() {
   fi
 }
 
+fzf_tldr() {
+  tldr --list | sed "s/'//g" | sed "s/,//g" | sed "s/ /\n/g" | sed "s/]//g" | sed "s/\[//g" | fzf --preview "tldr {1}" --preview-window=top,80%
+}
+
+tl() {
+  if [ -z "$1" ]; then
+    command=$(fzf_tldr)
+    tldr $command
+  else
+    tldr "$1"
+  fi
+}
+
 reload() {
   source ~/.bashrc
 
