@@ -206,17 +206,15 @@ function clone_change_dir_to_repo() {
 }
 
 function fzf_emoji() {
+  default() {
+    emoji-fzf preview --prepend | fzf | awk '{ print $1 }' | tr -d "\n" | wl-copy
+  }
+
   if hash emoji-fzf 2>/dev/null; then
-    emoji-fzf preview --prepend |
-      fzf_down |
-      awk '{ print $1 }' | tr -d "\n" | wl-copy
+    default
   else
     pip install emoji-fzf
-    emoji-fzf preview --prepend |
-      fzf_down |
-      awk '{ print $1 }' |
-      tr -d "\n" |
-      wl-copy
+    default
   fi
 }
 
@@ -262,7 +260,6 @@ function fzf_change_directory() {
 
     fzf_dir() {
       DIR=$(fd --hidden --type directory . --exclude node_modules --exclude go | fzf_down --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --tree --level=2')
-
       cd "$DIR"
       la
     }
