@@ -302,38 +302,6 @@ function reload_touchcursor() {
   systemctl --user restart touchcursor.service
 }
 
-function git-clone-worktrees() {
-  user_repo=$1
-  ssh_github_url="git@github.com:"
-  basename=${user_repo##*/}
-  repo_name=${2:-${basename%.*}}
-
-  mkdir "$repo_name"
-  cd "$repo_name"
-
-  git clone --bare "$ssh_github_url$user_repo" .bare
-  echo "gitdir: ./.bare" >.git
-
-  git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
-  git fetch --all
-
-  for remote in $(git branch -r); do
-    git worktree add "${remote#origin/}"
-  done
-}
-
-function git-clone-worktrees-tmux() {
-  git-clone-worktrees "$1"
-
-  current_dir=$(pwd)
-  for remote in $(git branch -r); do
-    cd $current_dir
-    cd "${remote#origin/}"
-    tmux new-window -n "${remote#origin/}" \; split-window -h -d
-  done
-  exit
-}
-
 source $HOME/.local/share/fzf-bash-completion.sh
 bind -x '"\t": fzf_bash_completion'
 source $HOME/.local/share/completion.bash
