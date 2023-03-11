@@ -27,22 +27,22 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 $HOME/.tmux/plugins/tpm/bin/install_plugins
 
 ln -sf ~/repos/thuanowa/ok/.tinypng ~/.tinypng
-ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
-ln -sf ~/dotfiles/ssh/config ~/.ssh/config
+ln -sf ~/dotfiles/main/tmux/tmux.conf ~/.tmux.conf
+ln -sf ~/dotfiles/main/ssh/config ~/.ssh/config
 
 rm -rf ~/.config/nvim
-ln -sf ~/dotfiles/nvim ~/.config/
+ln -sf ~/dotfiles/main/nvim ~/.config/
 
-ln -sf ~/dotfiles/git/gitconfig ~/.gitconfig
-ln -sf ~/dotfiles/git/gh_config.yml ~/.config/gh/config.yml
+ln -sf ~/dotfiles/main/git/gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/main/git/gh_config.yml ~/.config/gh/config.yml
 rm -rf ~/.config/lazygit
 mkdir ~/.config/lazygit
-ln -sf ~/dotfiles/git/lazygit_config.yml ~/.config/lazygit/config.yml
-ln -sf ~/dotfiles/.selected_editor ~/.selected_editor
-ln -sf ~/dotfiles/.ripgreprc ~/
+ln -sf ~/dotfiles/main/git/lazygit_config.yml ~/.config/lazygit/config.yml
+ln -sf ~/dotfiles/main/.selected_editor ~/.selected_editor
+ln -sf ~/dotfiles/main/.ripgreprc ~/
 rm -rf ~/.config/foot
-ln -sf ~/dotfiles/foot ~/.config/
-ln -sf ~/dotfiles/bashrc ~/.bashrc
+ln -sf ~/dotfiles/main/foot ~/.config/
+ln -sf ~/dotfiles/main/bashrc ~/.bashrc
 
 mkdir -p ~/repos/thuanowa/
 cd ~/repos/thuanowa/
