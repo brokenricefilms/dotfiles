@@ -80,7 +80,6 @@ alias uu='yay -R --noconfirm'
 alias a='git add -A; git commit'
 alias aa='git add -A; git commit -m "auto commit"'
 alias cdr='change_directory_to_git_root'
-alias gc='clone_change_dir_to_repo'
 alias l='git pull'
 alias ll='git pull -f'
 alias p='git push'
@@ -198,12 +197,6 @@ function change_directory_to_git_root() {
   ls
 }
 
-function clone_change_dir_to_repo() {
-  GIT_DIR="$(basename "$1" .git)"
-  GIT_DIR_RESOLVED=${2:-$GIT_DIR}
-  git clone "$@" && cd "$GIT_DIR_RESOLVED"
-}
-
 function fzf_emoji() {
   default() {
     emoji-fzf preview --prepend | fzf | awk '{ print $1 }' | tr -d "\n" | wl-copy
@@ -307,6 +300,39 @@ function reload() {
 function reload_touchcursor() {
   cp ~/dotfiles/touchcursor.conf ~/.config/touchcursor/
   systemctl --user restart touchcursor.service
+}
+
+function git-clone-worktrees() {
+  user_repo=$1
+  ssh_github_url="git@github.com:"
+  basename=${user_repo##*/}
+  repo_name=${2:-${basename%.*}}
+
+  mkdir "$repo_name"
+  cd "$repo_name"
+
+  git clone --bare "$ssh_github_url$user_repo" .bare
+  echo "gitdir: ./.bare" >.git
+
+  git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+  git fetch --all
+
+  for remote in $(git branch -r); do
+    git worktree add ${remote#origin/} $remote
+  done
+}
+
+function git-clone-worktrees-tmux() {
+  git-clone-worktrees "$1"
+
+  current_dir=$(pwd)
+
+  for remote in $(git branch -r); do
+    cd $current_dir
+    cd "${remote#origin/}"
+    tmux new-window -n "${remote#origin/}"
+  done
+  exit
 }
 
 source $HOME/.local/share/fzf-bash-completion.sh
