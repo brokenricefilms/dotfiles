@@ -69,7 +69,6 @@ alias e='fzf_edit_file'
 alias ee='cd $HOME; fzf_edit_file'
 alias E='fzf_edit_file_sudo'
 alias ej='fzf_emoji'
-alias fzf_down='fzf --reverse --preview-window=right'
 alias o='fzf_open'
 alias g='fzf_rg'
 
@@ -220,7 +219,7 @@ function fzf_emoji() {
 
 function fzf_edit_file() {
   if [ -z "$1" ]; then
-    FILE=$(fd --hidden --type file . --exclude .git --exclude node_modules | fzf_down --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}')
+    FILE=$(fd --hidden --type file . --exclude .git --exclude node_modules | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}')
 
     if [ -n "$FILE" ]; then
       nvim "$FILE"
@@ -232,7 +231,7 @@ function fzf_edit_file() {
 
 function fzf_edit_file_sudo() {
   if [ -z "$1" ]; then
-    FILE=$(fd --hidden --type file . --exclude .git --exclude node_modules | fzf_down --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}')
+    FILE=$(fd --hidden --type file . --exclude .git --exclude node_modules | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}')
 
     if [ -n "$FILE" ]; then
       sudoedit "$FILE"
@@ -244,7 +243,7 @@ function fzf_edit_file_sudo() {
 
 function fzf_open() {
   if [ -z "$1" ]; then
-    FILE=$(fd --hidden --type file . --exclude .git --exclude node_modules | fzf_down --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:500 {}')
+    FILE=$(fd --hidden --type file . --exclude .git --exclude node_modules | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:500 {}')
 
     if [ -n "$FILE" ]; then
       xdg-open "$FILE"
@@ -259,7 +258,7 @@ function fzf_change_directory() {
     DIR=$1
 
     fzf_dir() {
-      DIR=$(fd --hidden --type directory . --exclude node_modules --exclude go | fzf_down --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --tree --level=2')
+      DIR=$(fd --hidden --type directory . --exclude node_modules --exclude go | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --tree --level=2')
       cd "$DIR"
       la
     }
@@ -283,11 +282,11 @@ function fzf_change_directory() {
 
 function fzf_rg() {
   rg --color=always --line-number --no-heading --smart-case "${*:-}" |
-    fzf_down --ansi --color "hl:-1:underline,hl+:-1:underline:reverse" --delimiter : --preview 'bat --theme=GitHub --color=always {1} --highlight-line {2}' --bind 'enter:become($EDITOR {1} +{2})'
+    fzf --ansi --color "hl:-1:underline,hl+:-1:underline:reverse" --delimiter : --preview 'bat --theme=GitHub --color=always {1} --highlight-line {2}' --bind 'enter:become($EDITOR {1} +{2})'
 }
 
 function fzf_tldr() {
-  tldr --list | sed "s/'//g" | sed "s/,//g" | sed "s/ /\n/g" | sed "s/]//g" | sed "s/\[//g" | fzf_down --preview "tldr {1}"
+  tldr --list | sed "s/'//g" | sed "s/,//g" | sed "s/ /\n/g" | sed "s/]//g" | sed "s/\[//g" | fzf --preview "tldr {1}"
 }
 
 function tl() {
