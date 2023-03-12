@@ -139,6 +139,11 @@ function sync_music() {
   download_audio "https://l.thuanowa.com/music-den-vau"
 
   cd $MUSIC_DIR
+  mkdir two_feet
+  cd two_feet
+  download_audio "https://l.thuanowa.com/music-two-feet"
+
+  cd $MUSIC_DIR
   mkdir English
   cd English
   download_audio "https://l.thuanowa.com/music-en"
