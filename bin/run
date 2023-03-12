@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+
+set -o errexit
+set -o nounset
+set -o pipefail
+
+file_name=$1
+file_name_without_extension=$(echo "$file_name" | cut -f 1 -d '.')
+
+if [ -f $file_name ]; then
+  if hash cowsay 2>/dev/null; then
+    cowsay "👋Hey, I will run $file_name for you."
+    cowsay "Result"
+  else
+    echo "👋Hey, I will run $file_name for you."
+    echo "=========="
+    echo "==Result=="
+    echo "=========="
+  fi
+  echo ""
+  case $file_name in
+  *.cpp)
+    g++ $file_name
+    ./a.out
+    rm a.out
+    ;;
+  *.c)
+    gcc $file_name
+    ./a.out
+    rm a.out
+    ;;
+  *.html) brave-browser --new-window $file_name ;;
+  *.js) node $file_name ;;
+  *.ts) deno $file_name ;;
+  *.py) python $file_name ;;
+  *.go) go run $file_name ;;
+  *.cs)
+    csc $file_name
+    mono "${file_name_without_extension}.exe"
+    rm -rf "${file_name_without_extension}.exe"
+    ;;
+  *.java)
+    javac $file_name
+    java $file_name_without_extension
+    rm -rf "${file_name_without_extension}.class"
+    ;;
+  *.php) php $file_name ;;
+  *.sh)
+    chmod +x $file_name
+    ./$file_name
+    ;;
+  *) if hash cowsay 2>/dev/null; then
+    cowthink -d "I guess, you don't type right the file name. 🤣 Try again."
+  else
+    echo "I guess, you don't type right the file name. 🤣 Try again."
+  fi ;;
+  esac
+fi

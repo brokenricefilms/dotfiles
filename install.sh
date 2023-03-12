@@ -1,8 +1,5 @@
 #! /usr/bin/env sh
-
-sudo pacman -S --noconfirm tmux neofetch htop trash-cli python-pip tldr net-tools speedtest-cli neovim python-neovim fd tree cowsay fzf npm ffmpeg mpv ripgrep unrar moreutils cronie git-delta wl-clipboard rust cargo go v6l-utils ruby gcc obs-studio dconf-editor sqlite shfmt cmake kdenlive starship bat yt-dlp ddcutil kitty celluloid fish docker deno yarn libgda6 easyeffects xdg-desktop-portal-gnome xdg-desktop-portal qt6-wayland wofi blueman fcitx5 fcitx5-gtk fcitx5-qt fcitx5-bamboo fcitx5-configtoon
-
-yay -S --noconfirm noto-fonts-emoji ibus-bamboo input-remapper onlyoffice-bin gnome-browser-connector
+yay -S --noconfirm tmux neofetch htop trash-cli python-pip tldr net-tools speedtest-cli neovim python-neovim fd cowsay fzf npm ffmpeg mpv ripgrep unrar moreutils cronie git-delta wl-clipboard rust cargo go v4l-utils ruby gcc obs-studio dconf-editor sqlite shfmt cmake kdenlive starship bat yt-dlp ddcutil foot celluloid docker deno yarn libgda6 xdg-desktop-portal-gnome xdg-desktop-portal qt6-wayland mpv-mpris sdl2 networkmanager kiwix-desktop easyeffects calf lsp-plugins zam-plugins-lv2 mda.lv2 noto-fonts-emoji ibus-bamboo onlyoffice-bin gnome-browser-connector googledot-cursor-theme vidir exa gnome-search-providers-vscode fnm-bin tmux-bash-completion-git min google-chrome google-chrome-beta fnm-bin flameshot tmux-bash-completion-git luarocks wofi blueman fcitx5 fcitx5-gtk fcitx5-qt fcitx5-bamboo fcitx5-configtoon
 
 npm config set prefix ~/.npm/
 
@@ -26,6 +23,7 @@ go install github.com/jesseduffield/lazygit@latest
 go install github.com/jesseduffield/lazydocker@latest
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+$HOME/.tmux/plugins/tpm/bin/install_plugins
 
 ln -sf ~/repos/thuanowa/ok/.tinypng ~/.tinypng
 ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
@@ -41,14 +39,13 @@ mkdir ~/.config/lazygit
 ln -sf ~/dotfiles/git/lazygit_config.yml ~/.config/lazygit/config.yml
 ln -sf ~/dotfiles/.selected_editor ~/.selected_editor
 ln -sf ~/dotfiles/.ripgreprc ~/
-rm -rf ~/.config/input-remapper/
-ln -sf ~/dotfiles/input-remapper/ ~/.config/
 rm -rf ~/.config/kitty
 ln -sf ~/dotfiles/kitty ~/.config/
-rm -rf ~/.config/fish
-ln -sf ~/dotfiles/fish ~/.config/
 rm -rf ~/.config/hypr
 ln -sf ~/dotfiles/hypr ~/.config/
+rm -rf ~/.config/foot
+ln -sf ~/dotfiles/foot ~/.config/
+ln -sf ~/dotfiles/bashrc ~/.bashrc
 
 mkdir -p ~/repos/thuanowa/
 cd ~/repos/thuanowa/
@@ -58,5 +55,6 @@ ln -sf ~/repos/thuanowa/ok/.fonts ~/.fonts
 cd ~/.fonts
 fc-cache -rf
 
+cd ~/repos/thuanowa/
 gh repo clone thuanowa/obs-studio
 ln -sf ~/repos/thuanowa/obs-studio/ ~/.config/
