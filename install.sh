@@ -1,5 +1,7 @@
 #! /usr/bin/env sh
-yay -S --noconfirm tmux neofetch htop trash-cli python-pip tldr net-tools speedtest-cli neovim python-neovim fd cowsay fzf npm ffmpeg mpv ripgrep unrar moreutils cronie git-delta wl-clipboard rust cargo go v4l-utils ruby gcc obs-studio dconf-editor sqlite shfmt cmake kdenlive starship bat yt-dlp ddcutil foot celluloid docker deno yarn libgda6 xdg-desktop-portal-gnome xdg-desktop-portal qt6-wayland mpv-mpris sdl2 networkmanager kiwix-desktop easyeffects calf lsp-plugins zam-plugins-lv2 mda.lv2 noto-fonts-emoji ibus-bamboo onlyoffice-bin gnome-browser-connector googledot-cursor-theme vidir exa gnome-search-providers-vscode fnm-bin tmux-bash-completion-git min google-chrome google-chrome-beta fnm-bin flameshot tmux-bash-completion-git luarocks wofi blueman fcitx5 fcitx5-gtk fcitx5-qt fcitx5-bamboo fcitx5-configtoon
+yay -S --noconfirm tmux neofetch htop trash-cli python-pip tldr net-tools speedtest-cli neovim python-neovim fd cowsay fzf npm ffmpeg mpv ripgrep unrar moreutils cronie git-delta wl-clipboard rust cargo go v4l-utils ruby gcc obs-studio dconf-editor sqlite shfmt cmake kdenlive starship bat yt-dlp ddcutil foot celluloid docker deno yarn libgda6 xdg-desktop-portal-gnome xdg-desktop-portal qt6-wayland mpv-mpris sdl2 networkmanager kiwix-desktop easyeffects calf lsp-plugins zam-plugins-lv2 mda.lv2 noto-fonts-emoji ibus-bamboo onlyoffice-bin gnome-browser-connector googledot-cursor-theme vidir exa gnome-search-providers-vscode fnm-bin tmux-bash-completion-git min google-chrome google-chrome-beta fnm-bin flameshot tmux-bash-completion-git luarocks
+
+yay -S --noconfirm hyprland-bin wofi blueman fcitx5 fcitx5-gtk fcitx5-qt fcitx5-bamboo fcitx5-configtoon
 
 npm config set prefix ~/.npm/
 
