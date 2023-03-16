@@ -5,6 +5,7 @@ email = thuanowa@gmail.com
 [core]
 editor = $EDITOR
 whitespace = fix
+excludesfile = ~/.gitignore
 
 [merge]
 tool = vimdiff
