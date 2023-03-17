@@ -2,5 +2,5 @@
 
 ```fish
 fisher install meaningful-ooo/sponge
-fisher install pure-fish/pure
+fisher install ilancosman/tide@v5
 ```
