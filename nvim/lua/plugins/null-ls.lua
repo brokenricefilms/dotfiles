@@ -1,25 +1,30 @@
 return {
-	{
-		"jose-elias-alvarez/null-ls.nvim",
-		opts = function()
-			local nls = require("null-ls")
-			return {
-				sources = {
-					nls.builtins.formatting.prettierd,
-					nls.builtins.formatting.shfmt,
-					nls.builtins.formatting.stylua,
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    opts = function()
+      return {
+        sources = {
+          require("null-ls").builtins.formatting.prettierd,
+          require("null-ls").builtins.formatting.shfmt,
+          require("null-ls").builtins.formatting.stylua,
+          require("null-ls").builtins.formatting.fish_indent,
 
-					nls.builtins.diagnostics.eslint,
-					nls.builtins.diagnostics.write_good,
-					nls.builtins.diagnostics.shellcheck,
-					nls.builtins.diagnostics.stylelint,
-					nls.builtins.diagnostics.luacheck,
+          require("null-ls").builtins.diagnostics.eslint,
+          require("null-ls").builtins.diagnostics.write_good,
+          require("null-ls").builtins.diagnostics.shellcheck,
+          require("null-ls").builtins.diagnostics.stylelint,
+          require("null-ls").builtins.diagnostics.luacheck,
+          require("null-ls").builtins.diagnostics.fish,
+          require("null-ls").builtins.diagnostics.proselint,
 
-					nls.builtins.hover.printenv,
+          require("null-ls").builtins.hover.printenv,
+          require("null-ls").builtins.hover.dictionary,
 
-					nls.builtins.code_actions.refactoring,
-				},
-			}
-		end,
-	},
+          require("null-ls").builtins.code_actions.refactoring,
+          require("null-ls").builtins.code_actions.shellcheck,
+          require("null-ls").builtins.code_actions.proselint,
+        },
+      }
+    end,
+  },
 }
