@@ -39,6 +39,7 @@ alias m='mpv --loop-playlist --shuffle *'
 alias ser='browser_sync_start_server'
 alias tree='exa --tree --icons'
 alias x='chmod +x'
+alias w='code .'
 
 alias c='clear -x'
 alias q='exit'
