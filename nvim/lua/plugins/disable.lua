@@ -1,5 +1,6 @@
 return {
-  { "rcarriga/nvim-notify", enabled = false },
-  { "goolord/alpha-nvim", enabled = false },
-  { "SmiteshP/nvim-navic", enabled = false },
+  { "rcarriga/nvim-notify",   enabled = false },
+  { "goolord/alpha-nvim",     enabled = false },
+  { "SmiteshP/nvim-navic",    enabled = false },
+  { "folke/persistence.nvim", enable = false },
 }

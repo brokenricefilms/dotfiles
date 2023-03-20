@@ -5,16 +5,12 @@ return {
       return {
         sources = {
           require("null-ls").builtins.formatting.prettierd,
-          require("null-ls").builtins.formatting.shfmt,
-          require("null-ls").builtins.formatting.stylua,
-          require("null-ls").builtins.formatting.fish_indent,
 
           require("null-ls").builtins.diagnostics.eslint,
           require("null-ls").builtins.diagnostics.write_good,
           require("null-ls").builtins.diagnostics.shellcheck,
           require("null-ls").builtins.diagnostics.stylelint,
           require("null-ls").builtins.diagnostics.luacheck,
-          require("null-ls").builtins.diagnostics.fish,
           require("null-ls").builtins.diagnostics.proselint,
 
           require("null-ls").builtins.hover.printenv,
