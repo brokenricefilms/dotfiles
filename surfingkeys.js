@@ -5,6 +5,11 @@ settings.blacklistPattern =
 settings.modeAfterYank = "Normal";
 settings.scrollStepSize = 200;
 
+api.unmapAllExcept(
+  ["f", "v", "i", "u", "d", "j", "k", "gg", "G", "gf", "x"],
+  /github.com|gist.github.com/
+);
+
 api.removeSearchAlias("b");
 api.removeSearchAlias("w");
 api.removeSearchAlias("s");
