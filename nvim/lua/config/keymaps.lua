@@ -17,10 +17,10 @@ vim.keymap.set("", "gx", '<Cmd>call jobstart(["xdg-open", expand("<cfile>")], {"
 local ls = require("luasnip")
 
 ls.add_snippets("all", {
-	ls.snippet("todo", {
-		ls.insert_node(0),
-		-- TODO: comment syntax
-		ls.text_node("TODO: "),
-		ls.insert_node(1),
-	}),
+  ls.snippet("todo", {
+    ls.insert_node(0),
+    -- TODO: comment syntax
+    ls.text_node("TODO: "),
+    ls.insert_node(1),
+  }),
 })
