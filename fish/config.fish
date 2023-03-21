@@ -35,7 +35,7 @@ set fish_cursor_replace_one underscore
 set fish_cursor_visual block
 
 alias bat='bat --theme=GitHub'
-alias m='mpv --loop-playlist --shuffle *'
+alias m='play_music'
 alias ser='browser_sync_start_server'
 alias tree='exa --tree --icons'
 alias x='chmod +x'
