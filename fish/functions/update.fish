@@ -1,5 +1,5 @@
 function update --description 'update all'
-    set -l current_dir (pwd)
+    set --local current_dir (pwd)
 
     sudo pacman -Syu --noconfirm
     yay -Sua --noconfirm

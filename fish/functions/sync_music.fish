@@ -1,7 +1,7 @@
 # TODO: sync music, check playlist item, maybe can use js, youtube api for that? if private publish don't need use api for 
 function sync_music --description 'sync music playlist on Youtube'
-    set -l current_dir (pwd)
-    set -l music_dir $HOME/Music/
+    set --local current_dir (pwd)
+    set --local music_dir $HOME/Music/
 
     cd $music_dir
     trash *
