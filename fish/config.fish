@@ -52,7 +52,7 @@ alias e='fzf_edit_file'
 alias ee='cd $HOME; fzf_edit_file'
 alias E='fzf_edit_file_sudo'
 alias ej='fzf_emoji'
-alias fzf_down='fzf --reverse --preview-window=top'
+alias fzf_down='fzf'
 alias o='fzf_open'
 alias g='fzf_rg'
 
