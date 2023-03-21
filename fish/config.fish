@@ -39,7 +39,6 @@ alias m='play_music'
 alias ser='browser_sync_start_server'
 alias tree='exa --tree --icons'
 alias x='chmod +x'
-alias w='code .'
 alias q='exit'
 
 alias r='rm -rf'
