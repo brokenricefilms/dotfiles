@@ -19,8 +19,21 @@ set -gx GEM_HOME $HOME/gems
 set -gx PNPM_HOME $HOME/.local/share/pnpm
 
 set -gx EDITOR nvim
+
+if type -q nvim
+    set -gx EDITOR nvim
+else
+    set -gx EDITOR vi
+end
+
 set -gx VISUAL $EDITOR
 set -gx MANPAGER $EDITOR +Man!
+
+if type -q google-chrome-stable
+    set -gx BROWSER google-chrome-stable
+else
+    set -gx BROWSER firefox
+end
 
 set -gx PATH $DENO_INSTALL/bin $PNPM_HOME $HOME/.npm/bin $HOME/.cargo/bin $HOME/go/bin /usr/local/go/bin $HOME/.local/bin $HOME/bin $HOME/dotfiles/bin $HOME/.local/share/gem/ruby/3.0.0/bin $HOME/gems/bin $(yarn global bin) $PATH
 
@@ -43,6 +56,7 @@ alias fzf_down='fzf --reverse --preview-window=top'
 alias m='fzf_music'
 alias o='fzf_open'
 alias tl='fzf_tldr'
+alias h='fzf_man'
 
 alias r='rm -rf'
 alias rr='sudo rm -rf'
