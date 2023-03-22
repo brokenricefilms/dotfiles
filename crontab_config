@@ -1,1 +1,2 @@
+*/30 * * * * env DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus /home/master/dotfiles/bin/random_wallpaper
 */45 * * * * cd ~/repos/thuanowa/garden/ ; git add -A ; git commit -m "auto commit"; git push
