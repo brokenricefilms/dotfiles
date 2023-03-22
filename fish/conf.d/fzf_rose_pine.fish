@@ -1,5 +1,6 @@
-set --global --export FZF_DEFAULT_OPTS "
- --color=fg:#575279,bg:#fffaf3,hl:#9893a5
- --color=fg+:#797593,bg+:#faf4ed,hl+:#797593
- --color=info:#56949f,prompt:#56949f,pointer:#907aa9
- --color=marker:#d7827e,spinner:#b4637a,header:#d7827e"
+set --universal --export FZF_DEFAULT_OPTS "
+	--color=fg:#797593,bg:#faf4ed,hl:#d7827e
+	--color=fg+:#575279,bg+:#f2e9e1,hl+:#d7827e
+	--color=border:#dfdad9,header:#286983,gutter:#faf4ed
+	--color=spinner:#ea9d34,info:#56949f,separator:#dfdad9
+	--color=pointer:#907aa9,marker:#b4637a,prompt:#797593"

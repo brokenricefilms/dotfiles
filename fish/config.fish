@@ -35,11 +35,14 @@ set fish_cursor_replace_one underscore
 set fish_cursor_visual block
 
 alias bat='bat --theme=GitHub'
-alias m='play_music'
 alias ser='browser_sync_start_server'
 alias tree='exa --tree --icons'
 alias x='chmod +x'
 alias q='exit'
+alias fzf_down='fzf --reverse --preview-window=top'
+alias m='fzf_music'
+alias o='fzf_open'
+alias tl='fzf_tldr'
 
 alias r='rm -rf'
 alias rr='sudo rm -rf'
@@ -47,14 +50,11 @@ alias t='trash'
 
 alias d='fzf_change_directory'
 alias dd='cd $HOME; fzf_change_directory'
+
 alias e='fzf_edit_file'
 alias ee='cd $HOME; fzf_edit_file'
-alias E='fzf_edit_file_sudo'
 alias ej='fzf_emoji'
-alias fzf_down='fzf --reverse --preview-window=top'
-alias o='fzf_open'
-alias w='fzf_git_worktree_change_dir'
-alias ww='fzf_git_worktree_remove'
+alias E='fzf_sudo_edit'
 
 alias f='yay -Ss'
 alias i='yay -S --noconfirm'
@@ -71,6 +71,9 @@ alias ll='git pull -f'
 alias p='git push'
 alias pp='git push -f'
 alias s='git status -sb'
+alias w='fzf_git_worktree_change_dir'
+alias ww='fzf_git_worktree_remove'
+
 
 alias ...='cd .. ; cd .. ; ls'
 alias ..='cd .. ; ls'
