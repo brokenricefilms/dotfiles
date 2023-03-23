@@ -94,5 +94,3 @@ alias dow='cd ~/Downloads ; ls'
 alias la='exa --all --icons'
 alias ls='exa --long --all --icons'
 alias tmp='cd /tmp'
-
-fnm env --use-on-cd | source

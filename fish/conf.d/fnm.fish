@@ -1,3 +1,4 @@
 # fnm
 set PATH "/home/master/.local/share/fnm" $PATH
-fnm env | source
+
+status is-interactive && fnm env --use-on-cd | source
