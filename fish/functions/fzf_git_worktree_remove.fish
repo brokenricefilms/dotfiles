@@ -4,7 +4,7 @@ function fzf_git_worktree_remove
     if [ "$worktree" = "" ]
         cd $default_git_folder
     else
-        git worktree remove $worktree
+        git worktree remove $worktree --force
         cd $default_git_folder
     end
 end
