@@ -63,6 +63,10 @@ vim.keymap.set('n', '<leader>q', ':q<enter>')
 
 vim.keymap.set('n', '<leader>Q', ':qa!<enter>')
 
+vim.keymap.set('n', '<leader>o', ':wqa<enter>')
+
+vim.keymap.set('n', '<leader>O', ':wqa!<enter>')
+
 vim.api.nvim_create_autocmd('BufRead', {
   callback = function(opts)
     vim.api.nvim_create_autocmd('BufWinEnter', {
