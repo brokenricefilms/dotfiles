@@ -70,10 +70,9 @@ alias ee='cd $HOME; fzf_edit_file'
 alias ej='fzf_emoji'
 alias E='fzf_sudo_edit'
 
-alias f='yay -Ss'
-alias i='yay -S --noconfirm'
-alias u='yay -R --noconfirm'
-alias uu='yay -R --noconfirm'
+alias f='dnf search'
+alias i='sudo dnf install -y'
+alias u='sudo dnf remove -y'
 
 alias a='git add -A; git commit'
 alias aa='git add -A; git commit -m "auto commit"'
@@ -88,7 +87,6 @@ alias s='git status -sb'
 alias w='fzf_git_worktree_change_dir'
 alias ww='fzf_git_worktree_remove'
 
-
 alias ...='cd .. ; cd .. ; ls'
 alias ..='cd .. ; ls'
 alias doc='cd ~/Documents ; ls'
@@ -98,4 +96,3 @@ alias ls='exa --long --all --icons'
 alias tmp='cd /tmp'
 
 fnm env --use-on-cd | source
-#starship init fish | source

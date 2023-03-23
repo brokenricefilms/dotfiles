@@ -1,8 +1,7 @@
 function update --description 'update all'
     set --local current_dir (pwd)
 
-    sudo pacman -Syu --noconfirm
-    yay -Sua --noconfirm
+    sudo dnf update -y
     pnpm add -g pnpm
     tldr --update
     $HOME/.tmux/plugins/tpm/bin/update_plugins all
