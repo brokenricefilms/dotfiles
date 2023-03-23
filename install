@@ -49,6 +49,7 @@ ln -sf ~/dotfiles/init.lua ~/.config/nvim/
 
 ln -sf ~/dotfiles/.tool-versions ~/
 ln -sf ~/dotfiles/git/gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/git/gitignore ~/.gitignore
 ln -sf ~/dotfiles/git/gh_config.yml ~/.config/gh/config.yml
 rm -rf ~/.config/lazygit
 mkdir ~/.config/lazygit
