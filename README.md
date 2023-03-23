@@ -5,8 +5,7 @@
 
 ## Current setup
 
-- EndeavourOS(Arch base), Gnome Wayland
-  - Extensions: [Pano - Next-gen Clipboard Manager](https://github.com/oae/gnome-shell-pano)
+- Fedora, Gnome Wayland
 - [Foot terminal](./foot/foot.ini)
 - [Tmux](./tmux/tmux.conf)
 - [Fish Shell](./fish/)
