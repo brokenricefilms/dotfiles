@@ -12,6 +12,7 @@ vim.opt.wrap = true
 vim.opt.linebreak = true
 vim.opt.scrolloff = 5
 vim.opt.cursorlineopt = 'number'
+vim.opt.ls = 0
 vim.opt.ch = 0
 
 vim.opt.undofile = true
