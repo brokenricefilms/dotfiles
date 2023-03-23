@@ -8,7 +8,7 @@
 - Fedora, Gnome Wayland
 - [Foot terminal](./foot/foot.ini)
 - [Tmux](./tmux/tmux.conf)
-- [Fish Shell](./fish/)
+- [Bash](./bashrc)
 - [Neovim](./nvim/)
   - init.lua (minimal) (current): no plugin, no LSP.
   - Right now I use minimal config, for edit anything, if i miss fancy stuff like rename variable in all file, LSP, autocomplete, snippet I use vscode.
