@@ -1,7 +1,3 @@
-# docs setup
-# fisher install meaningful-ooo/sponge
-# fisher install pure-fish/pure
-
 if status is-interactive
     and not set -q TMUX
     if tmux has-session -t inbox
@@ -52,6 +48,7 @@ alias ser='browser_sync_start_server'
 alias tree='exa --tree --icons'
 alias x='chmod +x'
 alias q='exit'
+alias c='code .'
 alias fzf_down='fzf --reverse --preview-window=top'
 alias m='fzf_music'
 alias o='fzf_open'
