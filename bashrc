@@ -28,6 +28,8 @@ export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+export PATH="/home/master/.local/share/fnm:$PATH"
+
 export VISUAL="nvim"
 export EDITOR=$VISUAL
 export MANPAGER="nvim +Man!"

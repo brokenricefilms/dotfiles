@@ -1,5 +1,7 @@
 #! /usr/bin/env sh
 
+curl -sS https://starship.rs/install.sh | sh
+
 sudo dnf install dnf-plugins-core -y
 sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf groupupdate core -y
@@ -18,6 +20,8 @@ sudo dnf install -y tmux curl wget git neofetch htop gnome-tweaks trash-cli pyth
 curl -fsSL https://deno.land/install.sh | sh
 
 npm config set prefix ~/.npm/
+
+curl -fsSL https://fnm.vercel.app/install | bash
 
 npm install --global prettier
 npm install --global tinypng-cli
