@@ -11,7 +11,6 @@ vim.opt.smartcase = true
 vim.opt.wrap = true
 vim.opt.linebreak = true
 vim.opt.scrolloff = 5
-vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
 vim.opt.ch = 0
 
@@ -29,10 +28,16 @@ vim.opt.history = 100
 vim.opt.lazyredraw = true
 vim.opt.updatetime = 100
 
+vim.opt.cursorline = true
 vim.opt.termguicolors = true
 vim.opt.background = 'light'
 
 vim.opt.shortmess:append "sI"
+
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
+vim.keymap.set('n', 'đ', 'dd')
 
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
@@ -51,6 +56,12 @@ vim.keymap.set('x', '<', '<gv')
 vim.keymap.set('x', '>', '>gv')
 
 vim.keymap.set('n', 'gf', ':cd %:h<enter>:edit <cfile><enter>')
+
+vim.keymap.set('n', '<leader>w', ':w<enter>')
+
+vim.keymap.set('n', '<leader>q', ':q<enter>')
+
+vim.keymap.set('n', '<leader>Q', ':qa!<enter>')
 
 vim.api.nvim_create_autocmd('BufRead', {
   callback = function(opts)
