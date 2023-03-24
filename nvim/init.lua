@@ -1,9 +1,9 @@
+vim.o.clipboard = 'unnamedplus'
 vim.opt.autoread = true
 vim.opt.autowrite = true
 vim.opt.background = 'light'
 vim.opt.backspace = {"indent", "eol,start"}
 vim.opt.ch = 0
-vim.opt.clipboard = 'unnamedplus'
 vim.opt.completeopt = 'menuone,noinsert,noselect'
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
