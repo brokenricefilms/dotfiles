@@ -62,8 +62,13 @@ alias m='fzf_music'
 alias o='fzf_open'
 alias g='fzf_rg'
 
-alias 4l=' tmux split-window -d \; split-window -d\; split-window -d \; select-layout even-horizontal'
+alias 4l=' tmux split-window -d \; split-window -d \; split-window -d \; select-layout even-horizontal'
 alias 4-=' tmux split-window -d \; split-window -d \; split-window -d \; select-layout even-vertical'
+alias 3l=' tmux split-window -d \; split-window -d \; select-layout even-horizontal'
+alias 3-=' tmux split-window -d \; split-window -d \; select-layout even-vertical'
+
+alias 4i=' tmux split-window -d \; split-window -d \; split-window -d \; select-layout main-vertical'
+alias 3i=' tmux split-window -d \; split-window -d \; select-layout main-vertical'
 
 alias r='rm -rf'
 alias rr='sudo rm -rf'
