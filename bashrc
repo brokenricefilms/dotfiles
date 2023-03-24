@@ -61,6 +61,8 @@ alias fzf_down='fzf --reverse --preview-window=top'
 alias m='fzf_music'
 alias o='fzf_open'
 alias g='fzf_rg'
+alias npm='pnpm'
+alias npx='pnpx'
 
 alias 4l=' tmux split-window -d \; split-window -d \; split-window -d \; select-layout even-horizontal'
 alias 4-=' tmux split-window -d \; split-window -d \; split-window -d \; select-layout even-vertical'
