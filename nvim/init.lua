@@ -85,11 +85,11 @@ vim.api.nvim_create_autocmd('BufRead', {
           not (ft:match('commit') and ft:match('rebase'))
           and last_known_line > 1
           and last_known_line <= vim.api.nvim_buf_line_count(opts.buf)
-        then
-          vim.api.nvim_feedkeys([[g`"]], 'x', false)
-          vim.api.nvim_feedkeys([[zz]], 'x', false)
-        end
-      end,
-    })
-  end,
+          then
+            vim.api.nvim_feedkeys([[g`"]], 'x', false)
+            vim.api.nvim_feedkeys([[zz]], 'x', false)
+          end
+        end,
+      })
+    end,
 })
