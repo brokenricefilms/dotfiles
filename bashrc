@@ -109,7 +109,7 @@ function download_audio() {
   yt-dlp -f bestaudio --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "$1"
 }
 
-# TODO: update_music checking playlist to update change
+# TODO: checking playlist list to sync change
 function sync_music() {
   CURRENT_DIR=$(pwd)
   MUSIC_DIR=$HOME/Music/

@@ -1,39 +1,44 @@
-vim.opt.mouse = 'a'
-vim.opt.clipboard = 'unnamedplus'
-vim.opt.swapfile = false
-vim.opt.completeopt = 'menuone,noinsert,noselect'
-
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.showmatch = true
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.wrap = true
-vim.opt.linebreak = true
-vim.opt.scrolloff = 5
-vim.opt.cursorlineopt = 'number'
-vim.opt.ls = 0
+vim.opt.autoread = true
+vim.opt.autowrite = true
+vim.opt.background = 'light'
+vim.opt.backspace = {"indent", "eol,start"}
 vim.opt.ch = 0
-
-vim.opt.undofile = true
-vim.opt.undodir = os.getenv('HOME') .. '/.cache/nvim'
-vim.opt.undolevels = 10000
-
+vim.opt.clipboard = 'unnamedplus'
+vim.opt.completeopt = 'menuone,noinsert,noselect'
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = 'number'
 vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
-vim.opt.smartindent = true
-
 vim.opt.hidden = true
 vim.opt.history = 100
+vim.opt.ignorecase = true
+vim.opt.incsearch = true
 vim.opt.lazyredraw = true
-vim.opt.updatetime = 100
-
-vim.opt.cursorline = true
-vim.opt.termguicolors = true
-vim.opt.background = 'light'
-
+vim.opt.linebreak = true
+vim.opt.list = off
+vim.opt.listchars = { tab = "→ ", eol = "↲", trail = "⋅", extends = "❯", precedes = "❮", space = ".", }
+vim.opt.mouse = 'a'
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.scrolloff = 5
+vim.opt.shiftround = true
+vim.opt.shiftwidth = 4
 vim.opt.shortmess:append "sI"
+vim.opt.showbreak = "↪"
+vim.opt.showmatch = true
+vim.opt.smartcase = true
+vim.opt.smartindent = true
+vim.opt.smarttab = true
+vim.opt.softtabstop = 4
+vim.opt.statusline = '%F'
+vim.opt.swapfile = false
+vim.opt.tabstop = 4
+vim.opt.termguicolors = true
+vim.opt.ttyfast = true
+vim.opt.undodir = os.getenv('HOME') .. '/.cache/nvim'
+vim.opt.undofile = true
+vim.opt.undolevels = 10000
+vim.opt.updatetime = 100
+vim.opt.wrap = true
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
