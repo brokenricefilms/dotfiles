@@ -62,6 +62,9 @@ alias m='fzf_music'
 alias o='fzf_open'
 alias g='fzf_rg'
 
+alias 4l=' tmux split-window -d \; split-window -d\; split-window -d \; select-layout even-horizontal'
+alias 4-=' tmux split-window -d \; split-window -d \; split-window -d \; select-layout even-vertical'
+
 alias r='rm -rf'
 alias rr='sudo rm -rf'
 alias t='trash'
@@ -329,7 +332,7 @@ function fzf_music() {
 
   cd ~/Music/
 
-  PLAYLIST=$(fd --hidden --type directory . --exclude node_modules --exclude go | fzf_down --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --tree --icons')
+  PLAYLIST=$(fd --type directory . --exclude node_modules --exclude go | fzf_down --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --tree --icons')
 
   if [ -n "$PLAYLIST" ]; then
     cd $PLAYLIST
