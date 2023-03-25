@@ -370,10 +370,10 @@ function hi() {
   update
 }
 
-source $HOME/.local/share/fzf-bash-completion.sh
+source ./fzf-bash-completion.sh
 bind -x '"\t": fzf_bash_completion'
-source $HOME/.local/share/completion.bash
-source $HOME/.local/share/key-bindings.bash
+source ./completion.bash
+source ./key-bindings.bash
 
 eval "$(fnm env --use-on-cd)"
 eval "$(starship init bash)"
