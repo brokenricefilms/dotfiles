@@ -362,6 +362,11 @@ function reload_touchcursor() {
   systemctl --user restart touchcursor.service
 }
 
+function hi() {
+  browser_daily
+  update
+}
+
 source $HOME/.local/share/fzf-bash-completion.sh
 bind -x '"\t": fzf_bash_completion'
 source $HOME/.local/share/completion.bash
