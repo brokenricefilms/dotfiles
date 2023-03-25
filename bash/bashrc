@@ -189,9 +189,9 @@ function update() {
   ~/.tmux/plugins/tpm/bin/update_plugins all
 
   cd ~/dotfiles/bash/
-  wget https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh
-  wget https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.bash
-  wget https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.bash
+  curl --remote-name https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh 
+  curl --remote-name https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.bash
+  curl --remote-name https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.bash
   git add .
   git commit -m "chore(bash): plugin"
 
