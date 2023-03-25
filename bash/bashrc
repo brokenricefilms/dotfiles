@@ -45,68 +45,68 @@ HISTFILESIZE=
 shopt -s histappend
 shopt -s checkwinsize
 
-bind 'set completion-ignore-case on'
+bind "set completion-ignore-case on"
 
 set -o vi
 
 stty time 0
 
-alias bat='bat --theme=GitHub'
-alias ser='browser_sync_start_server'
-alias tree='exa --tree --icons'
-alias x='chmod +x'
-alias q='exit'
-alias c='cd $(git rev-parse --show-toplevel) ; code .'
-alias fzf_down='fzf --reverse --preview-window=top'
-alias m='fzf_music'
-alias o='fzf_open'
-alias g='fzf_rg'
-alias npm='pnpm'
-alias npx='pnpx'
+alias bat="bat --theme=GitHub"
+alias ser="browser_sync_start_server"
+alias tree="exa --tree --icons"
+alias x="chmod +x"
+alias q="exit"
+alias c="cd $(git rev-parse --show-toplevel) ; code ."
+alias fzf_down="fzf --reverse --preview-window=top"
+alias m="fzf_music"
+alias o="fzf_open"
+alias g="fzf_rg"
+alias npm="pnpm"
+alias npx="pnpx"
 
-alias 4l='tmux split-window -d \; split-window -d \; split-window -d \; select-layout even-horizontal'
-alias 4-='tmux split-window -d \; split-window -d \; split-window -d \; select-layout even-vertical'
-alias 3l='tmux split-window -d \; split-window -d \; select-layout even-horizontal'
-alias 3-='tmux split-window -d \; split-window -d \; select-layout even-vertical'
+alias 4l="tmux split-window -d \; split-window -d \; split-window -d \; select-layout even-horizontal"
+alias 4-="tmux split-window -d \; split-window -d \; split-window -d \; select-layout even-vertical"
+alias 3l="tmux split-window -d \; split-window -d \; select-layout even-horizontal"
+alias 3-="tmux split-window -d \; split-window -d \; select-layout even-vertical"
 
-alias 4i='tmux split-window -d \; split-window -d \; split-window -d \; select-layout main-vertical'
-alias 3i='tmux split-window -d \; split-window -d \; select-layout main-vertical'
+alias 4i="tmux split-window -d \; split-window -d \; split-window -d \; select-layout main-vertical"
+alias 3i="tmux split-window -d \; split-window -d \; select-layout main-vertical"
 
-alias r='rm -rf'
-alias rr='sudo rm -rf'
-alias t='trash'
+alias r="rm -rf"
+alias rr="sudo rm -rf"
+alias t="trash"
 
-alias d='fzf_change_directory'
-alias dd='cd $HOME; fzf_change_directory'
+alias d="fzf_change_directory"
+alias dd="cd $HOME; fzf_change_directory"
 
-alias e='fzf_edit_file'
-alias ee='cd $HOME; fzf_edit_file'
-alias ej='fzf_emoji'
-alias E='fzf_sudo_edit'
+alias e="fzf_edit_file"
+alias ee="cd $HOME; fzf_edit_file"
+alias ej="fzf_emoji"
+alias E="fzf_sudo_edit"
 
-alias i='yay --noconfirm'
-alias u='yay -R --noconfirm'
+alias i="yay --noconfirm"
+alias u="yay -R --noconfirm"
 
-alias a='git add -A; git commit'
-alias aa='git add -A; git commit -m "auto commit"'
-alias am='git add -A; git commit --amend --no-edit'
-alias cdr='change_directory_to_git_root'
-alias gc='clone_change_dir_to_repo'
-alias l='git pull'
-alias ll='git pull -f'
-alias p='git push'
-alias pp='git push -f'
-alias s='git status -sb'
-alias w='fzf_git_worktree_change_dir'
-alias ww='fzf_git_worktree_remove'
+alias a="git add -A; git commit"
+alias aa="git add -A; git commit -m 'auto commit'"
+alias am="git add -A; git commit --amend --no-edit"
+alias cdr="change_directory_to_git_root"
+alias gc="clone_change_dir_to_repo"
+alias l="git pull"
+alias ll="git pull -f"
+alias p="git push"
+alias pp="git push -f"
+alias s="git status -sb"
+alias w="fzf_git_worktree_change_dir"
+alias ww="fzf_git_worktree_remove"
 
-alias ...='cd .. ; cd .. ; ls'
-alias ..='cd .. ; ls'
-alias doc='cd ~/Documents ; ls'
-alias dow='cd ~/Downloads ; ls'
-alias la='exa --all --icons'
-alias ls='exa --long --all --icons'
-alias tmp='cd /tmp'
+alias ...="cd .. ; cd .. ; ls"
+alias ..="cd .. ; ls"
+alias doc="cd ~/Documents ; ls"
+alias dow="cd ~/Downloads ; ls"
+alias la="exa --all --icons"
+alias ls="exa --long --all --icons"
+alias tmp="cd /tmp"
 
 function browser_daily() {
   xdg-open "https://www.inoreader.com/all_articles"
