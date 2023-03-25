@@ -4,6 +4,8 @@ if command -v tmux &>/dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && 
   tmux attach || tmux new-session && exit
 fi
 
+alias nvim='lvim'
+
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 export PATH="$HOME/gems/bin:$PATH"
@@ -28,10 +30,10 @@ export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
-export VISUAL="lvim"
+export VISUAL="nvim"
 export EDITOR=$VISUAL
-export MANPAGER="lvim +Man!"
-export EDITOR="lvim"
+export MANPAGER="nvim +Man!"
+export EDITOR="nvim"
 
 export BROWSER="brave"
 
@@ -228,10 +230,10 @@ function fzf_edit_file() {
     FILE=$(fd --hidden --type file . --exclude .git --exclude node_modules | fzf_down --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}')
 
     if [ -n "$FILE" ]; then
-      lvim "$FILE"
+      nvim "$FILE"
     fi
   else
-    lvim "$1"
+    nvim "$1"
   fi
 }
 
