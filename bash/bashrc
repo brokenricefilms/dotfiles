@@ -62,6 +62,7 @@ alias o="fzf_open"
 alias g="fzf_rg"
 alias npm="pnpm"
 alias npx="pnpx"
+alias c="change_directory_to_git_root ; code ."
 
 alias 4l="tmux split-window -d \; split-window -d \; split-window -d \; select-layout even-horizontal"
 alias 4-="tmux split-window -d \; split-window -d \; split-window -d \; select-layout even-vertical"
@@ -368,7 +369,7 @@ function hi() {
   update
 }
 
-kill_all_unname_tmux_session() {
+tmux_kill_all_unname_session() {
   echo "\n👉 kill all unname tmux session"
   cd /tmp/
   tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >/tmp/killAllUnnameTmuxSessionOutput.sh

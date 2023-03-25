@@ -9,6 +9,5 @@
 - [Foot terminal](./foot/foot.ini)
 - [Tmux](./tmux/tmux.conf)
 - [Bash](./bashrc)
-- Neovim
-  - [Neovim no plugin](./nvim/)
-  - [Lunar vim](./lvim/)
+- [Neovim](./nvim/): no plugin, no lsp, no treesitter. 
+- [VSCode](./profile.code-profile): sometime i want fancy autocompletion, lsp,... or preview markdown file like this README
