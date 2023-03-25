@@ -10,6 +10,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.wrap = true
 vim.opt.linebreak = true
+vim.opt.showbreak = "↪"
 vim.opt.scrolloff = 5
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
