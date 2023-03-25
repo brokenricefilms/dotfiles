@@ -28,10 +28,10 @@ export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
-export VISUAL="nvim"
+export VISUAL="lvim"
 export EDITOR=$VISUAL
-export MANPAGER="nvim +Man!"
-export EDITOR="nvim"
+export MANPAGER="lvim +Man!"
+export EDITOR="lvim"
 
 export BROWSER="brave"
 
@@ -228,10 +228,10 @@ function fzf_edit_file() {
     FILE=$(fd --hidden --type file . --exclude .git --exclude node_modules | fzf_down --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}')
 
     if [ -n "$FILE" ]; then
-      nvim "$FILE"
+      lvim "$FILE"
     fi
   else
-    nvim "$1"
+    lvim "$1"
   fi
 }
 
