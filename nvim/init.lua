@@ -5,6 +5,7 @@ vim.opt.completeopt = 'menuone,noinsert,noselect'
 
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.statusline = '%F'
 vim.opt.showmatch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -34,6 +35,8 @@ vim.opt.updatetime = 100
 vim.cmd [[colorscheme default]]
 vim.opt.background = 'light'
 
+vim.g.mapleader = ' '
+
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 vim.keymap.set('n', '*', '*zz')
@@ -41,6 +44,10 @@ vim.keymap.set('n', '#', '#zz')
 
 vim.keymap.set('n', 'j', 'gj')
 vim.keymap.set('n', 'k', 'gk')
+
+vim.keymap.set('n', '<leader>w', ':w<enter>')
+vim.keymap.set('n', '<leader>q', ':q<enter>')
+vim.keymap.set('n', '<leader>o', ':wqa<enter>')
 
 vim.keymap.set('', '<Right>', '<C-w><')
 vim.keymap.set('', '<Down>', '<C-w>-')
