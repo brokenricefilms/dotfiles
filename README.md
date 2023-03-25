@@ -9,4 +9,6 @@
 - [Foot terminal](./foot/foot.ini)
 - [Tmux](./tmux/tmux.conf)
 - [Bash](./bashrc)
-- [Neovim](./nvim/)
+- Neovim
+  - [Neovim no plugin](./nvim/)
+  - [Lunar vim](./lvim/)
