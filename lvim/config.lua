@@ -33,6 +33,7 @@ lvim.keys.normal_mode["#"] = "#zz"
 
 vim.opt.wrap = true
 vim.opt.linebreak = true
+vim.opt.showbreak = "↪"
 
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
