@@ -28,12 +28,12 @@ export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
-export PATH="/home/master/.local/share/fnm:$PATH"
-
 export VISUAL="nvim"
 export EDITOR=$VISUAL
 export MANPAGER="nvim +Man!"
 export EDITOR="nvim"
+
+export BROWSER="brave"
 
 export FZF_DEFAULT_COMMAND="fd --type f --follow --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -84,9 +84,8 @@ alias ee='cd $HOME; fzf_edit_file'
 alias ej='fzf_emoji'
 alias E='fzf_sudo_edit'
 
-alias f='dnf search'
-alias i='sudo dnf install -y'
-alias u='sudo dnf remove -y'
+alias i='yay --noconfirm'
+alias u='yay -R --noconfirm'
 
 alias a='git add -A; git commit'
 alias aa='git add -A; git commit -m "auto commit"'
@@ -182,7 +181,7 @@ function sync_music() {
 function update() {
   CURRENT_DIR=$(pwd)
 
-  sudo dnf update -y
+  yay --noconfirm
   pnpm add -g pnpm
   tldr --update
   ~/.tmux/plugins/tpm/bin/update_plugins all
