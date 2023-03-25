@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# if command -v tmux &>/dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-#  tmux attach || tmux new-session && exit
-# fi
+if command -v tmux &>/dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+ tmux attach || tmux new-session && exit
+fi
 
 alias nvim='lvim'
 
@@ -66,13 +66,13 @@ alias g='fzf_rg'
 alias npm='pnpm'
 alias npx='pnpx'
 
-alias 4l=' tmux split-window -d \; split-window -d \; split-window -d \; select-layout even-horizontal'
-alias 4-=' tmux split-window -d \; split-window -d \; split-window -d \; select-layout even-vertical'
-alias 3l=' tmux split-window -d \; split-window -d \; select-layout even-horizontal'
-alias 3-=' tmux split-window -d \; split-window -d \; select-layout even-vertical'
+alias 4l='tmux split-window -d \; split-window -d \; split-window -d \; select-layout even-horizontal'
+alias 4-='tmux split-window -d \; split-window -d \; split-window -d \; select-layout even-vertical'
+alias 3l='tmux split-window -d \; split-window -d \; select-layout even-horizontal'
+alias 3-='tmux split-window -d \; split-window -d \; select-layout even-vertical'
 
-alias 4i=' tmux split-window -d \; split-window -d \; split-window -d \; select-layout main-vertical'
-alias 3i=' tmux split-window -d \; split-window -d \; select-layout main-vertical'
+alias 4i='tmux split-window -d \; split-window -d \; split-window -d \; select-layout main-vertical'
+alias 3i='tmux split-window -d \; split-window -d \; select-layout main-vertical'
 
 alias r='rm -rf'
 alias rr='sudo rm -rf'
@@ -370,10 +370,10 @@ function hi() {
   update
 }
 
-source ./fzf-bash-completion.sh
+source ~/dotfiles/bash/fzf-bash-completion.sh
 bind -x '"\t": fzf_bash_completion'
-source ./completion.bash
-source ./key-bindings.bash
+source ~/dotfiles/bash/completion.bash
+source ~/dotfiles/bash/key-bindings.bash
 
 eval "$(fnm env --use-on-cd)"
 eval "$(starship init bash)"

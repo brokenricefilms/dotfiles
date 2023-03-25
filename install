@@ -41,7 +41,7 @@ ln -sf ~/dotfiles/.selected_editor ~/.selected_editor
 ln -sf ~/dotfiles/.ripgreprc ~/
 rm -rf ~/.config/foot
 ln -sf ~/dotfiles/foot ~/.config/
-ln -sf ~/dotfiles/bashrc ~/.bashrc
+ln -sf ~/dotfiles/bash/bashrc ~/.bashrc
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 $HOME/.tmux/plugins/tpm/bin/install_plugins
