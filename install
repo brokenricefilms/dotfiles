@@ -15,6 +15,7 @@ npm install --global pnpm
 pip install --upgrade pylint
 pip install --upgrade autopep8
 pip install --upgrade pynvim
+pip install --upgrade edir
 python3 -m pip install --user libtmux==0.16.1
 
 gem install neovim jekyll bundler
