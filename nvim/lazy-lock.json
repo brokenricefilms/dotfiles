@@ -4,6 +4,7 @@
   "lazy.nvim": { "branch": "main", "commit": "57cce98dfdb2f2dd05a0567d89811e6d0505e13b" },
   "nvim-spectre": { "branch": "master", "commit": "8fd64743b6390ab151a607fa91d0d74087a80ba6" },
   "nvim-treesitter": { "branch": "master", "commit": "c9ef5e58f7d59aba875324825ff47900d0be61f2" },
+  "oil.nvim": { "branch": "master", "commit": "931453fc09085c09537295c991c66637869e97e1" },
   "plenary.nvim": { "branch": "master", "commit": "253d34830709d690f013daf2853a9d21ad7accab" },
   "rose-pine": { "branch": "main", "commit": "17723f76ea78cdd71fd0007b7b760683b60a5e43" },
   "vim-sleuth": { "branch": "master", "commit": "1cc4557420f215d02c4d2645a748a816c220e99b" }

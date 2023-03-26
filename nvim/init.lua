@@ -57,6 +57,14 @@ require("lazy").setup(
       show_current_context = false,
     },
   },
+  {
+    "stevearc/oil.nvim",
+    opts = {
+      columns = {
+      },
+      skip_confirm_for_simple_edits = true,
+    }
+  },
 })
 
 vim.cmd('colorscheme rose-pine-dawn')
