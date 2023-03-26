@@ -39,6 +39,13 @@ export FZF_DEFAULT_COMMAND="fd --type f --follow --exclude .git --exclude undodi
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d"
 
+export FZF_DEFAULT_OPTS="
+	--color=fg:#797593,bg:#faf4ed,hl:#d7827e
+	--color=fg+:#575279,bg+:#f2e9e1,hl+:#d7827e
+	--color=border:#dfdad9,header:#286983,gutter:#faf4ed
+	--color=spinner:#ea9d34,info:#56949f,separator:#dfdad9
+	--color=pointer:#907aa9,marker:#b4637a,prompt:#797593"
+
 HISTCONTROL=ignoreboth
 HISTSIZE=
 HISTFILESIZE=
@@ -370,14 +377,13 @@ function hi() {
 }
 
 tmux_kill_all_unname_session() {
-  echo "\n👉 kill all unname tmux session"
+  CURRENT_DIR=$(pwd)
   cd /tmp/
   tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >/tmp/killAllUnnameTmuxSessionOutput.sh
   sed -i 's/^/tmux kill-session -t /' killAllUnnameTmuxSessionOutput.sh
   chmod +x killAllUnnameTmuxSessionOutput.sh
   ./killAllUnnameTmuxSessionOutput.sh
-  cd -
-  tmux ls
+  cd $CURRENT_DIR
 }
 
 source ~/dotfiles/bash/fzf-bash-completion.sh
