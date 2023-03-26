@@ -111,7 +111,7 @@ vim.keymap.set('n', 'j', 'gj')
 vim.keymap.set('n', 'k', 'gk')
 
 vim.keymap.set('n', '<leader>q', ':q<enter>')
-vim.keymap.set('n', '<leader>Q', ':qa!<enter>')
+vim.keymap.set('n', 'Q', ':qa!<enter>')
 
 vim.keymap.set('', '<Right>', '<C-w><')
 vim.keymap.set('', '<Down>', '<C-w>-')
