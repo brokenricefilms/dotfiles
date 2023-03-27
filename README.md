@@ -5,7 +5,7 @@
 
 ## Current setup
 
-- Arch, EndeavourOS, Gnome Wayland
+- Crystal Linux (Arch base with Gnome fanboy)
 - [Foot terminal](./foot/foot.ini)
 - [Tmux](./tmux/tmux.conf)
 - [Bash](./bashrc)
