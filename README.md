@@ -8,6 +8,6 @@
 - Crystal Linux (Arch base with Gnome fanboy)
 - [Foot terminal](./foot/foot.ini)
 - [Tmux](./tmux/tmux.conf)
-- [Bash](./bashrc)
+- [Bash](./bash/bashrc)
 - [Neovim](./nvim/): no lsp, no autocompletion
 - [VSCode](./profile.code-profile): sometime i want fancy autocompletion, lsp,... or preview markdown file like this README.
