@@ -70,6 +70,7 @@ alias g="fzf_rg"
 alias npm="pnpm"
 alias npx="pnpx"
 alias c="change_directory_to_git_root ; code ."
+alias test_keyboard_input_code="sudo libinput debug-events"
 
 alias 4l="tmux split-window -d \; split-window -d \; split-window -d \; select-layout even-horizontal"
 alias 4-="tmux split-window -d \; split-window -d \; split-window -d \; select-layout even-vertical"
