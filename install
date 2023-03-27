@@ -1,6 +1,4 @@
-#! /usr/bin/env bash
-
-yay -S --noconfirm tmux neofetch htop trash-cli python-pip tldr net-tools speedtest-cli neovim python-neovim fd cowsay fzf npm ffmpeg mpv ripgrep unrar moreutils cronie git-delta wl-clipboard rust cargo go v4l-utils ruby gcc obs-studio dconf-editor sqlite shfmt cmake kdenlive starship bat yt-dlp ddcutil foot celluloid docker deno yarn libgda6 xdg-desktop-portal-gnome xdg-desktop-portal qt6-wayland mpv-mpris sdl2 networkmanager kiwix-desktop easyeffects calf lsp-plugins zam-plugins-lv2 mda.lv2 noto-fonts-emoji ibus-bamboo onlyoffice-bin gnome-browser-connector googledot-cursor-theme vidir exa gnome-search-providers-vscode fnm-bin tmux-bash-completion-git min google-chrome google-chrome-beta fnm-bin flameshot tmux-bash-completion-git luarocks git-extras fish
+yay -S --noconfirm tmux neofetch htop trash-cli python-pip tldr net-tools speedtest-cli neovim python-neovim fd cowsay fzf npm ffmpeg mpv ripgrep unrar moreutils cronie git-delta wl-clipboard rust cargo go v4l-utils ruby gcc obs-studio dconf-editor sqlite shfmt cmake kdenlive starship bat yt-dlp ddcutil foot celluloid deno yarn libgda6 xdg-desktop-portal-gnome xdg-desktop-portal qt6-wayland mpv-mpris sdl2 networkmanager kiwix-desktop easyeffects calf lsp-plugins zam-plugins-lv2 mda.lv2 noto-fonts-emoji ibus-bamboo onlyoffice-bin gnome-browser-connector googledot-cursor-theme exa fnm-bin tmux-bash-completion-git google-chrome google-chrome-beta fnm-bin tmux-bash-completion-git git-extras syncthing
 
 npm config set prefix ~/.npm/
 
@@ -22,7 +20,6 @@ cargo install stylua
 
 go install github.com/jesseduffield/lazygit@latest
 go install github.com/jesseduffield/lazydocker@latest
-
 
 ln -sf ~/repos/thuanowa/ok/.tinypng ~/.tinypng
 ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
@@ -58,4 +55,8 @@ cd ~/repos/thuanowa/
 gh repo clone thuanowa/obs-studio
 ln -sf ~/repos/thuanowa/obs-studio/ ~/.config/
 
-LV_BRANCH='release-1.2/neovim-0.8' bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/fc6873809934917b470bff1b072171879899a36b/utils/installer/install.sh)
+cd ~/repos/thuanowa/garden
+gh repo clone thuanowa/obs-studio
+
+systemctl --user enable syncthing.service
+systemctl --user start syncthing.service
