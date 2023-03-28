@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-if command -v tmux &>/dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
- tmux attach || tmux new-session && exit
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
 fi
 
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
@@ -259,23 +259,35 @@ function fzf_sudo_edit() {
 }
 
 function fzf_git_worktree_change_dir() {
-  if [ -z "$1" ]; then
-    WORKTREE=$(git worktree list | fzf_down | awk '{print $1}')
+  local worktrees
+  local worktree
+  local query
+  local sess_arr
+  local retval
+  worktrees=$(git worktree list | fzf --exit-0 --print-query --reverse)
+  retval=$?
 
-    if [ -n "$WORKTREE" ]; then
-      cd $WORKTREE
+  IFS=$'\n' read -rd '' -a sess_arr <<<"$worktrees"
+
+  worktree=$(echo ${sess_arr[1]} | awk '{print $1}')
+  query=${sess_arr[0]}
+
+  if [ $retval == 0 ]; then
+    if [ "$worktree" == "" ]; then
+      worktree=$(echo "$query" | awk '{print $1}')
     fi
-  else
+    cd "$worktree"
+  elif [ $retval == 1 ]; then
     DEFAULT_GIT_FOLDER=$(git worktree list | head --lines 1 | awk '{print $1}')
 
     mkdir $DEFAULT_GIT_FOLDER/.worktrees
 
-    git worktree add $DEFAULT_GIT_FOLDER/.worktrees/$1
+    git worktree add $DEFAULT_GIT_FOLDER/.worktrees/"$query"
 
-    cd $DEFAULT_GIT_FOLDER/.worktrees/$1
+    cd $DEFAULT_GIT_FOLDER/.worktrees/"$query"
 
-    git branch $1
-    git checkout $1
+    git branch "$query"
+    git checkout "$query"
   fi
 }
 
