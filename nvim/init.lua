@@ -56,7 +56,6 @@ require("lazy").setup(
   },
   {
     "ThePrimeagen/harpoon",
-    event = { "BufReadPost", "BufNewFile" },
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
