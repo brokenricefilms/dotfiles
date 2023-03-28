@@ -9,5 +9,5 @@
 - [Foot terminal](./foot/foot.ini)
 - [Tmux](./tmux/tmux.conf)
 - [Bash](./bash/bashrc)
-- [Neovim](./nvim/): I'm too noob for setup LSP, autocompletion so i don't use that.
+- [Neovim](./nvim/): I'm too noob for setup LSP, autocompletion 😅. So i don't use that.
 - [VSCode](./profile.code-profile): sometime i want fancy autocompletion, lsp,... or preview markdown file.
