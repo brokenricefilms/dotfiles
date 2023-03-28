@@ -35,7 +35,6 @@ export EDITOR="nvim"
 
 export BROWSER="google-chrome-stable"
 
-export FZF_DEFAULT_COMMAND="fd --type f --follow --exclude .git --exclude undodir --exclude gems --exclude node_modules --exclude go --exclude app --exclude gems"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d"
 
@@ -63,7 +62,6 @@ alias ser="browser_sync_start_server"
 alias tree="exa --tree --icons"
 alias x="chmod +x"
 alias q="exit"
-alias fzf_down="fzf --reverse --preview-window=top"
 alias m="fzf_music"
 alias o="fzf_open"
 alias g="fzf_rg"
@@ -197,8 +195,6 @@ function update() {
 
   cd ~/dotfiles/bash/
   curl --remote-name https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh 
-  curl --remote-name https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.bash
-  curl --remote-name https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.bash
   git add .
   git commit -m "chore(bash): plugin"
 
@@ -236,7 +232,7 @@ function fzf_emoji() {
 
 function fzf_edit_file() {
   if [ -z "$1" ]; then
-    FILE=$(fd --hidden --type file . --exclude .git --exclude node_modules | fzf_down --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}')
+    FILE=$(fd --hidden --type file . | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}')
 
     if [ -n "$FILE" ]; then
       nvim "$FILE"
@@ -248,7 +244,7 @@ function fzf_edit_file() {
 
 function fzf_sudo_edit() {
   if [ -z "$1" ]; then
-    FILE=$(fd --hidden --type file . --exclude .git --exclude node_modules | fzf_down --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}')
+    FILE=$(fd --hidden --type file . | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}')
 
     if [ -n "$FILE" ]; then
       sudoedit "$FILE"
@@ -292,7 +288,7 @@ function fzf_git_worktree_change_dir() {
 }
 
 function fzf_git_worktree_remove() {
-  WORKTREE=$(git worktree list | fzf_down | awk '{print $1}')
+  WORKTREE=$(git worktree list | fzf | awk '{print $1}')
   DEFAULT_GIT_FOLDER=$(git worktree list | head --lines 1 | awk '{print $1}')
 
   git worktree remove $WORKTREE --force &>/dev/null
@@ -301,7 +297,7 @@ function fzf_git_worktree_remove() {
 
 function fzf_open() {
   if [ -z "$1" ]; then
-    FILE=$(fd --hidden --type file . --exclude .git --exclude node_modules | fzf_down --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:500 {}')
+    FILE=$(fd --hidden --type file . | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:500 {}')
 
     if [ -n "$FILE" ]; then
       xdg-open "$FILE"
@@ -316,7 +312,7 @@ function fzf_change_directory() {
     DIR=$1
 
     fzf_dir() {
-      DIR=$(fd --hidden --type directory . --exclude node_modules --exclude go | fzf_down --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --tree --level=2')
+      DIR=$(fd --hidden --type directory . | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --tree --level=2')
       cd "$DIR"
       la
     }
@@ -340,11 +336,11 @@ function fzf_change_directory() {
 
 function fzf_rg() {
   rg --color=always --line-number --no-heading --smart-case "${*:-}" |
-    fzf_down --ansi --color "hl:-1:underline,hl+:-1:underline:reverse" --delimiter : --preview 'bat --theme=GitHub --color=always {1} --highlight-line {2}' --bind 'enter:become($EDITOR {1} +{2})'
+    fzf --ansi --color "hl:-1:underline,hl+:-1:underline:reverse" --delimiter : --preview 'bat --theme=GitHub --color=always {1} --highlight-line {2}' --bind 'enter:become($EDITOR {1} +{2})'
 }
 
 function fzf_tldr() {
-  tldr --list | sed "s/'//g" | sed "s/,//g" | sed "s/ /\n/g" | sed "s/]//g" | sed "s/\[//g" | fzf_down --preview "tldr {1}"
+  tldr --list | sed "s/'//g" | sed "s/,//g" | sed "s/ /\n/g" | sed "s/]//g" | sed "s/\[//g" | fzf --preview "tldr {1}"
 }
 
 function tl() {
@@ -361,7 +357,7 @@ function fzf_music() {
 
   cd ~/Music/
 
-  PLAYLIST=$(fd --type directory . --exclude node_modules --exclude go | fzf_down --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --tree --icons')
+  PLAYLIST=$(fd --type directory . --exclude node_modules --exclude go | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --tree --icons')
 
   if [ -n "$PLAYLIST" ]; then
     cd $PLAYLIST
@@ -405,8 +401,8 @@ show_all_video_chapter() {
 
 source ~/dotfiles/bash/fzf-bash-completion.sh
 bind -x '"\t": fzf_bash_completion'
-source ~/dotfiles/bash/completion.bash
-source ~/dotfiles/bash/key-bindings.bash
+source /usr/share/fzf/completion.bash
+source /usr/share/fzf/key-bindings.bash
 
 eval "$(fnm env --use-on-cd)"
 eval "$(starship init bash)"
