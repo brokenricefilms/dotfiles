@@ -386,6 +386,7 @@ tmux_kill_all_unname_session() {
   cd $CURRENT_DIR
 }
 
+# TODO: make faster by using api
 show_all_video_chapter() {
   yt-dlp --dump-json "$1" | jq '.title, .original_url, .chapters' | nvim
 }
