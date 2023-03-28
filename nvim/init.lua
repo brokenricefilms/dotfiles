@@ -54,6 +54,30 @@ require("lazy").setup(
       skip_confirm_for_simple_edits = true,
     }
   },
+  {
+    "ThePrimeagen/harpoon",
+    event = { "BufReadPost", "BufNewFile" },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    keys = {
+      { "<leader>o", function() require("harpoon.ui").toggle_quick_menu() end},
+      { "<leader>i", function() require("harpoon.mark").add_file() end},
+      { "<leader>a", function() require("harpoon.ui").nav_file(1) end},
+      { "<leader>s", function() require("harpoon.ui").nav_file(2) end},
+      { "<leader>d", function() require("harpoon.ui").nav_file(3) end},
+      { "<leader>f", function() require("harpoon.ui").nav_file(4) end},
+      { "<leader>g", function() require("harpoon.ui").nav_file(5) end},
+    },
+  },
+  {
+    "ethanholz/nvim-lastplace",
+    opts = {
+      lastplace_ignore_buftype = {"quickfix", "nofile", "help"},
+      lastplace_ignore_filetype = {"gitcommit", "gitrebase", "svn", "hgcommit"},
+      lastplace_open_folds = true
+    }
+  },
 })
 
 vim.cmd('colorscheme rose-pine-dawn')
