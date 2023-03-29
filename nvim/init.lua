@@ -17,6 +17,10 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   "farmergreg/vim-lastplace",
   {
+    "romainl/vim-cool",
+    event = "VeryLazy"
+  },
+  {
     "tpope/vim-sleuth",
     event = { "BufReadPost", "BufNewFile" },
   },
@@ -52,10 +56,9 @@ require("lazy").setup({
   {
     "stevearc/oil.nvim",
     opts = {
-      columns = {
-      },
+      columns = {},
       skip_confirm_for_simple_edits = true,
-    }
+    },
   },
   {
     "ThePrimeagen/harpoon",
