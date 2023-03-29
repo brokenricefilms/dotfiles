@@ -453,6 +453,18 @@ open_netlify() {
   open "https://app.netlify.com/teams/thuanowa/overview"
 }
 
+switch_audio_output_to_headphone() {
+  pactl set-default-sink alsa_output.pci-0000_04_00.6.HiFi__hw_Generic_1__sink
+}
+
+switch_audio_output_to_bluetooth_speak() {
+  pactl set-default-sink bluez_output.C1_AC_88_3D_D6_EE.1
+}
+
+switch_audio_input_to_headphone() {
+  pactl set-default-source alsa_input.pci-0000_04_00.6.HiFi__hw_Generic_1__source
+}
+
 source ~/dotfiles/bash/fzf-bash-completion.sh
 bind -x '"\t": fzf_bash_completion'
 source /usr/share/fzf/completion.bash
