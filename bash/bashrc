@@ -67,7 +67,7 @@ alias o="fzf_open"
 alias g="fzf_rg"
 alias npm="pnpm"
 alias npx="pnpx"
-alias c="change_directory_to_git_root ; code ."
+alias c="code"
 alias test_keyboard_input_code="sudo libinput debug-events"
 
 alias 4l="tmux split-window -d \; split-window -d \; split-window -d \; select-layout even-horizontal"
@@ -97,7 +97,7 @@ alias a="git add -A; git commit"
 alias aa="git add -A; git commit -m 'auto commit'"
 alias am="git add -A; git commit --amend --no-edit"
 alias cdr="change_directory_to_git_root"
-alias gc="clone_change_dir_to_repo"
+alias cl="clone_repo_in_clipboard"
 alias l="git pull"
 alias ll="git pull -f"
 alias p="git push"
@@ -211,10 +211,11 @@ function change_directory_to_git_root() {
   ls
 }
 
-function clone_change_dir_to_repo() {
-  GIT_DIR="$(basename "$1" .git)"
-  GIT_DIR_RESOLVED=${2:-$GIT_DIR}
-  git clone "$@" && cd "$GIT_DIR_RESOLVED"
+function clone_repo_in_clipboard() {
+  url_to_username_repo=$(wl-paste | sed 's/.*m\///g')
+  repo_name=$(wl-paste | sed 's/.*\///g')
+  gh repo clone "$url_to_username_repo"
+  cd "$repo_name"
 }
 
 function fzf_emoji() {
