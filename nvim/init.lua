@@ -14,9 +14,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup(
-{
-  "tpope/vim-sleuth",
+require("lazy").setup({
+  "farmergreg/vim-lastplace",
+  {
+    "tpope/vim-sleuth",
+    event = { "BufReadPost", "BufNewFile" },
+  },
   { 
     "rose-pine/neovim",
     name = 'rose-pine' 
@@ -56,6 +59,7 @@ require("lazy").setup(
   },
   {
     "ThePrimeagen/harpoon",
+    event = "VeryLazy",
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
@@ -70,12 +74,14 @@ require("lazy").setup(
     },
   },
   {
-    "ethanholz/nvim-lastplace",
-    opts = {
-      lastplace_ignore_buftype = {"quickfix", "nofile", "help"},
-      lastplace_ignore_filetype = {"gitcommit", "gitrebase", "svn", "hgcommit"},
-      lastplace_open_folds = true
-    }
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end
   },
 })
 
@@ -102,11 +108,9 @@ vim.opt.cursorlineopt = 'number'
 
 vim.opt.undofile = true
 vim.opt.undodir = os.getenv('HOME') .. '/.cache/nvim'
-vim.opt.undolevels = 10000
+vim.opt.undolevels = 1000
 
 vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
 vim.opt.smartindent = true
 
 vim.opt.hidden = true
