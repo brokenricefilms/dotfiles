@@ -21,6 +21,7 @@ require("lazy").setup({
   },
   {
     "ethanholz/nvim-lastplace",
+    event = { "BufReadPost", "BufNewFile" },
     opts = {
       lastplace_ignore_buftype = { "quickfix", "nofile", "help" },
       lastplace_ignore_filetype = { "gitcommit", "gitrebase", "svn", "hgcommit" },
@@ -256,6 +257,35 @@ require("lazy").setup({
       vim.keymap.set({ "n", "t" }, "<A-p>", "<CMD>NavigatorPrevious<CR>")
     end,
   },
+}, {
+  performance = {
+    rtp = {
+      disabled_plugins = {
+        "html_plugin",
+        "getscript",
+        "getscriptPlugin",
+        "gzip",
+        "health",
+        "logipat",
+        "matchit",
+        "netrw",
+        "netrwFileHandlers",
+        "netrwPlugin",
+        "netrwSettings",
+        "rplugin",
+        "rrhelper",
+        "tar",
+        "tarPlugin",
+        "tohtml",
+        "tutor",
+        "vimball",
+        "vimballPlugin",
+        "zip",
+        "zipPlugin",
+      },
+    },
+  },
+  install = { colorscheme = { "rose-pine-dawn", "shine" } },
 })
 
 vim.cmd("colorscheme rose-pine-dawn")
@@ -277,7 +307,6 @@ vim.opt.showbreak = "↪"
 vim.opt.scrolloff = 5
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
---vim.opt.cursorlineopt = "number"
 
 vim.opt.undofile = true
 vim.opt.undodir = os.getenv("HOME") .. "/.cache/nvim"
@@ -318,6 +347,8 @@ vim.keymap.set("x", ">", ">gv")
 
 vim.keymap.set("n", "gf", ":cd %:h<enter>:edit <cfile><enter>")
 
+vim.keymap.set("n", "gf", ":cd %:h<enter>:edit <cfile><enter>")
+
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
   callback = function()
@@ -344,5 +375,11 @@ vim.api.nvim_create_autocmd({ "InsertEnter", "WinLeave" }, {
       vim.api.nvim_win_set_var(0, "auto-cursorline", cl)
       vim.wo.cursorline = false
     end
+  end,
+})
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+  callback = function()
+    vim.cmd([[FormatWrite]])
   end,
 })
