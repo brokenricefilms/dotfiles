@@ -10,4 +10,4 @@
 - [Tmux](./tmux/tmux.conf)
 - [Bash](./bash/bashrc): [git_worktree_fzf](https://github.com/thuanowa/git_worktree_fzf)
 - [Neovim](./nvim/): I'm too noob for setup LSP, autocompletion 😅. So i don't use that.
-- [VSCode](./profile.code-profile): sometime i want fancy autocompletion, lsp,... or preview markdown file.
+- [VSCode](./profile.code-profile): sometime i want fancy autocompletion, LSP,... or preview markdown file.
