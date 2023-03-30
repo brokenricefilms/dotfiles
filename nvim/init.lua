@@ -8,8 +8,7 @@ if not vim.loop.fs_stat(lazypath) then
     "clone",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
+    "--branch=stable", -- latest stable release lazypath
   })
 end
 vim.opt.rtp:prepend(lazypath)
@@ -41,25 +40,26 @@ require("lazy").setup({
     "nvim-treesitter/nvim-treesitter",
     version = false,
     build = ":TSUpdate",
-    event = { "BufReadPost", "BufNewFile" },
+    event = "VeryLazy",
     opts = {
-      context_commentstring = {
-        enable = true,
-        enable_autocmd = false,
-      },
-      ensure_installed = "all",
       highlight = { enable = true },
+      indent = { enable = true, disable = { "python" } },
+      ensure_installed = "all",
     },
+    config = function(_, opts)
+      require("nvim-treesitter.configs").setup(opts)
+    end,
   },
   {
     "https://git.sr.ht/~nedia/auto-save.nvim",
-    event = "BufWinEnter",
+    event = "VeryLazy",
     config = function()
       require("auto-save").setup()
     end,
   },
   {
     "stevearc/oil.nvim",
+    event = "BufEnter",
     opts = {
       columns = {},
       skip_confirm_for_simple_edits = true,
@@ -277,27 +277,30 @@ vim.opt.showbreak = "↪"
 vim.opt.scrolloff = 5
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
-vim.opt.cursorlineopt = "number"
+--vim.opt.cursorlineopt = "number"
 
 vim.opt.undofile = true
 vim.opt.undodir = os.getenv("HOME") .. "/.cache/nvim"
 vim.opt.undolevels = 10000
-
-vim.opt.expandtab = true
-vim.opt.smartindent = true
 
 vim.opt.hidden = true
 vim.opt.history = 100
 vim.opt.lazyredraw = true
 vim.opt.updatetime = 100
 
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "*", "*zz")
 vim.keymap.set("n", "#", "#zz")
 
-vim.keymap.set("n", "j", "gj")
-vim.keymap.set("n", "k", "gk")
+vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 vim.keymap.set("n", "<leader>q", ":q<enter>")
 vim.keymap.set("n", "Q", ":qa!<enter>")
@@ -314,3 +317,32 @@ vim.keymap.set("x", "<", "<gv")
 vim.keymap.set("x", ">", ">gv")
 
 vim.keymap.set("n", "gf", ":cd %:h<enter>:edit <cfile><enter>")
+
+local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
+vim.api.nvim_create_autocmd("TextYankPost", {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = "*",
+})
+
+vim.api.nvim_create_autocmd({ "InsertLeave", "WinEnter" }, {
+  callback = function()
+    local ok, cl = pcall(vim.api.nvim_win_get_var, 0, "auto-cursorline")
+    if ok and cl then
+      vim.wo.cursorline = true
+      vim.api.nvim_win_del_var(0, "auto-cursorline")
+    end
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "InsertEnter", "WinLeave" }, {
+  callback = function()
+    local cl = vim.wo.cursorline
+    if cl then
+      vim.api.nvim_win_set_var(0, "auto-cursorline", cl)
+      vim.wo.cursorline = false
+    end
+  end,
+})
