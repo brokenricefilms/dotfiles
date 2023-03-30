@@ -261,6 +261,7 @@ require("lazy").setup({
   performance = {
     rtp = {
       disabled_plugins = {
+        "spellfile",
         "html_plugin",
         "getscript",
         "getscriptPlugin",
