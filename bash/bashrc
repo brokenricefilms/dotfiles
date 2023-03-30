@@ -116,6 +116,10 @@ alias la="exa --all --icons"
 alias ls="exa --long --all --icons"
 alias tmp="cd /tmp"
 
+is_in_git_repo() {
+  git rev-parse HEAD > /dev/null 2>&1
+}
+
 function browser_daily() {
   open "https://www.inoreader.com/all_articles"
   open "https://www.youtube.com/feed/subscriptions"
@@ -258,6 +262,8 @@ function fzf_sudo_edit() {
 }
 
 function fzf_git_worktree_change_dir() {
+  is_in_git_repo || return
+
   local worktrees
   local worktree
   local query
@@ -291,6 +297,8 @@ function fzf_git_worktree_change_dir() {
 }
 
 function fzf_git_worktree_remove() {
+  is_in_git_repo || return
+
   WORKTREE=$(git worktree list | fzf | awk '{print $1}')
   DEFAULT_GIT_FOLDER=$(git worktree list | head --lines 1 | awk '{print $1}')
 
