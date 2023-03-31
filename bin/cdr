@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+change_directory_to_git_root

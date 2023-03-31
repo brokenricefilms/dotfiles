@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+fzf_git_worktree_remove
