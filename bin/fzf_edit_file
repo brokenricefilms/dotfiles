@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ]; then
+  FILE=$(fd --hidden --type file . | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}')
+
+  if [ -n "$FILE" ]; then
+    nvim "$FILE"
+  fi
+else
+  nvim "$1"
+fi

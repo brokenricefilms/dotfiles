@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+open "https://app.netlify.com/teams/thuanowa/overview"

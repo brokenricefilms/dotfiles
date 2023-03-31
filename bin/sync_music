@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+
+MUSIC_DIR=$HOME/Music/
+
+cd $MUSIC_DIR
+trash *
+
+mkdir joji
+cd joji
+download_audio "https://l.thuanowa.com/music-joji"
+
+cd $MUSIC_DIR
+mkdir billie_eilish
+cd billie_eilish
+download_audio "https://l.thuanowa.com/music-billie-eilish"
+
+cd $MUSIC_DIR
+mkdir b_ray
+cd b_ray
+download_audio "https://l.thuanowa.com/music-b-ray"
+
+cd $MUSIC_DIR
+mkdir den_vau
+cd den_vau
+download_audio "https://l.thuanowa.com/music-den-vau"
+
+cd $MUSIC_DIR
+mkdir two_feet
+cd two_feet
+download_audio "https://l.thuanowa.com/music-two-feet"
+
+cd $MUSIC_DIR
+mkdir English
+cd English
+download_audio "https://l.thuanowa.com/music-en"
+
+cd $MUSIC_DIR
+mkdir Vietnamese
+cd Vietnamese
+download_audio "https://l.thuanowa.com/music-vi"
+
+cd $MUSIC_DIR
+mkdir Korean
+cd Korean
+download_audio "https://l.thuanowa.com/music-ko"
+
+cd $MUSIC_DIR
+mkdir Japanese
+cd Japanese
+download_audio "https://l.thuanowa.com/music-ja"
+
+cd $MUSIC_DIR
+mkdir chill_hop
+cd chill_hop
+download_audio "https://l.thuanowa.com/music-chill-hop"

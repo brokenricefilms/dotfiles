@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+gh repo create --template thuanowa/template --public --clone "$1"

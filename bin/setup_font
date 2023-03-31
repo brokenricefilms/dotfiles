@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+setup_top_secret
+
+ln -sf ~/repos/thuanowa/ok/.fonts ~/.fonts
+
+cd ~/.fonts
+
+fc-cache -rf

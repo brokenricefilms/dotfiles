@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+update_system
+update_npm
+update_tldr
+update_tmux
+update_bash
+update_lazyvim

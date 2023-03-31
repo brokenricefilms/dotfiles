@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+function change_directory_to_git_root() {
+  cd $(git rev-parse --show-toplevel)
+  ls
+}
+
+function clone_repo_in_clipboard() {
+  url_to_username_repo=$(wl-paste | sed 's/.*m\///g')
+  repo_name=$(wl-paste | sed 's/.*\///g')
+  gh repo clone "$url_to_username_repo"
+  cd "$repo_name"
+}
+
+function fzf_change_directory() {
+  if [ -z "$1" ]; then
+    DIR=$1
+
+    fzf_dir() {
+      DIR=$(fd --hidden --type directory . | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --tree --level=2')
+      cd "$DIR"
+      la
+    }
+
+    if [[ -n $DIR ]]; then
+      cd $DIR &>/dev/null
+      ERROR=$?
+
+      if [[ ERROR -eq 1 ]]; then
+        echo "\"$1\" directory does not exist"
+        fzf_dir
+      fi
+    else
+      fzf_dir
+    fi
+  else
+    mkdir -p "$1"
+    cd "$1"
+  fi
+}

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+cd ~/Music/
+
+PLAYLIST=$(fd --type directory . --exclude node_modules --exclude go | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --tree --icons')
+
+cd $PLAYLIST
+mpv --loop-playlist --shuffle *

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+yt-dlp --dump-json "$1" | jq '.title, .original_url, .chapters' | nvim

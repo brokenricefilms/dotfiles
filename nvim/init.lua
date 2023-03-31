@@ -8,7 +8,7 @@ if not vim.loop.fs_stat(lazypath) then
     "clone",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release lazypath
+    "--branch=stable",
   })
 end
 vim.opt.rtp:prepend(lazypath)
@@ -42,10 +42,32 @@ require("lazy").setup({
     version = false,
     build = ":TSUpdate",
     event = "VeryLazy",
+    dependencies = {
+      { "nvim-treesitter/nvim-treesitter-textobjects" },
+    },
     opts = {
       highlight = { enable = true },
       indent = { enable = true, disable = { "python" } },
       ensure_installed = "all",
+      textobjects = {
+        select = {
+          enable = true,
+          lookahead = true,
+          keymaps = {
+            ["af"] = "@function.outer",
+            ["if"] = "@function.inner",
+            ["ac"] = "@class.outer",
+            ["ic"] = "@class.inner",
+            ["as"] = "@scope",
+          },
+          selection_modes = {
+            ["@parameter.outer"] = "v",
+            ["@function.outer"] = "V",
+            ["@class.outer"] = "<c-v>",
+          },
+          include_surrounding_whitespace = true,
+        },
+      },
     },
     config = function(_, opts)
       require("nvim-treesitter.configs").setup(opts)
@@ -53,14 +75,13 @@ require("lazy").setup({
   },
   {
     "https://git.sr.ht/~nedia/auto-save.nvim",
-    event = "VeryLazy",
+    event = "BufWinEnter",
     config = function()
       require("auto-save").setup()
     end,
   },
   {
     "stevearc/oil.nvim",
-    event = "BufEnter",
     opts = {
       columns = {},
       skip_confirm_for_simple_edits = true,
@@ -204,7 +225,7 @@ require("lazy").setup({
         python = {
           function()
             return {
-              exe = "python -m autopep8",
+              exe = "autopep8",
               args = { "--in-place --aggressive --aggressive", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)) },
               stdin = false,
             }
@@ -349,6 +370,8 @@ vim.keymap.set("x", ">", ">gv")
 vim.keymap.set("n", "gf", ":cd %:h<enter>:edit <cfile><enter>")
 
 vim.keymap.set("n", "gf", ":cd %:h<enter>:edit <cfile><enter>")
+
+vim.keymap.set("n", "<leader><space>", "<C-^>")
 
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {

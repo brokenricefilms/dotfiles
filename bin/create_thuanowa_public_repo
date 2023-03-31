@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cd ~/repos/thuanowa/
+create_publish_repo
