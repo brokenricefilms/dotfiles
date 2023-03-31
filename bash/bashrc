@@ -57,9 +57,9 @@ stty time 0
 alias q="exit"
 alias dow="cd ~/Downloads/ ; la"
 alias tmp="cd /tmp ; la"
+alias ..="cd .."
 alias d="fzf_change_directory"
 alias dd="cd ~/ ; fzf_change_directory"
-alias ..="cd .."
 alias w="fzf_git_worktree_change_dir"
 alias ww="fzf_git_worktree_remove"
 
