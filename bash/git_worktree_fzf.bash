@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-is_in_git_repo() {
-	git rev-parse HEAD >/dev/null 2>&1
-}
-
 function fzf_git_worktree_change_dir() {
 	is_in_git_repo || return
 
