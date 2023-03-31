@@ -55,7 +55,7 @@ set -o vi
 stty time 0
 
 alias q="exit"
-alias dow="cd ~/Download ; la"
+alias dow="cd ~/Downloads/ ; la"
 alias tmp="cd /tmp ; la"
 
 source ~/dotfiles/bash/function
