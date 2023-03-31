@@ -117,7 +117,7 @@ alias ls="exa --long --all --icons"
 alias tmp="cd /tmp"
 
 is_in_git_repo() {
-  git rev-parse HEAD > /dev/null 2>&1
+  git rev-parse HEAD >/dev/null 2>&1
 }
 
 function browser_daily() {
@@ -193,7 +193,7 @@ function sync_music() {
 function update() {
   CURRENT_DIR=$(pwd)
 
-  yay --noconfirm
+  yay
   pnpm add -g pnpm
   pnpm update -g
   tldr --update
@@ -203,6 +203,12 @@ function update() {
   curl --remote-name https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh
   git add .
   git commit -m "chore(bash): plugin"
+
+  cd $HOME/dotfiles/
+  nvim --headless "+Lazy! sync" +qa
+  git add nvim/lazy-lock.json
+  git commit -m "chore: lazy.nvim"
+  git push
 
   cd $CURRENT_DIR
 }
