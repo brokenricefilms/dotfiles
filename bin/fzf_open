@@ -4,8 +4,8 @@ if [ -z "$1" ]; then
   FILE=$(fd --hidden --type file . | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:500 {}')
 
   if [ -n "$FILE" ]; then
-    open "$FILE"
+    xdg-open "$FILE"
   fi
 else
-  open "$1"
+  xdg-open "$1"
 fi
