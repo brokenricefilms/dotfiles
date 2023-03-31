@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if command -v tmux &>/dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  tmux attach || tmux new-session && exit
+	tmux attach || tmux new-session && exit
 fi
 
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
