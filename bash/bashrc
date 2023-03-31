@@ -35,6 +35,9 @@ export EDITOR="nvim"
 
 export BROWSER="google-chrome-stable"
 
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd -t d"
+
 export FZF_DEFAULT_OPTS="
 	--color=fg:#797593,bg:#faf4ed,hl:#d7827e
 	--color=fg+:#575279,bg+:#f2e9e1,hl+:#d7827e
@@ -48,17 +51,13 @@ HISTFILESIZE=
 shopt -s histappend
 shopt -s checkwinsize
 
-bind "set completion-ignore-case on"
-
 set -o vi
-
 stty time 0
 
 alias q="exit"
-alias dow="cd ~/Downloads ; ls"
-alias tmp="cd /tmp"
+alias dow="cd ~/Download ; la"
+alias tmp="cd /tmp ; la"
 
-source ~/dotfiles/bash/alias
 source ~/dotfiles/bash/function
 source ~/dotfiles/bash/git_worktree_fzf.bash
 source ~/dotfiles/bash/fzf-bash-completion.sh
