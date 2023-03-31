@@ -92,9 +92,6 @@ alias ee="cd $HOME; fzf_edit_file"
 alias ej="fzf_emoji"
 alias E="fzf_sudo_edit"
 
-alias i="yay --noconfirm"
-alias u="yay -R --noconfirm"
-
 alias a="git add -A; git commit"
 alias aa="git add -A; git commit -m 'auto commit'"
 alias am="git add -A; git commit --amend --no-edit"
@@ -186,29 +183,6 @@ function sync_music() {
   mkdir chill_hop
   cd chill_hop
   download_audio "https://l.thuanowa.com/music-chill-hop"
-
-  cd $CURRENT_DIR
-}
-
-function update() {
-  CURRENT_DIR=$(pwd)
-
-  yay
-  pnpm add -g pnpm
-  pnpm update -g
-  tldr --update
-  ~/.tmux/plugins/tpm/bin/update_plugins all
-
-  cd ~/dotfiles/bash/
-  curl --remote-name https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh
-  git add .
-  git commit -m "chore(bash): plugin"
-
-  cd $HOME/dotfiles/
-  nvim --headless "+Lazy! sync" +qa
-  git add nvim/lazy-lock.json
-  git commit -m "chore: lazy.nvim"
-  git push
 
   cd $CURRENT_DIR
 }
