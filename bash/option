@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+HISTCONTROL=ignoreboth
+HISTSIZE=
+HISTFILESIZE=
+shopt -s histappend
+shopt -s checkwinsize
+
+set -o vi
+stty time 0
