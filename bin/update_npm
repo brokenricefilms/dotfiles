@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-pnpm add -g pnpm
-pnpm update -g

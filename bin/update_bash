@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-cd ~/dotfiles/bash/
-curl --remote-name https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh
-git add .
-git commit -m "chore(bash): plugin"

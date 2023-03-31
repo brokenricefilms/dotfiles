@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-xdg-open "https://app.netlify.com/teams/thuanowa/overview"

@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-if hash yay 2>/dev/null; then
-	yay --noconfirm $1
-elif hash yay 2>/dev/null; then
-	sudo dnf install -y $1
-elif hash apt 2>/dev/null; then
-	sudo apt install -y $1
-fi

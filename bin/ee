@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-cd $HOME; fzf_edit_file

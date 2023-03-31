@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-xdg-open "https://www.inoreader.com/all_articles"
-xdg-open "https://www.youtube.com/feed/subscriptions"
-xdg-open "https://github.com"

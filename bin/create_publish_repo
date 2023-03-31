@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-gh repo create --public --clone "$1"

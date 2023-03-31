@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-pactl set-default-sink bluez_output.C1_AC_88_3D_D6_EE.1

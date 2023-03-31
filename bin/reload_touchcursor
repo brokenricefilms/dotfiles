@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-cp ~/dotfiles/touchcursor.conf ~/.config/touchcursor/
-systemctl --user restart touchcursor.service
