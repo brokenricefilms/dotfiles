@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-cd $HOME
-fzf_change_directory
