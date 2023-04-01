@@ -116,9 +116,6 @@ alias la="exa --all --icons"
 alias ls="exa --long --all --icons"
 alias tmp="cd /tmp"
 
-alias i="yay -S --noconfirm"
-alias u="yay -R --noconfirm"
-
 is_in_git_repo() {
 	git rev-parse HEAD >/dev/null 2>&1
 }
