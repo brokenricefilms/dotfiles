@@ -6,8 +6,8 @@
 ## Current setup
 
 - Crystal Linux (Arch base with Gnome fanboy)
-- [Foot terminal](./foot/foot.ini)
-- [Tmux](./tmux/tmux.conf)
-- [Bash](./bash/bashrc): [git_worktree_fzf](https://github.com/thuanowa/git_worktree_fzf), [bin](./bin)
-- [Neovim](./nvim/): I'm too idiot for setup LSP, autocompletion 😅. So i don't use that.
-- [VSCode](./profile.code-profile): sometime i want fancy autocompletion, LSP,... or preview markdown file.
+- [Foot terminal](./foot/foot.ini): terminal for Wayland fanboy
+- [Tmux](./tmux/tmux.conf): i 🫰 sessions.
+- [Bash](./bash/bashrc): fzf work prefect
+- [Neovim](./nvim/): when VScode fucked up i use Neovim.
+- [VSCode](./profile.code-profile): when Neovim fucked up i use VScode.
