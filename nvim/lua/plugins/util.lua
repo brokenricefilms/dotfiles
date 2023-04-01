@@ -19,9 +19,4 @@ return {
 			skip_confirm_for_simple_edits = true,
 		},
 	},
-	{
-		"gpanders/editorconfig.nvim",
-		event = "VeryLazy",
-	},
-	--"tpope/vim-sleuth",
 }
