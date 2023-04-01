@@ -12,6 +12,7 @@ return {
 	},
 	{
 		"NvChad/nvim-colorizer.lua",
+		event = "BufReadPre",
 		opts = {
 			user_default_options = {
 				css = true,
@@ -22,6 +23,7 @@ return {
 	},
 	{
 		"nvim-telescope/telescope.nvim",
+		event = "VeryLazy",
 		opts = {
 			defaults = {
 				results_title = false,
