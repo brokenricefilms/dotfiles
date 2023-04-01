@@ -1,15 +1,18 @@
 return {
 	{
 		"numToStr/Navigator.nvim",
-		event = "VeryLazy",
+		lazy = true,
 		config = function()
-			require("Navigator").setup()
-			vim.keymap.set({ "n", "t" }, "<A-h>", "<CMD>NavigatorLeft<CR>")
-			vim.keymap.set({ "n", "t" }, "<A-l>", "<CMD>NavigatorRight<CR>")
-			vim.keymap.set({ "n", "t" }, "<A-k>", "<CMD>NavigatorUp<CR>")
-			vim.keymap.set({ "n", "t" }, "<A-j>", "<CMD>NavigatorDown<CR>")
-			vim.keymap.set({ "n", "t" }, "<A-p>", "<CMD>NavigatorPrevious<CR>")
+			require("Navigator").setup({
+				auto_save = "current",
+			})
 		end,
+		keys = {
+			{ "<A-h>", "<CMD>NavigatorLeft<CR>" },
+			{ "<A-l>", "<CMD>NavigatorRight<CR>" },
+			{ "<A-k>", "<CMD>NavigatorUp<CR>" },
+			{ "<A-j>", "<CMD>NavigatorDown<CR>" },
+		},
 	},
 	{
 		"stevearc/oil.nvim",
