@@ -80,8 +80,8 @@ alias 4-="tmux split-window -d \; split-window -d \; split-window -d \; select-l
 alias 3l="tmux split-window -d \; split-window -d \; select-layout even-horizontal"
 alias 3-="tmux split-window -d \; split-window -d \; select-layout even-vertical"
 
-alias 4i="tmux split-window -d \; split-window -d \; split-window -d \; select-layout main-vertical"
-alias 3i="tmux split-window -d \; split-window -d \; select-layout main-vertical"
+alias 4i="tmux split-window -d \; split-window -d \; split-window -d \; select-layout main-horizontal"
+alias 3i="tmux split-window -d \; split-window -d \; select-layout main-horizontal"
 
 alias r="rm -rf"
 alias rr="sudo rm -rf"
