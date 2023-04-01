@@ -5,7 +5,6 @@ return {
 			ensure_installed = {
 				"astro-language-server",
 				"bash-language-server",
-				"clangd",
 				"css-lsp",
 				"cssmodules-language-server",
 				"deno",
@@ -21,6 +20,7 @@ return {
 				"typescript-language-server",
 				"vue-language-server",
 				"write-good",
+				"clang-format",
 			},
 		},
 	},
@@ -31,6 +31,7 @@ return {
 				sources = {
 					require("null-ls").builtins.formatting.shfmt,
 					require("null-ls").builtins.formatting.stylua,
+					require("null-ls").builtins.formatting.clang_format,
 
 					require("null-ls").builtins.diagnostics.write_good,
 
