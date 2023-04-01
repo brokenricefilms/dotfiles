@@ -380,9 +380,6 @@ vim.keymap.set("n", "#", "#zz")
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
-vim.keymap.set("n", "<leader>q", ":q<enter>")
-vim.keymap.set("n", "Q", ":qa!<enter>")
-
 vim.keymap.set("n", "<Right>", "<C-w><")
 vim.keymap.set("n", "<Down>", "<C-w>-")
 vim.keymap.set("n", "<Up>", "<C-w>+")
