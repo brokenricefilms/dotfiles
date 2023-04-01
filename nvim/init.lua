@@ -14,6 +14,15 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	{
+		"ibhagwan/fzf-lua",
+		event = "VeryLazy",
+		config = function()
+			vim.keymap.set("n", "<leader>e", ":FzfLua files<enter>")
+			vim.keymap.set("n", "<leader>E", ":FzfLua git_files<enter>")
+			vim.keymap.set("n", "<leader>j", ":FzfLua live_grep<enter>")
+		end,
+	},
 	"tpope/vim-sleuth",
 	{
 		"gpanders/editorconfig.nvim",
