@@ -75,13 +75,7 @@ alias lazydocker="sudo $HOME/go/bin/lazydocker"
 alias docker="sudo docker"
 alias docker-compose="sudo docker-compose"
 
-alias 4l="tmux split-window -d \; split-window -d \; split-window -d \; select-layout even-horizontal"
-alias 4-="tmux split-window -d \; split-window -d \; split-window -d \; select-layout even-vertical"
-alias 3l="tmux split-window -d \; split-window -d \; select-layout even-horizontal"
-alias 3-="tmux split-window -d \; split-window -d \; select-layout even-vertical"
-
-alias 4i="tmux split-window -d \; split-window -d \; split-window -d \; select-layout main-horizontal"
-alias 3i="tmux split-window -d \; split-window -d \; select-layout main-horizontal"
+alias i="tmux split-window -d \; split-window -d \; split-window -d \; select-layout main-horizontal"
 
 alias r="rm -rf"
 alias rr="sudo rm -rf"
@@ -91,6 +85,7 @@ alias d="fzf_change_directory"
 alias dd="cd $HOME; fzf_change_directory"
 
 alias e="fzf_edit_file"
+alias e.="nvim ."
 alias ee="cd $HOME; fzf_edit_file"
 alias ej="fzf_emoji"
 alias E="fzf_sudo_edit"
