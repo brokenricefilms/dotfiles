@@ -1,5 +1,4 @@
 return {
-	{ "folke/persistence.nvim", enabled = false },
 	{
 		"numToStr/Navigator.nvim",
 		event = "VeryLazy",
