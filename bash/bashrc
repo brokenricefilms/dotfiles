@@ -75,8 +75,6 @@ alias docker="sudo docker"
 alias docker-compose="sudo docker-compose"
 alias edir="edir --recurse --trash --all"
 
-alias i="tmux split-window -d \; split-window -d \; split-window -d \; select-layout main-vertical"
-
 alias r="rm -rf"
 alias rr="sudo rm -rf"
 alias t="trash"
