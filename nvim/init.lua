@@ -389,6 +389,13 @@ vim.keymap.set("n", "gf", ":cd %:h<enter>:edit <cfile><enter>")
 
 vim.keymap.set("n", "<leader><space>", "<C-^>")
 
+vim.keymap.set(
+	"i",
+	";bash",
+	"#!/usr/bin/env bash<enter><BS><enter><esc>:set filetype=sh<enter>:w<enter>:!chmod +x %:p<enter><enter>",
+	{ silent = true }
+)
+
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
 	callback = function()
