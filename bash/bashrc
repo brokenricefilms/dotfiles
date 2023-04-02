@@ -73,7 +73,7 @@ alias open="xdg-open"
 alias lazydocker="sudo $HOME/go/bin/lazydocker"
 alias docker="sudo docker"
 alias docker-compose="sudo docker-compose"
-alias edir="edir --recurse --trash"
+alias edir="edir --recurse --trash --all"
 
 alias i="tmux split-window -d \; split-window -d \; split-window -d \; select-layout main-vertical"
 
@@ -85,7 +85,6 @@ alias d="fzf_change_directory"
 alias dd="cd $HOME; fzf_change_directory"
 
 alias e="fzf_edit_file"
-alias e.="nvim ."
 alias ee="cd $HOME; fzf_edit_file"
 alias ej="fzf_emoji"
 alias E="fzf_sudo_edit"
