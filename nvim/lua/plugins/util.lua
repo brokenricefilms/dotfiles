@@ -16,8 +16,9 @@ return {
 	},
 	{
 		"stevearc/oil.nvim",
+		lazy = false,
 		opts = {
-			columns = {},
+			columns = { "icon" },
 			skip_confirm_for_simple_edits = true,
 		},
 	},

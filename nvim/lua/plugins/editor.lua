@@ -1,32 +1,32 @@
 return {
 	{
-		"nvim-telescope/telescope.nvim",
-		lazy = true,
-		opts = {
-			defaults = {
-				results_title = false,
-
-				sorting_strategy = "ascending",
-				layout_strategy = "center",
-				layout_config = {
-					preview_cutoff = 1, -- Preview should always show (unless previewer = false)
-
-					width = function(_, max_columns, _)
-						return math.min(max_columns, 80)
-					end,
-
-					height = function(_, _, max_lines)
-						return math.min(max_lines, 15)
-					end,
-				},
-
-				border = true,
-				borderchars = {
-					prompt = { "─", "│", " ", "│", "╭", "╮", "│", "│" },
-					results = { "─", "│", "─", "│", "├", "┤", "╯", "╰" },
-					preview = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
-				},
+		"ibhagwan/fzf-lua",
+		event = "VeryLazy",
+		config = function()
+			vim.keymap.set("n", "<leader>e", ":FzfLua files<enter>")
+			vim.keymap.set("n", "<leader>E", ":FzfLua git_files<enter>")
+			vim.keymap.set("n", "<leader>j", ":FzfLua live_grep<enter>")
+		end,
+	},
+	{
+		"windwp/nvim-spectre",
+		keys = {
+			{ "<leader>sr", false },
+			{
+				"<leader>r",
+				function()
+					require("spectre").open()
+				end,
+				desc = "Replace in files (Spectre)",
 			},
 		},
+	},
+	{
+		"kylechui/nvim-surround",
+		version = "*",
+		event = "VeryLazy",
+		config = function()
+			require("nvim-surround").setup()
+		end,
 	},
 }

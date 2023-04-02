@@ -6,9 +6,7 @@ return {
 	},
 	{
 		"LazyVim/LazyVim",
-		opts = {
-			colorscheme = "rose-pine-dawn",
-		},
+		opts = { colorscheme = "rose-pine-dawn" },
 	},
 	{
 		"NvChad/nvim-colorizer.lua",
