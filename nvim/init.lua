@@ -10,10 +10,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	{
 		"stevearc/oil.nvim",
-		opts = {
-			columns = {},
-			skip_confirm_for_simple_edits = true,
-		},
+		opts = { columns = {}, skip_confirm_for_simple_edits = true },
 	},
 	{
 		"ibhagwan/fzf-lua",
