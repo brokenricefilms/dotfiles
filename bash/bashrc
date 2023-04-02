@@ -73,6 +73,7 @@ alias open="xdg-open"
 alias lazydocker="sudo $HOME/go/bin/lazydocker"
 alias docker="sudo docker"
 alias docker-compose="sudo docker-compose"
+alias edir="edir --recurse --trash"
 
 alias i="tmux split-window -d \; split-window -d \; split-window -d \; select-layout main-vertical"
 

@@ -83,13 +83,6 @@ require("lazy").setup({
 		end,
 	},
 	{
-		"stevearc/oil.nvim",
-		opts = {
-			columns = {},
-			skip_confirm_for_simple_edits = true,
-		},
-	},
-	{
 		"ThePrimeagen/harpoon",
 		event = "VeryLazy",
 		dependencies = { "nvim-lua/plenary.nvim" },
