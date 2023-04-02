@@ -85,6 +85,7 @@ alias d="fzf_change_directory"
 alias dd="cd $HOME; fzf_change_directory"
 
 alias e="fzf_edit_file"
+alias e.="nvim ."
 alias ee="cd $HOME; fzf_edit_file"
 alias ej="fzf_emoji"
 alias E="fzf_sudo_edit"
