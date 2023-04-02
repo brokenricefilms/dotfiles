@@ -385,9 +385,6 @@ vim.keymap.set("n", "<Down>", "<C-w>-")
 vim.keymap.set("n", "<Up>", "<C-w>+")
 vim.keymap.set("n", "<Left>", "<C-w>>")
 
-vim.keymap.set("n", "ss", "<C-w>s<C-w>j")
-vim.keymap.set("n", "sv", "<C-w>v<C-w>l")
-
 vim.keymap.set("x", "<", "<gv")
 vim.keymap.set("x", ">", ">gv")
 
