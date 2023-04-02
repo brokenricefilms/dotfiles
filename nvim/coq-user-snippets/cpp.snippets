@@ -1,0 +1,52 @@
+snippet if
+    if ( $1 ) {
+      $2
+    }
+
+snippet for
+    for (int ${1:i} = 0; $1 < ${2:n}; $1++) {
+      $0
+    }
+
+snippet do
+    do {
+      $1;
+    } while ($2);
+
+snippet while
+    while ($1) {
+      $2;
+    }
+
+snippet main
+#include <iostream>
+    using namespace std;
+
+    int main() {
+      return 0;
+    }
+
+snippet max
+    const int MAX = $1;
+
+snippet struct
+    struct $1 {
+      $2
+    };
+    $0
+
+snippet bubbleSort
+    void swap(int *x, int *y) {
+      int tmp = *x;
+      *x = *y;
+      *y = tmp;
+    }
+
+void bubbleSort(int array[], int n) {
+    for (int i = 0; i < n - 1; i++)
+      for (int j = 0; j < n - i - 1; j++) {
+        if (array[j] > array[j + 1]) {
+          swap(array[j], array[j + 1]);
+        }
+      }
+    }
