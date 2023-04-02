@@ -15,35 +15,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{
-		"ms-jpq/coq_nvim",
-		config = function()
-			vim.g.coq_settings = {
-				keymap = {
-					recommended = false,
-					jump_to_mark = "<c-e>",
-				},
-				clients = {
-					buffers = {
-						enabled = true,
-						weight_adjust = -1.9,
-					},
-					tree_sitter = {
-						enabled = true,
-						weight_adjust = -1.5,
-					},
-					lsp = {
-						enabled = true,
-						weight_adjust = 1.5,
-					},
-					snippets = {
-						enabled = true,
-						weight_adjust = 1.9,
-					},
-				},
-			}
-		end,
-	},
-	{
 		"ibhagwan/fzf-lua",
 		event = "VeryLazy",
 		config = function()
@@ -448,5 +419,3 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 		vim.cmd([[FormatWrite]])
 	end,
 })
-
-vim.cmd("COQnow --shut-up")
