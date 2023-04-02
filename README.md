@@ -9,5 +9,5 @@
 - [Foot terminal](./foot/foot.ini): terminal for Wayland fanboy
 - [Tmux](./tmux/tmux.conf): i 🫰 sessions.
 - [Bash](./bash/bashrc): fzf work prefect
-- [Neovim](./nvim/): when VScode fucked up i use Neovim.
-- [VSCode](./profile.code-profile): when Neovim fucked up i use VScode.
+- [Neovim](./nvim/): when VScode f##ked up i use Neovim.
+- [VSCode](./profile.code-profile): when Neovim f##ked up i use VScode.
