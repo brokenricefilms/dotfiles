@@ -4,7 +4,7 @@ function fzf_change_directory
 
         if [ ! -z "$dir" ]
             cd "$dir"
-            exa --tree --icons
+            exa --all --icons
         end
     else
         mkdir -p "$argv"
