@@ -8,6 +8,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	{ "nvim-tree/nvim-web-devicons", lazy = true },
 	{
 		"stevearc/oil.nvim",
 		opts = { columns = {}, skip_confirm_for_simple_edits = true },
