@@ -80,6 +80,7 @@ alias pp="git push -f"
 alias s="git status -sb"
 alias w="fzf_git_worktree_change_dir"
 alias ww="fzf_git_worktree_remove"
+alias j="fzf-rg-search-widget"
 
 alias ...="cd .. ; cd .. ; ls"
 alias ..="cd .. ; ls"

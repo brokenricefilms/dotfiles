@@ -188,6 +188,15 @@ require("lazy").setup({
 						}
 					end,
 				},
+				fish = {
+					function()
+						return {
+							exe = "fish_indent",
+							args = {},
+							stdin = true,
+						}
+					end,
+				},
 				zsh = {
 					function()
 						return {
