@@ -19,6 +19,7 @@ require("lazy").setup({
 		config = function()
 			vim.keymap.set("n", "<leader>e", ":FzfLua files<enter>")
 			vim.keymap.set("n", "<leader>E", ":FzfLua git_files<enter>")
+			vim.keymap.set("n", "<leader>;", ":FzfLua<enter>")
 			vim.keymap.set("n", "<leader>j", ":FzfLua live_grep<enter>")
 		end,
 	},
