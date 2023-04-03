@@ -346,7 +346,6 @@ vim.opt.completeopt = "menuone,noinsert,noselect"
 
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.statusline = "%F"
 vim.opt.showmatch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -355,6 +354,7 @@ vim.opt.linebreak = true
 vim.opt.showbreak = "↪"
 vim.opt.scrolloff = 5
 vim.opt.termguicolors = true
+vim.opt.statusline = " %F %m %< %= %y %r %q"
 vim.opt.cursorline = true
 
 vim.opt.undofile = true
