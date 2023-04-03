@@ -14,5 +14,5 @@
 
 ### In the future
 
-- Become Rust fanboy using [helix](./helix/), alacritty, [zellij](./zellij). I consider between nushell, ion shell, nushell background is nu language, icon shell i never play with that. Meanwhile [Fish](./fish) somehome like nushell using rust for programming shell. Rightnow i kinda enjoy using [Fish](./fish/)
+- Become Rust fanboy using [helix](./helix/), alacritty, [zellij](./zellij). I consider between nushell, ion shell, nushell background is nu language, icon shell i didn't play with that. Meanwhile [Fish](./fish) somehome like nushell using rust for programming shell. Rightnow i kinda enjoy using [Fish](./fish/)
 - I don't know how to print "hi mom" in Rust btw
