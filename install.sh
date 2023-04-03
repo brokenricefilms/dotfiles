@@ -21,7 +21,7 @@ npm config set prefix ~/.npm/
 
 npm install --global prettier
 npm install --global tinypng-cli
-npm install --global browser-sync
+npm install --global live-server
 npm install --global yarn
 npm install --global neovim
 npm install --global typescript

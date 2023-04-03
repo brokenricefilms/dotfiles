@@ -1,7 +1,7 @@
 function update --description 'update all'
     set --local current_dir (pwd)
 
-    sudo dnf update -y
+    yay
     pnpm add -g pnpm
     tldr --update
     fisher update

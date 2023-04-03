@@ -11,7 +11,7 @@ require("lazy").setup({
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
 	{
 		"stevearc/oil.nvim",
-		opts = { columns = {}, skip_confirm_for_simple_edits = true },
+		opts = { skip_confirm_for_simple_edits = true },
 	},
 	{
 		"ibhagwan/fzf-lua",
@@ -341,7 +341,6 @@ require("lazy").setup({
 vim.cmd("colorscheme rose-pine-dawn")
 
 vim.opt.mouse = "a"
-vim.opt.clipboard = "unnamedplus"
 vim.opt.swapfile = false
 vim.opt.completeopt = "menuone,noinsert,noselect"
 
@@ -389,8 +388,11 @@ vim.keymap.set("n", "<Left>", "<C-w>>")
 vim.keymap.set("n", "sv", "<C-w>v<C-w>l")
 vim.keymap.set("n", "ss", "<C-w>s<C-w>j")
 
+vim.keymap.set("n", "<leader>k", "<C-w>s<C-w>j:e %:h<enter>")
+
 vim.keymap.set("n", "<leader>q", ":q<enter>")
 vim.keymap.set("n", "Q", ":qa!<enter>")
+vim.keymap.set("n", "<leader>w", ":w<enter>")
 
 vim.keymap.set("x", "<", "<gv")
 vim.keymap.set("x", ">", ">gv")
@@ -398,6 +400,16 @@ vim.keymap.set("x", ">", ">gv")
 vim.keymap.set("n", "gf", ":cd %:h<enter>:edit <cfile><enter>")
 
 vim.keymap.set("n", "<leader><space>", "<C-^>")
+
+vim.keymap.set("v", "<leader>y", '"+y')
+vim.keymap.set("n", "<leader>Y", '"+yg_')
+vim.keymap.set("n", "<leader>y", '"+y')
+vim.keymap.set("n", "<leader>yy", '"+yy')
+
+vim.keymap.set("n", "<leader>p", '"+p')
+vim.keymap.set("n", "<leader>P", '"+P')
+vim.keymap.set("v", "<leader>p", '"+p')
+vim.keymap.set("v", "<leader>P", '"+P')
 
 vim.keymap.set(
 	"i",
