@@ -21,7 +21,7 @@ if [ -f $file_name ]; then
 		;;
 	*.rs)
 		rustc $file_name
-		./$file_name_without_extension
+		$file_name_without_extension
 		rm $file_name_without_extension
 		;;
 	*.html) brave-browser --new-window $file_name ;;
