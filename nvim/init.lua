@@ -341,6 +341,8 @@ require("lazy").setup({
 
 vim.cmd("colorscheme rose-pine-dawn")
 
+vim.opt.clipboard = "unnamedplus"
+
 vim.opt.mouse = "a"
 vim.opt.swapfile = false
 vim.opt.completeopt = "menuone,noinsert,noselect"
@@ -403,16 +405,6 @@ vim.keymap.set("n", "gf", ":cd %:h<enter>:edit <cfile><enter>")
 vim.keymap.set("n", "<leader><space>", "<C-^>")
 
 vim.keymap.set("n", "<leader>r", ":!run %:p<enter>")
-
-vim.keymap.set("v", "<leader>y", '"+y')
-vim.keymap.set("n", "<leader>Y", '"+yg_')
-vim.keymap.set("n", "<leader>y", '"+y')
-vim.keymap.set("n", "<leader>yy", '"+yy')
-
-vim.keymap.set("n", "<leader>p", '"+p')
-vim.keymap.set("n", "<leader>P", '"+P')
-vim.keymap.set("v", "<leader>p", '"+p')
-vim.keymap.set("v", "<leader>P", '"+P')
 
 vim.keymap.set(
 	"i",

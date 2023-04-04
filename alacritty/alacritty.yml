@@ -3,64 +3,64 @@ env:
 
 font:
   normal:
-    family: JetBrainsMono Nerd Font
+    family: JetBrains Mono
     style: Regular
 
   bold:
-    family: JetBrainsMono Nerd Font
+    family: JetBrains Mono
     style: Bold
 
   italic:
-    family: JetBrainsMono Nerd Font
+    family: JetBrains Mono
     style: Italic
 
   bold_italic:
-    family: JetBrainsMono Nerd Font
+    family: JetBrains Mono
     style: Bold Italic
 
   size: 13
 
 colors:
   primary:
-    background: "0xfaf4ed"
-    foreground: "0x575279"
+    background: '0xfaf4ed'
+    foreground: '0x575279'
   cursor:
-    text: "0x575279"
-    cursor: "0xd7827e"
+    text: '0x575279'
+    cursor: '0xd7827e'
   vi_mode_cursor:
-    text: "0x575279"
-    cursor: "0xcecacd"
+    text: '0x575279'
+    cursor: '0xcecacd'
   line_indicator:
     foreground: None
     background: None
   selection:
-    text: "0x575279"
-    background: "0xdfdad9"
+    text: '0x575279'
+    background: '0xdfdad9'
   normal:
-    black: "0xf2e9e1"
-    red: "0xb4637a"
-    green: "0x286983"
-    yellow: "0xea9d34"
-    blue: "0x56949f"
-    magenta: "0x907aa9"
-    cyan: "0xd7827e"
-    white: "0x575279"
+    black: '0xf2e9e1'
+    red: '0xb4637a'
+    green: '0x286983'
+    yellow: '0xea9d34'
+    blue: '0x56949f'
+    magenta: '0x907aa9'
+    cyan: '0xd7827e'
+    white: '0x575279'
   bright:
-    black: "0x9893a5"
-    red: "0xb4637a"
-    green: "0x286983"
-    yellow: "0xea9d34"
-    blue: "0x56949f"
-    magenta: "0x907aa9"
-    cyan: "0xd7827e"
-    white: "0x575279"
+    black: '0x9893a5'
+    red: '0xb4637a'
+    green: '0x286983'
+    yellow: '0xea9d34'
+    blue: '0x56949f'
+    magenta: '0x907aa9'
+    cyan: '0xd7827e'
+    white: '0x575279'
   hints:
     start:
-      foreground: "#797593"
-      background: "#fffaf3"
+      foreground: '#797593'
+      background: '#fffaf3'
     end:
-      foreground: "#9893a5"
-      background: "#fffaf3"
+      foreground: '#9893a5'
+      background: '#fffaf3'
 
 window:
   decorations: none
