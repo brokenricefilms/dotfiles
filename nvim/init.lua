@@ -393,10 +393,6 @@ vim.keymap.set("n", "ss", "<C-w>s<C-w>j")
 
 vim.keymap.set("n", "<leader>k", "<C-w>s<C-w>j:e %:h<enter>")
 
-vim.keymap.set("n", "<leader>q", ":q<enter>")
-vim.keymap.set("n", "Q", ":qa!<enter>")
-vim.keymap.set("n", "<leader>w", ":w<enter>")
-
 vim.keymap.set("x", "<", "<gv")
 vim.keymap.set("x", ">", ">gv")
 
