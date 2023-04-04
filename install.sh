@@ -13,7 +13,7 @@ dnf check-update
 
 sudo dnf update
 
-sudo dnf install -y tmux curl wget git neofetch htop gnome-tweaks trash-cli python3-pip tldr net-tools speedtest-cli neovim python3-neovim fd-find aria2 tree cowsay fzf npm ffmpeg youtube-dl mpv ripgrep unrar moreutils foliate util-linux-user zsh cronie git-delta wl-clipboard java-devel git-clang-format rust cargo go gtk-v4l ruby ruby-devel gcc-c++ collectd-sensors obs-studio dconf-editor sqlite shfmt v4l-utils google-noto-emoji-color-fonts cmake kdenlive glib2-static libgda libgda-sqlite bat libsqlite3x-devel yt-dlp ddcutil code foot celluloid fish easyeffects exa kitty
+sudo dnf install -y tmux curl wget git neofetch htop gnome-tweaks trash-cli python3-pip tldr net-tools speedtest-cli neovim python3-neovim fd-find aria2 tree cowsay fzf npm ffmpeg youtube-dl mpv ripgrep unrar moreutils foliate util-linux-user zsh cronie git-delta wl-clipboard java-devel git-clang-format rust cargo go gtk-v4l ruby ruby-devel gcc-c++ collectd-sensors obs-studio dconf-editor sqlite shfmt v4l-utils google-noto-emoji-color-fonts cmake kdenlive glib2-static libgda libgda-sqlite bat libsqlite3x-devel yt-dlp ddcutil code foot celluloid fish easyeffects exa kitty alacritty
 
 curl -fsSL https://deno.land/install.sh | sh
 
@@ -65,6 +65,8 @@ ln -sf ~/dotfiles/foot ~/.config/
 ln -sf ~/dotfiles/fish ~/.config/
 rm -rf ~/.config/kitty
 ln -sf ~/dotfiles/kitty ~/.config/
+rm -rf ~/.config/alacritty
+ln -sf ~/dotfiles/alacritty ~/.config/
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 $HOME/.tmux/plugins/tpm/bin/install_plugins
