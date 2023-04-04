@@ -65,9 +65,6 @@ colors:
 window:
   decorations: none
   dynamic_padding: true
-  padding:
-    x: 1
-    y: 0
   startup_mode: Maximized
 
 key_bindings:
