@@ -400,7 +400,7 @@ vim.keymap.set("n", "gf", ":cd %:h<enter>:edit <cfile><enter>")
 
 vim.keymap.set("n", "<leader><space>", "<C-^>")
 
-vim.keymap.set("n", "<leader>r", ":!run %:p<enter>")
+vim.keymap.set("n", "<leader>r", ":w<enter>:!run %:p<enter>")
 
 vim.keymap.set(
 	"i",
