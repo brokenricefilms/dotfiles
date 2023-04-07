@@ -2,7 +2,7 @@
 
 yay -S --noconfirm tmux neofetch htop trash-cli python-pip tealdeer net-tools speedtest-cli neovim python-neovim fd cowsay fzf npm ffmpeg mpv ripgrep unrar moreutils cronie git-delta wl-clipboard rust cargo go v4l-utils ruby gcc obs-studio dconf-editor sqlite shfmt cmake kdenlive starship bat yt-dlp ddcutil foot celluloid deno yarn libgda6 xdg-desktop-portal-gnome xdg-desktop-portal qt6-wayland mpv-mpris sdl2 networkmanager kiwix-desktop easyeffects calf lsp-plugins zam-plugins-lv2 mda.lv2 noto-fonts-emoji ibus-bamboo onlyoffice-bin gnome-browser-connector googledot-cursor-theme exa fnm-bin tmux-bash-completion-git google-chrome google-chrome-beta fnm-bin tmux-bash-completion-git git-extras syncthing
 
-curl -fsSL https://deno.land/install.sh | sh
+curl -fsSL https://deno.land/x/install/install.sh | sh
 
 npm config set prefix ~/.npm/
 
