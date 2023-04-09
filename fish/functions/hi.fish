@@ -3,5 +3,6 @@ function hi --description 'daily jobs'
     open "https://www.youtube.com/feed/subscriptions"
     open "https://github.com"
 
-    dnf makecache
+    update
+    fastfetch
 end

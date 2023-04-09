@@ -396,6 +396,7 @@ function reload_touchcursor() {
 function hi() {
 	browser_daily
 	update
+	fastfetch
 }
 
 tmux_kill_all_unname_session() {
