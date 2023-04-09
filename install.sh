@@ -45,6 +45,7 @@ ln -sf ~/dotfiles/foot ~/.config/
 ln -sf ~/dotfiles/bash/bashrc ~/.bashrc
 rm -rf ~/.config/alacritty
 ln -sf ~/dotfiles/alacritty ~/.config/
+ln -sf ~/dotfiles/.npmrc ~/
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 $HOME/.tmux/plugins/tpm/bin/install_plugins
