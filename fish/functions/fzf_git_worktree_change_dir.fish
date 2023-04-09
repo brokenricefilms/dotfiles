@@ -1,3 +1,4 @@
+# TODO: make it work like bash version
 function fzf_git_worktree_change_dir
     if [ ! -n "$argv" ]
         set --local worktree (git worktree list | fzf_down | awk '{print $1}')
