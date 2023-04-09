@@ -8,6 +8,6 @@
 - Crystal Linux (Arch base with Gnome fanboy)
 - [Foot terminal](./foot/foot.ini): terminal for Wayland fanboy
 - [Tmux](./tmux/tmux.conf): i 🫰 sessions. [tmux fzf session switch](https://github.com/thuanowa/tmux-fzf-session-switch)
-- [Bash](./bash/): works out of the box
+- [Fish](./fish/): works out of the box
 - [Neovim](./nvim/): when VSCode f##ked up i use Neovim.
 - [VSCode](./profile.code-profile): when Neovim f##ked up i use VSCode.
