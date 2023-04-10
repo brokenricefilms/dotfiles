@@ -56,6 +56,11 @@ function sync_music --description 'sync music playlist on Youtube'
     download_audio "https://l.thuanowa.com/music-spanish"
 
     cd $music_dir
+    mkdir Chinese
+    cd Chinese
+    download_audio "https://l.thuanowa.com/music-chinese"
+
+    cd $music_dir
     mkdir chill_hop
     cd chill_hop
     download_audio "https://l.thuanowa.com/music-chill-hop"
