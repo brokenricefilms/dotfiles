@@ -6,7 +6,7 @@
 ## Current setup
 
 - Crystal Linux (Arch base with Gnome fanboy)
-- [Foot terminal](./foot/foot.ini): terminal for Wayland fanboy
+- [Alacritty](./alacritty/): with other [foot](./foot/) and [kitty](./kitty/) terminal.
 - [Tmux](./tmux/tmux.conf): i 🫰 sessions. [tmux fzf session switch](https://github.com/thuanowa/tmux-fzf-session-switch)
 - [Fish](./fish/): works out of the box
 - [Neovim](./nvim/): when VSCode f##ked up i use Neovim.
