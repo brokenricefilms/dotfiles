@@ -2,6 +2,7 @@
 
 if [ -z "$1" ]; then
 	if [[ "$(pwd)" == "/home/master/repos/thuanowa/thuanowa.com" ]]; then
+		pnpm install
 		pnpm dev
 	fi
 else
