@@ -1,7 +1,7 @@
 return {
 	{
 		"numToStr/Navigator.nvim",
-		lazy = true,
+		event = "VeryLazy",
 		config = function()
 			require("Navigator").setup({
 				auto_save = "current",

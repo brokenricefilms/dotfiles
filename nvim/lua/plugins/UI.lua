@@ -15,9 +15,7 @@ return {
 		event = "BufReadPre",
 		opts = {
 			user_default_options = {
-				css = true,
-				enable_tailwind = true,
-				mode = "virtualtext",
+				tailwind = true,
 			},
 		},
 	},
