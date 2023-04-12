@@ -43,6 +43,7 @@ ln -sf ~/dotfiles/.ripgreprc ~/
 rm -rf ~/.config/foot
 ln -sf ~/dotfiles/foot ~/.config/
 ln -sf ~/dotfiles/bash/bashrc ~/.bashrc
+ln -sf ~/dotfiles/fish ~/.config/
 rm -rf ~/.config/alacritty
 ln -sf ~/dotfiles/alacritty ~/.config/
 ln -sf ~/dotfiles/.npmrc ~/
