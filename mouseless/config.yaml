@@ -116,9 +116,6 @@ layers:
       # close window
       x: leftalt+f4
 
-      # switch input
-      semicolon: leftmeta+space
-
       #############
       ## browser ##
       #############
