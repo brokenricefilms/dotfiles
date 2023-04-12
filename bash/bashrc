@@ -313,23 +313,23 @@ function fzf_open() {
 		FILE=$(fd --hidden --type file . | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:500 {}')
 
 		if [ -n "$FILE" ]; then
-			open "$FILE"
+			xdg-open "$FILE"
 		fi
 	else
-		open "$1"
+		xdg-open "$1"
 	fi
 }
 
 function fzf_change_directory() {
+	DIR=$1
+
+	fzf_dir() {
+		DIR=$(fd --hidden --type directory . | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --tree --level=2')
+		cd "$DIR"
+		la
+	}
+
 	if [ -z "$1" ]; then
-		DIR=$1
-
-		fzf_dir() {
-			DIR=$(fd --hidden --type directory . | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --tree --level=2')
-			cd "$DIR"
-			la
-		}
-
 		if [[ -n $DIR ]]; then
 			cd $DIR &>/dev/null
 			ERROR=$?
@@ -378,7 +378,6 @@ function fzf_music() {
 		cd $CURRENT_DIR
 	else
 		cd $CURRENT_DIR
-
 	fi
 }
 
