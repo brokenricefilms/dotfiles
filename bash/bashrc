@@ -400,6 +400,8 @@ function reload() {
 	source ~/.bashrc
 
 	tmux source ~/.tmux.conf
+
+	systemctl --user restart mouseless.service
 }
 
 function hi() {
