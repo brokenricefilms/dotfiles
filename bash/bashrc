@@ -402,11 +402,6 @@ function reload() {
 	tmux source ~/.tmux.conf
 }
 
-function reload_touchcursor() {
-	cp ~/dotfiles/touchcursor.conf ~/.config/touchcursor/
-	systemctl --user restart touchcursor.service
-}
-
 function hi() {
 	browser_daily
 	update

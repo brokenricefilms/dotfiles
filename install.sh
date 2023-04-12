@@ -46,6 +46,7 @@ ln -sf ~/dotfiles/bash/bashrc ~/.bashrc
 ln -sf ~/dotfiles/fish ~/.config/
 rm -rf ~/.config/alacritty
 ln -sf ~/dotfiles/alacritty ~/.config/
+ln -sf ~/dotfiles/mouseless/ ~/.config/
 ln -sf ~/dotfiles/.npmrc ~/
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -68,3 +69,9 @@ gh repo clone thuanowa/obs-studio
 
 systemctl --user enable syncthing.service
 systemctl --user start syncthing.service
+
+mkdir ~/app/
+cd ~/app/
+gh repo clone jbensmann/mouseless
+cd mouseless
+make install
