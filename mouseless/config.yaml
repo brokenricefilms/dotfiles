@@ -42,6 +42,8 @@ layers:
   - name: mouse
     passThrough: true
     bindings:
+      a: layer initial
+      i: layer mouse
       r: reload-config
       l: move  1  0
       h: move -1  0
