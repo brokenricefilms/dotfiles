@@ -118,7 +118,11 @@ function browser_daily() {
 }
 
 function download_audio() {
-	yt-dlp -f bestaudio --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "$1"
+	if [ -z "$1" ]; then
+		yt-dlp -f bestaudio --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "$(wl-paste)"
+	else
+		yt-dlp -f bestaudio --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "$1"
+	fi
 }
 
 # TODO: checking playlist list to sync change
@@ -400,7 +404,9 @@ function reload() {
 	source ~/.bashrc
 
 	tmux source ~/.tmux.conf
+}
 
+function reload_mouseless() {
 	systemctl --user restart mouseless.service
 }
 

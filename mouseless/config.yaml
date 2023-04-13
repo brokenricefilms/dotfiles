@@ -19,7 +19,7 @@ layers:
   - name: initial
     bindings:
       a: tap-hold a ; toggle-layer mouse ; 300
-      space: tap-hold space ; toggle-layer thuan_fly_keys ; 300
+      space: tap-hold space ; toggle-layer thuan_fly_keys ; 200
       s: tap-hold s ; toggle-layer uwu ; 300
 
       # capslock kinda useless for me, so i map it to esc for vim
