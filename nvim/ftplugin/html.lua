@@ -1,4 +1,4 @@
--- TODO: img, link
+vim.keymap.set("i", ";ht", "<esc>:read ~/dotfiles/template/skeleton.html<enter>kdd4jcit", { silent = true, buffer = 0 })
 vim.keymap.set("i", ";t", "<!--TODO: --><esc>2hi", { silent = true, buffer = 0 })
 
 vim.keymap.set("i", ";h1", "<h1></h1><esc>cit", { silent = true, buffer = 0 })
@@ -15,10 +15,3 @@ vim.keymap.set("i", ";style", "<style><esc>o</style><esc>O<tab>", { silent = tru
 vim.keymap.set("i", ";body", "<body><esc>o</body><esc>O<tab>", { silent = true, buffer = 0 })
 vim.keymap.set("i", ";head", "<head><esc>o</head><esc>O<tab>", { silent = true, buffer = 0 })
 vim.keymap.set("i", ";title", "<title></title><esc>cit", { silent = true, buffer = 0 })
-
-vim.keymap.set(
-	"i",
-	";html",
-	'<!DOCTYPE html><enter><html lang="en"><enter><head><enter><meta charset="UTF-8" /><enter><title>Document</title><enter></head><enter><body><enter></body></html><esc>:w<enter>',
-	{ silent = true, buffer = 0 }
-)
