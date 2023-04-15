@@ -391,7 +391,7 @@ vim.keymap.set("n", "<Left>", "<C-w>>")
 
 vim.keymap.set("n", "<leader>k", "<C-w>s<C-w>j:e %:h<enter>")
 
-vim.keymap.set("n", "<leader>h", "<C-w>v:e %:h<enter>")
+vim.keymap.set("n", "<leader>l", "<C-w>v:e %:h<enter>")
 
 vim.keymap.set("n", "s", "<C-w>")
 
