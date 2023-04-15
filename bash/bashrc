@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if command -v tmux &>/dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-	tmux attach || tmux new-session && exit
+  tmux attach || tmux new-session && exit
 fi
 
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
@@ -108,327 +108,327 @@ alias dow="cd ~/Downloads ; la"
 alias tmp="cd /tmp ; la"
 
 is_in_git_repo() {
-	git rev-parse HEAD >/dev/null 2>&1
+  git rev-parse HEAD >/dev/null 2>&1
 }
 
 function browser_daily() {
-	open "https://www.inoreader.com/all_articles"
-	open "https://www.youtube.com/feed/subscriptions"
-	open "https://github.com"
+  open "https://www.inoreader.com/all_articles"
+  open "https://www.youtube.com/feed/subscriptions"
+  open "https://github.com"
 }
 
 function download_audio() {
-	if [ -z "$1" ]; then
-		yt-dlp -f bestaudio --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "$(wl-paste)"
-	else
-		yt-dlp -f bestaudio --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "$1"
-	fi
+  if [ -z "$1" ]; then
+    yt-dlp -f bestaudio --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "$(wl-paste)"
+  else
+    yt-dlp -f bestaudio --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "$1"
+  fi
 }
 
 # TODO: checking playlist list to sync change
 function sync_music() {
-	CURRENT_DIR=$(pwd)
-	MUSIC_DIR=$HOME/Music/
+  CURRENT_DIR=$(pwd)
+  MUSIC_DIR=$HOME/Music/
 
-	cd $MUSIC_DIR
-	trash *
+  cd $MUSIC_DIR
+  trash *
 
-	mkdir joji
-	cd joji
-	download_audio "https://l.thuanowa.com/music-joji"
+  mkdir joji
+  cd joji
+  download_audio "https://l.thuanowa.com/music-joji"
 
-	cd $MUSIC_DIR
-	mkdir billie_eilish
-	cd billie_eilish
-	download_audio "https://l.thuanowa.com/music-billie-eilish"
+  cd $MUSIC_DIR
+  mkdir billie_eilish
+  cd billie_eilish
+  download_audio "https://l.thuanowa.com/music-billie-eilish"
 
-	cd $MUSIC_DIR
-	mkdir b_ray
-	cd b_ray
-	download_audio "https://l.thuanowa.com/music-b-ray"
+  cd $MUSIC_DIR
+  mkdir b_ray
+  cd b_ray
+  download_audio "https://l.thuanowa.com/music-b-ray"
 
-	cd $MUSIC_DIR
-	mkdir den_vau
-	cd den_vau
-	download_audio "https://l.thuanowa.com/music-den-vau"
+  cd $MUSIC_DIR
+  mkdir den_vau
+  cd den_vau
+  download_audio "https://l.thuanowa.com/music-den-vau"
 
-	cd $MUSIC_DIR
-	mkdir two_feet
-	cd two_feet
-	download_audio "https://l.thuanowa.com/music-two-feet"
+  cd $MUSIC_DIR
+  mkdir two_feet
+  cd two_feet
+  download_audio "https://l.thuanowa.com/music-two-feet"
 
-	cd $MUSIC_DIR
-	mkdir English
-	cd English
-	download_audio "https://l.thuanowa.com/music-en"
+  cd $MUSIC_DIR
+  mkdir English
+  cd English
+  download_audio "https://l.thuanowa.com/music-en"
 
-	cd $MUSIC_DIR
-	mkdir Vietnamese
-	cd Vietnamese
-	download_audio "https://l.thuanowa.com/music-vi"
+  cd $MUSIC_DIR
+  mkdir Vietnamese
+  cd Vietnamese
+  download_audio "https://l.thuanowa.com/music-vi"
 
-	cd $MUSIC_DIR
-	mkdir Korean
-	cd Korean
-	download_audio "https://l.thuanowa.com/music-ko"
+  cd $MUSIC_DIR
+  mkdir Korean
+  cd Korean
+  download_audio "https://l.thuanowa.com/music-ko"
 
-	cd $MUSIC_DIR
-	mkdir Japanese
-	cd Japanese
-	download_audio "https://l.thuanowa.com/music-ja"
+  cd $MUSIC_DIR
+  mkdir Japanese
+  cd Japanese
+  download_audio "https://l.thuanowa.com/music-ja"
 
-	cd $MUSIC_DIR
-	mkdir Japanese
-	cd Japanese
-	download_audio "https://l.thuanowa.com/music-ja"
+  cd $MUSIC_DIR
+  mkdir Japanese
+  cd Japanese
+  download_audio "https://l.thuanowa.com/music-ja"
 
-	cd $MUSIC_DIR
-	mkdir Spanish
-	cd Spanish
-	download_audio "https://l.thuanowa.com/music-spanish"
+  cd $MUSIC_DIR
+  mkdir Spanish
+  cd Spanish
+  download_audio "https://l.thuanowa.com/music-spanish"
 
-	cd $MUSIC_DIR
-	mkdir Chinese
-	cd Chinese
-	download_audio "https://l.thuanowa.com/music-chinese"
+  cd $MUSIC_DIR
+  mkdir Chinese
+  cd Chinese
+  download_audio "https://l.thuanowa.com/music-chinese"
 
-	cd $MUSIC_DIR
-	mkdir chill_hop
-	cd chill_hop
-	download_audio "https://l.thuanowa.com/music-chill-hop"
+  cd $MUSIC_DIR
+  mkdir chill_hop
+  cd chill_hop
+  download_audio "https://l.thuanowa.com/music-chill-hop"
 
-	cd $CURRENT_DIR
+  cd $CURRENT_DIR
 }
 
 function update() {
-	CURRENT_DIR=$(pwd)
+  CURRENT_DIR=$(pwd)
 
-	yay --noconfirm
-	pnpm add -g pnpm
-	pnpm update -g
-	tldr --update
-	~/.tmux/plugins/tpm/bin/update_plugins all
+  yay --noconfirm
+  pnpm add -g pnpm
+  pnpm update -g
+  tldr --update
+  ~/.tmux/plugins/tpm/bin/update_plugins all
 
-	cd ~/dotfiles/bash/
-	curl --remote-name https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh
-	git add .
-	git commit -m "chore(bash): plugin"
+  cd ~/dotfiles/bash/
+  curl --remote-name https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh
+  git add .
+  git commit -m "chore(bash): plugin"
 
-	cd $HOME/dotfiles/
-	nvim --headless "+Lazy! sync" +qa
-	git add nvim/lazy-lock.json
-	git commit -m "chore: lazy.nvim"
-	git push
+  cd $HOME/dotfiles/
+  nvim --headless "+Lazy! sync" +qa
+  git add nvim/lazy-lock.json
+  git commit -m "chore: lazy.nvim"
+  git push
 
-	cd $CURRENT_DIR
+  cd $CURRENT_DIR
 }
 
 function browser_sync_start_server() {
-	SERVER_IP=$(hostname -I)
-	browser-sync start --server --files . --no-notify --host "$SERVER_IP" --port 9000
+  SERVER_IP=$(hostname -I)
+  browser-sync start --server --files . --no-notify --host "$SERVER_IP" --port 9000
 }
 
 function browser_sync_start_server() {
-	SERVER_IP=$(hostname -I)
-	browser-sync start --server --files . --no-notify --host "$SERVER_IP" --port 9000
+  SERVER_IP=$(hostname -I)
+  browser-sync start --server --files . --no-notify --host "$SERVER_IP" --port 9000
 }
 
 function change_directory_to_git_root() {
-	cd $(git rev-parse --show-toplevel)
-	ls
+  cd $(git rev-parse --show-toplevel)
+  ls
 }
 
 function clone_repo_in_clipboard() {
-	url_to_username_repo=$(wl-paste | sed 's/.*m\///g')
-	repo_name=$(wl-paste | sed 's/.*\///g')
-	gh repo clone "$url_to_username_repo"
-	cd "$repo_name"
+  url_to_username_repo=$(wl-paste | sed 's/.*m\///g')
+  repo_name=$(wl-paste | sed 's/.*\///g')
+  gh repo clone "$url_to_username_repo"
+  cd "$repo_name"
 }
 
 function fzf_emoji() {
-	default() {
-		emoji-fzf preview --prepend | fzf | awk '{ print $1 }' | tr -d "\n" | wl-copy
-	}
+  default() {
+    emoji-fzf preview --prepend | fzf | awk '{ print $1 }' | tr -d "\n" | wl-copy
+  }
 
-	if hash emoji-fzf 2>/dev/null; then
-		default
-	else
-		pip install emoji-fzf
-		default
-	fi
+  if hash emoji-fzf 2>/dev/null; then
+    default
+  else
+    pip install emoji-fzf
+    default
+  fi
 }
 
 function fzf_edit_file() {
-	if [ -z "$1" ]; then
-		FILE=$(fd --hidden --type file . | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}')
+  if [ -z "$1" ]; then
+    FILE=$(fd --hidden --type file . | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}')
 
-		if [ -n "$FILE" ]; then
-			nvim "$FILE"
-		fi
-	else
-		nvim "$1"
-	fi
+    if [ -n "$FILE" ]; then
+      nvim "$FILE"
+    fi
+  else
+    nvim "$1"
+  fi
 }
 
 function fzf_sudo_edit() {
-	if [ -z "$1" ]; then
-		FILE=$(fd --hidden --type file . | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}')
+  if [ -z "$1" ]; then
+    FILE=$(fd --hidden --type file . | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}')
 
-		if [ -n "$FILE" ]; then
-			sudoedit "$FILE"
-		fi
-	else
-		sudoedit "$1"
-	fi
+    if [ -n "$FILE" ]; then
+      sudoedit "$FILE"
+    fi
+  else
+    sudoedit "$1"
+  fi
 }
 
 function fzf_git_worktree_change_dir() {
-	is_in_git_repo || return
+  is_in_git_repo || return
 
-	local worktrees
-	local worktree
-	local query
-	local sess_arr
-	local retval
-	worktrees=$(git worktree list | fzf --exit-0 --print-query --reverse)
-	retval=$?
+  local worktrees
+  local worktree
+  local query
+  local sess_arr
+  local retval
+  worktrees=$(git worktree list | fzf --exit-0 --print-query --reverse)
+  retval=$?
 
-	IFS=$'\n' read -rd '' -a sess_arr <<<"$worktrees"
+  IFS=$'\n' read -rd '' -a sess_arr <<<"$worktrees"
 
-	worktree=$(echo ${sess_arr[1]} | awk '{print $1}')
-	query=${sess_arr[0]}
+  worktree=$(echo ${sess_arr[1]} | awk '{print $1}')
+  query=${sess_arr[0]}
 
-	if [ $retval == 0 ]; then
-		if [ "$worktree" == "" ]; then
-			worktree=$(echo "$query" | awk '{print $1}')
-		fi
-		cd "$worktree"
-	elif [ $retval == 1 ]; then
-		DEFAULT_GIT_FOLDER=$(git worktree list | head --lines 1 | awk '{print $1}')
+  if [ $retval == 0 ]; then
+    if [ "$worktree" == "" ]; then
+      worktree=$(echo "$query" | awk '{print $1}')
+    fi
+    cd "$worktree"
+  elif [ $retval == 1 ]; then
+    DEFAULT_GIT_FOLDER=$(git worktree list | head --lines 1 | awk '{print $1}')
 
-		mkdir $DEFAULT_GIT_FOLDER/.worktrees
+    mkdir $DEFAULT_GIT_FOLDER/.worktrees
 
-		git worktree add $DEFAULT_GIT_FOLDER/.worktrees/"$query"
+    git worktree add $DEFAULT_GIT_FOLDER/.worktrees/"$query"
 
-		cd $DEFAULT_GIT_FOLDER/.worktrees/"$query"
+    cd $DEFAULT_GIT_FOLDER/.worktrees/"$query"
 
-		git branch "$query"
-		git checkout "$query"
-	fi
+    git branch "$query"
+    git checkout "$query"
+  fi
 }
 
 function fzf_git_worktree_remove() {
-	is_in_git_repo || return
+  is_in_git_repo || return
 
-	WORKTREE=$(git worktree list | fzf | awk '{print $1}')
-	DEFAULT_GIT_FOLDER=$(git worktree list | head --lines 1 | awk '{print $1}')
+  WORKTREE=$(git worktree list | fzf | awk '{print $1}')
+  DEFAULT_GIT_FOLDER=$(git worktree list | head --lines 1 | awk '{print $1}')
 
-	git worktree remove $WORKTREE --force &>/dev/null
-	cd $DEFAULT_GIT_FOLDER
+  git worktree remove $WORKTREE --force &>/dev/null
+  cd $DEFAULT_GIT_FOLDER
 }
 
 function fzf_open() {
-	if [ -z "$1" ]; then
-		FILE=$(fd --hidden --type file . | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:500 {}')
+  if [ -z "$1" ]; then
+    FILE=$(fd --hidden --type file . | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:500 {}')
 
-		if [ -n "$FILE" ]; then
-			xdg-open "$FILE"
-		fi
-	else
-		xdg-open "$1"
-	fi
+    if [ -n "$FILE" ]; then
+      xdg-open "$FILE"
+    fi
+  else
+    xdg-open "$1"
+  fi
 }
 
 function fzf_change_directory() {
-	DIR=$1
+  DIR=$1
 
-	fzf_dir() {
-		DIR=$(fd --hidden --type directory . | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --tree --level=2')
-		cd "$DIR"
-		la
-	}
+  fzf_dir() {
+    DIR=$(fd --hidden --type directory . | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --tree --level=2')
+    cd "$DIR"
+    la
+  }
 
-	if [ -z "$1" ]; then
-		if [[ -n $DIR ]]; then
-			cd $DIR &>/dev/null
-			ERROR=$?
+  if [ -z "$1" ]; then
+    if [[ -n $DIR ]]; then
+      cd $DIR &>/dev/null
+      ERROR=$?
 
-			if [[ ERROR -eq 1 ]]; then
-				echo "\"$1\" directory does not exist"
-				fzf_dir
-			fi
-		else
-			fzf_dir
-		fi
-	else
-		mkdir -p "$1"
-		cd "$1"
-	fi
+      if [[ ERROR -eq 1 ]]; then
+        echo "\"$1\" directory does not exist"
+        fzf_dir
+      fi
+    else
+      fzf_dir
+    fi
+  else
+    mkdir -p "$1"
+    cd "$1"
+  fi
 }
 
 function fzf_rg() {
-	rg --color=always --line-number --no-heading --smart-case "${*:-}" |
-		fzf --ansi --color "hl:-1:underline,hl+:-1:underline:reverse" --delimiter : --preview 'bat --theme=GitHub --color=always {1} --highlight-line {2}' --bind 'enter:become($EDITOR {1} +{2})'
+  rg --color=always --line-number --no-heading --smart-case "${*:-}" |
+    fzf --ansi --color "hl:-1:underline,hl+:-1:underline:reverse" --delimiter : --preview 'bat --theme=GitHub --color=always {1} --highlight-line {2}' --bind 'enter:become($EDITOR {1} +{2})'
 }
 
 function fzf_tldr() {
-	tldr --list | sed "s/'//g" | sed "s/,//g" | sed "s/ /\n/g" | sed "s/]//g" | sed "s/\[//g" | fzf --preview "tldr {1}"
+  tldr --list | sed "s/'//g" | sed "s/,//g" | sed "s/ /\n/g" | sed "s/]//g" | sed "s/\[//g" | fzf --preview "tldr {1}"
 }
 
 function tl() {
-	if [ -z "$1" ]; then
-		COMMAND=$(fzf_tldr)
-		tldr $COMMAND
-	else
-		tldr "$1"
-	fi
+  if [ -z "$1" ]; then
+    COMMAND=$(fzf_tldr)
+    tldr $COMMAND
+  else
+    tldr "$1"
+  fi
 }
 
 function fzf_music() {
-	CURRENT_DIR=$(pwd)
+  CURRENT_DIR=$(pwd)
 
-	cd ~/Music/
+  cd ~/Music/
 
-	PLAYLIST=$(fd --type directory . --exclude node_modules --exclude go | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --tree --icons')
+  PLAYLIST=$(fd --type directory . --exclude node_modules --exclude go | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --tree --icons')
 
-	if [ -n "$PLAYLIST" ]; then
-		cd $PLAYLIST
-		mpv --loop-playlist --shuffle *
-		cd $CURRENT_DIR
-	else
-		cd $CURRENT_DIR
-	fi
+  if [ -n "$PLAYLIST" ]; then
+    cd $PLAYLIST
+    mpv --loop-playlist --shuffle *
+    cd $CURRENT_DIR
+  else
+    cd $CURRENT_DIR
+  fi
 }
 
 function reload() {
-	source ~/.bashrc
+  source ~/.bashrc
 
-	tmux source ~/.tmux.conf
+  tmux source ~/.tmux.conf
 }
 
 function reload_mouseless() {
-	systemctl --user restart mouseless.service
+  systemctl --user restart mouseless.service
 }
 
 function hi() {
-	browser_daily
-	update
-	fastfetch
+  browser_daily
+  update
+  fastfetch
 }
 
 tmux_kill_all_unname_session() {
-	CURRENT_DIR=$(pwd)
-	cd /tmp/
-	tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >/tmp/killAllUnnameTmuxSessionOutput.sh
-	sed -i 's/^/tmux kill-session -t /' killAllUnnameTmuxSessionOutput.sh
-	chmod +x killAllUnnameTmuxSessionOutput.sh
-	./killAllUnnameTmuxSessionOutput.sh
-	cd $CURRENT_DIR
+  CURRENT_DIR=$(pwd)
+  cd /tmp/
+  tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >/tmp/killAllUnnameTmuxSessionOutput.sh
+  sed -i 's/^/tmux kill-session -t /' killAllUnnameTmuxSessionOutput.sh
+  chmod +x killAllUnnameTmuxSessionOutput.sh
+  ./killAllUnnameTmuxSessionOutput.sh
+  cd $CURRENT_DIR
 }
 
 # TODO: make faster by using api
 show_all_video_chapter() {
-	yt-dlp --dump-json "$1" | jq '.title, .original_url, .chapters' | nvim
+  yt-dlp --dump-json "$1" | jq '.title, .original_url, .chapters' | nvim
 }
 
 copy_editor_config_file() {
@@ -437,58 +437,58 @@ copy_editor_config_file() {
 }
 
 create_publish_repo() {
-	gh repo create --public --clone "$1"
+  gh repo create --public --clone "$1"
 }
 
 create_thuanowa_public_repo() {
-	cd ~/repos/thuanowa/
-	create_publish_repo
+  cd ~/repos/thuanowa/
+  create_publish_repo
 }
 
 create_public_repo_using_thuanowa_template() {
-	gh repo create --template thuanowa/template --public --clone "$1"
+  gh repo create --template thuanowa/template --public --clone "$1"
 }
 
 create_thuanowa_public_repo_using_thuanowa_template() {
-	cd ~/repos/thuanowa/
-	create_publish_repo_using_thuanowa_template
+  cd ~/repos/thuanowa/
+  create_publish_repo_using_thuanowa_template
 }
 
 open_thuanowa_github() {
-	open "https://github.com/thuanowa"
+  open "https://github.com/thuanowa"
 }
 
 open_garden() {
-	open "https://github.com/thuanowa/garden"
+  open "https://github.com/thuanowa/garden"
 }
 
 open_discord_ong_dev_writing_channel() {
-	open "https://discord.com/channels/822464808666005504/880734523787190324"
+  open "https://discord.com/channels/822464808666005504/880734523787190324"
 }
 
 open_netlify() {
-	open "https://app.netlify.com/teams/thuanowa/overview"
+  open "https://app.netlify.com/teams/thuanowa/overview"
 }
 
 switch_audio_output_to_headphone() {
-	pactl set-default-sink alsa_output.pci-0000_04_00.6.3.HiFi__hw_Generic_1__sink
+  pactl set-default-sink alsa_output.pci-0000_04_00.6.3.HiFi__hw_Generic_1__sink
 }
 
 switch_audio_output_to_bluetooth_speak() {
-	pactl set-default-sink bluez_output.C1_AC_88_3D_D6_EE.1
+  pactl set-default-sink bluez_output.C1_AC_88_3D_D6_EE.1
 }
 
 switch_audio_input_to_headphone() {
-	pactl set-default-source alsa_input.pci-0000_04_00.6.HiFi__hw_Generic_1__source
+  pactl set-default-source alsa_input.pci-0000_04_00.6.HiFi__hw_Generic_1__source
 }
 
 nvim_without_lsp() {
-  t ~/.config/nvim/
+  rm ~/.config/nvim
   ln -sf ~/dotfiles/nvim/ ~/.config/
 }
 
 nvim_lsp() {
-  t ~/.config/nvim/
+  rm ~/.config/nvim
   ln -sf ~/dotfiles/nvim_lsp/ ~/.config/nvim
 }
 
