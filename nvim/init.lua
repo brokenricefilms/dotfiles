@@ -358,7 +358,7 @@ vim.opt.linebreak = true
 vim.opt.showbreak = "↪"
 vim.opt.scrolloff = 5
 vim.opt.termguicolors = true
-vim.opt.statusline = " %F %m %< %= %y %r %q"
+vim.opt.statusline = " %F %m %< %= %r %q [%{getcwd()}]"
 vim.opt.cursorline = true
 
 vim.opt.undofile = true
