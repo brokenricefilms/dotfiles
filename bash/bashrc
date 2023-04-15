@@ -101,11 +101,11 @@ alias ww="fzf_git_worktree_remove"
 
 alias ...="cd .. ; cd .. ; ls"
 alias ..="cd .. ; ls"
-alias doc="cd ~/Documents ; ls"
-alias dow="cd ~/Downloads ; ls"
 alias la="exa --all --icons"
 alias ls="exa --long --all --icons"
-alias tmp="cd /tmp"
+alias doc="cd ~/Documents ; la"
+alias dow="cd ~/Downloads ; la"
+alias tmp="cd /tmp ; la"
 
 is_in_git_repo() {
 	git rev-parse HEAD >/dev/null 2>&1
