@@ -92,3 +92,7 @@ alias dow="cd ~/Downloads ; ls"
 alias la="exa --all --icons"
 alias ls="exa --long --all --icons"
 alias tmp="cd /tmp"
+
+alias nvim_no_lsp="rm ~/.config/nvim ; ln -sf ~/dotfiles/nvim/ ~/.config/"
+alias nvim_lsp="rm ~/.config/nvim ; ln -sf ~/dotfiles/nvim_lsp ~/.config/nvim"
+alias copy_editor_config_file="change_directory_to_git_root ; cp ~/dotfiles/template/skeleton.editorconfig .editorconfig"

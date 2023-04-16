@@ -436,53 +436,7 @@ copy_editor_config_file() {
   cp ~/dotfiles/template/skeleton.editorconfig .editorconfig
 }
 
-create_publish_repo() {
-  gh repo create --public --clone "$1"
-}
-
-create_thuanowa_public_repo() {
-  cd ~/repos/thuanowa/
-  create_publish_repo
-}
-
-create_public_repo_using_thuanowa_template() {
-  gh repo create --template thuanowa/template --public --clone "$1"
-}
-
-create_thuanowa_public_repo_using_thuanowa_template() {
-  cd ~/repos/thuanowa/
-  create_publish_repo_using_thuanowa_template
-}
-
-open_thuanowa_github() {
-  open "https://github.com/thuanowa"
-}
-
-open_garden() {
-  open "https://github.com/thuanowa/garden"
-}
-
-open_discord_ong_dev_writing_channel() {
-  open "https://discord.com/channels/822464808666005504/880734523787190324"
-}
-
-open_netlify() {
-  open "https://app.netlify.com/teams/thuanowa/overview"
-}
-
-switch_audio_output_to_headphone() {
-  pactl set-default-sink alsa_output.pci-0000_04_00.6.3.HiFi__hw_Generic_1__sink
-}
-
-switch_audio_output_to_bluetooth_speak() {
-  pactl set-default-sink bluez_output.C1_AC_88_3D_D6_EE.1
-}
-
-switch_audio_input_to_headphone() {
-  pactl set-default-source alsa_input.pci-0000_04_00.6.HiFi__hw_Generic_1__source
-}
-
-nvim_without_lsp() {
+nvim_no_lsp() {
   rm ~/.config/nvim
   ln -sf ~/dotfiles/nvim/ ~/.config/
 }
