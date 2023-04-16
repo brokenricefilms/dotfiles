@@ -433,7 +433,7 @@ show_all_video_chapter() {
 
 copy_editor_config_file() {
   change_directory_to_git_root
-  cp ~/dotfiles/template/.editorconfig .
+  cp ~/dotfiles/template/skeleton.editorconfig .editorconfig
 }
 
 create_publish_repo() {
