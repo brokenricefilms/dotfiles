@@ -1,6 +1,5 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+---@type MappingsTable
+local M = {}
 
 vim.keymap.set("n", "<Right>", "<C-w><")
 vim.keymap.set("n", "<Up>", "<C-w>+")
@@ -15,3 +14,7 @@ vim.keymap.set("n", "#", "#zz")
 vim.keymap.set("n", "gx", '<Cmd>call jobstart(["xdg-open", expand("<cfile>")], {"detach": v:true})<CR>')
 
 vim.keymap.set("n", "s", "<C-w>")
+
+-- more keybinds!
+
+return M
