@@ -12,6 +12,8 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "*", "*zz")
 vim.keymap.set("n", "#", "#zz")
 
-vim.keymap.set("n", "gx", '<Cmd>call jobstart(["xdg-open", expand("<cfile>")], {"detach": v:true})<CR>')
-
-vim.keymap.set("n", "s", "<C-w>")
+vim.keymap.set(
+  "n",
+  "gx",
+  '<Cmd>call jobstart(["xdg-open", expand("<cfile>")], {"detach": v:true})<CR>'
+)
