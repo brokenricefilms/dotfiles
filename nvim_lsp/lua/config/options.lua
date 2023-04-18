@@ -6,3 +6,5 @@ vim.opt.wrap = true
 vim.opt.linebreak = true
 vim.opt.showbreak = "↪"
 vim.opt.swapfile = false
+vim.opt.ls = 2
+vim.opt.statusline = " %F %m %< %= %r %q [%{getcwd()}]"

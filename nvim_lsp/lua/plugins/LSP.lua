@@ -22,7 +22,7 @@ return {
         gopls = {},
         dockerls = {},
         tsserver = {},
-        lua_ls = {},
+        lua_ls = { settings = { Lua = { diagnostics = { globals = { "vim" } } } } },
         awk_ls = {},
         ansiblels = {},
         eslint = {},

@@ -21,3 +21,5 @@ vim.keymap.set(
 vim.keymap.set("n", "<leader>j", "<C-w>s:e %:h<enter>", { silent = true })
 
 vim.keymap.set("n", "<leader>l", "<C-w>v:e %:h<enter>", { silent = true })
+
+vim.keymap.set("n", "s", "<C-w>")

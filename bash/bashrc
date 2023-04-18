@@ -453,3 +453,7 @@ source /usr/share/fzf/key-bindings.bash
 
 eval "$(fnm env --use-on-cd)"
 eval "$(starship init bash)"
+
+# fnm
+export PATH="/home/master/.local/share/fnm:$PATH"
+eval "`fnm env`"
