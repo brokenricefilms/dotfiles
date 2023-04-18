@@ -11,7 +11,6 @@ return {
         vuels = {},
         yamlls = {},
         astro = {},
-        denols = {},
         emmet_ls = {},
         clangd = {},
         bashls = {},
