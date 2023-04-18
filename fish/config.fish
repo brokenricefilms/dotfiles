@@ -16,20 +16,8 @@ set -gx PNPM_HOME $HOME/.local/share/pnpm
 
 set -gx EDITOR nvim
 
-if type -q nvim
-    set -gx EDITOR nvim
-else
-    set -gx EDITOR vi
-end
-
 set -gx VISUAL $EDITOR
 set -gx MANPAGER $EDITOR +Man!
-
-if type -q google-chrome-stable
-    set -gx BROWSER google-chrome-stable
-else
-    set -gx BROWSER firefox
-end
 
 set -gx PATH $DENO_INSTALL/bin $PNPM_HOME $HOME/.npm/bin $HOME/.cargo/bin $HOME/go/bin /usr/local/go/bin $HOME/.local/bin $HOME/bin $HOME/dotfiles/bin $HOME/.local/share/gem/ruby/3.0.0/bin $HOME/gems/bin $(yarn global bin) $PATH
 
@@ -56,6 +44,13 @@ alias lazydocker="sudo $HOME/go/bin/lazydocker"
 alias docker="sudo docker"
 alias docker-compose="sudo docker-compose"
 alias edir="edir --recurse --trash --all"
+alias nvim_no_lsp="rm ~/.config/nvim ; ln -sf ~/dotfiles/nvim/ ~/.config/"
+alias nvim_lsp="rm ~/.config/nvim ; ln -sf ~/dotfiles/nvim_lsp ~/.config/nvim"
+alias copy_editor_config_file="change_directory_to_git_root ; cp ~/dotfiles/template/skeleton.editorconfig .editorconfig"
+alias i="sudo dnf install -y"
+alias u="sudo dnf remove -y"
+
+alias php_interactive_shell="php -a"
 
 alias r="rm -rf"
 alias rr="sudo rm -rf"
@@ -91,9 +86,3 @@ alias dow="cd ~/Downloads ; ls"
 alias la="exa --all --icons"
 alias ls="exa --long --all --icons"
 alias tmp="cd /tmp"
-
-alias nvim_no_lsp="rm ~/.config/nvim ; ln -sf ~/dotfiles/nvim/ ~/.config/"
-alias nvim_lsp="rm ~/.config/nvim ; ln -sf ~/dotfiles/nvim_lsp ~/.config/nvim"
-alias copy_editor_config_file="change_directory_to_git_root ; cp ~/dotfiles/template/skeleton.editorconfig .editorconfig"
-
-alias php_interactive_shell="php -a"
