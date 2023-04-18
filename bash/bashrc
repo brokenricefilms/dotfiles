@@ -203,7 +203,6 @@ function sync_music() {
 function update() {
   CURRENT_DIR=$(pwd)
 
-  yay --noconfirm
   pnpm add -g pnpm
   pnpm update -g
   tldr --update
@@ -456,4 +455,4 @@ eval "$(starship init bash)"
 
 # fnm
 export PATH="/home/master/.local/share/fnm:$PATH"
-eval "`fnm env`"
+eval "$(fnm env)"

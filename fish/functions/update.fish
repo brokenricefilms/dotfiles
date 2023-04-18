@@ -1,7 +1,6 @@
 function update --description 'update all'
     set --local current_dir (pwd)
 
-    yay --noconfirm
     pnpm add -g pnpm
     pnpm update -g
     tldr --update
