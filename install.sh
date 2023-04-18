@@ -32,11 +32,11 @@ npm config set prefix ~/.npm/
 
 npm install --global prettier
 npm install --global tinypng-cli
-npm install --global browser-sync
 npm install --global neovim
 npm install --global typescript
 npm install --global ijavascript
 npm install --global pnpm
+npm install --global five-server
 
 pip install --upgrade pylint
 pip install --upgrade autopep8
