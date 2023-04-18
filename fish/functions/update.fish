@@ -5,6 +5,7 @@ function update --description 'update all'
     pnpm update -g
     tldr --update
     ~/.tmux/plugins/tpm/bin/update_plugins all
+    fisher update
 
     cd $HOME/dotfiles/
     nvim --headless "+Lazy! sync" +qa
