@@ -25,6 +25,7 @@ flatpak install --noninteractive flathub org.onlyoffice.desktopeditors
 flatpak install --noninteractive flathub com.belmoussaoui.Authenticator
 flatpak install --noninteractive flathub com.belmoussaoui.Decoder
 flatpak install --noninteractive flathub md.obsidian.Obsidian
+flatpak install --noninteractive flathub org.kiwix.desktop
 
 curl -fsSL https://deno.land/x/install/install.sh | sh
 

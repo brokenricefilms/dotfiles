@@ -17,6 +17,7 @@
   "mini.ai": { "branch": "main", "commit": "fdb8dd34c326040f99b178536eeaee41d1efe643" },
   "mini.bufremove": { "branch": "main", "commit": "93c7230e83f5acb8890cdb2abaf3557f09305b01" },
   "mini.comment": { "branch": "main", "commit": "9ead47cef4266efa5145808b838762c658b74f74" },
+  "mini.pairs": { "branch": "main", "commit": "771c08bd313614c7e9a1904d277ac76eb226f674" },
   "mini.surround": { "branch": "main", "commit": "cc962bae0890217f8473390abc8cef988519d370" },
   "neoconf.nvim": { "branch": "main", "commit": "315161d16fafb172cd4e46563a5b602fd8550a00" },
   "neodev.nvim": { "branch": "main", "commit": "b7feac47ef2e0d3994a05ee60ca761dc80dae38a" },
