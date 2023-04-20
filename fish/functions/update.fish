@@ -10,7 +10,7 @@ function update --description 'update all'
 
     cd $HOME/dotfiles/
     nvim --headless "+Lazy! sync" +qa
-    git add nvim/lazy-lock.json
+    git add nvim_lsp/lazy-lock.json
     git commit -m "chore: lazy.nvim"
     git push
 
