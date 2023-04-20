@@ -1,7 +1,6 @@
 function update --description 'update all'
     set --local current_dir (pwd)
 
-    dnf makecache
     pnpm add -g pnpm
     pnpm update -g
     tldr --update

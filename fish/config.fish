@@ -45,8 +45,6 @@ alias docker="sudo docker"
 alias docker-compose="sudo docker-compose"
 alias edir="edir --recurse --trash --all"
 alias copy_editor_config_file="change_directory_to_git_root ; cp ~/dotfiles/template/skeleton.editorconfig .editorconfig"
-alias i="sudo dnf install -y"
-alias u="sudo dnf remove -y"
 
 alias php_interactive_shell="php -a"
 
