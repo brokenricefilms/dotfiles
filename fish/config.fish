@@ -46,6 +46,8 @@ alias docker-compose="sudo docker-compose"
 alias edir="edir --recurse --trash --all"
 alias copy_editor_config_file="change_directory_to_git_root ; cp ~/dotfiles/template/skeleton.editorconfig .editorconfig"
 alias google_art_download="dezoomify-rs (wl-paste)"
+alias kitty_list_font="kitty +list-fonts --psnames"
+alias reload_mouseless="systemctl --user restart mouseless.service"
 
 alias php_interactive_shell="php -a"
 
