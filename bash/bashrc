@@ -115,9 +115,9 @@ is_in_git_repo() {
 }
 
 function browser_daily() {
-  open "https://www.inoreader.com/all_articles"
-  open "https://www.youtube.com/feed/subscriptions"
-  open "https://github.com"
+  xdg-open "https://www.inoreader.com/all_articles"
+  xdg-open "https://www.youtube.com/feed/subscriptions"
+  xdg-open "https://github.com"
 }
 
 function download_audio() {
