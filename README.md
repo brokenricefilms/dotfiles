@@ -5,7 +5,7 @@
 
 ## Current setup
 
-- EndeavourOS (Arch base), gnome wayland
+- EndeavourOS, gnome wayland
 - [Kitty terminal](./kitty/)
 - [Tmux](./tmux/tmux.conf): i 🫰 sessions. [tmux fzf session switch](https://github.com/thuanowa/tmux-fzf-session-switch)
 - [Bash](./bash/): fzf tab my friend.

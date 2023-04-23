@@ -428,24 +428,9 @@ tmux_kill_all_unname_session() {
   cd $CURRENT_DIR
 }
 
-# TODO: make faster by using api
-show_all_video_chapter() {
-  yt-dlp --dump-json "$1" | jq '.title, .original_url, .chapters' | nvim
-}
-
 copy_editor_config_file() {
   change_directory_to_git_root
   cp ~/dotfiles/template/skeleton.editorconfig .editorconfig
-}
-
-nvim_no_lsp() {
-  rm ~/.config/nvim
-  ln -sf ~/dotfiles/nvim/ ~/.config/
-}
-
-nvim_lsp() {
-  rm ~/.config/nvim
-  ln -sf ~/dotfiles/nvim_lsp/ ~/.config/nvim
 }
 
 source ~/dotfiles/bash/fzf-bash-completion.sh
