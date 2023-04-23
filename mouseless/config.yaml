@@ -39,6 +39,7 @@ layers:
       f3: volumeup
       # mic mute, `KEY_MICMUTE` ~ micmute doesn't work, debug show key press is `f20`
       f5: f20
+      f8: leftctrl+leftshift+v
 
   - name: mouse
     passThrough: false
