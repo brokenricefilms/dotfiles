@@ -433,6 +433,12 @@ copy_editor_config_file() {
   cp ~/dotfiles/template/skeleton.editorconfig .editorconfig
 }
 
+git_clone_all_remote_branch() {
+  for branch in $(git branch -a | grep remotes | grep -v HEAD | grep -v master); do
+    git branch --track ${branch#remotes/origin/} $branch
+  done
+}
+
 source ~/dotfiles/bash/fzf-bash-completion.sh
 bind -x '"\t": fzf_bash_completion'
 source /usr/share/fzf/completion.bash
