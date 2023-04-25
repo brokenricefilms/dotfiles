@@ -21,6 +21,7 @@ layers:
       a: tap-hold a ; toggle-layer mouse ; 300
       space: tap-hold space ; toggle-layer thuan_fly_keys ; 200
       s: tap-hold s ; toggle-layer uwu ; 300
+      f: tap-hold f ; toggle-layer figma ; 300
 
       # capslock kinda useless for me, so i map it to esc for vim
       capslock: esc
@@ -148,3 +149,10 @@ layers:
       k: pageup
       h: left
       l: right
+
+  - name: figma
+    passThrough: false
+    bindings:
+      f: layer initial
+      i: layer figma
+      d: delete
