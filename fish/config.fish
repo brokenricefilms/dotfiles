@@ -79,6 +79,7 @@ alias w="fzf_git_worktree_change_dir"
 alias ww="fzf_git_worktree_remove"
 alias amp="am;p"
 alias ampp="am;pp"
+alias aap="aa;p"
 
 alias ...="cd .. ; cd .. ; ls"
 alias ..="cd .. ; ls"
