@@ -1,8 +1,31 @@
 #!/usr/bin/env sh
 
-yay -S --noconfirm tmux neofetch htop trash-cli python-pip tealdeer net-tools speedtest-cli neovim python-neovim fd cowsay fzf npm ffmpeg mpv ripgrep unrar moreutils cronie git-delta wl-clipboard rust cargo go v4l-utils ruby gcc obs-studio dconf-editor sqlite shfmt cmake kdenlive starship bat yt-dlp ddcutil foot celluloid deno yarn libgda6 xdg-desktop-portal-gnome xdg-desktop-portal qt6-wayland mpv-mpris sdl2 networkmanager kiwix-desktop easyeffects calf lsp-plugins zam-plugins-lv2 mda.lv2 noto-fonts-emoji ibus-bamboo onlyoffice-bin gnome-browser-connector googledot-cursor-theme exa fnm-bin tmux-bash-completion-git google-chrome google-chrome-beta fnm-bin tmux-bash-completion-git git-extras syncthing composer openjdk-src obsidian visual-studio-code-bin dezoomify-rs ps_mem flameshot
+sudo dnf remove gnome-connections gnome-abrt yelp totem gnome-photos gnome-characters gnome-contacts gnome-weather libreoffice-core gnome-maps gnome-tour rhythmbox gnome-calendar -y
 
-curl -fsSL https://deno.land/x/install/install.sh | sh
+sudo dnf install dnf-plugins-core -y
+sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf groupupdate core -y
+
+sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
+sudo dnf groupupdate sound-and-video -y
+
+# ibus bamboo
+sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:lamlng/Fedora_37/home:lamlng.repo
+
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+dnf check-update
+
+sudo dnf update
+
+sudo dnf install -y tmux curl wget git neofetch htop gnome-tweaks trash-cli python3-pip tldr net-tools speedtest-cli neovim python3-neovim fd-find aria2 tree cowsay fzf npm ffmpeg youtube-dl mpv ripgrep unrar moreutils foliate util-linux-user zsh cronie git-delta wl-clipboard java-devel git-clang-format rust cargo go gtk-v4l ruby ruby-devel gcc-c++ ibus-bamboo collectd-sensors obs-studio dconf-editor sqlite shfmt v4l-utils google-noto-emoji-color-fonts cmake kdenlive glib2-static libgda libgda-sqlite bat libsqlite3x-devel yt-dlp ddcutil code celluloid fish exa syncthing composer mpv-mpris ps_mem alacritty
+
+flatpak remote-add --authenticator-install --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install --noninteractive flathub org.onlyoffice.desktopeditors
+flatpak install --noninteractive flathub com.belmoussaoui.Authenticator
+flatpak install --noninteractive flathub com.belmoussaoui.Decoder
+flatpak install --noninteractive flathub md.obsidian.Obsidian
+flatpak install --noninteractive flathub org.kiwix.desktop
 
 npm config set prefix ~/.npm/
 
