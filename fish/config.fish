@@ -48,7 +48,6 @@ alias copy_editor_config_file="change_directory_to_git_root ; cp ~/dotfiles/temp
 alias google_art_download="dezoomify-rs (wl-paste)"
 alias kitty_list_font="kitty +list-fonts --psnames"
 alias reload_mouseless="systemctl --user restart mouseless.service"
-
 alias php_interactive_shell="php -a"
 
 alias r="rm -rf"
