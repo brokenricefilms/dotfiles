@@ -102,9 +102,9 @@ alias ampp="am;pp"
 
 alias ...="cd .. ; cd .. ; ls"
 alias ..="cd .. ; ls"
-alias doc="cd ~/Documents ; la"
-alias dow="cd ~/Downloads ; la"
-alias tmp="cd /tmp ; la"
+alias doc="cd ~/Documents ; ls"
+alias dow="cd ~/Downloads ; ls"
+alias tmp="cd /tmp ; ls"
 
 is_in_git_repo() {
   git rev-parse HEAD >/dev/null 2>&1
@@ -345,7 +345,7 @@ function fzf_change_directory() {
   fzf_dir() {
     DIR=$(fd --hidden --type directory . | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r ls')
     cd "$DIR"
-    la
+    ls
   }
 
   if [ -z "$1" ]; then
