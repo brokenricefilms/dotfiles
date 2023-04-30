@@ -38,12 +38,11 @@ export BROWSER="google-chrome-stable"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d"
 
-export FZF_DEFAULT_OPTS="
-	--color=fg:#797593,bg:#faf4ed,hl:#d7827e
-	--color=fg+:#575279,bg+:#f2e9e1,hl+:#d7827e
-	--color=border:#dfdad9,header:#286983,gutter:#faf4ed
-	--color=spinner:#ea9d34,info:#56949f,separator:#dfdad9
-	--color=pointer:#907aa9,marker:#b4637a,prompt:#797593"
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+    --color=fg:#353535,bg:#eeeeee,hl:#353535
+    --color=fg+:#353535,bg+:#e8e8e8,hl+:#353535
+    --color=info:#353535,prompt:#353535,pointer:#353535
+    --color=marker:#353535,spinner:#353535,header:#353535'
 
 HISTCONTROL=ignoreboth
 HISTSIZE=
@@ -59,7 +58,6 @@ stty time 0
 
 alias bat="bat --theme=GitHub"
 alias ser="browser_sync_start_server"
-alias tree="exa --tree --icons"
 alias x="chmod +x"
 alias q="exit"
 alias ":q"="exit"
@@ -104,8 +102,6 @@ alias ampp="am;pp"
 
 alias ...="cd .. ; cd .. ; ls"
 alias ..="cd .. ; ls"
-alias la="exa --all --icons"
-alias ls="exa --long --all --icons"
 alias doc="cd ~/Documents ; la"
 alias dow="cd ~/Downloads ; la"
 alias tmp="cd /tmp ; la"
@@ -345,7 +341,7 @@ function fzf_change_directory() {
   DIR=$1
 
   fzf_dir() {
-    DIR=$(fd --hidden --type directory . | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --tree --level=2')
+    DIR=$(fd --hidden --type directory . | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r ls')
     cd "$DIR"
     la
   }
@@ -391,7 +387,7 @@ function fzf_music() {
 
   cd ~/Music/
 
-  PLAYLIST=$(fd --type directory . --exclude node_modules --exclude go | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --tree --icons')
+  PLAYLIST=$(fd --type directory . --exclude node_modules --exclude go | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r ls')
 
   if [ -n "$PLAYLIST" ]; then
     cd $PLAYLIST
@@ -441,8 +437,9 @@ git_clone_all_remote_branch() {
 
 source ~/dotfiles/bash/fzf-bash-completion.sh
 bind -x '"\t": fzf_bash_completion'
-source /usr/share/fzf/completion.bash
-source /usr/share/fzf/key-bindings.bash
+source ~/dotfiles/bash/completion.bash
+source ~/dotfiles/bash/key-bindings.bash
 
-eval "$(fnm env --use-on-cd)"
+export PATH="/home/master/.local/share/fnm:$PATH"
+eval "$(fnm env)"
 eval "$(starship init bash)"
