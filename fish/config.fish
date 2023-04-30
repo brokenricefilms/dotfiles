@@ -32,7 +32,6 @@ set fish_cursor_replace_one underscore
 set fish_cursor_visual block
 
 alias bat="bat --theme=GitHub"
-alias tree="exa --tree --icons"
 alias x="chmod +x"
 alias q="exit"
 alias fzf_down="fzf --reverse --preview-window=top"
@@ -84,6 +83,4 @@ alias ...="cd .. ; cd .. ; ls"
 alias ..="cd .. ; ls"
 alias doc="cd ~/Documents ; ls"
 alias dow="cd ~/Downloads ; ls"
-alias la="exa --all --icons"
-alias ls="exa --long --all --icons"
 alias tmp="cd /tmp"
