@@ -491,5 +491,5 @@ bind -x '"\t": fzf_bash_completion'
 source ~/dotfiles/bash/completion.bash
 source ~/dotfiles/bash/key-bindings.bash
 
-export PATH="/home/master/.local/share/fnm:$PATH"
-eval "$(fnm env)"
+#export PATH="/home/master/.local/share/fnm:$PATH"
+#eval "$(fnm env)"
