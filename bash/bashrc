@@ -79,8 +79,6 @@ function parse_git_branch {
 
 PS1='\[\e[0;2m\]\u\[\e[0;2m\]@\[\e[0;2m\]\H\[\e[0;2m\]: \[\e[0;1m\]\w \[\e[0;3m\]$(parse_git_branch)\n\[\e[0;2m\]❯ \[\e[0m\]'
 
-#PS1='\[\e[0;2m\]\u\[\e[0;2m\]@\[\e[0;2m\]\H\[\e[0;2m\]: \[\e[0;1m\]\w \[\e[0;3m\]$(git branch --show-current 2>/dev/null)$([[ $(git status --porcelain 2>/dev/null) ]] && echo "*")\n\[\e[0;2m\]❯ \[\e[0m\]'
-
 alias bat="bat --theme=GitHub"
 
 alias ser="browser_sync_start_server"
