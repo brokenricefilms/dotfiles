@@ -56,9 +56,31 @@ set -o vi
 
 stty time 0
 
-PS1='\[\e[0;2m\]\u\[\e[0;2m\]@\[\e[0;2m\]\H\[\e[0;2m\]: \[\e[0;1m\]\w \[\e[0;3m\]$(git branch --show-current 2>/dev/null)$([[ $(git status --porcelain 2>/dev/null) ]] && echo "*")\n\[\e[0;2m\]❯ \[\e[0m\]'
+function parse_git_dirty {
+  status=$(git status --porcelain -b 2>/dev/null)
+  aheadRegex="ahead ([0-9]+)"
+  behindRegex="behind ([0-9]+)"
+
+  [[ $status =~ $aheadRegex ]] && ahead="${BASH_REMATCH[1]}" || ahead="0"
+  [[ $status =~ $behindRegex ]] && behind="${BASH_REMATCH[1]}" || behind="0"
+
+  [[ $(git status 2>/dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo -n ", dirty"
+  [[ $ahead != "0" ]] && echo -n ", ↑${ahead}"
+  [[ $behind != "0" ]] && echo -n ", ↓${behind}"
+}
+function parse_git_stash {
+  [[ $(git stash list 2>/dev/null | tail -n1) != "" ]] && echo " \/ stash"
+}
+function parse_git_branch {
+  git branch --no-color 2>/dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)$(parse_git_stash)/"
+}
+
+PS1='\[\e[0;2m\]\u\[\e[0;2m\]@\[\e[0;2m\]\H\[\e[0;2m\]: \[\e[0;1m\]\w \[\e[0;3m\]$(parse_git_branch)\n\[\e[0;2m\]❯ \[\e[0m\]'
+
+#PS1='\[\e[0;2m\]\u\[\e[0;2m\]@\[\e[0;2m\]\H\[\e[0;2m\]: \[\e[0;1m\]\w \[\e[0;3m\]$(git branch --show-current 2>/dev/null)$([[ $(git status --porcelain 2>/dev/null) ]] && echo "*")\n\[\e[0;2m\]❯ \[\e[0m\]'
 
 alias bat="bat --theme=GitHub"
+
 alias ser="browser_sync_start_server"
 alias x="chmod +x"
 alias q="exit"
