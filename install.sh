@@ -74,9 +74,6 @@ ln -sf ~/dotfiles/alacritty ~/.config/
 ln -sf ~/dotfiles/mouseless/ ~/.config/
 ln -sf ~/dotfiles/.npmrc ~/
 
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-$HOME/.tmux/plugins/tpm/bin/install_plugins
-
 mkdir -p ~/repos/thuanowa/
 cd ~/repos/thuanowa/
 
