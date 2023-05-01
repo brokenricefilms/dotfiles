@@ -67,9 +67,9 @@ alias j="fzf_rg"
 alias test_keyboard_input_code="sudo showkey"
 alias open="xdg-open"
 alias lazydocker="sudo $HOME/go/bin/lazydocker"
+alias docker_start="sudo systemctl start docker"
 alias docker="sudo docker"
 alias docker-compose="sudo docker-compose"
-alias edir="edir --recurse --trash --all"
 alias google_art_download="dezoomify-rs (wl-paste)"
 alias kitty_list_font="kitty +list-fonts --psnames"
 
@@ -92,13 +92,11 @@ alias am="git add -A; git commit --amend --no-edit"
 alias cdr="change_directory_to_git_root"
 alias cl="clone_repo_in_clipboard"
 alias l="git pull"
-alias ll="git pull -f"
 alias p="git push"
 alias pp="git push -f"
 alias s="git status -sb"
 alias w="fzf_git_worktree_change_dir"
 alias ww="fzf_git_worktree_remove"
-alias ampp="am;pp"
 
 alias ...="cd .. ; cd .. ; ls"
 alias ..="cd .. ; ls"
@@ -290,7 +288,7 @@ function fzf_git_worktree_change_dir() {
   local query
   local sess_arr
   local retval
-  worktrees=$(git worktree list | fzf --exit-0 --print-query --reverse)
+  worktrees=$(git worktree list | fzf --exit-0 --print-query)
   retval=$?
 
   IFS=$'\n' read -rd '' -a sess_arr <<<"$worktrees"
@@ -303,6 +301,7 @@ function fzf_git_worktree_change_dir() {
       worktree=$(echo "$query" | awk '{print $1}')
     fi
     cd "$worktree"
+    tmux rename-window "$(git branch --show-current)"
   elif [ $retval == 1 ]; then
     DEFAULT_GIT_FOLDER=$(git worktree list | head --lines 1 | awk '{print $1}')
 
@@ -314,6 +313,8 @@ function fzf_git_worktree_change_dir() {
 
     git branch "$query"
     git checkout "$query"
+
+    tmux rename-window "$(git branch --show-current)"
   fi
 }
 
@@ -435,6 +436,32 @@ git_clone_all_remote_branch() {
   for branch in $(git branch -a | grep remotes | grep -v HEAD | grep -v master); do
     git branch --track ${branch#remotes/origin/} $branch
   done
+}
+
+git_clone_all_repo() {
+  org=$1
+  limit=9999
+
+  cd ~/repos/
+
+  repos="$(gh repo list "$org" -L $limit)"
+
+  repo_total="$(echo "$repos" | wc -l)"
+  repos_complete=0
+
+  echo
+
+  echo "$repos" | while read -r repo; do
+    repo_name="$(echo "$repo" | cut -f1)"
+    echo -ne "\r\e[0K[ $repos_complete / $repo_total ] Cloning $repo_name"
+    gh repo clone "$repo_name" "$repo_name" -- -q 2>/dev/null || (
+      cd "$repo_name"
+      git_clone_all_remote_branch
+    )
+    repos_complete=$((repos_complete + 1))
+  done
+
+  echo "Finished cloning all repos in $org."
 }
 
 source ~/dotfiles/bash/fzf-bash-completion.sh
