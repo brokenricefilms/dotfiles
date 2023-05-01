@@ -97,9 +97,7 @@ alias docker-compose="sudo docker-compose"
 alias google_art_download="dezoomify-rs (wl-paste)"
 alias kitty_list_font="kitty +list-fonts --psnames"
 
-alias r="rm -rf"
-alias rr="sudo rm -rf"
-alias t="trash"
+alias r="trash"
 
 alias c="fzf_change_directory"
 alias cc="cd $HOME; fzf_change_directory"
