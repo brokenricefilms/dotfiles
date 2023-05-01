@@ -56,6 +56,8 @@ set -o vi
 
 stty time 0
 
+PS1='\[\e[0;2m\]\u\[\e[0;2m\]@\[\e[0;2m\]\H\[\e[0;2m\]: \[\e[0;1m\]\w \[\e[0;3m\]$(git branch --show-current 2>/dev/null)\n\[\e[0;2m\]❯ \[\e[0m\]'
+
 alias bat="bat --theme=GitHub"
 alias ser="browser_sync_start_server"
 alias x="chmod +x"
@@ -471,4 +473,3 @@ source ~/dotfiles/bash/key-bindings.bash
 
 export PATH="/home/master/.local/share/fnm:$PATH"
 eval "$(fnm env)"
-eval "$(starship init bash)"
