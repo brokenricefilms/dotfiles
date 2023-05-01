@@ -64,13 +64,15 @@ function parse_git_dirty {
   [[ $status =~ $aheadRegex ]] && ahead="${BASH_REMATCH[1]}" || ahead="0"
   [[ $status =~ $behindRegex ]] && behind="${BASH_REMATCH[1]}" || behind="0"
 
-  [[ $(git status 2>/dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo -n ", dirty"
-  [[ $ahead != "0" ]] && echo -n ", ↑${ahead}"
-  [[ $behind != "0" ]] && echo -n ", ↓${behind}"
+  [[ $(git status 2>/dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo -n " 🍀"
+  [[ $ahead != "0" ]] && echo -n " ↑${ahead}"
+  [[ $behind != "0" ]] && echo -n " ↓${behind}"
 }
+
 function parse_git_stash {
   [[ $(git stash list 2>/dev/null | tail -n1) != "" ]] && echo " \/ stash"
 }
+
 function parse_git_branch {
   git branch --no-color 2>/dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)$(parse_git_stash)/"
 }
