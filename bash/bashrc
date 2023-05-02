@@ -178,6 +178,11 @@ function sync_music() {
   download_audio "https://l.thuanowa.com/music-two-feet"
 
   cd $MUSIC_DIR
+  mkdir Alec_Benjamin
+  cd music_alec_benjamin
+  download_audio "https://l.thuanowa.com/music-alec-benjamin"
+
+  cd $MUSIC_DIR
   mkdir English
   cd English
   download_audio "https://l.thuanowa.com/music-en"
