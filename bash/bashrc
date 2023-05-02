@@ -96,6 +96,7 @@ alias docker="sudo docker"
 alias docker-compose="sudo docker-compose"
 alias google_art_download="dezoomify-rs (wl-paste)"
 alias kitty_list_font="kitty +list-fonts --psnames"
+alias create_astro="pnpm create astro@latest"
 
 alias r="trash"
 
