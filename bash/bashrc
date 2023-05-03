@@ -132,9 +132,9 @@ is_in_git_repo() {
 }
 
 function browser_daily() {
-  xdg-open "https://www.inoreader.com/all_articles"
-  xdg-open "https://www.youtube.com/feed/subscriptions"
-  xdg-open "https://github.com"
+  xdg-open "https://www.inoreader.com/all_articles" &
+  xdg-open "https://www.youtube.com/feed/subscriptions" &
+  xdg-open "https://github.com" &
 }
 
 function download_audio() {
@@ -448,9 +448,9 @@ function reload_mouseless() {
 }
 
 function hi() {
-  browser_daily &
-  update &
-  fastfetch &
+  browser_daily
+  update
+  fastfetch
 }
 
 tmux_kill_all_unname_session() {
