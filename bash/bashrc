@@ -145,7 +145,7 @@ function download_audio() {
   fi
 }
 
-# TODO: checking playlist list to sync change
+# TODO: checking playlist list to sync change, faster using parallel?
 function sync_music() {
   CURRENT_DIR=$(pwd)
   MUSIC_DIR=$HOME/Music/
@@ -225,20 +225,17 @@ function sync_music() {
   cd $CURRENT_DIR
 }
 
-function update() {
-  CURRENT_DIR=$(pwd)
-
-  dnf makecache
-  pnpm add -g pnpm
-  pnpm update -g
-  tldr --update
-
+function update_bash_plugin() {
   cd ~/dotfiles/bash/
   curl --remote-name https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh
   curl --remote-name https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.bash
   curl --remote-name https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.bash
   git add .
   git commit -m "chore(bash): plugin"
+}
+
+function update_nvim_lazy() {
+  CURRENT_DIR=$(pwd)
 
   cd $HOME/dotfiles/
   nvim --headless "+Lazy! sync" +qa
@@ -247,6 +244,17 @@ function update() {
   git push
 
   cd $CURRENT_DIR
+}
+
+function update() {
+  dnf makecache
+  pnpm add -g pnpm
+  pnpm update -g
+  tldr --update
+
+  update_bash_plugin
+
+  update_nvim_lazy
 }
 
 function browser_sync_start_server() {
@@ -286,7 +294,7 @@ function fzf_emoji() {
 
 function fzf_edit_file() {
   if [ -z "$1" ]; then
-    FILE=$(fd --hidden --type file . | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}')
+    FILE=$(fd --hidden --type file . | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}' &)
 
     if [ -n "$FILE" ]; then
       nvim "$FILE"
@@ -298,7 +306,7 @@ function fzf_edit_file() {
 
 function fzf_sudo_edit() {
   if [ -z "$1" ]; then
-    FILE=$(fd --hidden --type file . | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}')
+    FILE=$(fd --hidden --type file . | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}' &)
 
     if [ -n "$FILE" ]; then
       sudoedit "$FILE"
@@ -358,7 +366,7 @@ function fzf_git_worktree_remove() {
 
 function fzf_open() {
   if [ -z "$1" ]; then
-    FILE=$(fd --hidden --type file . | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:500 {}')
+    FILE=$(fd --hidden --type file . | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:500 {}' &)
 
     if [ -n "$FILE" ]; then
       xdg-open "$FILE"
@@ -372,7 +380,7 @@ function fzf_change_directory() {
   DIR=$1
 
   fzf_dir() {
-    DIR=$(fd --hidden --type directory . | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r ls')
+    DIR=$(fd --hidden --type directory . | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r ls' &)
     cd "$DIR"
     ls
   }
@@ -406,7 +414,7 @@ function fzf_tldr() {
 
 function tl() {
   if [ -z "$1" ]; then
-    COMMAND=$(fzf_tldr)
+    COMMAND=$(fzf_tldr &)
     tldr $COMMAND
   else
     tldr "$1"
@@ -418,7 +426,7 @@ function fzf_music() {
 
   cd ~/Music/
 
-  PLAYLIST=$(fd --type directory . --exclude node_modules --exclude go | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r ls')
+  PLAYLIST=$(fd --type directory . --exclude node_modules --exclude go | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r ls' &)
 
   if [ -n "$PLAYLIST" ]; then
     cd $PLAYLIST
@@ -440,9 +448,9 @@ function reload_mouseless() {
 }
 
 function hi() {
-  browser_daily
-  update
-  fastfetch
+  browser_daily &
+  update &
+  fastfetch &
 }
 
 tmux_kill_all_unname_session() {
