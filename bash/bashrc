@@ -231,7 +231,6 @@ function update() {
   pnpm add -g pnpm
   pnpm update -g
   tldr --update
-  ~/.tmux/plugins/tpm/bin/update_plugins all
 
   cd ~/dotfiles/bash/
   curl --remote-name https://raw.githubusercontent.com/lincheney/fzf-tab-completion/master/bash/fzf-bash-completion.sh
