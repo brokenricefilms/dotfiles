@@ -228,6 +228,7 @@ function sync_music() {
 function update() {
   CURRENT_DIR=$(pwd)
 
+  dnf makecache
   pnpm add -g pnpm
   pnpm update -g
   tldr --update
