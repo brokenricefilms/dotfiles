@@ -21,7 +21,8 @@ layers:
       a: tap-hold a ; toggle-layer mouse ; 300
       space: tap-hold space ; toggle-layer thuan_fly_keys ; 200
       s: tap-hold s ; toggle-layer popshell ; 300
-      d: tap-hold d ; toggle-layer poptheshell ; 300
+      d: tap-hold d ; toggle-layer popashell ; 300
+      f: tap-hold f ; toggle-layer poptheshell ; 300
 
       # capslock kinda useless for me, so i map it to esc for vim
       capslock: esc
@@ -92,18 +93,6 @@ layers:
       ## Gnome ##
       ###########
 
-      # switch workspace need custom on dconf
-      a: leftmeta+leftctrl+k1
-      s: leftmeta+leftctrl+k2
-      d: leftmeta+leftctrl+k3
-      f: leftmeta+leftctrl+k4
-      g: leftmeta+leftctrl+k5
-      q: leftmeta+leftctrl+k6
-      w: leftmeta+leftctrl+k7
-      e: leftmeta+leftctrl+k8
-      r: leftmeta+leftctrl+k9
-      t: leftmeta+leftctrl+k0
-
       # resize windows
       c: rightalt+f8
 
@@ -126,8 +115,6 @@ layers:
       ## browser ##
       #############
 
-      # restore tab
-      t: leftctrl+leftshift+t
 
       # next tab aka `ctrl + tab`
       p: leftctrl+pagedown
@@ -151,6 +138,20 @@ layers:
       l: leftmeta+l
       u: leftmeta+leftshift+pageup
       p: leftmeta+leftshift+pagedown
+
+  - name: popashell
+    passThrough: false
+    bindings:
+      h: leftmeta+k1
+      j: leftmeta+k2
+      k: leftmeta+k3
+      l: leftmeta+k4
+      semicolon: leftmeta+k5
+      y: leftmeta+k6
+      u: leftmeta+k7
+      i: leftmeta+k8
+      o: leftmeta+k9
+      p: leftmeta+k0
 
   - name: poptheshell
     passThrough: false
