@@ -20,8 +20,8 @@ layers:
     bindings:
       a: tap-hold a ; toggle-layer mouse ; 300
       space: tap-hold space ; toggle-layer thuan_fly_keys ; 200
-      s: tap-hold s ; toggle-layer uwu ; 300
-      f: tap-hold f ; toggle-layer figma ; 300
+      s: tap-hold s ; toggle-layer popshell ; 300
+      d: tap-hold d ; toggle-layer poptheshell ; 300
 
       # capslock kinda useless for me, so i map it to esc for vim
       capslock: esc
@@ -92,16 +92,17 @@ layers:
       ## Gnome ##
       ###########
 
-      # switch to fav app on dash
-      a: leftmeta+k1
-      s: leftmeta+k2
-      d: leftmeta+k3
-      f: leftmeta+k4
-      g: leftmeta+k5
-      q: leftmeta+k6
-      w: leftmeta+k7
-      e: leftmeta+k8
-      r: leftmeta+k9
+      # switch workspace need custom on dconf
+      a: leftmeta+leftctrl+k1
+      s: leftmeta+leftctrl+k2
+      d: leftmeta+leftctrl+k3
+      f: leftmeta+leftctrl+k4
+      g: leftmeta+leftctrl+k5
+      q: leftmeta+leftctrl+k6
+      w: leftmeta+leftctrl+k7
+      e: leftmeta+leftctrl+k8
+      r: leftmeta+leftctrl+k9
+      t: leftmeta+leftctrl+k0
 
       # resize windows
       c: rightalt+f8
@@ -115,8 +116,8 @@ layers:
       # switch windows to monitor right
       dot: leftmeta+leftshift+right
 
-      # toggle maximize
-      m: leftalt+f10
+      # popshell toggle maximize
+      m: leftmeta+m
 
       # close window
       x: leftalt+f4
@@ -140,19 +141,27 @@ layers:
       # go forward
       rightbrace: leftalt+right
 
-  - name: uwu
+  - name: popshell
     passThrough: false
     bindings:
-      s: layer initial
-      i: layer uwu
-      j: pagedown
-      k: pageup
-      h: left
-      l: right
+      enter: leftmeta+enter
+      h: leftmeta+h
+      j: leftmeta+j
+      k: leftmeta+k
+      l: leftmeta+l
+      u: leftmeta+leftshift+pageup
+      p: leftmeta+leftshift+pagedown
 
-  - name: figma
+  - name: poptheshell
     passThrough: false
     bindings:
-      f: layer initial
-      i: layer figma
-      d: delete
+      h: leftmeta+leftshift+k1
+      j: leftmeta+leftshift+k2
+      k: leftmeta+leftshift+k3
+      l: leftmeta+leftshift+k4
+      semicolon: leftmeta+leftshift+k5
+      y: leftmeta+leftshift+k6
+      u: leftmeta+leftshift+k7
+      i: leftmeta+leftshift+k8
+      o: leftmeta+leftshift+k9
+      p: leftmeta+leftshift+k0
