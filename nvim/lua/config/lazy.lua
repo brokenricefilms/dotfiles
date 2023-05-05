@@ -14,6 +14,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.linting.eslint" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
     { import = "lazyvim.plugins.extras.lang.json" },
+    { import = "lazyvim.plugins.extras.lang.tailwind" },
     { import = "plugins" },
   },
   defaults = {
@@ -26,7 +27,7 @@ require("lazy").setup({
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
   checker = { enabled = false }, -- automatically check for plugin updates
-  install = { colorscheme = { "rose-pine-dawn", "shine" } },
+  install = { colorscheme = { "zenwritten", "shine" } },
   performance = {
     rtp = {
       -- disable some rtp plugins
