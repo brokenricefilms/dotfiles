@@ -138,6 +138,9 @@ layers:
       l: leftmeta+l
       u: leftmeta+leftshift+pageup
       p: leftmeta+leftshift+pagedown
+      o: leftmeta+o
+      i: leftmeta+s
+      semicolon: leftmeta+g
 
   - name: popashell
     passThrough: false
@@ -165,4 +168,4 @@ layers:
       u: leftmeta+leftshift+k7
       i: leftmeta+leftshift+k8
       o: leftmeta+leftshift+k9
-      p: leftmeta+leftshift+k0
+      p: leftmeta+leftshift+k1
