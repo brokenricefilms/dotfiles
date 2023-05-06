@@ -21,8 +21,6 @@ layers:
       a: tap-hold a ; toggle-layer mouse ; 300
       space: tap-hold space ; toggle-layer thuan_fly_keys ; 200
       s: tap-hold s ; toggle-layer popshell ; 300
-      d: tap-hold d ; toggle-layer popashell ; 300
-      f: tap-hold f ; toggle-layer poptheshell ; 300
 
       # capslock kinda useless for me, so i map it to esc for vim
       capslock: esc
@@ -77,6 +75,18 @@ layers:
       k0: f10
       minus: f11
       equal: f12
+
+      # pop shell
+      a: leftmeta+k1
+      s: leftmeta+k2
+      d: leftmeta+k3
+      f: leftmeta+k4
+      g: leftmeta+k5
+      q: leftmeta+k6
+      w: leftmeta+k7
+      e: leftmeta+k8
+      r: leftmeta+k9
+      t: leftmeta+k0
 
       ##################
       ## editing text ##
@@ -141,31 +151,3 @@ layers:
       o: leftmeta+o
       i: leftmeta+s
       semicolon: leftmeta+g
-
-  - name: popashell
-    passThrough: false
-    bindings:
-      h: leftmeta+k1
-      j: leftmeta+k2
-      k: leftmeta+k3
-      l: leftmeta+k4
-      semicolon: leftmeta+k5
-      y: leftmeta+k6
-      u: leftmeta+k7
-      i: leftmeta+k8
-      o: leftmeta+k9
-      p: leftmeta+k0
-
-  - name: poptheshell
-    passThrough: false
-    bindings:
-      h: leftmeta+leftshift+k1
-      j: leftmeta+leftshift+k2
-      k: leftmeta+leftshift+k3
-      l: leftmeta+leftshift+k4
-      semicolon: leftmeta+leftshift+k5
-      y: leftmeta+leftshift+k6
-      u: leftmeta+leftshift+k7
-      i: leftmeta+leftshift+k8
-      o: leftmeta+leftshift+k9
-      p: leftmeta+leftshift+k1
