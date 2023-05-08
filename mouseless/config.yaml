@@ -18,9 +18,10 @@ mouseDecelerationCurve: 3.0
 layers:
   - name: initial
     bindings:
-      a: tap-hold a ; toggle-layer mouse ; 300
+      a: tap-hold a ; toggle-layer mouse ; 200
       space: tap-hold space ; toggle-layer thuan_fly_keys ; 200
-      s: tap-hold s ; toggle-layer popshell ; 300
+      s: tap-hold s ; toggle-layer popshell ; 200
+      o: tap-hold o ; toggle-layer apps ; 200
 
       # capslock kinda useless for me, so i map it to esc for vim
       capslock: esc
@@ -151,3 +152,10 @@ layers:
       o: leftmeta+o
       i: leftmeta+s
       semicolon: leftmeta+g
+
+  - name: apps
+    passThrough: false
+    bindings:
+      a: "exec firefox"
+      s: "exec firefox --private-window"
+      d: leftalt+enter # kitty
