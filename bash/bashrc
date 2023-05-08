@@ -99,8 +99,13 @@ alias kitty_list_font="kitty +list-fonts --psnames"
 alias create_astro="pnpm create astro@latest"
 alias i="sudo dnf install -y"
 alias u="sudo dnf remove -y"
-
 alias r="trash"
+
+alias bluetooth_connect_speaker="bluetoothctl connect C1:AC:88:3D:D6:EE"
+alias bluetooth_disconnect_speaker="bluetoothctl disconnect C1:AC:88:3D:D6:EE"
+alias bluetooth_turn_on="bluetoothctl power on"
+alias bluetooth_turn_off="bluetoothctl power off"
+alias bluetooth_devices="bluetoothctl devices"
 
 alias c="fzf_change_directory"
 alias cc="cd $HOME; fzf_change_directory"
