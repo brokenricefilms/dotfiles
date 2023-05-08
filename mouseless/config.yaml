@@ -88,9 +88,7 @@ layers:
       r: leftmeta+k9
       t: leftmeta+k0
 
-      ##################
-      ## editing text ##
-      ##################
+      # editing text
 
       k: up
       h: left
@@ -99,9 +97,7 @@ layers:
       i: home
       o: end
 
-      ###########
-      ## Gnome ##
-      ###########
+      # Gnome
 
       # resize windows
       c: rightalt+f8
@@ -121,10 +117,7 @@ layers:
       # close window
       x: leftalt+f4
 
-      #############
-      ## browser ##
-      #############
-
+      # browser
 
       # next tab aka `ctrl + tab`
       p: leftctrl+pagedown
