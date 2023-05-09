@@ -40,7 +40,7 @@ export FZF_ALT_C_COMMAND="fd -t d"
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
     --color=fg:#353535,bg:#eeeeee,hl:#353535
-    --color=fg+:#353535,bg+:#e8e8e8,hl+:#353535
+    --color=fg+:#353535,bg+:#eeeeee,hl+:#353535
     --color=info:#353535,prompt:#353535,pointer:#353535
     --color=marker:#353535,spinner:#353535,header:#353535'
 
@@ -108,6 +108,7 @@ alias create_astro="pnpm create astro@latest"
 alias i="sudo dnf install -y"
 alias u="sudo dnf remove -y"
 alias r="trash"
+alias clear="clear -x; (tmux_kill_all_unname_session &)"
 
 alias bluetooth_connect_speaker_Pluse4="bluetoothctl connect C1:AC:88:3D:D6:EE"
 alias bluetooth_disconnect_speaker_Pluse4="bluetoothctl disconnect C1:AC:88:3D:D6:EE"
@@ -478,13 +479,10 @@ function hi() {
 }
 
 tmux_kill_all_unname_session() {
-  CURRENT_DIR=$(pwd)
-  cd /tmp/
   tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >/tmp/killAllUnnameTmuxSessionOutput.sh
-  sed -i 's/^/tmux kill-session -t /' killAllUnnameTmuxSessionOutput.sh
-  chmod +x killAllUnnameTmuxSessionOutput.sh
-  ./killAllUnnameTmuxSessionOutput.sh
-  cd $CURRENT_DIR
+  sed -i 's/^/tmux kill-session -t /' /tmp/killAllUnnameTmuxSessionOutput.sh
+  chmod +x /tmp/killAllUnnameTmuxSessionOutput.sh
+  /tmp/killAllUnnameTmuxSessionOutput.sh
 }
 
 copy_editor_config_file() {
