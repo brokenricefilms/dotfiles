@@ -80,6 +80,7 @@ function parse_git_branch {
 function node_version {
   git show HEAD~1:"package.json" >/dev/null 2>&1
   if [[ $? == 0 ]]; then
+    echo -n "🌱"
     node --version
   fi
 }
