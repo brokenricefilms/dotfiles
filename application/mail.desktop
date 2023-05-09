@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Exec=firefox --new-window "https://mail.google.com/mail/u/0/"
+Icon=firefox
+Terminal=false
+Name=mail

@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Exec=firefox --new-window "https://discord.com/channels/822464808666005504/880734523787190324"
+Icon=firefox
+Terminal=false
+Name=discord
