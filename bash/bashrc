@@ -108,6 +108,10 @@ alias bluetooth_turn_on="bluetoothctl power on"
 alias bluetooth_turn_off="bluetoothctl power off"
 alias bluetooth_devices="bluetoothctl devices"
 
+alias ls="exa --icons"
+alias ll="exa --long --header --icons --git"
+alias tree="exa --tree --long"
+
 alias c="fzf_change_directory"
 alias cc="cd $HOME; fzf_change_directory"
 
