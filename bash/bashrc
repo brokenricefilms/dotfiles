@@ -103,7 +103,7 @@ alias r="trash"
 
 alias bluetooth_connect_speaker_Pluse4="bluetoothctl connect C1:AC:88:3D:D6:EE"
 alias bluetooth_disconnect_speaker_Pluse4="bluetoothctl disconnect C1:AC:88:3D:D6:EE"
-alias bluetooth_restart_speaker_Pluse4="bluetooth_disconnect_speaker ; bluetooth_connect_speaker"
+alias bluetooth_restart_speaker_Pluse4="bluetooth_disconnect_speaker_Pluse4 ; bluetooth_connect_speaker_Pluse4"
 alias bluetooth_turn_on="bluetoothctl power on"
 alias bluetooth_turn_off="bluetoothctl power off"
 alias bluetooth_devices="bluetoothctl devices"
