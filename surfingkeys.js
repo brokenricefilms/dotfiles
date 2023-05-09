@@ -1,4 +1,3 @@
-// https://github.com/brookhong/Surfingkeys/issues/63
 settings.modeAfterYank = "Normal";
 settings.scrollStepSize = 200;
 
