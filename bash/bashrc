@@ -245,10 +245,14 @@ function sync_music() {
 }
 
 function update_bash_plugin() {
+  CURRENT_DIR=$(pwd)
+
   cd ~/dotfiles/bash/
   cat plugin_url.txt | parallel -j8 curl --remote-name
   git add .
   git commit -m "chore(bash): plugin"
+
+  cd $CURRENT_DIR
 }
 
 function update_nvim_lazy() {
