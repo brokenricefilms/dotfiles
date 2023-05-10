@@ -246,7 +246,7 @@ function sync_music() {
 
 function update_bash_plugin() {
   cd ~/dotfiles/bash/
-  cat ~/dotfiles/bash/plugin_url.txt | parallel -j8 curl --remote-name
+  cat plugin_url.txt | parallel -j8 curl --remote-name
   git add .
   git commit -m "chore(bash): plugin"
 }
