@@ -172,6 +172,10 @@ function sync_music() {
   cd $MUSIC_DIR
   trash *
 
+  mkdir joseph_solomon
+  cd joseph_solomon
+  download_audio "https://l.thuanowa.com/music-joseph-solomon"
+
   mkdir joji
   cd joji
   download_audio "https://l.thuanowa.com/music-joji"
