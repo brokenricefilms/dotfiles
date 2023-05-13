@@ -56,7 +56,7 @@ set -o vi
 
 stty time 0
 
-function parse_git_dirty {
+function parseGitdirty {
   status=$(git status --porcelain -b 2>/dev/null)
   aheadRegex="ahead ([0-9]+)"
   behindRegex="behind ([0-9]+)"
@@ -69,15 +69,15 @@ function parse_git_dirty {
   [[ $behind != "0" ]] && echo -n " ↓${behind}"
 }
 
-function parse_git_stash {
+function parseGitstash {
   [[ $(git stash list 2>/dev/null | tail -n1) != "" ]] && echo " \/ stash"
 }
 
-function parse_git_branch {
-  git branch --no-color 2>/dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)$(parse_git_stash)/"
+function parsegitBranch {
+  git branch --no-color 2>/dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parseGitdirty)$(parseGitstash)/"
 }
 
-function node_version {
+function nodeVersion {
   git show HEAD~1:"package.json" >/dev/null 2>&1
   if [[ $? == 0 ]]; then
     echo -n "🌱"
@@ -85,59 +85,59 @@ function node_version {
   fi
 }
 
-PS1='\[\e[0;2m\]\u\[\e[0;2m\]@\[\e[0;2m\]\H\[\e[0;2m\]: \[\e[0;1m\]\w \[\e[0;3m\]$(parse_git_branch) $(node_version)\n\[\e[0;2m\]❯ \[\e[0m\]'
+PS1='\[\e[0;2m\]\u\[\e[0;2m\]@\[\e[0;2m\]\H\[\e[0;2m\]: \[\e[0;1m\]\w \[\e[0;3m\]$(parsegitBranch) $(nodeVersion)\n\[\e[0;2m\]❯ \[\e[0m\]'
 
 alias bat="bat --theme=GitHub"
 
-alias ser="browser_sync_start_server"
+alias ser="browserSyncStartserver"
 alias x="chmod +x"
 alias q="exit"
 alias ":q"="exit"
-alias m="fzf_music"
-alias o="fzf_open"
-alias j="fzf_rg"
-alias test_keyboard_input_code="sudo showkey"
+alias m="fzfMusic"
+alias o="fzfOpen"
+alias j="fzfRg"
+alias testKeyboardInputCode="sudo showkey"
 alias open="xdg-open"
 alias lazydocker="sudo $HOME/go/bin/lazydocker"
-alias docker_start="sudo systemctl start docker"
+alias dockerStart="sudo systemctl start docker"
 alias docker="sudo docker"
 alias docker-compose="sudo docker-compose"
-alias google_art_download="dezoomify-rs (wl-paste)"
-alias kitty_list_font="kitty +list-fonts --psnames"
-alias create_astro="pnpm create astro@latest"
+alias googleArtDownload="dezoomify-rs (wl-paste)"
+alias kittyListFont="kitty +list-fonts --psnames"
+alias createAstro="pnpm create astro@latest"
 alias r="trash"
-alias clear="clear -x; (tmux_kill_all_unname_session &)"
+alias clear="clear -x; (tmuxKillAllUnnameSession &)"
 
-alias bluetooth_connect_speaker_Pluse4="bluetoothctl connect C1:AC:88:3D:D6:EE"
-alias bluetooth_disconnect_speaker_Pluse4="bluetoothctl disconnect C1:AC:88:3D:D6:EE"
-alias bluetooth_restart_speaker_Pluse4="bluetooth_disconnect_speaker_Pluse4 ; bluetooth_connect_speaker_Pluse4"
-alias bluetooth_turn_on="bluetoothctl power on"
-alias bluetooth_turn_off="bluetoothctl power off"
-alias bluetooth_devices="bluetoothctl devices"
+alias bluetoothConnectSpeakerPluse4="bluetoothctl connect C1:AC:88:3D:D6:EE"
+alias bluetoothDisconnectSpeakerPluse4="bluetoothctl disconnect C1:AC:88:3D:D6:EE"
+alias bluetoothRestartSpeakerPluse4="bluetooth_disconnect_speaker_Pluse4 ; bluetooth_connect_speaker_Pluse4"
+alias bluetoothTurnOn="bluetoothctl power on"
+alias bluetoothTurnOff="bluetoothctl power off"
+alias bluetoothDevices="bluetoothctl devices"
 
 alias ls="exa --icons --color=never"
 alias ll="exa --all --long --header --icons --git --color=never"
 alias tree="exa --tree --long --color=never"
 
-alias c="fzf_change_directory"
-alias cc="cd $HOME; fzf_change_directory"
+alias c="fzfChangeDirectory"
+alias cc="cd $HOME; fzfChangeDirectory"
 
-alias e="fzf_edit_file"
+alias e="fzfEditFile"
 alias e.="nvim ."
-alias ee="cd $HOME; fzf_edit_file"
-alias ej="fzf_emoji"
-alias E="fzf_sudo_edit"
+alias ee="cd $HOME; fzfEditFile"
+alias ej="fzfEmoji"
+alias E="fzfSudoEdit"
 
 alias a="git add -A; git commit"
 alias aa="git add -A; git commit -m 'auto commit'"
 alias am="git add -A; git commit --amend --no-edit"
-alias cdr="change_directory_to_git_root"
-alias clone="clone_repo_in_clipboard"
+alias cdr="changeDirectoryTogitRoot"
+alias clone="cloneRepoinClipboard"
 alias p="git push"
 alias pp="git push -f"
 alias s="git status -sb"
-alias w="fzf_git_worktree_change_dir"
-alias ww="fzf_git_worktree_remove"
+alias w="fzfGitWorktreeChangeDir"
+alias ww="fzfGitWorktreeRemove"
 alias aap="aa;p"
 
 alias ...="cd .. ; cd .. ; ls"
@@ -146,17 +146,17 @@ alias doc="cd ~/Documents ; ls"
 alias dow="cd ~/Downloads ; ls"
 alias tmp="cd /tmp ; ls"
 
-is_in_git_repo() {
+isGitRepo() {
   git rev-parse HEAD >/dev/null 2>&1
 }
 
-function browser_daily() {
+function browserDaily() {
   xdg-open "https://www.inoreader.com/all_articles" &
   xdg-open "https://www.youtube.com/feed/subscriptions" &
   xdg-open "https://github.com" &
 }
 
-function download_audio() {
+function downloadAudio() {
   if [ -z "$1" ]; then
     yt-dlp -f bestaudio --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "$(wl-paste)"
   else
@@ -174,81 +174,81 @@ function sync_music() {
 
   mkdir joseph_solomon
   cd joseph_solomon
-  download_audio "https://l.thuanowa.com/music-joseph-solomon"
+  downloadAudio "https://l.thuanowa.com/music-joseph-solomon"
 
   mkdir joji
   cd joji
-  download_audio "https://l.thuanowa.com/music-joji"
+  downloadAudio "https://l.thuanowa.com/music-joji"
 
   cd $MUSIC_DIR
   mkdir billie_eilish
   cd billie_eilish
-  download_audio "https://l.thuanowa.com/music-billie-eilish"
+  downloadAudio "https://l.thuanowa.com/music-billie-eilish"
 
   cd $MUSIC_DIR
   mkdir b_ray
   cd b_ray
-  download_audio "https://l.thuanowa.com/music-b-ray"
+  downloadAudio "https://l.thuanowa.com/music-b-ray"
 
   cd $MUSIC_DIR
   mkdir den_vau
   cd den_vau
-  download_audio "https://l.thuanowa.com/music-den-vau"
+  downloadAudio "https://l.thuanowa.com/music-den-vau"
 
   cd $MUSIC_DIR
   mkdir two_feet
   cd two_feet
-  download_audio "https://l.thuanowa.com/music-two-feet"
+  downloadAudio "https://l.thuanowa.com/music-two-feet"
 
   cd $MUSIC_DIR
   mkdir Alec_Benjamin
   cd music_alec_benjamin
-  download_audio "https://l.thuanowa.com/music-alec-benjamin"
+  downloadAudio "https://l.thuanowa.com/music-alec-benjamin"
 
   cd $MUSIC_DIR
   mkdir English
   cd English
-  download_audio "https://l.thuanowa.com/music-en"
+  downloadAudio "https://l.thuanowa.com/music-en"
 
   cd $MUSIC_DIR
   mkdir Vietnamese
   cd Vietnamese
-  download_audio "https://l.thuanowa.com/music-vi"
+  downloadAudio "https://l.thuanowa.com/music-vi"
 
   cd $MUSIC_DIR
   mkdir Korean
   cd Korean
-  download_audio "https://l.thuanowa.com/music-ko"
+  downloadAudio "https://l.thuanowa.com/music-ko"
 
   cd $MUSIC_DIR
   mkdir Japanese
   cd Japanese
-  download_audio "https://l.thuanowa.com/music-ja"
+  downloadAudio "https://l.thuanowa.com/music-ja"
 
   cd $MUSIC_DIR
   mkdir Japanese
   cd Japanese
-  download_audio "https://l.thuanowa.com/music-ja"
+  downloadAudio "https://l.thuanowa.com/music-ja"
 
   cd $MUSIC_DIR
   mkdir Spanish
   cd Spanish
-  download_audio "https://l.thuanowa.com/music-spanish"
+  downloadAudio "https://l.thuanowa.com/music-spanish"
 
   cd $MUSIC_DIR
   mkdir Chinese
   cd Chinese
-  download_audio "https://l.thuanowa.com/music-chinese"
+  downloadAudio "https://l.thuanowa.com/music-chinese"
 
   cd $MUSIC_DIR
   mkdir chill_hop
   cd chill_hop
-  download_audio "https://l.thuanowa.com/music-chill-hop"
+  downloadAudio "https://l.thuanowa.com/music-chill-hop"
 
   cd $CURRENT_DIR
 }
 
-function update_bash_plugin() {
+function updateBashPlugin() {
   CURRENT_DIR=$(pwd)
 
   cd ~/dotfiles/bash/
@@ -259,7 +259,7 @@ function update_bash_plugin() {
   cd $CURRENT_DIR
 }
 
-function update_nvim_lazy() {
+function updateNvimLazy() {
   CURRENT_DIR=$(pwd)
 
   cd $HOME/dotfiles/
@@ -277,34 +277,34 @@ function update() {
   pnpm update -g
   tldr --update
 
-  update_bash_plugin
+  updateBashPlugin
 
-  update_nvim_lazy
+  updateNvimLazy
 }
 
-function browser_sync_start_server() {
+function browserSyncStartserver() {
   SERVER_IP=$(hostname -I)
   browser-sync start --server --files . --no-notify --host "$SERVER_IP" --port 9000
 }
 
-function browser_sync_start_server() {
+function browserSyncStartserver() {
   SERVER_IP=$(hostname -I)
   browser-sync start --server --files . --no-notify --host "$SERVER_IP" --port 9000
 }
 
-function change_directory_to_git_root() {
+function changeDirectoryTogitRoot() {
   cd $(git rev-parse --show-toplevel)
   ls
 }
 
-function clone_repo_in_clipboard() {
+function cloneRepoinClipboard() {
   url_to_username_repo=$(wl-paste | sed 's/.*m\///g')
-  repo_name=$(wl-paste | sed 's/.*\///g')
+  repoName=$(wl-paste | sed 's/.*\///g')
   gh repo clone "$url_to_username_repo"
-  cd "$repo_name"
+  cd "$repoName"
 }
 
-function fzf_emoji() {
+function fzfEmoji() {
   default() {
     emoji-fzf preview --prepend | fzf | awk '{ print $1 }' | tr -d "\n" | wl-copy
   }
@@ -317,7 +317,7 @@ function fzf_emoji() {
   fi
 }
 
-function fzf_edit_file() {
+function fzfEditFile() {
   if [ -z "$1" ]; then
     FILE=$(fd --hidden --type file . | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}' &)
 
@@ -329,7 +329,7 @@ function fzf_edit_file() {
   fi
 }
 
-function fzf_sudo_edit() {
+function fzfSudoEdit() {
   if [ -z "$1" ]; then
     FILE=$(fd --hidden --type file . | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:501 {}' &)
 
@@ -341,8 +341,8 @@ function fzf_sudo_edit() {
   fi
 }
 
-function fzf_git_worktree_change_dir() {
-  is_in_git_repo || return
+function fzfGitWorktreeChangeDir() {
+  isGitRepo || return
 
   local worktrees
   local worktree
@@ -379,8 +379,8 @@ function fzf_git_worktree_change_dir() {
   fi
 }
 
-function fzf_git_worktree_remove() {
-  is_in_git_repo || return
+function fzfGitWorktreeRemove() {
+  isGitRepo || return
 
   WORKTREE=$(git worktree list | fzf | awk '{print $1}')
   DEFAULT_GIT_FOLDER=$(git worktree list | head --lines 1 | awk '{print $1}')
@@ -389,7 +389,7 @@ function fzf_git_worktree_remove() {
   cd $DEFAULT_GIT_FOLDER
 }
 
-function fzf_open() {
+function fzfOpen() {
   if [ -z "$1" ]; then
     FILE=$(fd --hidden --type file . | fzf --preview 'bat --theme=GitHub --color=always --style=numbers --line-range=:500 {}' &)
 
@@ -401,10 +401,10 @@ function fzf_open() {
   fi
 }
 
-function fzf_change_directory() {
+function fzfChangeDirectory() {
   DIR=$1
 
-  fzf_dir() {
+  fzfDir() {
     DIR=$(fd --hidden --type directory . | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r ls' &)
     cd "$DIR"
     ls
@@ -417,10 +417,10 @@ function fzf_change_directory() {
 
       if [[ ERROR -eq 1 ]]; then
         echo "\"$1\" directory does not exist"
-        fzf_dir
+        fzfDir
       fi
     else
-      fzf_dir
+      fzfDir
     fi
   else
     mkdir -p "$1"
@@ -428,25 +428,25 @@ function fzf_change_directory() {
   fi
 }
 
-function fzf_rg() {
+function fzfRg() {
   rg --color=always --line-number --no-heading --smart-case "${*:-}" |
     fzf --ansi --color "hl:-1:underline,hl+:-1:underline:reverse" --delimiter : --preview 'bat --theme=GitHub --color=always {1} --highlight-line {2}' --bind 'enter:become($EDITOR {1} +{2})'
 }
 
-function fzf_tldr() {
+function fzfTldr() {
   tldr --list | sed "s/'//g" | sed "s/,//g" | sed "s/ /\n/g" | sed "s/]//g" | sed "s/\[//g" | fzf --preview "tldr {1}"
 }
 
 function tl() {
   if [ -z "$1" ]; then
-    COMMAND=$(fzf_tldr &)
+    COMMAND=$(fzfTldr &)
     tldr $COMMAND
   else
     tldr "$1"
   fi
 }
 
-function fzf_music() {
+function fzfMusic() {
   CURRENT_DIR=$(pwd)
 
   cd ~/Music/
@@ -470,30 +470,30 @@ function reload() {
   ln -sf ~/dotfiles/application/* ~/.local/share/applications/
 }
 
-function reload_mouseless() {
+function reloadMouseless() {
   systemctl --user stop mouseless.service
   systemctl --user restart mouseless.service
 }
 
 function hi() {
-  browser_daily
+  browserDaily
   update
   fastfetch
 }
 
-tmux_kill_all_unname_session() {
+tmuxKillAllUnnameSession() {
   tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >/tmp/killAllUnnameTmuxSessionOutput.sh
   sed -i 's/^/tmux kill-session -t /' /tmp/killAllUnnameTmuxSessionOutput.sh
   chmod +x /tmp/killAllUnnameTmuxSessionOutput.sh
   /tmp/killAllUnnameTmuxSessionOutput.sh
 }
 
-copy_editor_config_file() {
-  change_directory_to_git_root
+copyEditorConfigFile() {
+  changeDirectoryTogitRoot
   cp ~/dotfiles/template/skeleton.editorconfig .editorconfig
 }
 
-git_clone_all_remote_branch() {
+gitCloneAllRemoteBranch() {
   for branch in $(git branch -a | grep remotes | grep -v HEAD | grep -v master); do
     git branch --track ${branch#remotes/origin/} $branch
   done
@@ -507,19 +507,19 @@ git_clone_all_repo() {
 
   repos="$(gh repo list "$org" -L $limit)"
 
-  repo_total="$(echo "$repos" | wc -l)"
-  repos_complete=0
+  repoTotal="$(echo "$repos" | wc -l)"
+  reposComplete=0
 
   echo
 
   echo "$repos" | while read -r repo; do
-    repo_name="$(echo "$repo" | cut -f1)"
-    echo -ne "\r\e[0K[ $repos_complete / $repo_total ] Cloning $repo_name"
-    gh repo clone "$repo_name" "$repo_name" -- -q 2>/dev/null || (
-      cd "$repo_name"
-      git_clone_all_remote_branch
+    repoName="$(echo "$repo" | cut -f1)"
+    echo -ne "\r\e[0K[ $reposComplete / $repoTotal ] Cloning $repoName"
+    gh repo clone "$repoName" "$repoName" -- -q 2>/dev/null || (
+      cd "$repoName"
+      gitCloneAllRemoteBranch
     )
-    repos_complete=$((repos_complete + 1))
+    reposComplete=$((reposComplete + 1))
   done
 
   echo "Finished cloning all repos in $org."

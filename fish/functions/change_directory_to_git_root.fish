@@ -1,3 +1,3 @@
-function change_directory_to_git_root
+function changeDirectoryTogitRoot
     cd (git rev-parse --show-toplevel)
 end
