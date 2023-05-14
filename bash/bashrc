@@ -111,7 +111,7 @@ alias tmuxKillServer="tmux kill-server"
 
 alias bluetoothConnectSpeakerPluse4="bluetoothctl connect C1:AC:88:3D:D6:EE"
 alias bluetoothDisconnectSpeakerPluse4="bluetoothctl disconnect C1:AC:88:3D:D6:EE"
-alias bluetoothRestartSpeakerPluse4="bluetooth_disconnect_speaker_Pluse4 ; bluetooth_connect_speaker_Pluse4"
+alias bluetoothRestartSpeakerPluse4="bluetoothDisconnectSpeakerPluse4 ; bluetoothConnectSpeakerPluse4"
 alias bluetoothTurnOn="bluetoothctl power on"
 alias bluetoothTurnOff="bluetoothctl power off"
 alias bluetoothDevices="bluetoothctl devices"
