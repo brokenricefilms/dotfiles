@@ -107,6 +107,7 @@ alias kittyListFont="kitty +list-fonts --psnames"
 alias createAstro="pnpm create astro@latest"
 alias r="trash"
 alias clear="clear -x; (tmuxKillAllUnnameSession &)"
+alias tmuxKillServer="tmux kill-server"
 
 alias bluetoothConnectSpeakerPluse4="bluetoothctl connect C1:AC:88:3D:D6:EE"
 alias bluetoothDisconnectSpeakerPluse4="bluetoothctl disconnect C1:AC:88:3D:D6:EE"
@@ -148,12 +149,6 @@ alias tmp="cd /tmp ; ls"
 
 isGitRepo() {
   git rev-parse HEAD >/dev/null 2>&1
-}
-
-function browserDaily() {
-  xdg-open "https://www.inoreader.com/all_articles" &
-  xdg-open "https://www.youtube.com/feed/subscriptions" &
-  xdg-open "https://github.com" &
 }
 
 function downloadAudio() {
@@ -476,7 +471,6 @@ function reloadMouseless() {
 }
 
 function hi() {
-  browserDaily
   update
   fastfetch
 }
