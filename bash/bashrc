@@ -400,7 +400,7 @@ function fzfChangeDirectory() {
   DIR=$1
 
   fzfDir() {
-    DIR=$(fd --hidden --type directory . | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r ls' &)
+    DIR=$(fd --hidden --type directory . | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --long --all --icons --color=never' &)
     cd "$DIR"
     ls
   }
