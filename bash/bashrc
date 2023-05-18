@@ -168,10 +168,12 @@ function syncMusic() {
   cd $MUSIC_DIR
   trash *
 
+  cd $MUSIC_DIR
   mkdir joseph_solomon
   cd joseph_solomon
   downloadAudio "https://l.thuanowa.com/music-joseph-solomon"
 
+  cd $MUSIC_DIR
   mkdir joji
   cd joji
   downloadAudio "https://l.thuanowa.com/music-joji"
@@ -198,7 +200,7 @@ function syncMusic() {
 
   cd $MUSIC_DIR
   mkdir Alec_Benjamin
-  cd music_alec_benjamin
+  cd Alec_Benjamin
   downloadAudio "https://l.thuanowa.com/music-alec-benjamin"
 
   cd $MUSIC_DIR
