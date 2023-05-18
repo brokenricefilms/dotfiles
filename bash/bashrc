@@ -161,7 +161,7 @@ function downloadAudio() {
 }
 
 # TODO: checking playlist list to sync change, faster using parallel?
-function sync_music() {
+function syncMusic() {
   CURRENT_DIR=$(pwd)
   MUSIC_DIR=$HOME/Music/
 
@@ -267,11 +267,23 @@ function updateNvimLazy() {
   cd $CURRENT_DIR
 }
 
+function updateFirefoxTheme() {
+  CURRENT_DIR=$(pwd)
+
+  THEME_LOCATION=/home/master/.mozilla/firefox/ilkri3vv.default-release/chrome/
+
+  cd $THEME_LOCATION
+  git pull
+
+  cd $CURRENT_DIR
+}
+
 function update() {
   dnf makecache
   pnpm add -g pnpm
   pnpm update -g
   tldr --update
+  updateFirefoxTheme
 
   updateBashPlugin
 
@@ -476,25 +488,25 @@ function hi() {
   fastfetch
 }
 
-tmuxKillAllUnnameSession() {
+function tmuxKillAllUnnameSession() {
   tmux ls | awk '{print $1}' | grep -o '[0-9]\+' >/tmp/killAllUnnameTmuxSessionOutput.sh
   sed -i 's/^/tmux kill-session -t /' /tmp/killAllUnnameTmuxSessionOutput.sh
   chmod +x /tmp/killAllUnnameTmuxSessionOutput.sh
   /tmp/killAllUnnameTmuxSessionOutput.sh
 }
 
-copyEditorConfigFile() {
+function copyEditorConfigFile() {
   changeDirectoryTogitRoot
   cp ~/dotfiles/template/skeleton.editorconfig .editorconfig
 }
 
-gitCloneAllRemoteBranch() {
+function gitCloneAllRemoteBranch() {
   for branch in $(git branch -a | grep remotes | grep -v HEAD | grep -v master); do
     git branch --track ${branch#remotes/origin/} $branch
   done
 }
 
-git_clone_all_repo() {
+function git_clone_all_repo() {
   org=$1
   limit=9999
 
@@ -520,7 +532,7 @@ git_clone_all_repo() {
   echo "Finished cloning all repos in $org."
 }
 
-fnmSetup() {
+function fnmSetup() {
   curl -fsSL https://fnm.vercel.app/install | bash
 }
 
