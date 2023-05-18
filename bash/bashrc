@@ -118,6 +118,7 @@ alias bluetoothDevices="bluetoothctl devices"
 
 alias ls="exa --icons --color=never"
 alias ll="exa --all --long --header --icons --git --color=never"
+alias l="ll"
 alias tree="exa --tree --long --color=never"
 
 alias c="fzfChangeDirectory"
@@ -517,6 +518,10 @@ git_clone_all_repo() {
   done
 
   echo "Finished cloning all repos in $org."
+}
+
+fnmSetup() {
+  curl -fsSL https://fnm.vercel.app/install | bash
 }
 
 source ~/dotfiles/bash/fzf-bash-completion.sh
