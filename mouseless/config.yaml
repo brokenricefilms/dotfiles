@@ -46,7 +46,6 @@ layers:
     bindings:
       a: layer initial
       i: layer mouse
-      r: reload-config
       l: move  1  0
       h: move -1  0
       j: move  0  1
@@ -62,6 +61,8 @@ layers:
   - name: thuan_fly_keys
     passThrough: true
     bindings:
+      z: reload-config
+
       # function key kinda far, lazy to reach out
       k1: f1
       k2: f2
