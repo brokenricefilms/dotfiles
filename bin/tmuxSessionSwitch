@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
   selected=$1
 else
-  selected=$(fd . --hidden ~/repos/thuanowa ~/repos/OngDev/ ~/repos/legrandfr/ ~/repos/legrandfr/ ~/ --min-depth 1 --max-depth 1 --type directory | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --icons --color=never' &)
+  selected=$(fd . ~/repos/thuanowa ~/repos/OngDev/ ~/repos/legrandfr/ ~/repos/legrandfr/ $HOME ~/app/ --hidden --max-depth 1 --type directory | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r exa --icons --color=never' &)
 fi
 
 if [[ -z $selected ]]; then
