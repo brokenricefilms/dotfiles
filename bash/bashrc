@@ -109,7 +109,7 @@ alias r="trash"
 alias clear="clear -x; (tmuxKillAllUnnameSession &)"
 alias tmuxKillServer="tmux kill-server"
 
-alias bluetoothConnectSpeakerPluse4="bluetoothctl connect C1:AC:88:3D:D6:EE"
+alias bluetoothConnectSpeakerPluse4="bluetoothTurnOn ; bluetoothctl connect C1:AC:88:3D:D6:EE"
 alias bluetoothDisconnectSpeakerPluse4="bluetoothctl disconnect C1:AC:88:3D:D6:EE"
 alias bluetoothRestartSpeakerPluse4="bluetoothDisconnectSpeakerPluse4 ; bluetoothConnectSpeakerPluse4"
 alias bluetoothTurnOn="bluetoothctl power on"
