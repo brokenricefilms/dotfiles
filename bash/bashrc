@@ -485,6 +485,19 @@ function reloadMouseless() {
   systemctl --user restart mouseless.service
 }
 
+function mouselessStop() {
+  systemctl --user stop mouseless.service
+}
+
+function mouselessDebug() {
+  mouselessStop
+  mouseless --debug
+}
+
+function mouselessStart() {
+  systemctl --user start mouseless.service
+}
+
 function hi() {
   update
   fastfetch
