@@ -287,9 +287,12 @@ function updateFirefoxTheme() {
 
 function update() {
   dnf makecache
+
   pnpm add -g pnpm
   pnpm update -g
+
   tldr --update
+
   updateFirefoxTheme
 
   updateBashPlugin
