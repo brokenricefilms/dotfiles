@@ -116,6 +116,11 @@ alias bluetoothTurnOn="bluetoothctl power on"
 alias bluetoothTurnOff="bluetoothctl power off"
 alias bluetoothDevices="bluetoothctl devices"
 
+alias reloadMouseless="systemctl --user stop mouseless.service ; systemctl --user restart mouseless.service"
+alias mouselessStop="systemctl --user stop mouseless.service"
+alias mouselessDebug="mouselessStop mouseless --debug"
+alias mouselessStart="systemctl --user start mouseless.service"
+
 alias ls="exa --icons --color=never"
 alias ll="exa --all --long --header --icons --git --color=never"
 alias l="ll"
@@ -148,7 +153,7 @@ alias doc="cd ~/Documents ; ls"
 alias dow="cd ~/Downloads ; ls"
 alias tmp="cd /tmp ; ls"
 
-isGitRepo() {
+function isGitRepo() {
   git rev-parse HEAD >/dev/null 2>&1
 }
 
@@ -480,24 +485,6 @@ function reload() {
   ln -sf ~/dotfiles/application/* ~/.local/share/applications/
 }
 
-function reloadMouseless() {
-  systemctl --user stop mouseless.service
-  systemctl --user restart mouseless.service
-}
-
-function mouselessStop() {
-  systemctl --user stop mouseless.service
-}
-
-function mouselessDebug() {
-  mouselessStop
-  mouseless --debug
-}
-
-function mouselessStart() {
-  systemctl --user start mouseless.service
-}
-
 function hi() {
   update
   fastfetch
@@ -521,7 +508,7 @@ function gitCloneAllRemoteBranch() {
   done
 }
 
-function git_clone_all_repo() {
+function gitCloneAllRepo() {
   org=$1
   limit=9999
 
@@ -551,12 +538,12 @@ function fnmSetup() {
   curl -fsSL https://fnm.vercel.app/install | bash
 }
 
-function nvim-no-lsp() {
+function nvimNoLsp() {
   rm -rf ~/.config/nvim
   ln -sf ~/dotfiles/nvim-no-lsp/ ~/.config/nvim
 }
 
-function nvim-lsp() {
+function nvimLsp() {
   rm -rf ~/.config/nvim
   ln -sf ~/dotfiles/nvim/ ~/.config/nvim
 }
