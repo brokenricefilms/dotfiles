@@ -165,7 +165,7 @@ function downloadAudio() {
   fi
 }
 
-# TODO: checking playlist list to sync change, faster using parallel?
+# TODO: checking playlist list to sync change, faster using parallel?, better code with for loop?
 function syncMusic() {
   CURRENT_DIR=$(pwd)
   MUSIC_DIR=$HOME/Music/
