@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Exec=firefox --new-window "figma.new"
-Icon=firefox
-Terminal=false
-Name=new figma

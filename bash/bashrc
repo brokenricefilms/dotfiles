@@ -494,8 +494,6 @@ function reload() {
   source ~/.bashrc
 
   tmux source ~/.tmux.conf
-
-  ln -sf ~/dotfiles/application/* ~/.local/share/applications/
 }
 
 function hi() {
