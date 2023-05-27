@@ -155,6 +155,7 @@ alias s="git status -sb"
 alias w="fzfGitWorktreeChangeDir"
 alias ww="fzfGitWorktreeRemove"
 alias aap="aa;p"
+alias gitResetHard="git reset --hard"
 
 alias ...="cd .. ; cd .. ; ls"
 alias ..="cd .. ; ls"
