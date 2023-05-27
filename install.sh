@@ -25,7 +25,6 @@ flatpak remote-add --authenticator-install --if-not-exists flathub https://flath
 flatpak install --noninteractive flathub org.onlyoffice.desktopeditors
 flatpak install --noninteractive flathub com.belmoussaoui.Authenticator
 flatpak install --noninteractive flathub com.belmoussaoui.Decoder
-flatpak install --noninteractive flathub md.obsidian.Obsidian
 flatpak install --noninteractive flathub org.kiwix.desktop
 
 npm config set prefix ~/.npm/
