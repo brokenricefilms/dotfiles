@@ -27,6 +27,8 @@ flatpak install --noninteractive flathub com.belmoussaoui.Authenticator
 flatpak install --noninteractive flathub com.belmoussaoui.Decoder
 flatpak install --noninteractive flathub org.kiwix.desktop
 
+curl -fsSL https://deno.land/x/install/install.sh | sh
+
 npm config set prefix ~/.npm/
 
 npm install --global prettier
