@@ -561,6 +561,14 @@ function nvimLsp() {
   ln -sf ~/dotfiles/nvim/ ~/.config/nvim
 }
 
+function denoSetup() {
+  if hash deno 2>/dev/null; then
+    echo "Deno already installed"
+  else
+    curl -fsSL https://deno.land/x/install/install.sh | sh
+  fi
+}
+
 source ~/dotfiles/bash/fzf-bash-completion.sh
 bind -x '"\t": fzf_bash_completion'
 source ~/dotfiles/bash/completion.bash
