@@ -11,3 +11,7 @@
 - [bash](./bash/): fzf tab my friend.
 - [Neovim](./nvim/): when VSCode f##ked up i use Neovim.
 - [VSCode](./profile.code-profile): when Neovim f##ked up i use VSCode.
+
+## Dev
+
+- `pnpm install` first to use pre-commit (format stuff)
