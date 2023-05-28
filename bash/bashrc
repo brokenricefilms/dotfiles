@@ -545,7 +545,7 @@ function gitCloneAllRepo() {
   echo "Finished cloning all repos in $org."
 }
 
-function fnmSetup() {
+function setupFnm() {
   curl -fsSL https://fnm.vercel.app/install | bash
 }
 
@@ -559,12 +559,25 @@ function nvimLsp() {
   ln -sf ~/dotfiles/nvim/ ~/.config/nvim
 }
 
-function denoSetup() {
+function setupDeno() {
   if hash deno 2>/dev/null; then
     echo "Deno already installed"
   else
     curl -fsSL https://deno.land/x/install/install.sh | sh
   fi
+}
+
+function setupHusky() {
+  pnpm install husky -D
+
+  pnpm pkg set scripts.prepare="husky install"
+  pnpm run prepare
+
+  echo "---"
+  echo "Example next step:"
+  echo 'npx husky add .husky/pre-commit "npm test"'
+  echo 'git add .husky/pre-commit'
+  echo "---"
 }
 
 source ~/dotfiles/bash/fzf-bash-completion.sh
