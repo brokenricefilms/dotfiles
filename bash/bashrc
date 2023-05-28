@@ -567,7 +567,7 @@ function setupDeno() {
   fi
 }
 
-function setupHusky() {
+function setupPreCommit() {
   pnpm install husky -D
 
   pnpm pkg set scripts.prepare="husky install"
