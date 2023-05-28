@@ -14,4 +14,4 @@
 
 ## Dev
 
-- `pnpm install` first to use pre-commit (format stuff)
+- Run `pnpm install` to use pre-commit (format stuff)

@@ -156,6 +156,7 @@ alias w="fzfGitWorktreeChangeDir"
 alias ww="fzfGitWorktreeRemove"
 alias aap="aa;p"
 alias gitResetHard="git reset --hard"
+alias d="git diff --word-diff"
 
 alias ...="cd .. ; cd .. ; ls"
 alias ..="cd .. ; ls"
