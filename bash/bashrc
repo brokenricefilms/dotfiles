@@ -298,6 +298,7 @@ function updateFirefoxTheme() {
 
 function update() {
   dnf makecache
+  sudo dnf update -y
 
   pnpm add -g pnpm
   pnpm update -g
