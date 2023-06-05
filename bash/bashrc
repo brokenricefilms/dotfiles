@@ -499,6 +499,10 @@ function reload() {
 }
 
 function hi() {
+  xdg-open "https://mail.google.com"
+  xdg-open "https://www.inoreader.com"
+  xdg-open "https://www.youtube.com/feed/subscriptions"
+
   update
   fastfetch
 }
