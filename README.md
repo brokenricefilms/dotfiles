@@ -6,7 +6,7 @@
 ## Current setup
 
 - Fedora 38
-- [foot terminal](./foot/)
+- [Kitty terminal](./kitty/)
 - [Tmux](./tmux/tmux.conf): i 🫰 sessions. [tmux fzf session switch](https://github.com/thuanowa/tmux-fzf-session-switch)
 - [bash](./bash/): fzf tab my friend.
 - [Neovim](./nvim/): when VSCode f##ked up i use Neovim.
