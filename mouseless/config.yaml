@@ -113,7 +113,7 @@ layers:
       dot: leftmeta+leftshift+right
 
       # popshell toggle maximize
-      m: leftmeta+m
+      m: leftalt+f10
 
       # close window
       x: leftalt+f4
