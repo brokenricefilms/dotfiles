@@ -276,9 +276,6 @@ function updateNvimLazy() {
 
   cd $HOME/dotfiles/
   nvim --headless "+Lazy! sync" +qa
-  git add nvim/lazy-lock.json
-  git commit -m "chore: lazy.nvim"
-  git push
 
   cd $CURRENT_DIR
 }
