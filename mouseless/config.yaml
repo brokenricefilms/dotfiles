@@ -20,7 +20,6 @@ layers:
     bindings:
       space: tap-hold space ; toggle-layer thuan_fly_keys ; 190
       a: tap-hold a ; toggle-layer mouse ; 190
-      s: tap-hold s ; toggle-layer popshell ; 190
 
       # capslock kinda useless for me, so i map it to esc for vim
       capslock: esc
@@ -131,17 +130,3 @@ layers:
 
       # go forward
       rightbrace: leftalt+right
-
-  - name: popshell
-    passThrough: false
-    bindings:
-      enter: leftmeta+enter
-      h: leftmeta+h
-      j: leftmeta+j
-      k: leftmeta+k
-      l: leftmeta+l
-      u: leftmeta+leftshift+pageup
-      p: leftmeta+leftshift+pagedown
-      o: leftmeta+o
-      i: leftmeta+s
-      semicolon: leftmeta+g
