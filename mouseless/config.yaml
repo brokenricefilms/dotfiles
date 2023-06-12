@@ -84,7 +84,7 @@ layers:
       minus: f11
       equal: f12
 
-      # pop shell
+      # gnome favorite app on dash
       a: leftmeta+k1
       s: leftmeta+k2
       d: leftmeta+k3
@@ -94,7 +94,6 @@ layers:
       w: leftmeta+k7
       e: leftmeta+k8
       r: leftmeta+k9
-      t: leftmeta+k0
 
       # editing text
 
