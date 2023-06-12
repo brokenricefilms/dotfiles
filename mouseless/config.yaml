@@ -19,7 +19,15 @@ layers:
   - name: initial
     bindings:
       space: tap-hold space ; toggle-layer thuan_fly_keys ; 190
-      a: tap-hold a ; toggle-layer mouse ; 190
+      q: tap-hold q ; toggle-layer mouse ; 190
+      a: tap-hold-next-release a ; leftmeta ; 190
+      s: tap-hold-next-release s ; leftalt ; 190
+      d: tap-hold-next-release d ; leftshift ; 190
+      f: tap-hold-next-release f ; leftctrl ; 190
+      j: tap-hold-next-release j ; rightctrl ; 190
+      k: tap-hold-next-release k ; rightshift ; 190
+      l: tap-hold-next-release l ; rightalt ; 190
+      semicolon: tap-hold-next-release semicolon ; rightmeta ; 190
 
       # capslock kinda useless for me, so i map it to esc for vim
       capslock: esc
@@ -53,9 +61,9 @@ layers:
       semicolon: scroll down
       leftalt: speed 4.0
       space: speed 0.3
-      f: button left
-      d: button middle
-      s: button right
+      r: button left
+      e: button middle
+      w: button right
 
   - name: thuan_fly_keys
     passThrough: true
