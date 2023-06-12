@@ -18,16 +18,16 @@ mouseDecelerationCurve: 3.0
 layers:
   - name: initial
     bindings:
-      space: tap-hold space ; toggle-layer thuan_fly_keys ; 190
-      q: tap-hold q ; toggle-layer mouse ; 190
-      a: tap-hold-next-release a ; leftmeta ; 190
-      s: tap-hold-next-release s ; leftalt ; 190
-      d: tap-hold-next-release d ; leftshift ; 190
-      f: tap-hold-next-release f ; leftctrl ; 190
-      j: tap-hold-next-release j ; rightctrl ; 190
-      k: tap-hold-next-release k ; rightshift ; 190
-      l: tap-hold-next-release l ; rightalt ; 190
-      semicolon: tap-hold-next-release semicolon ; rightmeta ; 190
+      space: tap-hold space ; toggle-layer thuan_fly_keys ; 185
+      q: tap-hold q ; toggle-layer mouse ; 185
+      a: tap-hold-next-release a ; leftmeta ; 185
+      s: tap-hold-next-release s ; leftalt ; 185
+      d: tap-hold-next-release d ; leftshift ; 185
+      f: tap-hold-next-release f ; leftctrl ; 185
+      j: tap-hold-next-release j ; rightctrl ; 185
+      k: tap-hold-next-release k ; rightshift ; 185
+      l: tap-hold-next-release l ; rightalt ; 185
+      semicolon: tap-hold-next-release semicolon ; rightmeta ; 185
 
       # capslock kinda useless for me, so i map it to esc for vim
       capslock: esc
