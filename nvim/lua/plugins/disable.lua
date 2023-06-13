@@ -8,7 +8,11 @@ return {
 
   { "nvim-neo-tree/neo-tree.nvim", enabled = false },
 
-  -- { "echasnovski/mini.pairs", enabled = false },
+  { "echasnovski/mini.pairs", enabled = false },
 
   { "SmiteshP/nvim-navic", enabled = false },
+
+  { "ggandor/leap.nvim", enabled = false },
+
+  { "ggandor/flit.nvim", enabled = false },
 }
