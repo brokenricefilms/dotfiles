@@ -20,14 +20,14 @@ layers:
     bindings:
       space: tap-hold space ; toggle-layer thuan_fly_keys ; 185
       q: tap-hold q ; toggle-layer mouse ; 185
-      a: tap-hold-next-release a ; leftmeta ; 175
-      s: tap-hold-next-release s ; leftalt ; 175
-      d: tap-hold-next-release d ; leftshift ; 175
-      f: tap-hold-next-release f ; leftctrl ; 175
-      j: tap-hold-next-release j ; rightctrl ; 175
-      k: tap-hold-next-release k ; rightshift ; 175
-      l: tap-hold-next-release l ; rightalt ; 175
-      semicolon: tap-hold-next-release semicolon ; rightmeta ; 175
+      a: tap-hold-next-release a ; leftmeta ; 180
+      s: tap-hold-next-release s ; leftalt ; 180
+      d: tap-hold-next-release d ; leftshift ; 180
+      f: tap-hold-next-release f ; leftctrl ; 180
+      j: tap-hold-next-release j ; rightctrl ; 180
+      k: tap-hold-next-release k ; rightshift ; 180
+      l: tap-hold-next-release l ; rightalt ; 180
+      semicolon: tap-hold-next-release semicolon ; rightmeta ; 180
 
       # capslock kinda useless for me, so i map it to esc for vim
       capslock: esc
