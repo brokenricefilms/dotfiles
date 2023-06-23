@@ -109,9 +109,6 @@ alias r="trash"
 alias clear="clear -x; (tmuxKillAllUnnameSession &)"
 alias tmuxKillServer="tmux kill-server"
 
-alias i="sudo dnf install -y"
-alias u="sudo dnf remove -y"
-
 alias pnpmDev="pnpm dev"
 alias pnpmFormat="pnpm format"
 alias pnpmBuild="pnpm build"
@@ -173,6 +170,14 @@ function downloadAudio() {
     yt-dlp -f bestaudio --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "$(wl-paste)"
   else
     yt-dlp -f bestaudio --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "$1"
+  fi
+}
+
+function downloadVideo() {
+  if [ -z "$1" ]; then
+    yt-dlp -o "%(title)s.%(ext)s" "$(wl-paste)"
+  else
+    yt-dlp -o "%(title)s.%(ext)s" "$1"
   fi
 }
 
@@ -494,10 +499,6 @@ function reload() {
 }
 
 function hi() {
-  xdg-open "https://mail.google.com"
-  xdg-open "https://www.inoreader.com"
-  xdg-open "https://www.youtube.com/feed/subscriptions"
-
   update
   fastfetch
 }
