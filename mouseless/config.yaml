@@ -126,6 +126,8 @@ layers:
 
       # browser
 
+      t: leftctrl+leftshift+t
+
       # next tab aka `ctrl + tab`
       p: leftctrl+pagedown
 

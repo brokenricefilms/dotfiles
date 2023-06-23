@@ -125,7 +125,7 @@ alias bluetoothDevices="bluetoothctl devices"
 alias mouselessStop="systemctl --user stop mouseless.service"
 alias mouselessStart="systemctl --user start mouseless.service"
 alias mouselessDebug="mouselessStop mouseless --debug"
-alias mouselessReload="mouselessStop; mouselessStart"
+alias mouselessReload="mouselessStop; echo 'wait 5s'; sleep 5; mouselessStart"
 
 alias ls="exa --icons --color=never"
 alias ll="exa --all --long --header --icons --git --color=never"
