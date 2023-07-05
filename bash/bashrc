@@ -309,7 +309,7 @@ function update() {
 
   updateBashPlugin
 
-  updateNvimLazy
+  # updateNvimLazy
 }
 
 function browserSyncStartserver() {
