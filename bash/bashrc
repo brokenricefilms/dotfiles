@@ -114,6 +114,7 @@ alias pnpmFormat="pnpm format"
 alias pnpmBuild="pnpm build"
 alias pnpmInstall="pnpm install"
 alias pnpmInstallGlobal="pnpm install --global"
+alias neofetch="fuck you"
 
 alias bluetoothConnectSpeakerPluse4="bluetoothTurnOn ; bluetoothctl connect C1:AC:88:3D:D6:EE"
 alias bluetoothDisconnectSpeakerPluse4="bluetoothctl disconnect C1:AC:88:3D:D6:EE"
