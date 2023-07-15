@@ -306,7 +306,7 @@ function update() {
 
   tldr --update
 
-  # updateFirefoxTheme
+  updateFirefoxTheme
 
   updateBashPlugin
 
