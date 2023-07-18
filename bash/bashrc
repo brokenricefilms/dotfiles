@@ -87,6 +87,8 @@ function nodeVersion {
 
 PS1='\[\e[0;2m\]\u\[\e[0;2m\]@\[\e[0;2m\]\H\[\e[0;2m\]: \[\e[0;1m\]\w \[\e[0;3m\]$(parsegitBranch) $(nodeVersion)\n\[\e[0;2m\]❯ \[\e[0m\]'
 
+echo "( ¯ ꒳ ¯)> Me Gustas Tú"
+
 alias bat="bat --theme=GitHub"
 
 alias ser="browserSyncStartserver"
