@@ -165,6 +165,10 @@ alias doc="cd ~/Documents ; ls"
 alias dow="cd ~/Downloads ; ls"
 alias tmp="cd /tmp ; ls"
 
+function copyFilePath() {
+  readlink -f $1 | wl-copy
+}
+
 function isGitRepo() {
   git rev-parse HEAD >/dev/null 2>&1
 }
