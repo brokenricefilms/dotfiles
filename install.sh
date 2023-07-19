@@ -17,6 +17,9 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 dnf check-update
 
+sudo dnf copr enable atim/starship -y
+sudo dnf install starship -y
+
 sudo dnf update -y
 
 sudo dnf install -y tmux curl wget git neofetch htop gnome-tweaks trash-cli python3-pip net-tools speedtest-cli neovim python3-neovim fd-find aria2 tree cowsay fzf npm youtube-dl mpv ripgrep unrar moreutils foliate util-linux-user zsh cronie git-delta wl-clipboard java-devel git-clang-format rust cargo go gtk-v4l ruby ruby-devel gcc-c++ ibus-bamboo collectd-sensors obs-studio dconf-editor sqlite shfmt v4l-utils google-noto-emoji-color-fonts cmake glib2-static libgda libgda-sqlite bat libsqlite3x-devel yt-dlp ddcutil code celluloid fish exa composer mpv-mpris ps_mem easyeffects google-chrome-stable fastfetch parallel tealdeer foot gnome-extensions-app flameshot ImageMagick
