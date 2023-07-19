@@ -1,13 +1,13 @@
 return {
   {
-    "mcchrish/zenbones.nvim",
-    dependencies = "rktjmp/lush.nvim",
+    "rose-pine/neovim",
+    name = "rose-pine",
     event = "VeryLazy",
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "zenwritten",
+      colorscheme = "rose-pine-dawn",
     },
   },
 }

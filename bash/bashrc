@@ -38,11 +38,12 @@ export BROWSER="google-chrome-stable"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d"
 
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-    --color=fg:#353535,bg:#eeeeee,hl:#353535
-    --color=fg+:#353535,bg+:#eeeeee,hl+:#353535
-    --color=info:#353535,prompt:#353535,pointer:#353535
-    --color=marker:#353535,spinner:#353535,header:#353535'
+export FZF_DEFAULT_OPTS="
+	--color=fg:#797593,bg:#faf4ed,hl:#d7827e
+	--color=fg+:#575279,bg+:#f2e9e1,hl+:#d7827e
+	--color=border:#dfdad9,header:#286983,gutter:#faf4ed
+	--color=spinner:#ea9d34,info:#56949f,separator:#dfdad9
+	--color=pointer:#907aa9,marker:#b4637a,prompt:#797593"
 
 HISTCONTROL=ignoreboth
 HISTSIZE=
@@ -130,10 +131,10 @@ alias mouselessStart="systemctl --user start mouseless.service"
 alias mouselessDebug="mouselessStop mouseless --debug"
 alias mouselessReload="mouselessStop; echo 'wait 5s'; sleep 5; mouselessStart"
 
-alias ls="exa --icons --color=never"
-alias ll="exa --all --long --header --icons --git --color=never"
+alias ls="exa --icons"
+alias ll="exa --all --long --header --icons --git"
 alias l="ll"
-alias tree="exa --tree --long --color=never"
+alias tree="exa --tree --long"
 
 alias c="fzfChangeDirectory"
 alias cc="cd $HOME; fzfChangeDirectory"
