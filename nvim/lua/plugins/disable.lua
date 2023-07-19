@@ -11,10 +11,4 @@ return {
   { "echasnovski/mini.pairs", enabled = false },
 
   { "SmiteshP/nvim-navic", enabled = false },
-
-  { "ggandor/leap.nvim", enabled = false },
-
-  { "ggandor/flit.nvim", enabled = false },
-
-  { "akinsho/bufferline.nvim", enabled = false },
 }
