@@ -15,16 +15,4 @@
 ## Dev
 
 - Run `pnpm install` to use pre-commit (format stuff)
-
-## todo
-
-- bash, shell related: make natural language command todo something
-
-e.g:
-
-```bash
-function copyFilePath() {
-  readlink -f $1 | wl-copy
-}
-```
-
+- `git grep '# TODO'`

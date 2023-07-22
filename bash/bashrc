@@ -134,6 +134,7 @@ alias doc="cd ~/Documents ; ls"
 alias dow="cd ~/Downloads ; ls"
 alias tmp="cd /tmp ; ls"
 
+# TODO: make natural language command todo something
 function copyFilePath() {
   readlink -f $1 | wl-copy
 }
