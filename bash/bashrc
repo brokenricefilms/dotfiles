@@ -268,8 +268,8 @@ function updateFirefoxTheme() {
 }
 
 function giveMePower() {
-  echo "give me power"
-  sudo echo 🔥🔥🔥
+  echo "( ¯ ꒳ ¯)> Give me power"
+  sudo echo "( ¯ ꒳ ¯)> 🔥🔥🔥"
 }
 
 function update() {
