@@ -50,8 +50,6 @@ set -o vi
 
 stty time 0
 
-echo "( ¯ ꒳ ¯)> Me Gustas Tú"
-
 alias bat="bat --theme=GitHub"
 
 alias ser="browserSyncStartserver"
