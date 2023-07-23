@@ -267,7 +267,14 @@ function updateFirefoxTheme() {
   cd $CURRENT_DIR
 }
 
+function giveMePower() {
+  echo "give me power"
+  sudo echo 🔥🔥🔥
+}
+
 function update() {
+  giveMePower
+
   dnf makecache
   sudo dnf update -y
 
