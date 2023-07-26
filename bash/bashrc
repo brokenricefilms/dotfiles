@@ -141,12 +141,6 @@ function removeJetBrainToolbox() {
   rm -rf ~/.local/share/applications/jetbrains-toolbox.desktop
 }
 
-function newPostOnThuanowaDotCom() {
-  cd ~/repos/thuanowa/tiny/
-  nvim src/content/post/
-  git status -sb
-}
-
 function isGitRepo() {
   git rev-parse HEAD >/dev/null 2>&1
 }
