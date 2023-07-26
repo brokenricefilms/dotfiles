@@ -150,6 +150,17 @@ function downloadVideo() {
   fi
 }
 
+function removeJetBrainToolbox() {
+  echo "make sure you uninstall all applications installed in Toolbox App"
+  echo "Press any key to continue..."
+  read -n 1 -r -s
+
+  rm -rf ~/.config/autostart/jetbrains-toolbox.desktop
+  killall jetbrains-toolbox
+  rm -rf ~/.local/share/JetBrains/Toolbox
+  rm -rf ~/.local/share/applications/jetbrains-toolbox.desktop
+}
+
 # TODO: checking playlist list to sync change, faster using parallel?, better code with for loop?
 function syncMusic() {
   CURRENT_DIR=$(pwd)
