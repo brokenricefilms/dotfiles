@@ -130,6 +130,17 @@ function copyFilePath() {
   readlink -f $1 | wl-copy
 }
 
+function removeJetBrainToolbox() {
+  echo "make sure you uninstall all applications installed in Toolbox App"
+  echo "Press any key to continue..."
+  read -n 1 -r -s
+
+  rm -rf ~/.config/autostart/jetbrains-toolbox.desktop
+  killall jetbrains-toolbox
+  rm -rf ~/.local/share/JetBrains/Toolbox
+  rm -rf ~/.local/share/applications/jetbrains-toolbox.desktop
+}
+
 function isGitRepo() {
   git rev-parse HEAD >/dev/null 2>&1
 }
@@ -148,17 +159,6 @@ function downloadVideo() {
   else
     yt-dlp -o "%(title)s.%(ext)s" "$1"
   fi
-}
-
-function removeJetBrainToolbox() {
-  echo "make sure you uninstall all applications installed in Toolbox App"
-  echo "Press any key to continue..."
-  read -n 1 -r -s
-
-  rm -rf ~/.config/autostart/jetbrains-toolbox.desktop
-  killall jetbrains-toolbox
-  rm -rf ~/.local/share/JetBrains/Toolbox
-  rm -rf ~/.local/share/applications/jetbrains-toolbox.desktop
 }
 
 # TODO: checking playlist list to sync change, faster using parallel?, better code with for loop?
