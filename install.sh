@@ -24,6 +24,8 @@ sudo dnf update -y
 
 sudo dnf install -y tmux curl wget git neofetch htop gnome-tweaks trash-cli python3-pip net-tools speedtest-cli neovim python3-neovim fd-find aria2 tree cowsay fzf npm youtube-dl mpv ripgrep unrar moreutils foliate util-linux-user zsh cronie git-delta wl-clipboard java-devel git-clang-format rust cargo go gtk-v4l ruby ruby-devel gcc-c++ ibus-bamboo collectd-sensors obs-studio dconf-editor sqlite shfmt v4l-utils google-noto-emoji-color-fonts cmake glib2-static libgda libgda-sqlite bat libsqlite3x-devel yt-dlp ddcutil code celluloid fish exa composer mpv-mpris ps_mem easyeffects google-chrome-stable fastfetch parallel tealdeer gnome-extensions-app flameshot ImageMagick kitty
 
+sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+
 flatpak remote-add --authenticator-install --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install --noninteractive flathub org.onlyoffice.desktopeditors
 flatpak install --noninteractive flathub com.belmoussaoui.Authenticator
