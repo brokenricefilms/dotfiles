@@ -96,13 +96,13 @@ function thRestartSpeakerPluse4() {
 
 alias stopMouseless="systemctl --user stop mouseless.service"
 alias startMouseless="systemctl --user start mouseless.service"
-alias debugMouseless="mouselessStop mouseless --debug"
+alias debugMouseless="stopMouseless mouseless --debug"
 
 function reloadMouseless() {
-  mouselessStop
+  stopMouseless
   echo 'wait 5s'
   sleep 5
-  mouselessStart
+  startMouseless
 }
 
 alias ls="exa --icons"
