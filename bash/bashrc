@@ -418,22 +418,12 @@ function tl() {
   fi
 }
 
-function fzfMusic() {
+function playMusic() {
   CURRENT_DIR=$(pwd)
 
-  cd ~/Music/
-
-  PLAYLIST=$(fd --type directory . --exclude node_modules --exclude go | fzf --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ",  $2} {print  $1}\' | xargs -r ls' &)
-
-  if [ -n "$PLAYLIST" ]; then
-    cd $PLAYLIST
-    mpv --loop-playlist --shuffle *
-    cd $CURRENT_DIR
-  else
-    cd $CURRENT_DIR
-  fi
+  mpv --loop-playlist --shuffle *
 }
-alias m="fzfMusic"
+alias m="playMusic"
 
 function reload() {
   source ~/.bashrc
