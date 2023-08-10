@@ -195,7 +195,7 @@ function syncMusic() {
   cd $MUSIC_DIR
   trash *
 
-  downloadYoutubeAudio ""
+  downloadYoutubeAudio "https://l.thuanowa.com/music-playlist"
 
   cd $CURRENT_DIR
 }
