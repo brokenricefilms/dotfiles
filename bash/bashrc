@@ -101,8 +101,8 @@ alias debugMouseless="stopMouseless mouseless --debug"
 
 function reloadMouseless() {
   stopMouseless
-  echo 'wait 5s'
-  sleep 5
+  echo 'wait 2s'
+  sleep 2
   startMouseless
 }
 

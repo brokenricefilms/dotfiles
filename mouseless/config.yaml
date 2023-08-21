@@ -104,11 +104,9 @@ layers:
       # pano clipboard extension
       v: leftmeta+leftshift+v
 
-      # switch windows to monitor up
-      comma: leftmeta+leftshift+up
-
-      # switch windows to monitor down
-      dot: leftmeta+leftshift+down
+      # switch windows to other monitor
+      comma: leftmeta+leftshift+left
+      dot: leftmeta+leftshift+right
 
       # popshell toggle maximize
       m: leftalt+f10
