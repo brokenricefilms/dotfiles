@@ -1,11 +1,13 @@
 ## About
 
 - For me, Dotfiles are personal, but you can find some tips, tricks, and functions I used in this repo.
-  i Watch my live-stream playlist [here](https://www.youtube.com/playlist?list=PLcazFfFZIFPld0UvU7OxYl6ayyBJ6MvY7) for a demo.
+- You can watch my daily work vlog playlist for a demo. <https://l.thuanowa.com/daily-work-vlog>
 
 ## Current setup
 
-- Fedora 38
+- Fedora 38 (Gnome: forge extension, blur my shell, fuzzy app search, panel corners, pano, rounded windows corners, AppIndicator/KStatusNotifierItem support)
+- Theme: Github Light
+- Font: Jetbrains mono (no ligatures, nerdfont)
 - [Kitty terminal](./kitty/)
 - [Tmux](./tmux/tmux.conf): i 🫰 sessions. [tmux fzf session switch](https://github.com/thuanowa/tmux-fzf-session-switch)
 - [bash](./bash/): fzf tab my friend.
