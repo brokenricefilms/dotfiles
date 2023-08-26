@@ -9,8 +9,8 @@
 - Theme: Github Light
 - Font: Jetbrains mono (no ligatures, nerdfont)
 - [Kitty terminal](./kitty/)
-- [Tmux](./tmux/tmux.conf): i 🫰 sessions. [tmux fzf session switch](https://github.com/thuanowa/tmux-fzf-session-switch)
-- [bash](./bash/): fzf tab my friend.
+- [Tmux](./tmux/tmux.conf)
+- [Bash](./bash/): [fzf tab](https://github.com/lincheney/fzf-tab-completion) my friend.
 - [Neovim](./nvim/): when VSCode f##ked up i use Neovim.
 - [VSCode](./profile.code-profile): when Neovim f##ked up i use VSCode.
 
