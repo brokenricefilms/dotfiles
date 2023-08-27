@@ -516,6 +516,11 @@ function setupPreCommit() {
   echo "---"
 }
 
+function removeAllPreCommit() {
+  changeDirectoryTogitRoot
+  rm -f .git/hooks/*
+}
+
 source ~/dotfiles/bash/fzf-bash-completion.sh
 bind -x '"\t": fzf_bash_completion'
 source ~/dotfiles/bash/completion.bash
