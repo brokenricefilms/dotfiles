@@ -422,9 +422,26 @@ function tl() {
 function playMusic() {
   CURRENT_DIR=$(pwd)
 
+  cd ~/Music/
+
   mpv --loop-playlist --shuffle *
+
+  cd $CURRENT_DIR
 }
 alias m="playMusic"
+
+function fzfMusic() {
+  CURRENT_DIR=$(pwd)
+
+  cd ~/Music/
+
+  MUSIC_FILE=$(fd --type file . | fzf)
+
+  mpv "$MUSIC_FILE"
+
+  cd $CURRENT_DIR
+}
+alias mm="fzfMusic"
 
 function reload() {
   source ~/.bashrc
