@@ -424,7 +424,7 @@ function playMusic() {
 
   cd ~/Music/
 
-  mpv --loop-playlist --shuffle *
+  mpv --loop-playlist --shuffle --term-osd-bar *
 
   cd $CURRENT_DIR
 }
