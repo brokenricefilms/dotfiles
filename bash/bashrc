@@ -64,6 +64,18 @@ alias clear="clear -x; (tmuxKillAllUnnameSession &)"
 alias killTmuxServer="tmux kill-server"
 alias copyFilePath="readlink -f $1 | wl-copy"
 alias countItemInCurrentDirectory="fd --type file | wc --lines"
+alias editDnfConfig="sudoedit /etc/dnf/dnf.conf"
+alias editSudoers="sudoedit /etc/sudoers"
+
+function editApplicationDesktopFile() {
+  CURRENT_DIR=$(pwd)
+
+  cd /usr/share/applications/
+
+  fzfSudoEdit
+
+  cd $CURRENT_DIR
+}
 
 alias lazydocker="sudo $HOME/go/bin/lazydocker"
 alias startDocker="sudo systemctl start docker"
