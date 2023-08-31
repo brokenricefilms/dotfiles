@@ -186,9 +186,9 @@ function removeJetBrainToolbox() {
 
 function downloadYoutubeAudio() {
   if [ -z "$1" ]; then
-    yt-dlp -f bestaudio --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "$(wl-paste)"
+    yt-dlp --extract-audio --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" "$(wl-paste)"
   else
-    yt-dlp -f bestaudio --continue --no-overwrites --ignore-errors --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s" "$1"
+    yt-dlp --extract-audio --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" "$1"
   fi
 }
 
@@ -200,15 +200,12 @@ function downloadYoutubeVideo() {
   fi
 }
 
-# TODO: checking playlist list to sync change, faster using parallel?, better code with for loop?
 function syncMusic() {
   CURRENT_DIR=$(pwd)
-  MUSIC_DIR=$HOME/Music/
 
-  cd $MUSIC_DIR
-  trash *
+  cd $HOME/Music/
 
-  downloadYoutubeAudio "https://l.thuanowa.com/music-playlist"
+  yt-dlp --download-archive archive.txt --extract-audio --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" "https://l.thuanowa.com/music-playlist"
 
   cd $CURRENT_DIR
 }
@@ -436,7 +433,7 @@ function playMusic() {
 
   cd ~/Music/
 
-  mpv --loop-playlist --shuffle --term-osd-bar *
+  mpv --no-video --loop-playlist --shuffle --term-osd-bar *
 
   cd $CURRENT_DIR
 }
