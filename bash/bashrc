@@ -554,5 +554,5 @@ source ~/dotfiles/bash/key-bindings.bash
 
 export PATH="/home/master/.local/share/fnm:$PATH"
 eval "$(fnm env)"
-eval "$(fnm env --use-on-cd)"
 eval "$(starship init bash)"
+eval "$(fnm env --use-on-cd)"
