@@ -200,6 +200,7 @@ function downloadYoutubeVideo() {
   fi
 }
 
+# # TODO: sync music the real way, can delete music on local
 function syncMusic() {
   CURRENT_DIR=$(pwd)
 
@@ -365,7 +366,7 @@ function fzfGitWorktreeRemove() {
   git worktree remove $WORKTREE --force &>/dev/null
   cd $DEFAULT_GIT_FOLDER
 }
-alias ww="fzfGitWorktreeRemove"
+alias wr="fzfGitWorktreeRemove"
 
 function fzfOpen() {
   if [ -z "$1" ]; then
