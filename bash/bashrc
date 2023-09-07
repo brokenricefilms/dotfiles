@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# TODO: change to snake style
+
 if command -v tmux &>/dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   tmux attach || tmux new-session && exit
 fi
@@ -66,6 +68,7 @@ alias copyFilePath="readlink -f $1 | wl-copy"
 alias countItemInCurrentDirectory="fd --type file | wc --lines"
 alias editDnfConfig="sudoedit /etc/dnf/dnf.conf"
 alias editSudoers="sudoedit /etc/sudoers"
+alias reloadFonts="fc-cache --force --verbose"
 
 function editApplicationDesktopFile() {
   CURRENT_DIR=$(pwd)
