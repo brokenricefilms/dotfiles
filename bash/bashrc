@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# TODO: change to snake style
-
 if command -v tmux &>/dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   tmux attach || tmux new-session && exit
 fi
@@ -18,6 +16,9 @@ export PATH=$PATH:$HOME/.cargo/bin
 
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin
+
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
 
 export PATH="$HOME/.npm/bin:$PATH"
 export PNPM_HOME="/home/master/.local/share/pnpm"
@@ -69,6 +70,7 @@ alias countItemInCurrentDirectory="fd --type file | wc --lines"
 alias editDnfConfig="sudoedit /etc/dnf/dnf.conf"
 alias editSudoers="sudoedit /etc/sudoers"
 alias reloadFonts="fc-cache --force --verbose"
+alias installBunjs="curl -fsSL https://bun.sh/install | bash"
 
 function editApplicationDesktopFile() {
   CURRENT_DIR=$(pwd)
