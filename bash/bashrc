@@ -222,6 +222,8 @@ function updateBashPlugin() {
   cd ~/dotfiles/bash/
   cat plugin_url.txt | parallel -j8 curl --remote-name
 
+  bun completions >~/dotfiles/bash/bun-completion.sh
+
   cd $CURRENT_DIR
 }
 
@@ -559,6 +561,7 @@ source ~/dotfiles/bash/fzf-bash-completion.sh
 bind -x '"\t": fzf_bash_completion'
 source ~/dotfiles/bash/completion.bash
 source ~/dotfiles/bash/key-bindings.bash
+source ~/dotfiles/bash/bun-completion.sh
 
 export PATH="/home/master/.local/share/fnm:$PATH"
 eval "$(fnm env)"
