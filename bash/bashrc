@@ -261,6 +261,8 @@ function update() {
 
   tldr --update
 
+  bun upgrade
+
   updateFirefoxTheme
 
   updateBashPlugin
