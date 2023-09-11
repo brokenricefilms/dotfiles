@@ -71,6 +71,9 @@ alias editDnfConfig="sudoedit /etc/dnf/dnf.conf"
 alias editSudoers="sudoedit /etc/sudoers"
 alias reloadFonts="fc-cache --force --verbose"
 alias installBunjs="curl -fsSL https://bun.sh/install | bash"
+alias neovimNoPlugin="nvim --noplugin"
+alias neovimNoConfigFile="neovimNoPlugin"
+alias gitResetSingleFile="git checkout HEAD -- $1"
 
 function editApplicationDesktopFile() {
   CURRENT_DIR=$(pwd)
