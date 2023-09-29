@@ -1,9 +1,17 @@
 ## About
 
 - For me, Dotfiles are personal, but you can find some tips, tricks, and functions I used in this repo.
-- You can watch my daily work vlog playlist for a demo. <https://l.thuanowa.com/daily-work-vlog>
 
-## Current setup
+## Setup mainly for filmmaking
+
+- Windows 11
+- Davinci Resolve
+- [Neovim](./nvim_windows): simple config file, no plugin. Say no with VScode
+- [Powershell](./Microsoft.PowerShell_profile.ps1): simple, say no with WSL
+- Windows terminal: github colorscheme
+
+
+## Setup mainly for programming (abandoned)
 
 - Fedora 38 (Gnome: forge extension, blur my shell, fuzzy app search, panel corners, pano, rounded windows corners, AppIndicator/KStatusNotifierItem support)
 - Theme: Github Light
