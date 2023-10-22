@@ -1,5 +1,3 @@
-Invoke-Expression (&starship init powershell)
-
 Set-PSReadLineOption -EditMode vi
 
 $env:EDITOR = 'nvim'
@@ -12,7 +10,7 @@ Set-Alias c change_dir_fzf
 
 function cc() {
     cd
-        change_dir_fzf
+    change_dir_fzf
 }
 
 function edit_file_fzf() {
@@ -45,7 +43,7 @@ function a {
     git status --short --branch
     git diff
     git add .
-    git commit 
+    git commit
 }
 
 function p() { git push }
@@ -83,13 +81,15 @@ function update() {
     scoop update *
 }
 
-function youtube_download( ) {
+function download_video( ) {
     yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' $args
 }
+Set-Alias dv download_video
 
-function youtube_download_audio() {
+function download_audio() {
     yt-dlp --extract-audio --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" $args
 }
+Set-Alias da download_audio
 
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
     param($wordToComplete, $commandAst, $cursorPosition)
