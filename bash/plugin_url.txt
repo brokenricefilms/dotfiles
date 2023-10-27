@@ -1,3 +1,0 @@
-https://cdn.jsdelivr.net/gh/lincheney/fzf-tab-completion@master/bash/fzf-bash-completion.sh
-https://cdn.jsdelivr.net/gh/junegunn/fzf@master/shell/key-bindings.bash
-https://cdn.jsdelivr.net/gh/junegunn/fzf@master/shell/completion.bash

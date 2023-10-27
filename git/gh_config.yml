@@ -1,7 +1,0 @@
-# ln -sf ~/dotfiles/git/gh_config.yml ~/.config/gh/config.yml
-git_protocol: https
-editor: nvim
-prompt: enabled
-pager: delta -s
-http_unix_socket:
-browser: xdg-open

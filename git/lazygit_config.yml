@@ -1,6 +1,0 @@
-# ln -sf ~/dotfiles/git/lazygit_config.yml ~/.config/lazygit/config.yml
-git:
-  pull:
-    mode: "auto"
-  paging:
-    pager: delta -s
