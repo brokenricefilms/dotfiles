@@ -41,6 +41,8 @@ set -o vi
 
 stty time 0
 
+EDITOR=vim
+
 function gitCommitCurrentChange() {
   git add -A
   git commit
@@ -74,3 +76,7 @@ alias l="ll"
 alias la="ls -a"
 
 alias q="exit"
+
+alias e="vi"
+alias v="vi"
+alias c="code"
