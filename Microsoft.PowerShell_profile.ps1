@@ -43,7 +43,7 @@ function a {
     git status --short --branch
     git diff
     git add .
-    git commit
+    git commit 
 }
 
 function p() { git push }

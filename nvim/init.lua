@@ -1,8 +1,42 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup({
+{
+    "stevearc/oil.nvim",
+    opts = {
+      skip_confirm_for_simple_edits = true,
+      keymaps = {
+        ["q"] = {
+          callback = function()
+            require("oil").close()
+            vim.cmd("close")
+          end,
+        },
+      },
+    },
+  },
+  {
+    "projekt0n/github-nvim-theme",
+    event = "VeryLazy",
+  },
+})
+
 vim.opt.background = "light"
-vim.cmd("colorscheme shine")
+vim.cmd("colorscheme github_light")
 
 vim.opt.clipboard = "unnamedplus"
 
@@ -54,7 +88,9 @@ vim.keymap.set("n", "gf", ":cd %:h<enter>:edit <cfile><enter>")
 
 vim.keymap.set("n", "<leader><space>", "<C-^>")
 
-vim.keymap.set("n", "<leader>l", "<C-w>v:e %:h<enter>", { silent = true })
+vim.keymap.set("n", "<leader>k", "<C-w>s:e %:h<enter>", { silent = true })
+
+vim.keymap.set("n", "<leader>h", "<C-w>v:e %:h<enter>", { silent = true })
 
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
