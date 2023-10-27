@@ -5,4 +5,4 @@ cp .bashrc ~/
 
 cp .vimrc ~/
 
-git config --global core.editor nano
+git config --global core.editor vim
