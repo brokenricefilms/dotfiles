@@ -6,8 +6,8 @@ set -o vi
 
 EDITOR=vim
 
-alias a="git add -A git commit"
-alias aa="git add -A git commit -m 'auto commit'"
+alias a="git add -A ; git commit"
+alias aa="git add -A ; git commit -m 'auto commit'"
 alias cdr="cd $(git rev-parse --show-toplevel)"
 alias p="git push"
 alias pp="git push -f"
