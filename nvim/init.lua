@@ -15,24 +15,34 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-{
-    "stevearc/oil.nvim",
-    opts = {
-      skip_confirm_for_simple_edits = true,
-      keymaps = {
-        ["q"] = {
-          callback = function()
-            require("oil").close()
-            vim.cmd("close")
-          end,
+    {
+        "stevearc/oil.nvim",
+        opts = {
+            skip_confirm_for_simple_edits = true,
+            keymaps = {
+                ["q"] = {
+                    callback = function()
+                        require("oil").close()
+                        vim.cmd("close")
+                    end,
+                },
+            },
         },
-      },
     },
-  },
-  {
-    "projekt0n/github-nvim-theme",
-    event = "VeryLazy",
-  },
+    {
+        "projekt0n/github-nvim-theme",
+        event = "VeryLazy",
+    },
+    { "nvim-lua/plenary.nvim", lazy = true },
+    {
+        "nvim-pack/nvim-spectre",
+        cmd = "Spectre",
+        opts = { open_cmd = "noswapfile vnew" },
+        -- stylua: ignore
+        keys = {
+            { "<leader>sr", function() require("spectre").open() end, desc = "Replace in files (Spectre)" },
+        },
+    },
 })
 
 vim.opt.background = "light"

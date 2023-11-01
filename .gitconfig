@@ -1,0 +1,54 @@
+[user]
+name = Thuan Pham
+email = ongeditvideo@gmail.com
+
+[core]
+editor = $EDITOR
+whitespace = fix
+excludesfile = ~/.gitignore
+
+[merge]
+tool = vimdiff
+
+[mergetool]
+prompt = true
+
+[mergetool "vimdiff"]
+cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+
+[difftool]
+prompt = false
+
+[diff]
+tool = vimdiff
+colorMoved = zebra
+
+[credential "https://github.com"]
+helper = !/usr/bin/gh auth git-credential
+
+[pull]
+rebase = true
+
+[fetch]
+prune = true
+
+[pager]
+diff = delta
+log = delta
+reflog = delta
+show = delta
+
+[delta]
+light = true
+side-by-side = true
+line-numbers = true
+
+[apply]
+whitespace = fix
+
+[color]
+ui = true
+diff = true
+status = true
+branch = true
+interactive = true
