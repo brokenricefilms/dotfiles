@@ -47,3 +47,23 @@ function edit_file_fzf() {
     nvim $(fd --hidden --type file . | fzf --height 50% --min-height 20 --reverse)
 }
 alias e="edit_file_fzf"
+
+function download_youtube_audio() {
+    yt-dlp --extract-audio --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" "$1"
+}
+alias da="download_youtube_audio"
+
+function download_youtube_video() {
+    yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' -o "%(title)s.%(ext)s" "$1"
+}
+alias dv="download_youtube_video" 
+
+function sync_music() {
+  CURRENT_DIR=$(pwd)
+
+  cd $HOME/Music/
+
+  yt-dlp --download-archive archive.txt --extract-audio --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" "ongedit.github.io/music"
+
+  cd $CURRENT_DIR
+}
