@@ -17,7 +17,7 @@ alias ll="ls -al"
 alias l="ll"
 alias la="ls -a"
 alias q="exit"
-alias e="nvim"
+alias v="nvim"
 alias dow="cd ~/Downloads"
 alias doc="cd ~/Documents"
 alias vid="cd ~/Videos"
@@ -46,3 +46,4 @@ function cc() {
 function edit_file_fzf() {
     nvim $(fd --hidden --type file . | fzf --height 50% --min-height 20 --reverse)
 }
+alias e="edit_file_fzf"
