@@ -3,7 +3,7 @@ name = Thuan Pham
 email = ongeditvideo@gmail.com
 
 [core]
-editor = $EDITOR
+editor = nvim
 whitespace = fix
 excludesfile = ~/.gitignore
 
