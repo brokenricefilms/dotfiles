@@ -33,17 +33,28 @@ require("lazy").setup({
         "projekt0n/github-nvim-theme",
         event = "VeryLazy",
     },
-    { "nvim-lua/plenary.nvim", lazy = true },
+    { "nvim-lua/plenary.nvim", lazy = true},
     {
         "nvim-pack/nvim-spectre",
+        requires = { {'nvim-lua/plenary.nvim'} },
         cmd = "Spectre",
         opts = { open_cmd = "noswapfile vnew" },
         -- stylua: ignore
         keys = {
-            { "<leader>sr", function() require("spectre").open() end, desc = "Replace in files (Spectre)" },
+            { "<leader>r", function() require("spectre").open() end, desc = "Replace in files (Spectre)" },
         },
     },
+    {
+        'nvim-telescope/telescope.nvim', tag = '0.1.4',
+        requires = { {'nvim-lua/plenary.nvim'} },
+    }
 })
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>f', builtin.find_files, {})
+vim.keymap.set('n', '<leader>g', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>b', builtin.buffers, {})
+vim.keymap.set('n', '<leader>h', builtin.help_tags, {})
 
 vim.opt.background = "light"
 vim.cmd("colorscheme github_light")
