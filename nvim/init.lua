@@ -3,14 +3,14 @@ vim.g.maplocalleader = " "
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -33,10 +33,14 @@ require("lazy").setup({
         "projekt0n/github-nvim-theme",
         event = "VeryLazy",
     },
-    { "nvim-lua/plenary.nvim", lazy = true},
+    { 
+        "nvim-lua/plenary.nvim", 
+        event = "VeryLazy",
+    },
     {
         "nvim-pack/nvim-spectre",
         requires = { {'nvim-lua/plenary.nvim'} },
+        event = "VeryLazy",
         cmd = "Spectre",
         opts = { open_cmd = "noswapfile vnew" },
         -- stylua: ignore
@@ -47,6 +51,7 @@ require("lazy").setup({
     {
         'nvim-telescope/telescope.nvim', tag = '0.1.4',
         requires = { {'nvim-lua/plenary.nvim'} },
+        event = "VeryLazy",
     }
 })
 
@@ -114,29 +119,29 @@ vim.keymap.set("n", "<leader>h", "<C-w>v:e %:h<enter>", { silent = true })
 
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-  group = highlight_group,
-  pattern = "*",
+    callback = function()
+        vim.highlight.on_yank()
+    end,
+    group = highlight_group,
+    pattern = "*",
 })
 
 vim.api.nvim_create_autocmd({ "InsertLeave", "WinEnter" }, {
-  callback = function()
-    local ok, cl = pcall(vim.api.nvim_win_get_var, 0, "auto-cursorline")
-    if ok and cl then
-      vim.wo.cursorline = true
-      vim.api.nvim_win_del_var(0, "auto-cursorline")
-    end
-  end,
+    callback = function()
+        local ok, cl = pcall(vim.api.nvim_win_get_var, 0, "auto-cursorline")
+        if ok and cl then
+            vim.wo.cursorline = true
+            vim.api.nvim_win_del_var(0, "auto-cursorline")
+        end
+    end,
 })
 
 vim.api.nvim_create_autocmd({ "InsertEnter", "WinLeave" }, {
-  callback = function()
-    local cl = vim.wo.cursorline
-    if cl then
-      vim.api.nvim_win_set_var(0, "auto-cursorline", cl)
-      vim.wo.cursorline = false
-    end
-  end,
+    callback = function()
+        local cl = vim.wo.cursorline
+        if cl then
+            vim.api.nvim_win_set_var(0, "auto-cursorline", cl)
+            vim.wo.cursorline = false
+        end
+    end,
 })

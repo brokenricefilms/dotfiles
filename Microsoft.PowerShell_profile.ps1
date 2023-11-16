@@ -2,28 +2,28 @@ Set-PSReadLineOption -EditMode vi
 
 $env:EDITOR = 'nvim'
 
-function change_dir_fzf() {
+function change-dir-fzf() {
     $folder = fd --type directory --exclude scoop --exclude go --exclude .vscode --exclude bundle --exclude .git --exclude gems --exclude node_modules | fzf --height 50% --min-height 20 --reverse
     Set-Location $folder
 }
-Set-Alias c change_dir_fzf
+Set-Alias c change-dir-fzf
 
 function cc() {
     cd
-    change_dir_fzf
+    change-dir-fzf
 }
 
-function edit_file_fzf() {
+function edit-file-fzf() {
     $file = fd --hidden --type file . | fzf --height 50% --min-height 20 --reverse
     nvim $file
 }
-Set-Alias e edit_file_fzf
+Set-Alias e edit-file-fzf
 
-function edit_powershell_config() { nvim $profile }
+function edit-powershell-config() { nvim $profile }
 
-function edit_nvim_config() { nvim C:\Users\master\AppData\Local\nvim\init.lua }
+function edit-nvim-config() { nvim C:\Users\master\AppData\Local\nvim\init.lua }
 
-function update_dotfiles() {
+function update-dotfiles() {
     cp $profile ~\repos\ongedit\dotfiles\
     cp C:\Users\master\AppData\Local\nvim\init.lua ~\repos\ongedit\dotfiles\nvim
     cd ~\repos\ongedit\dotfiles\
@@ -41,7 +41,7 @@ function q() { Exit }
 
 function s() { git status --short --branch }
 
-function auto_git_commit() {
+function auto-git-commit() {
     Start-Job {
         git add .
         git commit -m "👌Auto commit"
@@ -49,7 +49,7 @@ function auto_git_commit() {
         git push
     }
 }
-Set-Alias ok auto_git_commit
+Set-Alias ok auto-git-commit
 
 function a {
     git status --short --branch
@@ -93,21 +93,21 @@ function update() {
     scoop update *
 }
 
-function download_video( ) {
+function download-video( ) {
     yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' $args
 }
-Set-Alias dv download_video
+Set-Alias dv download-video
 
-function download_audio() {
+function download-audio() {
     yt-dlp --extract-audio --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" $args
 }
-Set-Alias da download_audio
+Set-Alias da download-audio
 
-function ls_mb() {
+function ls-mb() {
     ls | Select-Object Name, @{Name="MegaBytes";Expression={$_.Length / 1MB}}
 }
 
-function ls_kb() {
+function ls-kb() {
     ls | Select-Object Name, @{Name="KiloBytes";Expression={$_.Length / 1KB}}
 }
 
