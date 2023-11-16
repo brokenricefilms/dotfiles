@@ -31,6 +31,7 @@ function update-dotfiles() {
     git add nvim\init.lua
     git commit -m "pwsh, nvim"
     git push
+    cd -
 }
 
 Import-Module PSReadLine
