@@ -21,6 +21,18 @@ Set-Alias e edit_file_fzf
 
 function edit_powershell_config() { nvim $profile }
 
+function edit_nvim_config() { nvim C:\Users\master\AppData\Local\nvim\init.lua }
+
+function update_dotfiles() {
+    cp $profile ~\repos\ongedit\dotfiles\
+    cp C:\Users\master\AppData\Local\nvim\init.lua ~\repos\ongedit\dotfiles\nvim
+    cd ~\repos\ongedit\dotfiles\
+    git add Microsoft.PowerShell_profile.ps1
+    git add nvim\init.lua
+    git commit -m "pwsh, nvim"
+    git push
+}
+
 Import-Module PSReadLine
 Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -PredictionSource History
@@ -90,6 +102,14 @@ function download_audio() {
     yt-dlp --extract-audio --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" $args
 }
 Set-Alias da download_audio
+
+function ls_mb() {
+    ls | Select-Object Name, @{Name="MegaBytes";Expression={$_.Length / 1MB}}
+}
+
+function ls_kb() {
+    ls | Select-Object Name, @{Name="KiloBytes";Expression={$_.Length / 1KB}}
+}
 
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
     param($wordToComplete, $commandAst, $cursorPosition)
