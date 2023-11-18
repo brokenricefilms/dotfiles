@@ -112,6 +112,8 @@ function ls-kb() {
     ls | Select-Object Name, @{Name="KiloBytes";Expression={$_.Length / 1KB}}
 }
 
+new-alias grep select-string
+
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
     param($wordToComplete, $commandAst, $cursorPosition)
         [Console]::InputEncoding = [Console]::OutputEncoding = $OutputEncoding = [System.Text.Utf8Encoding]::new()
