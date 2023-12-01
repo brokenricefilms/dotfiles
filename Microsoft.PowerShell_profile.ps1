@@ -24,9 +24,9 @@ function edit-powershell-config() { nvim $profile }
 function edit-nvim-config() { nvim C:\Users\master\AppData\Local\nvim\init.lua }
 
 function update-dotfiles() {
-    cp $profile ~\repos\ongedit\dotfiles\
-    cp C:\Users\master\AppData\Local\nvim\init.lua ~\repos\ongedit\dotfiles\nvim
-    cd ~\repos\ongedit\dotfiles\
+    cp $profile ~\repos\licitfree\dotfiles\
+    cp C:\Users\master\AppData\Local\nvim\init.lua ~\repos\licitfree\dotfiles\nvim
+    cd ~\repos\licitfree\dotfiles\
     git add Microsoft.PowerShell_profile.ps1
     git add nvim\init.lua
     git commit -m "pwsh, nvim"
@@ -111,6 +111,11 @@ function ls-mb() {
 function ls-kb() {
     ls | Select-Object Name, @{Name="KiloBytes";Expression={$_.Length / 1KB}}
 }
+
+function resolve-template () {
+    ii ~\davinci-resolve\licitfree.drb 
+}
+Set-Alias v resolve-template
 
 new-alias grep select-string
 
