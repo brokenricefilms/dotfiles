@@ -81,6 +81,8 @@ vim.opt.scrolloff = 5
 vim.opt.termguicolors = true
 vim.opt.statusline = " %F %m %< %= %r %q"
 vim.opt.cursorline = true
+vim.opt.laststatus = 0
+vim.opt.winbar = "%=%F"
 
 vim.opt.hidden = true
 vim.opt.history = 100
