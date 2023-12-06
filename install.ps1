@@ -6,4 +6,4 @@ winget install --id=BurntSushi.ripgrep.MSVC -e
 winget install --id=Git.Git  -e
 winget install --id=GitHub.cli  -e
 winget install --id=MilosParipovic.OneCommander -e
-winget install --id=clsid2.mpc-hc -e 
+winget install mpv.net
