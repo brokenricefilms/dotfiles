@@ -24,9 +24,9 @@ function edit-powershell-config() { nvim $profile }
 function edit-nvim-config() { nvim C:\Users\master\AppData\Local\nvim\init.lua }
 
 function update-dotfiles() {
-    cp $profile ~\repos\licitfree\dotfiles\
-    cp C:\Users\master\AppData\Local\nvim\init.lua ~\repos\licitfree\dotfiles\nvim
-    cd ~\repos\licitfree\dotfiles\
+    cp $profile ~\repos\thuantanphamfilms\dotfiles\
+    cp C:\Users\master\AppData\Local\nvim\init.lua ~\repos\thuantanphamfilms\dotfiles\nvim
+    cd ~\repos\thuantanphamfilms\dotfiles\
     git add Microsoft.PowerShell_profile.ps1
     git add nvim\init.lua
     git commit -m "pwsh, nvim"
@@ -42,6 +42,14 @@ function q() { Exit }
 
 function s() { git status --short --branch }
 
+function git-commit {
+    git status --short --branch
+    git diff
+    git add .
+    git commit 
+}
+Set-Alias a git-commit
+
 function auto-git-commit() {
     Start-Job {
         git add .
@@ -50,14 +58,8 @@ function auto-git-commit() {
         git push
     }
 }
-Set-Alias ok auto-git-commit
+Set-Alias aa auto-git-commit
 
-function a {
-    git status --short --branch
-    git diff
-    git add .
-    git commit 
-}
 
 function p() { git push }
 
@@ -98,6 +100,7 @@ function download-video( ) {
     yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' $args
 }
 Set-Alias dv download-video
+Set-Alias y yt-dlp
 
 function download-audio() {
     yt-dlp --extract-audio --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" $args
