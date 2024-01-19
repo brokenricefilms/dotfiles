@@ -3,9 +3,9 @@
 
 #HotkeyModifierTimeout 100 ; prevents sticking of layer key
 
-CapsLock::Esc
 SC056::RControl ; MSI |\ key
-SC152::Send #^c ; MSI Insert
+SC152::#^c ; MSI Insert
+Esc::!Tab
 
 toggleMaxWindow()
 {
@@ -26,7 +26,7 @@ Space & j::Send {Blind}{Down}
 Space & l::Send {Blind}{Right}
 Space & i::Send {Blind}{Home}
 Space & o::Send {Blind}{End}
-Space & .::Send #v
+Space & v::Send #v
 Space & F5::Reload
 Space & u::Send ^{PgUp}
 Space & p::Send ^{PgDn}
@@ -47,7 +47,7 @@ Space & t::Send ^#0
 Space & `;::Send ^{BS}
 Space & x::Send !{F4}
 Space & -::Send {Volume_Down}
-space & =::Send {Volume_Up}
+Space & =::Send {Volume_Up}
 
  Space::Send  {Space}
 +Space::Send +{Space}
@@ -55,10 +55,42 @@ space & =::Send {Volume_Up}
 #Space::Send #{Space}
 ^Space::Send ^{Space}
 
-`; & t::Send ^+t
-`; & d::Send {Del}
+CapsLock & Space::Send {Esc}
+
+CapsLock & w::Send {Esc}
+CapsLock & e::Send {Esc}
+CapsLock & r::Send ^+t
+CapsLock & f::Send {Esc}
+CapsLock & d::Send {Del}
+CapsLock & s::Send {Esc}
+
+CapsLock & y::Send {Esc}
+CapsLock & u::Send {Esc}
+CapsLock & i::Send {Esc}
+CapsLock & o::Send {Esc}
+CapsLock & p::Send ^+p
+CapsLock & h::Send !{Left}
+CapsLock & j::Send !{Down}
+CapsLock & k::Send !{Up}
+CapsLock & l::Send !{Right}
+CapsLock & n::Send {Esc}
+CapsLock & ,::Send {Esc}
+CapsLock & .::Send {Esc}
+CapsLock & `;::Send {Esc}
+CapsLock & /::Send {Esc}
+CapsLock & [::Send {Esc}
+CapsLock & 8::Send {Esc}
+CapsLock & 9::Send {Esc}
+CapsLock & 0::Send {Esc}
+CapsLock & -::Send !+-
+CapsLock & =::Send !+=
+
+CapsLock::Esc
+
+`; & d::Send +v{Del}
+`; & z::Send +z+z
 `; & s::
-MouseMove 752, 758, 0 
+MouseMove 653, 757, 0 
 Click
 Return
 
