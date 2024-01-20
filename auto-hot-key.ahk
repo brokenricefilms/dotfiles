@@ -1,11 +1,11 @@
 ;#InstallKeybdHook
 ;KeyHistory
 
-#HotkeyModifierTimeout 100 ; prevents sticking of layer key
-
 SC056::RControl ; MSI |\ key
 SC152::#^c ; MSI Insert
 Esc::!Tab
+SC149::Volume_Up ; page up key
+SC151::Volume_Down  ; page down key
 
 toggleMaxWindow()
 {
@@ -48,6 +48,8 @@ Space & `;::Send ^{BS}
 Space & x::Send !{F4}
 Space & -::Send {Volume_Down}
 Space & =::Send {Volume_Up}
+Space & [::Send !{Left}
+Space & ]::Send !{Left}
 
  Space::Send  {Space}
 +Space::Send +{Space}
@@ -57,11 +59,11 @@ Space & =::Send {Volume_Up}
 
 CapsLock & Space::Send {Esc}
 
-CapsLock & w::Send {Esc}
+CapsLock & w::Send ^w
 CapsLock & e::Send {Esc}
 CapsLock & r::Send ^+t
-CapsLock & f::Send {Esc}
-CapsLock & d::Send {Del}
+CapsLock & f::Send {Del}
+CapsLock & d::Send {BS}
 CapsLock & s::Send {Esc}
 
 CapsLock & y::Send {Esc}
@@ -89,6 +91,8 @@ CapsLock::Esc
 
 `; & d::Send +v{Del}
 `; & z::Send +z+z
+`; & j::Send ^+,
+`; & l::Send ^+.
 `; & s::
 MouseMove 653, 757, 0 
 Click
