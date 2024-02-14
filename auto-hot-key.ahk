@@ -4,8 +4,6 @@
 SC056::RControl ; MSI |\ key
 SC152::#^c ; MSI Insert
 Esc::!Tab
-SC149::Volume_Up ; page up key
-SC151::Volume_Down  ; page down key
 
 toggleMaxWindow()
 {
@@ -34,22 +32,24 @@ Space & ,::Send {PgUp}
 Space & m::Send {PgDn}
 Space & n::Send #+{Left}
 Space & F11::toggleMaxWindow()
-Space & a::Send ^#1
-Space & s::Send ^#2
-Space & d::Send ^#3
-Space & f::Send ^#4
-Space & g::Send ^#5
-Space & q::Send ^#6
-Space & w::Send ^#7
-Space & e::Send ^#8
-Space & r::Send ^#9
-Space & t::Send ^#0
+Space & q::Send ^#1
+Space & w::Send ^#2
+Space & e::Send ^#3
+Space & r::Send ^#4
+Space & t::Send ^#5
+Space & 1::Send ^#6
+Space & 2::Send ^#7
+Space & 3::Send ^#8
+Space & 4::Send ^#9
+Space & 5::Send ^#0
 Space & `;::Send ^{BS}
 Space & x::Send !{F4}
 Space & -::Send {Volume_Down}
 Space & =::Send {Volume_Up}
 Space & [::Send !{Left}
 Space & ]::Send !{Left}
+Space & WheelDown::Volume_Up
+Space & WheelUp::Volume_Down
 
  Space::Send  {Space}
 +Space::Send +{Space}
