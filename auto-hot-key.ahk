@@ -4,6 +4,7 @@
 SC056::RControl ; MSI |\ key
 SC152::#^c ; MSI Insert
 Esc::!Tab
+CapsLock::Esc
 
 toggleMaxWindow()
 {
@@ -43,7 +44,10 @@ Space & 3::Send ^#8
 Space & 4::Send ^#9
 Space & 5::Send ^#0
 Space & `;::Send ^{BS}
+Space & d::Send {BS}
+Space & g::Send {Del}
 Space & x::Send !{F4}
+Space & c::Send ^c
 Space & -::Send {Volume_Down}
 Space & =::Send {Volume_Up}
 Space & [::Send !{Left}
@@ -56,38 +60,6 @@ Space & WheelUp::Volume_Down
 !Space::Send !{Space}
 #Space::Send #{Space}
 ^Space::Send ^{Space}
-
-CapsLock & Space::Send {Esc}
-
-CapsLock & w::Send ^w
-CapsLock & e::Send {Esc}
-CapsLock & r::Send ^+t
-CapsLock & f::Send {Del}
-CapsLock & d::Send {BS}
-CapsLock & s::Send {Esc}
-
-CapsLock & y::Send {Esc}
-CapsLock & u::Send {Esc}
-CapsLock & i::Send {Esc}
-CapsLock & o::Send {Esc}
-CapsLock & p::Send ^+p
-CapsLock & h::Send !{Left}
-CapsLock & j::Send !{Down}
-CapsLock & k::Send !{Up}
-CapsLock & l::Send !{Right}
-CapsLock & n::Send {Esc}
-CapsLock & ,::Send {Esc}
-CapsLock & .::Send {Esc}
-CapsLock & `;::Send {Esc}
-CapsLock & /::Send {Esc}
-CapsLock & [::Send {Esc}
-CapsLock & 8::Send {Esc}
-CapsLock & 9::Send {Esc}
-CapsLock & 0::Send {Esc}
-CapsLock & -::Send !+-
-CapsLock & =::Send !+=
-
-CapsLock::Esc
 
 `; & d::Send +v{Del}
 `; & z::Send +z+z
