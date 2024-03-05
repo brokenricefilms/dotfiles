@@ -1,10 +1,39 @@
 ;#InstallKeybdHook
 ;KeyHistory
 
-SC056::RControl ; MSI |\ key
-SC152::#^c ; MSI Insert
-Esc::!Tab
-CapsLock::Esc
+movingWindowToOtherDisplay() {
+  Send #+{Left}
+  SysGet, monitors, MonitorCount
+
+  SysGet, MonitorCount, MonitorCount
+  SysGet, MonitorPrimary, MonitorPrimary
+  
+  current := 0
+  Loop, %MonitorCount%
+  {
+    SysGet, Monitor, Monitor, %A_Index%
+    CoordMode, Mouse, Screen
+    MouseGetPos, MouseX, MouseY
+    if (  (MouseX >= MonitorLeft) && (MouseX < MonitorRight) && (MouseY >= MonitorTop) && (MouseY < MonitorBottom) )
+    {
+      current := A_Index
+      currentRX := (MouseX - MonitorLeft) / (MonitorRight - MonitorLeft)
+      currentRY := (MouseY - MonitorTop) / (MonitorBottom - MonitorTop)
+      break
+    }
+  }
+  next := current + 1
+  
+  if (next > MonitorCount)
+    next := 1
+  SysGet, Monitor, Monitor, %next%
+  
+  newX := MonitorLeft + currentRX*(MonitorRight - MonitorLeft)
+  newY := MonitorTop + currentRY*(MonitorBottom - MonitorTop)
+  
+  DllCall("SetCursorPos", "int", newX, "int", newY)
+  DllCall("SetCursorPos", "int", newX, "int", newY)
+}
 
 toggleMaxWindow()
 {
@@ -19,6 +48,12 @@ toggleMaxWindow()
   }
 }
 
+SC056::RControl ; MSI |\ key
+SC152::#^c ; MSI Insert
+;SC151::movingWindowToOtherDisplay() ;PgDn SC149 PgUp
+Esc::!Tab
+CapsLock::Esc
+
 Space & k::Send {Blind}{Up}
 Space & h::Send {Blind}{Left}
 Space & j::Send {Blind}{Down}
@@ -31,7 +66,7 @@ Space & u::Send ^{PgUp}
 Space & p::Send ^{PgDn}
 Space & ,::Send {PgUp}
 Space & m::Send {PgDn}
-Space & n::Send #+{Left}
+Space & n::movingWindowToOtherDisplay()
 Space & F11::toggleMaxWindow()
 Space & q::Send ^#1
 Space & w::Send ^#2
