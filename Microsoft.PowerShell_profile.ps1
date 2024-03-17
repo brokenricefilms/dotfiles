@@ -24,16 +24,14 @@ function edit-powershell-config() { nvim $profile }
 function edit-nvim-config() { nvim C:\Users\master\AppData\Local\nvim\init.lua }
 
 function update-dotfiles() {
-    Start-Job {
-        cp $profile ~\repos\brokenricefilms\dotfiles\
-        cp C:\Users\master\AppData\Local\nvim\init.lua ~\repos\brokenricefilms\dotfiles\nvim
-        cd ~\repos\brokenricefilms\dotfiles\
-        git add Microsoft.PowerShell_profile.ps1
-        git add nvim\init.lua
-        git commit -m "pwsh, nvim"
-        git push
-        cd -
-    }
+    cp $profile ~\repos\brokenricefilms\dotfiles\
+    cp C:\Users\master\AppData\Local\nvim\init.lua ~\repos\brokenricefilms\dotfiles\nvim
+    cd ~\repos\brokenricefilms\dotfiles\
+    git add Microsoft.PowerShell_profile.ps1
+    git add nvim\init.lua
+    git commit -m "pwsh, nvim"
+    git push
+    cd -
 }
 
 Import-Module PSReadLine
@@ -53,12 +51,10 @@ function git-commit {
 Set-Alias a git-commit
 
 function auto-git-commit() {
-    Start-Job {
-        git add .
-        git commit -m "👌Auto commit"
-        git pull
-        git push
-    }
+    git add .
+    git commit -m "👌Auto commit"
+    git pull
+    git push
 }
 Set-Alias aa auto-git-commit
 
