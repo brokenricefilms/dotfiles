@@ -6,4 +6,5 @@ winget install --id=BurntSushi.ripgrep.MSVC -e
 winget install --id=Git.Git  -e
 winget install --id=GitHub.cli  -e
 winget install --id=MilosParipovic.OneCommander -e
-winget install mpv.net
+winget install --id=Obsidian.Obsidian  -e
+winget install --id=OBSProject.OBSStudio  -e
