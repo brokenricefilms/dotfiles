@@ -25,9 +25,9 @@ function edit-nvim-config() { nvim C:\Users\master\AppData\Local\nvim\init.lua }
 
 function update-dotfiles() {
     Start-Job {
-        cp $profile ~\repos\thuantanphamfilms\dotfiles\
-        cp C:\Users\master\AppData\Local\nvim\init.lua ~\repos\thuantanphamfilms\dotfiles\nvim
-        cd ~\repos\thuantanphamfilms\dotfiles\
+        cp $profile ~\repos\brokenricefilms\dotfiles\
+        cp C:\Users\master\AppData\Local\nvim\init.lua ~\repos\brokenricefilms\dotfiles\nvim
+        cd ~\repos\brokenricefilms\dotfiles\
         git add Microsoft.PowerShell_profile.ps1
         git add nvim\init.lua
         git commit -m "pwsh, nvim"
@@ -94,7 +94,7 @@ function which ($command) {
 
 function update() {
     winget upgrade --all
-    scoop update *
+    update-dotfiles
 }
 
 function download-video( ) {
@@ -107,6 +107,12 @@ function download-audio() {
     yt-dlp --extract-audio --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" $args
 }
 Set-Alias da download-audio
+
+function sync-music() {
+    cd ~\Music\
+    yt-dlp --extract-audio --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" --download-archive archive.txt "https://brokenricefilms.pages.dev/m"
+    cd -
+}
 
 function ls-mb() {
     ls | Select-Object Name, @{Name="MegaBytes";Expression={$_.Length / 1MB}}
