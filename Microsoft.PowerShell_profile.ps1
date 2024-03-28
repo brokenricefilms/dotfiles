@@ -15,6 +15,10 @@ function cc() {
     change-dir-fzf
 }
 
+function firefox-profile() {
+    cd C:\Users\master\AppData\Roaming\Mozilla\Firefox\Profiles\ouyze0q0.default
+}
+
 function edit-file-fzf() {
     $file = fd --hidden --type file . | fzf --height 50% --min-height 20 --reverse
     nvim $file
