@@ -49,21 +49,35 @@ toggleMaxWindow()
 }
 
 SC056::RControl ; MSI |\ key
-SC152::#^c ; MSI Insert
+;SC152::MButton ; MSI Insert
 ;SC151::movingWindowToOtherDisplay() ;PgDn SC149 PgUp
-Esc::!Tab
-CapsLock::Esc
 
+;Esc::Mbutton
+
+;CapsLock::Esc
+
+;CapsLock & s::Send {LButton}
+;CapsLock & d::Send {MButton}
+;CapsLock & f::Send {RButton}
+
+ CapsLock::Send  {Esc}
++CapsLock::Send +{Esc}
+!CapsLock::Send !{Esc}
+#CapsLock::Send #{Esc}
+^CapsLock::Send ^{Esc}
+
+Space & f::MButton
+Space & d::BS
 Space & k::Send {Blind}{Up}
 Space & h::Send {Blind}{Left}
 Space & j::Send {Blind}{Down}
 Space & l::Send {Blind}{Right}
 Space & i::Send {Blind}{Home}
 Space & o::Send {Blind}{End}
-Space & v::Send #v
 Space & F5::Reload
 Space & u::Send ^{PgUp}
 Space & p::Send ^{PgDn}
+Space & z::Send ^+t
 Space & ,::Send {PgUp}
 Space & m::Send {PgDn}
 Space & n::movingWindowToOtherDisplay()
@@ -79,16 +93,18 @@ Space & 3::Send ^#8
 Space & 4::Send ^#9
 Space & 5::Send ^#0
 Space & `;::Send ^{BS}
-Space & d::Send {BS}
+Space & a::Send ^a
 Space & g::Send {Del}
 Space & x::Send !{F4}
 Space & c::Send ^c
-Space & -::Send {Volume_Down}
-Space & =::Send {Volume_Up}
+Space & v::Send ^v
+;Space & -::Send {Volume_Down}
+;Space & =::Send {Volume_Up}
 Space & [::Send !{Left}
-Space & ]::Send !{Left}
+Space & ]::Send !{Right}
 Space & WheelDown::Volume_Up
 Space & WheelUp::Volume_Down
+Space & b::Send ^w
 
  Space::Send  {Space}
 +Space::Send +{Space}
