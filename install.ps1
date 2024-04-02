@@ -5,6 +5,8 @@ winget install --id=junegunn.fzf -e
 winget install --id=BurntSushi.ripgrep.MSVC -e 
 winget install --id=Git.Git  -e
 winget install --id=GitHub.cli  -e
-winget install --id=MilosParipovic.OneCommander -e
+# winget install --id=MilosParipovic.OneCommander -e
 winget install --id=Obsidian.Obsidian  -e
 winget install --id=OBSProject.OBSStudio  -e
+winget install neovim
+winget install mpv.net
