@@ -110,6 +110,7 @@ Space & ]::Send !{Right}
 Space & WheelDown::Volume_Up
 Space & WheelUp::Volume_Down
 Space & b::Send ^w
+Space & `;::Send ^{BS}
 
  Space::Send  {Space}
 +Space::Send +{Space}
