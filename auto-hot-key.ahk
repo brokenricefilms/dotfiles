@@ -1,5 +1,6 @@
 ;#InstallKeybdHook
 ;KeyHistory
+#SingleInstance Force
 
 movingWindowToOtherDisplay() {
   Send #+{Left}
@@ -51,14 +52,17 @@ toggleMaxWindow()
 SC056::RControl ; MSI |\ key
 ;SC152::MButton ; MSI Insert
 ;SC151::movingWindowToOtherDisplay() ;PgDn SC149 PgUp
+AppsKey::RControl
 
-;Esc::Mbutton
+Esc::!Tab
 
-;CapsLock::Esc
+SetCapsLockState, off
 
-;CapsLock & s::Send {LButton}
-;CapsLock & d::Send {MButton}
-;CapsLock & f::Send {RButton}
+CapsLock & d::WheelDown
+CapsLock & e::WheelUp
+CapsLock & w::^w
+CapsLock & r::!Left
+CapsLock & t::!Right
 
  CapsLock::Send  {Esc}
 +CapsLock::Send +{Esc}
@@ -66,6 +70,8 @@ SC056::RControl ; MSI |\ key
 #CapsLock::Send #{Esc}
 ^CapsLock::Send ^{Esc}
 
+Space & s::Send, {Click 2}
+Space & g::RButton
 Space & f::MButton
 Space & d::BS
 Space & k::Send {Blind}{Up}
@@ -92,14 +98,13 @@ Space & 2::Send ^#7
 Space & 3::Send ^#8
 Space & 4::Send ^#9
 Space & 5::Send ^#0
-Space & `;::Send ^{BS}
 Space & a::Send ^a
-Space & g::Send {Del}
-Space & x::Send !{F4}
+Space & x::Send {Del}
+Space & y::Send !{F4}
 Space & c::Send ^c
 Space & v::Send ^v
-;Space & -::Send {Volume_Down}
-;Space & =::Send {Volume_Up}
+Space & -::Send {Volume_Down}
+Space & =::Send {Volume_Up}
 Space & [::Send !{Left}
 Space & ]::Send !{Right}
 Space & WheelDown::Volume_Up

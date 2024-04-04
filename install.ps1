@@ -10,3 +10,4 @@ winget install --id=Obsidian.Obsidian  -e
 winget install --id=OBSProject.OBSStudio  -e
 winget install neovim
 winget install mpv.net
+cp .gitconfig ~\
