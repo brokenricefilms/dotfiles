@@ -9,17 +9,31 @@ F3::^PgUp
 F4::^PgDn
 #IfWinActive
 
+#IfWinActive ahk_exe brave.exe
+F1::^w
+F2::^+t
+F3::^PgUp
+F4::^PgDn
+#IfWinActive
+
+
 #IfWinActive ahk_exe WindowsTerminal.exe
+F11::!+-
+F12::!+=
 F1::^+w
 F2::^+t
 F3::^PgDn
 F4::^PgUp
-F11::!+-
-F12::!+=
-F6::!Left
-F7::!Down
-F8::!Up
-F9::!Right
+F7::!Left
+F8::!Down
+F9::!Up
+F10::!Right
+#IfWinActive
+
+#IfWinActive ahk_exe Obsidian.exe
+F1::+1
+F2::+2
+F3::7
 #IfWinActive
 
 movingWindowToOtherDisplay() {
