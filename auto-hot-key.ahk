@@ -16,7 +16,6 @@ F3::^PgUp
 F4::^PgDn
 #IfWinActive
 
-
 #IfWinActive ahk_exe WindowsTerminal.exe
 F11::!+-
 F12::!+=
