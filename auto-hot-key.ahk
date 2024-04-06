@@ -114,7 +114,7 @@ CapsLock & c::
 CapsLock & d::WheelDown
 CapsLock & e::WheelUp
 CapsLock & f::Right
-CapsLock & g::
+CapsLock & g::Home
 CapsLock & h::
 CapsLock & i::
 CapsLock & j::
@@ -181,7 +181,7 @@ Space & ]::Send !{Right}
 Space & `::
 Space & `;::Send ^{BS}
 Space & a::Send ^a
-Space & b::Send ^w
+Space & b::
 Space & c::Send ^c
 Space & d::BS
 Space & e::Send ^#3
@@ -205,7 +205,7 @@ Space & v::Send ^v
 Space & w::Send ^#2
 Space & x::Send {Del}
 Space & y::Send !{F4}
-Space & z::Send ^+t
+Space & z::
 
  Space::Send  {Space}
 +Space::Send +{Space}
