@@ -134,6 +134,8 @@ CapsLock & w::^w
 CapsLock & x::
 CapsLock & y::
 CapsLock & z::
+CapsLock & Tab::
+CapsLock & Space::
 
  CapsLock::Esc
 +CapsLock::Send +{Esc}
