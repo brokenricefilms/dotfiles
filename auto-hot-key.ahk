@@ -2,6 +2,26 @@
 ;KeyHistory
 #SingleInstance Force
 
+#IfWinActive ahk_exe chrome.exe
+F1::^w
+F2::^+t
+F3::^PgUp
+F4::^PgDn
+#IfWinActive
+
+#IfWinActive ahk_exe WindowsTerminal.exe
+F1::^+w
+F2::^+t
+F3::^PgDn
+F4::^PgUp
+F11::!+-
+F12::!+=
+F6::!Left
+F7::!Down
+F8::!Up
+F9::!Right
+#IfWinActive
+
 movingWindowToOtherDisplay() {
   Send #+{Left}
   SysGet, monitors, MonitorCount
@@ -56,60 +76,107 @@ AppsKey::RControl
 
 Esc::!Tab
 
-SetCapsLockState, off
-
-CapsLock & 1::Space
-CapsLock & 2::Space
-CapsLock & 3::Space
-CapsLock & 4::Space
-CapsLock & 5::Space
-CapsLock & a::Space
-CapsLock & b::Space
-CapsLock & c::Space
+CapsLock & ,::
+CapsLock & -::
+CapsLock & .::
+CapsLock & /::
+CapsLock & 0::
+CapsLock & 1::
+CapsLock & 2::
+CapsLock & 3::
+CapsLock & 4::
+CapsLock & 5::
+CapsLock & 6::
+CapsLock & 7::
+CapsLock & 8::
+CapsLock & 9::
+CapsLock & =::
+CapsLock & F10::
+CapsLock & F11::
+CapsLock & F12::
+CapsLock & F1::
+CapsLock & F2::
+CapsLock & F3::
+CapsLock & F4::
+CapsLock & F5::
+CapsLock & F6::
+CapsLock & F7::
+CapsLock & F8::
+CapsLock & F9::
+CapsLock & [::
+CapsLock & \::
+CapsLock & ]::
+CapsLock & `::
+CapsLock & `;::
+CapsLock & a::
+CapsLock & b::
+CapsLock & c::
 CapsLock & d::WheelDown
 CapsLock & e::WheelUp
-CapsLock & f::Space
-CapsLock & g::Space
-CapsLock & h::Space
-CapsLock & i::Space
-CapsLock & j::Space
-CapsLock & k::Space
-CapsLock & l::Space
-CapsLock & m::Space
-CapsLock & n::Space
-CapsLock & o::Space
-CapsLock & p::Space
-CapsLock & q::Space
+CapsLock & f::Right
+CapsLock & g::
+CapsLock & h::
+CapsLock & i::
+CapsLock & j::
+CapsLock & k::
+CapsLock & l::
+CapsLock & m::
+CapsLock & n::
+CapsLock & o::
+CapsLock & p::
+CapsLock & q::
 CapsLock & r::!Left
-CapsLock & s::Space
+CapsLock & s::Left
 CapsLock & t::!Right
-CapsLock & u::Space
-CapsLock & v::Space
+CapsLock & u::
+CapsLock & v::
 CapsLock & w::^w
-CapsLock & x::Space
-CapsLock & y::Space
-CapsLock & z::Space
+CapsLock & x::
+CapsLock & y::
+CapsLock & z::
 
- CapsLock::Send  {Esc}
+ CapsLock::Esc
 +CapsLock::Send +{Esc}
 !CapsLock::Send !{Esc}
 #CapsLock::Send #{Esc}
 ^CapsLock::Send ^{Esc}
 
+SetCapsLockState, alwaysoff
+
+Space & '::
 Space & ,::Send {PgUp}
 Space & -::Send {Volume_Down}
+Space & .::
+Space & /::
+Space & 0::
 Space & 1::Send ^#6
 Space & 2::Send ^#7
 Space & 3::Send ^#8
 Space & 4::Send ^#9
 Space & 5::Send ^#0
+Space & 6::
+Space & 7::
+Space & 8::
+Space & 9::
 Space & =::Send {Volume_Up}
+Space & F10::
 Space & F11::toggleMaxWindow()
+Space & F12::
+Space & F1::
+Space & F2::
+Space & F3::
+Space & F4::
 Space & F5::Reload
+Space & F6::
+Space & F7::
+Space & F8::
+Space & F9::
 Space & WheelDown::Volume_Up
 Space & WheelUp::Volume_Down
 Space & [::Send !{Left}
+Space & \::
 Space & ]::Send !{Right}
+Space & `::
 Space & `;::Send ^{BS}
 Space & a::Send ^a
 Space & b::Send ^w
