@@ -3,15 +3,22 @@
 #SingleInstance Force
 
 #IfWinActive ahk_exe chrome.exe
-F1::^w
-F2::^+t
+F2::^w
+F1::^+t
+F3::^PgUp
+F4::^PgDn
+#IfWinActive
+
+#IfWinActive ahk_exe firefox.exe
+F2::^w
+F1::^+t
 F3::^PgUp
 F4::^PgDn
 #IfWinActive
 
 #IfWinActive ahk_exe brave.exe
-F1::^w
-F2::^+t
+F2::^w
+F1::^+t
 F3::^PgUp
 F4::^PgDn
 #IfWinActive
@@ -89,74 +96,70 @@ AppsKey::RControl
 
 Esc::!Tab
 
-CapsLock & ,::
-CapsLock & -::
-CapsLock & .::
-CapsLock & /::
-CapsLock & 0::
-CapsLock & 1::
-CapsLock & 2::
-CapsLock & 3::
-CapsLock & 4::
-CapsLock & 5::
-CapsLock & 6::
-CapsLock & 7::
-CapsLock & 8::
-CapsLock & 9::
-CapsLock & =::
-CapsLock & F10::
-CapsLock & F11::
-CapsLock & F12::
-CapsLock & F1::
-CapsLock & F2::
-CapsLock & F3::
-CapsLock & F4::
-CapsLock & F5::
-CapsLock & F6::
-CapsLock & F7::
-CapsLock & F8::
-CapsLock & F9::
-CapsLock & [::
-CapsLock & \::
-CapsLock & ]::
-CapsLock & `::
-CapsLock & `;::
-CapsLock & a::
-CapsLock & b::
-CapsLock & c::
+CapsLock & ,::Space
+CapsLock & -::Space
+CapsLock & .::Space
+CapsLock & /::Space
+CapsLock & 0::Space
+CapsLock & 1::Space
+CapsLock & 2::Space
+CapsLock & 3::Space
+CapsLock & 4::Space
+CapsLock & 5::Space
+CapsLock & 6::Space
+CapsLock & 7::Space
+CapsLock & 8::Space
+CapsLock & 9::Space
+CapsLock & =::Space
+CapsLock & F10::Space
+CapsLock & F11::Space
+CapsLock & F12::Space
+CapsLock & F1::Space
+CapsLock & F2::Space
+CapsLock & F3::Space
+CapsLock & F4::Space
+CapsLock & F5::Space
+CapsLock & F6::Space
+CapsLock & F7::Space
+CapsLock & F8::Space
+CapsLock & F9::Space
+CapsLock & [::Space
+CapsLock & \::Space
+CapsLock & ]::Space
+CapsLock & `::Space
+CapsLock & `;::Space
+CapsLock & a::Space
+CapsLock & b::Space
+CapsLock & c::Space
 CapsLock & d::WheelDown
 CapsLock & e::WheelUp
 CapsLock & f::Right
 CapsLock & g::Home
-CapsLock & h::
-CapsLock & i::
-CapsLock & j::
-CapsLock & k::
-CapsLock & l::
-CapsLock & m::
-CapsLock & n::
-CapsLock & o::
-CapsLock & p::
-CapsLock & q::
+CapsLock & h::Space
+CapsLock & i::Space
+CapsLock & j::Space
+CapsLock & k::Space
+CapsLock & l::Space
+CapsLock & m::Space
+CapsLock & n::Space
+CapsLock & o::Space
+CapsLock & p::Space
+CapsLock & q::Space
 CapsLock & r::!Left
 CapsLock & s::Left
 CapsLock & t::!Right
-CapsLock & u::
-CapsLock & v::
+CapsLock & u::Space
+CapsLock & v::Space
 CapsLock & w::^w
-CapsLock & x::
-CapsLock & y::
-CapsLock & z::
-CapsLock & Tab::
-CapsLock & Space::
+CapsLock & x::Space
+CapsLock & y::Space
+CapsLock & z::Space
+CapsLock & Tab::Space
+CapsLock & Space::Space
 
- CapsLock::Esc
-+CapsLock::Send +{Esc}
-!CapsLock::Send !{Esc}
-#CapsLock::Send #{Esc}
-^CapsLock::Send ^{Esc}
+SetCapsLockState, off
 
-SetCapsLockState, alwaysoff
+CapsLock::Esc
 
 Space & '::
 Space & ,::Send {PgUp}
@@ -206,7 +209,8 @@ Space & j::Send {Blind}{Down}
 Space & k::Send {Blind}{Up}
 Space & l::Send {Blind}{Right}
 Space & m::Send {PgDn}
-Space & n::movingWindowToOtherDisplay()
+;Space & n::movingWindowToOtherDisplay()
+Space & n::^t
 Space & o::Send {Blind}{End}
 Space & p::Send ^{PgDn}
 Space & q::Send ^#1
