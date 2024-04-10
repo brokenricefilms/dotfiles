@@ -93,6 +93,7 @@ SC056::RControl ; MSI |\ key
 ;SC151::movingWindowToOtherDisplay() ;PgDn SC149 PgUp
 AppsKey::RControl
 SetCapsLockState, off
+LControl::#s
 
 Tab & ,::Tab
 Tab & -::Tab
@@ -157,7 +158,12 @@ Tab::Tab
 
 Space & '::
 Space & ,::Send {PgUp}
-Space & -::Send {Volume_Down}
+Space & -::
+While GetKeyState("-", "P") {
+ Send {Volume_Down}
+ Sleep, 30
+}
+Return
 Space & .::
 Space & /::
 Space & 0::
@@ -170,7 +176,12 @@ Space & 6::
 Space & 7::
 Space & 8::
 Space & 9::
-Space & =::Send {Volume_Up}
+Space & =::
+While GetKeyState("=", "P") {
+ Send {Volume_Up}
+ Sleep, 30
+}
+Return
 Space & F10::
 Space & F11::toggleMaxWindow()
 Space & F12::
@@ -190,7 +201,12 @@ Space & \::
 Space & ]::Send !{Right}
 Space & `::
 Space & `;::Send ^{BS}
-Space & a::WheelDown
+Space & a::
+While GetKeyState("a", "P") {
+ Send {WheelDown}
+ Sleep, 10
+}
+Return
 Space & b::
 Space & c::Send ^c
 Space & d::BS
@@ -207,7 +223,12 @@ Space & m::Send {PgDn}
 Space & n::^t
 Space & o::Send {Blind}{End}
 Space & p::Send ^{PgDn}
-Space & q::WheelUp
+Space & q::
+While GetKeyState("q", "P") {
+ Send {WheelUp}
+ Sleep, 10
+}
+Return
 Space & r::Up
 Space & s::Send, {Click 2}
 Space & t::Right
