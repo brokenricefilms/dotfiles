@@ -90,76 +90,70 @@ toggleMaxWindow()
 }
 
 SC056::RControl ; MSI |\ key
-;SC152::MButton ; MSI Insert
 ;SC151::movingWindowToOtherDisplay() ;PgDn SC149 PgUp
 AppsKey::RControl
-
-Esc::!Tab
-
-CapsLock & ,::Space
-CapsLock & -::Space
-CapsLock & .::Space
-CapsLock & /::Space
-CapsLock & 0::Space
-CapsLock & 1::Space
-CapsLock & 2::Space
-CapsLock & 3::Space
-CapsLock & 4::Space
-CapsLock & 5::Space
-CapsLock & 6::Space
-CapsLock & 7::Space
-CapsLock & 8::Space
-CapsLock & 9::Space
-CapsLock & =::Space
-CapsLock & F10::Space
-CapsLock & F11::Space
-CapsLock & F12::Space
-CapsLock & F1::Space
-CapsLock & F2::Space
-CapsLock & F3::Space
-CapsLock & F4::Space
-CapsLock & F5::Space
-CapsLock & F6::Space
-CapsLock & F7::Space
-CapsLock & F8::Space
-CapsLock & F9::Space
-CapsLock & [::Space
-CapsLock & \::Space
-CapsLock & ]::Space
-CapsLock & `::Space
-CapsLock & `;::Space
-CapsLock & a::Space
-CapsLock & b::Space
-CapsLock & c::Space
-CapsLock & d::WheelDown
-CapsLock & e::WheelUp
-CapsLock & f::Right
-CapsLock & g::Home
-CapsLock & h::Space
-CapsLock & i::Space
-CapsLock & j::Space
-CapsLock & k::Space
-CapsLock & l::Space
-CapsLock & m::Space
-CapsLock & n::Space
-CapsLock & o::Space
-CapsLock & p::Space
-CapsLock & q::Space
-CapsLock & r::!Left
-CapsLock & s::Left
-CapsLock & t::!Right
-CapsLock & u::Space
-CapsLock & v::Space
-CapsLock & w::^w
-CapsLock & x::Space
-CapsLock & y::Space
-CapsLock & z::Space
-CapsLock & Tab::Space
-CapsLock & Space::Space
-
 SetCapsLockState, off
 
-CapsLock::Esc
+Tab & ,::Tab
+Tab & -::Tab
+Tab & .::Tab
+Tab & /::Tab
+Tab & 0::Tab
+Tab & 1::Tab
+Tab & 2::Tab
+Tab & 3::Tab
+Tab & 4::Tab
+Tab & 5::Tab
+Tab & 6::Tab
+Tab & 7::Tab
+Tab & 8::Tab
+Tab & 9::Tab
+Tab & =::Tab
+Tab & F10::Tab
+Tab & F11::Tab
+Tab & F12::Tab
+Tab & F1::Tab
+Tab & F2::Tab
+Tab & F3::Tab
+Tab & F4::Tab
+Tab & F5::Tab
+Tab & F6::Tab
+Tab & F7::Tab
+Tab & F8::Tab
+Tab & F9::Tab
+Tab & [::Tab
+Tab & \::Tab
+Tab & ]::Tab
+Tab & `::Tab
+Tab & `;::Tab
+Tab & a::Tab
+Tab & b::Tab
+Tab & c::Tab
+Tab & d::Tab
+Tab & e::Tab
+Tab & f::Tab
+Tab & g::Tab
+Tab & h::Tab
+Tab & i::Tab
+Tab & j::Tab
+Tab & k::Tab
+Tab & l::Tab
+Tab & m::Tab
+Tab & n::Tab
+Tab & o::Tab
+Tab & p::Tab
+Tab & q::Tab
+Tab & r::Tab
+Tab & s::Tab
+Tab & t::Tab
+Tab & u::Tab
+Tab & v::Tab
+Tab & w::Tab
+Tab & x::Tab
+Tab & y::Tab
+Tab & z::Tab
+
+Tab::Tab
 
 Space & '::
 Space & ,::Send {PgUp}
@@ -167,11 +161,11 @@ Space & -::Send {Volume_Down}
 Space & .::
 Space & /::
 Space & 0::
-Space & 1::Send ^#6
-Space & 2::Send ^#7
-Space & 3::Send ^#8
-Space & 4::Send ^#9
-Space & 5::Send ^#0
+Space & 1::Send ^#1
+Space & 2::Send ^#2
+Space & 3::Send ^#3
+Space & 4::Send ^#4
+Space & 5::Send ^#5
 Space & 6::
 Space & 7::
 Space & 8::
@@ -180,15 +174,15 @@ Space & =::Send {Volume_Up}
 Space & F10::
 Space & F11::toggleMaxWindow()
 Space & F12::
-Space & F1::
-Space & F2::
-Space & F3::
-Space & F4::
-Space & F5::Reload
+Space & F1::Send #^6
+Space & F2::Send #^7
+Space & F3::Send #^8
+Space & F4::Send #^9
+Space & F5::Send #^0
 Space & F6::
 Space & F7::
 Space & F8::
-Space & F9::
+Space & F9::Reload
 Space & WheelDown::Volume_Up
 Space & WheelUp::Volume_Down
 Space & [::Send !{Left}
@@ -196,11 +190,11 @@ Space & \::
 Space & ]::Send !{Right}
 Space & `::
 Space & `;::Send ^{BS}
-Space & a::Send ^a
+Space & a::WheelDown
 Space & b::
 Space & c::Send ^c
 Space & d::BS
-Space & e::Send ^#3
+Space & e::Down
 Space & f::MButton
 Space & g::RButton
 Space & h::Send {Blind}{Left}
@@ -213,16 +207,16 @@ Space & m::Send {PgDn}
 Space & n::^t
 Space & o::Send {Blind}{End}
 Space & p::Send ^{PgDn}
-Space & q::Send ^#1
-Space & r::Send ^#4
+Space & q::WheelUp
+Space & r::Up
 Space & s::Send, {Click 2}
-Space & t::Send ^#5
+Space & t::Right
 Space & u::Send ^{PgUp}
 Space & v::Send ^v
-Space & w::Send ^#2
+Space & w::Left
 Space & x::Send {Del}
 Space & y::Send !{F4}
-Space & z::
+Space & z::^z
 
  Space::Send  {Space}
 +Space::Send +{Space}
