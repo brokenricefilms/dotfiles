@@ -2,6 +2,27 @@
 ;KeyHistory
 #SingleInstance Force
 
+SC056::RControl ; MSI |\ key
+;SC151::movingWindowToOtherDisplay() ;PgDn SC149 PgUp
+SC147::#^v
+AppsKey::RControl
+SetCapsLockState, off
+;LControl::#Space
+
+#IfWinActive ahk_exe chrome.exe
+#If GetKeyState("Ctrl") == 0 && GetKeyState("Alt") == 0 && GetKeyState("LButton") == 1
+RShift::
+Send {n}
+keywait, RShift
+return
+
+#If GetKeyState("Ctrl") == 0 && GetKeyState("Alt") == 0 && GetKeyState("LButton") == 1
+LShift::
+Send {n}
+keywait, LShift
+return
+#IfWinActive
+
 #IfWinActive ahk_exe chrome.exe
 F2::^w
 F1::^+t
@@ -88,12 +109,6 @@ toggleMaxWindow()
     WinMaximize, A
   }
 }
-
-SC056::RControl ; MSI |\ key
-;SC151::movingWindowToOtherDisplay() ;PgDn SC149 PgUp
-AppsKey::RControl
-SetCapsLockState, off
-LControl::#s
 
 Tab & ,::Tab
 Tab & -::Tab
@@ -199,16 +214,16 @@ Space & WheelUp::Volume_Down
 Space & [::Send !{Left}
 Space & \::
 Space & ]::Send !{Right}
-Space & `::
+Space & `::Del
 Space & `;::Send ^{BS}
 Space & a::
 While GetKeyState("a", "P") {
  Send {WheelDown}
- Sleep, 10
+ Sleep, 5 
 }
 Return
 Space & b::
-Space & c::Send ^c
+Space & c::
 Space & d::BS
 Space & e::Down
 Space & f::MButton
@@ -226,18 +241,19 @@ Space & p::Send ^{PgDn}
 Space & q::
 While GetKeyState("q", "P") {
  Send {WheelUp}
- Sleep, 10
+ Sleep, 5
 }
 Return
 Space & r::Up
 Space & s::Send, {Click 2}
 Space & t::Right
 Space & u::Send ^{PgUp}
-Space & v::Send ^v
+Space & v::
 Space & w::Left
-Space & x::Send {Del}
+Space & x::
 Space & y::Send !{F4}
 Space & z::^z
+Space & Tab::!Tab
 
  Space::Send  {Space}
 +Space::Send +{Space}
