@@ -1,6 +1,8 @@
-;#InstallKeybdHook
 ;KeyHistory
+#NoEnv
 #SingleInstance Force
+#InstallMouseHook
+#InstallKeybdHook
 
 SC056::RControl ; MSI |\ key
 ;SC151::movingWindowToOtherDisplay() ;PgDn SC149 PgUp
@@ -9,13 +11,7 @@ AppsKey::RControl
 SetCapsLockState, off
 ;LControl::#Space
 
-#IfWinActive ahk_exe chrome.exe
-#If GetKeyState("Ctrl") == 0 && GetKeyState("Alt") == 0 && GetKeyState("LButton") == 1
-RShift::
-Send {n}
-keywait, RShift
-return
-
+#IfWinActive ahk_exe Resolve.exe
 #If GetKeyState("Ctrl") == 0 && GetKeyState("Alt") == 0 && GetKeyState("LButton") == 1
 LShift::
 Send {n}
@@ -214,8 +210,7 @@ Space & WheelUp::Volume_Down
 Space & [::Send !{Left}
 Space & \::
 Space & ]::Send !{Right}
-Space & `::Del
-Space & `;::Send ^{BS}
+Space & `::Home
 Space & a::
 While GetKeyState("a", "P") {
  Send {WheelDown}
@@ -225,7 +220,7 @@ Return
 Space & b::
 Space & c::
 Space & d::BS
-Space & e::Down
+Space & e::Up
 Space & f::MButton
 Space & g::RButton
 Space & h::Send {Blind}{Left}
@@ -244,11 +239,11 @@ While GetKeyState("q", "P") {
  Sleep, 5
 }
 Return
-Space & r::Up
+Space & r::Down
 Space & s::Send, {Click 2}
 Space & t::Right
 Space & u::Send ^{PgUp}
-Space & v::
+Space & v::#v
 Space & w::Left
 Space & x::
 Space & y::Send !{F4}
