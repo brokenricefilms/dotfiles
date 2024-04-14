@@ -3,6 +3,19 @@
 #SingleInstance Force
 #InstallMouseHook
 #InstallKeybdHook
+SetBatchLines -1
+ListLines Off
+SendMode Input
+SetWorkingDir %A_ScriptDir%
+
+#Include, %A_ScriptDir%\lib\TimelineClick.ahk
+
+#IfWinActive, ahk_exe Resolve.exe
+{
+    F3:: ;Change hotkey to desired hotkey
+    TimelineClick(["\ImageSearch\Resolve\EditPage.png", "\ImageSearch\Resolve\Fairlight.png",  "\ImageSearch\Resolve\CutPage.png"], [54,52,57])
+    return
+}
 
 SC056::RControl ; MSI |\ key
 ;SC151::movingWindowToOtherDisplay() ;PgDn SC149 PgUp
@@ -10,6 +23,7 @@ SC147::#^v
 AppsKey::RControl
 SetCapsLockState, off
 ;LControl::#Space
+
 
 #IfWinActive ahk_exe Resolve.exe
 #If GetKeyState("Ctrl") == 0 && GetKeyState("Alt") == 0 && GetKeyState("LButton") == 1
