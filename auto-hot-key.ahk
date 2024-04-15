@@ -1,4 +1,4 @@
-;KeyHistory
+KeyHistory
 #NoEnv
 #SingleInstance Force
 #InstallMouseHook
@@ -8,6 +8,12 @@ ListLines Off
 SendMode Input
 SetWorkingDir %A_ScriptDir%
 
+SC056::RControl
+;SC151::movingWindowToOtherDisplay() ;PgDn SC149 PgUp
+SC147::#^v
+AppsKey::RControl
+SetCapsLockState, off
+
 #Include, %A_ScriptDir%\lib\TimelineClick.ahk
 
 #IfWinActive, ahk_exe Resolve.exe
@@ -16,14 +22,6 @@ SetWorkingDir %A_ScriptDir%
     TimelineClick(["\ImageSearch\Resolve\EditPage.png", "\ImageSearch\Resolve\Fairlight.png",  "\ImageSearch\Resolve\CutPage.png"], [54,52,57])
     return
 }
-
-SC056::RControl ; MSI |\ key
-;SC151::movingWindowToOtherDisplay() ;PgDn SC149 PgUp
-SC147::#^v
-AppsKey::RControl
-SetCapsLockState, off
-;LControl::#Space
-
 
 #IfWinActive ahk_exe Resolve.exe
 #If GetKeyState("Ctrl") == 0 && GetKeyState("Alt") == 0 && GetKeyState("LButton") == 1
