@@ -1,4 +1,4 @@
-KeyHistory
+;KeyHistory
 #NoEnv
 #SingleInstance Force
 #InstallMouseHook
@@ -181,12 +181,7 @@ Tab::Tab
 
 Space & '::
 Space & ,::Send {PgUp}
-Space & -::
-While GetKeyState("-", "P") {
- Send {Volume_Down}
- Sleep, 30
-}
-Return
+Space & -::Volume_Down
 Space & .::
 Space & /::
 Space & 0::
@@ -199,12 +194,7 @@ Space & 6::
 Space & 7::
 Space & 8::
 Space & 9::
-Space & =::
-While GetKeyState("=", "P") {
- Send {Volume_Up}
- Sleep, 30
-}
-Return
+Space & =::Volume_Up
 Space & F10::
 Space & F11::toggleMaxWindow()
 Space & F12::
