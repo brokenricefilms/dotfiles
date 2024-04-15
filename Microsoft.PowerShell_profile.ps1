@@ -4,6 +4,10 @@ $env:EDITOR = 'nvim'
 
 Set-Alias chrome 'C:\Program Files\Google\Chrome\Application\chrome.exe'
 
+function edit-startscript() {
+    nvim "C:\Users\master\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup-script.bat"
+}
+
 function change-dir-fzf() {
     $folder = fd --type directory --exclude scoop --exclude go --exclude .vscode --exclude bundle --exclude .git --exclude gems --exclude node_modules | fzf --height 50% --min-height 20 --reverse
     Set-Location $folder
