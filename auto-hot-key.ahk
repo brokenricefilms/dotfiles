@@ -13,23 +13,24 @@ SC056::RControl
 SC147::#^v
 AppsKey::RControl
 SetCapsLockState, off
+CapsLock::RControl
 
 #Include, %A_ScriptDir%\lib\TimelineClick.ahk
 
 #IfWinActive, ahk_exe Resolve.exe
 {
-    F3:: ;Change hotkey to desired hotkey
+    CapsLock:: ;Change hotkey to desired hotkey
     TimelineClick(["\ImageSearch\Resolve\EditPage.png", "\ImageSearch\Resolve\Fairlight.png",  "\ImageSearch\Resolve\CutPage.png"], [54,52,57])
     return
 }
 
-#IfWinActive ahk_exe Resolve.exe
-#If GetKeyState("Ctrl") == 0 && GetKeyState("Alt") == 0 && GetKeyState("LButton") == 1
-LShift::
-Send {n}
-keywait, LShift
-return
-#IfWinActive
+;#IfWinActive ahk_exe Resolve.exe
+;#If GetKeyState("Ctrl") == 0 && GetKeyState("Alt") == 0 && GetKeyState("LButton") == 1
+;LShift::
+;Send {n}
+;keywait, LShift
+;return
+;#IfWinActive
 
 #IfWinActive ahk_exe chrome.exe
 F2::^w

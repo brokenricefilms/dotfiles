@@ -8,6 +8,7 @@ winget install --id=GitHub.cli  -e
 # winget install --id=MilosParipovic.OneCommander -e
 winget install --id=Obsidian.Obsidian  -e
 winget install --id=OBSProject.OBSStudio  -e
+winget install --id=jurplel.qView  -e
 winget install neovim
 winget install mpv.net
 cp .gitconfig ~\
