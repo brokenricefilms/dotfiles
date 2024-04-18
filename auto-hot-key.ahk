@@ -1,4 +1,4 @@
-;KeyHistory
+#KeyHistory
 #NoEnv
 #SingleInstance Force
 #InstallMouseHook
@@ -20,7 +20,7 @@ CapsLock::RControl
 #IfWinActive, ahk_exe Resolve.exe
 {
     CapsLock:: ;Change hotkey to desired hotkey
-    TimelineClick(["\ImageSearch\Resolve\EditPage.png", "\ImageSearch\Resolve\Fairlight.png",  "\ImageSearch\Resolve\CutPage.png"], [54,52,57])
+    TimelineClick(["\ImageSearch\Resolve\EditPage.png", "\ImageSearch\Resolve\Fairlight.png",  "\ImageSearch\Resolve\CutPage.png"], [94,63,45])
     return
 }
 
@@ -155,7 +155,7 @@ Tab & a::Tab
 Tab & b::Tab
 Tab & c::Tab
 Tab & d::Tab
-Tab & e::Tab
+Tab & e::MButton
 Tab & f::Tab
 Tab & g::Tab
 Tab & h::Tab
@@ -168,12 +168,12 @@ Tab & n::Tab
 Tab & o::Tab
 Tab & p::Tab
 Tab & q::Tab
-Tab & r::Tab
+Tab & r::WheelUp
 Tab & s::Tab
 Tab & t::Tab
 Tab & u::Tab
 Tab & v::Tab
-Tab & w::Tab
+Tab & w::WheelDown
 Tab & x::Tab
 Tab & y::Tab
 Tab & z::Tab
@@ -220,6 +220,7 @@ While GetKeyState("a", "P") {
  Sleep, 5 
 }
 Return
+Space & `;::^BS
 Space & b::
 Space & c::
 Space & d::BS

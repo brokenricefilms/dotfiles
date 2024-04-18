@@ -11,4 +11,5 @@ winget install --id=OBSProject.OBSStudio  -e
 winget install --id=jurplel.qView  -e
 winget install neovim
 winget install mpv.net
+winget install hwmonitor
 cp .gitconfig ~\
