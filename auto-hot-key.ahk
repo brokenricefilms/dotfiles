@@ -155,7 +155,7 @@ Tab & a::Tab
 Tab & b::Tab
 Tab & c::Tab
 Tab & d::Tab
-Tab & e::MButton
+Tab & e::Tab
 Tab & f::Tab
 Tab & g::Tab
 Tab & h::Tab
@@ -168,12 +168,12 @@ Tab & n::Tab
 Tab & o::Tab
 Tab & p::Tab
 Tab & q::Tab
-Tab & r::WheelUp
+Tab & r::Tab
 Tab & s::Tab
 Tab & t::Tab
 Tab & u::Tab
 Tab & v::Tab
-Tab & w::WheelDown
+Tab & w::Tab
 Tab & x::Tab
 Tab & y::Tab
 Tab & z::Tab
