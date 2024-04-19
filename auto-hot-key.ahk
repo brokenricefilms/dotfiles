@@ -14,6 +14,8 @@ SC147::#^v
 AppsKey::RControl
 SetCapsLockState, off
 CapsLock::RControl
+RButton::MButton
+MButton::RButton
 
 #Include, %A_ScriptDir%\lib\TimelineClick.ahk
 
@@ -155,7 +157,7 @@ Tab & a::Tab
 Tab & b::Tab
 Tab & c::Tab
 Tab & d::Tab
-Tab & e::Tab
+Tab & e::MButton
 Tab & f::Tab
 Tab & g::Tab
 Tab & h::Tab
@@ -168,12 +170,12 @@ Tab & n::Tab
 Tab & o::Tab
 Tab & p::Tab
 Tab & q::Tab
-Tab & r::Tab
+Tab & r::WheelUp
 Tab & s::Tab
 Tab & t::Tab
 Tab & u::Tab
 Tab & v::Tab
-Tab & w::Tab
+Tab & w::WheelDown
 Tab & x::Tab
 Tab & y::Tab
 Tab & z::Tab
