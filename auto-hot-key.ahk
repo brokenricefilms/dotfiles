@@ -14,8 +14,8 @@ SC147::#^v
 AppsKey::RControl
 SetCapsLockState, off
 CapsLock::RControl
-RButton::MButton
-MButton::RButton
+;RButton::MButton
+;MButton::RButton
 
 #Include, %A_ScriptDir%\lib\TimelineClick.ahk
 
@@ -170,12 +170,22 @@ Tab & n::Tab
 Tab & o::Tab
 Tab & p::Tab
 Tab & q::Tab
-Tab & r::WheelUp
+Tab & r::
+While GetKeyState("r", "P") {
+ Send ^{WheelUp}
+ Sleep, 5
+}
+Return
 Tab & s::Tab
 Tab & t::Tab
 Tab & u::Tab
 Tab & v::Tab
-Tab & w::WheelDown
+Tab & w::
+While GetKeyState("w", "P") {
+ Send ^{WheelDown}
+ Sleep, 5
+}
+Return
 Tab & x::Tab
 Tab & y::Tab
 Tab & z::Tab
@@ -215,7 +225,11 @@ Space & WheelUp::Volume_Down
 Space & [::Send !{Left}
 Space & \::
 Space & ]::Send !{Right}
-Space & `::Home
+Space & `::
+While GetKeyState("``", "P") {
+ Send ^{WheelUp}
+ Sleep, 5 
+}
 Space & a::
 While GetKeyState("a", "P") {
  Send {WheelDown}
@@ -249,12 +263,17 @@ Space & r::Down
 Space & s::Send, {Click 2}
 Space & t::Right
 Space & u::Send ^{PgUp}
-Space & v::#v
+Space & v::
 Space & w::Left
-Space & x::
+Space & x::Del
 Space & y::Send !{F4}
 Space & z::^z
-Space & Tab::!Tab
+Space & Tab::
+While GetKeyState("Tab", "P") {
+ Send ^{WheelDown}
+ Sleep, 5
+}
+Return
 
  Space::Send  {Space}
 +Space::Send +{Space}
