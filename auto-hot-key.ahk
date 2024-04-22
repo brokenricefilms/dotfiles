@@ -22,7 +22,7 @@ CapsLock::RControl
 #IfWinActive, ahk_exe Resolve.exe
 {
     CapsLock:: ;Change hotkey to desired hotkey
-    TimelineClick(["\ImageSearch\Resolve\EditPage.png", "\ImageSearch\Resolve\Fairlight.png",  "\ImageSearch\Resolve\CutPage.png"], [94,63,45])
+    TimelineClick(["\ImageSearch\Resolve\EditPage.png", "\ImageSearch\Resolve\Fairlight.png",  "\ImageSearch\Resolve\CutPage.png"], [80,63,45])
     return
 }
 
