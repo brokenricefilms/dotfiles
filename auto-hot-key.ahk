@@ -170,22 +170,12 @@ Tab & n::Tab
 Tab & o::Tab
 Tab & p::Tab
 Tab & q::Tab
-Tab & r::
-While GetKeyState("r", "P") {
- Send ^{WheelUp}
- Sleep, 5
-}
-Return
+Tab & r::Send +{WheelUp}
 Tab & s::Tab
 Tab & t::Tab
 Tab & u::Tab
 Tab & v::Tab
-Tab & w::
-While GetKeyState("w", "P") {
- Send ^{WheelDown}
- Sleep, 5
-}
-Return
+Tab & w::Send +{WheelDown}
 Tab & x::Tab
 Tab & y::Tab
 Tab & z::Tab
@@ -225,15 +215,11 @@ Space & WheelUp::Volume_Down
 Space & [::Send !{Left}
 Space & \::
 Space & ]::Send !{Right}
-Space & `::
-While GetKeyState("``", "P") {
- Send ^{WheelUp}
- Sleep, 5 
-}
+Space & `::Send ^{WheelUp}
 Space & a::
 While GetKeyState("a", "P") {
  Send {WheelDown}
- Sleep, 5 
+ Sleep, 20
 }
 Return
 Space & `;::^BS
@@ -256,7 +242,7 @@ Space & p::Send ^{PgDn}
 Space & q::
 While GetKeyState("q", "P") {
  Send {WheelUp}
- Sleep, 5
+ Sleep, 20
 }
 Return
 Space & r::Down
@@ -268,12 +254,7 @@ Space & w::Left
 Space & x::Del
 Space & y::Send !{F4}
 Space & z::^z
-Space & Tab::
-While GetKeyState("Tab", "P") {
- Send ^{WheelDown}
- Sleep, 5
-}
-Return
+Space & Tab::Send ^{WheelDown}
 
  Space::Send  {Space}
 +Space::Send +{Space}
