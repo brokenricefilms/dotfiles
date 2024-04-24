@@ -48,6 +48,13 @@ F3::^PgUp
 F4::^PgDn
 #IfWinActive
 
+#IfWinActive ahk_exe floorp.exe
+F2::^w
+F1::^+t
+F3::^PgUp
+F4::^PgDn
+#IfWinActive
+
 #IfWinActive ahk_exe brave.exe
 F2::^w
 F1::^+t
@@ -249,7 +256,7 @@ Space & r::Down
 Space & s::Send, {Click 2}
 Space & t::Right
 Space & u::Send ^{PgUp}
-Space & v::
+Space & v::#Tab
 Space & w::Left
 Space & x::Del
 Space & y::Send !{F4}
