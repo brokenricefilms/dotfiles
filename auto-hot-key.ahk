@@ -62,19 +62,6 @@ F3::^PgUp
 F4::^PgDn
 #IfWinActive
 
-#IfWinActive ahk_exe WindowsTerminal.exe
-F11::!+-
-F12::!+=
-F1::^+w
-F2::^+t
-F3::^PgDn
-F4::^PgUp
-F7::!Left
-F8::!Down
-F9::!Up
-F10::!Right
-#IfWinActive
-
 #IfWinActive ahk_exe Obsidian.exe
 F1::+1
 F2::+2
@@ -164,7 +151,7 @@ Tab & a::Tab
 Tab & b::Tab
 Tab & c::Tab
 Tab & d::Tab
-Tab & e::MButton
+Tab & e::Run, "C:\Users\master\editing"
 Tab & f::Tab
 Tab & g::Tab
 Tab & h::Tab
@@ -177,12 +164,12 @@ Tab & n::Tab
 Tab & o::Tab
 Tab & p::Tab
 Tab & q::Tab
-Tab & r::Send +{WheelUp}
+Tab & r::
 Tab & s::Tab
 Tab & t::Tab
 Tab & u::Tab
 Tab & v::Tab
-Tab & w::Send +{WheelDown}
+Tab & w::Run, "C:\Users\master\Downloads"
 Tab & x::Tab
 Tab & y::Tab
 Tab & z::Tab
