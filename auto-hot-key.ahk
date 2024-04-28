@@ -11,12 +11,11 @@ SetWorkingDir %A_ScriptDir%
 SC056::RControl
 ;SC151::movingWindowToOtherDisplay() ;PgDn SC149 PgUp
 Home::#^v
-End::#^c
 AppsKey::RControl
 SetCapsLockState, off
 CapsLock::RControl
-;RButton::MButton
-;MButton::RButton
+RButton::MButton
+MButton::RButton
 
 #Include, %A_ScriptDir%\lib\TimelineClick.ahk
 
