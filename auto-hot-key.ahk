@@ -10,17 +10,18 @@ SetWorkingDir %A_ScriptDir%
 
 SC056::RControl
 ;SC151::movingWindowToOtherDisplay() ;PgDn SC149 PgUp
-Home::!^F11
-End::!^m
+Home::#^v
 AppsKey::RControl
+SetCapsLockState, off
 CapsLock::RControl
-Insert::CapsLock
+RButton::MButton
+MButton::RButton
 
 #Include, %A_ScriptDir%\lib\TimelineClick.ahk
 
 #IfWinActive, ahk_exe Resolve.exe
 {
-    Capslock::
+    CapsLock:: ;Change hotkey to desired hotkey
     TimelineClick(["\ImageSearch\Resolve\EditPage.png", "\ImageSearch\Resolve\Fairlight.png",  "\ImageSearch\Resolve\CutPage.png"], [80,63,45])
     return
 }
@@ -114,49 +115,114 @@ toggleMaxWindow()
   }
 }
 
-Tab & e::MButton
-Tab & w::
-While GetKeyState("w", "P") {
- Send {WheelDown}
- Sleep, 20
-}
-Return
+Tab & ,::Tab
+Tab & -::Tab
+Tab & .::Tab
+Tab & /::Tab
+Tab & 0::Tab
+Tab & 1::Tab
+Tab & 2::Tab
+Tab & 3::Tab
+Tab & 4::Tab
+Tab & 5::Tab
+Tab & 6::Tab
+Tab & 7::Tab
+Tab & 8::Tab
+Tab & 9::Tab
+Tab & =::Tab
+Tab & F10::Tab
+Tab & F11::Tab
+Tab & F12::Tab
+Tab & F1::Tab
+Tab & F2::Tab
+Tab & F3::Tab
+Tab & F4::Tab
+Tab & F5::Tab
+Tab & F6::Tab
+Tab & F7::Tab
+Tab & F8::Tab
+Tab & F9::Tab
+Tab & [::Tab
+Tab & \::Tab
+Tab & ]::Tab
+Tab & `::Tab
+Tab & `;::Tab
+Tab & a::Tab
+Tab & b::Tab
+Tab & c::Tab
+Tab & d::Tab
+Tab & e::Run, "C:\Users\master\editing"
+Tab & f::Tab
+Tab & g::Tab
+Tab & h::Tab
+Tab & i::Tab
+Tab & j::Tab
+Tab & k::Tab
+Tab & l::Tab
+Tab & m::Tab
+Tab & n::Tab
+Tab & o::Tab
+Tab & p::Tab
+Tab & q::Tab
 Tab & r::
-While GetKeyState("r", "P") {
- Send {WheelUp}
- Sleep, 20
-}
-Return
+Tab & s::Tab
+Tab & t::Tab
+Tab & u::Tab
+Tab & v::Tab
+Tab & w::Run, "C:\Users\master\Downloads"
+Tab & x::Tab
+Tab & y::Tab
+Tab & z::Tab
 
 Tab::Tab
 
+Space & '::
 Space & ,::Send {PgUp}
 Space & -::Volume_Down
+Space & .::
+Space & /::
+Space & 0::
 Space & 1::Send ^#1
 Space & 2::Send ^#2
 Space & 3::Send ^#3
 Space & 4::Send ^#4
 Space & 5::Send ^#5
+Space & 6::
+Space & 7::
+Space & 8::
+Space & 9::
 Space & =::Volume_Up
+Space & F10::
 Space & F11::toggleMaxWindow()
+Space & F12::
 Space & F1::Send #^6
 Space & F2::Send #^7
 Space & F3::Send #^8
 Space & F4::Send #^9
 Space & F5::Send #^0
+Space & F6::
+Space & F7::
+Space & F8::
 Space & F9::Reload
 Space & WheelDown::Volume_Up
 Space & WheelUp::Volume_Down
-Space & w::Left
 Space & [::Send !{Left}
+Space & \::
 Space & ]::Send !{Right}
-Space & `::Run, "C:\Users\master\editing\Projects"
+Space & `::Send ^{WheelUp}
+Space & a::
+While GetKeyState("a", "P") {
+ Send {WheelDown}
+ Sleep, 20
+}
+Return
 Space & `;::^BS
+Space & b::
 Space & c::^c
 Space & d::BS
 Space & e::Up
 Space & f::MButton
-Space & g::
+Space & g::RButton
 Space & h::Send {Blind}{Left}
 Space & i::Send {Blind}{Home}
 Space & j::Send {Blind}{Down}
@@ -167,14 +233,22 @@ Space & m::Send {PgDn}
 Space & n::^t
 Space & o::Send {Blind}{End}
 Space & p::Send ^{PgDn}
+Space & q::
+While GetKeyState("q", "P") {
+ Send {WheelUp}
+ Sleep, 20
+}
+Return
 Space & r::Down
+Space & s::Send, {Click 2}
 Space & t::Right
 Space & u::Send ^{PgUp}
 Space & v::^v
+Space & w::Left
 Space & x::Del
 Space & y::Send !{F4}
 Space & z::^z
-Space & Tab::Run, "C:\Users\master\Downloads"
+Space & Tab::Send ^{WheelDown}
 
  Space::Send  {Space}
 +Space::Send +{Space}
