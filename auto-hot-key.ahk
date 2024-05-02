@@ -10,12 +10,14 @@ SetWorkingDir %A_ScriptDir%
 
 SC056::RControl
 ;SC151::movingWindowToOtherDisplay() ;PgDn SC149 PgUp
-Home::#^v
+Home::!^F11
 AppsKey::RControl
 SetCapsLockState, off
 CapsLock::RControl
 RButton::MButton
 MButton::RButton
+Insert::Capslock
+End::!^m
 
 #Include, %A_ScriptDir%\lib\TimelineClick.ahk
 
@@ -115,99 +117,29 @@ toggleMaxWindow()
   }
 }
 
-Tab & ,::Tab
-Tab & -::Tab
-Tab & .::Tab
-Tab & /::Tab
-Tab & 0::Tab
-Tab & 1::Tab
-Tab & 2::Tab
-Tab & 3::Tab
-Tab & 4::Tab
-Tab & 5::Tab
-Tab & 6::Tab
-Tab & 7::Tab
-Tab & 8::Tab
-Tab & 9::Tab
-Tab & =::Tab
-Tab & F10::Tab
-Tab & F11::Tab
-Tab & F12::Tab
-Tab & F1::Tab
-Tab & F2::Tab
-Tab & F3::Tab
-Tab & F4::Tab
-Tab & F5::Tab
-Tab & F6::Tab
-Tab & F7::Tab
-Tab & F8::Tab
-Tab & F9::Tab
-Tab & [::Tab
-Tab & \::Tab
-Tab & ]::Tab
-Tab & `::Tab
-Tab & `;::Tab
-Tab & a::Tab
-Tab & b::Tab
-Tab & c::Tab
-Tab & d::Tab
-Tab & e::Run, "C:\Users\master\editing"
-Tab & f::Tab
-Tab & g::Tab
-Tab & h::Tab
-Tab & i::Tab
-Tab & j::Tab
-Tab & k::Tab
-Tab & l::Tab
-Tab & m::Tab
-Tab & n::Tab
-Tab & o::Tab
-Tab & p::Tab
-Tab & q::Tab
-Tab & r::
-Tab & s::Tab
-Tab & t::Tab
-Tab & u::Tab
-Tab & v::Tab
+Tab & e::Run, "C:\Users\master\editing\Projects"
 Tab & w::Run, "C:\Users\master\Downloads"
-Tab & x::Tab
-Tab & y::Tab
-Tab & z::Tab
 
 Tab::Tab
 
-Space & '::
 Space & ,::Send {PgUp}
 Space & -::Volume_Down
-Space & .::
-Space & /::
-Space & 0::
 Space & 1::Send ^#1
 Space & 2::Send ^#2
 Space & 3::Send ^#3
 Space & 4::Send ^#4
 Space & 5::Send ^#5
-Space & 6::
-Space & 7::
-Space & 8::
-Space & 9::
 Space & =::Volume_Up
-Space & F10::
 Space & F11::toggleMaxWindow()
-Space & F12::
 Space & F1::Send #^6
 Space & F2::Send #^7
 Space & F3::Send #^8
 Space & F4::Send #^9
 Space & F5::Send #^0
-Space & F6::
-Space & F7::
-Space & F8::
 Space & F9::Reload
 Space & WheelDown::Volume_Up
 Space & WheelUp::Volume_Down
 Space & [::Send !{Left}
-Space & \::
 Space & ]::Send !{Right}
 Space & `::Send ^{WheelUp}
 Space & a::
@@ -217,7 +149,6 @@ While GetKeyState("a", "P") {
 }
 Return
 Space & `;::^BS
-Space & b::
 Space & c::^c
 Space & d::BS
 Space & e::Up
@@ -246,9 +177,9 @@ Space & u::Send ^{PgUp}
 Space & v::^v
 Space & w::Left
 Space & x::Del
-Space & y::Send !{F4}
 Space & z::^z
 Space & Tab::Send ^{WheelDown}
+Space & Capslock::Send !{F4}
 
  Space::Send  {Space}
 +Space::Send +{Space}
