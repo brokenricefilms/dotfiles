@@ -30,9 +30,9 @@ End::!^m
 F2::^w
 F1::^+t
 F3::
-Send +{F10}s
-Sleep, 10
-Send s
+Send, +{F10}
+Sleep, 20
+Send, s
 return
 #IfWinActive
 
@@ -163,9 +163,9 @@ Space & z::^z
 Space & Tab::Send ^{WheelDown}
 Space & Capslock::Send !{F4}
 Space & Enter::
-clipboard := ""
-Send, ^a^c
-clipboard := clipboard
+Send, ^a
+Sleep, 20
+Send, ^c
 Sleep, 20
 WinActivateBottom, ahk_exe chrome.exe
 Sleep, 20
@@ -181,7 +181,6 @@ Send, "
 Sleep, 20
 Send, {enter}
 return
-
 
  Space::Send  {Space}
 +Space::Send +{Space}
