@@ -14,8 +14,6 @@ Home::!^F11
 AppsKey::RControl
 SetCapsLockState, off
 CapsLock::RControl
-RButton::MButton
-MButton::RButton
 Insert::Capslock
 End::!^m
 
@@ -28,40 +26,24 @@ End::!^m
     return
 }
 
-;#IfWinActive ahk_exe Resolve.exe
-;#If GetKeyState("Ctrl") == 0 && GetKeyState("Alt") == 0 && GetKeyState("LButton") == 1
-;LShift::
-;Send {n}
-;keywait, LShift
-;return
-;#IfWinActive
-
 #IfWinActive ahk_exe chrome.exe
 F2::^w
 F1::^+t
-F3::^PgUp
-F4::^PgDn
+F3::
+Send +{F10}s
+Sleep, 10
+Send s
+return
 #IfWinActive
 
-#IfWinActive ahk_exe firefox.exe
-F2::^w
-F1::^+t
-F3::^PgUp
-F4::^PgDn
-#IfWinActive
-
-#IfWinActive ahk_exe floorp.exe
-F2::^w
-F1::^+t
-F3::^PgUp
-F4::^PgDn
-#IfWinActive
-
-#IfWinActive ahk_exe brave.exe
-F2::^w
-F1::^+t
-F3::^PgUp
-F4::^PgDn
+#IfWinActive ahk_exe Discord.exe
+F1::
+Send, ^k
+Sleep, 10
+Send, brokenricefilms
+Sleep, 10
+Send, {Enter}
+return
 #IfWinActive
 
 #IfWinActive ahk_exe Obsidian.exe
@@ -180,6 +162,26 @@ Space & x::Del
 Space & z::^z
 Space & Tab::Send ^{WheelDown}
 Space & Capslock::Send !{F4}
+Space & Enter::
+clipboard := ""
+Send, ^a^c
+clipboard := clipboard
+Sleep, 20
+WinActivateBottom, ahk_exe chrome.exe
+Sleep, 20
+Send, ^t
+Sleep, 20
+Send, @gemini{Space}
+Sleep, 20
+Send, gramma check "
+Sleep, 20
+Send, ^v
+Sleep, 20
+Send, "
+Sleep, 20
+Send, {enter}
+return
+
 
  Space::Send  {Space}
 +Space::Send +{Space}
