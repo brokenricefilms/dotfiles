@@ -31,7 +31,7 @@ F2::^w
 F1::^+t
 F3::
 Send, +{F10}
-Sleep, 20
+Sleep, 100
 Send, s
 return
 #IfWinActive
