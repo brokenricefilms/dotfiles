@@ -17,6 +17,10 @@ SetCapsLockState, off
 CapsLock::RControl
 Insert::Capslock
 
+:*:,m::brokenricefilms@gmail.com
+:*:,po::Checkout my portfolio: https://brokenricefilms.pages.dev/portfolio
+:*:,ph::0765650452
+
 #Include, %A_ScriptDir%\lib\TimelineClick.ahk
 
 #IfWinActive, ahk_exe Resolve.exe
