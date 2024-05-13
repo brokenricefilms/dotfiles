@@ -1,0 +1,5 @@
+Start /b "" "C:\users\master\repos\brokenricefilms\dotfiles\auto-hot-key.ahk"
+Start /b "" "C:\Program Files\WindowsApps\44576milosp.OneCommander_3.72.1.0_neutral__p0rg76fmnrgsm\Rapidrive\OneCommander.exe"
+Start /b "" "C:\Users\master\AppData\Local\Programs\obsidian\Obsidian.exe"
+Start /b "" "C:\Program Files\Google\Chrome\Application\chrome.exe"
+Start /b "" "C:\Program Files\Blackmagic Design\DaVinci Resolve\Resolve.exe"
