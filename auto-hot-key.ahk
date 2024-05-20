@@ -16,10 +16,12 @@ AppsKey::RControl
 SetCapsLockState, off
 CapsLock::RControl
 Insert::Capslock
+#WheelDown::Volume_Up
+#WheelUp::Volume_Down
 
-:*:,m::brokenricefilms@gmail.com
-:*:,po::Checkout my portfolio: https://youtube.com/@brokenricefilms
-:*:,ph::0765650452
+:*:/m::brokenricefilms@gmail.com
+:*:/po::Checkout my portfolio: https://youtube.com/@brokenricefilms
+:*:/ph::0765650452
 
 #Include, %A_ScriptDir%\lib\TimelineClick.ahk
 
@@ -123,8 +125,6 @@ Space & F3::Send #^8
 Space & F4::Send #^9
 Space & F5::Send #^0
 Space & F9::Reload
-Space & WheelDown::Volume_Up
-Space & WheelUp::Volume_Down
 Space & [::Send !{Left}
 Space & ]::Send !{Right}
 Space & `::Send ^{WheelUp}
@@ -166,6 +166,7 @@ Space & x::Del
 Space & z::^z
 Space & Tab::Send ^{WheelDown}
 Space & Capslock::Send !{F4}
+Space & Esc::#v
 Space & Enter::
 Send, ^a
 Sleep, 20
