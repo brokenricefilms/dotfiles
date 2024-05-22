@@ -19,9 +19,9 @@ Insert::Capslock
 #WheelDown::Volume_Up
 #WheelUp::Volume_Down
 
-:*:/m::brokenricefilms@gmail.com
-:*:/po::Checkout my portfolio: https://youtube.com/@brokenricefilms
-:*:/ph::0765650452
+:*:.m::brokenricefilms@gmail.com
+:*:.po::Checkout my portfolio: https://youtube.com/@brokenricefilms
+:*:.ph::0765650452
 
 #Include, %A_ScriptDir%\lib\TimelineClick.ahk
 
@@ -165,8 +165,8 @@ Space & w::Left
 Space & x::Del
 Space & z::^z
 Space & Tab::Send ^{WheelDown}
-Space & Capslock::Send !{F4}
-Space & Esc::#v
+Space & Esc::Send !{F4}
+Space & CapsLock::#v
 Space & Enter::
 Send, ^a
 Sleep, 20
