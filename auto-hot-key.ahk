@@ -19,10 +19,6 @@ Insert::Capslock
 #WheelDown::Volume_Up
 #WheelUp::Volume_Down
 
-:*:.m::brokenricefilms@gmail.com
-:*:.po::Checkout my portfolio: https://youtube.com/@brokenricefilms
-:*:.ph::0765650452
-
 #Include, %A_ScriptDir%\lib\TimelineClick.ahk
 
 #IfWinActive, ahk_exe Resolve.exe
