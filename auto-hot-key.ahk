@@ -18,6 +18,8 @@ CapsLock::RControl
 Insert::Capslock
 #WheelDown::Volume_Up
 #WheelUp::Volume_Down
+PgUp::Volume_Up
+PgDn::Volume_Down
 
 #Include, %A_ScriptDir%\lib\TimelineClick.ahk
 
