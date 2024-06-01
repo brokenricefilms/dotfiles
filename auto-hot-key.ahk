@@ -16,10 +16,7 @@ AppsKey::RControl
 SetCapsLockState, off
 CapsLock::RControl
 Insert::Capslock
-#WheelDown::Volume_Up
-#WheelUp::Volume_Down
-PgUp::Volume_Up
-PgDn::Volume_Down
+!^F1::Send, #^0
 
 #Include, %A_ScriptDir%\lib\TimelineClick.ahk
 
@@ -31,6 +28,16 @@ PgDn::Volume_Down
 }
 
 #IfWinActive ahk_exe chrome.exe
+F2::^w
+F1::^+t
+F3::
+Send, +{F10}
+Sleep, 100
+Send, s
+return
+#IfWinActive
+
+#IfWinActive ahk_exe floorp.exe
 F2::^w
 F1::^+t
 F3::
@@ -165,25 +172,8 @@ Space & z::^z
 Space & Tab::Send ^{WheelDown}
 Space & Esc::Send !{F4}
 Space & CapsLock::#v
-Space & Enter::
-Send, ^a
-Sleep, 20
-Send, ^c
-Sleep, 20
-WinActivateBottom, ahk_exe chrome.exe
-Sleep, 20
-Send, ^t
-Sleep, 20
-Send, @gemini{Space}
-Sleep, 20
-Send, gramma check "
-Sleep, 20
-Send, ^v
-Sleep, 20
-Send, "
-Sleep, 20
-Send, {enter}
-return
+Space & WheelDown::Volume_Up
+Space & WheelUp::Volume_Down
 
  Space::Send  {Space}
 +Space::Send +{Space}
