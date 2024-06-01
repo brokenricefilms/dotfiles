@@ -17,6 +17,8 @@ SetCapsLockState, off
 CapsLock::RControl
 Insert::Capslock
 !^F1::Send, #^0
+#WheelDown::Volume_Up
+#WheelUp::Volume_Down
 
 #Include, %A_ScriptDir%\lib\TimelineClick.ahk
 
@@ -172,8 +174,6 @@ Space & z::^z
 Space & Tab::Send ^{WheelDown}
 Space & Esc::Send !{F4}
 Space & CapsLock::#v
-Space & WheelDown::Volume_Up
-Space & WheelUp::Volume_Down
 
  Space::Send  {Space}
 +Space::Send +{Space}
