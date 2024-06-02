@@ -68,6 +68,15 @@ function auto-git-commit() {
 }
 Set-Alias aa auto-git-commit
 
+function auto-git-commit-format() {
+    pnpm format
+    git add .
+    git commit -m "👌Auto commit"
+    git pull
+    git push
+}
+Set-Alias aaa auto-git-commit-format
+
 function p() { git push }
 
 function Get-ChildItem-Hidden() { Get-ChildItem -Force }
