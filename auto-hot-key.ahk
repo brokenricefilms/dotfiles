@@ -171,7 +171,7 @@ Space & v::^v
 Space & w::Left
 Space & x::Del
 Space & z::^z
-Space & Tab::Send ^{WheelDown}
+Space & Tab::#d
 Space & Esc::Send !{F4}
 Space & CapsLock::#v
 
