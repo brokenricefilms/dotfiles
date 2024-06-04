@@ -36,6 +36,7 @@ function edit-nvim-config() { nvim C:\Users\master\AppData\Local\nvim\init.lua }
 function update-dotfiles() {
     cp $profile ~\repos\brokenricefilms\dotfiles\
     cp C:\Users\master\AppData\Local\nvim\init.lua ~\repos\brokenricefilms\dotfiles\nvim
+    cp C:\Users\master\.gitconfig ~\repos\brokenricefilms\dotfiles\
     cd ~\repos\brokenricefilms\dotfiles\
     git add Microsoft.PowerShell_profile.ps1
     git add nvim\init.lua
