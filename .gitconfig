@@ -6,6 +6,7 @@ email = brokenricefilms@gmail.com
 editor = nvim
 whitespace = fix
 excludesfile = ~/.gitignore
+	autocrlf = true
 
 [merge]
 tool = vimdiff
