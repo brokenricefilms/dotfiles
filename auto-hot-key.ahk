@@ -39,6 +39,16 @@ Send, s
 return
 #IfWinActive
 
+#IfWinActive ahk_exe firefox.exe
+F2::^w
+F1::^+t
+F3::
+Send, +{F10}
+Sleep, 100
+Send, s
+return
+#IfWinActive
+
 #IfWinActive ahk_exe floorp.exe
 F2::^w
 F1::^+t

@@ -4,6 +4,9 @@ $env:EDITOR = 'nvim'
 
 Set-Alias chrome 'C:\Program Files\Google\Chrome\Application\chrome.exe'
 
+function wi() { winget install $args}
+function ws() { winget search $args}
+
 function edit-startscript() {
     nvim "C:\Users\master\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup-script.bat"
 }
