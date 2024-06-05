@@ -21,6 +21,7 @@ Insert::Capslock
 #WheelUp::Volume_Down
 
 #Include, %A_ScriptDir%\lib\TimelineClick.ahk
+#Include, %A_ScriptDir%\lib\snippets.ahk
 
 #IfWinActive, ahk_exe Resolve.exe
 {
