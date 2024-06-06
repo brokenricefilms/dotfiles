@@ -29,6 +29,10 @@ require("lazy").setup({
             },
         },
     },
+    {
+        "projekt0n/github-nvim-theme",
+        event = "VeryLazy",
+    },
     { 
         "nvim-lua/plenary.nvim", 
         event = "VeryLazy",
@@ -58,7 +62,8 @@ vim.keymap.set('n', '<leader>b', builtin.buffers, {})
 
 vim.keymap.set("i", "jk", "<Esc>")
 
-vim.opt.background = "dark"
+vim.opt.background = "light"
+vim.cmd("colorscheme github_light")
 
 vim.opt.clipboard = "unnamedplus"
 
