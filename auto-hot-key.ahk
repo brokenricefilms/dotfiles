@@ -31,13 +31,18 @@ AppsKey::RControl
 F2::^w
 F1::^+t
 F3::
-Send, +{F10}
-Sleep, 100
-Send, s
+Sleep, 50
+Send, ^c
+Sleep, 50
+Send, ^t
+Send, ^v
+Send, {enter}
 return
 F4::
 Send, ^c
+Sleep, 50
 Send, ^t
+Sleep, 50
 Send, y{Space}
 Send, ^v
 Send, {enter}
