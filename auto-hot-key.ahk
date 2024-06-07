@@ -13,9 +13,6 @@ SC056::RControl
 Home::^#F11
 End::^#F12
 AppsKey::RControl
-SetCapsLockState, off
-CapsLock::RControl
-Insert::Capslock
 !^F1::Send, #^0
 #WheelDown::Volume_Up
 #WheelUp::Volume_Down
@@ -25,7 +22,7 @@ Insert::Capslock
 
 #IfWinActive, ahk_exe Resolve.exe
 {
-    CapsLock:: ;Change hotkey to desired hotkey
+    F13:: ;Change hotkey to desired hotkey
     TimelineClick(["\ImageSearch\Resolve\EditPage.png", "\ImageSearch\Resolve\Fairlight.png",  "\ImageSearch\Resolve\CutPage.png"], [70,63,45])
     return
 }
@@ -38,25 +35,12 @@ Send, +{F10}
 Sleep, 100
 Send, s
 return
-#IfWinActive
-
-#IfWinActive ahk_exe firefox.exe
-F2::^w
-F1::^+t
-F3::
-Send, +{F10}
-Sleep, 100
-Send, s
-return
-#IfWinActive
-
-#IfWinActive ahk_exe floorp.exe
-F2::^w
-F1::^+t
-F3::
-Send, +{F10}
-Sleep, 100
-Send, s
+F4::
+Send, ^c
+Send, ^t
+Send, y{Space}
+Send, ^v
+Send, {enter}
 return
 #IfWinActive
 
@@ -184,7 +168,6 @@ Space & x::Del
 Space & z::^z
 Space & Tab::#d
 Space & Esc::Send !{F4}
-Space & CapsLock::#v
 
  Space::Send  {Space}
 +Space::Send +{Space}
