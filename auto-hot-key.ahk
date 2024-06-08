@@ -49,20 +49,10 @@ Send, {enter}
 return
 #IfWinActive
 
-#IfWinActive ahk_exe Discord.exe
-F1::
-Send, ^k
-Sleep, 10
-Send, brokenricefilms
-Sleep, 10
-Send, {Enter}
-return
-#IfWinActive
-
-#IfWinActive ahk_exe Obsidian.exe
-F1::+1
-F2::+2
-F3::7
+#IfWinActive ahk_exe WindowsTerminal.exe
+F1::^+t
+F2::^+w
+f3::^+p
 #IfWinActive
 
 movingWindowToOtherDisplay() {
@@ -114,6 +104,7 @@ toggleMaxWindow()
 
 Tab & e::Run, "C:\Users\master\editing\Projects"
 Tab & w::Run, "C:\Users\master\Downloads"
+Tab & r::Run, "C:\Users\master\My Drive"
 
 Tab::Tab
 

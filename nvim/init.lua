@@ -122,6 +122,7 @@ vim.keymap.set("n", "<leader>k", "<C-w>s:e %:h<enter>", { silent = true })
 vim.keymap.set("n", "<leader>h", "<C-w>v:e %:h<enter>", { silent = true })
 
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
+
 vim.api.nvim_create_autocmd("TextYankPost", {
     callback = function()
         vim.highlight.on_yank()
