@@ -59,6 +59,7 @@ local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>f', builtin.find_files, {})
 vim.keymap.set('n', '<leader>g', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>b', builtin.buffers, {})
+vim.keymap.set('n', '<leader>;', builtin.commands, {})
 
 vim.keymap.set("i", "jk", "<Esc>")
 
@@ -90,6 +91,7 @@ vim.opt.hidden = true
 vim.opt.history = 100
 vim.opt.lazyredraw = true
 vim.opt.updatetime = 100
+vim.opt.undofile = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -121,6 +123,11 @@ vim.keymap.set("n", "<leader>k", "<C-w>s:e %:h<enter>", { silent = true })
 
 vim.keymap.set("n", "<leader>h", "<C-w>v:e %:h<enter>", { silent = true })
 
+vim.api.nvim_command [[command! -nargs=0 CopyFullFilePath let @+ = expand('%:p')]]
+vim.api.nvim_command [[command! -nargs=0 EditNeovimConfig edit C:\Users\master\AppData\Local\nvim\init.lua]]
+vim.api.nvim_command [[command! -nargs=0 EditPowerShellConfig edit C:\Users\master\Documents\PowerShell\Microsoft.PowerShell_profile.ps1]]
+vim.api.nvim_command [[command! -nargs=0 EditWindowsTerminalConfig edit C:\Users\master\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json]]
+
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
@@ -148,5 +155,13 @@ vim.api.nvim_create_autocmd({ "InsertEnter", "WinLeave" }, {
             vim.api.nvim_win_set_var(0, "auto-cursorline", cl)
             vim.wo.cursorline = false
         end
+    end,
+})
+
+-- Restore cursor position
+vim.api.nvim_create_autocmd({ "BufReadPost" }, {
+    pattern = { "*" },
+    callback = function()
+        vim.api.nvim_exec('silent! normal! g`"zv', false)
     end,
 })
