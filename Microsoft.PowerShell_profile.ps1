@@ -40,6 +40,7 @@ function update-dotfiles() {
     cp $profile ~\repos\brokenricefilms\dotfiles\
     cp C:\Users\master\AppData\Local\nvim\init.lua ~\repos\brokenricefilms\dotfiles\nvim
     cp C:\Users\master\.gitconfig ~\repos\brokenricefilms\dotfiles\
+    cp C:\Users\master\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json ~\repos\brokenricefilms\dotfiles\windows-terminal\
     cd ~\repos\brokenricefilms\dotfiles\
     auto-git-commit
     cd -
