@@ -112,6 +112,7 @@ function which ($command) {
 function update() {
     winget upgrade --all
     update-dotfiles
+    sync-data
 }
 
 function download-video( ) {
@@ -124,6 +125,13 @@ function download-audio() {
     yt-dlp --extract-audio --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" $args
 }
 Set-Alias da download-audio
+
+function sync-data() {
+    cd ~\repos\brokenricefilms\fonts\
+    auto-git-commit
+    cd ~\repos\brokenricefilms\davinci-resolve\
+    auto-git-commit
+}
 
 function sync-music() {
     cd ~\Music\
