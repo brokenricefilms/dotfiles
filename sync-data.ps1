@@ -13,3 +13,6 @@ auto-git-commit
 
 cd C:\Users\master\repos\brokenricefilms\notes
 auto-git-commit
+
+cd C:\Users\master\repos\brokenricefilms\dotfiles
+auto-git-commit
