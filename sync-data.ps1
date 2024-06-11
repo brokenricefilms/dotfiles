@@ -24,3 +24,6 @@ auto-git-commit
 
 cd C:\Users\master\repos\brokenricefilms\ok
 auto-git-commit
+
+cd C:\Users\master\repos\brokenricefilms\docs
+auto-git-commit
