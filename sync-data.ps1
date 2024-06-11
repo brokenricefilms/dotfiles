@@ -19,8 +19,5 @@ cp C:\Users\master\AppData\Local\nvim\init.lua ~\repos\brokenricefilms\dotfiles\
 cp C:\Users\master\.gitconfig ~\repos\brokenricefilms\dotfiles\
 cp C:\Users\master\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json ~\repos\brokenricefilms\dotfiles\windows-terminal\
 
-whoami.exe >> C:\Users\master\repos\brokenricefilms\dotfiles\test.log
-date >> C:\Users\master\repos\brokenricefilms\dotfiles\test.log
-
 cd C:\Users\master\repos\brokenricefilms\dotfiles
 auto-git-commit
