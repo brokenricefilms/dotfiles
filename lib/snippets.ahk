@@ -4,7 +4,7 @@ Send ^v
 Return
 
 :?*:@@::
-Clipboard = brokenricefilms@gmail.com
+Clipboard = brokenricefilms@proton.me
 Send ^v
 Return
 
