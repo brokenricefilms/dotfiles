@@ -21,3 +21,6 @@ cp C:\Users\master\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbw
 
 cd C:\Users\master\repos\brokenricefilms\dotfiles
 auto-git-commit
+
+cd C:\Users\master\repos\brokenricefilms\ok
+auto-git-commit
