@@ -30,3 +30,6 @@ auto-git-commit
 
 cd C:\Users\master\repos\brokenricefilms\rss-to-email
 auto-git-commit
+
+cd C:\Users\master\repos\brokenricefilms\hawaiianTravelerAsset\
+auto-git-commit
