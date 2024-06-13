@@ -127,6 +127,8 @@ vim.api.nvim_command [[command! -nargs=0 CopyFullFilePath let @+ = expand('%:p')
 vim.api.nvim_command [[command! -nargs=0 EditNeovimConfig edit C:\Users\master\AppData\Local\nvim\init.lua]]
 vim.api.nvim_command [[command! -nargs=0 EditPowerShellConfig edit C:\Users\master\Documents\PowerShell\Microsoft.PowerShell_profile.ps1]]
 vim.api.nvim_command [[command! -nargs=0 EditWindowsTerminalConfig edit C:\Users\master\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json]]
+vim.api.nvim_command [[command! -nargs=0 EditRSS edit C:\Users\master\repos\brokenricefilms\rss-to-email\src\feeds.ts]]
+vim.api.nvim_command [[command! -nargs=0 EditDataSync edit C:\Users\master\repos\brokenricefilms\dotfiles\sync-data.ps1]]
 
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 
