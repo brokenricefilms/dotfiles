@@ -8,14 +8,6 @@
             "keys": "ctrl+v"
         },
         {
-            "command": "unbound",
-            "keys": "ctrl+tab"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+shift+tab"
-        },
-        {
             "command": 
             {
                 "action": "copy",
@@ -38,25 +30,13 @@
         {
             "command": "find",
             "keys": "ctrl+shift+f"
-        },
-        {
-            "command": 
-            {
-                "action": "nextTab"
-            },
-            "keys": "ctrl+pgdn"
-        },
-        {
-            "command": 
-            {
-                "action": "prevTab"
-            },
-            "keys": "ctrl+pgup"
         }
     ],
     "copyFormatting": "none",
     "copyOnSelect": true,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "disableAnimations": true,
+    "launchMode": "maximized",
     "newTabMenu": 
     [
         {
@@ -67,11 +47,7 @@
     {
         "defaults": 
         {
-            "colorScheme": "Github Light",
-            "font": 
-            {
-                "face": "JetBrains Mono NL"
-            }
+            "colorScheme": "Github Light"
         },
         "list": 
         [
@@ -88,11 +64,6 @@
                 "name": "Command Prompt"
             },
             {
-                "colorScheme": "Github Light",
-                "font": 
-                {
-                    "face": "JetBrains Mono NL"
-                },
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
@@ -340,5 +311,6 @@
         }
     ],
     "theme": "light",
-    "themes": []
+    "themes": [],
+    "windowingBehavior": "useAnyExisting"
 }

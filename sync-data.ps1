@@ -14,6 +14,9 @@ auto-git-commit
 cd C:\Users\master\repos\brokenricefilms\sound-effect\
 auto-git-commit
 
+cd C:\Users\master\repos\brokenricefilms\music
+auto-git-commit
+
 cd C:\Users\master\repos\brokenricefilms\notes
 auto-git-commit
 
