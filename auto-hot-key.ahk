@@ -141,6 +141,7 @@ Space & =::Volume_Up
 Space & F11::toggleMaxWindow()
 Space & F1::Send #^6
 Space & F2::Send #^7
+Space & b::Send #!+v
 Space & F3::Send #^8
 Space & F4::Send #^9
 Space & F5::Send #^0
