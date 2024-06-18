@@ -42,3 +42,7 @@ auto-git-commit
 
 cd C:\Users\master\repos\brokenricefilms\hawaiianTravelerAsset\
 auto-git-commit
+
+cd ~\Music\
+yt-dlp --extract-audio --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" --download-archive archive.txt "https://brokenricefilms.pages.dev/music"
+cd -
