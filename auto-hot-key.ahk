@@ -27,29 +27,7 @@ AppsKey::RControl
     return
 }
 
-#IfWinActive ahk_exe chrome.exe
-F2::^w
-F1::^+t
-F3::
-Sleep, 50
-Send, ^c
-Sleep, 50
-Send, ^t
-Send, ^v
-Send, {enter}
-return
-F4::
-Send, ^c
-Sleep, 50
-Send, ^t
-Sleep, 50
-Send, y{Space}
-Send, ^v
-Send, {enter}
-return
-#IfWinActive
-
-#IfWinActive ahk_exe firefox.exe
+#IfWinActive ahk_exe chrome.exe || #IfWinActive ahk_exe floorp.exe
 F2::^w
 F1::^+t
 F3::
