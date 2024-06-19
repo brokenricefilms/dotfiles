@@ -23,7 +23,7 @@ AppsKey::RControl
 #IfWinActive, ahk_exe Resolve.exe
 {
     F13:: ;Change hotkey to desired hotkey
-    TimelineClick(["\ImageSearch\Resolve\EditPage.png", "\ImageSearch\Resolve\Fairlight.png",  "\ImageSearch\Resolve\CutPage.png"], [70,63,45])
+    TimelineClick(["\ImageSearch\Resolve\EditPage.png", "\ImageSearch\Resolve\Fairlight.png",  "\ImageSearch\Resolve\CutPage.png"], [75,63,45])
     return
 }
 
