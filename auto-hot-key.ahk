@@ -31,10 +31,10 @@ AppsKey::RControl
 F2::^w
 F1::^+t
 F3::
-Sleep, 50
 Send, ^c
 Sleep, 50
 Send, ^t
+Sleep, 50
 Send, ^v
 Send, {enter}
 return
@@ -45,6 +45,7 @@ Send, ^t
 Sleep, 50
 Send, y{Space}
 Send, ^v
+Sleep, 50
 Send, {enter}
 return
 #IfWinActive
