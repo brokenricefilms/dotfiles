@@ -86,6 +86,7 @@ vim.opt.statusline = " %F %m %< %= %r %q"
 vim.opt.cursorline = true
 vim.opt.laststatus = 0
 vim.opt.winbar = "%=%F"
+vim.opt.shell = "pwsh.exe"
 
 vim.opt.hidden = true
 vim.opt.history = 100
