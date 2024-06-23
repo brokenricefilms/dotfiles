@@ -16,7 +16,7 @@ Return
 :?*:``pp::
 Clipboard = 
 (
-Hi [Name],
+Hi,
 
 Could you share an example video that represents the style you're aiming for?
 
