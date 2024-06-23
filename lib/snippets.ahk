@@ -14,7 +14,19 @@ Send ^v
 Return
 
 :?*:``pp::
-Clipboard = Hi, **. I'd like to see the example of your footage first. Please feel free to contact me to discuss further details. Thanks.
+Clipboard = 
+(
+Hi [Name],
+
+Could you share an example video that represents the style you're aiming for?
+
+Let's delve into your project:
+- How many videos do you plan to assign to me if the first task goes well?
+- Are there any color palettes, style guides, or branding guidelines I should follow during editing?
+
+Thanks,
+Thuan Pham
+)
 Send ^v
 Return
 
