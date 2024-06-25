@@ -20,7 +20,7 @@ Hi,
 
 Could you share an example video that represents the style you're aiming for?
 
-Here are some examples of drone scene I've edited for travel video:
+Here are some examples of videos I edited:
 
 You can also check out my portfolio: https://brokenricefilms.pages.dev/portfolio
 
