@@ -121,7 +121,7 @@ Space & =::Volume_Up
 Space & F11::toggleMaxWindow()
 Space & F1::Send #^6
 Space & F2::Send #^7
-Space & b::Send #!+v
+Space & v::Send #!+v
 Space & F3::Send #^8
 Space & F4::Send #^9
 Space & F5::Send #^0
@@ -159,7 +159,6 @@ Space & r::Down
 Space & s::Send, {Click 2}
 Space & t::Right
 Space & u::Send ^{PgUp}
-Space & v::^v
 Space & w::Left
 Space & x::Del
 Space & z::^z
