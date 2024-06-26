@@ -48,7 +48,6 @@ Send, ^v
 Sleep, 50
 Send, {enter}
 return
-F13::^+a
 #IfWinActive
 
 #IfWinActive ahk_exe WindowsTerminal.exe
