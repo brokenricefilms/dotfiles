@@ -129,14 +129,6 @@ Space & F5::Send #^0
 Space & F9::Reload
 Space & [::Send !{Left}
 Space & ]::Send !{Right}
-Space & `::Send ^{WheelUp}
-Space & a::
-While GetKeyState("a", "P") {
- Send {WheelDown}
- Sleep, 20
-}
-Return
-Space & `;::^BS
 Space & c::^c
 Space & d::BS
 Space & e::Up
@@ -152,10 +144,16 @@ Space & m::Send {PgDn}
 Space & n::^t
 Space & o::Send {Blind}{End}
 Space & p::Send ^{PgDn}
+Space & a::
+While GetKeyState("a", "P") {
+ Send {WheelDown}
+ Sleep, 5
+}
+Return
 Space & q::
 While GetKeyState("q", "P") {
  Send {WheelUp}
- Sleep, 20
+ Sleep, 5
 }
 Return
 Space & r::Down
@@ -166,7 +164,8 @@ Space & v::^v
 Space & w::Left
 Space & x::Del
 Space & z::^z
-Space & Tab::#d
+Space & Tab::Send, ^{WheelDown}
+Space & `::Send, ^{WheelUp}
 Space & Esc::Send !{F4}
 
  Space::Send  {Space}
