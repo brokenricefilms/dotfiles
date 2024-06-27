@@ -165,6 +165,7 @@ Space & z::^z
 Space & Tab::Send, ^{WheelDown}
 Space & `::Send, ^{WheelUp}
 Space & Esc::Send !{F4}
+Space & b::Browser_Back
 
  Space::Send  {Space}
 +Space::Send +{Space}
