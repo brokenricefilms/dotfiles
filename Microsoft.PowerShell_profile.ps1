@@ -4,9 +4,6 @@ $env:EDITOR = 'nvim'
 
 Set-Alias chrome 'C:\Program Files\Google\Chrome\Application\chrome.exe'
 
-function wi() { winget install $args}
-function ws() { winget search $args}
-
 function edit-startscript() {
     nvim "C:\Users\master\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup-script.bat"
 }
@@ -39,10 +36,11 @@ function edit-nvim-config() { nvim C:\Users\master\AppData\Local\nvim\init.lua }
 function update-dotfiles() {
     cp $profile ~\repos\brokenricefilms\dotfiles\
     cp C:\Users\master\AppData\Local\nvim\init.lua ~\repos\brokenricefilms\dotfiles\nvim
-    cp C:\Users\master\.gitconfig ~\repos\brokenricefilms\dotfiles\
-    cp C:\Users\master\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json ~\repos\brokenricefilms\dotfiles\windows-terminal\
     cd ~\repos\brokenricefilms\dotfiles\
-    auto-git-commit
+    git add Microsoft.PowerShell_profile.ps1
+    git add nvim\init.lua
+    git commit -m "pwsh, nvim"
+    git push
     cd -
 }
 
@@ -112,7 +110,6 @@ function which ($command) {
 function update() {
     winget upgrade --all
     update-dotfiles
-    sync-data
 }
 
 function download-video( ) {
@@ -126,16 +123,9 @@ function download-audio() {
 }
 Set-Alias da download-audio
 
-function sync-data() {
-    cd ~\repos\brokenricefilms\fonts\
-    auto-git-commit
-    cd ~\repos\brokenricefilms\davinci-resolve\
-    auto-git-commit
-}
-
 function sync-music() {
     cd ~\Music\
-    yt-dlp --extract-audio --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" --download-archive archive.txt "https://brokenricefilms.pages.dev/m"
+    yt-dlp --extract-audio --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" --download-archive archive.txt "https://brokenricefilms.pages.dev/music"
     cd -
 }
 
