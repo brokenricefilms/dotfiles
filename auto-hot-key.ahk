@@ -27,7 +27,7 @@ AppsKey::RControl
     return
 }
 
-#IfWinActive ahk_exe chrome.exe
+#IfWinActive ahk_exe floorp.exe
 F2::^w
 F1::^+t
 F3::
@@ -146,13 +146,13 @@ Space & p::Send ^{PgDn}
 Space & a::
 While GetKeyState("a", "P") {
  Send {WheelDown}
- Sleep, 5
+ Sleep, 1
 }
 Return
 Space & q::
 While GetKeyState("q", "P") {
  Send {WheelUp}
- Sleep, 5
+ Sleep, 1
 }
 Return
 Space & r::Down
