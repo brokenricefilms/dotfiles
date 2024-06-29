@@ -18,13 +18,14 @@ Clipboard =
 (
 Hi,
 
-Could you share an example video that represents the style you're aiming for?
+I have experience working with a travel vlog YouTube channel with over 50,000 subscribers.
 
 Here are some examples of videos I edited:
 
 You can also check out my portfolio: https://brokenricefilms.pages.dev/portfolio
 
 Let's delve into your project:
+- Could you share an example video that represents the style you're aiming for?
 - How many videos do you plan to assign to me if the first task goes well?
 - Are there any color palettes, style guides, or branding guidelines I should follow during editing?
 
