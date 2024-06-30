@@ -27,7 +27,7 @@ AppsKey::RControl
     return
 }
 
-#IfWinActive ahk_exe chrome.exe
+#IfWinActive ahk_exe floorp.exe
 F2::^w
 F1::^+t
 F3::
