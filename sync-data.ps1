@@ -27,6 +27,7 @@ cp $profile ~\repos\brokenricefilms\dotfiles\
 cp C:\Users\master\AppData\Local\nvim\init.lua ~\repos\brokenricefilms\dotfiles\nvim
 cp C:\Users\master\.gitconfig ~\repos\brokenricefilms\dotfiles\
 cp C:\Users\master\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json ~\repos\brokenricefilms\dotfiles\windows-terminal\
+cp C:\Users\master\AppData\Roaming\Mozilla\Firefox\Profiles\3wr0grx7.default-release\user.js ~\repos\brokenricefilms\dotfiles\
 
 cd C:\Users\master\repos\brokenricefilms\dotfiles
 auto-git-commit
