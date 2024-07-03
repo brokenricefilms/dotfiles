@@ -4,6 +4,10 @@ $env:EDITOR = 'nvim'
 
 Set-Alias chrome 'C:\Program Files\Google\Chrome\Application\chrome.exe'
 
+function v() {
+    nvim .
+}
+
 function edit-startscript() {
     nvim "C:\Users\master\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup-script.bat"
 }
@@ -136,11 +140,6 @@ function ls-mb() {
 function ls-kb() {
     ls | Select-Object Name, @{Name="KiloBytes";Expression={$_.Length / 1KB}}
 }
-
-function resolve-template () {
-    ii ~\davinci-resolve\licitfree.drb 
-}
-Set-Alias v resolve-template
 
 new-alias grep select-string
 
