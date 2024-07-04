@@ -125,3 +125,11 @@ user_pref("layout.word_select.eat_space_to_next_word", false);
 
 user_pref("ui.key.menuAccessKeyFocuses", false);
 user_pref("gfx.canvas.accelerated", true);
+
+// recommended for 60hz+ displays
+user_pref("apz.overscroll.enabled", true); // DEFAULT NON-LINUX
+user_pref("general.smoothScroll", true); // DEFAULT
+user_pref("mousewheel.default.delta_multiplier_y", 275); // 250-400; adjust this number to your liking
+// Firefox Nightly only:
+// [1] https://bugzilla.mozilla.org/show_bug.cgi?id=1846935
+user_pref("general.smoothScroll.msdPhysics.enabled", true); // [FF122+ Nightly]
