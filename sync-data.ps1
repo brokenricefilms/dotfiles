@@ -20,6 +20,9 @@ auto-git-commit
 cd C:\Users\master\repos\brokenricefilms\notes
 auto-git-commit
 
+cd C:\Users\master\repos\brokenricefilms\design
+auto-git-commit
+
 cd C:\Users\master\repos\brokenricefilms\obs-studio\
 auto-git-commit
 

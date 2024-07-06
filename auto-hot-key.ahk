@@ -10,8 +10,8 @@ SetWorkingDir %A_ScriptDir%
 
 SC056::RControl
 ;SC151::movingWindowToOtherDisplay() ;PgDn SC149 PgUp
-Home::^#F11
-End::^#F12
+;Home::^#F11
+;End::^#F12
 AppsKey::RControl
 !^F1::Send, #^0
 #WheelDown::Volume_Up
