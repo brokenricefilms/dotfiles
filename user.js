@@ -124,7 +124,7 @@ user_pref("layout.word_select.eat_space_to_next_word", false);
 // Enter your personal overrides below this line:
 
 user_pref("ui.key.menuAccessKeyFocuses", false);
-user_pref("gfx.canvas.accelerated", true);
+//user_pref("gfx.canvas.accelerated", true);
 
 // recommended for 60hz+ displays
 user_pref("apz.overscroll.enabled", true); // DEFAULT NON-LINUX
