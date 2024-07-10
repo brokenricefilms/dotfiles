@@ -27,7 +27,7 @@ AppsKey::RControl
     return
 }
 
-#IfWinActive ahk_exe firefox.exe
+#IfWinActive ahk_exe chrome.exe
 F2::^w
 F1::^+t
 F3::
@@ -58,6 +58,7 @@ Send, ^v
 Sleep, 50
 Send, {enter}
 return
+^o::^+a
 #IfWinActive
 
 #IfWinActive ahk_exe WindowsTerminal.exe
