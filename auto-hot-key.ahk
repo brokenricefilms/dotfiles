@@ -27,7 +27,7 @@ AppsKey::RControl
     return
 }
 
-#IfWinActive ahk_exe brave.exe
+#IfWinActive ahk_exe firefox.exe
 F2::^w
 F1::^+t
 F3::
