@@ -1,5 +1,5 @@
 :?*:``po::
-Clipboard = Checkout my portfolio https://brokenricefilms.pages.dev/portfolio
+Clipboard = Checkout my portfolio https://brokenricefilms.vercel.app/portfolio
 Send ^+v
 Return
 
@@ -9,7 +9,7 @@ Send ^+v
 Return
 
 :?*:``po::
-Clipboard = Checkout my portfolio https://brokenricefilms.pages.dev/portfolio
+Clipboard = Checkout my portfolio https://brokenricefilms.vercel.app/portfolio
 Send ^+v
 Return
 
@@ -25,7 +25,7 @@ Here are some examples of travel vlogs I edited:
 - https://vimeo.com/952798464
 - https://vimeo.com/952798415
 
-You can also check out my portfolio: https://brokenricefilms.pages.dev/portfolio
+You can also check out my portfolio: https://brokenricefilms.vercel.app/portfolio
 
 Let's delve into your project:
 - Could you share an example video that represents the style you're aiming for?
