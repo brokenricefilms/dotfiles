@@ -12,7 +12,7 @@ SC056::RControl
 ;SC151::movingWindowToOtherDisplay() ;PgDn SC149 PgUp
 ;Home::^#F11
 ;End::^#F12
-AppsKey::RControl
+AppsKey::!Tab
 !^F1::Send, #^0
 #WheelDown::Volume_Up
 #WheelUp::Volume_Down

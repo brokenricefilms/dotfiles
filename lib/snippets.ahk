@@ -1,19 +1,19 @@
-:?*:``po::
+:?*:,po::
 Clipboard = Checkout my portfolio https://brokenricefilms.vercel.app/portfolio
 Send ^+v
 Return
 
-:?*:@@::
+:?*:,m::
 Clipboard = brokenricefilms@gmail.com
 Send ^+v
 Return
 
-:?*:``po::
+:?*:,po::
 Clipboard = Checkout my portfolio https://brokenricefilms.vercel.app/portfolio
 Send ^+v
 Return
 
-:?*:``pp::
+:?*:,pp::
 Clipboard = 
 (
 Hi,
@@ -38,15 +38,17 @@ Thuan Pham
 Send ^+v
 Return
 
-:?*:``ph::
+:?*:,ph::
 Clipboard = 0765650452
 Send ^+v
 Return
 
-:?*:``g::
+:?*:,g::
 Clipboard = 
 (
 gramma check ""
 )
 Send ^+v
+sleep, 50
+Send {Left}
 Return
