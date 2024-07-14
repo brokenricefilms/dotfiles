@@ -122,14 +122,14 @@ Tab & 2::Run, "E:\obs\"
 
 Tab::Tab
 
-Space & ,::Send {Blind}{PgUp}
-Space & -::Send {Blind}{Volume_Down}
+Space & ,::PgUp
+Space & -::Volume_Down
 Space & 1::Send ^#1
 Space & 2::Send ^#2
 Space & 3::Send ^#3
 Space & 4::Send ^#4
 Space & 5::Send ^#5
-Space & =::Send {Blind}{Volume_Up}
+Space & =::Volume_Up
 Space & F11::toggleMaxWindow()
 Space & F1::Send #^6
 Space & F2::Send #^7
@@ -141,45 +141,45 @@ Space & F9::Reload
 Space & [::Send !{Left}
 Space & ]::Send !{Right}
 Space & c::^c
-Space & d::Send {Blind}{BS}
-Space & e::Send {Blind}{Up}
-Space & f::Send {Blind}{MButton}
-Space & g::Send {Blind}{RButton}
-Space & h::Send {Blind}{Left}
-Space & i::Send {Blind}{Home}
-Space & j::Send {Blind}{Down}
-Space & k::Send {Blind}{Up}
-Space & l::Send {Blind}{Right}
-Space & m::Send {Blind}{PgDn}
+Space & d::BS
+Space & e::Up
+Space & f::MButton
+Space & g::RButton
+Space & h::Left
+Space & i::Home
+Space & j::Down
+Space & k::Up
+Space & l::Right
+Space & m::PgDn
 ;Space & n::movingWindowToOtherDisplay()
 Space & n::^t
-Space & o::Send {Blind}{End}
+Space & o::End
 Space & p::Send ^{PgDn}
 Space & a::
 While GetKeyState("a", "P") {
- Send {Blind}{WheelDown}
+ Send {WheelDown}
  Sleep, 1
 }
 Return
 Space & q::
 While GetKeyState("q", "P") {
- Send {Blind}{WheelUp}
+ Send {WheelUp}
  Sleep, 1
 }
 Return
-Space & r::Send {Blind}{Down}
+Space & r::Down
 Space & s::Send, {Click 2}
-Space & t::Send {Blind}{Right}
+Space & t::Right
 Space & u::Send ^{PgUp}
-Space & w::Send {Blind}{Left}
-Space & x::Send {Blind}{Del}
+Space & w::Left
+Space & x::Del
 Space & z::^z
 Space & Tab::Send, ^{WheelDown}
 Space & `::Send, ^{WheelUp}
 Space & Esc::Send !{F4}
-Space & b::Send {Blind}{Browser_Back}
+Space & b::Browser_Back
 
- Space::Send  {Blind}{Space}
+ Space::Send  {Space}
 +Space::Send +{Space}
 !Space::Send !{Space}
 #Space::Send #{Space}
@@ -194,7 +194,7 @@ MouseMove 653, 757, 0
 Click
 Return
 
- `;::Send  {Blind}{;}
+ `;::Send  {;}
 +`;::Send +{;}
 !`;::Send !{;}
 #`;::Send #{;}
