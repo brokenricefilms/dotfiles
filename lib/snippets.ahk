@@ -51,4 +51,9 @@ gramma check ""
 Send ^+v
 sleep, 50
 Send {Left}
+sleep, 50
+Send #!+v
+sleep, 50
+Send {Down}
+Send {Enter}
 Return
