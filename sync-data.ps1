@@ -5,22 +5,10 @@ function auto-git-commit() {
     git push
 }
 
-cd C:\Users\master\repos\brokenricefilms\fonts
-auto-git-commit
-
 cd C:\Users\master\repos\brokenricefilms\davinci-resolve
 auto-git-commit
 
-cd C:\Users\master\repos\brokenricefilms\sound-effect\
-auto-git-commit
-
-cd C:\Users\master\repos\brokenricefilms\music
-auto-git-commit
-
-cd C:\Users\master\repos\brokenricefilms\notes
-auto-git-commit
-
-cd C:\Users\master\repos\brokenricefilms\design
+cd E:\notes
 auto-git-commit
 
 cd C:\Users\master\repos\brokenricefilms\obs-studio\
@@ -36,9 +24,6 @@ cd C:\Users\master\repos\brokenricefilms\dotfiles
 auto-git-commit
 
 cd C:\Users\master\repos\brokenricefilms\ok
-auto-git-commit
-
-cd C:\Users\master\repos\brokenricefilms\docs
 auto-git-commit
 
 cd C:\Users\master\repos\brokenricefilms\rss-to-email
