@@ -69,11 +69,6 @@ Send, ^v
 Sleep, 50
 Send, {enter}
 return
-F7::
-Send, ^t
-Sleep, 50
-Send, `%{Space}
-return
 !r::Send ^+!k
 !f::Send ^+!j
 !a::
