@@ -69,6 +69,20 @@ Send, ^v
 Sleep, 50
 Send, {enter}
 return
+F7::
+Send, ^t
+Sleep, 50
+Send, `%{Space}
+return
+!r::Send ^+!k
+!f::Send ^+!j
+!a::
+Send, ^t
+Sleep, 50
+Send, `%{Space}
+return
+!w::Send ^{PgUp}
+!s::Send ^{PgDn}
 #IfWinActive
 
 #IfWinActive ahk_exe WindowsTerminal.exe
