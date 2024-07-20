@@ -14,6 +14,9 @@ auto-git-commit
 cd C:\Users\master\repos\brokenricefilms\obs-studio\
 auto-git-commit
 
+cd C:\Users\master\repos\brokenricefilms\img
+auto-git-commit
+
 cp $profile ~\repos\brokenricefilms\dotfiles\
 cp C:\Users\master\AppData\Local\nvim\init.lua ~\repos\brokenricefilms\dotfiles\nvim
 cp C:\Users\master\.gitconfig ~\repos\brokenricefilms\dotfiles\
