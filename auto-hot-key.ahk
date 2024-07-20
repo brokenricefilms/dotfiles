@@ -197,6 +197,7 @@ Space & Tab::Send, ^{WheelDown}
 Space & `::Send, ^{WheelUp}
 Space & Esc::Send !{F4}
 Space & b::Browser_Back
+Space & F13::#Tab
 
  Space::Send  {Space}
 +Space::Send +{Space}
