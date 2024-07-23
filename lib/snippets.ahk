@@ -13,6 +13,11 @@ Clipboard = Checkout my portfolio https://brokenricefilms.vercel.app/portfolio
 Send ^+v
 Return
 
+:?*:,w::
+Clipboard = https://brokenricefilms.vercel.app
+Send ^+v
+Return
+
 :?*:,pp::
 Clipboard = 
 (
