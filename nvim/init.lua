@@ -15,7 +15,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-        {
+    {
+        "romainl/vim-cool",
+    },
+    {
         "nvim-treesitter/nvim-treesitter",
         ensure_installed = "all", 
         build = ":TSUpdate",
