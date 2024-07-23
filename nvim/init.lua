@@ -15,6 +15,19 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+        {
+        "nvim-treesitter/nvim-treesitter",
+        ensure_installed = "all", 
+        build = ":TSUpdate",
+        config = function () 
+            local configs = require("nvim-treesitter.configs")
+            configs.setup({
+                sync_install = false,
+                highlight = { enable = true },
+                indent = { enable = true },  
+            })
+        end
+    },
     {
         "stevearc/oil.nvim",
         opts = {

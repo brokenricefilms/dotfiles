@@ -83,7 +83,12 @@ return
 #IfWinActive ahk_exe WindowsTerminal.exe
 F1::^+t
 F2::^+w
-f3::^+p
+f3::!/
+#IfWinActive
+
+#IfWinActive ahk_exe obsidian.exe
+F1::+1
+F13::p
 #IfWinActive
 
 movingWindowToOtherDisplay() {
