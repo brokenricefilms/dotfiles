@@ -69,15 +69,6 @@ Send, ^v
 Sleep, 50
 Send, {enter}
 return
-!r::Send ^+!k
-!f::Send ^+!j
-!a::
-Send, ^t
-Sleep, 50
-Send, `%{Space}
-return
-!w::Send ^{PgUp}
-!s::Send ^{PgDn}
 #IfWinActive
 
 #IfWinActive ahk_exe WindowsTerminal.exe
@@ -224,3 +215,11 @@ Return
 !`;::Send !{;}
 #`;::Send #{;}
 ^`;::Send ^{;}
+
+F9::
+    IfWinExist ahk_class Chrome_WidgetWin_1
+        winactivate ahk_class Chrome_WidgetWin_1
+    else
+        run, "C:\Program Files\Google\Chrome\Application\chrome.exe"
+    WinWaitActive ahk_class Chrome_WidgetWin_1
+return
