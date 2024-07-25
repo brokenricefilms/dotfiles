@@ -27,7 +27,7 @@ AppsKey::RControl
     return
 }
 
-#IfWinActive ahk_exe chrome.exe
+#IfWinActive ahk_exe floorp.exe
 F2::^w
 F1::^+t
 F3::
@@ -69,6 +69,15 @@ Send, ^v
 Sleep, 50
 Send, {enter}
 return
+!r::Send ^+!k
+!f::Send ^+!j
+!a::
+Send, ^t
+Sleep, 50
+Send, `%{Space}
+return
+!w::Send ^{PgUp}
+!s::Send ^{PgDn}
 #IfWinActive
 
 #IfWinActive ahk_exe WindowsTerminal.exe
@@ -216,10 +225,18 @@ Return
 #`;::Send #{;}
 ^`;::Send ^{;}
 
-F9::
-    IfWinExist ahk_class Chrome_WidgetWin_1
-        winactivate ahk_class Chrome_WidgetWin_1
+#F1::
+    IfWinExist ahk_exe obs64.exe
+        winactivate ahk_exe obs64.exe
     else
-        run, "C:\Program Files\Google\Chrome\Application\chrome.exe"
-    WinWaitActive ahk_class Chrome_WidgetWin_1
+        run, "C:\Program Files\obs-studio\bin\64bit\obs64.exe"
+    WinWaitActive ahk_exe obs64.exe
+return
+
+#F2::
+    IfWinExist ahk_exe Obsidian.exe
+        winactivate ahk_exe Obsidian.exe
+    else
+        run, "C:\Users\master\AppData\Local\Programs\obsidian\Obsidian.exe"
+    WinWaitActive ahk_exe Obsidian.exe
 return
