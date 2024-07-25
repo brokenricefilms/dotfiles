@@ -141,7 +141,7 @@ toggleMaxWindow()
 Tab & e::Run, "C:\Users\master\editing\Projects"
 Tab & w::Run, "C:\Users\master\Downloads"
 Tab & r::Run, "C:\Users\master\Pictures"
-Tab & t::Run, "C:\Users\master\Videos\"
+Tab & t::Run, "E:\YouTube\"
 Tab & 2::Run, "E:\obs\"
 
 Tab::Tab

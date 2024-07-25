@@ -49,16 +49,13 @@ Send ^+v
 Return
 
 :?*:,g::
-Clipboard = 
-(
-gramma check ""
-)
-Send ^+v
-sleep, 50
-Send {Left}
-sleep, 50
+send, gramma check ""
+sleep, 200
+Send, {Left}
+sleep, 100
 Send #!+v
-sleep, 50
-Send {Down}
+sleep, 100
 Send {Enter}
+sleep, 200
+Send ^{Enter}
 Return
