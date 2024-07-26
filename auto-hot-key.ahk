@@ -224,19 +224,3 @@ Return
 !`;::Send !{;}
 #`;::Send #{;}
 ^`;::Send ^{;}
-
-#F1::
-    IfWinExist ahk_exe obs64.exe
-        winactivate ahk_exe obs64.exe
-    else
-        run, "C:\Program Files\obs-studio\bin\64bit\obs64.exe"
-    WinWaitActive ahk_exe obs64.exe
-return
-
-#F2::
-    IfWinExist ahk_exe Obsidian.exe
-        winactivate ahk_exe Obsidian.exe
-    else
-        run, "C:\Users\master\AppData\Local\Programs\obsidian\Obsidian.exe"
-    WinWaitActive ahk_exe Obsidian.exe
-return
