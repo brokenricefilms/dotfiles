@@ -210,14 +210,13 @@ Space & F13::#Tab
 #Space::Send #{Space}
 ^Space::Send ^{Space}
 
-`; & d::Send +v{Del}
-`; & z::Send +z+z
+`; & d::
+Send +v
+Sleep 50
+Send {Del}
+return
 `; & j::Send ^+,
 `; & l::Send ^+.
-`; & s::
-MouseMove 653, 757, 0 
-Click
-Return
 
  `;::Send  {;}
 +`;::Send +{;}
