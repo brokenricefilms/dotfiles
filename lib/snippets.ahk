@@ -1,61 +1,62 @@
-:?*:,po::
-Clipboard = Checkout my portfolio https://brokenricefilms.pages.dev/portfolio
-Send ^+v
-Return
+:?*:\po::
+clipboard = checkout my portfolio https://brokenricefilms.pages.dev/portfolio
+send ^+v
+return
+:?*:\m::
+clipboard = brokenricefilms@gmail.com
+send ^+v
+return
 
-:?*:,m::
-Clipboard = brokenricefilms@gmail.com
-Send ^+v
-Return
+:?*:\po::
+clipboard = checkout my portfolio https://brokenricefilms.pages.dev/portfolio
+send ^+v
+return
 
-:?*:,po::
-Clipboard = Checkout my portfolio https://brokenricefilms.pages.dev/portfolio
-Send ^+v
-Return
+:?*:\w::
+clipboard = https://brokenricefilms.pages.dev
+send ^+v
+return
 
-:?*:,w::
-Clipboard = https://brokenricefilms.pages.dev
-Send ^+v
-Return
-
-:?*:,pp::
-Clipboard = 
+:?*:\pp::
+clipboard = 
 (
-Hi,
+ hi,
 
-I have experience working with a travel vlog YouTube channel with over 50,000 subscribers.
+ i have experience working with a travel vlog youtube channel with over 50,000 subscribers.
 
-Here are some examples of travel vlogs I edited:
-- https://vimeo.com/952803807
-- https://vimeo.com/952798464
-- https://vimeo.com/952798415
+ here are some examples of travel vlogs i edited:
+ - https://vimeo.com/952803807
+ - https://vimeo.com/952798464
+ - https://vimeo.com/952798415
 
-You can also check out my portfolio: https://brokenricefilms.pages.dev/portfolio
+ you can also check out my portfolio: https://brokenricefilms.pages.dev/portfolio
 
-Let's delve into your project:
-- Could you share an example video that represents the style you're aiming for?
-- How many videos do you plan to assign to me if the first task goes well?
-- Are there any color palettes, style guides, or branding guidelines I should follow during editing?
+ let's delve into your project:
+ - could you share an example video that represents the style you're aiming for?
+ - how many videos do you plan to assign to me if the first task goes well?
+ - are there any color palettes, style guides, or branding guidelines i should follow during editing?
 
-Thanks,
-Thuan Pham
-)
-Send ^+v
-Return
+ thanks,
+ thuan pham
+ )
+send ^+v
+return
 
-:?*:,ph::
-Clipboard = 0765650452
-Send ^+v
-Return
+:?*:\ph::
+clipboard = 0765650452
+send ^+v
+return
 
-:?*:,g::
-send, gramma check ""
-sleep, 200
-Send, {Left}
-sleep, 100
-Send #!+v
-sleep, 100
-Send {Enter}
-sleep, 200
-Send ^{Enter}
-Return
+:?*:\g::
+send gramma check ""
+sleep 200
+send {left}
+sleep 100
+send #!+v
+sleep 100
+send {enter}
+sleep 200
+send ^v
+sleep 200
+send ^{enter}
+return

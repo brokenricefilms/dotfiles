@@ -1,227 +1,233 @@
-#KeyHistory
-#NoEnv
-#SingleInstance Force
-#InstallMouseHook
-#InstallKeybdHook
-SetBatchLines -1
-ListLines Off
-SendMode Input
-SetWorkingDir %A_ScriptDir%
+#keyhistory
+#noenv
+#singleinstance force
+#installmousehook
+#installkeybdhook
+setbatchlines -1
+listlines off
+sendmode input
+setworkingdir %a_scriptdir%
 
-SC056::RControl
-;SC151::movingWindowToOtherDisplay() ;PgDn SC149 PgUp
-Home::^#F11
-End::^#F12
-AppsKey::RControl
-!^F1::send #^0
-#WheelDown::Volume_Up
-#WheelUp::Volume_Down
-^;::Send {Esc}
-Esc::!F4
+sc056::rcontrol
+;sc151::movingwindowtootherdisplay() ;pgdn sc149 pgup
+home::^#f11
+end::^#f12
+appskey::rcontrol
+!^f1::send #^0
+#wheeldown::volume_up
+#wheelup::volume_down
+^;::send {esc}
+esc::!f4
 
-#Include, %A_ScriptDir%\lib\TimelineClick.ahk
-#Include, %A_ScriptDir%\lib\snippets.ahk
+#include, %a_scriptdir%\lib\timelineclick.ahk
+#include, %a_scriptdir%\lib\snippets.ahk
 
-#IfWinActive, ahk_exe Resolve.exe
+#ifwinactive, ahk_exe resolve.exe
 {
-    F13:: ;Change hotkey to desired hotkey
-    TimelineClick(["\ImageSearch\Resolve\EditPage.png", "\ImageSearch\Resolve\Fairlight.png",  "\ImageSearch\Resolve\CutPage.png"], [75,63,45])
-    return
+    f13:: ;change hotkey to desired hotkey
+        timelineclick(["\imagesearch\resolve\editpage.png", "\imagesearch\resolve\fairlight.png",  "\imagesearch\resolve\cutpage.png"], [75,63,45])
+        return
 }
 
-#IfWinActive ahk_exe floorp.exe
-F1::^+t
-F2::^w
-F3::
+#ifwinactive ahk_exe floorp.exe
+f1::^+t
+f2::^w
+f3::
 send ^c
-Sleep, 50
+sleep, 50
 send ^t
-Sleep, 50
+sleep, 50
 send ^v
 send {enter}
 return
-F4::
+f4::
 send ^c
-Sleep, 50
+sleep, 50
 send ^t
-Sleep, 50
+sleep, 50
 send v{space}
 send ^v
-Sleep, 50
+sleep, 50
 send {enter}
 return
-F5::
+f5::
 send ^c
-Sleep, 50
+sleep, 50
 send ^t
-Sleep, 50
+sleep, 50
 send i{space}
 send ^v
-Sleep, 50
+sleep, 50
 send {enter}
 return
 ^o::^+a
-F6::
+f6::
 send ^c
-Sleep, 50
+sleep, 50
 send ^t
-Sleep, 50
+sleep, 50
 send t{space}
 send ^v
-Sleep, 50
+sleep, 50
 send {enter}
 return
-!r::Send ^+!k
-!f::Send ^+!j
+!r::send ^+!k
+!f::send ^+!j
 !a::
 send ^t
-Sleep, 50
+sleep, 50
 send `%{space}
 return
-!w::Send ^{PgUp}
-!s::Send ^{PgDn}
-F13::Send ^t
-#IfWinActive
+!w::send ^{pgup}
+!s::send ^{pgdn}
+f13::send ^t
+#ifwinactive
 
-#IfWinActive ahk_exe WindowsTerminal.exe
-F3::^+t
-F2::^+w
-F13::!/
-#IfWinActive
+#ifwinactive ahk_exe windowsterminal.exe
+f3::^+t
+f2::^+w
 
-#IfWinActive ahk_exe obsidian.exe
-F1::+1
-F13::p
-#IfWinActive
+f13 & l::send !{right}
+f13 & h::send !{left}
+f13 & j::send !{down}
+f13 & k::send !{up}
 
-movingWindowToOtherDisplay() {
-  Send #+{Left}
-  SysGet, monitors, MonitorCount
+f13::!/
+#ifwinactive
 
-  SysGet, MonitorCount, MonitorCount
-  SysGet, MonitorPrimary, MonitorPrimary
-  
-  current := 0
-  Loop, %MonitorCount%
-  {
-    SysGet, Monitor, Monitor, %A_Index%
-    CoordMode, Mouse, Screen
-    MouseGetPos, MouseX, MouseY
-    if (  (MouseX >= MonitorLeft) && (MouseX < MonitorRight) && (MouseY >= MonitorTop) && (MouseY < MonitorBottom) )
-    {
-      current := A_Index
-      currentRX := (MouseX - MonitorLeft) / (MonitorRight - MonitorLeft)
-      currentRY := (MouseY - MonitorTop) / (MonitorBottom - MonitorTop)
-      break
-    }
-  }
-  next := current + 1
-  
-  if (next > MonitorCount)
-    next := 1
-  SysGet, Monitor, Monitor, %next%
-  
-  newX := MonitorLeft + currentRX*(MonitorRight - MonitorLeft)
-  newY := MonitorTop + currentRY*(MonitorBottom - MonitorTop)
-  
-  DllCall("SetCursorPos", "int", newX, "int", newY)
-  DllCall("SetCursorPos", "int", newX, "int", newY)
+#ifwinactive ahk_exe obsidian.exe
+f1::+1
+f13::p
+#ifwinactive
+
+movingwindowtootherdisplay() {
+    send #+{left}
+    sysget, monitors, monitorcount
+
+        sysget, monitorcount, monitorcount
+        sysget, monitorprimary, monitorprimary
+
+        current := 0
+        loop, %monitorcount%
+        {
+            sysget, monitor, monitor, %a_index%
+                coordmode, mouse, screen
+                mousegetpos, mousex, mousey
+                if (  (mousex >= monitorleft) && (mousex < monitorright) && (mousey >= monitortop) && (mousey < monitorbottom) )
+                {
+current := a_index
+             currentrx := (mousex - monitorleft) / (monitorright - monitorleft)
+             currentry := (mousey - monitortop) / (monitorbottom - monitortop)
+             break
+                }
+        }
+next := current + 1
+
+          if (next > monitorcount)
+              next := 1
+                  sysget, monitor, monitor, %next%
+
+                  newx := monitorleft + currentrx*(monitorright - monitorleft)
+                  newy := monitortop + currentry*(monitorbottom - monitortop)
+
+                  dllcall("setcursorpos", "int", newx, "int", newy)
+                  dllcall("setcursorpos", "int", newx, "int", newy)
 }
 
-toggleMaxWindow()
+togglemaxwindow()
 {
-  WinGet, WinState, MinMax, A
-  if (WinState = 1)
-  {
-    WinRestore, A
-  }
-  else
-  {
-    WinMaximize, A
-  }
+    winget, winstate, minmax, a
+        if (winstate = 1)
+        {
+            winrestore, a
+        }
+        else
+        {
+            winmaximize, a
+        }
 }
 
-Tab & e::Run, "C:\Users\master\editing\Projects"
-Tab & w::Run, "C:\Users\master\Downloads"
-Tab & r::Run, "C:\Users\master\Pictures"
-Tab & t::Run, "E:\YouTube\"
-Tab & 2::Run, "E:\obs\"
+tab & e::run, "c:\users\master\editing\projects"
+tab & w::run, "c:\users\master\downloads"
+tab & r::run, "c:\users\master\pictures"
+tab & t::run, "e:\youtube\"
+tab & 2::run, "e:\obs\"
 
-Tab::Tab
+tab::tab
 
-space & ,::PgUp
-space & -::Volume_Down
-space & 1::Send ^#1
-space & 2::Send ^#2
-space & 3::Send ^#3
-space & 4::Send ^#4
-space & 5::Send ^#5
-space & =::Volume_Up
-space & F11::toggleMaxWindow()
-space & F1::Send #^6
-space & F2::Send #^7
-space & v::Send #!+v
-space & F3::Send #^8
-space & F4::Send #^9
-space & F5::Send #^0
-space & F9::Reload
-space & [::Send !{Left}
-space & ]::Send !{Right}
+space & ,::pgup
+space & -::volume_down
+space & 1::send ^#1
+space & 2::send ^#2
+space & 3::send ^#3
+space & 4::send ^#4
+space & 5::send ^#5
+space & =::volume_up
+space & f11::togglemaxwindow()
+space & f1::send #^6
+space & f2::send #^7
+space & v::send #!+v
+space & f3::send #^8
+space & f4::send #^9
+space & f5::send #^0
+space & f9::reload
+space & [::send !{left}
+space & ]::send !{right}
 space & c::^c
-space & d::BS
-space & e::Up
-space & f::MButton
-space & g::RButton
-space & h::Left
-space & i::Home
-space & j::Down
-space & k::Up
-space & l::Right
-space & m::PgDn
-;space & n::movingWindowToOtherDisplay()
+space & d::bs
+space & e::up
+space & f::mbutton
+space & g::rbutton
+space & h::left
+space & i::home
+space & j::down
+space & k::up
+space & l::right
+space & m::pgdn
+;space & n::movingwindowtootherdisplay()
 space & n::^t
-space & o::End
-space & p::Send ^{PgDn}
+space & o::end
+space & p::send ^{pgdn}
 space & a::
-While GetKeyState("a", "P") {
- Send {WheelDown}
- Sleep, 1
+while getkeystate("a", "p") {
+    send {wheeldown}
+    sleep, 1
 }
-Return
+return
 space & q::
-While GetKeyState("q", "P") {
- Send {WheelUp}
- Sleep, 1
+while getkeystate("q", "p") {
+    send {wheelup}
+    sleep, 1
 }
-Return
-space & r::Down
-space & s::send {Click 2}
-space & t::Right
-space & u::Send ^{PgUp}
-space & w::Left
-space & x::Del
+return
+space & r::down
+space & s::send {click 2}
+space & t::right
+space & u::send ^{pgup}
+space & w::left
+space & x::del
 space & z::^z
-space & Tab::send ^{WheelDown}
-space & `::send ^{WheelUp}
-space & Esc::Send !{F4}
-space & b::Browser_Back
-space & F13::#Tab
+space & tab::send ^{wheeldown}
+space & `::send ^{wheelup}
+space & esc::send !{f4}
+space & b::browser_back
+space & f13::#tab
 
- space::Send  {space}
-+space::Send +{space}
-!space::Send !{space}
-#space::Send #{space}
-^space::Send ^{space}
+space::send  {space}
++space::send +{space}
+!space::send !{space}
+#space::send #{space}
+^space::send ^{space}
 
 `; & d::
-Send +v
-Sleep 50
-Send {Del}
+send +v
+sleep 50
+send {del}
 return
-`; & j::Send ^+,
-`; & l::Send ^+.
+`; & j::send ^+,
+`; & l::send ^+.
 
- `;::Send  {;}
-+`;::Send +{;}
-!`;::Send !{;}
-#`;::Send #{;}
+`;::send  {;}
++`;::send +{;}
+!`;::send !{;}
+#`;::send #{;}
