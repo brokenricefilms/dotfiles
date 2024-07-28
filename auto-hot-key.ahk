@@ -13,9 +13,11 @@ SC056::RControl
 Home::^#F11
 End::^#F12
 AppsKey::RControl
-!^F1::Send, #^0
+!^F1::send #^0
 #WheelDown::Volume_Up
 #WheelUp::Volume_Down
+^;::Send {Esc}
+Esc::!F4
 
 #Include, %A_ScriptDir%\lib\TimelineClick.ahk
 #Include, %A_ScriptDir%\lib\snippets.ahk
@@ -28,62 +30,63 @@ AppsKey::RControl
 }
 
 #IfWinActive ahk_exe floorp.exe
-F2::^w
 F1::^+t
+F2::^w
 F3::
-Send, ^c
+send ^c
 Sleep, 50
-Send, ^t
+send ^t
 Sleep, 50
-Send, ^v
-Send, {enter}
+send ^v
+send {enter}
 return
 F4::
-Send, ^c
+send ^c
 Sleep, 50
-Send, ^t
+send ^t
 Sleep, 50
-Send, y{Space}
-Send, ^v
+send v{space}
+send ^v
 Sleep, 50
-Send, {enter}
+send {enter}
 return
 F5::
-Send, ^c
+send ^c
 Sleep, 50
-Send, ^t
+send ^t
 Sleep, 50
-Send, i{Space}
-Send, ^v
+send i{space}
+send ^v
 Sleep, 50
-Send, {enter}
+send {enter}
 return
 ^o::^+a
 F6::
-Send, ^c
+send ^c
 Sleep, 50
-Send, ^t
+send ^t
 Sleep, 50
-Send, t{Space}
-Send, ^v
+send t{space}
+send ^v
 Sleep, 50
-Send, {enter}
+send {enter}
 return
 !r::Send ^+!k
 !f::Send ^+!j
 !a::
-Send, ^t
+send ^t
 Sleep, 50
-Send, `%{Space}
+send `%{space}
 return
 !w::Send ^{PgUp}
 !s::Send ^{PgDn}
+F13::Send ^t
 #IfWinActive
 
 #IfWinActive ahk_exe WindowsTerminal.exe
-F1::^+t
+F3::^+t
 F2::^+w
-f3::!/
+F13::!/
 #IfWinActive
 
 #IfWinActive ahk_exe obsidian.exe
@@ -146,69 +149,69 @@ Tab & 2::Run, "E:\obs\"
 
 Tab::Tab
 
-Space & ,::PgUp
-Space & -::Volume_Down
-Space & 1::Send ^#1
-Space & 2::Send ^#2
-Space & 3::Send ^#3
-Space & 4::Send ^#4
-Space & 5::Send ^#5
-Space & =::Volume_Up
-Space & F11::toggleMaxWindow()
-Space & F1::Send #^6
-Space & F2::Send #^7
-Space & v::Send #!+v
-Space & F3::Send #^8
-Space & F4::Send #^9
-Space & F5::Send #^0
-Space & F9::Reload
-Space & [::Send !{Left}
-Space & ]::Send !{Right}
-Space & c::^c
-Space & d::BS
-Space & e::Up
-Space & f::MButton
-Space & g::RButton
-Space & h::Left
-Space & i::Home
-Space & j::Down
-Space & k::Up
-Space & l::Right
-Space & m::PgDn
-;Space & n::movingWindowToOtherDisplay()
-Space & n::^t
-Space & o::End
-Space & p::Send ^{PgDn}
-Space & a::
+space & ,::PgUp
+space & -::Volume_Down
+space & 1::Send ^#1
+space & 2::Send ^#2
+space & 3::Send ^#3
+space & 4::Send ^#4
+space & 5::Send ^#5
+space & =::Volume_Up
+space & F11::toggleMaxWindow()
+space & F1::Send #^6
+space & F2::Send #^7
+space & v::Send #!+v
+space & F3::Send #^8
+space & F4::Send #^9
+space & F5::Send #^0
+space & F9::Reload
+space & [::Send !{Left}
+space & ]::Send !{Right}
+space & c::^c
+space & d::BS
+space & e::Up
+space & f::MButton
+space & g::RButton
+space & h::Left
+space & i::Home
+space & j::Down
+space & k::Up
+space & l::Right
+space & m::PgDn
+;space & n::movingWindowToOtherDisplay()
+space & n::^t
+space & o::End
+space & p::Send ^{PgDn}
+space & a::
 While GetKeyState("a", "P") {
  Send {WheelDown}
  Sleep, 1
 }
 Return
-Space & q::
+space & q::
 While GetKeyState("q", "P") {
  Send {WheelUp}
  Sleep, 1
 }
 Return
-Space & r::Down
-Space & s::Send, {Click 2}
-Space & t::Right
-Space & u::Send ^{PgUp}
-Space & w::Left
-Space & x::Del
-Space & z::^z
-Space & Tab::Send, ^{WheelDown}
-Space & `::Send, ^{WheelUp}
-Space & Esc::Send !{F4}
-Space & b::Browser_Back
-Space & F13::#Tab
+space & r::Down
+space & s::send {Click 2}
+space & t::Right
+space & u::Send ^{PgUp}
+space & w::Left
+space & x::Del
+space & z::^z
+space & Tab::send ^{WheelDown}
+space & `::send ^{WheelUp}
+space & Esc::Send !{F4}
+space & b::Browser_Back
+space & F13::#Tab
 
- Space::Send  {Space}
-+Space::Send +{Space}
-!Space::Send !{Space}
-#Space::Send #{Space}
-^Space::Send ^{Space}
+ space::Send  {space}
++space::Send +{space}
+!space::Send !{space}
+#space::Send #{space}
+^space::Send ^{space}
 
 `; & d::
 Send +v
@@ -222,4 +225,3 @@ return
 +`;::Send +{;}
 !`;::Send !{;}
 #`;::Send #{;}
-^`;::Send ^{;}
