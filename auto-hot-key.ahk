@@ -17,7 +17,6 @@ appskey::rcontrol
 #wheeldown::volume_up
 #wheelup::volume_down
 ^;::send {esc}
-esc::!f4
 
 #include, %a_scriptdir%\lib\timelineclick.ahk
 #include, %a_scriptdir%\lib\snippets.ahk
