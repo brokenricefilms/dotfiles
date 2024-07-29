@@ -91,7 +91,7 @@ f13 & h::send !{left}
 f13 & j::send !{down}
 f13 & k::send !{up}
 
-f13::!/
+f13::^+t
 #ifwinactive
 
 #ifwinactive ahk_exe obsidian.exe
