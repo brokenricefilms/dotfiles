@@ -14,8 +14,8 @@ home::^#f11
 end::^#f12
 appskey::rcontrol
 !^f1::send #^0
-#wheeldown::volume_up
-#wheelup::volume_down
+wheeldown::volume_up
+wheelup::volume_down
 ^;::send {esc}
 
 #include, %a_scriptdir%\lib\timelineclick.ahk
