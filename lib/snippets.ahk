@@ -20,25 +20,25 @@ return
 :?*:\pp::
 clipboard = 
 (
- hi,
+Hi,
 
- i have experience working with a travel vlog youtube channel with over 50,000 subscribers.
+I have experience working with a travel vlog youtube channel with over 50,000 subscribers.
 
- here are some examples of travel vlogs i edited:
- - https://vimeo.com/952803807
- - https://vimeo.com/952798464
- - https://vimeo.com/952798415
+Here are some examples of travel vlogs I edited:
+- https://vimeo.com/952803807
+- https://vimeo.com/952798464
+- https://vimeo.com/952798415
 
- you can also check out my portfolio: https://brokenricefilms.pages.dev/portfolio
+You can also check out my portfolio: https://brokenricefilms.pages.dev/portfolio
 
- let's delve into your project:
- - could you share an example video that represents the style you're aiming for?
- - how many videos do you plan to assign to me if the first task goes well?
- - are there any color palettes, style guides, or branding guidelines i should follow during editing?
+Let's delve into your project:
+- Could you share an example video that represents the style you're aiming for?
+- How many videos do you plan to assign to me if the first task goes well?
+- Are there any color palettes, style guides, or branding guidelines I should follow during editing?
 
- thanks,
- thuan pham
- )
+Thanks,
+Thuan pham
+)
 send ^+v
 return
 
@@ -59,4 +59,9 @@ sleep 200
 send ^v
 sleep 200
 send ^{enter}
+return
+
+:?*:\x::
+clipboard = from:brokenricefilms 
+send ^+v
 return
