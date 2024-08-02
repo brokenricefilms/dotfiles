@@ -10,8 +10,6 @@ setworkingdir %a_scriptdir%
 
 sc056::rcontrol
 ;sc151::movingwindowtootherdisplay() ;pgdn sc149 pgup
-home::^#f11
-end::^#f12
 appskey::rcontrol
 !^f1::send #^0
 wheeldown::volume_up
