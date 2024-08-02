@@ -35,7 +35,8 @@ return
 {
     f13:: ;change hotkey to desired hotkey
         timelineclick(["\imagesearch\resolve\editpage.png", "\imagesearch\resolve\fairlight.png",  "\imagesearch\resolve\cutpage.png"], [75,63,45])
-        return
+    return
+    insert::^n
 }
 
 #ifwinactive ahk_exe floorp.exe

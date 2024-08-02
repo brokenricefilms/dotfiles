@@ -62,6 +62,8 @@ send ^{enter}
 return
 
 :?*:\x::
-clipboard = from:brokenricefilms 
+autotrim off
+search := "from:brokenricefilms "
+clipboard := search
 send ^+v
 return
