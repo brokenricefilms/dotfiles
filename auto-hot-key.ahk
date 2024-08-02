@@ -12,8 +12,8 @@ sc056::rcontrol
 ;sc151::movingwindowtootherdisplay() ;pgdn sc149 pgup
 appskey::rcontrol
 !^f1::send #^0
-wheeldown::volume_up
-wheelup::volume_down
+#wheeldown::volume_up
+#wheelup::volume_down
 ^;::send {esc}
 !a::
 while getkeystate("a", "p") {
