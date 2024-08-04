@@ -17,6 +17,11 @@ clipboard = https://brokenricefilms.pages.dev
 send ^+v
 return
 
+:?*:\u::
+clipboard = brokenricefilms
+send ^+v
+return
+
 :?*:\pp::
 clipboard = 
 (
