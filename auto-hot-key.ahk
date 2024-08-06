@@ -40,13 +40,7 @@ return
 }
 
 #ifwinactive ahk_exe chrome.exe
-f1::
-    KeyWait, F1, T1.5  ; Wait for up to 1.5 seconds for the F1 key to be released
-    if ErrorLevel  ; If F1 is still held down after 1.5 seconds
-    {
-        Send, ^w  ; Send Ctrl+W
-    }
-return
+f1::^+t
 f2::^w
 f3::
 send ^c
