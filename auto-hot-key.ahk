@@ -39,7 +39,7 @@ return
     insert::^n
 }
 
-#ifwinactive ahk_exe chrome.exe
+#ifwinactive ahk_exe floorp.exe
 f1::^+t
 f2::^w
 f3::
@@ -81,6 +81,8 @@ send ^v
 sleep, 50
 send {enter}
 return
+!r::send ^+!k
+!f::send ^+!j
 !w::send ^{pgup}
 !s::send ^{pgdn}
 f13::send ^t
