@@ -9,7 +9,6 @@ sendmode input
 setworkingdir %a_scriptdir%
 
 sc056::rcontrol
-;sc151::movingwindowtootherdisplay() ;pgdn sc149 pgup
 appskey::rcontrol
 !^f1::send #^0
 #wheeldown::volume_up
