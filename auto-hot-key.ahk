@@ -31,11 +31,17 @@ return
 #include, %a_scriptdir%\lib\snippets.ahk
 
 #ifwinactive, ahk_exe resolve.exe
-   f13:: ;change hotkey to desired hotkey
+    f13:: ;change hotkey to desired hotkey
        timelineclick(["\imagesearch\resolve\editpage.png", "\imagesearch\resolve\fairlight.png",  "\imagesearch\resolve\cutpage.png"], [75,63,45])
-   return
-#ifwinactive
+    return
+    WheelUp::
+    Send , {Left}
+    Return
 
+    WheelDown::
+    Send , {Right}
+    Return
+#ifwinactive
 
 #ifwinactive ahk_exe chrome.exe
 f1::^+t
