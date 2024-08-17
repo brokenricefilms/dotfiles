@@ -13,19 +13,6 @@ appskey::rcontrol
 !^f1::send #^0
 #wheeldown::volume_up
 #wheelup::volume_down
-^;::send {esc}
-!a::
-while getkeystate("a", "p") {
-    send +{wheeldown}
-    sleep, 1
-}
-return
-!q::
-while getkeystate("q", "p") {
-    send +{wheelup}
-    sleep, 1
-}
-return
 
 #include, %a_scriptdir%\lib\timelineclick.ahk
 #include, %a_scriptdir%\lib\snippets.ahk
