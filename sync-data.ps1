@@ -35,5 +35,5 @@ auto-git-commit
 cd C:\Users\master\repos\brokenricefilms\hawaiianTravelerAsset\
 auto-git-commit
 
-cd E:\live-4\Music\
+cd E:\Music\
 yt-dlp --extract-audio --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" --download-archive archive.txt "https://www.youtube.com/playlist?list=PLxkEHjd_ca6fNUJh9CTEbShDVCadJ1dIv"
