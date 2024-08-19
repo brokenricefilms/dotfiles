@@ -8,6 +8,10 @@ listlines off
 sendmode input
 setworkingdir %a_scriptdir%
 
+;#Persistent
+;#InstallKeybdHook
+;KeyHistory
+
 sc056::rcontrol
 appskey::rcontrol
 !^f1::send #^0
@@ -23,10 +27,6 @@ appskey::rcontrol
     return
     WheelUp::
     Send , {Left}
-    Return
-
-    WheelDown::
-    Send , {Right}
     Return
 #ifwinactive
 
