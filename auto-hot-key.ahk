@@ -30,7 +30,7 @@ appskey::rcontrol
     Return
 #ifwinactive
 
-#ifwinactive ahk_exe chrome.exe
+#ifwinactive ahk_exe zen.exe
 f1::^+t
 f2::^w
 f3::
