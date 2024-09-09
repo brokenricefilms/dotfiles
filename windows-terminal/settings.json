@@ -4,14 +4,6 @@
     "actions": 
     [
         {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+c"
-        },
-        {
             "command": "unbound",
             "keys": "ctrl+v"
         },
@@ -32,11 +24,19 @@
             "keys": "alt+shift+d"
         },
         {
-            "command": "paste"
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+c"
         },
         {
             "command": "duplicateTab",
             "keys": "ctrl+shift+t"
+        },
+        {
+            "command": "paste"
         },
         {
             "command": 
@@ -357,7 +357,7 @@
             "yellow": "#808000"
         }
     ],
-    "theme": "light",
+    "theme": "legacyDark",
     "themes": [],
     "windowingBehavior": "useAnyExisting"
 }
