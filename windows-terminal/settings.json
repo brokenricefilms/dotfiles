@@ -4,6 +4,14 @@
     "actions": 
     [
         {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+c"
+        },
+        {
             "command": "unbound",
             "keys": "ctrl+v"
         },
@@ -24,19 +32,11 @@
             "keys": "alt+shift+d"
         },
         {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+c"
+            "command": "paste"
         },
         {
             "command": "duplicateTab",
             "keys": "ctrl+shift+t"
-        },
-        {
-            "command": "paste"
         },
         {
             "command": 
@@ -88,7 +88,7 @@
     {
         "defaults": 
         {
-            "colorScheme": "Campbell",
+            "colorScheme": "Github Light",
             "useAtlasEngine": false
         },
         "list": 
@@ -357,7 +357,7 @@
             "yellow": "#808000"
         }
     ],
-    "theme": "legacyDark",
+    "theme": "light",
     "themes": [],
     "windowingBehavior": "useAnyExisting"
 }

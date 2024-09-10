@@ -82,8 +82,8 @@ vim.keymap.set('n', '<leader>;', builtin.commands, {})
 
 vim.keymap.set("i", "jk", "<Esc>")
 
--- vim.opt.background = "light"
-vim.cmd("colorscheme github_dark")
+vim.opt.background = "light"
+vim.cmd("colorscheme github_light")
 
 vim.opt.clipboard = "unnamedplus"
 
