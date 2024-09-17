@@ -63,14 +63,19 @@ send {enter}
 return
 ^o::^+a
 f6::
-send ^c
-sleep, 50
-send ^t
-sleep, 50
-send t{space}
-send ^v
-sleep, 50
+send {rbutton}
+sleep 50
+send l
+sleep 50
+send #4
+sleep 50
+send ^+t
+sleep 50
+send yyq
+sleep 50
 send {enter}
+sleep 50
+send #1
 return
 !w::send ^{pgup}
 !s::send ^{pgdn}
