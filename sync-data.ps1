@@ -12,9 +12,6 @@ cd -
 cd C:\Users\master\repos\brokenricefilms\davinci-resolve
 auto-git-commit
 
-cd E:\notes
-auto-git-commit
-
 cd C:\Users\master\repos\brokenricefilms\obs-studio\
 auto-git-commit
 
