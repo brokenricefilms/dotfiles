@@ -75,7 +75,7 @@ send yyq
 sleep 50
 send {enter}
 sleep 50
-send #1
+send #^1
 return
 !w::send ^{pgup}
 !s::send ^{pgdn}
