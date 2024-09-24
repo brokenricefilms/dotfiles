@@ -25,12 +25,23 @@ end::send {Media_Prev}
 #include, %a_scriptdir%\lib\snippets.ahk
 
 #ifwinactive, ahk_exe resolve.exe
-    f13:: ;change hotkey to desired hotkey
-       timelineclick(["\imagesearch\resolve\editpage.png", "\imagesearch\resolve\fairlight.png",  "\imagesearch\resolve\cutpage.png"], [75,63,45])
-    return
-    WheelUp::
-    Send , {Left}
-    Return
+f13:: ;change hotkey to desired hotkey
+   timelineclick(["\imagesearch\resolve\editpage.png", "\imagesearch\resolve\fairlight.png",  "\imagesearch\resolve\cutpage.png"], [75,63,45])
+return
+WheelUp::
+Send , {Left}
+Return
+numpadsub::send ^,
+numpadadd::send (
+numpadmult::send +1
+#ifwinactive
+
+#ifwinactive ahk_exe mpc-hc64.exe
+numpadsub::send o
+#ifwinactive
+
+#ifwinactive ahk_exe Nulloy.exe
+numpadsub::send ^p
 #ifwinactive
 
 #ifwinactive ahk_exe zen.exe
@@ -65,7 +76,7 @@ sleep, 50
 send {enter}
 return
 ^o::^+a
-NumpadSub::
+f6::
 send {rbutton}
 sleep 50
 send l
@@ -83,6 +94,13 @@ return
 !w::send ^{pgup}
 !s::send ^{pgdn}
 f13::send ^t
+numpadsub::
+send ^t
+sleep 50
+send about:preferences
+sleep 50
+send {enter}
+return
 #ifwinactive
 
 #ifwinactive ahk_exe windowsterminal.exe
