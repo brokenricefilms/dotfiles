@@ -18,6 +18,19 @@ appskey::rcontrol
 #wheeldown::volume_up
 #wheelup::volume_down
 
+f20::
+while getkeystate("f20", "p") {
+    send {wheeldown}
+    sleep, 1
+}
+return
+f16::
+while getkeystate("f16", "p") {
+    send {wheelup}
+    sleep, 1
+}
+return
+
 #include, %a_scriptdir%\lib\timelineclick.ahk
 #include, %a_scriptdir%\lib\snippets.ahk
 
@@ -187,18 +200,6 @@ space & m::pgdn
 space & n::^t
 space & o::end
 space & p::send ^{pgdn}
-space & a::
-while getkeystate("a", "p") {
-    send {wheeldown}
-    sleep, 1
-}
-return
-space & q::
-while getkeystate("q", "p") {
-    send {wheelup}
-    sleep, 1
-}
-return
 space & r::down
 space & s::send {click 2}
 space & t::right
@@ -206,8 +207,6 @@ space & u::send ^{pgup}
 space & w::left
 space & x::del
 space & z::^z
-space & tab::send ^{wheeldown}
-space & `::send ^{wheelup}
 space & esc::send !{f4}
 space & b::browser_back
 space & f13::#tab
