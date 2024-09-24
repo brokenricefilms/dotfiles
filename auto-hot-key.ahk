@@ -8,9 +8,9 @@ listlines off
 sendmode input
 setworkingdir %a_scriptdir%
 
-;#Persistent
-;#InstallKeybdHook
-;KeyHistory
+#Persistent
+#InstallKeybdHook
+KeyHistory
 
 sc056::rcontrol
 appskey::rcontrol
