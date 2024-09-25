@@ -1,0 +1,21 @@
+{
+  "userSettings": {
+    "PC_REM": {
+      "OCTaskmaster.Properties.Settings": {
+        "AutoScroll": "True",
+        "ClearCompleted": "False",
+        "CloseOnComplete": "True",
+        "ConcurrentJobs": "16",
+        "HideOnClose": "True",
+        "KeepFolderDate": "True",
+        "ShowJobDetailsPane": "True",
+        "TaskbarDisplayEnabled": "True",
+        "TaskmasterMode": "update",
+        "ThemeName": "Dark",
+        "WindowExpandedWidth": "800",
+        "WindowPlacement": "{\"length\":44,\"flags\":0,\"showCmd\":1,\"ptMinPosition\":\"-49, -1\",\"ptMaxPosition\":\"-1, -1\",\"rcNormalPosition\":\"770, 297, 1570, 579\"}"
+      }
+    },
+    "roaming": {}
+  }
+}
