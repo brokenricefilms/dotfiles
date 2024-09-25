@@ -102,6 +102,22 @@ send about:preferences
 sleep 50
 send {enter}
 return
+numpadadd::
+send ^t
+sleep 50
+send about:addons
+sleep 50
+send {enter}
+return
+numpad0::send !{left}
+numpaddot::send !{right}
+numpadmult::
+send ^l
+sleep 50
+send ^c
+sleep 50
+send ^{f6}
+return
 #ifwinactive
 
 #ifwinactive ahk_exe windowsterminal.exe
