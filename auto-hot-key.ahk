@@ -8,9 +8,9 @@ listlines off
 sendmode input
 setworkingdir %a_scriptdir%
 
-#Persistent
-#InstallKeybdHook
-KeyHistory
+;#Persistent
+;#InstallKeybdHook
+;KeyHistory
 
 sc056::rcontrol
 appskey::rcontrol
@@ -34,6 +34,7 @@ Return
 numpadsub::send ^,
 numpadadd::send (
 numpadmult::send +1
+numpaddiv::send ^!k
 #ifwinactive
 
 #ifwinactive ahk_exe mpc-hc64.exe
