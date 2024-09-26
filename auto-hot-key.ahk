@@ -123,6 +123,8 @@ return
 #ifwinactive ahk_exe windowsterminal.exe
 f3::^+t
 f2::^+w
+!w::send ^{pgup}
+!s::send ^{pgdn}
 
 f13 & l::send !{right}
 f13 & h::send !{left}
