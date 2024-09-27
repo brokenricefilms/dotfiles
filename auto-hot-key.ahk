@@ -120,6 +120,16 @@ send ^{f6}
 return
 #ifwinactive
 
+#ifwinactive ahk_exe OneCommander.exe
+numpadmult::
+send ^l
+sleep 50
+send ^c
+sleep 50
+send {esc}
+return
+#ifwinactive
+
 #ifwinactive ahk_exe windowsterminal.exe
 f3::^+t
 f2::^+w
