@@ -66,7 +66,7 @@ send ^v
 sleep, 50
 send {enter}
 return
-f5::
+f6::
 send ^c
 sleep, 50
 send ^t
@@ -77,7 +77,7 @@ sleep, 50
 send {enter}
 return
 ^o::^+a
-f6::
+f5::
 send {rbutton}
 sleep 50
 send l
