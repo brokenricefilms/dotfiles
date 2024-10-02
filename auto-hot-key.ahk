@@ -82,6 +82,8 @@ send {rbutton}
 sleep 50
 send l
 sleep 50
+send {enter}
+sleep 50
 send #4
 sleep 50
 send ^+t
