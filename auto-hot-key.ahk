@@ -31,10 +31,6 @@ return
 WheelUp::
 Send , {Left}
 Return
-numpadsub::send ^,
-numpadadd::send (
-numpadmult::send +1
-numpaddiv::send ^!k
 #ifwinactive
 
 #ifwinactive ahk_exe MusicBee.exe
