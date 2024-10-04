@@ -20,6 +20,7 @@ appskey::rcontrol
 insert::send {Media_Play_Pause}
 home::send {Media_Prev}
 end::send {Media_Next}
+del::send #6
 
 #include, %a_scriptdir%\lib\timelineclick.ahk
 #include, %a_scriptdir%\lib\snippets.ahk
