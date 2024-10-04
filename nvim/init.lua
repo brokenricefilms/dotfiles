@@ -19,19 +19,6 @@ require("lazy").setup({
         "romainl/vim-cool",
     },
     {
-        "nvim-treesitter/nvim-treesitter",
-        ensure_installed = "all", 
-        build = ":TSUpdate",
-        config = function () 
-            local configs = require("nvim-treesitter.configs")
-            configs.setup({
-                sync_install = false,
-                highlight = { enable = true },
-                indent = { enable = true },  
-            })
-        end
-    },
-    {
         "stevearc/oil.nvim",
         opts = {
             skip_confirm_for_simple_edits = true,

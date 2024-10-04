@@ -18,8 +18,8 @@ appskey::rcontrol
 #wheeldown::volume_up
 #wheelup::volume_down
 insert::send {Media_Play_Pause}
-home::send {Media_Next}
-end::send {Media_Prev}
+home::send {Media_Prev}
+end::send {Media_Next}
 
 #include, %a_scriptdir%\lib\timelineclick.ahk
 #include, %a_scriptdir%\lib\snippets.ahk
@@ -35,6 +35,10 @@ numpadsub::send ^,
 numpadadd::send (
 numpadmult::send +1
 numpaddiv::send ^!k
+#ifwinactive
+
+#ifwinactive ahk_exe MusicBee.exe
+numpadsub::send ^o
 #ifwinactive
 
 #ifwinactive ahk_exe mpc-hc64.exe
