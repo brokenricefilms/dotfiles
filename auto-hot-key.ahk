@@ -80,19 +80,19 @@ return
 ^o::^+a
 f5::
 send {rbutton}
-sleep 50
+sleep 80
 send l
-sleep 50
+sleep 80
 send {enter}
-sleep 50
+sleep 80
 send #4
-sleep 50
+sleep 80
 send ^+t
-sleep 50
+sleep 80
 send yyq
-sleep 50
+sleep 80
 send {enter}
-sleep 50
+sleep 80
 send #^1
 return
 !w::send ^{pgup}
