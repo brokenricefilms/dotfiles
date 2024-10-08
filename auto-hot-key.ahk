@@ -81,7 +81,7 @@ return
 f5::
 send {rbutton}
 sleep 80
-send L
+send l
 sleep 80
 send #4
 sleep 80
