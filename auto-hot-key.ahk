@@ -17,10 +17,10 @@ appskey::rcontrol
 !^f1::send #^0
 #wheeldown::volume_up
 #wheelup::volume_down
-insert::send {Media_Play_Pause}
+del::send {Media_Play_Pause}
 home::send {Media_Prev}
 end::send {Media_Next}
-del::send #6
+insert::send #6
 
 #include, %a_scriptdir%\lib\timelineclick.ahk
 #include, %a_scriptdir%\lib\snippets.ahk
@@ -118,6 +118,14 @@ sleep 50
 send ^c
 sleep 50
 send ^{f6}
+return
+numpaddiv::
+send ^t
+sleep 50
+send about:config
+sleep 50
+send {enter}
+return
 return
 #ifwinactive
 
