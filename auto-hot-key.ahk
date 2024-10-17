@@ -34,18 +34,6 @@ Send , {Left}
 Return
 #ifwinactive
 
-#ifwinactive ahk_exe MusicBee.exe
-numpadsub::send ^o
-#ifwinactive
-
-#ifwinactive ahk_exe mpc-hc64.exe
-numpadsub::send o
-#ifwinactive
-
-#ifwinactive ahk_exe Nulloy.exe
-numpadsub::send ^p
-#ifwinactive
-
 #ifwinactive ahk_exe zen.exe
 f1::^+t
 f2::^w
@@ -96,47 +84,6 @@ return
 !w::send ^{pgup}
 !s::send ^{pgdn}
 f13::send ^t
-numpadsub::
-send ^t
-sleep 50
-send about:preferences
-sleep 50
-send {enter}
-return
-numpadadd::
-send ^t
-sleep 50
-send about:addons
-sleep 50
-send {enter}
-return
-numpad0::send !{left}
-numpaddot::send !{right}
-numpadmult::
-send ^l
-sleep 50
-send ^c
-sleep 50
-send ^{f6}
-return
-numpaddiv::
-send ^t
-sleep 50
-send about:config
-sleep 50
-send {enter}
-return
-return
-#ifwinactive
-
-#ifwinactive ahk_exe OneCommander.exe
-numpadmult::
-send ^l
-sleep 50
-send ^c
-sleep 50
-send {esc}
-return
 #ifwinactive
 
 #ifwinactive ahk_exe windowsterminal.exe
