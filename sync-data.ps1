@@ -5,9 +5,8 @@ function auto-git-commit() {
     git push
 }
 
-cd E:\Music\
-yt-dlp --extract-audio --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" --download-archive archive.txt "https://brokenricefilms.pages.dev/music"
-cd -
+cd E:\Music
+spotdl sync https://open.spotify.com/playlist/7AJjAReIx8ZDEyMVcxuwzh --save-file data.spotdl
 
 cd C:\Users\master\repos\brokenricefilms\davinci-resolve
 auto-git-commit
