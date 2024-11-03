@@ -35,10 +35,19 @@ require("lazy").setup({
             },
         },
     },
-    {
-        "projekt0n/github-nvim-theme",
-        event = "VeryLazy",
-    },
+{
+  'projekt0n/github-nvim-theme',
+  name = 'github-theme',
+  lazy = false, -- make sure we load this during startup if it is your main colorscheme
+  priority = 1000, -- make sure to load this before all the other start plugins
+  config = function()
+    require('github-theme').setup({
+    })
+
+    vim.opt.background = "light"
+    vim.cmd('colorscheme github_light')
+  end,
+},
     { 
         "nvim-lua/plenary.nvim", 
         event = "VeryLazy",
@@ -68,9 +77,6 @@ vim.keymap.set('n', '<leader>b', builtin.buffers, {})
 vim.keymap.set('n', '<leader>;', builtin.commands, {})
 
 vim.keymap.set("i", "jk", "<Esc>")
-
-vim.opt.background = "light"
-vim.cmd("colorscheme github_light")
 
 vim.opt.clipboard = "unnamedplus"
 
