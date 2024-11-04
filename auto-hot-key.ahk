@@ -8,9 +8,9 @@ listlines off
 sendmode input
 setworkingdir %a_scriptdir%
 
-;#Persistent
-;#InstallKeybdHook
-;KeyHistory
+#Persistent
+#InstallKeybdHook
+KeyHistory
 
 sc056::rcontrol
 appskey::rcontrol
@@ -21,6 +21,9 @@ del::send {Media_Play_Pause}
 home::send {Media_Prev}
 end::send {Media_Next}
 insert::send #6
+numpaddiv::!^f4
+numpadmult::!^f3
+numpadsub::!^f2
 
 #include, %a_scriptdir%\lib\timelineclick.ahk
 ;#include, %a_scriptdir%\lib\snippets.ahk
