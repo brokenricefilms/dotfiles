@@ -35,19 +35,34 @@ require("lazy").setup({
             },
         },
     },
-{
-  'projekt0n/github-nvim-theme',
-  name = 'github-theme',
-  lazy = false, -- make sure we load this during startup if it is your main colorscheme
-  priority = 1000, -- make sure to load this before all the other start plugins
-  config = function()
-    require('github-theme').setup({
-    })
+    {
+        'projekt0n/github-nvim-theme',
+        name = 'github-theme',
+        lazy = false, -- make sure we load this during startup if it is your main colorscheme
+        priority = 1000, -- make sure to load this before all the other start plugins
+        event = "VeryLazy",
+        config = function()
+            require('github-theme').setup({
+            })
 
-    vim.opt.background = "light"
-    vim.cmd('colorscheme github_light')
-  end,
-},
+            vim.opt.background = "light"
+            vim.cmd('colorscheme github_light')
+        end,
+    },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        config = function () 
+            local configs = require("nvim-treesitter.configs")
+
+            configs.setup({
+                sync_install = true,
+                auto_install = true,
+                highlight = { enable = true },
+                indent = { enable = true },  
+            })
+        end
+    },
     { 
         "nvim-lua/plenary.nvim", 
         event = "VeryLazy",
