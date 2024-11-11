@@ -36,26 +36,13 @@ require("lazy").setup({
         },
     },
     {
-        'projekt0n/github-nvim-theme',
-        name = 'github-theme',
-        lazy = false, -- make sure we load this during startup if it is your main colorscheme
-        priority = 1000, -- make sure to load this before all the other start plugins
-        event = "VeryLazy",
-        config = function()
-            require('github-theme').setup({
-            })
-
-            vim.opt.background = "light"
-            vim.cmd('colorscheme github_light')
-        end,
-    },
-    {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         config = function () 
             local configs = require("nvim-treesitter.configs")
 
             configs.setup({
+                ensure_installed = { "lua", "vim", "vimdoc", "query", "javascript", "html", "css", "typescript", "astro" },
                 sync_install = true,
                 auto_install = true,
                 highlight = { enable = true },
@@ -84,6 +71,9 @@ require("lazy").setup({
         event = "VeryLazy",
     }
 })
+
+vim.opt.background = "light"
+vim.cmd('colorscheme shine')
 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>f', builtin.find_files, {})
