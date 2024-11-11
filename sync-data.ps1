@@ -6,7 +6,7 @@ function auto-git-commit() {
 }
 
 cd E:\Music\
-yt-dlp --extract-audio --audio-format mp3 --embed-thumbnail --embed-metadata --add-metadata --write-thumbnail -o "%(title)s.%(ext)s" -f bestaudio --download-archive archive.txt https://music.youtube.com/playlist?list=PLxkEHjd_ca6c_0QtpQtBJz8PnppxYWv08
+spotdl sync https://music.youtube.com/playlist?list=PLxkEHjd_ca6c_0QtpQtBJz8PnppxYWv08 --save-file data.spotdl  --audio youtube-music --bitrate auto --sponsor-block --generate-lrc
 cd -
 
 cd C:\Users\master\repos\brokenricefilms\davinci-resolve
