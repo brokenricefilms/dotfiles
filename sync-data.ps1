@@ -5,9 +5,6 @@ function auto-git-commit() {
     git push
 }
 
-cd E:\Music
-spotdl sync https://open.spotify.com/playlist/7AJjAReIx8ZDEyMVcxuwzh --save-file data.spotdl
-
 cd C:\Users\master\repos\brokenricefilms\davinci-resolve
 auto-git-commit
 
