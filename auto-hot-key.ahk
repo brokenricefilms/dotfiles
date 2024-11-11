@@ -17,10 +17,6 @@ appskey::rcontrol
 !^f1::send #^0
 #wheeldown::volume_up
 #wheelup::volume_down
-del::send {Media_Play_Pause}
-home::send {Media_Prev}
-end::send {Media_Next}
-insert::send #6
 numpaddiv::!^f4
 numpadmult::!^f3
 numpadsub::!^f2
