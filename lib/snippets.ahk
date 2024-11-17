@@ -1,24 +1,20 @@
 :?*:\po::
-clipboard = checkout my portfolio https://brokenricefilms.pages.dev/portfolio
-send ^+v
-return
-:?*:\m::
-clipboard = brokenricefilms@gmail.com
+clipboard = https://vndmp4.pages.dev/portfolio
 send ^+v
 return
 
-:?*:\po::
-clipboard = checkout my portfolio https://brokenricefilms.pages.dev/portfolio
+:?*:\m::
+clipboard = vndmp4@gmail.com
 send ^+v
 return
 
 :?*:\w::
-clipboard = https://brokenricefilms.pages.dev
+clipboard = https://vndmp4.pages.dev
 send ^+v
 return
 
 :?*:\u::
-clipboard = brokenricefilms
+clipboard = vndmp4
 send ^+v
 return
 
@@ -34,7 +30,7 @@ Here are some examples of travel vlogs I edited:
 - https://vimeo.com/952798464
 - https://vimeo.com/952798415
 
-You can also check out my portfolio: https://brokenricefilms.pages.dev/portfolio
+You can also check out my portfolio: https://vndmp4.pages.dev/portfolio
 
 Let's delve into your project:
 - Could you share an example video that represents the style you're aiming for?
@@ -72,7 +68,7 @@ return
 
 :?*:\x::
 autotrim off
-search := "from:brokenricefilms "
+search := "from:vndmp4 "
 clipboard := search
 send ^+v
 return

@@ -38,9 +38,9 @@ function edit-powershell-config() { nvim $profile }
 function edit-nvim-config() { nvim C:\Users\master\AppData\Local\nvim\init.lua }
 
 function update-dotfiles() {
-    cp $profile ~\repos\brokenricefilms\dotfiles\
-    cp C:\Users\master\AppData\Local\nvim\init.lua ~\repos\brokenricefilms\dotfiles\nvim
-    cd ~\repos\brokenricefilms\dotfiles\
+    cp $profile ~\repos\vndmp4\dotfiles\
+    cp C:\Users\master\AppData\Local\nvim\init.lua ~\repos\vndmp4\dotfiles\nvim
+    cd ~\repos\vndmp4\dotfiles\
     git add Microsoft.PowerShell_profile.ps1
     git add nvim\init.lua
     git commit -m "pwsh, nvim"
@@ -129,7 +129,7 @@ Set-Alias da download-audio
 
 function sync-music() {
     cd ~\Music\
-    yt-dlp --extract-audio --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" --download-archive archive.txt "https://brokenricefilms.pages.dev/music"
+    yt-dlp --extract-audio --continue --add-metadata --embed-thumbnail --audio-format mp3 --audio-quality 0 --metadata-from-title="%(artist)s - %(title)s" --download-archive archive.txt "https://vndmp4.pages.dev/music"
     cd -
 }
 
