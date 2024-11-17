@@ -20,6 +20,7 @@ appskey::rcontrol
 numpaddiv::!^f4
 numpadmult::!^f3
 numpadsub::!^f2
+numpad7::^!f6
 
 #include, %a_scriptdir%\lib\timelineclick.ahk
 ;#include, %a_scriptdir%\lib\snippets.ahk
