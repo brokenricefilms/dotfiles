@@ -13,11 +13,6 @@ clipboard = https://vndmp4.pages.dev
 send ^+v
 return
 
-:?*:\u::
-clipboard = vndmp4
-send ^+v
-return
-
 :?*:\pp::
 clipboard = 
 (
@@ -64,11 +59,4 @@ text := "I want you to act as an spelling corrector and improver"
 clipboard := text
 send ^+v
 send {enter}
-return
-
-:?*:\x::
-autotrim off
-search := "from:vndmp4 "
-clipboard := search
-send ^+v
 return
