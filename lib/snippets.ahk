@@ -44,17 +44,6 @@ send ^+v
 return
 
 :?*:\g::
-;send gramma check ""
-;sleep 200
-;send {left}
-;sleep 100
-;send #!+v
-;sleep 100
-;send {enter}
-;sleep 200
-;send ^v
-;sleep 200
-;send ^{enter}
 text := "I want you to act as an spelling corrector and improver"
 clipboard := text
 send ^+v
