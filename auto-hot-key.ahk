@@ -231,8 +231,14 @@ space::send  {space}
 send +v
 send {del}
 return
-`; & j::send ^+,
-`; & l::send ^+.
+`; & j::
+send +v
+send ^+,
+return
+`; & l::
+send +v
+send ^+.
+return
 
 `;::send  {;}
 +`;::send +{;}
