@@ -21,6 +21,9 @@ numpaddiv::!^f4
 numpadmult::!^f3
 numpadsub::!^f2
 numpad7::^!f6
+numpad0::
+DllCall("PowrProf\SetSuspendState", "Int", 0, "Int", 0, "Int", 0)
+return
 
 #include, %a_scriptdir%\lib\timelineclick.ahk
 ;#include, %a_scriptdir%\lib\snippets.ahk
