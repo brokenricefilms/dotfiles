@@ -229,7 +229,6 @@ space::send  {space}
 
 `; & d::
 send +v
-sleep 50
 send {del}
 return
 `; & j::send ^+,
