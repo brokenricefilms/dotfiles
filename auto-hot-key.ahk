@@ -24,6 +24,9 @@ numpad7::^!f6
 numpad0::
 DllCall("PowrProf\SetSuspendState", "Int", 0, "Int", 0, "Int", 0)
 return
+numpaddot::
+Run, shutdown /s /t 5
+Return
 
 #include, %a_scriptdir%\lib\timelineclick.ahk
 ;#include, %a_scriptdir%\lib\snippets.ahk
