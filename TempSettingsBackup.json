@@ -13,9 +13,14 @@
         "TaskmasterMode": "update",
         "ThemeName": "Dark",
         "WindowExpandedWidth": "800",
-        "WindowPlacement": "{\"length\":44,\"flags\":0,\"showCmd\":1,\"ptMinPosition\":\"-1, -1\",\"ptMaxPosition\":\"-1, -1\",\"rcNormalPosition\":\"770, 297, 1570, 646\"}"
+        "WindowPlacement": "{\"length\":44,\"flags\":0,\"showCmd\":1,\"ptMinPosition\":\"-1, -1\",\"ptMaxPosition\":\"-1, -1\",\"rcNormalPosition\":\"770, 297, 1570, 517\"}"
       }
     },
-    "roaming": {}
+    "roaming": {
+      "OCTaskmaster.Properties.Settings": {
+        "KeepFileDates": "True",
+        "KeepFolderDate": "True"
+      }
+    }
   }
 }
