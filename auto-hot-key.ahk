@@ -29,7 +29,7 @@ Run, shutdown /s /t 5
 Return
 
 #include, %a_scriptdir%\lib\timelineclick.ahk
-;#include, %a_scriptdir%\lib\snippets.ahk
+#include, %a_scriptdir%\lib\snippets.ahk
 
 #ifwinactive, ahk_exe resolve.exe
 f13:: ;change hotkey to desired hotkey
