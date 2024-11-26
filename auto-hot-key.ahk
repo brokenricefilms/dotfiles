@@ -14,13 +14,8 @@ setworkingdir %a_scriptdir%
 
 sc056::rcontrol
 appskey::rcontrol
-!^f1::send #^0
 #wheeldown::volume_up
 #wheelup::volume_down
-numpaddiv::!^f4
-numpadmult::!^f3
-numpadsub::!^f2
-numpad7::^!f6
 numpad0::
 DllCall("PowrProf\SetSuspendState", "Int", 0, "Int", 0, "Int", 0)
 return
