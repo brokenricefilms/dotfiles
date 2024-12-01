@@ -51,7 +51,7 @@ send ^c
 sleep, 50
 send ^t
 sleep, 50
-send v{space}
+send y{space}
 send ^v
 sleep, 50
 send {enter}
