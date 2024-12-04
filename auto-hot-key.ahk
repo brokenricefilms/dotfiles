@@ -179,7 +179,7 @@ space & f5::send #^0
 space & f9::reload
 space & [::send !{left}
 space & ]::send !{right}
-space & c::^c
+space & c::#Tab
 space & d::bs
 space & e::up
 space & f::mbutton
@@ -216,7 +216,7 @@ space & z::^z
 space & tab::send ^{wheeldown}
 space & `::send ^{wheelup}
 space & esc::send !{f4}
-space & b::#tab
+space & b::browser_back
 space & f13::#+Left
 
 space::send  {space}
