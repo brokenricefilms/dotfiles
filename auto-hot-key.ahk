@@ -85,6 +85,7 @@ return
 !w::send ^{pgup}
 !s::send ^{pgdn}
 f13::send ^t
+f7::^+b
 #ifwinactive
 
 #ifwinactive ahk_exe windowsterminal.exe
