@@ -216,8 +216,8 @@ space & z::^z
 space & tab::send ^{wheeldown}
 space & `::send ^{wheelup}
 space & esc::send !{f4}
-space & b::browser_back
-space & f13::#tab
+space & b::#tab
+space & f13::#+Left
 
 space::send  {space}
 +space::send +{space}
