@@ -26,6 +26,11 @@ Return
 #include, %a_scriptdir%\lib\timelineclick.ahk
 #include, %a_scriptdir%\lib\snippets.ahk
 
+#ifwinactive, ahk_exe onecommander.exe
+!s::send ^{tab}
+!w::send ^+{tab}
+#ifwinactive
+
 #ifwinactive, ahk_exe resolve.exe
 f13:: ;change hotkey to desired hotkey
    timelineclick(["\imagesearch\resolve\editpage.png", "\imagesearch\resolve\fairlight.png",  "\imagesearch\resolve\cutpage.png"], [75,63,45])
