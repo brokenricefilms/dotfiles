@@ -22,6 +22,7 @@ return
 numpaddot::
 Run, shutdown /s /t 5
 Return
+numpad7::f14
 
 #include, %a_scriptdir%\lib\timelineclick.ahk
 #include, %a_scriptdir%\lib\snippets.ahk
