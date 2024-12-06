@@ -162,7 +162,7 @@ togglemaxwindow()
 tab & e::run, "c:\users\master\editing\projects\"
 tab & w::run, "c:\users\master\downloads\"
 tab & r::run, "e:\render\"
-tab & t::run, "e:\youtube\"
+tab & t::run, "C:\Users\master\Pictures"
 tab & 2::run, "e:\obs\"
 
 tab::tab
