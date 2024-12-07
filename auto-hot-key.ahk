@@ -13,16 +13,25 @@ setworkingdir %a_scriptdir%
 ;KeyHistory
 
 sc056::rcontrol
+
 appskey::rcontrol
+
 #wheeldown::volume_up
 #wheelup::volume_down
-numpad0::
+
+numpad7::
 DllCall("PowrProf\SetSuspendState", "Int", 0, "Int", 0, "Int", 0)
 return
-numpaddot::
+
+numpad8::
+Run, shutdown.exe /r /t 0 
+Return
+
+numpad9::
 Run, shutdown /s /t 5
 Return
-numpad7::f14
+
+numpadenter::f14
 
 #include, %a_scriptdir%\lib\timelineclick.ahk
 #include, %a_scriptdir%\lib\snippets.ahk
