@@ -174,6 +174,7 @@ tab & w::run, "c:\users\master\downloads\"
 tab & r::run, "e:\render\"
 tab & t::run, "C:\Users\master\Pictures"
 tab & 2::run, "e:\obs\"
+tab & 3::run, "E:\phone\Camera\Camera"
 
 tab::tab
 
