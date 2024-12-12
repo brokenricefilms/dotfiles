@@ -12,9 +12,6 @@ setworkingdir %a_scriptdir%
 ;#InstallKeybdHook
 ;KeyHistory
 
-NumLock::return
-SetNumLockState, AlwaysOff
-
 sc056::rcontrol
 
 appskey::rcontrol
