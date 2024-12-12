@@ -31,8 +31,6 @@ numpad9::
 Run, shutdown /s /t 5
 Return
 
-home::#^c
-
 numpadenter::f14
 
 #include, %a_scriptdir%\lib\timelineclick.ahk
