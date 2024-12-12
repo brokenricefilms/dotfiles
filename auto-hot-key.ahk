@@ -12,6 +12,9 @@ setworkingdir %a_scriptdir%
 ;#InstallKeybdHook
 ;KeyHistory
 
+NumLock::return
+SetNumLockState, AlwaysOff
+
 sc056::rcontrol
 
 appskey::rcontrol
@@ -30,6 +33,8 @@ Return
 numpad9::
 Run, shutdown /s /t 5
 Return
+
+home::#^c
 
 numpadenter::f14
 
