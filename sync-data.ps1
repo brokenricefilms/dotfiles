@@ -6,7 +6,7 @@ function auto-git-commit() {
 }
 
 cd E:\Music\
-spotdl sync https://music.youtube.com/playlist?list=PLxkEHjd_ca6c_0QtpQtBJz8PnppxYWv08 --save-file data.spotdl  --audio youtube-music --bitrate auto --sponsor-block --generate-lrc
+spotdl sync https://music.youtube.com/browse/VLPLg3vjVhK1vnYQWB26nwADGqEf2xHzgSZR --save-file data.spotdl  --audio youtube-music --bitrate auto --sponsor-block --generate-lrc
 cd -
 
 cd C:\Users\master\repos\vndmp4\davinci-resolve
