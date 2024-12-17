@@ -71,32 +71,7 @@ send ^v
 sleep, 50
 send {enter}
 return
-f6::
-send ^c
-sleep, 50
-send ^t
-sleep, 50
-send i{space}
-send ^v
-sleep, 50
-send {enter}
-return
 ^o::^+a
-f5::
-send {rbutton}
-sleep 80
-send l
-sleep 80
-send #4
-sleep 80
-send ^+t
-sleep 80
-send yyq
-sleep 80
-send {enter}
-sleep 80
-send #^1
-return
 !w::send ^{pgup}
 !s::send ^{pgdn}
 f13::send ^t
