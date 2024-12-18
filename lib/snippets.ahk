@@ -1,15 +1,15 @@
 :?*:,po::
-clipboard = https://vndmp4.pages.dev/portfolio
+clipboard = https://cutbypham.pages.dev/portfolio
 send ^+v
 return
 
 :?*:,m::
-clipboard = vndmp4@gmail.com
+clipboard = cutbypham@gmail.com
 send ^+v
 return
 
 :?*:,w::
-clipboard = https://vndmp4.pages.dev
+clipboard = https://cutbypham.pages.dev
 send ^+v
 return
 
@@ -25,7 +25,7 @@ Here are some examples of travel vlogs I edited:
 - https://vimeo.com/952798464
 - https://vimeo.com/952798415
 
-You can also check out my portfolio: https://vndmp4.pages.dev/portfolio
+You can also check out my portfolio: https://cutbypham.pages.dev/portfolio
 
 Let's delve into your project:
 - Could you share an example video that represents the style you're aiming for?
