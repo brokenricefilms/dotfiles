@@ -1,19 +1,19 @@
-:?*:\po::
+:?*:,po::
 clipboard = https://vndmp4.pages.dev/portfolio
 send ^+v
 return
 
-:?*:\m::
+:?*:,m::
 clipboard = vndmp4@gmail.com
 send ^+v
 return
 
-:?*:\w::
+:?*:,w::
 clipboard = https://vndmp4.pages.dev
 send ^+v
 return
 
-:?*:\pp::
+:?*:,pp::
 clipboard = 
 (
 Hi,
@@ -38,12 +38,12 @@ Thuan pham
 send ^+v
 return
 
-:?*:\ph::
+:?*:,ph::
 clipboard = 0765650452
 send ^+v
 return
 
-:?*:\g::
+:?*:,g::
 text := "I want you to act as an spelling corrector and improver"
 clipboard := text
 send ^+v
