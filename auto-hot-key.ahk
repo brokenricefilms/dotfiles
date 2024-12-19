@@ -173,9 +173,6 @@ space & [::send !{left}
 space & ]::send !{right}
 space & c::#Tab
 space & d::bs
-space & e::up
-space & f::mbutton
-space & g::rbutton
 space & h::left
 space & i::home
 space & j::down
@@ -186,23 +183,7 @@ space & m::pgdn
 space & n::^t
 space & o::end
 space & p::send ^{pgdn}
-space & a::
-while getkeystate("a", "p") {
-    send {wheeldown}
-    sleep, 1
-}
-return
-space & q::
-while getkeystate("q", "p") {
-    send {wheelup}
-    sleep, 1
-}
-return
-space & r::down
-space & s::send {click 2}
-space & t::right
 space & u::send ^{pgup}
-space & w::left
 space & x::del
 space & z::^z
 space & tab::send ^{wheeldown}
@@ -210,6 +191,11 @@ space & `::send ^{wheelup}
 space & esc::send !{f4}
 space & b::browser_back
 space & f13::#+Left
+
+space & q::left
+space & w::up
+space & e::down
+space & r::right
 
 space::send  {space}
 +space::send +{space}
