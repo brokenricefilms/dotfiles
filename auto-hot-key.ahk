@@ -20,6 +20,10 @@ home::f17
 end::f18
 pgup::f19
 pgdn::f20
+left::f21
+up::f22
+down::f23
+right::f24
 
 ^f14::
 DllCall("PowrProf\SetSuspendState", "Int", 0, "Int", 0, "Int", 0)
@@ -79,8 +83,8 @@ sleep, 50
 send {enter}
 return
 ^o::^+a
-!w::send ^{pgup}
-!s::send ^{pgdn}
+!e::send ^{pgup}
+!d::send ^{pgdn}
 f13::send ^t
 f7::^+b
 #ifwinactive
