@@ -234,9 +234,6 @@ space & f4::send #^9
 space & f5::send #^0
 Space & f6::send #+s
 space & f9::reload
-space & f10::f21
-space & f11::f22
-space & f12::f23
 
 space::send  {space}
 +space::send +{space}
