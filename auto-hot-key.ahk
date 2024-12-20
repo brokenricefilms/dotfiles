@@ -7,10 +7,19 @@ setbatchlines -1
 listlines off
 sendmode input
 setworkingdir %a_scriptdir%
+CoordMode, Mouse, Screen
 
-#Persistent
-#InstallKeybdHook
-KeyHistory
+;#Persistent
+;#InstallKeybdHook
+;KeyHistory
+
+printscreen::f14
+insert::f15
+delete::f16
+home::f17
+end::f18
+pgup::f19
+pgdn::f20
 
 sc056::rcontrol
 
@@ -18,8 +27,6 @@ appskey::rcontrol
 
 #wheeldown::volume_up
 #wheelup::volume_down
-
-!+s::send #+s
 
 numpad7::
 DllCall("PowrProf\SetSuspendState", "Int", 0, "Int", 0, "Int", 0)
@@ -133,6 +140,33 @@ next := current + 1
                   dllcall("setcursorpos", "int", newx, "int", newy)
 }
 
+JumpCursorBetweenMonitors() {
+    MouseGetPos, MouseX, MouseY ; Get current mouse position
+    SysGet, MonitorCount, MonitorCount ; Get number of monitors
+
+    if (MonitorCount < 2) {
+        MsgBox, You need at least two monitors for this script to work.
+        return
+    }
+
+    ; Get dimensions of both monitors
+    SysGet, M1, Monitor, 1
+    SysGet, M2, Monitor, 2
+
+    ; Determine which monitor the mouse is currently on
+    if (MouseX >= M1Left && MouseX <= M1Right && MouseY >= M1Top && MouseY <= M1Bottom) {
+        ; Move to monitor 2
+        NewX := MouseX - M1Left + M2Left
+        NewY := MouseY - M1Top + M2Top
+        MouseMove, NewX, NewY
+    } else {
+        ; Move to monitor 1
+        NewX := MouseX - M2Left + M1Left
+        NewY := MouseY - M2Top + M1Top
+        MouseMove, NewX, NewY
+    }
+}
+
 togglemaxwindow()
 {
     winget, winstate, minmax, a
@@ -157,47 +191,54 @@ tab::tab
 
 space & ,::pgup
 space & -::volume_down
-space & 1::send ^#1
-space & 2::send ^#2
-space & 3::send ^#3
-space & 4::send ^#4
-space & 5::send ^#5
 space & =::volume_up
-space & f11::togglemaxwindow()
-space & f1::send #^6
-space & f2::send #^7
-space & v::send #!+v
-space & f3::send #^8
-space & f4::send #^9
-space & f5::send #^0
-space & f9::reload
 space & [::send !{left}
 space & ]::send !{right}
+space & `::send ^{wheelup}
+space & b::browser_back
 space & c::#Tab
 space & d::bs
+space & e::down
+space & esc::send !{f4}
 space & h::left
 space & i::home
 space & j::down
 space & k::up
 space & l::right
 space & m::pgdn
-;space & n::movingwindowtootherdisplay()
 space & n::^t
 space & o::end
 space & p::send ^{pgdn}
+space & q::left
+space & r::right
+space & tab::send ^{wheeldown}
 space & u::send ^{pgup}
+space & v::send #!+v
+space & w::up
 space & x::del
 space & z::^z
-space & tab::send ^{wheeldown}
-space & `::send ^{wheelup}
-space & esc::send !{f4}
-space & b::browser_back
-space & f13::#+Left
 
-space & q::left
-space & w::up
-space & e::down
-space & r::right
+space & f13::
+movingwindowtootherdisplay()
+JumpCursorBetweenMonitors()
+return
+
+space & 1::send ^#1
+space & 2::send ^#2
+space & 3::send ^#3
+space & 4::send ^#4
+space & 5::send ^#5
+
+space & f1::send #^6
+space & f2::send #^7
+space & f3::send #^8
+space & f4::send #^9
+space & f5::send #^0
+Space & f6::send #+s
+space & f9::reload
+space & f10::f21
+space & f11::f22
+space & f12::f23
 
 space::send  {space}
 +space::send +{space}
