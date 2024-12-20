@@ -21,24 +21,22 @@ end::f18
 pgup::f19
 pgdn::f20
 
+^f14::
+DllCall("PowrProf\SetSuspendState", "Int", 0, "Int", 0, "Int", 0)
+return
+^f15::
+Run, shutdown.exe /r /t 0 
+Return
+^f16::
+Run, shutdown /s /t 5
+Return
+
 sc056::rcontrol
 
 appskey::rcontrol
 
 #wheeldown::volume_up
 #wheelup::volume_down
-
-numpad7::
-DllCall("PowrProf\SetSuspendState", "Int", 0, "Int", 0, "Int", 0)
-return
-
-numpad8::
-Run, shutdown.exe /r /t 0 
-Return
-
-numpad9::
-Run, shutdown /s /t 5
-Return
 
 numpadenter::f14
 
