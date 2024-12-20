@@ -8,9 +8,9 @@ listlines off
 sendmode input
 setworkingdir %a_scriptdir%
 
-;#Persistent
-;#InstallKeybdHook
-;KeyHistory
+#Persistent
+#InstallKeybdHook
+KeyHistory
 
 sc056::rcontrol
 
@@ -18,6 +18,8 @@ appskey::rcontrol
 
 #wheeldown::volume_up
 #wheelup::volume_down
+
+!+s::send #+s
 
 numpad7::
 DllCall("PowrProf\SetSuspendState", "Int", 0, "Int", 0, "Int", 0)
