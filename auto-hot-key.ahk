@@ -83,8 +83,8 @@ sleep, 50
 send {enter}
 return
 ^o::^+a
-!e::send ^{pgup}
-!d::send ^{pgdn}
+!w::send ^{pgup}
+!s::send ^{pgdn}
 f13::send ^t
 f7::^+b
 #ifwinactive
@@ -219,6 +219,7 @@ space & v::send #!+v
 space & w::up
 space & x::del
 space & z::^z
+space & a::#tab
 
 space & f13::
 movingwindowtootherdisplay()
