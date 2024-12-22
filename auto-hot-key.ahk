@@ -32,7 +32,7 @@ return
 Run, shutdown.exe /r /t 0 
 Return
 ^f16::
-Run, shutdown /s /t 5
+Run, shutdown /s /t 0
 Return
 
 sc056::rcontrol
