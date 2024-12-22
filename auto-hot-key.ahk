@@ -219,7 +219,7 @@ space & v::send #!+v
 space & w::up
 space & x::del
 space & z::^z
-space & a::#tab
+space & g::#tab
 
 space & f13::
 movingwindowtootherdisplay()
